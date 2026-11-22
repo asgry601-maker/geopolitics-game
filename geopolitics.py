@@ -3,6 +3,17 @@
 """بازی استراتژیک ژئوپلیتیک متنی — ثبت وضعیت در game_state.json"""
 import json, os, random, sys
 
+
+def _win_console_utf8():
+    if os.name == "nt":
+        try:
+            import ctypes
+            k = ctypes.windll.kernel32
+            k.SetConsoleOutputCP(65001)
+            k.SetConsoleCP(65001)
+        except Exception:
+            pass
+
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "game_state.json")
 
 START_YEAR = 2025
@@ -1973,6 +1984,7 @@ def show_list(args):
 # ---------- main ----------
 
 def main(argv=None):
+    _win_console_utf8()
     args = argv if argv is not None else sys.argv[1:]
     if not args:
         if os.path.exists(STATE):
