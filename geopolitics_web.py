@@ -69,177 +69,234 @@ PAGE = """<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>ژئوپلیتیک: رقابت قدرت‌ها</title>
 <style>
-  *{box-sizing:border-box}
   body{margin:0;font-family:Tahoma,'Segoe UI',sans-serif;background:#0d1521;color:#dfe8f2}
-  header{background:linear-gradient(135deg,#132a43,#0d1521);border-bottom:2px solid #2b4d77;padding:12px 18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-  header h1{font-size:19px;margin:0 0 0 18px;color:#7fc4ff}
-  .chip{background:#16283f;border:1px solid #2b4d77;border-radius:14px;padding:4px 12px;font-size:12px}
+  header{background:#132a43;border-bottom:2px solid #2b4d77;padding:12px 18px}
+  header h1{font-size:19px;margin:0 0 8px 0;color:#7fc4ff}
+  .chip{display:inline-block;background:#16283f;border:1px solid #2b4d77;border-radius:14px;padding:4px 12px;font-size:12px;margin:2px}
   .chip b{color:#ffd54f}
-  nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 18px;background:#0a1017;border-bottom:1px solid #1d2f4a}
-  nav button{background:#132a43;color:#bcd7f0;border:1px solid #2b4d77;border-radius:8px;padding:8px 14px;font-family:inherit;font-size:13px;cursor:pointer}
+  nav{padding:10px 14px;background:#0a1017;border-bottom:1px solid #1d2f4a}
+  nav button{display:inline-block;background:#132a43;color:#bcd7f0;border:1px solid #2b4d77;border-radius:8px;padding:8px 14px;font-family:inherit;font-size:13px;cursor:pointer;margin:2px}
   nav button:hover{background:#1d3d5f;color:#fff}
-  main{display:flex;gap:14px;padding:14px 18px;align-items:flex-start}
-  #panel{flex:1.2;background:#101b2b;border:1px solid #1d2f4a;border-radius:10px;padding:12px;min-height:300px}
+  main{padding:14px 18px}
+  #panel{background:#101b2b;border:1px solid #1d2f4a;border-radius:10px;padding:12px;margin-bottom:14px}
   #panel h3{margin:4px 0 10px;color:#7fc4ff;font-size:15px}
-  .actions{display:flex;flex-wrap:wrap;gap:8px}
-  .actions button{background:#17350f;color:#c8f0b0;border:1px solid #3a6b28;border-radius:8px;padding:9px 14px;font-family:inherit;font-size:13px;cursor:pointer}
+  .actions button{display:inline-block;background:#17350f;color:#c8f0b0;border:1px solid #3a6b28;border-radius:8px;padding:9px 14px;font-family:inherit;font-size:13px;cursor:pointer;margin:3px}
   .actions button:hover{background:#235017}
   .actions button.warn{background:#3a1b0f;border-color:#7c3a1d;color:#ffc9a3}
   .actions button.warn:hover{background:#542613}
-  .rowline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
-  select,input[type=number],input[type=text]{background:#0d1725;color:#dfe8f2;border:1px solid #2b4d77;border-radius:8px;padding:8px;font-family:inherit;font-size:13px;min-width:180px}
-  #outwrap{flex:1;background:#0a1017;border:1px solid #1d2f4a;border-radius:10px;padding:0;position:relative;min-height:300px;max-width:640px}
+  .rowline{margin:10px 0}
+  select,input{background:#0d1725;color:#dfe8f2;border:1px solid #2b4d77;border-radius:8px;padding:8px;font-family:inherit;font-size:13px;margin:2px}
+  #outwrap{background:#0a1017;border:1px solid #1d2f4a;border-radius:10px}
   #outwrap .ttl{padding:8px 14px;border-bottom:1px solid #1d2f4a;color:#7fc4ff;font-size:13px}
-  #out{white-space:pre-wrap;padding:12px 14px;font-family:Tahoma;font-size:13.5px;line-height:1.9;max-height:70vh;overflow:auto;margin:0}
-  small.hint{color:#8aa5c4}
-  .itemrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;border-bottom:1px dashed #1d2f4a;padding:6px 0;font-size:12.5px}
+  #out{white-space:pre-wrap;padding:12px 14px;font-family:Tahoma;font-size:13.5px;line-height:1.9;min-height:220px;max-height:60vh;overflow:auto;margin:0}
+  .hint{color:#8aa5c4;font-size:12px}
+  .itemrow{display:block;border-bottom:1px dashed #1d2f4a;padding:6px 0;font-size:12.5px}
   .itemrow b{color:#ffd54f}
-  .itemrow button{background:#17350f;color:#c8f0b0;border:1px solid #3a6b28;border-radius:6px;padding:3px 10px;cursor:pointer;font-family:inherit}
-  .load{color:#ffd54f;font-size:13px}
+  .itemrow button{background:#17350f;color:#c8f0b0;border:1px solid #3a6b28;border-radius:6px;padding:3px 10px;cursor:pointer;font-family:inherit;margin-right:6px}
 </style>
 </head>
 <body>
 <header>
-  <h1>⚔ ژئوپلیتیک: رقابت قدرت‌ها</h1>
-  <div class="chip">کشور: <b id="h_player">—</b></div>
-  <div class="chip">سال <b id="h_year">—</b> / روز <b id="h_day">—</b></div>
-  <div class="chip">💰 خزانه: <b id="h_money">—</b></div>
-  <div class="chip">🎖 نظامی: <b id="h_mil">—</b></div>
-  <div class="chip">🏭 اقتصاد: <b id="h_eco">—</b></div>
-  <div class="chip">🔬 فناوری: <b id="h_tech">—</b></div>
-  <div class="chip">🕊 ثبات: <b id="h_stab">—</b></div>
-  <div class="chip">☢ کلاهک: <b id="h_nukes">—</b></div>
+  <h1>⚔ ژئوپلیتیک: رقابت قدرت‌ها</h1><br>
+  <span class="chip">کشور: <b id="h_player">—</b></span>
+  <span class="chip">سال <b id="h_year">—</b> / روز <b id="h_day">—</b></span>
+  <span class="chip">💰 خزانه: <b id="h_money">—</b></span>
+  <span class="chip">🎖 نظامی: <b id="h_mil">—</b></span>
+  <span class="chip">🏭 اقتصاد: <b id="h_eco">—</b></span>
+  <span class="chip">🔬 فناوری: <b id="h_tech">—</b></span>
+  <span class="chip">🕊 ثبات: <b id="h_stab">—</b></span>
+  <span class="chip">☢ کلاهک: <b id="h_nukes">—</b></span>
 </header>
-<nav id="tabs"></nav>
+<div id="tabs"></div>
 <main>
   <div id="panel"><h3>در حال آماده‌سازی…</h3></div>
-  <div id="outwrap"><div class="ttl">📰 متن بازی</div><div id="out">صدایم کن…</div></div>
+  <div id="outwrap"><div class="ttl">📰 گزارش بازی</div><div id="out">اول از دکمه‌های بالای صفحه استفاده کن — نتیجه‌ی هر کار اینجا نمایش داده می‌شود.</div></div>
 </main>
 <script>
 var S = {countries:[], has_save:false};
-function $(x){return document.getElementById(x)}
-function show(t){var o=$('out');o.textContent=t;o.scrollTop=0;}
-async function cmd(parts, silent){
-  show('...در حال اجرا');
-  var r = await fetch('/api/cmd',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cmd:parts})});
-  var j = await r.json();
-  S = j.state;
-  header();
-  show((j.text||'') + (j.err?('\n⚠ '+j.err):''));
-  if(!silent) tab(current);
-  return j;
+var current = 0, lastPick = "";
+function $(x){return document.getElementById(x);}
+function show(t){var o=$("out");o.textContent=t;o.scrollTop=0;}
+function getState(cb){
+  var x=new XMLHttpRequest();
+  x.open("GET","/api/state",true);
+  x.onreadystatechange=function(){
+    if(x.readyState!==4)return;
+    try{S=JSON.parse(x.responseText);}catch(e){}
+    cb();
+  };
+  x.send();
+}
+function apiPost(parts,cb){
+  show("…در حال اجرا");
+  var x=new XMLHttpRequest();
+  x.open("POST","/api/cmd",true);
+  x.setRequestHeader("Content-Type","application/json; charset=UTF-8");
+  x.onreadystatechange=function(){
+    if(x.readyState!==4)return;
+    var j=null;
+    try{j=JSON.parse(x.responseText);}catch(e){}
+    if(j){S=j.state;header();if(cb)cb(j);}
+    else{show("⚠ ارتباط با موتور بازی برقرار نشد. پنجره‌ی مشکی (cmd) را نبند و صفحه را با F5 رفرش کن.");}
+  };
+  x.send(JSON.stringify({cmd:parts}));
+}
+function runCmd(parts){
+  apiPost(parts,function(j){
+    show((j.text||"")+((j.err)?("\n⚠ "+j.err):""));
+    tab(current);
+  });
 }
 function header(){
-  if(!S.has_save){ $('h_player').textContent='بازی شروع نشده'; return; }
-  $('h_player').textContent=S.player; $('h_year').textContent=S.year; $('h_day').textContent=S.day;
-  $('h_money').textContent=S.money; $('h_mil').textContent=S.mil; $('h_eco').textContent=S.eco;
-  $('h_tech').textContent=S.tech; $('h_stab').textContent=S.stab; $('h_nukes').textContent=S.nukes;
+  if(!S.has_save){$("h_player").textContent="بازی شروع نشده";return;}
+  $("h_player").textContent=S.player;$("h_year").textContent=S.year;$("h_day").textContent=S.day;
+  $("h_money").textContent=S.money;$("h_mil").textContent=S.mil;$("h_eco").textContent=S.eco;
+  $("h_tech").textContent=S.tech;$("h_stab").textContent=S.stab;$("h_nukes").textContent=S.nukes;
 }
-var TABS = [
- ['🏠 خانه', function(p){
-    p.innerHTML='<h3>مرکز فرماندهی</h3>';
-    grid(p,[['📋 وضعیت من',['status']],['📚 راهنما',['help']],['🏆 رتبه‌بندی جهانی',['rank']],['🌆 فهرست ۱۷۴ کشور',['list']]]);
-    sep(p);
-    row(p); // end of day button
- }],
- ['📊 داشبورد', function(p){ p.innerHTML='<h3>داشبوردهای شش‌گانه</h3>';
-    grid(p,[['🏛 سیاست داخلی',['dash','dom']],['🌍 دیپلماسی',['dash','dip']],['🕵 عملیات',['dash','ops']],['🛡 نظامی',['dash','mil']],['💹 اقتصاد',['dash','eco']],['🌐 نهادها',['dash','org']]]); }],
- ['🤝 دیپلماسی', function(p){ p.innerHTML='<h3>دیپلماسی — کشور را انتخاب کن</h3>'; picker(p);
-    grid(p,[['💵 کمک اقتصادی',['act','aide']],['🛒 قرارداد تجاری',['act','trade']],['🕊 پیمان عدم تعارض',['act','pact']],['⚔ اتحاد نظامی',['act','ally']],['🚫 تحریم',['act','sanc']],['🗣 محکومیت در ملل',['act','un']]], true);
-    sep(p); grid(p,[['✂ فسخ پیمان',['act','break']]], true); }],
- ['🛡 ارتش و هسته‌ای', function(p){ p.innerHTML='<h3>ارتش و برنامه هسته‌ای</h3>';
-    grid(p,[['📈 بودجه نظامی',['act','mil']],['🧪 پروژه فناوری',['act','tech']],['☢ کلاهک هسته‌ای',['act','nuke']],['🔍 شفافیت به آژانس',['act','iaea']]]);
-    sep(p); picker(p); grid(p,[['⚔ اعلام جنگ',['act','war']]], true); }],
- ['🕵 عملیات پنهان', function(p){ p.innerHTML='<h3>عملیات پنهان — هدف را انتخاب کن</h3>'; picker(p);
-    grid(p,[['🔑 جاسوسی',['act','spy']],['💥 بی‌ثبات‌سازی',['act','covert']],['🧨 خرابکاری',['act','sabotage']],['🎯 ترور',['act','kill']],['🕸 شبکه نیابتی',['act','proxy']]], true); }],
- ['💰 اقتصاد', function(p){ p.innerHTML='<h3>اقتصاد</h3>';
-    grid(p,[['🏭 سرمایه‌گذاری کلان',['act','eco']],['📣 کمپین تبلیغاتی',['act','propaganda']]]); }],
- ['🛒 بازار تجهیزات', function(p){ market(p); }],
- ['🌐 نهادها', function(p){ p.innerHTML='<h3>نهادهای بین‌المللی</h3>';
-    grid(p,[['📊 وضعیت نهادها',['dash','org']],['🔍 شفافیت به آژانس',['act','iaea']]]);
-    sep(p); picker(p);
-    grid(p,[['🗣 طرح محکومیت در مجمع',['act','un']]], true);
-    if(S.has_save){ p.innerHTML += '<small class="hint">حرارت آژانس: '+S.heat+' / محکومیت‌های ملل: '+S.censures+'</small>'; } }],
- ['📁 پرونده کشور', function(p){ p.innerHTML='<h3>پرونده هر کشور — انتخاب کن</h3>'; picker(p);
-    var b=document.createElement('button');b.textContent='افتح پرونده';b.className='';b.onclick=function(){cmd(['status',sel()]);};
-    var g=p.querySelector('.actions')||document.createElement('div');g.className='actions';g.appendChild(b);p.appendChild(g); }],
-];
-var current = 0, lastPick = '';
-function sel(){ return lastPick || $('countrysel').value || $('countrysel').options[0].value; }
+function selField(){
+  var s=$("countrysel");
+  if(lastPick)return lastPick;
+  if(!s)return "";
+  if(s.selectedIndex>=0)return s.options[s.selectedIndex].value;
+  return "";
+}
 function picker(p){
-  var d=document.createElement('div'); d.className='rowline';
-  var s=document.createElement('select'); s.id='countrysel';
-  (S.countries||[]).forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;s.appendChild(o);});
-  var t=document.createElement('input'); t.type='text'; t.placeholder='یا اسم بنویس…'; t.style.minWidth='140px';
-  t.oninput=function(){ if(t.value) lastPick=t.value; };
-  s.onchange=function(){ lastPick=s.value; };
+  var d=document.createElement("div"); d.className="rowline";
+  var s=document.createElement("select"); s.id="countrysel";
+  var cs=S.countries||[];
+  for(var i=0;i<cs.length;i++){var o=document.createElement("option");o.value=cs[i];o.appendChild(document.createTextNode(cs[i]));s.appendChild(o);}
+  s.onchange=function(){lastPick="";};
+  var t=document.createElement("input"); t.type="text"; t.placeholder="یا اسم کشور…"; t.style.width="150px";
+  t.onkeyup=function(){lastPick=t.value;};
   d.appendChild(s); d.appendChild(t); p.appendChild(d);
 }
-function grid(p, items, warn){
-  var g=document.createElement('div'); g.className='actions';
-  items.forEach(function(it){
-    var b=document.createElement('button'); b.textContent=it[0];
-    if(warn) b.className='warn';
-    b.onclick=function(){ var c=it[1].slice(); if(warn) c.push(sel()); cmd(c); };
-    g.appendChild(b);
-  });
+function grid(p, items, needCountry){
+  var g=document.createElement("div"); g.className="actions";
+  for(var i=0;i<items.length;i++){
+    (function(it){
+      var b=document.createElement("button"); b.appendChild(document.createTextNode(it[0]));
+      if(needCountry)b.className="warn";
+      b.onclick=function(){
+        var c=it[1].slice(0);
+        if(needCountry){var t=selField();if(!t){show("⚠ اول کشور را از منوی کشویی انتخاب کن.");return;}c.push(t);}
+        runCmd(c);
+      };
+      g.appendChild(b);
+    })(items[i]);
+  }
   p.appendChild(g);
 }
-function sep(p){ var d=document.createElement('div'); d.style.height='14px'; p.appendChild(d); }
-function row(p){
-  var d=document.createElement('div'); d.className='rowline';
-  var b=document.createElement('button'); b.textContent='🌙 پایان روز (زمان جلو می‌رود)';
-  b.onclick=function(){ cmd(['end']); };
+function sep(p){var d=document.createElement("div");d.style.height="14px";p.appendChild(d);}
+function rowEnd(p){
+  var d=document.createElement("div"); d.className="rowline";
+  var b=document.createElement("button"); b.appendChild(document.createTextNode("🌙 پایان روز (زمان جلو می‌رود)"));
+  b.onclick=function(){runCmd(["end"]);};
   d.appendChild(b); p.appendChild(d);
 }
 function market(p){
-  p.innerHTML='<h3>بازار جهانی تجهیزات</h3>';
-  if(!S.has_save){ p.innerHTML+='<small class="hint">اول بازی را شروع کن.</small>'; return; }
-  var d=document.createElement('div'); d.className='rowline';
-  var s=document.createElement('select');
-  S.cats.forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;s.appendChild(o);});
-  s.onchange=function(){listCat(s.value);};
+  p.appendChild(h3("🛒 بازار جهانی تجهیزات"));
+  if(!S.has_save){hint(p,"اول بازی را شروع کن.");return;}
+  var d=document.createElement("div"); d.className="rowline";
+  var s=document.createElement("select");
+  var cats=S.cats||[];
+  for(var i=0;i<cats.length;i++){var o=document.createElement("option");o.value=cats[i];o.appendChild(document.createTextNode(cats[i]));s.appendChild(o);}
   d.appendChild(s); p.appendChild(d);
-  var list=document.createElement('div'); list.id='mlist'; p.appendChild(list);
-  listCat(S.cats[0]); s.value=S.cats[0];
+  var list=document.createElement("div"); list.id="mlist"; p.appendChild(list);
+  listCat(s.value);
+  s.onchange=function(){listCat(s.options[s.selectedIndex].value);};
   function listCat(cat){
-    list.innerHTML='';
-    (S.equipment[cat]||[]).forEach(function(e){
-      var r=document.createElement('div'); r.className='itemrow';
-      r.innerHTML='<b>'+e.n+'</b> — سازنده: '+e.mk+' | قیمت: '+e.pr+' | نظامی +'+e.m;
-      var q=document.createElement('input'); q.type='number'; q.value='1'; q.min='1'; q.style.width='70px';
-      var b=document.createElement('button'); b.textContent='خرید';
-      b.onclick=function(){ cmd(['act','buy',e.n,String(q.value||'1')]); };
-      r.appendChild(q); r.appendChild(b); list.appendChild(r);
-    });
+    while(list.firstChild)list.removeChild(list.firstChild);
+    var items=(S.equipment&&S.equipment[cat])||[];
+    for(var i=0;i<items.length;i++){
+      (function(e){
+        var r=document.createElement("div"); r.className="itemrow";
+        var lab=document.createElement("b"); lab.appendChild(document.createTextNode(e.n));
+        r.appendChild(lab);
+        r.appendChild(document.createTextNode(" — سازنده: "+e.mk+" | قیمت: "+e.pr+" | نظامی +"+e.m+" | تعداد: "));
+        var q=document.createElement("input"); q.type="text"; q.value="1"; q.style.width="50px";
+        var b=document.createElement("button"); b.appendChild(document.createTextNode("خرید"));
+        b.onclick=function(){
+          var n=parseInt(q.value,10); if(!(n>0))n=1;
+          runCmd(["act","buy",e.n,String(n)]);
+        };
+        r.appendChild(q); r.appendChild(b); list.appendChild(r);
+      })(items[i]);
+    }
   }
 }
+function h3(t){var h=document.createElement("h3");h.appendChild(document.createTextNode(t));return h;}
+function hint(p,t){var s=document.createElement("div");s.className="hint";s.appendChild(document.createTextNode(t));p.appendChild(s);}
+var TABS = [
+ ["🏠 خانه",function(p){
+    p.appendChild(h3("مرکز فرماندهی"));
+    grid(p,[["📋 وضعیت من",["status"]],["📚 راهنما",["help"]],["🏆 رتبه‌بندی جهانی",["rank"]],["🌆 فهرست ۱۷۴ کشور",["list"]]]);
+    sep(p); rowEnd(p);
+ }],
+ ["📊 داشبورد",function(p){ p.appendChild(h3("داشبوردهای شش‌گانه"));
+    grid(p,[["🏛 سیاست داخلی",["dash","dom"]],["🌍 دیپلماسی",["dash","dip"]],["🕵 عملیات",["dash","ops"]],["🛡 نظامی",["dash","mil"]],["💹 اقتصاد",["dash","eco"]],["🌐 نهادها",["dash","org"]]]); }],
+ ["🤝 دیپلماسی",function(p){ p.appendChild(h3("دیپلماسی — کشور را از منوی زیر انتخاب کن")); picker(p);
+    grid(p,[["💵 کمک اقتصادی",["act","aide"]],["🛒 قرارداد تجاری",["act","trade"]],["🕊 پیمان عدم تعارض",["act","pact"]],["⚔ اتحاد نظامی",["act","ally"]],["🚫 تحریم",["act","sanc"]],["🗣 محکومیت در ملل",["act","un"]]], true);
+    sep(p); grid(p,[["✂ فسخ پیمان",["act","break"]]], true); }],
+ ["🛡 ارتش و هسته‌ای",function(p){ p.appendChild(h3("ارتش و برنامه هسته‌ای"));
+    grid(p,[["📈 بودجه نظامی",["act","mil"]],["🧪 پروژه فناوری",["act","tech"]],["☢ ساخت کلاهک",["act","nuke"]]]);
+    sep(p); p.appendChild(h3("بازرسان آژانس")); grid(p,[["🔍 اعلام شفافیت",["act","iaea"]]]);
+    sep(p); p.appendChild(h3("جنگ — کشور را انتخاب کن")); picker(p);
+    grid(p,[["⚔ اعلام جنگ",["act","war"]]], true); }],
+ ["🕵 عملیات پنهان",function(p){ p.appendChild(h3("عملیات پنهان — هدف را انتخاب کن")); picker(p);
+    grid(p,[["🔑 جاسوسی",["act","spy"]],["💥 بی‌ثبات‌سازی",["act","covert"]],["🧨 خرابکاری",["act","sabotage"]],["🎯 ترور",["act","kill"]],["🕸 شبکه نیابتی",["act","proxy"]]], true); }],
+ ["💰 اقتصاد",function(p){ p.appendChild(h3("اقتصاد"));
+    grid(p,[["🏭 سرمایه‌گذاری کلان",["act","eco"]],["📣 کمپین تبلیغاتی",["act","propaganda"]]]); }],
+ ["🛒 بازار",function(p){ market(p); }],
+ ["🌐 نهادها",function(p){ p.appendChild(h3("نهادهای بین‌المللی"));
+    grid(p,[["📊 وضعیت نهادها",["dash","org"]],["🔍 شفافیت به آژانس",["act","iaea"]]]);
+    sep(p); p.appendChild(h3("مجمع عمومی ملل")); picker(p);
+    grid(p,[["🗣 طرح محکومیت علیه کشوری",["act","un"]]], true);
+    if(S.has_save){hint(p,"حرارت آژانس: "+S.heat+" — محکومیت‌های ملل: "+S.censures);} }],
+ ["📁 پرونده کشور",function(p){ p.appendChild(h3("پرونده هر کشور — انتخاب کن")); picker(p);
+    grid(p,[["📄 باز کردن پرونده",["status"]]], true); }],
+];
 function tabs(){
-  var n=$('tabs'); n.innerHTML='';
-  TABS.forEach(function(t,i){
-    var b=document.createElement('button'); b.textContent=t[0];
-    b.onclick=function(){ current=i; tab(i); };
-    n.appendChild(b);
-  });
+  var n=$("tabs");
+  while(n.firstChild)n.removeChild(n.firstChild);
+  for(var i=0;i<TABS.length;i++){
+    (function(t,i2){
+      var b=document.createElement("button"); b.appendChild(document.createTextNode(t[0]));
+      b.onclick=function(){current=i2;tab(i2);};
+      n.appendChild(b);
+    })(TABS[i],i);
+  }
 }
-function tab(i){ var p=$('panel'); p.innerHTML=''; TABS[i][1](p); }
-async function boot(){
-  var r=await fetch('/api/state'); S=await r.json(); header(); tabs(); tab(0);
-  if(!S.has_save){
-    var p=$('panel'); p.innerHTML='<h3>🎮 شروع بازی جدید</h3><p style="font-size:13px">کشورت را انتخاب کن و شروع کن (Enter لازم نیست، دکمه بزن):</p>';
-    picker(p); var b=document.createElement('button'); b.textContent='شروع!'; b.style.marginTop='8px';
-    b.onclick=function(){ var c=sel(); cmd(['init',c]); };
-    p.appendChild(b);
-  } else { cmd(['status'], true); }
-  if(!S.has_save) show('به بازی خوش آمدی! از پنل کناری کشور را انتخاب و «شروع!» را بزن.\n\nهیچ تایپی لازم نیست — همه‌چیز کلیکی است.');
+function tab(i){
+  lastPick = "";
+  var p=$("panel");
+  while(p.firstChild)p.removeChild(p.firstChild);
+  TABS[i][1](p);
+}
+function boot(){
+  getState(function(){
+    header(); tabs(); tab(0);
+    if(!S.has_save){
+      var p=$("panel");
+      while(p.firstChild)p.removeChild(p.firstChild);
+      p.appendChild(h3("🎮 شروع بازی جدید"));
+      hint(p,"کشورت را انتخاب کن و دکمه‌ی شروع را بزن:");
+      picker(p);
+      var b=document.createElement("button"); b.appendChild(document.createTextNode("شروع!"));
+      b.onclick=function(){var c=selField();if(!c){show("⚠ کشور را انتخاب کن.");return;}runCmd(["init",c]);};
+      p.appendChild(b);
+      show("به بازی خوش آمدی! از پانل بالا کشور را انتخاب و «شروع!» را بزن.\n\nهیچ تایپی لازم نیست — همه‌چیز کلیکی است.");
+    }
+  });
 }
 boot();
 </script>
 </body>
 </html>
 """
+
 
 
 class Handler(BaseHTTPRequestHandler):
