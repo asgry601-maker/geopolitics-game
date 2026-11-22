@@ -27,7 +27,9 @@ input[type=submit]:hover{background:#235017}
 button{background:#1a3a5c;color:#dfe8f2;border:1px solid #2b4d77;border-radius:8px;padding:9px 14px;font-family:inherit;font-size:13px;cursor:pointer;margin:2px}
 button:hover{background:#26496e}
 button.big{background:#3a2c00;border-color:#8a6d00;color:#ffe08a;font-size:15px;padding:12px 22px}
-.itemrow{border-bottom:1px solid #1d2f4a;padding:8px 2px;font-size:13px}
+.itemrow{border-bottom:1px solid #1d2f4a;padding:6px 2px;font-size:13px}
+summary{cursor:pointer;color:#bfd6ee}
+details{margin:2px 0}
 input[type=submit].big{background:#3a2c00;border-color:#8a6d00;color:#ffe08a;font-size:15px;padding:12px 22px}
 select,input[type=text]{background:#0d1725;color:#dfe8f2;border:1px solid #2b4d77;border-radius:8px;padding:7px 9px;font-family:inherit;font-size:13px;margin:2px;vertical-align:middle}
 .out{background:#0a1017;border:1px solid #1d2f4a;border-radius:10px;margin:12px 16px;padding:0}
@@ -110,9 +112,7 @@ def render(out_text="", chosen=None):
     body = "".join(btn("📊 " + n, "dash " + v) for n, v in dbs)
     sections.append('<section><h2>📊 داشبوردها</h2>' + body + "</section>")
 
-    dip = [("aide", "💵 کمک اقتصادی"), ("trade", "🛒 قرارداد تجاری"), ("pact", "🕊 پیمان عدم تعارض"),
-           ("ally", "⚔ اتحاد نظامی"), ("break", "✂ فسخ پیمان"), ("sanc", "🚫 تحریم"),
-           ("un", "🗣 محکومیت در ملل")]
+    dip = [("💰 کمک اقتصادی", "act aide"), ("🛒 قرارداد تجاری", "act trade"), ("🕊️ پیمان عدم تعارض", "act pact"), ("⚔️ اتحاد نظامی", "act ally"), ("✂ فسخ پیمان", "act break"), ("⛔ تحریم", "act sanc"), ("🗣️ محکومیت در ملل", "act un")]
     body = ('<div class="hint">اول کشور را انتخاب کن، بعد دکمه را بزن:</div>'
             + group(country_select("target", countries), dip))
     sections.append('<section><h2>🤝 دیپلماسی</h2>' + body + "</section>")
@@ -125,8 +125,7 @@ def render(out_text="", chosen=None):
              + group(country_select("war_target", countries), [("⚔ اعلام جنگ", "act war")]))
     sections.append('<section><h2>🛡 ارتش و برنامه هسته‌ای</h2>' + body + "</section>")
 
-    ops = [("spy", "🔑 جاسوسی"), ("covert", "💥 بی‌ثبات‌سازی"), ("sabotage", "🧨 خرابکاری"),
-           ("kill", "🎯 ترور"), ("proxy", "🕸 شبکه نیابتی")]
+    ops = [("🔑 جاسوسی", "act spy"), ("💥 بی‌ثبات‌سازی", "act covert"), ("🧨 خرابکاری", "act sabotage"), ("🎯 ترور", "act kill"), ("🕸 شبکه نیابتی", "act proxy")]
     body = ('<div class="hint">اول کشور هدف را انتخاب کن:</div>'
             + group(country_select("target", countries), ops))
     sections.append('<section><h2>🕵 عملیات پنهان</h2>' + body + "</section>")
@@ -142,15 +141,21 @@ def render(out_text="", chosen=None):
         cat, items = chosen
         rows = []
         for e in items:
-            rows.append('<div class="itemrow"><b>%s</b> — سازنده: %s | قیمت: %s | نظامی +%s '
+            rows.append('<details class="itemrow"><summary><b>%s</b> \u2014 \u0633\u0627\u0632\u0646\u062f\u0647: %s | \u0642\u06cc\u0645\u062a: %s | \u0646\u0638\u0627\u0645\u06cc +%s </summary>'
                         '<form class="ib" method="post" action="/">'
                         '<input type="hidden" name="cat" value="%s">'
                         '<input type="hidden" name="item" value="%s">'
                         '<input type="text" name="qty" value="1" style="width:50px">'
-                        '<button type="submit" name="cmd" value="act buy">خرید</button></form></div>'
+                        '<button type="submit" name="cmd" value="act buy">\u062e\u0631\u06cc\u062f</button></form></details>'
                         % (esc(e["n"]), esc(e["mk"]), esc(e["pr"]), esc(e["m"]), esc(cat), esc(e["n"])))
-        body += '<div style="margin-top:8px">' + "".join(rows) + "</div>"
+        body += '<details style="margin-top:8px"><summary><b>\U0001f9fe \u0644\u06cc\u0633\u062a %s \u0622\u06cc\u062a\u0645 (%s)</b> \u2014 \u0628\u0627\u0632/\u0628\u0633\u062a\u0647 \u06a9\u0646\u062f</summary>%s</details>' % (len(items), esc(cat), "".join(rows))
     sections.append('<section><h2>🛒 بازار جهانی تجهیزات</h2>' + body + "</section>")
+
+    body_stmt = ('<div class="hint">\u0628\u06cc\u0627\u0646\u06cc\u0647 \u0631\u0633\u0645\u06cc \u0645\u0646\u062a\u0634\u0631 \u06a9\u0646 \u2014 \u062f\u0631 \u06af\u0632\u0627\u0631\u0634 \u0628\u0627\u0632\u06cc \u0648 \u062f\u0627\u0634\u0628\u0648\u0631\u062f \u062b\u0628\u062a \u0645\u06cc\u200c\u0634\u0648\u062f:</div>'
+                 '<form method="post" action="/">'
+                 '<input type="text" name="statement" style="width:70%%" placeholder="\u0645\u062a\u0646 \u0628\u06cc\u0627\u0646\u06cc\u0647...">'
+                 '<button type="submit" name="cmd" value="statement">\U0001f4e2 \u0627\u0646\u062a\u0634\u0627\u0631 \u0628\u06cc\u0627\u0646\u06cc\u0647</button></form>')
+    sections.append('<section><h2>\U0001f4e2 \u0628\u06cc\u0627\u0646\u06cc\u0647</h2>' + body_stmt + "</section>")
 
     orgs = (btn("📊 وضعیت نهادها", "dash org")
             + btn("🔍 شفافیت به آژانس", "act iaea", "big"))
@@ -213,12 +218,18 @@ def run_cmd(argv):
 def handle_post(form):
     get = lambda k, d="": form.get(k, [d])[0]
     cmd = get("cmd")
-    target = get("target")
+    target = get("target") or get("war_target") or get("reset_country")
     out = ""
     chosen = None
     if not cmd:
         return out, chosen
-    if cmd == "start":
+    if cmd == "statement":
+        text = get("statement").strip()
+        if not text:
+            out = "\u26a0 \u0645\u062a\u0646 \u0628\u06cc\u0627\u0646\u06cc\u0647 \u062e\u0627\u0644\u06cc \u0628\u0648\u062f."
+        else:
+            out = run_cmd(["statement"] + text.split())
+    elif cmd == "start":
         out = run_cmd(["init", get("start_country", "ایران")])
     elif cmd == "file":
         out = run_cmd(["status", target or "ایران"])

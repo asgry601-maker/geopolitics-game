@@ -2105,6 +2105,14 @@ def main(argv=None):
             score_s = f"{score:.0f}" if score >= 0 else "  —"
             print(f"  {i2+1:>3} {mark} {name:<14} {score_s:>5}   {detail}{tag}")
         print("═" * 56)
+    elif cmd in ("statement", "بیانیه"):
+        text = " ".join(args[1:]).strip()
+        if not text:
+            print("✗ متن بیانیه را بنویس.")
+            return
+        msg(s, "📢 بیانیه رسمی رهبری " + s["player"] + ": " + text)
+        save(s)
+        print("📢 بیانیه منتشر شد و در گزارش بازی ثبت گردید.")
     elif cmd == "help":
         print(HELP)
     elif cmd == "act":
