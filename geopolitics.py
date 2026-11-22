@@ -1983,9 +1983,69 @@ def show_list(args):
 
 # ---------- main ----------
 
+def _script_dir():
+    return os.path.dirname(os.path.abspath(__file__))
+
+
+def _start_log():
+    path = os.path.join(_script_dir(), "run_log.txt")
+    try:
+        import io as _io
+        f = _io.open(path, "w", encoding="utf-8-sig", errors="replace", buffering=1)
+    except Exception:
+        return None
+    real = sys.__stdout__
+
+    class _LogTee(object):
+        def write(self, s):
+            try:
+                f.write(s)
+                f.flush()
+            except Exception:
+                pass
+            try:
+                real.write(s)
+                real.flush()
+            except Exception:
+                pass
+
+        def flush(self):
+            try:
+                f.flush()
+            except Exception:
+                pass
+
+        def isatty(self):
+            return False
+
+    sys.stdout = _LogTee()
+    print("\U0001f9fe \u0644\u0627\u06af \u0627\u06cc\u0646 \u0627\u062c\u0631\u0627 \u062f\u0631 \u0641\u0627\u06cc\u0644 run_log.txt \u0630\u062e\u06cc\u0631\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f.")
+    return f
+
+
+def _finish_log(f):
+    try:
+        f.write("\n===== END OF RUN (run_log.txt by play_logged.bat) =====\n")
+    except Exception:
+        pass
+    try:
+        f.close()
+    except Exception:
+        pass
+    if os.name == "nt":
+        try:
+            os.startfile(os.path.join(_script_dir(), "run_log.txt"))
+        except Exception:
+            pass
+
+
 def main(argv=None):
     _win_console_utf8()
     args = argv if argv is not None else sys.argv[1:]
+    logf = None
+    if "play" in args and "log" in args:
+        args = [a for a in args if a != "log"]
+        logf = _start_log()
     if not args:
         if os.path.exists(STATE):
             show_status(load())
@@ -1995,6 +2055,8 @@ def main(argv=None):
     cmd = args[0]
     if cmd in ("play", "بازی"):
         play()
+        if logf:
+            _finish_log(logf)
         return
     if cmd == "init":
         if len(args) < 2:
