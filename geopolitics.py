@@ -6,7 +6,10 @@ import json, os, random, sys
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "game_state.json")
 
 START_YEAR = 2025
-FINAL_YEAR = 2065
+FINAL_YEAR = 2040
+DAYS_PER_YEAR = 30   # هر سالِ بازی سی روز جلو می‌رود
+INCOME_K = 0.15      # درآمد روزانه = اقتصاد × این ضریب
+
 
 # آمار تقریبی بر پایه داده‌های ۲۰۲۴ — اقتصاد (PPP-نسبی)، ارتش، فناوری، ثبات، خزانه آزاد
 REGIONS = [
@@ -164,7 +167,136 @@ def _build_countries():
 
 COUNTRIES = _build_countries()
 
-# روابط اولیه منجمد بین قدرت‌های بزرگ (مازاد بر کینه‌ها و دوستی‌ها بالا)
+# ---------- تجهیزات نظامی (نام‌های واقعی: سازنده، قیمت میلیارد، اثر نظامی، فناوری-برتر) ----------
+EQUIPMENT = {
+    "جنگنده": [
+        dict(n="F-35A Lightning II", mk="آمریکا", pr=10.0, m=3.5, hi=1),
+        dict(n="F-16C Fighting Falcon", mk="آمریکا", pr=3.0, m=2.0, hi=1),
+        dict(n="F/A-18E Super Hornet", mk="آمریکا", pr=5.5, m=2.6, hi=1),
+        dict(n="F-15E Strike Eagle", mk="آمریکا", pr=5.5, m=2.7, hi=1),
+        dict(n="داسو رافال", mk="فرانسه", pr=7.5, m=3.0, hi=1),
+        dict(n="یوروفایتر تایفون", mk="بریتانیا", pr=7.0, m=3.0, hi=1),
+        dict(n="سو-35S", mk="روسیه", pr=5.5, m=2.8, hi=1),
+        dict(n="سو-57 فلون", mk="روسیه", pr=9.0, m=3.6, hi=1),
+        dict(n="میگ-29M", mk="روسیه", pr=2.8, m=1.8, hi=0),
+        dict(n="چنگدو J-20", mk="چین", pr=8.5, m=3.4, hi=1),
+        dict(n="JF-17 تاندر", mk="پاکستان", pr=1.6, m=1.2, hi=0),
+        dict(n="JAS 39 گریپن", mk="سوئد", pr=4.5, m=2.2, hi=1),
+    ],
+    "تانک": [
+        dict(n="M1A2 آبرامز", mk="آمریکا", pr=0.9, m=1.0, hi=1),
+        dict(n="لئوپارد 2A7", mk="آلمان", pr=0.9, m=1.0, hi=1),
+        dict(n="T-90M", mk="روسیه", pr=0.45, m=0.9, hi=0),
+        dict(n="تایپ 99A", mk="چین", pr=0.4, m=0.9, hi=0),
+        dict(n="مرکاوا 4", mk="اسرائیل", pr=0.8, m=1.0, hi=0),
+        dict(n="K2 Black Panther", mk="کره جنوبی", pr=0.75, m=0.95, hi=1),
+        dict(n="آرجون Mk1A", mk="هند", pr=0.55, m=0.8, hi=0),
+        dict(n="آل‌خالد-I", mk="پاکستان", pr=0.3, m=0.7, hi=0),
+        dict(n="زلفیقار-3", mk="ایران", pr=0.25, m=0.6, hi=0),
+        dict(n="لوکلرک", mk="فرانسه", pr=0.9, m=1.0, hi=1),
+    ],
+    "پهپاد": [
+        dict(n="MQ-9 ریپر", mk="آمریکا", pr=3.0, m=1.2, hi=1),
+        dict(n="بایراکتار TB2", mk="ترکیه", pr=0.5, m=0.5, hi=0),
+        dict(n="شهید-136", mk="ایران", pr=0.02, m=0.15, hi=0),
+        dict(n="IAI هرمس 900", mk="اسرائیل", pr=1.0, m=0.5, hi=0),
+        dict(n="TAI آنکا-S", mk="ترکیه", pr=0.8, m=0.45, hi=0),
+        dict(n="CH-4 رینبو", mk="چین", pr=1.0, m=0.5, hi=0),
+    ],
+    "پدافند و موشک": [
+        dict(n="پاتریوت PAC-3", mk="آمریکا", pr=5.0, m=2.0, hi=1),
+        dict(n="S-400 تریومف", mk="روسیه", pr=4.5, m=2.0, hi=1),
+        dict(n="S-500 پرومته", mk="روسیه", pr=7.0, m=2.6, hi=1),
+        dict(n="گنبد آهنین", mk="اسرائیل", pr=2.5, m=1.2, hi=0),
+        dict(n="باراک-8", mk="هند", pr=1.5, m=0.9, hi=0),
+        dict(n="HQ-9", mk="چین", pr=3.0, m=1.4, hi=0),
+        dict(n="اسکاد-D", mk="کره شمالی", pr=0.4, m=0.6, hi=0),
+        dict(n="ایسکندر-M", mk="روسیه", pr=1.8, m=1.1, hi=0),
+        dict(n="باور-373", mk="ایران", pr=0.3, m=0.7, hi=0),
+    ],
+    "نیروی دریایی": [
+        dict(n="ناو هواپیمابر جرالد فورد", mk="آمریکا", pr=35.0, m=8.0, hi=1),
+        dict(n="ناوشکن ارلی برک", mk="آمریکا", pr=5.0, m=1.6, hi=1),
+        dict(n="ناوشکن دییرینگ", mk="بریتانیا", pr=4.5, m=1.5, hi=1),
+        dict(n="زیردریایی آستیوت", mk="بریتانیا", pr=9.0, m=2.5, hi=1),
+        dict(n="زیردریایی کلاس کیلو", mk="روسیه", pr=1.5, m=1.0, hi=0),
+        dict(n="ناو بالگردنشین میسترال", mk="فرانسه", pr=2.8, m=0.9, hi=0),
+        dict(n="ناوچه MEKO-200", mk="آلمان", pr=1.2, m=0.5, hi=0),
+        dict(n="زیردریایی تایپ 093", mk="چین", pr=3.5, m=1.6, hi=1),
+    ],
+}
+ARSENAL_ITEMS = {e["n"]: e for items in EQUIPMENT.values() for e in items}
+EQUIP_CATS = list(EQUIPMENT)
+
+# انبار ویژه چند کشور معروف (سهم واقع‌گرایانه)
+ARSENALS = {
+    "آمریکا": {"F-35A Lightning II": 60, "F-16C Fighting Falcon": 900, "F/A-18E Super Hornet": 500,
+               "F-15E Strike Eagle": 220, "M1A2 آبرامز": 2500, "MQ-9 ریپر": 100, "پاتریوت PAC-3": 60,
+               "ناو هواپیمابر جرالد فورد": 11, "ناوشکن ارلی برک": 70},
+    "روسیه": {"سو-35S": 100, "سو-57 فلون": 20, "میگ-29M": 120, "T-90M": 700,
+              "S-400 تریومف": 57, "S-500 پرومته": 10, "ایسکندر-M": 150, "زیردریایی کلاس کیلو": 24},
+    "چین": {"چنگدو J-20": 150, "تایپ 99A": 800, "HQ-9": 300, "زیردریایی تایپ 093": 9, "CH-4 رینبو": 200},
+    "هند": {"داسو رافال": 36, "آرجون Mk1A": 120, "باراک-8": 5, "T-90M": 600, "IAI هرمس 900": 10},
+    "ایران": {"زلفیقار-3": 150, "شهید-136": 3000, "باور-373": 200},
+    "اسرائیل": {"F-35A Lightning II": 39, "مرکاوا 4": 400, "گنبد آهنین": 15, "IAI هرمس 900": 60},
+    "ترکیه": {"F-16C Fighting Falcon": 240, "بایراکتار TB2": 120, "لئوپارد 2A7": 300, "TAI آنکا-S": 40},
+    "عربستان": {"F-15E Strike Eagle": 210, "M1A2 آبرامز": 370, "پاتریوت PAC-3": 30, "MQ-9 ریپر": 8},
+    "کره جنوبی": {"K2 Black Panther": 600, "F-35A Lightning II": 40, "F-16C Fighting Falcon": 130},
+    "آلمان": {"لئوپارد 2A7": 320, "یوروفایتر تایفون": 140, "ناوچه MEKO-200": 5},
+    "بریتانیا": {"یوروفایتر تایفون": 110, "F-35A Lightning II": 34, "ناوشکن دییرینگ": 6, "زیردریایی آستیوت": 6},
+    "ژاپن": {"F-35A Lightning II": 105},
+    "فرانسه": {"داسو رافال": 140, "لوکلرک": 200, "ناو بالگردنشین میسترال": 3},
+    "پاکستان": {"F-16C Fighting Falcon": 85, "JF-17 تاندر": 150, "آل‌خالد-I": 400},
+    "اوکراین": {"بایراکتار TB2": 40, "پاتریوت PAC-3": 5},
+}
+
+def _default_arsenal(rel_map):
+    """انبار اولیه برای کشورهای دیگر بر اساس سطح قدرت و روابط با سازندگان"""
+    budgets = {1: 90, 2: 55, 3: 30, 4: 16, 5: 8}
+    out = {}
+    for name, c in COUNTRIES.items():
+        if name in ARSENALS:
+            out[name] = dict(ARSENALS[name])
+            continue
+        budget = budgets[c.get("tier", 3)]
+        inventory = {}
+        for cat in EQUIP_CATS:
+            for e in EQUIPMENT[cat]:
+                if e["hi"] and c["tech"] < e["pr"] * 8:
+                    continue
+                rel = rel_map.get(rel_key(name, e["mk"]), 0)
+                need = 30 if e["hi"] else 0
+                if name == e["mk"] or rel >= need:
+                    qty = max(0, int(budget / max(e["m"], 0.2) * (0.06 if rel < 60 else 0.12)))
+                    if qty:
+                        inventory[e["n"]] = inventory.get(e["n"], 0) + qty
+                        budget -= 1
+                if budget <= 0:
+                    break
+            if budget <= 0:
+                break
+        out[name] = inventory
+    return out
+
+def arsenal_bonus(c, arsenal):
+    try:
+        return min(12.0, sum(ARSENAL_ITEMS[i]["m"] * n for i, n in arsenal.items()) * 0.5)
+    except Exception:
+        return 0.0
+
+def find_item(query):
+    query = str(query).strip().casefold()
+    best = None
+    for key in ARSENAL_ITEMS:
+        k = key.casefold()
+        if query == k or (query and (query in k or k in query)):
+            return key
+        pre = min(len(query), len(k), 10)
+        if pre >= 3 and query[:pre] == k[:pre] and (best is None or pre > best[0]):
+            best = (pre, key)
+    return best[1] if best else None
+
+
 DEFAULT_REL = {
     frozenset(("آمریکا", "روسیه")): -60,
     frozenset(("آمریکا", "چین")): -40,
@@ -205,32 +337,27 @@ DEFAULT_REL = {
 }
 
 HELP = """
- فرمان‌ها (هر نوبت ۲ فرصت داری):
+راهنمای سریع — «ژئوپلیتیک: رقابت قدرت‌ها»
+زمان: هر «پایان دور» = یک روز؛ هر ۳۰ روز = یک سالِ بازی.
 
-  act eco   <کشور؟>   سرمایه‌گذاری اقتصادی (۴۰ میلیارد)
-  act mil              تقویت ارتش (۵۰ میلیارد)
-  act tech             پژوهش فناوری (۳۵ میلیارد)
-  act nuke             برنامه هسته‌ای (۱۲۰ میلیارد، فناوری ≥ ۷۰)
-  act spy   <کشور>     جاسوسی (۱۵ میلیارد — اطلاعات + خطر تنش)
-  act aide  <کشور>     کمک اقتصادی → بهبود روابط (۳۰ میلیارد)
-  act trade <کشور>     قرارداد تجاری → هر دو نفع می‌برید (۲۰ میلیارد)
-  act pact  <کشور>     پیمان عدم تجاوز (روابط ≥ ۳۵)
-  act ally  <کشور>     اتحاد نظامی (روابط ≥ ۶۵)
-  act sanc  <کشور>     تحریم اقتصادی (روابط ↓↓)
-  act covert <کشور>    عملیات مخفي: بی‌ثبات‌سازی (خطرناک، ۵۰ میلیارد)
-  act propaganda       تبلیغات حزبی — حمایت ائتلاف حاکم ↑ (۲۰ میلیارد)
-  act sabotage <کشور>  خرابکاری در صنایع دفاعی (۴۵ میلیارد، ریسک کشف)
-  act kill  <کشور>     ترور رهبر دشمن ☠ (۸۰ میلیارد، بسیار پرخطر)
-  act proxy <کشور>     ایجاد/تقویت شبکه نیابتی مخفی 🗡 (۶۰، تکرار: ۴۰ میلیارد)
-  act war   <کشور>     اعلان جنگ ⚔
-  end                  پایان نوبت (نوبت کشورهای دیگر + رخداد تصادفی)
-  status               وضعیت مختصر جهان (۱۲ قدرت نخست)
-  status <کشور>        پرونده کامل یک کشور 📊 (مثال: status ترکیه)
-  dash <بخش؟>          داشبورد: dom | dip | ops | mil | eco (بدون اسم = همه)
-  rank                 رتبه‌بندی کامل همه کشورها
-  list <منطقه؟>        فهرست کشورهای واقعی به تفکیک منطقه
-  help                 راهنما
-  help                 راهنما
+فرمان‌ها (در منوی تعاملی هم همان کارها با شماره‌ها انجام می‌شود):
+  init <کشور>| reset <کشور>| list| status [کشور]| rank| help
+
+  act eco        سرمایه‌گذاری اقتصادی (4م)      act mil        بودجه نظامی (5م)
+  act tech       فناوری (4م)                    act nuke       کلاهک هسته‌ای (12م؛ فناوری≥70)
+  act iaea       شفافیت به آژانس انرژی اتمی (3م — فشار پرونده صفر)
+  act buy <تجهیز> [تعداد]     خرید از بازار جهانی (نمونه: act buy F-16C 5)
+  act sell <تجهیز> <کشور>     فروش تجهیز به کشور دوست (روابط>20)
+  act spy <کشور>        جاسوسی (2م)            act covert <کشور>   بی‌ثبات‌سازی (5م)
+  act sabotage <کشور>   خرابکاری (5م)          act kill <کشور>     ترور (8م)
+  act proxy <کشور>      شبکه نیابتی (6م؛ تقویت 4م)
+  act aide <کشور> کمک اقتصادی (3م)             act trade <کشور> تجارت (2م)
+  act pact <کشور> پیمان عدم تعارض (1م)         act ally <کشور> اتحاد نظامی (3م)
+  act break <کشور> فسخ پیمان                   act sanc <کشور> تحریم اقتصادی
+  act un <کشور>        طرح محکومیت در مجمع عمومی سازمان ملل
+  act war <کشور>       اعلان جنگ (حواست به ماده ۵ ناتو و محکومیت ملل باشد!)
+داشبورد: dash dom|dip|ops|mil|eco|org (یا فارسی: سیاست/دیپلماسی/عملیات/نظامی/اقتصاد/نهاد)
+پایان دور: end  → یک روز جلو می‌رود؛ ظاهر گزارش: احزاب، مطبوعات، جنگ‌ها، بازار سلاح.
 """
 
 def load():
@@ -249,6 +376,18 @@ def load():
     if not isinstance(s.get("turn_events"), dict):
         s["turn_events"] = {}
     s.setdefault("proxies", [])
+    s.setdefault("day", 1)
+    s.setdefault("iaea_heat", 0)
+    s.setdefault("un_censures", 0)
+    s.setdefault("arsenal", {})
+    rel = s.get("relations", {})
+    fresh = None
+    for name in s.get("world", {}):
+        if name not in s["arsenal"]:
+            if fresh is None:
+                fresh = _default_arsenal(rel)
+            s["arsenal"][name] = dict(fresh.get(name, {}))
+        s["world"][name].setdefault("_arsenal", s["arsenal"][name])
     return s
 
 def save(s):
@@ -264,7 +403,9 @@ def bar(v, width=10):
     return "█" * filled + "░" * (width - filled)
 
 def power(c):
-    return c["mil"] * (1 + c["tech"] / 200) * (1.1 if c["nukes"] else 1.0) * (0.8 if c["stab"] < 40 else 1.0)
+    base = c["mil"] * (1 + c["tech"] / 200) * (1.1 if c["nukes"] else 1.0) * (0.8 if c["stab"] < 40 else 1.0)
+    base += arsenal_bonus(c, c.get("_arsenal") or {})
+    return base
 
 def dominance(c, allies_count, influence):
     return c["mil"] * 0.25 + c["eco"] * 0.25 + c["tech"] * 0.15 + influence * 0.5 + c["nukes"] * 3 + allies_count * 6
@@ -335,7 +476,11 @@ def init_game(player):
         turn_events={},
         log=["سال ۲۰۲۵: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
+        day=1, iaea_heat=0, un_censures=0,
     )
+    state["arsenal"] = _default_arsenal(rel)
+    for name, c in state["world"].items():
+        c["_arsenal"] = state["arsenal"].get(name, {})
     save(state)
     return state
 
@@ -659,8 +804,9 @@ def do_act(s, args):
         return
     action = args[0].lower()
     W = s["world"]; P = s["player"]; me = W[P]
+    NOTARGET = {"eco", "mil", "tech", "nuke", "propaganda", "iaea", "buy", "sell"}
     target = None
-    if len(args) >= 2:
+    if len(args) >= 2 and action not in NOTARGET:
         target = find_name(s, args[1])
         if target is None:
             print("✗ کشور نامعلوم: " + " ".join(args[1:]))
@@ -685,35 +831,164 @@ def do_act(s, args):
         print(f"فرصت باقی‌مانده در این نوبت: {s['ap']}")
 
     if action == "eco":
-        if not pay(40): return
+        if not pay(4): return
         me["eco"] += 6; me["stab"] += 1
         msg(s, "سرمایه‌گذاری کلان زیرساختی — اقتصاد رونق گرفت.")
         print(f"✔ اقتصاد بالا رفت → {me['eco']:.0f}")
         ev(s, P, "eco")
     elif action == "mil":
-        if not pay(50): return
+        if not pay(5): return
         me["mil"] += 7; me["stab"] -= 2
         msg(s, "بودجه دفاعی سنگین تخصیص یافت.")
         print(f"✔ ارتش تقویت شد → {me['mil']:.0f} (ثبات -۲)")
         ev(s, P, "mil")
     elif action == "tech":
-        if not pay(35): return
+        if not pay(4): return
         me["tech"] += 7; me["eco"] += 1
         print(f"✔ پیشرفت فناوری → {me['tech']:.0f}")
         ev(s, P, "tech")
     elif action == "nuke":
         if me["tech"] < 70:
-            print("✗ برای برنامه هسته‌ای فناوری ≥ ۷۰ لازم است.")
+            print("✗ برای برنامه هسته‌ای فناوری ≥ 70 لازم است.")
             return
-        if not pay(120): return
-        me["nukes"] += 1; add_rel(s, P, None, 0)
+        if not pay(12): return
+        me["nukes"] += 1
         msg(s, f"{P} آزمایش هسته‌ای جدیدی انجام داد! جهان نگران شد.")
         for o in W:
-            if o != P: add_rel(s, P, o, -8)
-        print(f"☢ کلاهک ساخته شد → مجموع: {me['nukes']} (محکومیت جهانی، روابط همه -۸)")
+            if o != P: add_rel(s, P, o, -12)
+        print(f"☢ کلاهک ساخته شد → مجموع: {me['nukes']} (محکومیت جهانی، روابط همه -12)")
+        if P not in NUKES0:
+            s["iaea_heat"] = s.get("iaea_heat", 0) + 1
+            heat = s["iaea_heat"]
+            if heat >= 3:
+                print("🇺🇳 آژانس بین‌المللی انرژی اتمی: برنامه هسته‌ای تو «غیرقانونی» اعلام شد!")
+            else:
+                print(f"🔍 آژانس انرژی اتمی پرونده تو را باز کرد (سطح فشار {heat}/3) — با `act iaea` یا منوی نهادها شفافیت اعلام کن.")
+        nw = [o for o in W if o != P and not (W[o]["nukes"] or o in NUKES0) and get_rel(s, P, o) < 40]
+        random.shuffle(nw)
+        sanctioned = nw[:3]
+        if sanctioned:
+            for o in sanctioned:
+                me["eco"] = max(10, me["eco"] - 2)
+                add_rel(s, P, o, -25)
+                msg(s, f"🇺🇳 {o} به نشانه اعتراض به آزمایش هسته‌ای، تحریم اقتصادی علیه {P} وضع کرد.")
+                print(f"⛔ تحریم از سوی {o}: اقتصاد تو -2، روابط -25")
+            ev(s, P, "sanction", sanctioned[0])
+        if me["nukes"] >= 3:
+            s["un_censures"] = s.get("un_censures", 0) + 1
+            me["stab"] = max(0, me["stab"] - 3)
+            msg(s, f"🇺🇳 شورای امنیت برای بار {s['un_censures']}م {P} را محکوم کرد (ثبات -3).")
+            print("🇺🇳 شورای امنیت سازمان ملل تو را محکوم کرد (ثبات -3، پرونده در `dash نهاد`).")
         ev(s, P, "nuke")
+    elif action == "buy":
+        if len(args) < 2:
+            print("✗ نام تجهیز لازم است: `act buy F-35A` — فهرست تجهیزات: `dash mil`")
+            return
+        toks = args[1:]
+        cnt = 1
+        if toks and toks[-1].isdigit() and find_item(" ".join(toks[:-1])):
+            cnt = max(1, int(toks[-1])); toks = toks[:-1]
+        key = find_item(" ".join(toks))
+        if key is None:
+            print("✗ چنین تجهیزی فروخته نمی‌شود. فهرست: `dash mil`")
+            return
+        item = ARSENAL_ITEMS[key]; maker = item["mk"]
+        if maker in s.get("eliminated", []):
+            print("✗ سازندهٔ این تجهیز از نقشه حذف شده؛ از بازار جایگزین استفاده کن.")
+            return
+        if maker != P:
+            if maker in s["at_war"]:
+                print(f"✗ با سازنده ({maker}) در حال جنگید!")
+                return
+            rel = get_rel(s, P, maker)
+            if rel < 10:
+                print(f"✗ روابطت با {maker} کم است (نیاز ≥10) — اول دیپلماسی.")
+                return
+            if item["hi"] and rel < 30:
+                print(f"✗ {key} از جنس فناوری پیشرفته است؛ فروش فقط با روابط ≥30 با {maker}.")
+                return
+            premium = 1.0 if rel >= 60 else (1.3 if rel >= 30 else 1.6)
+        else:
+            premium = 0.7
+        cost = round(item["pr"] * cnt * premium, 2)
+        if me["money"] < cost:
+            print(f"⚠ بودجه کافی نیست (نیاز: {cost} — موجود: {me['money']:.0f})")
+            return
+        me["money"] -= cost
+        if maker != P:
+            W[maker]["money"] += cost * 0.7
+            add_rel(s, P, maker, 3)
+        s["arsenal"].setdefault(P, {})
+        s["arsenal"][P][key] = s["arsenal"][P].get(key, 0) + cnt
+        me["_arsenal"] = s["arsenal"][P]
+        msg(s, f"🛒 {P} {cnt}× «{key}» را به ارزش {cost} میلیارد وارد زرادخانه کرد.")
+        ev(s, P, "mil")
+        print(f"✔ تحویل شد: {cnt}× {key} → زرادخانه (هزینه {cost} میلیارد)")
+    elif action == "sell":
+        if len(args) < 3:
+            print("✗ شکل فرمان: `act sell <تجهیز> <کشور>`")
+            return
+        key = find_item(" ".join(args[1:-1]))
+        buyer = find_name(s, args[-1])
+        if key is None:
+            print("✗ چنین تجهیزی در زرادخانه‌ای نیست.")
+            return
+        if buyer is None or buyer == P:
+            print("✗ خریدار نامعتبر است.")
+            return
+        if buyer in s.get("eliminated", []):
+            print("✗ این کشور از نقشه حذف شده.")
+            return
+        if get_rel(s, P, buyer) <= 20:
+            print("✗ خریدار حاضر به معامله نیست (روابط >20 لازم).")
+            return
+        ars = s["arsenal"].setdefault(P, {})
+        me["_arsenal"] = ars
+        if ars.get(key, 0) < 1:
+            print(f"✗ «{key}» در زرادخانه تو نیست.")
+            return
+        item = ARSENAL_ITEMS[key]
+        gain = round(item["pr"] * 0.5, 2)
+        ars[key] -= 1
+        if ars[key] <= 0: del ars[key]
+        me["money"] += gain
+        W[buyer]["money"] = max(0, W[buyer]["money"] - gain)
+        W[buyer]["mil"] = min(100, W[buyer]["mil"] + item["m"] * 0.25)
+        s["arsenal"].setdefault(buyer, {})
+        s["arsenal"][buyer][key] = s["arsenal"][buyer].get(key, 0) + 1
+        W[buyer]["_arsenal"] = s["arsenal"][buyer]
+        add_rel(s, P, buyer, 5)
+        msg(s, f"🤝 {P} یک «{key}» به {buyer} فروخت ({gain} میلیارد).")
+        ev(s, P, "trade", buyer)
+        print(f"✔ فروش: 1× {key} به {buyer} → +{gain} میلیارد، روابط +5")
+    elif action == "iaea":
+        if not pay(3): return
+        s["iaea_heat"] = 0
+        msg(s, f"{P} با آژانس بین‌المللی انرژی اتمی تفاهم‌نامه شفافیت امضا کرد.")
+        print("🇺🇳 بازرسان پرونده تو را مختومه اعلام کردند؛ فشار آژانس صفر شد.")
+    elif action == "un":
+        if target is None:
+            print("\u2717 \u06a9\u0634\u0648\u0631 \u0645\u0648\u0631\u062f \u062a\u0639\u0631\u06cc\u0641 \u0631\u0627 \u0628\u0646\u0648\u06cc\u0633: `act un \u06a9\u06cc\u0648\u0627\u0646`")
+            return
+        if target == P:
+            print("\u2717 \u0646\u0645\u06cc\u200c\u062a\u0648\u0627\u0646\u06cc \u062e\u0648\u062f\u062a \u0631\u0627 \u062f\u0631 \u0633\u0627\u0632\u0645\u0627\u0646 \u0645\u0644\u0644 \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0646\u06cc.")
+            return
+        tg = W[target]
+        ch = 0.4 + me.get("influence", 0) / 500
+        if P not in NUKES0:
+            ch -= 0.1
+        if random.random() < ch:
+            tg["stab"] = max(0, tg["stab"] - 2)
+            others = [n for n in W if n not in (P, target)]
+            for n in others:
+                add_rel(s, n, target, -5)
+                add_rel(s, P, n, 2)
+            msg(s, f"\U0001F1FA\U0001F1F3 \u0645\u062c\u0645\u0639 \u0639\u0645\u0648\u0645\u06cc \u0633\u0627\u0632\u0645\u0627\u0646 \u0645\u0644\u0644 \u0628\u0627 \u062a\u0648\u0635\u06cc\u0647 {P}\u060c {target} \u0631\u0627 \u0628\u0647 \u062e\u0627\u0637\u0631 \u0646\u0627\u0628\u0647\u0648\u0627\u06cc\u06cc \u0645\u0646\u0637\u0642\u0647\u200c\u0627\u06cc \u062a\u0639\u0631\u06cc\u0641 \u06a9\u0631\u062f.")
+            print(f"\u2714 \u0637\u0648\u0645\u0627\u0631 \u0645\u0648\u0641\u0642 \u0628\u0648\u062f: \u0627\u0628\u0631\u0648\u0647 {target} \u062f\u0631 \u062c\u0647\u0627\u0646 \u0627\u0641\u062a \u06a9\u0631\u062f (\u062b\u0627\u0628\u062a \u22122\u060c \u0631\u0648\u0627\u0628\u0637\u0634 \u0628\u0627 \u0628\u0642\u06cc\u0647 \u22125).")
+        else:
+            print(f"\u2717 \u062a\u0648\u0645\u0627\u0631 \u0634\u06a9\u0633\u062a \u062e\u0648\u0631\u062f; \u0628\u0644\u0648\u06a9 \u0631\u0648\u0627\u0628\u0637 \u062c\u0644\u0648 \u062a\u0635\u0648\u06cc\u062a \u0631\u0627 \u06af\u0631\u0641\u062a.")
     elif action == "spy":
-        if not pay(15): return
+        if not pay(2): return
         t = W[target]
         add_rel(s, P, target, -5)
         if random.random() < 0.75:
@@ -723,13 +998,13 @@ def do_act(s, args):
             print(f"⚠ مأمور لو رفت! آبرو رفت (روابط {P}–{target} افت کرد).")
     elif action == "aide":
         if target is None: print("✗ کشور مقصد را بنویس: `act aide کیوان`"); return
-        if not pay(30): return
+        if not pay(3): return
         add_rel(s, P, target, 14)
         t = W[target]; t["eco"] += 2
         print(f"✔ کمک اقتصادی به {target} — روابط +۱۴")
     elif action == "trade":
         if target is None: print("✗ کشور مقصد را بنویس."); return
-        if not pay(20): return
+        if not pay(2): return
         rel_before = get_rel(s, P, target)
         if rel_before < -40:
             print(f"✗ {target} حاضر به معامله با شما نیست (روابط {rel_before:.0f}). اول روابط را جور کن.")
@@ -741,7 +1016,7 @@ def do_act(s, args):
     elif action == "pact":
         if target is None: print("✗ کشور مقصد را بنویس."); return
         if target in s["pacts"]: print("⚠ پیمان عدم تجاوز از قبل هست."); return
-        if not pay(10): return
+        if not pay(1): return
         if get_rel(s, P, target) >= 35 and random.random() < 0.85:
             s["pacts"].append(target)
             add_rel(s, P, target, 8)
@@ -753,7 +1028,7 @@ def do_act(s, args):
         if target is None: print("✗ کشور مقصد را بنویس."); return
         if target in s["allies"]: print("⚠ از قبل متحدید."); return
         if target in s["at_war"]: print("✗ در حال جنگیدن با او هستید!"); return
-        if not pay(25): return
+        if not pay(3): return
         if get_rel(s, P, target) >= 65 and random.random() < 0.8:
             s["allies"].append(target)
             s["pacts"] = [p for p in s["pacts"] if p != target]
@@ -774,7 +1049,7 @@ def do_act(s, args):
         ev(s, P, "sanction", target)
     elif action == "covert":
         if target is None: print("✗ کشور مقصد را بنویس."); return
-        if not pay(50): return
+        if not pay(5): return
         t = W[target]
         if random.random() < 0.55:
             t["stab"] -= 12
@@ -788,14 +1063,14 @@ def do_act(s, args):
             print(f"⚠ عملیات کشف شد! ثبات خودت -۵ و روابط با بقیه آسیب دید.")
             ev(s, P, "covert_fail", target)
     elif action == "propaganda":
-        if not pay(20): return
+        if not pay(2): return
         ev(s, P, "propaganda")
         me["stab"] -= 1
         msg(s, "کمپین تبلیغاتی گسترده در داخل راه افتاد؛ فضای سیاسی دوقطبی شد.")
         print("📢 تبلیغات حزبی: حمایت ائتلاف حاکم بالا رفت (ثبات -۱)")
     elif action == "sabotage":
         if target is None: print("✗ هدف را مشخص کن: `act sabotage روسیه`"); return
-        if not pay(45): return
+        if not pay(5): return
         t = W[target]
         if random.random() < 0.55:
             t["mil"] = max(10, t["mil"] - 6); t["eco"] -= 2
@@ -810,7 +1085,7 @@ def do_act(s, args):
             ev(s, P, "sabotage_fail", target)
     elif action == "kill":
         if target is None: print("✗ هدف را مشخص کن: `act kill روسیه`"); return
-        if not pay(80): return
+        if not pay(8): return
         t = W[target]
         p = 0.25 if t["nukes"] else 0.35
         if random.random() < p:
@@ -835,7 +1110,7 @@ def do_act(s, args):
             print("✗ به متحد خود نمی‌توانی شبکه نیابتی نفوذ بدهی!")
             return
         existing = [x for x in s.get("proxies", []) if x["sponsor"] == P and x["host"] == target]
-        cost = 40 if existing else 60
+        cost = 4 if existing else 6
         if not pay(cost):
             return
         t = W[target]
@@ -894,6 +1169,16 @@ def start_war(s, atk, dfn):
     d_allies = [x for x in s["allies"] if x != atk and get_rel(s, x, dfn) > 50]
     for x in d_allies:
         dfn_pow += power(W[x]) * 0.3
+    nato_help = []
+    if dfn in NATO and atk not in NATO:
+        top_nato = sorted([n for n in NATO if n in W and n not in s["eliminated"] and n not in (atk, dfn)],
+                          key=lambda n: -power(W[n]))[:5]
+        for n in top_nato:
+            dfn_pow += power(W[n]) * 0.12
+        nato_help = top_nato
+        if nato_help:
+            print("🛡 ناتو پیمان دفاع مشترک را فعال کرد؛ حمایت: " + "، ".join(nato_help[:3]))
+            msg(s, "🛡 ناتو مادهٔ ۵ را برای حمایت از " + dfn + " فعال کرد.")
     a_allies = [x for x in W if x != atk and x in s["allies"] and x != dfn]
     for x in a_allies:
         atk_pow += power(W[x]) * 0.25
@@ -902,6 +1187,15 @@ def start_war(s, atk, dfn):
             add_rel(s, atk, x, -10 if x == dfn or x == s["player"] else -4)
     s["at_war"] += [atk, dfn]
     msg(s, f"⚔ جنگ! {atk} به {dfn} حمله کرد.")
+    if atk == s["player"] and dfn in NATO and atk not in NATO:
+        joiners = sorted([n for n in NATO if n in W and n not in s["eliminated"] and n not in (atk, dfn)],
+                         key=lambda n: -power(W[n]))[:3]
+        for n in joiners:
+            s["at_war"] += [n, atk]
+            add_rel(s, n, atk, -30)
+        if joiners:
+            print("🛡 پاسخ ناتو: " + "، ".join(joiners) + " علیه تو وارد جنگ شدند!")
+            msg(s, "⚔ اعضای ناتو " + "، ".join(joiners) + " به نفع " + dfn + " به جنگ شتافتند.")
     ratio = atk_pow / max(1.0, dfn_pow)
     r = random.uniform(0.85, 1.15)
     ratio *= r
@@ -947,6 +1241,10 @@ def annex(s, winner, loser):
     for o in W:
         if o not in (winner, loser):
             add_rel(s, winner, o, -12)
+    s["un_censures"] = s.get("un_censures", 0) + 1
+    wc["stab"] = max(0, wc["stab"] - 3)
+    msg(s, "🇺🇳 مجمع عمومی سازمان ملل این حمله را محکوم کرد و اعتبار " + winner + " در جهان زیر سئوال رفت (ثبات -3).")
+    print("🇺🇳 مجمع عمومی سازمان ملل الحاق «" + loser + "» را محکوم کرد (ثبات " + winner + ": -3).")
     if loser in s["allies"]: s["allies"].remove(loser)
     if loser in s["pacts"]: s["pacts"].remove(loser)
     s["eliminated"].append(loser)
@@ -971,132 +1269,153 @@ def end_of_action_checks(s):
 # ---------- turn resolution ----------
 
 def end_turn(s):
-    if s["over"]: print("بازی تمام شده."); return
+    if s["over"]:
+        print("بازی تمام شده. با `reset` بازی جدید بساز.")
+        return
     W = s["world"]; P = s["player"]
+    s.setdefault("day", 1)
+    day = s["day"]
     log = []
-    # درآمد
+
+    # ۱) درآمد روزانه
     for name, c in W.items():
-        if name in s["eliminated"]: continue
-        base = c["eco"] * 0.25
-        if c["stab"] < 30: base *= 0.5
+        if name in s["eliminated"]:
+            continue
+        base = c["eco"] * INCOME_K
+        if c["stab"] < 30:
+            base *= 0.5
         c["money"] += base
-        if name == P:
-            log.append(f"درآمد سالانه: +{base:.0f} میلیارد")
-    # آشوب داخلی
+
+    # ۲) رانش خفیف ثبات (روزانه)
     for name, c in W.items():
-        if name in s["eliminated"]: continue
-        drift = -2 if c["mil"] > 70 else 1
-        if c["eco"] > 70: drift += 1
-        c["stab"] = max(0, min(100, c["stab"] + drift + random.randint(-2, 2)))
-        if name != P and c["stab"] < 15 and random.random() < 0.15:
-            c["eco"] -= 5
+        if name in s["eliminated"]:
+            continue
+        drift = -0.7 if c["mil"] > 70 else 0.3
+        if c["eco"] > 70:
+            drift += 0.3
+        c["stab"] = max(0.0, min(100.0, c["stab"] + drift + random.randint(-1, 1)))
+        if name != P and c["stab"] < 12 and random.random() < 0.02:
+            c["eco"] -= 2
             log.append(f"⚠ در {name} ناآرامی داخلی بالا گرفت.")
-    # هوش مصنوعی کشورها
-    for name, c in W.items():
-        if name in s["eliminated"] or name == P: continue
-        targets = [o for o in W if o not in s["eliminated"] + [name]]
-        r = random.random()
-        rivals = sorted(targets, key=lambda o: get_rel(s, name, o))[:2]
-        friends = sorted(targets, key=lambda o: -get_rel(s, name, o))[:2]
-        if r < 0.20:
-            c["eco"] += 4; log.append(f"{name} روی اقتصادش سرمایه‌گذاری کرد.")
-        elif r < 0.40:
-            c["mil"] += 5; log.append(f"📖 {name} بودجه نظامی را افزایش داد.")
-        elif r < 0.55:
-            friend = random.choice(friends)
-            add_rel(s, name, friend, 10)
-            log.append(f"🤝 {name} و {friend} روابطشان را گرم کردند.")
-        elif r < 0.65 and rivals:
-            foe = random.choice(rivals)
-            if get_rel(s, name, foe) < 0:
-                foe_c = W[foe]; foe_c["eco"] = max(10, foe_c["eco"] - 3)
-                add_rel(s, name, foe, -5)
-                log.append(f"⛔ {name} علیه {foe} تحریم وضع کرد.")
-                if foe == P: ev(s, P, "sanctioned_by", name)
-        elif r < 0.72 and c["tech"] >= 70 and c["nukes"] < 2 and c["money"] > 100:
-            c["money"] -= 100; c["nukes"] += 1
-            log.append(f"☢ {name} وارد باشگاه هسته‌ای شد!")
-            for o in W:
-                if o not in s["eliminated"] + [name]: add_rel(s, name, o, -6)
-        elif r < 0.78 and c["aggr"] > 0.4 and rivals and c["mil"] > 65:
-            foe = min(rivals, key=lambda o: power(W[o]))
-            if foe != name and W[foe]["stab"] < 55 and name not in s["eliminated"]:
-                if foe != P or c["aggr"] > 0.6:
-                    before = _snapshot_clear()
-                    start_war(s, name, foe)
-                    log.append(f"⚔ {name} به {foe} اعلان جنگ داد!")
-        elif r < 0.85:
-            c["tech"] += 4; log.append(f"🔬 {name} در فناوری رشد کرد.")
-        elif r < 0.92 and rivals and c["aggr"] > 0.25:
-            foe = min(rivals, key=lambda o: get_rel(s, name, o))
-            if get_rel(s, name, foe) < -35 and foe not in s["eliminated"]:
-                foe_c = W[foe]
-                op = random.random()
-                if op < 0.55:
-                    if random.random() < 0.55:
-                        foe_c["mil"] = max(10, foe_c["mil"] - 6); foe_c["eco"] = max(10, foe_c["eco"] - 2)
-                        ev(s, name, "sabotage_ok", foe); ev(s, foe, "sabotage_victim", name)
-                        log.append(f"🕵 عملیات خرابکاری خاموش {name} علیه زیرساخت‌های {foe} موفق بود.")
+
+    # ۳) نشست تصمیم‌گیری کشورهای دیگر (هر ۱۰ روز)
+    if day % 10 == 0:
+        for name, c in W.items():
+            if name in s["eliminated"] or name == P or s["over"]:
+                continue
+            targets = [o for o in W if o not in s["eliminated"] + [name]]
+            if not targets:
+                continue
+            r = random.random()
+            rivals = sorted(targets, key=lambda o: get_rel(s, name, o))[:2]
+            friends = sorted(targets, key=lambda o: -get_rel(s, name, o))[:2]
+            if r < 0.068:
+                c["eco"] += 1.5
+            elif r < 0.136:
+                c["mil"] += 2
+            elif r < 0.187 and friends:
+                friend = random.choice(friends)
+                add_rel(s, name, friend, 5)
+            elif r < 0.221 and rivals:
+                foe = random.choice(rivals)
+                if get_rel(s, name, foe) < 0:
+                    foe_c = W[foe]
+                    foe_c["eco"] = max(10, foe_c["eco"] - 1.5)
+                    add_rel(s, name, foe, -5)
+                    log.append(f"⛔ {name} علیه {foe} محدودیت اقتصادی وضع کرد.")
+                    if foe == P:
+                        ev(s, P, "sanctioned_by", name)
+            elif r < 0.245 and c["tech"] >= 70 and c["nukes"] < 2 and c["money"] > 15:
+                c["money"] -= 12; c["nukes"] += 1
+                log.append(f"☢ {name} وارد باشگاه هسته‌ای شد!")
+                for o in W:
+                    if o not in s["eliminated"] + [name]:
+                        add_rel(s, name, o, -6)
+            elif r < 0.265 and c["aggr"] > 0.4 and rivals and c["mil"] > 65:
+                foe = min(rivals, key=lambda o: power(W[o]))
+                if foe != name and W[foe]["stab"] < 50:
+                    if foe != P or c["aggr"] > 0.6:
+                        start_war(s, name, foe)
+                        log.append(f"⚔ {name} به {foe} حمله کرد!")
+            elif r < 0.289:
+                c["tech"] += 1.5
+            elif r < 0.313 and rivals and c["aggr"] > 0.25:
+                foe = min(rivals, key=lambda o: get_rel(s, name, o))
+                if get_rel(s, name, foe) < -35 and foe not in s["eliminated"]:
+                    foe_c = W[foe]
+                    op = random.random()
+                    if op < 0.55:
+                        if random.random() < 0.55:
+                            foe_c["mil"] = max(10, foe_c["mil"] - 3)
+                            foe_c["eco"] = max(10, foe_c["eco"] - 1)
+                            ev(s, name, "sabotage_ok", foe)
+                            ev(s, foe, "sabotage_victim", name)
+                            log.append(f"🕵 عملیات خرابکاری خاموش {name} علیه زیرساخت‌های {foe} موفق بود.")
+                        else:
+                            ev(s, name, "sabotage_fail", foe)
                     else:
-                        ev(s, name, "sabotage_fail", foe)
-                        log.append(f"🕵 عملیات خرابکاری {name} علیه {foe} افشا و ناکام ماند.")
-                elif op < 0.80:
-                    log.append(f"🕵 سازمان اطلاعاتی {name} فعالیت جاسوسی گسترده‌ای را کلید زد.")
-                else:
-                    if random.random() < 0.30:
-                        foe_c["stab"] = max(0, foe_c["stab"] - 15); foe_c["eco"] = max(10, foe_c["eco"] - 3)
-                        add_rel(s, name, foe, -35)
-                        for o in W:
-                            if o not in (name, foe) and o not in s["eliminated"]:
-                                add_rel(s, name, o, -8)
-                        ev(s, name, "kill_ok", foe); ev(s, foe, "kill_victim", name)
-                        log.append(f"☠ ترور دولتمردان ارشد {foe}! نقشه توسط {name} اجرا شده و جامعه جهانی را تکان داد.")
-                    else:
-                        add_rel(s, name, foe, -10)
-                        ev(s, name, "kill_fail", foe); ev(s, foe, "kill_attempt", name)
-                        log.append(f"☠ نقشه ترور عوامل {name} در {foe} افشا و خنثی شد.")
-        elif r < 0.96 and rivals and c["aggr"] > 0.5 and c["money"] >= 60:
-            foe = min(rivals, key=lambda o: get_rel(s, name, o))
-            already = any(x["sponsor"] == name and x["host"] == foe for x in s.get("proxies", []))
-            if get_rel(s, name, foe) < -30 and not already and foe not in s["eliminated"]:
-                c["money"] -= 60
-                s["proxies"].append({"sponsor": name, "host": foe, "power": 2, "hidden": True})
-                W[foe]["stab"] = max(0, W[foe]["stab"] - 4)
-                add_rel(s, name, foe, -15)
-                log.append(f"🕵 شواهدی از شبکه نیابتی {name} در {foe} دیده شده است.")
-                if foe == P:
-                    ev(s, P, "sabotage_victim", name)
-    # جنگ‌های در جریان: فرسایش صلح
+                        if random.random() < 0.20:
+                            foe_c["stab"] = max(0, foe_c["stab"] - 6)
+                            foe_c["eco"] = max(10, foe_c["eco"] - 1.5)
+                            add_rel(s, name, foe, -35)
+                            for o in W:
+                                if o not in (name, foe) and o not in s["eliminated"]:
+                                    add_rel(s, name, o, -8)
+                            ev(s, name, "kill_ok", foe)
+                            ev(s, foe, "kill_victim", name)
+                            log.append(f"☠ ترور دولتمردان ارشد {foe}! نقشه توسط {name} اجرا شده و جامعه جهانی را تکان داد.")
+                        else:
+                            add_rel(s, name, foe, -10)
+                            ev(s, name, "kill_fail", foe)
+                            ev(s, foe, "kill_attempt", name)
+            elif r < 0.326 and rivals and c["aggr"] > 0.5 and c["money"] >= 8:
+                foe = min(rivals, key=lambda o: get_rel(s, name, o))
+                already = any(x["sponsor"] == name and x["host"] == foe for x in s.get("proxies", []))
+                if get_rel(s, name, foe) < -30 and not already and foe not in s["eliminated"]:
+                    c["money"] -= 6
+                    s["proxies"].append({"sponsor": name, "host": foe, "power": 1, "hidden": True})
+                    W[foe]["stab"] = max(0, W[foe]["stab"] - 1.5)
+                    add_rel(s, name, foe, -12)
+                    log.append(f"🕵 شواهدی از شبکه نیابتی {name} در {foe} دیده شده است.")
+
+    # ۴) جنگ‌ها: فرسایش روزانه + پیامدها
     if s["at_war"]:
         war_pairs = [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]
         for a, d in war_pairs:
-            if a in s["eliminated"] or d in s["eliminated"]: continue
+            if a in s["eliminated"] or d in s["eliminated"]:
+                continue
             Wa, Wd = W[a], W[d]
             done = False
-            if power(Wa) > power(Wd) * 1.6 and Wd["stab"] < 35:
-                annex(s, a, d); done = True
-            elif power(Wd) > power(Wa) * 1.6 and Wa["stab"] < 35:
-                annex(s, d, a); done = True
+            if random.random() < 0.20:
+                if power(Wa) > power(Wd) * 1.6 and Wd["stab"] < 35:
+                    annex(s, a, d); done = True
+                elif power(Wd) > power(Wa) * 1.6 and Wa["stab"] < 35:
+                    annex(s, d, a); done = True
             if not done:
-                Wa["mil"] = max(10, Wa["mil"] - 2); Wd["mil"] = max(10, Wd["mil"] - 2)
-                Wa["eco"] -= 1; Wd["eco"] -= 1
-                if random.random() < 0.12:
-                    if s["player"] in (a, d):
-                        me2 = W[s["player"]]; me2["stab"] -= 4
-                        log.append(f"جنگ فرسایشی ادامه دارد... ثبات {s['player']} افت کرد (-۴). نوبت مذاکره؟")
-                    else:
-                        if random.random() < 0.5:
-                            rel = get_rel(s, a, d) + 15
-                            set_rel(s, a, d, rel)
-                            log.append(f"🕊 {a} و {d} آتش‌بس نسبی برقرار کردند.")
+                Wa["mil"] = max(10, Wa["mil"] - 0.7)
+                Wd["mil"] = max(10, Wd["mil"] - 0.7)
+                Wa["eco"] = max(10, Wa["eco"] - 0.3)
+                Wd["eco"] = max(10, Wd["eco"] - 0.3)
+                if s["player"] in (a, d) and random.random() < 0.10:
+                    me2 = W[s["player"]]
+                    me2["stab"] = max(0, me2["stab"] - 1.5)
+                    log.append("جنگ سنگین است... ثبات تو سقوط کرد. مذاکره؟")
+                elif random.random() < 0.04:
+                    if s["player"] not in (a, d):
+                        rel = get_rel(s, a, d) + 15
+                        set_rel(s, a, d, rel)
+                        s["at_war"] = [x for k, x in enumerate(s["at_war"]) if k not in (s["at_war"].index(a), s["at_war"].index(d))]
+                        log.append(f"🕊 {a} و {d} آتش‌بس نسبی برقرار کردند.")
         seen = set(); final = []
-        for pr in war_pairs:
-            if pr[0] in s["eliminated"] or pr[1] in s["eliminated"]: continue
-            if pr[0] in seen or pr[1] in seen: continue
+        for pr in [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]:
+            if pr[0] in s["eliminated"] or pr[1] in s["eliminated"]:
+                continue
+            if pr[0] in seen or pr[1] in seen:
+                continue
             seen.add(pr[0]); seen.add(pr[1]); final.extend(pr)
         s["at_war"] = final
 
-    # نیروهای نیابتی: نگه‌داری، عملیات و کشف
+    # ۵) نیروهای نیابتی: نگه‌داری روزانه (احتمال‌های ÷10)
     kept = []
     for px in s.get("proxies", []):
         sp, host = px.get("sponsor"), px.get("host")
@@ -1104,76 +1423,75 @@ def end_turn(s):
             continue
         pw = px["power"]
         Wh = W[host]
-        Wh["stab"] = max(0, Wh["stab"] - (2 if pw >= 4 else 1))
+        Wh["stab"] = max(0, Wh["stab"] - (0.2 if pw >= 4 else 0.1))
         if sp in W and sp not in s["eliminated"]:
-            W[sp]["influence"] += 0.5
-        if Wh["stab"] < 45 and random.random() < 0.08 + pw * 0.03:
-            Wh["eco"] = max(10, Wh["eco"] - 5)
-            Wh["stab"] = max(0, Wh["stab"] - 5)
+            W[sp]["influence"] += 0.017
+        if random.random() < 0.008 + pw * 0.003:
+            Wh["eco"] = max(10, Wh["eco"] - 2)
+            Wh["stab"] = max(0, Wh["stab"] - 3)
             log.append(f"🔥 شبه‌نظامیان {sp} در {host} عملیات گسترده انجام دادند!")
             ev(s, host, "uprising", sp)
             if host == P:
                 end_of_action_checks(s)
-        elif host == P and random.random() < 0.35:
-            log.append(f"⚠ شبه‌نظامیان {sp} در خاک تو فعال‌اند (قدرت {pw}/۵).")
+        elif host == P and random.random() < 0.04:
+            log.append(f"⚠ شبه‌نظامیان {sp} در خاک تو فعال‌اند (قدرت {pw}/5).")
             ev(s, P, "sabotage_victim", sp)
-        if random.random() < 0.10:
+            if Wh["stab"] >= 45 and random.random() < 0.20:
+                s["proxies"] = [p2 for p2 in s["proxies"] if p2 is not px]
+                log.append(f"✅ نیروهای امنیتی تو شبکه نیابتی {sp} را متلاشی کردند!")
+                continue
+        if random.random() < 0.010:
             add_rel(s, sp, host, -18)
             log.append(f"🔓 شبکه نیابتی {sp} در {host} لو رفت!")
             ev(s, sp, "covert_fail", host)
             ev(s, host, "sabotage_victim", sp)
             if sp == P:
                 me_ = W[P]
-                me_["stab"] = max(0, me_["stab"] - 2)
+                me_["stab"] = max(0, me_["stab"] - 1)
             continue
         kept.append(px)
     s["proxies"] = kept
 
-    # رخداد تصادفی جهانی
-    if random.random() < 0.55:
-        event = random.choice([
-            "crisis_oil", "boom", "uprising", "tech_break",
-            "plague", "alliance_shift",
-        ])
+    # ۶) رخداد تصادفی جهانی ~۲٪ روزانه
+    if random.random() < 0.02:
+        event = random.choice(["crisis_oil", "boom", "uprising", "tech_break",
+                               "plague", "alliance_shift"])
         alive = [n for n in W if n not in s["eliminated"]]
-        if event == "crisis_oil":
-            n = random.choice(alive)
-            W[n]["eco"] -= 6; W[n]["money"] -= 30
-            if n == P: ev(s, P, "oil_crisis")
-            log.append(f"📉 بحران انرژی! چرخ اقتصادی {n} دچار افت شد.")
-        elif event == "boom":
-            n = random.choice(alive)
-            W[n]["eco"] += 6; W[n]["money"] += 40
-            if n == P: ev(s, P, "boom")
-            log.append(f"📈 رونق جهانی بازار — {n} بیشترین سود را برد.")
-        elif event == "uprising":
-            core = [n for n in alive if W[n]["stab"] < 55] or alive
-            n = random.choice(core)
-            W[n]["stab"] -= 10
-            log.append(f"🔥 خیزش مردمی در {n} — ثبات -۱۰.")
-            if n == s["player"]:
-                ev(s, P, "uprising")
-                end_of_action_checks(s)
-        elif event == "tech_break":
-            n = random.choice(alive)
-            W[n]["tech"] += 6
-            if n == P: ev(s, P, "tech_break")
-            log.append(f"💡 جهش فناورانه در {n} — فناوری +۶.")
-        elif event == "plague":
-            n = random.choice(alive)
-            W[n]["eco"] -= 4; W[n]["stab"] -= 4; W[n]["mil"] = max(10, W[n]["mil"] - 2)
-            if n == P: ev(s, P, "plague")
-            log.append(f"🦠 بیماری همه‌گیر صنایع {n} را فلج کرد.")
-        elif event == "alliance_shift":
-            a, b = random.sample(alive, min(2, len(alive)))
-            if a == s["player"] or b == s["player"]:
-                log.append("🌐 مجمع جهانی: شور و شورای دیپلماتیک، همه مشغول لابی‌گری.")
-            add_rel(s, a, b, 6)
-            log.append(f"🌐 دیپلماسی خاموش: فاصله {a} و {b} بیشتر شد... یا کمتر؟")
-    if s["at_war"] and s["player"] in s["at_war"]:
-        me = W[s["player"]]
-        me["stab"] = max(0, me["stab"] - 2)
-    # احزاب و مطبوعات همه کشورها به رخدادها واکنش نشان می‌دهند
+        if alive:
+            if event == "crisis_oil":
+                n = random.choice(alive)
+                W[n]["eco"] = max(10, W[n]["eco"] - 2); W[n]["money"] -= 5
+                if n == P: ev(s, P, "oil_crisis")
+                log.append(f"📉 بحران انرژی! چرخ اقتصادی {n} دچار افت شد.")
+            elif event == "boom":
+                n = random.choice(alive)
+                W[n]["eco"] += 2; W[n]["money"] += 8
+                if n == P: ev(s, P, "boom")
+                log.append(f"📈 رونق جهانی بازار — {n} بیشترین سود را برد.")
+            elif event == "uprising":
+                core = [n for n in alive if W[n]["stab"] < 55] or alive
+                n = random.choice(core)
+                W[n]["stab"] -= 3
+                log.append(f"🔥 خیزش مردمی در {n} — ثبات -3.")
+                if n == s["player"]:
+                    ev(s, P, "uprising")
+                    end_of_action_checks(s)
+            elif event == "tech_break":
+                n = random.choice(alive)
+                W[n]["tech"] += 2
+                if n == P: ev(s, P, "tech_break")
+                log.append(f"💡 جهش فناورانه در {n}.")
+            elif event == "plague":
+                n = random.choice(alive)
+                W[n]["eco"] = max(10, W[n]["eco"] - 2); W[n]["stab"] -= 1.5
+                if n == P: ev(s, P, "plague")
+                log.append(f"🦠 بیماری همه‌گیر صنایع {n} را فلج کرد.")
+            elif event == "alliance_shift":
+                a, b = random.sample(alive, min(2, len(alive)))
+                add_rel(s, a, b, 4)
+                log.append(f"🌐 دیپلماسی خاموش: فاصله {a} و {b} بیشتر شد... یا کمتر؟")
+
+    # ۷) احزاب و مطبوعات: واکنش روزانه همه کشورها
     politics = s.setdefault("politics", {})
     te = s.get("turn_events", {})
     pop_lines, heads, foreign_digest = [], [], []
@@ -1193,16 +1511,65 @@ def end_turn(s):
         elif hl:
             foreign_digest.append(hl[0])
     s["turn_events"] = {}
-    # پیشرفت سال
-    s["year"] += 1; s["turn"] += 1; s["ap"] = 2
+
+    # ۸) شمارش روز و گزارش
+    s["ap"] = 2
+    s["day"] += 1
+    year_report = s["day"] > DAYS_PER_YEAR
+    if year_report:
+        s["day"] = 1
+        s["year"] += 1
+        s["turn"] += 1
+
+        # نهادها در پایان سال
+        me = W[P]
+        if P not in NUKES0 and s.get("iaea_heat", 0) >= 3:
+            me["eco"] = max(10, me["eco"] - 6)
+            for o in WEST:
+                if o in W and o != P:
+                    add_rel(s, P, o, -20)
+            msg(s, "🇺🇳 پرونده هسته‌ای تو به شورای امنیت ارجاع شد؛ تحریم‌های بین‌المللی اقتصاد را ضربه زد (-6).")
+            log.append("🇺🇳 پرونده تو به شورای امنیت ارجاع شد؛ تحریم‌های تازه (اقتصاد -6)")
+        elif P not in NUKES0 and s.get("iaea_heat", 0) > 0:
+            log.append(f"🔍 فشار آژانس انرژی اتمی ادامه دارد (سطح {s['iaea_heat']}/3).")
+        if s.get("un_censures", 0) >= 5 and random.random() < 0.5:
+            me["stab"] = max(0, me["stab"] - 5)
+            log.append("🇺🇳 انزوای دیپلماتیک به‌خاطر محکومیت‌های مکرر سازمان ملل؛ ثبات -5")
+
+        # معاملات سالانه تسلیحاتی میان کشورهای هوش مصنوعی
+        deals = 0
+        ai_pool = [n for n in W if n != P and n not in s["eliminated"] and W[n]["money"] > 8]
+        random.shuffle(ai_pool)
+        for buyer in ai_pool:
+            if deals >= 2:
+                break
+            options = [k for k, it in ARSENAL_ITEMS.items() if it["mk"] != buyer and get_rel(s, buyer, it["mk"]) >= 60 and W[it["mk"]]["money"] >= it["pr"]]
+            if not options:
+                continue
+            key = random.choice(options)
+            it = ARSENAL_ITEMS[key]; mk = it["mk"]
+            W[buyer]["money"] -= it["pr"]
+            W[mk]["money"] += it["pr"]
+            s["arsenal"].setdefault(buyer, {})
+            s["arsenal"][buyer][key] = s["arsenal"][buyer].get(key, 0) + 1
+            W[buyer]["_arsenal"] = s["arsenal"][buyer]
+            add_rel(s, buyer, mk, 2)
+            deals += 1
+            log.append(f"📄 قرارداد نظامی: {mk} → {buyer} (۱× {key})")
+
+    s["log"] = (s.get("log", []) + log)[-40:]
+
     save(s)
     print()
     print("─" * 46)
-    print("📣 گزارش سال " + str(s["year"] - 1))
+    if year_report:
+        print("📢 گزارش سال " + str(s["year"] - 1))
+    else:
+        print(f"🌙 گزارش روز {s.get('day', 1) - 1} — ماه {s['turn']}")
     for line in log[-8:]:
         print("  • " + line)
     if pop_lines:
-        print(" 🏛 حزب‌ها: " + " | ".join(pop_lines))
+        print(" 🏛 احزاب: " + " | ".join(pop_lines))
     for h in heads:
         print("   " + h)
     if foreign_digest:
@@ -1210,11 +1577,16 @@ def end_turn(s):
         for fl in foreign_digest[:3]:
             print("  " + fl)
     print("─" * 46)
-    check_victory(s)
+    if year_report:
+        check_victory(s)
     if s["over"]:
         print("\n🏁 بازی تمام شد. برای شروع دوباره: `reset` بعد `init <کشور>`")
     else:
-        print(f"سال {s['year']} — نوبت تو بود! ({s['ap']} فرصت)\n")
+        if year_report:
+            print(f"سال {s['year']} آغاز شد — روز ۱.")
+        else:
+            print(f"روز {s['day']} از ماه {s['turn']} — فرصت‌های امروز: 2")
+        print()
 
 def _snapshot_clear():
     return None
@@ -1256,7 +1628,7 @@ def check_victory(s):
 def show_status(s):
     W = s["world"]; P = s["player"]; me = W[P]
     print("═" * 56)
-    print(f"  سال {s['year']} | نوبت {s['turn']} | فرصت این نوبت: {s['ap']}")
+    print(f"  سال {s['year']} | روز {s.get('day', 1)} از {DAYS_PER_YEAR} | فرصت امروز: {s['ap']}")
     if s["over"]: print("  ‼ بازی به پایان رسیده — `reset` برای شروع دوباره")
     print("═" * 56)
     if s["player"] in s["eliminated"]:
@@ -1428,6 +1800,13 @@ def dash_military(s):
     print(f"  ارتش [{bar(me['mil'])}] {me['mil']:.0f}   |   کلاهک هسته‌ای: {me['nukes']} ☢   |   فناوری [{bar(me['tech'])}] {me['tech']:.0f}")
     my_pow = power(me)
     print(f"  قدرت پروژه‌شده: {my_pow:.0f}   |   جوخه‌های متحد: {len(s['allies'])}")
+    ars = s.get("arsenal", {}).get(P, {})
+    if ars:
+        top = sorted(ars.items(), key=lambda x: -x[1])[:8]
+        print("  🛢 زرادخانه: " + "، ".join(f"{n}× {k}" for k, n in top))
+        print("     → خرید/فروش تجهیزات: منوی [7] یا `act buy/sell`")
+    else:
+        print("  🛢 زرادخانه خالی است — منوی [7] بازار تجهیزات")
     rivals = [n for n in W if n != P and n not in s["eliminated"]]
     print()
     print(" 🥊 قوی‌ترین مردان نظامی جهان (مقایسه با تو):")
@@ -1450,8 +1829,8 @@ def dash_economy(s):
     print("═" * 56)
     print(" 💰 داشبورد اقتصاد — " + P)
     print("═" * 56)
-    inc = me["eco"] * 0.25 * (0.5 if me["stab"] < 30 else 1.0)
-    print(f"  خزانه {me['money']:.0f} میلیارد   |   درآمد تخمینی سالانه +{inc:.0f}")
+    inc_d = me["eco"] * INCOME_K * (0.5 if me["stab"] < 30 else 1.0)
+    print(f"  خزانه {me['money']:.0f} میلیارد   |   درآمد روزانه +{inc_d:.1f} (ماهانه ~{inc_d * DAYS_PER_YEAR:.0f})")
     print(f"  اقتصاد [{bar(me['eco'])}] {me['eco']:.0f}")
     others = [n for n in W if n != P and n not in s["eliminated"]]
     hostiles = sum(1 for n in others if get_rel(s, P, n) < -40)
@@ -1471,6 +1850,51 @@ DASH_SECTIONS = {
     "eco": ("💰 اقتصاد", dash_economy),
 }
 
+
+def dash_orgs(s):
+    P = s["player"]
+    line = "=" * 56
+    print(line)
+    print(" داشبورد نهادهای بین‌المللی — " + P)
+    print(line)
+    cens = s.get("un_censures", 0)
+    print(" 🗳 سازمان ملل متحد — عضویت: ✔ (همه کشورها)")
+    if cens == 0:
+        print("    تاکنون پرونده‌ای در شورای امنیت نداری.")
+    else:
+        print(f"    ⚠ محکومیت‌های شورای امنیت: {cens} بار")
+        if cens >= 3:
+            print("    ⚠ هشدار: انزوای دیپلماتیک نزدیک می‌شود.")
+    heat = s.get("iaea_heat", 0)
+    if P in NUKES0:
+        state_i = "عضو «باشگاه هسته‌ای»؛ کلاهکش قانونی شناخته می‌شود."
+    elif heat == 0:
+        state_i = "وضعیت شفاف — بازرسی‌ها کامل و بدون مانع است."
+    elif heat < 3:
+        state_i = f"تحت فشار بازرسی — سطح {heat}/3 (با شفافیت اعلام‌شده صفر می‌شود)"
+    else:
+        state_i = "برنامه هسته‌ای غیرقانونی اعلام شده؛ در مسیر تحریم شورای امنیت!"
+    print(" ☢ آژانس بین‌المللی انرژی اتمی — فشار: " + f"{heat}/3")
+    print("    " + state_i)
+    if P in NATO:
+        print(" 🛡 ناتو: ✔ عضو — مادهٔ ۵ دفاع مشترک تو را پشتیبانی می‌کند.")
+        others = [n for n in NATO if n in s["world"] and n != P and n not in s["eliminated"]]
+        if others:
+            top = sorted(others, key=lambda n: -power(s["world"][n]))[:3]
+            print("    قدرتمندترین هم‌پیمانان: " + "، ".join(top))
+    else:
+        print(" 🛡 ناتو: غیرعضو — پیمان دفاع مشترک شامل تو نمی‌شود.")
+    print(line)
+
+DASH_SECTIONS = {
+    "dom": ("🏛 سیاست داخلی", dash_domestic),
+    "dip": ("🌐 دیپلماسی", dash_diplomacy),
+    "ops": ("🕵 عملیات پنهان", dash_ops),
+    "mil": ("⚔ نظامی", dash_military),
+    "eco": ("💰 اقتصاد", dash_economy),
+    "org": ("🇺🇳 نهادهای بین‌المللی", dash_orgs),
+}
+
 def dash(s, section=""):
     section = section.strip().lower()
     alias = {
@@ -1479,6 +1903,8 @@ def dash(s, section=""):
         "ops": "ops", "عملیات": "ops", "جاسوسی": "ops", "نیابتی": "ops",
         "mil": "mil", "نظامی": "mil", "جنگ": "mil",
         "eco": "eco", "اقتصاد": "eco", "خزانه": "eco",
+        "org": "org", "نهاد": "org", "نهادها": "org", "سازمان": "org",
+        "ملل": "org", "آژانس": "org", "اتمی": "org",
     }
     key = alias.get(section)
     if key is None:
@@ -1508,6 +1934,9 @@ def show_country(s, name):
     print(f"   فن‌آوری [{bar(c['tech'])}] {c['tech']:.0f}")
     print(f"   ثبات  [{bar(c['stab'])}] {c['stab']:.0f}")
     print(f"   خزانه {c['money']:.0f} میلیارد | نفوذ {c['influence']:.0f} | کلاهک ☢ {c['nukes']}")
+    tar_ars = s.get("arsenal", {}).get(name, {})
+    if tar_ars:
+        print("   🛢 تجهیزات اصلی: " + "، ".join(f"{n}× {k}" for k, n in sorted(tar_ars.items(), key=lambda x: -x[1])[:3]))
     if name != P:
         print(f"   رابطه با تو {P}: {r:.0f} [{bar(max(0, r))}]")
     pol = (s.get("politics") or {}).get(name) or {}
@@ -1627,36 +2056,214 @@ def main(argv=None):
     else:
         print("✗ فرمان ناشناخته. `help` بزن.")
 
-def play():
-    """حالت تعاملی: `python geopolitics.py play` — فرمان‌ها را پشت‌سرهم اجرا می‌کند."""
-    if os.path.exists(STATE):
-        show_status(load())
+def pick_country(s, title):
+    W = s["world"]; P = s["player"]
+    print(f"\n≡ {title} (شماره بزن یا نام کشور را بنویس؛ 0 = بازگشت)")
+    regions = {}
+    for n in W:
+        if n == P or n in s["eliminated"]:
+            continue
+        regions.setdefault(W[n].get("region", "دیگر"), []).append(n)
+    regs = list(regions)
+    for ri, reg in enumerate(regs, 1):
+        print(f"  [{ri}] {reg} ({len(regions[reg])} کشور)")
+    raw = input("  منطقه? ").strip()
+    if raw in ("0", ""):
+        return None
+    members = None
+    if raw.isdigit() and 1 <= int(raw) <= len(regs):
+        members = regions[regs[int(raw) - 1]]
     else:
+        t = find_name(s, raw)
+        if t and t != P:
+            return t
+        print("  ✗ یافت نشد.")
+        return None
+    for ci, m in enumerate(members, 1):
+        c = W[m]
+        print(f"   {ci:>3} {m:<18} ارتش {c['mil']:.0f} | اقتصاد {c['eco']:.0f} | رابطه {get_rel(s, P, m):.0f}")
+    raw2 = input("  شماره کشور? ").strip()
+    if raw2.isdigit() and 1 <= int(raw2) <= len(members):
+        return members[int(raw2) - 1]
+    return None
+
+
+def equip_menu(s):
+    P = s["player"]
+    while True:
+        print("\n" + "═" * 56)
+        print(" 🛒 بازار جهانی تجهیزات نظامی")
+        print("═" * 56)
+        me = s["world"][P]
+        ars = s.get("arsenal", {}).get(P, {})
+        if ars:
+            print(" زرادخانه تو: " + "، ".join(f"{n}x {k}" for k, n in sorted(ars.items(), key=lambda x: -x[1])[:10]))
+        print(f" خزانه: {me['money']:.0f} میلیارد")
+        print("─" * 56)
+        for ci, cat in enumerate(EQUIP_CATS, 1):
+            print(f"  [{ci}] {cat} ({len(EQUIPMENT[cat])} قلم)")
+        print("  [9] فروش تجهیز    [0] بازگشت")
+        raw = input(" دسته? ").strip()
+        if raw in ("0", ""):
+            return
+        if raw == "9":
+            if not ars:
+                print(" زرادخانه تو خالی است.")
+                continue
+            items = sorted(ars.items(), key=lambda x: -x[1])
+            for ci, (k, n) in enumerate(items, 1):
+                print(f"   {ci:>3} {k:<28} {n}x")
+            raw2 = input(" کدام تجهیز را بفروشی? ").strip()
+            if raw2.isdigit() and 1 <= int(raw2) <= len(items):
+                key = items[int(raw2) - 1][0]
+                buyer = pick_country(s, "به کدام کشور بفروشی؟")
+                if buyer:
+                    main(["act", "sell", key, buyer])
+                    s = load()
+            continue
+        if raw.isdigit() and 1 <= int(raw) <= len(EQUIP_CATS):
+            cat = EQUIP_CATS[int(raw) - 1]
+            for ii, e in enumerate(EQUIPMENT[cat], 1):
+                relmk = get_rel(s, P, e["mk"])
+                prem = "تولید خودت ×0.7" if e["mk"] == P else ("قیمت عادی" if relmk >= 60 else ("×1.3" if relmk >= 30 else "×1.6"))
+                print(f"   {ii:>3} {e['n']:<28} سازنده {e['mk']:<10} قیمت {e['pr']:>5} | اثر نظامی +{e['m']} | {prem}")
+            raw2 = input(" شماره تجهیز (یا نامش را بنویس)? ").strip()
+            key = None
+            if raw2.isdigit() and 1 <= int(raw2) <= len(EQUIPMENT[cat]):
+                key = EQUIPMENT[cat][int(raw2) - 1]["n"]
+            else:
+                key = find_item(raw2)
+            if not key:
+                print(" ✗ تجهیز نامعتبر.")
+                continue
+            raw3 = input(" چند عدد? (ENTER=1) ").strip()
+            cnt = int(raw3) if raw3.isdigit() and int(raw3) > 0 else 1
+            main(["act", "buy", key, str(cnt)])
+            s = load()
+        else:
+            main(["help"] if raw == "h" else ["act"] + raw.split())
+            s = load()
+
+
+def orgs_menu(s):
+    P = s["player"]
+    while True:
+        print("\n" + "═" * 56)
+        print(" 🏛 نهادهای بین‌المللی")
+        print("═" * 56)
+        print("  [1] داشبورد نهادها (ملل/ناتو/آژانس)")
+        print("  [2] اعلام شفافیت به آژانس انرژی اتمی (3م)")
+        print("  [3] طرح محکومیت یک کشور در مجمع عمومی ملل")
+        print("  [0] بازگشت")
+        raw = input(" انتخاب? ").strip()
+        if raw in ("0", ""):
+            return
+        if raw == "1":
+            main(["dash", "org"])
+        elif raw == "2":
+            main(["act", "iaea"])
+        elif raw == "3":
+            t = pick_country(s, "کدام کشور را در مجمع عمومی محکوم کنی؟")
+            if t:
+                main(["act", "un", t])
+        s = load()
+
+
+def play():
+    """حالت تعاملی منو‌محور: همه کارها با شماره‌ها انجام می‌شود."""
+    if not os.path.exists(STATE):
         print_intro()
-    print("حالت تعاملی فعال شد. فرمان‌ها را بنویس (`help`) — برای خروج: خروج")
-    menu = {
-        "1": ["status"], "2": ["dash", "dom"], "3": ["dash", "dip"],
-        "4": ["dash", "ops"], "5": ["dash", "mil"], "6": ["dash", "eco"],
-        "7": ["end"], "8": ["help"], "9": ["rank"],
-    }
-    bar_menu = ("[1]📊 وضعیت [2]🏛 سیاست [3]🌐 دیپلماسی [4]🕵 عملیات "
-                "[5]⚔ نظامی [6]💰 اقتصاد [7]✅ پایان نوبت [8]❔ راهنما [9]🌍 رتبه‌بندی")
+        player = None
+        while player is None:
+            q = input("با کدام کشور شروع کنی؟ (ENTER = ایران): ").strip() or "ایران"
+            player = next((n for n in COUNTRIES if q in n or n.startswith(q[:3])), None)
+            if player is None:
+                print("✗ کشور نامعتبر؛ دوباره بنویس (نمونه: ایران، ترکیه، روسیه)")
+        main(["init", player])
+    s = load()
+    dash_names = {"1": "dom", "2": "dip", "3": "ops", "4": "mil", "5": "eco", "6": "org"}
+    bar_menu = ("[1]📊 وضعیت [2]📋 داشبورد [3]🤝 دیپلماسی [4]🪖 ارتش/هسته‌ای [5]🕶 عملیات پنهان "
+                "[6]💰 اقتصاد [7]🛒 بازار تجهیزات [8]🏛 نهادها [9]📁 پرونده کشور [10]🏆 رتبه "
+                "[0]🌙 پایان روز [خ] خروج")
     while True:
         try:
-            line = input(f"\n{bar_menu}\n🎬 فرمان> ").strip()
+            line = input(f"\n{bar_menu}\n🎬 انتخاب: ").strip()
         except (EOFError, KeyboardInterrupt):
-            print("\n👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
+            print("\n👋 خداحافظ! بازی ذخیره شد.")
             return
         if not line:
             continue
-        if line.lower() in ("خروج", "exit", "quit", "q"):
-            print("👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
+        if line.lower() in ("خ", "خروج", "exit", "quit", "q"):
+            print("👋 خداحافظ! بازی ذخیره شد.")
             return
         try:
-            if line in menu:
-                main(menu[line])
+            if line == "1":
+                main(["status"])
+            elif line == "2":
+                print(" داشبورد: [1]سیاست [2]دیپلماسی [3]عملیات [4]نظامی [5]اقتصاد [6]نهادها")
+                r = input("  کدام؟ ").strip()
+                if r in dash_names:
+                    main(["dash", dash_names[r]])
+            elif line == "3":
+                print(" دیپلماسی: [1]کمک اقتصادی [2]تجارت [3]پیمان عدم تعارض [4]اتحاد نظامی "
+                      "[5]فسخ پیمان [6]تحریم [7]محکومیت در ملل")
+                r = input("  کدام؟ ").strip()
+                acts = {"1": "aide", "2": "trade", "3": "pact", "4": "ally", "5": "break", "6": "sanc", "7": "un"}
+                if r in acts:
+                    t = pick_country(s, f"کدام کشور؟ ({acts[r]})")
+                    if t:
+                        main(["act", acts[r], t])
+            elif line == "4":
+                print(" ارتش: [1]بودجه نظامی [2]فناوری [3]کلاهک هسته‌ای [4]شفافیت آژانس [5]اعلان جنگ")
+                r = input("  کدام؟ ").strip()
+                if r == "1":
+                    main(["act", "mil"])
+                elif r == "2":
+                    main(["act", "tech"])
+                elif r == "3":
+                    main(["act", "nuke"])
+                elif r == "4":
+                    main(["act", "iaea"])
+                elif r == "5":
+                    t = pick_country(s, "به کدام کشور حمله کنی؟")
+                    if t:
+                        main(["act", "war", t])
+            elif line == "5":
+                print(" عملیات: [1]جاسوسی [2]بی‌ثبات‌سازی [3]خرابکاری [4]ترور [5]شبکه نیابتی")
+                r = input("  کدام؟ ").strip()
+                acts = {"1": "spy", "2": "covert", "3": "sabotage", "4": "kill", "5": "proxy"}
+                if r in acts:
+                    t = pick_country(s, f"هدف؟ ({acts[r]})")
+                    if t:
+                        main(["act", acts[r], t])
+            elif line == "6":
+                print(" اقتصاد: [1]سرمایه‌گذاری کلان [2]کمپین تبلیغاتی")
+                r = input("  کدام؟ ").strip()
+                if r == "1":
+                    main(["act", "eco"])
+                elif r == "2":
+                    main(["act", "propaganda"])
+            elif line == "7":
+                equip_menu(s)
+                s = load()
+            elif line == "8":
+                orgs_menu(s)
+                s = load()
+            elif line == "9":
+                t = pick_country(s, "پرونده کدام کشور؟")
+                if t:
+                    main(["status", t])
+            elif line == "10":
+                main(["rank"])
+            elif line == "0":
+                main(["end"])
+            elif line == "11":
+                main(["help"])
             else:
                 main(line.split())
+            s = load()
+        except SystemExit:
+            raise
         except Exception as e:
             print(f"⚠ خطا در اجرای فرمان: {e}")
 
