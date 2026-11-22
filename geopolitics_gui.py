@@ -20,6 +20,7 @@ class App(object):
         self.dec = codecs.getincrementaldecoder("utf-8")("replace")
         env = dict(os.environ)
         env["PYTHONIOENCODING"] = "utf-8"
+        env["PYTHONUNBUFFERED"] = "1"
         cmd = [sys.executable, os.path.join(base_dir(), "geopolitics.py"), "play"]
         self.proc = subprocess.Popen(
             cmd, cwd=base_dir(), env=env,
@@ -55,19 +56,22 @@ class App(object):
         self.q.put(None)
 
     def pump(self):
-        try:
-            chunks = []
-            while True:
+        chunks = []
+        while True:
+            try:
                 b = self.q.get_nowait()
-                if b is None:
-                    self.show("\n\n[\u26a0 \u0628\u0627\u0632\u06cc \u0628\u0633\u062a\u0647 \u0634\u062f \u2014 \u0628\u0631\u0627\u06cc \u0627\u062f\u0627\u0645\u0647\u060c \u062f\u0648\u0628\u0627\u0631\u0647 play_window.bat \u0631\u0627 \u0627\u062c\u0631\u0627 \u06a9\u0646]")
+            except queue.Empty:
+                break
+            if b is None:
+                self.show("\n\n[\u26a0 \u0628\u0627\u0632\u06cc \u0628\u0633\u062a\u0647 \u0634\u062f \u2014 \u0628\u0631\u0627\u06cc \u0627\u062f\u0627\u0645\u0647\u060c \u062f\u0648\u0628\u0627\u0631\u0647 play_window.bat \u0631\u0627 \u0627\u062c\u0631\u0627 \u06a9\u0646]")
+                try:
                     self.proc.wait()
-                    return
-                chunks.append(b)
-            if chunks:
-                self.show(self.dec.decode(b"".join(chunks)))
-        except queue.Empty:
-            pass
+                except Exception:
+                    pass
+                return
+            chunks.append(b)
+        if chunks:
+            self.show(self.dec.decode(b"".join(chunks)))
         self.root.after(80, self.pump)
 
     def show(self, s):
