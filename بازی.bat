@@ -1,15 +1,15 @@
 @echo off
 setlocal
-chcp 65001 >nul
 set PYTHONIOENCODING=utf-8
+chcp 65001 >nul
 cd /d "%~dp0"
 
 set PYCMD=
-where py >nul 2>nul && set PYCMD=py
-if not defined PYCMD where python >nul 2>nul && set PYCMD=python
+where python >nul 2>nul && set PYCMD=python
+if not defined PYCMD where py >nul 2>nul && set PYCMD=py
 if not defined PYCMD goto nopy
 
-%PYCMD% -X utf8 geopolitics.py play
+%PYCMD% geopolitics.py play
 
 echo.
 echo ---------------------------------------------
