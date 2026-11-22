@@ -155,6 +155,14 @@ def render(out_text="", chosen=None):
                  '<form method="post" action="/">'
                  '<input type="text" name="statement" style="width:70%%" placeholder="\u0645\u062a\u0646 \u0628\u06cc\u0627\u0646\u06cc\u0647...">'
                  '<button type="submit" name="cmd" value="statement">\U0001f4e2 \u0627\u0646\u062a\u0634\u0627\u0631 \u0628\u06cc\u0627\u0646\u06cc\u0647</button></form>')
+    if has and s is not None:
+        stmts = s.get("statements") or []
+        if stmts:
+            body_stmt += '<div class="hint">\U0001f5e3 \u0622\u062e\u0631\u06cc\u0646 \u0628\u06cc\u0627\u0646\u06cc\u0647\u200c\u0647\u0627\u06cc \u06a9\u0634\u0648\u0631\u0647\u0627 \u0648 \u0631\u0647\u0628\u0631\u06cc:</div>'
+            for stl in stmts[-8:]:
+                body_stmt += '<div class="itemrow">\U0001f5e3 <b>%s</b>: %s</div>' % (esc(stl["who"]), esc(stl["text"]))
+        else:
+            body_stmt += '<div class="hint">\u0647\u0646\u0648\u0632 \u0628\u06cc\u0627\u0646\u06cc\u0647\u200c\u0627\u06cc \u0635\u0627\u062f\u0631 \u0646\u0634\u062f\u0647 \u0627\u0633\u062a.</div>'
     sections.append('<section><h2>\U0001f4e2 \u0628\u06cc\u0627\u0646\u06cc\u0647</h2>' + body_stmt + "</section>")
 
     orgs = (btn("📊 وضعیت نهادها", "dash org")
