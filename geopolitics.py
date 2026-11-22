@@ -9,19 +9,162 @@ START_YEAR = 2025
 FINAL_YEAR = 2065
 
 # آمار تقریبی بر پایه داده‌های ۲۰۲۴ — اقتصاد (PPP-نسبی)، ارتش، فناوری، ثبات، خزانه آزاد
-COUNTRIES = {
-    "آمریکا":    dict(mil=95, eco=95, tech=95, stab=70, money=500, nukes=5, aggr=0.45, trait="ابَرقدرت فعلی، ۵ کلاهک (نماد منور ۵۰۰۰+)"),
-    "چین":       dict(mil=88, eco=88, tech=82, stab=80, money=420, nukes=3, aggr=0.35, trait="ابَرقدرت نوظهور، نخستین اقتصاد دوم جهان"),
-    "روسیه":     dict(mil=82, eco=55, tech=72, stab=62, money=180, nukes=5, aggr=0.60, trait="بازیگر خطرپذیر، انبار سلاح هسته‌ای"),
-    "هند":       dict(mil=68, eco=62, tech=62, stab=58, money=200, nukes=1, aggr=0.30, trait="قدرت رو به رشد با جمعیت عظیم"),
-    "آلمان":     dict(mil=52, eco=73, tech=85, stab=78, money=280, nukes=0, aggr=0.15, trait="قلب اقتصادی اروپا، صلح‌طلب"),
-    "ژاپن":      dict(mil=55, eco=72, tech=88, stab=80, money=260, nukes=0, aggr=0.15, trait="فناوری پیشرفته، دفاعی"),
-    "فرانسه":    dict(mil=64, eco=64, tech=80, stab=66, money=190, nukes=1, aggr=0.30, trait="قدرت هسته‌ای اروپایی، مداخله‌گر سابق"),
-    "بریتانیا":  dict(mil=63, eco=63, tech=80, stab=68, money=180, nukes=1, aggr=0.40, trait="پیمان ویژه با آمریکا"),
-    "ایران":     dict(mil=50, eco=45, tech=48, stab=45, money=70,  nukes=0, aggr=0.50, trait="تحت تحریم، منطقه‌ای و پرتحرک (حالت سخت)"),
+REGIONS = [
+    "خاورمیانه و شمال آفریقا", "اروپا", "شرق آسیا", "جنوب و جنوب‌شرق آسیا",
+    "آفریقای جنوب صحرا", "آمریکای شمالی", "آمریکای لاتین و کارائیب",
+    "اقیانوسیه", "آسیای مرکزی و قفقاز",
+]
+
+TIER = {
+    1: dict(mil=88, eco=90, tech=88, stab=70, money=450, aggr=0.45),
+    2: dict(mil=62, eco=62, tech=68, stab=62, money=180, aggr=0.35),
+    3: dict(mil=38, eco=42, tech=48, stab=55, money=90,  aggr=0.30),
+    4: dict(mil=20, eco=22, tech=20, stab=46, money=45,  aggr=0.22),
+    5: dict(mil=11, eco=13, tech=12, stab=40, money=25,  aggr=0.12),
 }
 
-# روابط اولیه واقع‌گرایانه (مقیاس -۱۰۰ تا +۱۰۰)
+# نام:منطقه:سطح‌اقتدار — بیش از ۱۷۰ کشور عضو سازمان ملل
+_TABLE = (
+    "آمریکا:6:1;کانادا:6:2;مکزیک:7:3;"
+    "ایران:1:2;عراق:1:4;سوریه:1:4;لبنان:1:4;اردن:1:4;اسرائیل:1:3;فلسطین:1:5;"
+    "عربستان:1:2;امارات:1:3;قطر:1:4;کویت:1:4;بحرین:1:5;عمان:1:4;یمن:1:5;ترکیه:1:2;"
+    "مصر:1:3;لیبی:1:4;تونس:1:4;الجزایر:1:3;مراکش:1:4;"
+    "روسیه:2:1;آلمان:2:2;فرانسه:2:2;بریتانیا:2:2;ایتالیا:2:2;اسپانیا:2:3;پرتغال:2:3;"
+    "هلند:2:3;بلژیک:2:3;سوئیس:2:3;اتریش:2:3;سوئد:2:3;نروژ:2:3;دانمارک:2:3;فنلاند:2:3;"
+    "ایسلند:2:4;ایرلند:2:3;لهستان:2:3;چک:2:3;اسلواکی:2:4;مجارستان:2:4;رومانی:2:4;"
+    "بلغارستان:2:4;یونان:2:3;صربستان:2:4;کرواسی:2:4;بوسنی:2:5;آلبانی:2:5;"
+    "مقدونیه شمالی:2:5;اسلوونی:2:4;مونته‌نگرو:2:5;اوکراین:2:3;بلاروس:2:4;مولداوی:2:5;"
+    "لتونی:2:4;لیتوانی:2:4;استونی:2:4;لوکزامبورگ:2:5;قبرس:2:4;مالت:2:5;"
+    "چین:3:1;ژاپن:3:2;کره جنوبی:3:2;کره شمالی:3:3;تایوان:3:3;مغولستان:3:4;"
+    "هند:4:2;پاکستان:4:3;بنگلادش:4:4;سری‌لانکا:4:4;نپال:4:5;بوتان:4:5;مالدیو:4:5;"
+    "افغانستان:4:5;اندونزی:4:3;مالزی:4:3;سنگاپور:4:3;تایلند:4:3;ویتنام:4:3;"
+    "فیلیپین:4:3;میانمار:4:4;کامبوج:4:5;لائوس:4:5;برونئی:4:5;تیمور شرقی:4:5;"
+    "نیجریه:5:3;آفریقای جنوبی:5:3;اتیوپی:5:4;کنیا:5:4;غنا:5:4;سنگال:5:4;"
+    "ساحل عاج:5:4;کامرون:5:4;اوگاندا:5:4;تانزانیا:5:4;رواندا:5:5;زیمبابوه:5:4;"
+    "زامبیا:5:5;موزامبیک:5:5;آنگولا:5:4;نامیبیا:5:5;بوتسوانا:5:4;سودان:5:4;"
+    "سودان جنوبی:5:5;چاد:5:5;نیجر:5:5;مالی:5:5;موریتانی:5:5;بورکینافاسو:5:5;"
+    "گینه:5:5;سیرالئون:5:5;لیبریا:5:5;توگو:5:5;بنین:5:5;گابن:5:5;کنگو:5:5;"
+    "کنگو دموکراتیک:5:5;آفریقای مرکزی:5:5;اریتره:5:5;جیبوتی:5:5;سومالی:5:5;"
+    "ماداگاسکار:5:5;موریس:5:5;لسوتو:5:5;اسواتینی:5:5;گامبیا:5:5;گینه بیسائو:5:5;"
+    "گینه استوایی:5:5;کیپ‌ورد:5:5;"
+    "برزیل:7:2;آرژانتین:7:3;شیلی:7:3;کلمبیا:7:3;پرو:7:4;ونزوئلا:7:4;اکوادور:7:4;"
+    "بولیوی:7:5;پاراگوئه:7:5;اوروگوئه:7:4;گویان:7:5;سورینام:7:5;کوبا:7:4;"
+    "هائیتی:7:5;دومینیکن:7:4;جامائیکا:7:5;ترینیداد و توباگو:7:5;کاستاریکا:7:4;"
+    "پاناما:7:4;گواتمالا:7:4;هندوراس:7:5;السالوادور:7:5;نیکاراگوئه:7:5;بلیز:7:5;"
+    "باهاماس:7:5;باربادوس:7:5;"
+    "استرالیا:8:2;نیوزیلند:8:3;پاپوآ گینه نو:8:4;فیجی:8:5;ساموآ:8:5;"
+    "تونگا:8:5;وانواتو:8:5;جزایر سلیمان:8:5;"
+    "قزاقستان:9:3;ازبکستان:9:4;ترکمنستان:9:4;تاجیکستان:9:5;قرقیزستان:9:5;"
+    "آذربایجان:9:4;ارمنستان:9:4;گرجستان:9:4;"
+)
+
+# آمار اختصاصی قابل‌اعتماد برای قدرت‌های شاخص (بقیه از سطح قلمرو گرفته می‌شوند)
+SPECIAL = {
+    "آمریکا":    dict(mil=95, eco=95, tech=95, stab=70, money=500, aggr=0.45, trait="اَبَرقدرت فعلی، ۵ کلاهک (نماد منور ۵۰۰۰+)"),
+    "چین":       dict(mil=88, eco=88, tech=82, stab=80, money=420, aggr=0.35, trait="اَبَرقدرت نوظهور، نخستین اقتصاد دوم جهان"),
+    "روسیه":     dict(mil=82, eco=55, tech=72, stab=62, money=180, aggr=0.60, trait="بازیگر خطرپذیر، انبار سلاح هسته‌ای"),
+    "هند":       dict(mil=68, eco=62, tech=62, stab=58, money=200, aggr=0.30, trait="قدرت رو به رشد با جمعیت عظیم"),
+    "آلمان":     dict(mil=52, eco=73, tech=85, stab=78, money=280, aggr=0.15, trait="قلب اقتصادی اروپا، صلح‌طلب"),
+    "ژاپن":      dict(mil=55, eco=72, tech=88, stab=80, money=260, aggr=0.15, trait="فناوری پیشرفته، دفاعی"),
+    "فرانسه":    dict(mil=64, eco=64, tech=80, stab=66, money=190, aggr=0.30, trait="قدرت هسته‌ای اروپایی، مداخله‌گر سابق"),
+    "بریتانیا":  dict(mil=63, eco=63, tech=80, stab=68, money=180, aggr=0.40, trait="پیمان ویژه با آمریکا"),
+    "ایران":     dict(mil=50, eco=45, tech=48, stab=45, money=70,  aggr=0.50, trait="تحت تحریم، منطقه‌ای و پرتحرک (حالت سخت)"),
+    "اسرائیل":   dict(mil=62, eco=60, tech=85, stab=55, money=160, aggr=0.50, trait="برتری هوایی و اطلاعاتی منطقه"),
+    "پاکستان":   dict(mil=48, eco=30, tech=42, stab=38, money=60,  aggr=0.55, trait="رقیب دیرینه هند، هسته‌ای"),
+    "کره شمالی": dict(mil=45, eco=12, tech=30, stab=75, money=30,  aggr=0.75, trait="منزوی، آزمون‌های موشکی مداوم"),
+    "عربستان":   dict(mil=58, eco=68, tech=55, stab=60, money=320, aggr=0.40, trait="قلب جهانی نفت، رقیب منطقه‌ای ایران"),
+    "ترکیه":     dict(mil=55, eco=48, tech=55, stab=50, money=120, aggr=0.55, trait="پل دو قاره، توسعه‌طلب منطقه‌ای"),
+    "اوکراین":   dict(mil=52, eco=25, tech=45, stab=35, money=40,  aggr=0.35, trait="درگیر جنگ با روسیه"),
+    "سنگاپور":   dict(mil=25, eco=65, tech=78, stab=82, money=140, aggr=0.08, trait="شهر-دولت مالی پُرجذابیت"),
+    "سوئیس":     dict(mil=20, eco=72, tech=75, stab=85, money=200, aggr=0.05, trait="بی‌طرف، محافظ سرمایه‌های جهان"),
+    "امارات":    dict(mil=30, eco=62, tech=60, stab=72, money=220, aggr=0.30, trait="قطب تجاری و لجستیکی خلیج فارس"),
+    "قطر":       dict(mil=18, eco=60, tech=58, stab=70, money=180, aggr=0.20, trait="گاز جهانی، دیپلماسی فعال"),
+    "برزیل":     dict(mil=48, eco=58, tech=52, stab=55, money=150, aggr=0.25, trait="غول لاتین، بزرگ‌ترین اقتصاد منطقه"),
+    "استرالیا":  dict(mil=45, eco=60, tech=72, stab=80, money=220, aggr=0.20, trait="متحد ژرف آمریکا، معادن راهبردی"),
+}
+
+# درآمد کلاهک هسته‌ای اولیه کشورها
+NUKES0 = {"آمریکا": 5, "روسیه": 5, "چین": 3, "فرانسه": 1, "بریتانیا": 1,
+          "هند": 1, "پاکستان": 1, "کره شمالی": 1, "اسرائیل": 1}
+
+# کینه‌های تاریخی (درجه خصومت اولیه)
+ENMITY = {
+    frozenset(("هند", "پاکستان")): -65,
+    frozenset(("کره شمالی", "کره جنوبی")): -80,
+    frozenset(("چین", "تایوان")): -55,
+    frozenset(("اسرائیل", "ایران")): -85,
+    frozenset(("اسرائیل", "سوریه")): -70,
+    frozenset(("اسرائیل", "لبنان")): -65,
+    frozenset(("اسرائیل", "فلسطین")): -90,
+    frozenset(("عربستان", "ایران")): -55,
+    frozenset(("عربستان", "یمن")): -45,
+    frozenset(("روسیه", "اوکراین")): -90,
+    frozenset(("ارمنستان", "آذربایجان")): -60,
+    frozenset(("یونان", "ترکیه")): -40,
+    frozenset(("الجزایر", "مراکش")): -40,
+    frozenset(("آمریکا", "کره شمالی")): -75,
+    frozenset(("آمریکا", "ونزوئلا")): -55,
+    frozenset(("ترکیه", "سوریه")): -40,
+    frozenset(("مصر", "اتیوپی")): -25,
+    frozenset(("پاکستان", "افغانستان")): -35,
+    frozenset(("تایلند", "کامبوج")): -20,
+    frozenset(("رواندا", "کنگو دموکراتیک")): -35,
+}
+
+# دوستی‌های راهبردی اولیه
+FRIEND = {
+    frozenset(("چین", "پاکستان")): 65,
+    frozenset(("ترکیه", "پاکستان")): 55,
+    frozenset(("عربستان", "مصر")): 55,
+    frozenset(("عربستان", "امارات")): 70,
+    frozenset(("آمریکا", "اسرائیل")): 80,
+    frozenset(("روسیه", "سوریه")): 45,
+    frozenset(("روسیه", "بلاروس")): 85,
+    frozenset(("ایران", "سوریه")): 60,
+    frozenset(("ایران", "عراق")): 25,
+    frozenset(("ایران", "لبنان")): 45,
+    frozenset(("ایران", "ونزوئلا")): 30,
+    frozenset(("آمریکا", "کانادا")): 75,
+    frozenset(("برزیل", "آرژانتین")): 55,
+    frozenset(("سوئد", "فنلاند")): 75,
+    frozenset(("استرالیا", "نیوزیلند")): 80,
+    frozenset(("آلمان", "اتریش")): 70,
+}
+
+# اعضای ناتو
+NATO = ["آمریکا", "کانادا", "بریتانیا", "فرانسه", "آلمان", "ایتالیا", "اسپانیا",
+        "پرتغال", "هلند", "بلژیک", "لوکزامبورگ", "نروژ", "دانمارک", "ایسلند",
+        "فنلاند", "سوئد", "لهستان", "چک", "اسلواکی", "مجارستان", "رومانی",
+        "بلغارستان", "یونان", "آلبانی", "مقدونیه شمالی", "اسلوونی", "مونته‌نگرو",
+        "کرواسی", "ترکیه"]
+
+# متفدهای غیرناتوی آمریکا
+US_PACT = ["ژاپن", "کره جنوبی", "استرالیا", "نیوزیلند", "فیلیپین", "تایلند"]
+
+def _build_countries():
+    out = {}
+    for i, ent in enumerate(_TABLE.split(";")):
+        if not ent.strip(): continue
+        name, reg, tier = ent.strip().rsplit(":", 2)
+        base = dict(TIER[int(tier)])
+        j = ((i * 37) % 11) - 5
+        for k in ("mil", "eco", "tech"):
+            base[k] = max(8, base[k] + j)
+        base["stab"] = max(15, min(90, base["stab"] + (((i * 17) % 13) - 6)))
+        base["money"] = max(10, base["money"] + j * 2)
+        base["aggr"] = min(0.75, max(0.05, base["aggr"] + (((i * 7) % 10) - 4) * 0.03))
+        base["trait"] = ""
+        base["nukes"] = 0
+        out[name] = dict(region=REGIONS[int(reg) - 1], **base)
+    for name, over in SPECIAL.items():
+        out[name].update(over)
+    for name, n in NUKES0.items():
+        out[name]["nukes"] = n
+    return out
+
+COUNTRIES = _build_countries()
+
+# روابط اولیه منجمد بین قدرت‌های بزرگ (مازاد بر کینه‌ها و دوستی‌ها بالا)
 DEFAULT_REL = {
     frozenset(("آمریکا", "روسیه")): -60,
     frozenset(("آمریکا", "چین")): -40,
@@ -78,9 +221,15 @@ HELP = """
   act propaganda       تبلیغات حزبی — حمایت ائتلاف حاکم ↑ (۲۰ میلیارد)
   act sabotage <کشور>  خرابکاری در صنایع دفاعی (۴۵ میلیارد، ریسک کشف)
   act kill  <کشور>     ترور رهبر دشمن ☠ (۸۰ میلیارد، بسیار پرخطر)
+  act proxy <کشور>     ایجاد/تقویت شبکه نیابتی مخفی 🗡 (۶۰، تکرار: ۴۰ میلیارد)
   act war   <کشور>     اعلان جنگ ⚔
   end                  پایان نوبت (نوبت کشورهای دیگر + رخداد تصادفی)
-  status               وضعیت جهان
+  status               وضعیت مختصر جهان (۱۲ قدرت نخست)
+  status <کشور>        پرونده کامل یک کشور 📊 (مثال: status ترکیه)
+  dash <بخش؟>          داشبورد: dom | dip | ops | mil | eco (بدون اسم = همه)
+  rank                 رتبه‌بندی کامل همه کشورها
+  list <منطقه؟>        فهرست کشورهای واقعی به تفکیک منطقه
+  help                 راهنما
   help                 راهنما
 """
 
@@ -99,6 +248,7 @@ def load():
         s["politics"] = pol
     if not isinstance(s.get("turn_events"), dict):
         s["turn_events"] = {}
+    s.setdefault("proxies", [])
     return s
 
 def save(s):
@@ -159,15 +309,23 @@ def init_game(player):
     for i, a in enumerate(names):
         for b in names[i + 1:]:
             key = frozenset((a, b))
-            rel[rel_key(a, b)] = DEFAULT_REL.get(key, rng.randint(-10, 30))
-    # پیمان‌های اولیه واقع‌گرایانه: ناتو و متحدان
+            if key in DEFAULT_REL:
+                v = DEFAULT_REL[key]
+            elif key in ENMITY:
+                v = ENMITY[key]
+            elif key in FRIEND:
+                v = FRIEND[key]
+            elif COUNTRIES[a]["region"] == COUNTRIES[b]["region"]:
+                v = 8
+            else:
+                v = rng.randint(-10, 30)
+            rel[rel_key(a, b)] = v
+    # پیمان‌های اولیه واقع‌گرایانه: ناتو و متحدان آمریکا
     pacts0 = []
     allies0 = []
-    if player in ("آمریکا", "بریتانیا", "آلمان", "فرانسه"):
-        for partner in ("آمریکا", "بریتانیا", "آلمان", "فرانسه"):
-            if partner != player:
-                allies0.append(partner)
-    elif player == "ژاپن":
+    if player in NATO:
+        allies0 = [n for n in NATO if n != player and n in COUNTRIES]
+    elif player in US_PACT:
         allies0 = ["آمریکا"]
     state = dict(
         player=player, year=START_YEAR, turn=1, ap=2, over=False,
@@ -176,7 +334,7 @@ def init_game(player):
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         turn_events={},
         log=["سال ۲۰۲۵: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
-        at_war=[], eliminated=[],
+        at_war=[], eliminated=[], proxies=[],
     )
     save(state)
     return state
@@ -669,6 +827,42 @@ def do_act(s, args):
                 if o not in (P, target): add_rel(s, P, o, -10)
             print(f"⚠ ترور شکست خورد و شبکه لو رفت! محکومیت جهانی (ثبات -۶، روابط تو -۱۰ برای همه)")
             ev(s, P, "kill_fail", target); ev(s, target, "kill_attempt", P)
+    elif action == "proxy":
+        if target is None:
+            print("✂ کشور میزبان را مشخص کن: `act proxy فلسطین`")
+            return
+        if target in s["allies"]:
+            print("✗ به متحد خود نمی‌توانی شبکه نیابتی نفوذ بدهی!")
+            return
+        existing = [x for x in s.get("proxies", []) if x["sponsor"] == P and x["host"] == target]
+        cost = 40 if existing else 60
+        if not pay(cost):
+            return
+        t = W[target]
+        ok = 0.5 + (100 - t["stab"]) / 250
+        roll = random.random()
+        if roll < ok:
+            if existing:
+                if existing[0]["power"] >= 5:
+                    me["money"] += cost
+                    print(f"⚠ شبکه نیابتی در {target} از قبل در اوج قدرت (۵/۵) است.")
+                    return
+                existing[0]["power"] += 1
+                t["stab"] = max(0, t["stab"] - 2)
+                add_rel(s, P, target, -8)
+                print(f"🕵 شبکه نیابتی تو در {target} تقویت شد → قدرت {existing[0]['power']}/۵ (مخفی)")
+            else:
+                s["proxies"].append({"sponsor": P, "host": target, "power": 2, "hidden": True})
+                t["stab"] = max(0, t["stab"] - 5)
+                add_rel(s, P, target, -15)
+                print(f"🕵 شبکه نیابتی در {target} ایجاد شد (قدرت ۲/۵). این عملیات مخفی است — پیگیری در `dash ops`")
+                ev(s, P, "covert_ok", target)
+        else:
+            me["stab"] = max(0, me["stab"] - 3)
+            t["stab"] = max(0, t["stab"] - 3)
+            add_rel(s, P, target, -20)
+            print(f"⚠ مأموران در {target} لو رفتند و اخراج شدند! (ثبات تو -۳، روابط -۲۰)")
+            ev(s, P, "covert_fail", target)
     elif action == "war":
         if target is None: print("✗ دشمن را مشخص کن: `act war هیرمند`"); return
         if target in s["allies"]: print("✗ به متحد نمی‌شود اعلام جنگ کرد! اول `act break` بزن."); return
@@ -861,6 +1055,17 @@ def end_turn(s):
                         add_rel(s, name, foe, -10)
                         ev(s, name, "kill_fail", foe); ev(s, foe, "kill_attempt", name)
                         log.append(f"☠ نقشه ترور عوامل {name} در {foe} افشا و خنثی شد.")
+        elif r < 0.96 and rivals and c["aggr"] > 0.5 and c["money"] >= 60:
+            foe = min(rivals, key=lambda o: get_rel(s, name, o))
+            already = any(x["sponsor"] == name and x["host"] == foe for x in s.get("proxies", []))
+            if get_rel(s, name, foe) < -30 and not already and foe not in s["eliminated"]:
+                c["money"] -= 60
+                s["proxies"].append({"sponsor": name, "host": foe, "power": 2, "hidden": True})
+                W[foe]["stab"] = max(0, W[foe]["stab"] - 4)
+                add_rel(s, name, foe, -15)
+                log.append(f"🕵 شواهدی از شبکه نیابتی {name} در {foe} دیده شده است.")
+                if foe == P:
+                    ev(s, P, "sabotage_victim", name)
     # جنگ‌های در جریان: فرسایش صلح
     if s["at_war"]:
         war_pairs = [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]
@@ -890,6 +1095,39 @@ def end_turn(s):
             if pr[0] in seen or pr[1] in seen: continue
             seen.add(pr[0]); seen.add(pr[1]); final.extend(pr)
         s["at_war"] = final
+
+    # نیروهای نیابتی: نگه‌داری، عملیات و کشف
+    kept = []
+    for px in s.get("proxies", []):
+        sp, host = px.get("sponsor"), px.get("host")
+        if sp not in W or host not in W or sp in s["eliminated"] or host in s["eliminated"]:
+            continue
+        pw = px["power"]
+        Wh = W[host]
+        Wh["stab"] = max(0, Wh["stab"] - (2 if pw >= 4 else 1))
+        if sp in W and sp not in s["eliminated"]:
+            W[sp]["influence"] += 0.5
+        if Wh["stab"] < 45 and random.random() < 0.08 + pw * 0.03:
+            Wh["eco"] = max(10, Wh["eco"] - 5)
+            Wh["stab"] = max(0, Wh["stab"] - 5)
+            log.append(f"🔥 شبه‌نظامیان {sp} در {host} عملیات گسترده انجام دادند!")
+            ev(s, host, "uprising", sp)
+            if host == P:
+                end_of_action_checks(s)
+        elif host == P and random.random() < 0.35:
+            log.append(f"⚠ شبه‌نظامیان {sp} در خاک تو فعال‌اند (قدرت {pw}/۵).")
+            ev(s, P, "sabotage_victim", sp)
+        if random.random() < 0.10:
+            add_rel(s, sp, host, -18)
+            log.append(f"🔓 شبکه نیابتی {sp} در {host} لو رفت!")
+            ev(s, sp, "covert_fail", host)
+            ev(s, host, "sabotage_victim", sp)
+            if sp == P:
+                me_ = W[P]
+                me_["stab"] = max(0, me_["stab"] - 2)
+            continue
+        kept.append(px)
+    s["proxies"] = kept
 
     # رخداد تصادفی جهانی
     if random.random() < 0.55:
@@ -1031,26 +1269,32 @@ def show_status(s):
             print("  ⚔ در حال جنگ!")
     print("─" * 56)
     print(" رتبه  کشور           امتیاز  جزئیات")
-    for i, (name, score, detail) in enumerate(ranking(s)):
+    rows = ranking(s)
+    shown = rows[:12]
+    pi = next((i for i, (n, _, _) in enumerate(rows) if n == P), None)
+    for i, (name, score, detail) in enumerate(shown):
         mark = "▶" if name == P else " "
         tag = " 💀" if name in s["eliminated"] else (" ⚔" if name in s["at_war"] else "")
         score_s = f"{score:.0f}" if score >= 0 else "  —"
         print(f"  {i+1:>2} {mark} {name:<12} {score_s:>5}   {detail}{tag}")
+    if pi is not None and pi >= 12:
+        name, score, detail = rows[pi]
+        tag = " ⚔" if name in s["at_war"] else ""
+        print(f"  … {pi-12} کشور دیگر")
+        print(f"  {pi+1:>2} ▶ {name:<12} {score:.0f}   {detail}{tag}")
+    elif len(rows) > 12:
+        print(f"  … {len(rows)-12} کشور دیگر (رتبه‌بندی کامل: `rank`)")
     print("─" * 56)
     if s["at_war"]:
         pairs = [f"{s['at_war'][i]} ↔ {s['at_war'][i+1]}" for i in range(0, len(s['at_war']) - 1, 2)]
         print(" جنگ‌های فعال: " + " | ".join(pairs))
-    allies_all = [(n, o) for n in W for o in W if n < o and get_rel(s, n, o) > 70]
-    print(" روابط شما:")
-    for name in W:
-        if name == P or name in s["eliminated"]: continue
-        r = get_rel(s, P, name)
-        tags = []
-        if name in s["allies"]: tags.append("متحد")
-        elif name in s["pacts"]: tags.append("عدم تجاوز")
-        if name in s["at_war"]: tags.append("در جنگ")
-        if name in s["eliminated"]: tags.append("حذف‌شده")
-        print(f"  {name:<12} [{bar(r)}] {r:>4}  {' '.join(tags)}")
+    others = [n for n in W if n != P and n not in s["eliminated"]]
+    if others:
+        frs = sorted(others, key=lambda n: -get_rel(s, P, n))[:5]
+        fos = sorted(others, key=lambda n: get_rel(s, P, n))[:5]
+        print(" 🤍 گرم‌ترین روابط: " + "، ".join(f"{n} ({get_rel(s,P,n):.0f})" for n in frs))
+        print(" ⚔ تنش‌های اصلی: " + "، ".join(f"{n} ({get_rel(s,P,n):.0f})" for n in fos))
+        print("   → پرونده هر کشور: `status <نام کشور>`")
     pol = s.get("politics", {}).get(P)
     parties = (pol or {}).get("parties")
     if parties:
@@ -1075,6 +1319,232 @@ def show_status(s):
         for line in s["log"][-4:]:
             print("  • " + line)
     print()
+
+# ---------- داشبورد ها ----------
+
+def rank_of(s, name):
+    for i, (n, _, _) in enumerate(ranking(s)):
+        if n == name:
+            return i + 1
+    return None
+
+def dash_domestic(s):
+    W = s["world"]; P = s["player"]; me = W[P]
+    pol = s.get("politics", {}).get(P, {})
+    parties = pol.get("parties") or {}
+    print("═" * 56)
+    print(" 🏛 داشبورد سیاست داخلی — " + P)
+    print("═" * 56)
+    print(f"  ثبات ملی [{bar(me['stab'])}] {me['stab']:.0f}   |   خزانه {me['money']:.0f} میلیارد")
+    if parties:
+        ranked = sorted(parties.items(), key=lambda x: -x[1])
+        two = sum(v for _, v in ranked[:2])
+        gauge = "قوی ✅" if two >= 55 else ("متزلزل ⚠ " if two <= 35 else "متوسط")
+        print(f"  ائتلاف دو حزب نخست ({ranked[0][0]} + {ranked[1][0]}) = {two:.0f}% — {gauge}")
+        print()
+        for p, v in ranked:
+            print(f"   {p:<14} [{bar(v)}] {v:.0f}%")
+    print()
+    print(" 📰 تیترهای اخیر مطبوعات:")
+    press = pol.get("press") or []
+    if press:
+        for h in press[-8:]:
+            print("   " + h)
+    else:
+        print("   (هنوز خبری منتشر نشده)")
+    print("═" * 56)
+
+def dash_diplomacy(s):
+    W = s["world"]; P = s["player"]
+    print("═" * 56)
+    print(" 🌐 داشبورد دیپلماسی — " + P)
+    print("═" * 56)
+    print(" 🤍 متحدان: " + ("، ".join(s["allies"]) if s["allies"] else "—"))
+    print(" 📜 پیمان عدم تجاوز: " + ("، ".join(s["pacts"]) if s["pacts"] else "—"))
+    wars = [(s["at_war"][i], s["at_war"][i + 1]) for i in range(0, len(s["at_war"]) - 1, 2)]
+    my_wars = [f"{a} ↔ {d}" for a, d in wars if P in (a, d)]
+    print(" ⚔ جنگ‌های تو: " + ("، ".join(my_wars) if my_wars else "—"))
+    others = [n for n in W if n != P and n not in s["eliminated"]]
+    print()
+    print(" 🤝 گرم‌ترین روابط:")
+    for n in sorted(others, key=lambda n: -get_rel(s, P, n))[:6]:
+        r = get_rel(s, P, n)
+        print(f"   {n:<14} [{bar(max(0, r))}] {r:>5.0f}")
+    print(" ⚔ تنش‌های اصلی:")
+    for n in sorted(others, key=lambda n: get_rel(s, P, n))[:4]:
+        r = get_rel(s, P, n)
+        print(f"   {n:<14} [{bar(max(0, -r))}] {r:>5.0f}")
+    print()
+    print(" 🗺 میانگین رابطه با تو به تفکیک منطقه:")
+    by_region = {}
+    for n in others:
+        by_region.setdefault(W[n]["region"], []).append(get_rel(s, P, n))
+    for reg in sorted(by_region, key=lambda reg: -sum(by_region[reg]) / len(by_region[reg])):
+        vals = by_region[reg]
+        avg = sum(vals) / len(vals)
+        flag = "🤍" if avg >= 40 else ("⚔" if avg <= -25 else ("🤝" if avg >= 15 else "—"))
+        print(f"   {reg:<18} [{bar(max(0, avg))}] {avg:>5.0f}  {flag}")
+    print("═" * 56)
+
+def dash_ops(s):
+    W = s["world"]; P = s["player"]
+    print("═" * 56)
+    print(" 🕵 داشبورد عملیات‌های پنهان — " + P)
+    print("═" * 56)
+    prx = s.get("proxies", [])
+    mine = [px for px in prx if px["sponsor"] == P]
+    inside = [px for px in prx if px["host"] == P]
+    if mine:
+        print(" 🗡 شبکه‌های نیابتی تو:")
+        for px in mine:
+            st = "مخفی" if px.get("hidden", True) else "لو رفته"
+            print(f"   ▸ در {px['host']:<14} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵  ({st})")
+    else:
+        print(" 🗡 هنوز شبکه نیابتی نداری — با `act proxy <کشور>` بساز (۶۰ میلیارد، مخفی).")
+    if inside:
+        print()
+        print(" ⚠ شبکه‌های نیابتی بیگانه در خاک تو:")
+        for px in inside:
+            print(f"   ▸ عوامل {px['sponsor']:<12} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵")
+        print("   💡 با تقویت ثبات داخلی یا عملیات `act covert` می‌توانی خنثی‌شان کنی.")
+    hidden_others = len(prx) - len(mine) - len(inside)
+    if hidden_others > 0:
+        print(f"\n 🌑 {hidden_others} شبکه نیابتی ناشناس در دیگر کشورهای جهان مخفیانه فعال است.")
+    intel = [l for l in s.get("log", []) if any(t in l for t in ("🕵", "🔥", "🔓", "ترور", "خرابکاری", "نیابتی"))][-6:]
+    print()
+    print(" 📡 گزیده گزارش‌های امنیتی:")
+    if intel:
+        for l in intel:
+            print("   • " + l)
+    else:
+        print("   (گزارشی ثبت نشده)")
+    print("═" * 56)
+
+def dash_military(s):
+    W = s["world"]; P = s["player"]; me = W[P]
+    print("═" * 56)
+    print(" ⚔ داشبورد نظامی — " + P)
+    print("═" * 56)
+    print(f"  ارتش [{bar(me['mil'])}] {me['mil']:.0f}   |   کلاهک هسته‌ای: {me['nukes']} ☢   |   فناوری [{bar(me['tech'])}] {me['tech']:.0f}")
+    my_pow = power(me)
+    print(f"  قدرت پروژه‌شده: {my_pow:.0f}   |   جوخه‌های متحد: {len(s['allies'])}")
+    rivals = [n for n in W if n != P and n not in s["eliminated"]]
+    print()
+    print(" 🥊 قوی‌ترین مردان نظامی جهان (مقایسه با تو):")
+    for n in sorted(rivals, key=lambda n: -power(W[n]))[:8]:
+        pw = power(W[n])
+        ratio = pw / max(my_pow, 1)
+        tag = "🚨 خطرناک" if ratio > 1.2 else ("⚖ برابر" if ratio > 0.8 else "🟢 ضعیف‌تر")
+        print(f"   {n:<14} {pw:>4}  {tag}")
+    wars = [(s["at_war"][i], s["at_war"][i + 1]) for i in range(0, len(s["at_war"]) - 1, 2)]
+    my_wars = [f"{a} ↔ {d}" for a, d in wars if P in (a, d)]
+    world_wars = [f"{a} ↔ {d}" for a, d in wars if P not in (a, d)]
+    if my_wars:
+        print("\n 🚨 جنگ‌های درگیر تو: " + "، ".join(my_wars))
+    if world_wars:
+        print(" 🌐 جنگ‌های دیگران: " + "؛ ".join(world_wars[:4]))
+    print("═" * 56)
+
+def dash_economy(s):
+    W = s["world"]; P = s["player"]; me = W[P]
+    print("═" * 56)
+    print(" 💰 داشبورد اقتصاد — " + P)
+    print("═" * 56)
+    inc = me["eco"] * 0.25 * (0.5 if me["stab"] < 30 else 1.0)
+    print(f"  خزانه {me['money']:.0f} میلیارد   |   درآمد تخمینی سالانه +{inc:.0f}")
+    print(f"  اقتصاد [{bar(me['eco'])}] {me['eco']:.0f}")
+    others = [n for n in W if n != P and n not in s["eliminated"]]
+    hostiles = sum(1 for n in others if get_rel(s, P, n) < -40)
+    partners = sum(1 for n in others if get_rel(s, P, n) > 50)
+    print(f"  شرکای تجاری بالقوه 🤍 {partners}   |   دشمنان اقتصادی ⚔ {hostiles}")
+    print()
+    print(" 🏆 بزرگ‌ترین اقتصادهای جهان:")
+    for n in sorted(others, key=lambda n: -W[n]["eco"])[:8]:
+        print(f"   {n:<14} [{bar(W[n]['eco'])}] {W[n]['eco']:.0f}")
+    print("═" * 56)
+
+DASH_SECTIONS = {
+    "dom": ("🏛 سیاست داخلی", dash_domestic),
+    "dip": ("🌐 دیپلماسی", dash_diplomacy),
+    "ops": ("🕵 عملیات پنهان", dash_ops),
+    "mil": ("⚔ نظامی", dash_military),
+    "eco": ("💰 اقتصاد", dash_economy),
+}
+
+def dash(s, section=""):
+    section = section.strip().lower()
+    alias = {
+        "dom": "dom", "سیاست": "dom", "داخلی": "dom",
+        "dip": "dip", "دیپلماسی": "dip", "خارجی": "dip",
+        "ops": "ops", "عملیات": "ops", "جاسوسی": "ops", "نیابتی": "ops",
+        "mil": "mil", "نظامی": "mil", "جنگ": "mil",
+        "eco": "eco", "اقتصاد": "eco", "خزانه": "eco",
+    }
+    key = alias.get(section)
+    if key is None:
+        print("📊 داشبوردها — یک بخش را انتخاب کن:")
+        for k, (_title, fn) in DASH_SECTIONS.items():
+            fn(s)
+        return
+    DASH_SECTIONS[key][1](s)
+
+def show_country(s, name):
+    W = s["world"]; P = s["player"]; c = W[name]
+    rank = rank_of(s, name)
+    r = get_rel(s, P, name)
+    print("═" * 56)
+    tags = []
+    if name == P: tags.append("🏳 کشور شما")
+    if name in s["allies"]: tags.append("🤍 متحد")
+    if name in s["pacts"]: tags.append("📜 عدم تجاوز")
+    if name in s["at_war"]: tags.append("⚔ در جنگ")
+    if name in s["eliminated"]: tags.append("💀 حذف‌شده")
+    print(f" 📊 پرونده «{name}» — منطقه {c['region']} | رتبه جهانی {rank if rank else '—'}")
+    if tags: print("   برچسب‌ها: " + " | ".join(tags))
+    print(f"   {c.get('trait', '')}")
+    print()
+    print(f"   ارتش  [{bar(c['mil'])}] {c['mil']:.0f}")
+    print(f"   اقتصاد [{bar(c['eco'])}] {c['eco']:.0f}")
+    print(f"   فن‌آوری [{bar(c['tech'])}] {c['tech']:.0f}")
+    print(f"   ثبات  [{bar(c['stab'])}] {c['stab']:.0f}")
+    print(f"   خزانه {c['money']:.0f} میلیارد | نفوذ {c['influence']:.0f} | کلاهک ☢ {c['nukes']}")
+    if name != P:
+        print(f"   رابطه با تو {P}: {r:.0f} [{bar(max(0, r))}]")
+    pol = (s.get("politics") or {}).get(name) or {}
+    prx = [px for px in s.get("proxies", []) if px["host"] == name]
+    if prx:
+        shown = [px for px in prx if px["sponsor"] == P]
+        if shown:
+            print("   🗡 شبکه نیابتی شما اینجا: " + "، ".join(f"قدرت {px['power']}/۵" for px in shown))
+        else:
+            print(f"   🌑 {len(prx)} شبکه نیابتی ناشناس در این کشور فعال است.")
+    parties = pol.get("parties") or {}
+    if parties:
+        print("   🏛 حزب‌ها: " + " | ".join(f"{p} {v:.0f}%" for p, v in sorted(parties.items(), key=lambda x: -x[1])))
+    press = (pol.get("press") or [])[-2:]
+    if press and name != P:
+        for h in press:
+            print("   " + h)
+    print("═" * 56)
+
+def show_list(args):
+    query = args[0] if args else None
+    regions = {}
+    for n, c in COUNTRIES.items():
+        regions.setdefault(c["region"], []).append(n)
+    total = 0
+    for reg in regions:
+        members = [n for n in regions[reg] if not query or query in n or query in reg]
+        if not members:
+            continue
+        total += len(members)
+        print(f"\n ─ {reg} ({len(members)})")
+        print("   " + "، ".join(members))
+    print()
+    if total == 0:
+        print("⚠ چیزی یافت نشد. نمونه‌ها: `list خاورمیانه` یا `list آفریقا`")
+    else:
+        print(f"✅ در مجموع {total} کشور واقعی — کل بازی: {len(COUNTRIES)} کشور.")
 
 # ---------- main ----------
 
@@ -1112,13 +1582,42 @@ def main(argv=None):
         if len(args) >= 2:
             main(["init"] + args[1:])
         return
+    if cmd in ("list", "لیست"):
+        show_list(args[1:])
+        return
     if not os.path.exists(STATE):
         print("⚠ بازی‌ای ساخته نشده. اول: `init <کشور>`")
         print_intro()
         return
     s = load()
     if cmd == "status":
-        show_status(s)
+        if len(args) >= 2:
+            target = find_name(s, " ".join(args[1:]).split()[0]) or find_name(s, args[1])
+            for cand in (" ".join(args[1:]), args[1]):
+                target = find_name(s, cand)
+                if target is not None:
+                    break
+            if target is None:
+                print("✗ کشور نامعلوم. با `list` نام‌ها را ببین.")
+            elif target == s["player"]:
+                show_status(s)
+            else:
+                show_country(s, target)
+        else:
+            show_status(s)
+    elif cmd in ("dash", "داشبورد"):
+        dash(s, args[1] if len(args) > 1 else "")
+    elif cmd in ("rank", "رتبه"):
+        rows = ranking(s)
+        print("═" * 56)
+        print(f" 🌍 رتبه‌بندی کامل جهانی ({len(rows)} کشور)")
+        print("═" * 56)
+        for i2, (name, score, detail) in enumerate(rows):
+            mark = "▶" if name == s["player"] else " "
+            tag = " 💀" if name in s["eliminated"] else (" ⚔" if name in s["at_war"] else "")
+            score_s = f"{score:.0f}" if score >= 0 else "  —"
+            print(f"  {i2+1:>3} {mark} {name:<14} {score_s:>5}   {detail}{tag}")
+        print("═" * 56)
     elif cmd == "help":
         print(HELP)
     elif cmd == "act":
@@ -1135,9 +1634,16 @@ def play():
     else:
         print_intro()
     print("حالت تعاملی فعال شد. فرمان‌ها را بنویس (`help`) — برای خروج: خروج")
+    menu = {
+        "1": ["status"], "2": ["dash", "dom"], "3": ["dash", "dip"],
+        "4": ["dash", "ops"], "5": ["dash", "mil"], "6": ["dash", "eco"],
+        "7": ["end"], "8": ["help"], "9": ["rank"],
+    }
+    bar_menu = ("[1]📊 وضعیت [2]🏛 سیاست [3]🌐 دیپلماسی [4]🕵 عملیات "
+                "[5]⚔ نظامی [6]💰 اقتصاد [7]✅ پایان نوبت [8]❔ راهنما [9]🌍 رتبه‌بندی")
     while True:
         try:
-            line = input("\n🎬 فرمان> ").strip()
+            line = input(f"\n{bar_menu}\n🎬 فرمان> ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
             return
@@ -1147,7 +1653,10 @@ def play():
             print("👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
             return
         try:
-            main(line.split())
+            if line in menu:
+                main(menu[line])
+            else:
+                main(line.split())
         except Exception as e:
             print(f"⚠ خطا در اجرای فرمان: {e}")
 
@@ -1156,9 +1665,13 @@ def print_intro():
     print("║        ⚔  ژئوپلیتیک: رقابت قدرت‌ها  ⚔                 ║")
     print("╚" + "═" * 52 + "╝")
     print()
-    print(" یک کشور را انتخاب کن تا رهبرش باشی (`init <نام>`):")
-    for name, c in COUNTRIES.items():
-        print(f"  • {name:<12} {c['trait']}  (ارتش {c['mil']}، اقتصاد {c['eco']}، فناوری {c['tech']}، ثبات {c['stab']})")
+    print(f" یک کشور را انتخاب کن تا رهبرش باشی (`init <نام>`):")
+    notable = [n for n in COUNTRIES if n in SPECIAL] or list(COUNTRIES)[:10]
+    for name in notable:
+        c = COUNTRIES[name]
+        print(f"  • {name:<12} {c['trait']}  (ارتش {c['mil']:.0f}، اقتصاد {c['eco']:.0f}، فناوری {c['tech']:.0f}، ثبات {c['stab']:.0f})")
+    print(f"\n 🌍 کل کشورهای واقعی جهان در بازی حاضرند: {len(COUNTRIES)} کشور ({len(REGIONS)} منطقه) — فهرست: `list`")
+    print("   هر کشور را می‌توانی برانگیزی؛ متحدت شو یا شبکه‌ی نیابتی در خاکش بیندازی!")
     print()
     print(f" هدف: تا سال {FINAL_YEAR} ابرقدرت اول جهان شو")
     print(" (یا باقی بمان! انقلاب و ضمیمه‌شدن = باخت)")
