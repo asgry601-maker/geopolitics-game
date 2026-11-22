@@ -1,12 +1,25 @@
 @echo off
-chcp 65001 >nul
+setlocal
 set PYTHONIOENCODING=utf-8
 cd /d "%~dp0"
-where python >nul 2>nul
-if errorlevel 1 (
-    echo [خطا] پایتون نصب نیست! اول از python.org پایتون ۳ را نصب کن.
-    pause
-    exit /b 1
-)
-python -X utf8 geopolitics.py play
+
+set PYCMD=
+where py >nul 2>nul && set PYCMD=py
+if not defined PYCMD where python >nul 2>nul && set PYCMD=python
+if not defined PYCMD goto nopy
+
+%PYCMD% -X utf8 geopolitics.py play
+
+echo.
+echo ---------------------------------------------
+pause
+exit /b 0
+
+:nopy
+echo.
+echo [ERROR] Python not found!
+echo Please download and install Python 3.8 first:
+echo   https://www.python.org/downloads/release/python-3810/
+echo (check "Add Python to PATH" during setup)
+echo.
 pause
