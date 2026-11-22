@@ -1087,6 +1087,9 @@ def main(argv=None):
             print_intro()
         return
     cmd = args[0]
+    if cmd in ("play", "بازی"):
+        play()
+        return
     if cmd == "init":
         if len(args) < 2:
             print_intro()
@@ -1124,6 +1127,29 @@ def main(argv=None):
         end_turn(s)
     else:
         print("✗ فرمان ناشناخته. `help` بزن.")
+
+def play():
+    """حالت تعاملی: `python geopolitics.py play` — فرمان‌ها را پشت‌سرهم اجرا می‌کند."""
+    if os.path.exists(STATE):
+        show_status(load())
+    else:
+        print_intro()
+    print("حالت تعاملی فعال شد. فرمان‌ها را بنویس (`help`) — برای خروج: خروج")
+    while True:
+        try:
+            line = input("\n🎬 فرمان> ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\n👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
+            return
+        if not line:
+            continue
+        if line.lower() in ("خروج", "exit", "quit", "q"):
+            print("👋 خداحافظ! بازی به‌طور خودکار ذخیره شده بود.")
+            return
+        try:
+            main(line.split())
+        except Exception as e:
+            print(f"⚠ خطا در اجرای فرمان: {e}")
 
 def print_intro():
     print("╔" + "═" * 52 + "╗")
