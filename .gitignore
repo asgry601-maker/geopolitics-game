@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+game_state.json
+game_state.json.tmp
