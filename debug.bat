@@ -2,7 +2,6 @@
 setlocal
 cd /d "%~dp0"
 set PYTHONIOENCODING=utf-8
-chcp 65001 >nul
 
 echo ===== GEOPOLITICS GAME - DEBUG REPORT ===== > debug_report.txt
 echo. >> debug_report.txt
