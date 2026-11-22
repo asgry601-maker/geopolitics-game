@@ -106,6 +106,13 @@ def render(out_text="", chosen=None):
                     + btn("🌆 فهرست ۱۷۴ کشور", "list")
                     + btn("🌙 پایان روز (زمان جلو می‌رود)", "end", "big")
                     + "</section>")
+    rank_btns = (btn("🌍 قدرت کلی", "rank")
+                 + btn("🎖 نیروی نظامی", "rank mil")
+                 + btn("💵 اقتصاد", "rank eco")
+                 + btn("🔬 فناوری", "rank tech")
+                 + btn("🕊 ثبات", "rank stab")
+                 + btn("☢ کلاهک هسته‌ای", "rank nukes"))
+    sections.append('<section><h2>🏅 رتبه‌بندی قدرت (پویا)</h2>' + rank_btns + "</section>")
 
     dbs = [("سیاست داخلی", "dom"), ("دیپلماسی", "dip"), ("عملیات", "ops"),
            ("نظامی", "mil"), ("اقتصاد", "eco"), ("نهادها", "org")]
@@ -116,6 +123,20 @@ def render(out_text="", chosen=None):
     body = ('<div class="hint">اول کشور را انتخاب کن، بعد دکمه را بزن:</div>'
             + group(country_select("target", countries), dip))
     sections.append('<section><h2>🤝 دیپلماسی</h2>' + body + "</section>")
+    if has:
+        neg_items = []
+        for k2, (lab, cost) in geopolitics.NEG_KINDS.items():
+            neg_items.append("%s — %s (هزینه %s)" % (k2, lab, cost))
+        body_neg = ('<div class="hint">نوع مذاکره و کشور را انتخاب کن؛ موفقیت قطعی نیست و نتیجه در بیانیه‌ها می‌آید:</div>'
+                    + group(country_select("target", countries)
+                            + country_select("neg_kind", neg_items, neg_items[0] if neg_items else ""),
+                            [("🤝 مذاکره علنی", "neg"), ("🤐 مذاکره محرمانه", "neg secret")]))
+        sections.append('<section><h2>🤐 مذاکرات دیپلماتیک</h2>' + body_neg + "</section>")
+        body_dec = (btn("🚪 خروج از آژانس اتمی", "decide exit_iaea", "big")
+                    + btn("❄ تعلیق غنی‌سازی (بازگشت به مذاکرات)", "decide freeze")
+                    + btn("☢ ادامه غنی‌سازی بدون محدودیت", "decide resume")
+                    + btn("🕊 اعلام بی‌طرفی دائمی", "decide neutrality"))
+        sections.append('<section><h2>🧠 تصمیم‌های کلیدی رهبری</h2>' + body_dec + "</section>")
 
     body = (btn("📈 بودجه نظامی", "act mil")
             + btn("🧪 پروژه فناوری", "act tech")
@@ -160,7 +181,12 @@ def render(out_text="", chosen=None):
         if stmts:
             body_stmt += '<div class="hint">\U0001f5e3 \u0622\u062e\u0631\u06cc\u0646 \u0628\u06cc\u0627\u0646\u06cc\u0647\u200c\u0647\u0627\u06cc \u06a9\u0634\u0648\u0631\u0647\u0627 \u0648 \u0631\u0647\u0628\u0631\u06cc:</div>'
             for stl in stmts[-8:]:
-                body_stmt += '<div class="itemrow">\U0001f5e3 <b>%s</b>: %s</div>' % (esc(stl["who"]), esc(stl["text"]))
+                lead2 = stl.get("lead") or ""
+                who2 = stl.get("who", "")
+                if lead2 and lead2 != who2:
+                    body_stmt += '<div class="itemrow">\U0001f5e3 <b>%s (%s)</b>: %s</div>' % (esc(who2), esc(lead2), esc(stl["text"]))
+                else:
+                    body_stmt += '<div class="itemrow">\U0001f5e3 <b>%s</b>: %s</div>' % (esc(who2), esc(stl["text"]))
         else:
             body_stmt += '<div class="hint">\u0647\u0646\u0648\u0632 \u0628\u06cc\u0627\u0646\u06cc\u0647\u200c\u0627\u06cc \u0635\u0627\u062f\u0631 \u0646\u0634\u062f\u0647 \u0627\u0633\u062a.</div>'
     sections.append('<section><h2>\U0001f4e2 \u0628\u06cc\u0627\u0646\u06cc\u0647</h2>' + body_stmt + "</section>")
@@ -251,6 +277,15 @@ def handle_post(form):
             out = "⚠ تجهیزی انتخاب نشده بود."
         else:
             out = run_cmd(["act", "buy", item, str(qty) if qty else "1"])
+    elif cmd in ("neg", "neg secret"):
+        rawk = get("neg_kind")
+        kind = rawk.split()[0] if rawk else ""
+        argv = ["neg", kind]
+        if target:
+            argv.append(target)
+        if cmd == "neg secret":
+            argv.append("s")
+        out = run_cmd(argv)
     elif cmd == "reset-game":
         if get("reset_confirm") == "بله":
             out = run_cmd(["reset", get("reset_country", "ایران")])

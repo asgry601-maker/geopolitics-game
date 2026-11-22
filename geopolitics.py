@@ -357,6 +357,9 @@ HELP = """
   act break <کشور> فسخ پیمان                   act sanc <کشور> تحریم اقتصادی
   act un <کشور>        طرح محکومیت در مجمع عمومی سازمان ملل
   act war <کشور>       اعلان جنگ (حواست به ماده ۵ ناتو و محکومیت ملل باشد!)
+  neg <\u0646\u0648\u0639> <\u06a9\u0634\u0648\u0631> [s]   \u0645\u0630\u0627\u06a9\u0631\u0647 \u0639\u0644\u0646\u06cc/\u0645\u062d\u0631\u0645\u0627\u0646\u0647 \u2014 `negos` \u0641\u0647\u0631\u0633\u062a \u0627\u0646\u0648\u0627\u0639
+  decide <\u0646\u0648\u0639>        \u062a\u0635\u0645\u06cc\u0645 \u0627\u0639\u0644\u0627\u0645\u06cc \u0631\u0647\u0628\u0631\u06cc: exit_iaea|freeze|resume|neutrality
+  rank mil|eco|tech|stab|nukes   \u0631\u062a\u0628\u0647\u200c\u0628\u0646\u062f\u06cc \u067e\u0648\u06cc\u0627 \u062f\u0631 \u0647\u0631 \u0634\u0627\u062e\u0647
 داشبورد: dash dom|dip|ops|mil|eco|org (یا فارسی: سیاست/دیپلماسی/عملیات/نظامی/اقتصاد/نهاد)
 پایان دور: end  → یک روز جلو می‌رود؛ ظاهر گزارش: احزاب، مطبوعات، جنگ‌ها، بازار سلاح.
 """
@@ -380,6 +383,8 @@ def load():
     s.setdefault("day", 1)
     s.setdefault("iaea_heat", 0)
     s.setdefault("un_censures", 0)
+    s.setdefault("statements", [])
+    s.setdefault("iaea_out", False)
     s.setdefault("arsenal", {})
     rel = s.get("relations", {})
     fresh = None
@@ -561,6 +566,41 @@ STMTS = {
         "neutral": ["سازمان ملل باید مستقل بماند؛ می‌پذیریم."],
         "hostile": ["پشت طرح محکومیت {T}، سیاست‌های {P} را می‌بینیم."],
     },
+    "exit_iaea": {
+        "friend": ["تصمیم مقاومانه‌ی {P} را می‌فهمیم و در کنارش می‌ایستیم."],
+        "neutral": ["خروج {P} از آژانس نگران‌کننده است؛ دیپلماسی را احیا کنید."],
+        "hostile": ["خروج {P} از آژانس نشانه‌ی گرایش به مرز سلاح هسته‌ای است؛ دور جدید تحریم در راه است."],
+    },
+    "freeze": {
+        "friend": ["تعلیق غنی‌سازی {P} گام درست است؛ مسیر مذاکرات باز می‌شود."],
+        "neutral": ["تعلیق غنی‌سازی از سوی {P} گام سازنده‌ای برای آرامش منطقه است."],
+        "hostile": ["تعلیق کافی نیست؛ بازرسی‌های بدون قید و شرط باید آغاز شود."],
+    },
+    "resume": {
+        "friend": ["حق فناوری صلح‌آمیز برای {P} حفظ خواهد شد و ما از آن حمایت می‌کنیم."],
+        "neutral": ["ادامه‌ی غنی‌سازی {P} نگرانی جامعه‌ی جهانی را بالا می‌برد."],
+        "hostile": ["ادامه‌ی غنی‌سازی {P} تهدید تلقی می‌شود؛ دور تازه‌ی تحریم‌ها در راه است."],
+    },
+    "neutrality": {
+        "friend": ["بی‌طرفی {P} به پایداری منطقه کمک می‌کند و آن را خوش‌آمدگوییم."],
+        "neutral": ["اعلام بی‌طرفی {P} گام معقولی برای حفاظت از صلح است."],
+        "hostile": ["بی‌طرفی {P} صرفا توهم است؛ تجربه حرف ما را می‌گوید."],
+    },
+    "neg_ok": {
+        "friend": ["مذاکره با {P} پربار بود؛ همسو و هم‌پیمان می‌مانیم."],
+        "neutral": ["مذاکره صلح‌آمیزی داشتیم و توافق‌نامه امضا شد."],
+        "hostile": ["مذاکره پربار بود، اما صلح نیازمند رفتار متقابل است."],
+    },
+    "neg_ref": {
+        "friend": ["تلاش کردیم؛ اما شرایط فعلی را نمی‌پذیریم."],
+        "neutral": ["شرایط پیشنهادی {P} منصفانه نیست؛ مذاکره متوقف می‌ماند."],
+        "hostile": ["مذاکره با {P} پشتوانه‌ای ندارد؛ پاسخ روشنی به آن می‌دهیم."],
+    },
+    "neg_leak": {
+        "friend": ["شایعاتی درباره مذاکرات محرمانه {P} در رسانه‌ها پیچیده؛ بی‌اهمیت است."],
+        "neutral": ["فاش شدن مذاکرات محرمانه {P} شکاف اعتماد ایجاد کرده است."],
+        "hostile": ["فاش شدن مذاکرات محرمانه {P} رسوایی‌آمیز است؛ پیگرد دیپلماتیک خواهد بود."],
+    },
 }
 
 
@@ -580,9 +620,9 @@ def ai_statement(s, speaker, topic, about=None):
     pool = STMTS.get(topic, STMTS["generic"])
     variants = pool.get(tone) or pool["neutral"]
     text = random.choice(variants).format(P=s["player"], me=speaker, T=about if about is not None else s["player"])
-    msg(s, "🗣 " + speaker + ": " + text)
+    msg(s, "🗣 " + speaker + " (" + leader(speaker) + "): " + text)
     st = s.setdefault("statements", [])
-    st.append({"who": speaker, "text": text, "topic": topic})
+    st.append({"who": speaker, "lead": leader(speaker), "text": text, "topic": topic})
     s["statements"] = st[-80:]
 
 
@@ -601,6 +641,404 @@ def ai_react(s, topic, about=None, n=None):
         chosen[n - 1] = about
     for x in chosen:
         ai_statement(s, x, topic, about or None)
+
+
+# ---------- سران واقعی دولت‌ها (مبنای رسمی ۲۰۲۵) ----------
+LEADERS = {
+    "ایران": "آیت‌الله علی خامنه‌ای",
+    "آمریکا": "دونالد ترامپ",
+    "روسیه": "ولادیمیر پوتین",
+    "چین": "شی جین‌پینگ",
+    "بریتانیا": "کیر استارمر",
+    "فرانسه": "امانوئل مکرون",
+    "آلمان": "فریدریش مرتس",
+    "اسرائیل": "بنیامین نتانیاهو",
+    "ترکیه": "رجب طیب اردوغان",
+    "عربستان": "ملک سلمان بن عبدالعزیز",
+    "امارات": "محمد بن زاید آل نهیان",
+    "قطر": "امیر تمیم بن حمد آل ثانی",
+    "مصر": "عبدالفتاح السیسی",
+    "عراق": "محمد شیاع السودانی",
+    "سوریه": "احمد الشرع",
+    "لبنان": "جوزف عون",
+    "فلسطین": "محمود عباس",
+    "یمن": "شورای ریاستی یمن",
+    "اردن": "ملک عبدالله دوم",
+    "بحرین": "ملک حمد بن عیسی آل خلیفه",
+    "کویت": "امیر مشعل احمد الصباح",
+    "عمان": "سلطان هیثم بن طارق",
+    "هند": "نارندرا مودی",
+    "پاکستان": "شهباز شریف",
+    "ژاپن": "شیگرو ایشیبا",
+    "کره جنوبی": "لی جه میونگ",
+    "کره شمالی": "کیم جونگ اون",
+    "تایوان": "لای چینگ‌ده",
+    "استرالیا": "انتونی آلبانیزی",
+    "نیوزیلند": "کریستوفر لاکسون",
+    "کانادا": "مارک کرنی",
+    "برزیل": "لولا داسیلوا",
+    "آرژانتین": "خاویر میلی",
+    "مکزیک": "کلودیا شینبوم",
+    "ونزوئلا": "نیکولاس مادورو",
+    "کلمبیا": "گوستاوو پترو",
+    "شیلی": "گابریل بوریک",
+    "پرو": "دینا بولوارته",
+    "السالوادور": "نجیب بوکله",
+    "اکوادور": "دانیل نوبوآ",
+    "بولیوی": "رودریگو پاز",
+    "پاراگوئه": "سانتیاگو پنیا",
+    "اوروگوئه": "یاماندو اورسی",
+    "پاناما": "خوزه رائول مولینو",
+    "کاستاریکا": "رودریگو چاوس",
+    "گواتمالا": "برناردو آروو",
+    "هندوراس": "شیومارا کاسترو",
+    "نیکاراگوئه": "دانیل اورتگا",
+    "جامائیکا": "اندرو هولنس",
+    "هائیتی": "شورای ریاستی انتقالی",
+    "باربادوس": "میا موتلی",
+    "باهاماس": "فیلیپ دیویس",
+    "بلیز": "جانی بریسیگنیو",
+    "ترینیداد و توباگو": "کیث رولی",
+    "ایتالیا": "جورجیا ملونی",
+    "اسپانیا": "پدرو سانچز",
+    "پرتغال": "لوئیس مونته‌نگرو",
+    "هلند": "دیک شوف",
+    "بلژیک": "بارت دی واور",
+    "لوکزامبورگ": "لوک فریدن",
+    "سوئیس": "کارین کلر-سوتر",
+    "اتریش": "کریستین اشتوکر",
+    "سوئد": "اولف کریسترسون",
+    "نروژ": "یوناس گار استوره",
+    "دانمارک": "مت فردریکسن",
+    "فنلاند": "پتریه اورپو",
+    "ایسلند": "کریسترون فراستادوتیر",
+    "ایرلند": "میخائل مارتین",
+    "لهستان": "دونالد تاسک",
+    "چک": "پیتر فیالا",
+    "اسلواکی": "رابرت فیتسو",
+    "مجارستان": "ویکتور اوربان",
+    "رومانی": "نیکوشور دن",
+    "بلغارستان": "روسن ژلیازکو",
+    "یونان": "کیریاکوس میتسوتاکیس",
+    "قبرس": "نیکوس کریستودولیدس",
+    "کرواسی": "آندره پلنکویچ",
+    "صربستان": "الکساندر ووچیچ",
+    "بوسنی": "دنیس بچیروویچ",
+    "اسلوونی": "رابرت گولوب",
+    "آلبانی": "ادی راما",
+    "مقدونیه شمالی": "هریستیان میکونسکی",
+    "مونته‌نگرو": "میلویکا اسپایچ",
+    "اوکراین": "ولودیمیر زلنسکی",
+    "بلاروس": "الکساندر لوکاشنکو",
+    "مولداوی": "مایا ساندو",
+    "گرجستان": "ایراکلی کوباخیدزه",
+    "ارمنستان": "نیکول پاشینیان",
+    "آذربایجان": "الهام علی‌یف",
+    "قزاقستان": "قسم‌جومرت توکایف",
+    "ازبکستان": "شوکت میرزیائیف",
+    "ترکمنستان": "سردار بردی‌محمداف",
+    "قرقزیستان": "صادر جاپاروف",
+    "تاجیکستان": "امام‌علی رحمان",
+    "افغانستان": "هیبت‌الله آخندزاده",
+    "بنگلادش": "محمد یونس",
+    "سری‌لانکا": "آنورا دیسانایکه",
+    "نپال": "سوشیلا کارکی",
+    "بوتان": "تشرینگ توبگای",
+    "مالدیو": "محمد معیزو",
+    "میانمار": "مین آنگ هلاینگ",
+    "تایلند": "آنوتین چارنویراکول",
+    "ویتنام": "تو لام",
+    "لائوس": "تونگلون سیسولیت",
+    "کامبوج": "هون مانه",
+    "مالزی": "انور ابراهیم",
+    "سنگاپور": "لارنس وانگ",
+    "اندونزی": "پرابوو سوبیانتو",
+    "فیلیپین": "فردیناند مارکوس جونیور",
+    "برونئی": "سلطان حسنال بولکیاه",
+    "پاپوآ گینه نو": "جیمز ماراپی",
+    "فیجی": "سیتیونی رابوکا",
+    "وانواتو": "یوتام ناپات",
+    "جزایر سلیمان": "جرمایا مانله",
+    "ساموا": "فیمه متاعفا",
+    "تونگا": "پادشاه توپو ششم",
+    "تیمور شرقی": "خوزه راموس-هورتا",
+    "مغولستان": "اون‌اردنی",
+    "مراکش": "پادشاه محمد ششم",
+    "الجزایر": "عبدالمجید تبون",
+    "تونس": "قیس سعید",
+    "لیبی": "عبدالحمید دبیبه",
+    "سودان": "عبدالفتاح البرهان",
+    "سودان جنوبی": "سالوا کیر",
+    "اتیوپی": "ابی احمد",
+    "اریتره": "ایسایاس آفورکی",
+    "جیبوتی": "اسماعیل عمر گله",
+    "سومالی": "حسن شیخ محمود",
+    "کنیا": "ویلیام روتو",
+    "اوگاندا": "یووری موسه‌ونی",
+    "تانزانیا": "سیسه مپورو",
+    "رواندا": "پل کاگامه",
+    "بوروندی": "اوارسته نداییشیمی",
+    "کنگو دموکراتیک": "فلیکس تشسکی‌دی",
+    "کنگو": "دنیس ساسو نگسو",
+    "گابن": "بریس اویگی نگما",
+    "گینه استوایی": "تئودورو اوبیانگ نگما",
+    "کامرون": "پل بیا",
+    "چاد": "محمد ادریس دبی",
+    "نیجر": "عبدورحمانی تیانی",
+    "مالی": "اسیمی گویتا",
+    "بورکینافاسو": "ابراهیم ترائوره",
+    "سنگال": "باسیر دیومایه",
+    "گامبیا": "آداما برو",
+    "گینه": "مامادی دونبویا",
+    "گینه بیسائو": "اومار سیسکو امبالو",
+    "سیرالئون": "جولیوس ماادا بیو",
+    "لیبریا": "جوزف بوآکای",
+    "ساحل عاج": "آلاسان واتارا",
+    "غنا": "جان ماهاما",
+    "توگو": "فور گنینگبه",
+    "بنین": "پاتریس تالون",
+    "نیجریه": "بولا تینوبو",
+    "موریتانی": "محمد ولد الغزوانی",
+    "زیمبابوه": "امرسون منگانگوا",
+    "زامبیا": "هاکیند هیشیلیما",
+    "موزامبیک": "دانیل چاپو",
+    "ماداگاسکار": "آندری راجولینا",
+    "موریس": "ناوین رامگولام",
+    "کیپ‌ورد": "خوزه ماریا بورته",
+    "لسوتو": "سام متاکانه",
+    "اسواتینی": "پادشاه مسواتی سوم",
+    "آنگولا": "ژائو لورنسو",
+    "نامیبیا": "نتومبو نندی-ندایتح",
+    "بوتسوانا": "دوکوما بوکو",
+    "آفریقای جنوبی": "سیریل رامافوزا",
+    "آفریقای مرکزی": "فوستن توادرا",
+    "کوبا": "میگل دیاز-کانل",
+    "سورینام": "جنیفر گرلینگ-سیمونز",
+    "گویان": "ایروین علی",
+}
+
+
+def leader(name):
+    return LEADERS.get(name, "رهبر " + name)
+
+
+# ---------- شبکه‌های نیابتی واقعی دنیا ----------
+PROXY_REAL = {
+    ("ایران", "لبنان"): "حزب‌الله لبنان",
+    ("ایران", "فلسطین"): "حماس",
+    ("ایران", "یمن"): "انصارالله (حوثی‌ها)",
+    ("ایران", "عراق"): "کتائب حزب‌الله",
+    ("ایران", "سوریه"): "جبهه مقاومت جهانی",
+    ("روسیه", "سوریه"): "گروه واگنر",
+    ("روسیه", "مالی"): "گروه آفریقا",
+    ("ترکیه", "سوریه"): "ارتش ملی سوریه",
+    ("آمریکا", "سوریه"): "نیروهای دموکراتیک سوریه",
+    ("عربستان", "یمن"): "اعزامی ائتلاف",
+}
+
+
+def proxy_label(sponsor, host):
+    p = PROXY_REAL.get((sponsor, host))
+    if p is None and sponsor == "ایران":
+        p = "جبهه مقاومت جهانی در " + host
+    if p is None:
+        p = "شبکه نیابتی " + sponsor + " در " + host
+    return p
+
+
+# ---------- مذاکرات (علنی و محرمانه) ----------
+NEG_KINDS = {
+    "ally": ("اتحاد نظامی", 3),
+    "pact": ("پیمان عدم تعارض", 2),
+    "calm": ("کاهش تنش", 2),
+    "fund": ("درخواست کمک مالی صندوق", 0),
+    "arms": ("خرید فوری تسلیحات", 15),
+    "ceasefire": ("آتش‌بس و پایان جنگ", 0),
+    "bribe": ("تطمیع رهبر کشور", 8),
+}
+NEG_SECRET_LIKE = {"bribe"}
+
+
+def negotiate(s, kind, target, secret=False):
+    if kind not in NEG_KINDS:
+        print("✗ نوع مذاکره نامشخص. انواع: " + "، ".join(sorted(NEG_KINDS)))
+        return
+    label, cost = NEG_KINDS[kind]
+    W = s["world"]; P = s["player"]; me = W[P]
+    if target is None or target == P:
+        print("✗ کشور مذاکره را انتخاب کن.")
+        return
+    if target in s.get("eliminated", []):
+        print("✗ این کشور از نقشه حذف شده است.")
+        return
+    t = W[target]
+    rel = get_rel(s, P, target)
+    prob = 0.35
+    if rel >= 60:
+        prob += 0.35
+    elif rel >= 30:
+        prob += 0.2
+    elif rel >= 0:
+        prob += 0.08
+    elif rel >= -30:
+        prob -= 0.15
+    else:
+        prob -= 0.3
+    if t["stab"] < 40:
+        prob -= 0.1
+    if kind == "ally" and t["stab"] >= 65:
+        prob += 0.12
+    if kind == "calm":
+        prob += 0.15
+    if kind == "bribe":
+        prob = 0.55 + (0.2 if rel > 30 else 0)
+    if kind == "ceasefire":
+        wars = [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]
+        if not any(P in pr and target in pr for pr in wars):
+            print("✗ با " + target + " در جنگ نیستی؛ آتش‌بس معنا ندارد.")
+            return
+        prob = 0.5 + (0.3 if rel > -20 else 0)
+    secret = bool(secret) or kind in NEG_SECRET_LIKE
+    tag = "🤫 محرمانه — " if secret else ""
+    print(tag + "🤝 مذاکره با " + target + " (" + leader(target) + ") آغاز شد: پیشنهاد «" + label + "»")
+    if cost:
+        if me["money"] < cost:
+            print(f"⚠ بودجه کافی نیست (نیاز: {cost} میلیارد — موجود: {me['money']:.0f})")
+            return
+        me["money"] -= cost
+    ok = random.random() < prob
+    if ok:
+        if kind == "ally":
+            if target in s["allies"]:
+                me["money"] += cost
+                print("⚠ این کشور از قبل متحد توست.")
+                return
+            s["allies"].append(target)
+            if target in s["pacts"]:
+                s["pacts"].remove(target)
+            add_rel(s, P, target, 8)
+            print("✔ اتحاد نظامی با " + target + " امضا شد! (" + leader(target) + " در کنار توست)")
+        elif kind == "pact":
+            if target not in s["pacts"] and target not in s["allies"]:
+                s["pacts"].append(target)
+            add_rel(s, P, target, 10)
+            print("✔ پیمان عدم تعارض با " + target + " بسته شد.")
+        elif kind == "calm":
+            add_rel(s, P, target, 14)
+            print("✔ تنش با " + target + " کاهش یافت (روابط +14).")
+        elif kind == "fund":
+            amount = max(8, min(40, int(t["eco"] / 2)))
+            me["money"] += amount
+            add_rel(s, P, target, 5)
+            print(f"✔ {target} تو را وارد صندوق مشترک کرد: {amount} میلیارد دریافت شد.")
+        elif kind == "arms":
+            me["mil"] += 6
+            add_rel(s, P, target, 5)
+            print("✔ محموله تسلیحات فوری تحویل شد (نظامی +6).")
+        elif kind == "ceasefire":
+            wars2 = [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]
+            s["at_war"] = [x for pr in wars2 if set(pr) != {P, target} for x in pr]
+            add_rel(s, P, target, 15)
+            print("✔ آتش‌بس با " + target + " امضا شد و جنگ تمام شد!")
+        elif kind == "bribe":
+            add_rel(s, P, target, 18)
+            print("✔ " + leader(target) + " تطمیع شد و موضعش نرم‌تر شد (روابط +18).")
+        if secret:
+            msg(s, tag + "توافقی محرمانه با " + target + " بسته شد.")
+            if random.random() < 0.15:
+                ai_statement(s, target, "neg_leak", P)
+                add_rel(s, P, target, -8)
+                me["stab"] = max(0, me["stab"] - 2)
+                print("⚠ مذاکره محرمانه فاش شد! اعتبار تو آسیب دید (ثبات -2).")
+        else:
+            ai_statement(s, target, "neg_ok", P)
+            ai_react(s, "neg_ok", target)
+    else:
+        add_rel(s, P, target, -5)
+        if secret:
+            msg(s, tag + "مذاکره محرمانه با " + target + " نتیجه نداد.")
+            if random.random() < 0.25:
+                ai_statement(s, target, "neg_leak", P)
+                print("⚠ انتشار خبر رد مذاکره محرمانه، آبروی تو را برد (روابط با " + target + " -10).")
+                add_rel(s, P, target, -10)
+        else:
+            ai_statement(s, target, "neg_ref", P)
+            ai_react(s, "neg_ref", target)
+    save(s)
+
+
+# ---------- تصمیم‌های اعلامی رهبری (بیانیه + پیامدها) ----------
+DECISIONS = {
+    "exit_iaea": "خروج از آژانس بین‌المللی انرژی اتمی",
+    "freeze": "تعلیق غنی‌سازی و بازگشت به مذاکرات",
+    "resume": "ادامه غنی‌سازی بدون محدودیت",
+    "neutrality": "اعلام بی‌طرفی دائمی",
+}
+
+
+def decide_label(kind):
+    return DECISIONS.get(kind, kind)
+
+
+def _bump(s, key, delta):
+    s[key] = max(0, s.get(key, 0) + delta)
+
+
+def _rel_many(s, P, names, delta):
+    for n in names:
+        if n != P:
+            add_rel(s, P, n, delta)
+
+
+def announce(s, kind):
+    if kind not in DECISIONS:
+        print("✗ تصمیم نامشخص. موارد: " + "، ".join(sorted(DECISIONS)))
+        return
+    W = s["world"]; P = s["player"]; me = W[P]
+    label = DECISIONS[kind]
+    msg(s, "📢 بیانیه رسمی رهبری " + P + " (" + leader(P) + "): " + label)
+    st = s.setdefault("statements", [])
+    st.append({"who": P, "lead": leader(P), "text": label, "topic": kind})
+    s["statements"] = st[-80:]
+    print("📢 بیانیه رسمی رهبری: «" + label + "»")
+    west = [f for f in WEST if f != P]
+    east = [f for f in ("روسیه", "چین") if f != P]
+    if kind == "exit_iaea":
+        s["iaea_out"] = True
+        if P not in NUKES0:
+            s["un_censures"] = s.get("un_censures", 0) + 1
+            print("🚪 بازرسان اژانس اخراج شدند؛ قطعنامه محکومیت صادر شد.")
+        _rel_many(s, P, west, -18)
+        _rel_many(s, P, east, 4)
+        me["stab"] = max(0, me["stab"] - 3)
+        print("⚠ روابط با غرب تنش‌زیاد شد (-18).")
+    elif kind == "freeze":
+        s["iaea_out"] = False
+        _bump(s, "iaea_heat", -1)
+        _rel_many(s, P, west, 12)
+        _rel_many(s, P, east, -6)
+        me["stab"] = max(0, me["stab"] - 2)
+        print("❄ غنی‌سازی تعلیق شد؛ اژانس راضی، جبهه داخلی ناراضی (ثبات -2).")
+    elif kind == "resume":
+        _bump(s, "iaea_heat", 1)
+        _rel_many(s, P, west, -10)
+        _rel_many(s, P, east, 5)
+        me["stab"] = min(100, me["stab"] + 2)
+        print("☢ غنی‌سازی بدون محدودیت ادامه می‌یابد؛ دور تازه تحریم‌ها در راه است.")
+    elif kind == "neutrality":
+        for a in list(s.get("allies", [])):
+            s["allies"].remove(a); add_rel(s, P, a, -12)
+        for p in list(s.get("pacts", [])):
+            s["pacts"].remove(p)
+        wars = [s["at_war"][i:i + 2] for i in range(0, len(s["at_war"]) - 1, 2)]
+        s["at_war"] = [x for pr in wars if P not in pr for x in pr]
+        _rel_many(s, P, west, 6)
+        _rel_many(s, P, east, 6)
+        me["stab"] = min(100, me["stab"] + 4)
+        me["mil"] = max(10, me["mil"] - 4)
+        print("🕊 بی‌طرفی اعلام شد: اتحادها فسخ، جنگ‌ها پایان، ارتش (-4)، ثبات +4.")
+    ai_react(s, kind)
+    save(s)
 
 
 def init_game(player):
@@ -1017,7 +1455,7 @@ def do_act(s, args):
         for o in W:
             if o != P: add_rel(s, P, o, -12)
         print(f"☢ کلاهک ساخته شد → مجموع: {me['nukes']} (محکومیت جهانی، روابط همه -12)")
-        if P not in NUKES0:
+        if P not in NUKES0 and not s.get("iaea_out"):
             s["iaea_heat"] = s.get("iaea_heat", 0) + 1
             heat = s["iaea_heat"]
             if heat >= 3:
@@ -1122,6 +1560,8 @@ def do_act(s, args):
         ev(s, P, "trade", buyer)
         print(f"✔ فروش: 1× {key} به {buyer} → +{gain} میلیارد، روابط +5")
     elif action == "iaea":
+        if s.get("iaea_out"):
+            print("✗ تو از اژانس خارج شده‌ای؛ با «decide freeze» مسیر مذاکرات را باز کن.")
         if not pay(3): return
         s["iaea_heat"] = 0
         msg(s, f"{P} با آژانس بین‌المللی انرژی اتمی تفاهم‌نامه شفافیت امضا کرد.")
@@ -1287,7 +1727,7 @@ def do_act(s, args):
                 add_rel(s, P, target, -8)
                 print(f"🕵 شبکه نیابتی تو در {target} تقویت شد → قدرت {existing[0]['power']}/۵ (مخفی)")
             else:
-                s["proxies"].append({"sponsor": P, "host": target, "power": 2, "hidden": True})
+                s["proxies"].append({"sponsor": P, "host": target, "power": 2, "hidden": True, "name": proxy_label(P, target)})
                 t["stab"] = max(0, t["stab"] - 5)
                 add_rel(s, P, target, -15)
                 print(f"🕵 شبکه نیابتی در {target} ایجاد شد (قدرت ۲/۵). این عملیات مخفی است — پیگیری در `dash ops`")
@@ -1536,7 +1976,7 @@ def end_turn(s):
                 already = any(x["sponsor"] == name and x["host"] == foe for x in s.get("proxies", []))
                 if get_rel(s, name, foe) < -30 and not already and foe not in s["eliminated"]:
                     c["money"] -= 6
-                    s["proxies"].append({"sponsor": name, "host": foe, "power": 1, "hidden": True})
+                    s["proxies"].append({"sponsor": name, "host": foe, "power": 1, "hidden": True, "name": proxy_label(name, foe)})
                     W[foe]["stab"] = max(0, W[foe]["stab"] - 1.5)
                     add_rel(s, name, foe, -12)
                     log.append(f"🕵 شواهدی از شبکه نیابتی {name} در {foe} دیده شده است.")
@@ -1871,6 +2311,23 @@ def rank_of(s, name):
             return i + 1
     return None
 
+def _rank_cat(s, cat):
+    titles = {"mil": "رتبه‌بندی نظامی", "eco": "رتبه‌بندی اقتصادی",
+              "tech": "رتبه‌بندی فناوری", "stab": "رتبه‌بندی ثبات", "nukes": "رتبه‌بندی کلاهک"}
+    if cat not in titles:
+        print("✗ دسته نامشخص. موارد: power، mil، eco، tech، stab، nukes")
+        return
+    W = s["world"]
+    rows = sorted(((n, W[n].get(cat, 0)) for n in W if n not in s["eliminated"]), key=lambda x: -x[1])
+    print("\u2550" * 56)
+    print(f" 🌍 {titles[cat]} ({len(rows)} کشور)")
+    print("\u2550" * 56)
+    for i2, (name, val) in enumerate(rows):
+        mark = "\u25b6" if name == s["player"] else " "
+        print(f"  {i2+1:>3} {mark} {name:<14} {val:>5.0f}")
+    print("\u2550" * 56)
+
+
 def dash_domestic(s):
     W = s["world"]; P = s["player"]; me = W[P]
     pol = s.get("politics", {}).get(P, {})
@@ -1941,14 +2398,16 @@ def dash_ops(s):
         print(" 🗡 شبکه‌های نیابتی تو:")
         for px in mine:
             st = "مخفی" if px.get("hidden", True) else "لو رفته"
-            print(f"   ▸ در {px['host']:<14} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵  ({st})")
+            nm = px.get("name") or proxy_label(px["sponsor"], px["host"])
+            print(f"   ▸ {nm} در {px['host']:<14} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵  ({st})")
     else:
         print(" 🗡 هنوز شبکه نیابتی نداری — با `act proxy <کشور>` بساز (۶۰ میلیارد، مخفی).")
     if inside:
         print()
         print(" ⚠ شبکه‌های نیابتی بیگانه در خاک تو:")
         for px in inside:
-            print(f"   ▸ عوامل {px['sponsor']:<12} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵")
+            nm2 = px.get("name") or proxy_label(px["sponsor"], px["host"])
+            print(f"   ▸ {nm2} — عوامل {px['sponsor']:<12} قدرت [{bar(px['power'] * 20)}] {px['power']}/۵")
         print("   💡 با تقویت ثبات داخلی یا عملیات `act covert` می‌توانی خنثی‌شان کنی.")
     hidden_others = len(prx) - len(mine) - len(inside)
     if hidden_others > 0:
@@ -2115,7 +2574,7 @@ def show_country(s, name):
     if prx:
         shown = [px for px in prx if px["sponsor"] == P]
         if shown:
-            print("   🗡 شبکه نیابتی شما اینجا: " + "، ".join(f"قدرت {px['power']}/۵" for px in shown))
+            print("   🗡 شبکه نیابتی شما اینجا: " + "، ".join((px.get("name") or proxy_label(px["sponsor"], px["host"])) + f" قدرت {px['power']}/۵" for px in shown))
         else:
             print(f"   🌑 {len(prx)} شبکه نیابتی ناشناس در این کشور فعال است.")
     parties = pol.get("parties") or {}
@@ -2270,6 +2729,10 @@ def main(argv=None):
     elif cmd in ("dash", "داشبورد"):
         dash(s, args[1] if len(args) > 1 else "")
     elif cmd in ("rank", "رتبه"):
+        cat = args[1] if len(args) > 1 else "power"
+        if cat != "power":
+            _rank_cat(s, cat)
+            return
         rows = ranking(s)
         print("═" * 56)
         print(f" 🌍 رتبه‌بندی کامل جهانی ({len(rows)} کشور)")
@@ -2291,6 +2754,22 @@ def main(argv=None):
         ai_react(s, "generic")
         save(s)
         print("📢 بیانیه منتشر شد و در گزارش بازی ثبت گردید.")
+    elif cmd in ("neg", "negotiate", "مذاکره"):
+        kind = args[1] if len(args) > 1 else ""
+        target = find_name(s, args[2]) if len(args) > 2 else None
+        secret = len(args) > 3 and args[3] in ("s", "secret", "محرمانه")
+        negotiate(s, kind, target, secret)
+    elif cmd == "negos":
+        print("🤝 انواع مذاکره — مورد: neg <نوع> <کشور> [s = محرمانه]")
+        for k, (lab, cost) in NEG_KINDS.items():
+            sec = " [همیشه محرمانه]" if k in NEG_SECRET_LIKE else ""
+            print(f"   {k:<10} {lab} (هزینه {cost}م){sec}")
+    elif cmd in ("decide", "تصمیم"):
+        kind = args[1] if len(args) > 1 else ""
+        if not kind:
+            print("🧠 تصمیم‌های کلیدی — مورد: " + "، ".join(sorted(DECISIONS)))
+            return
+        announce(s, kind)
     elif cmd == "help":
         print(HELP)
     elif cmd == "act":
@@ -2413,6 +2892,42 @@ def orgs_menu(s):
         s = load()
 
 
+def negotiate_menu(s):
+    kinds = list(NEG_KINDS.items())
+    while True:
+        print("\U0001f91d \u0645\u0630\u0627\u06a9\u0631\u0647 \u2014 \u0627\u0646\u0648\u0627\u0639:")
+        for k2, (kk, (lab, cost)) in enumerate(kinds, 1):
+            sec = " [\u0645\u062d\u0631\u0645\u0627\u0646\u0647]" if kk in NEG_SECRET_LIKE else ""
+            print(f"   [{k2}] {lab} (\u0647\u0632\u06cc\u0646\u0647 {cost}\u0645){sec}")
+        print("   [0] \u0628\u0627\u0632\u06af\u0634\u062a")
+        raw = input(" \u06a9\u062f\u0627\u0645\u061f ").strip()
+        if raw in ("0", ""):
+            return
+        if not (raw.isdigit() and 1 <= int(raw) <= len(kinds)):
+            continue
+        kk = kinds[int(raw) - 1][0]
+        t = pick_country(s, "\u0628\u0627 \u06a9\u062f\u0627\u0645 \u06a9\u0634\u0648\u0631\u061f")
+        if not t:
+            continue
+        if kk in NEG_SECRET_LIKE:
+            main(["neg", kk, t])
+        else:
+            sc = input(" \u0645\u062d\u0631\u0645\u0627\u0646\u0647\u061f (y/N): ").strip().lower()
+            main(["neg", kk, t] + (["s"] if sc == "y" else []))
+        s = load()
+
+
+def decide_menu(s):
+    items = sorted(DECISIONS.items())
+    print("\U0001f9e0 \u062a\u0635\u0645\u06cc\u0645\u200c\u0647\u0627\u06cc \u06a9\u0644\u06cc\u062f\u06cc \u0631\u0647\u0628\u0631\u06cc \u2014 \u0647\u0631 \u062a\u0635\u0645\u06cc\u0645 \u0628\u0647 \u0635\u0648\u0631\u062a \u0628\u06cc\u0627\u0646\u06cc\u0647 \u0627\u0639\u0644\u0627\u0645 \u0648 \u06a9\u0634\u0648\u0631\u0647\u0627 \u0648\u0627\u06a9\u0646\u0634 \u0646\u0634\u0627\u0646 \u0645\u06cc\u200c\u062f\u0647\u0646\u062f:")
+    for k2, (kk, lab) in enumerate(items, 1):
+        print(f"   [{k2}] {lab} ({kk})")
+    print("   [0] \u0628\u0627\u0632\u06af\u0634\u062a")
+    raw = input(" \u06a9\u062f\u0627\u0645\u061f ").strip()
+    if raw.isdigit() and 1 <= int(raw) <= len(items):
+        main(["decide", items[int(raw) - 1][0]])
+
+
 def play():
     """حالت تعاملی منو‌محور: همه کارها با شماره‌ها انجام می‌شود."""
     if not os.path.exists(STATE):
@@ -2428,6 +2943,7 @@ def play():
     dash_names = {"1": "dom", "2": "dip", "3": "ops", "4": "mil", "5": "eco", "6": "org"}
     bar_menu = ("[1]📊 وضعیت [2]📋 داشبورد [3]🤝 دیپلماسی [4]🪖 ارتش/هسته‌ای [5]🕶 عملیات پنهان "
                 "[6]💰 اقتصاد [7]🛒 بازار تجهیزات [8]🏛 نهادها [9]📁 پرونده کشور [10]🏆 رتبه "
+                "[12]🤝 مذاکره [13]🧠 تصمیم کلیدی "
                 "[0]🌙 پایان روز [خ] خروج")
     while True:
         try:
@@ -2503,6 +3019,10 @@ def play():
                 main(["end"])
             elif line == "11":
                 main(["help"])
+            elif line == "12":
+                negotiate_menu(s)
+            elif line == "13":
+                decide_menu(s)
             else:
                 main(line.split())
             s = load()
