@@ -469,7 +469,7 @@ def init_game(player):
     elif player in US_PACT:
         allies0 = ["آمریکا"]
     state = dict(
-        player=player, year=START_YEAR, turn=1, ap=2, over=False,
+        player=player, year=START_YEAR, turn=1, ap="\u221e", over=False,
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
@@ -796,9 +796,6 @@ def do_act(s, args):
     if s["over"]:
         print("بازی تمام شده. با `reset` بازی جدید بساز.")
         return
-    if s["ap"] <= 0:
-        print("⚠ فرصت این نوبت تمام شده. با `end` نوبت را ببند.")
-        return
     if len(args) < 1:
         print(HELP)
         return
@@ -826,9 +823,7 @@ def do_act(s, args):
         return True
 
     def spend_turn():
-        s["ap"] -= 1
         save(s)
-        print(f"فرصت باقی‌مانده در این نوبت: {s['ap']}")
 
     if action == "eco":
         if not pay(4): return
@@ -1513,7 +1508,7 @@ def end_turn(s):
     s["turn_events"] = {}
 
     # ۸) شمارش روز و گزارش
-    s["ap"] = 2
+    s["ap"] = "\u221e"
     s["day"] += 1
     year_report = s["day"] > DAYS_PER_YEAR
     if year_report:
@@ -1585,7 +1580,7 @@ def end_turn(s):
         if year_report:
             print(f"سال {s['year']} آغاز شد — روز ۱.")
         else:
-            print(f"روز {s['day']} از ماه {s['turn']} — فرصت‌های امروز: 2")
+            print(f"روز {s['day']} از ماه {s['turn']} — فرصت‌های امروز: ∞ (نامحدود)")
         print()
 
 def _snapshot_clear():
@@ -1628,7 +1623,7 @@ def check_victory(s):
 def show_status(s):
     W = s["world"]; P = s["player"]; me = W[P]
     print("═" * 56)
-    print(f"  سال {s['year']} | روز {s.get('day', 1)} از {DAYS_PER_YEAR} | فرصت امروز: {s['ap']}")
+    print(f"  سال {s['year']} | روز {s.get('day', 1)} از {DAYS_PER_YEAR} | فرصت امروز: ∞ (نامحدود)")
     if s["over"]: print("  ‼ بازی به پایان رسیده — `reset` برای شروع دوباره")
     print("═" * 56)
     if s["player"] in s["eliminated"]:
