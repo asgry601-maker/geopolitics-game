@@ -24,8 +24,16 @@ button.primary { background: #2456a8; border-color: #3a77d0; }
 button.warn { background: #7a2430; border-color: #a03a45; }
 select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px solid #2c3f66;
   border-radius: 8px; padding: 5px 8px; font-family: Tahoma; font-size: 13px; max-width: 220px; }
-#panel { flex: 0 0 380px; overflow-y: auto; background: #0b1220; border-right: 2px solid #1c2a45;
-  padding: 12px; direction: rtl; }
+:root { --panelw: 380px; }
+#panel { flex: 0 0 var(--panelw); width: var(--panelw); overflow-y: auto; background: #0b1220;
+  border-right: 2px solid #1c2a45; padding: 12px; direction: rtl;
+  transition: margin-right .3s ease; }
+#panel.closed { margin-right: calc(-1 * var(--panelw)); }
+#panelToggle { position: fixed; top: 50%; right: calc(var(--panelw) + 2px); z-index: 20;
+  width: 30px; height: 48px; padding: 0; border-radius: 10px 0 0 10px; border-right: none;
+  border-left: 1px solid #2c3f66; font-size: 15px; line-height: 44px; text-align: center;
+  transition: right .3s ease; }
+#panelToggle.closed { right: 4px; border-radius: 10px; }
 #panel h2 { margin: 4px 0 2px; font-size: 16px; color: #ffd479; }
 #panel h3 { margin: 12px 0 4px; font-size: 13px; color: #7fb6ff; border-bottom: 1px solid #1c2a45;
   padding-bottom: 3px; }
@@ -46,7 +54,7 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 #engineMsg { white-space: pre-wrap; background: #0e1626; border: 1px solid #1c2a45;
   border-radius: 8px; padding: 8px; max-height: 160px; overflow-y: auto; font-size: 12px;
   display: none; }
-@media (max-width: 900px) { #panel { flex-basis: 46%; } }
+@media (max-width: 900px) { :root { --panelw: 46vw; } }
 </style>
 </head>
 <body>
@@ -72,6 +80,7 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
       <div id="worldChips" class="small">—</div>
     </div>
   </div>
+  <button id="panelToggle" title="باز و بسته کردن پنل">❯</button>
   <div id="mapArea">
     <div id="topbar">
       <div class="box">
@@ -86,6 +95,7 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
     </div>
     <div id="globe"></div>
     <div id="fps">FPS: —</div>
+    <div id="engineMsg" style="display:none"></div>
   </div>
 </div>
 <script src="lib/three.min.js"></script>

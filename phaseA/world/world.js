@@ -2,6 +2,17 @@
    محدود سخت‌افزار: antialias خاموش، pixelRatio ≤ 1.5، بافت پیش‌فرض سبک تیره */
 'use strict';
 
+/* ثبت سراسری خطاهای JS — نمایش علت واقعی به‌جای پیام خاموش (ES5) */
+window.onerror = function (msg, src, line) {
+  try {
+    var d = document.getElementById('engineMsg');
+    if (d) {
+      d.style.display = 'block';
+      d.textContent = 'خطای جاوااسکریپت: ' + String(msg) + ' — خط ' + line;
+    }
+  } catch (e) { /* محافظت */ }
+};
+
 /* ---------- حالت عمومی ---------- */
 var MAP = null;       // fa -> {en, iso3, ne, lat, lon}
 var FEATS = null;     // geojson features
@@ -143,8 +154,8 @@ function getJSON(url, cb, errCb) {
     if (x.readyState !== 4) return;
     try {
       if (x.status >= 200 && x.status < 300) cb(JSON.parse(x.responseText));
-      else if (errCb) errCb(x.status);
-    } catch (e) { if (errCb) errCb(e); }
+      else if (errCb) errCb(x.status, x.responseText);
+    } catch (e) { if (errCb) errCb(e && e.message ? e.message : String(e), null); }
   };
   x.send();
 }
@@ -157,10 +168,22 @@ function postJSON(url, obj, cb, errCb) {
     if (x.readyState !== 4) return;
     try {
       if (x.status >= 200 && x.status < 300) cb(JSON.parse(x.responseText));
-      else if (errCb) errCb(x.status);
-    } catch (e) { if (errCb) errCb(e); }
+      else if (errCb) errCb(x.status, x.responseText);
+    } catch (e) { if (errCb) errCb(e && e.message ? e.message : String(e), null); }
   };
   x.send(JSON.stringify(obj));
+}
+
+/* ---------- پیام خطای دقیق شبکه/سرور ---------- */
+function netErrMsg(status, text) {
+  if (text) {
+    try {
+      var r = JSON.parse(text);
+      if (r && r.error) return '\u062e\u0637\u0627: ' + r.error;
+    } catch (e) { /* پاسخ JSON نبود */ }
+  }
+  if (status && status > 0) return '\u062e\u0637\u0627\u06cc \u0633\u0631\u0648\u0631 (\u06a9\u062f ' + status + ')';
+  return '\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0633\u0631\u0648\u0631 \u0628\u0631\u0642\u0631\u0627\u0631 \u0646\u0634\u062f (\u0627\u062d\u062a\u0645\u0627\u0644\u0627\u064b \u0633\u0631\u0648\u0631 \u0627\u062c\u0631\u0627 \u0646\u06cc\u0633\u062a \u06cc\u0627 \u067e\u0627\u0633\u062e \u0642\u0637\u0639 \u0634\u062f)';
 }
 
 /* ---------- بارگذاری داده ---------- */
@@ -192,7 +215,7 @@ function loadState(after) {
     refreshPolygons();
     if (ST && SELECTED) selectCountry(SELECTED, true);
     if (after) after();
-  }, function () { flash('خطا در دریافت وضعیت بازی.'); });
+  }, function (st, tx) { flash(netErrMsg(st, tx) + ' — وضعیت بازی دریافت نشد.'); });
 }
 
 /* ---------- پنل‌ها ---------- */
@@ -203,6 +226,39 @@ function flash(text) {
   d.style.display = 'block';
   d.textContent = text;
 }
+
+/* ---------- پنل کشویی سمت راست (ES5) ---------- */
+var PANEL_CLS = 'closed';
+
+function panelIsClosed() {
+  var pnl = el('panel');
+  return !!pnl && (' ' + (pnl.className || '') + ' ').indexOf(' ' + PANEL_CLS + ' ') >= 0;
+}
+
+/* پس از تغییر عرض پنل، ابعاد کره تازه می‌شود (فضای بیشتر برای کره هنگام بسته بودن) */
+function syncGlobeSize() {
+  if (!globe) return;
+  try {
+    var a = el('mapArea');
+    globe.width(a.clientWidth); globe.height(a.clientHeight);
+  } catch (e) { /* محافظت */ }
+}
+
+/* باز/بسته کردن پنل + فلش جهت حرکت بعدی — انیمیشن فقط با CSS (سبک) */
+function setPanel(open) {
+  var pnl = el('panel'), b = el('panelToggle');
+  if (!pnl) return;
+  pnl.className = open ? '' : PANEL_CLS;
+  if (b) {
+    b.className = open ? '' : PANEL_CLS;
+    b.textContent = open ? '\u276f' : '\u276e';
+  }
+  syncGlobeSize();
+  setTimeout(syncGlobeSize, 340);   /* پس از پایان انیمیشن 0.3 ثانیه‌ای */
+}
+
+function openPanel() { setPanel(true); }
+function togglePanel() { setPanel(panelIsClosed()); }
 
 function barHtml(label, v, cls) {
   var w = Math.max(0, Math.min(100, v));
@@ -260,6 +316,7 @@ function renderStartWidget() {
 
 function selectCountry(fa, silent) {
   SELECTED = fa;
+  openPanel();   /* کلیک کشور → پنل کشویی باز شود؛ playerCountry بدون تغییر می‌ماند */
   /* سینک یک‌طرفه نقشه ← پنل: دراپ‌داون راست روی همان کشور قرار می‌گیرد */
   var sel = el('startCountry');
   if (sel && MAP && MAP[fa]) sel.value = fa;
@@ -276,8 +333,14 @@ function renderCountryPanel(r) {
   el('idleInfo').style.display = 'none';
   box.style.display = 'block';
   var h = '';
+  var isPlayer = !!(ST && ST.player === r.name);   /* playerCountry مستقل از SELECTED */
   h += '<h2>' + r.name + '</h2>';
   h += '<div class="muted small">' + (r.en || '') + ' · ' + (r.iso3 || '') + '</div>';
+  h += '<div style="margin:4px 0">' + (isPlayer
+      ? '<span class="badge" style="color:#ffd166">🏰 کشور شما — کنترل کامل</span>'
+      : '<span class="badge">👥 حالت مشاهده — کشور شما: '
+         + (ST ? ST.player : '—') + '</span>')
+    + '</div>';
   h += '<div>';
   for (var i = 0; i < r.tags.length; i++) h += '<span class="badge">' + r.tags[i] + '</span>';
   h += '</div>';
@@ -294,7 +357,7 @@ function renderCountryPanel(r) {
   h += '<div class="row"><span class="muted">خزانه</span><span>' + r.money.toFixed(0) + ' میلیارد</span></div>';
   h += '<div class="row"><span class="muted">نفوذ</span><span>' + r.influence.toFixed(0) + '</span></div>';
   h += '<div class="row"><span class="muted">کلاهک هسته\u200cای ☢</span><span>' + r.nukes + '</span></div>';
-  if (r.rel != null) {
+  if (r.rel != null && ST) {
     h += '<h3>🤝 رابطه با شما (' + ST.player + ')</h3>';
     h += barHtml('رابطه', r.rel, r.rel < 0 ? 'bad' : '');
   }
@@ -331,6 +394,11 @@ function renderCountryPanel(r) {
   if (r.press && r.press.length) {
     h += '<h3>📰 آخرین اخبار داخلی</h3>';
     for (var n = 0; n < r.press.length; n++) h += '<div class="press">' + r.press[n] + '</div>';
+  }
+  if (!isPlayer && ST) {
+    h += '<div class="press" style="margin-top:10px">ℹ️ کنترل شما همچنان «'
+      + ST.player + '» است؛ این پنل فقط اطلاعات «' + r.name
+      + '» را نشان می‌دهد. برای تغییر کشور زیر کنترل از «شروع بازی جدید» استفاده کنید.</div>';
   }
   box.innerHTML = h;
 }
@@ -391,7 +459,7 @@ function startGame(confirmed) {
     if (MAP[c] && MAP[c].lat != null) {
       globe.pointOfView({ lat: MAP[c].lat, lng: MAP[c].lon, altitude: 1.9 }, 900);
     }
-  }, function () { el('startErr').textContent = 'خطای شبکه'; });
+  }, function (st, tx) { el('startErr').textContent = netErrMsg(st, tx); });
 }
 
 /* ---------- نوار بالا ---------- */
@@ -423,6 +491,8 @@ function bindToolbar() {
     this.textContent = (TEX === 'img/earth-dark.jpg') ? '🖼 بافت: تیره' : '🖼 بافت: واقعی';
   };
   el('btnEnd').onclick = endDay;
+  var tb = el('panelToggle');
+  if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
   el('btnStart').onclick = function () { startGame(false); };
 }
 
@@ -443,3 +513,4 @@ function startFps() {
 
 boot();
 bindToolbar();
+setPanel(false);   /* پنل کشویی پیش‌فرض بسته است */

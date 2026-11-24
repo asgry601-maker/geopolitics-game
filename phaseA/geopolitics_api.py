@@ -19,6 +19,8 @@ import sys
 import threading
 import webbrowser
 import contextlib
+import datetime
+import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -70,6 +72,14 @@ _cache = {"mtime": -1.0, "state": None}
 _lock = threading.Lock()
 
 
+def _log_exc(msg):
+    """ثبت خطای کامل در stderr (کنسول سرور) با تاریخ و ساعت."""
+    sys.stderr.write("[%s] %s\n%s" % (
+        datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        msg, traceback.format_exc()))
+    sys.stderr.flush()
+
+
 def get_state(force=False):
     with _lock:
         try:
@@ -78,7 +88,14 @@ def get_state(force=False):
             _cache["mtime"], _cache["state"] = -1.0, None
             return None
         if force or mt != _cache["mtime"] or _cache["state"] is None:
-            _cache["state"] = G.load()
+            try:
+                _cache["state"] = G.load()
+            except Exception:
+                # ذخیره خراب/ناسازگار → سرور هرگز نمی‌میرد؛ state خالی گزارش می‌شود
+                _cache["state"] = None
+                _cache["mtime"] = mt
+                _log_exc("خواندن game_state.json شکست خورد")
+                return None
             _cache["mtime"] = mt
         return dict(_cache["state"])
 
@@ -276,7 +293,9 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", ctype)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
+        self.send_header("Connection", "close")
         self.end_headers()
+        self.close_connection = True
         try:
             self.wfile.write(body)
         except (BrokenPipeError, ConnectionResetError):
@@ -295,7 +314,7 @@ class Handler(BaseHTTPRequestHandler):
             data = f.read()
         self._send(200, data, CTYPES.get(ext, "application/octet-stream"))
 
-    def do_GET(self):
+    def _do_get(self):
         u = urlparse(self.path)
         path = u.path.lstrip("/")
         if path == "api/state":
@@ -316,7 +335,7 @@ class Handler(BaseHTTPRequestHandler):
             # صفحه اصلی — تجربی: مسیرهای دیگر به صفحه اصلی برمی‌گردند (SPA ساده)
             self._serve_static("")
 
-    def do_POST(self):
+    def _do_post(self):
         u = urlparse(self.path)
         path = u.path.lstrip("/")
         try:
@@ -373,6 +392,29 @@ class Handler(BaseHTTPRequestHandler):
             self._json(api_chat(s, body))
         else:
             self._json(dict(ok=False, error="endpoint نامعتبر"), 404)
+
+    # ---------------------------------------------------------------- catch-all:
+    # هیچ استثنایی هرگز نباید اتصال را بدون پاسخ ببندد؛ وگرنه مرورگر status=0
+    # می‌بیند و فقط «خطای شبکه» عمومی نمایش داده می‌شود.
+    def do_GET(self):
+        try:
+            self._do_get()
+        except Exception:  # noqa: BLE001
+            self._fatal("GET")
+
+    def do_POST(self):
+        try:
+            self._do_post()
+        except Exception:  # noqa: BLE001
+            self._fatal("POST")
+
+    def _fatal(self, what):
+        _log_exc("خطای داخلی سرور در " + what)
+        try:
+            self._json(dict(ok=False,
+                            error="خطای داخلی سرور — جزئیات کامل در کنسول سرور ثبت شد"), 500)
+        except Exception:  # noqa: BLE001 — پاسخ قبلاً ارسال شده؛ فقط لاگ
+            pass
 
 
 def main():
