@@ -1,4 +1,4 @@
-/* فاز A — کره سه‌بعدی ژئوپولیتیک (three.js r126 + globe.gl 2.21.0 — فقط WebGL 1)
+/* فاز A — کره سه‌بعدی ژئوپولیتیک (three.js r126 + globe.gl 2.21.1 — فقط WebGL 1)
    محدود سخت‌افزار: antialias خاموش، pixelRatio ≤ 1.5، بافت پیش‌فرض سبک تیره */
 'use strict';
 
@@ -98,7 +98,7 @@ function initGlobe() {
     .labelsData([])
     .labelLat(function (d) { return d.lat; })
     .labelLng(function (d) { return d.lon; })
-    .labelText(function (d) { return d.fa; })
+    .labelText(function (d) { return d.en; })   /* نام لاتین روی سطح کره (فونت تعبیه‌شده globe.gl فقط لاتین دارد) */
     .labelSize(0.45)
     .labelDotRadius(function (d) { return d.point ? 0.28 : 0; })
     .labelColor(function (d) { return (d.fa === SELECTED) ? '#ffd166' : '#e8eef8'; })
@@ -130,7 +130,7 @@ function labelsList() {
   if (!MAP) return out;
   for (var fa in MAP) {
     var m = MAP[fa];
-    out.push({ fa: fa, lat: m.lat, lon: m.lon, point: !m.ne });
+    out.push({ fa: fa, en: m.en || fa, lat: m.lat, lon: m.lon, point: !m.ne });
   }
   return out;
 }
@@ -229,8 +229,7 @@ function renderWorldChips() {
 
 function renderStartWidget() {
   var banner = el('banner');
-  if (ST) { banner.style.display = 'none'; return; }
-  banner.style.display = 'block';
+  banner.style.display = 'block';   /* همیشه نمایان: هم شروع اول، هم شروع بازی جدید */
   var sel = el('startCountry');
   if (sel.options.length === 0 && MAP) {
     var names = Object.keys(MAP);
@@ -242,11 +241,29 @@ function renderStartWidget() {
       sel.appendChild(o);
     }
   }
+  if (SELECTED && MAP && MAP[SELECTED]) sel.value = SELECTED;  /* سینک با انتخاب نقشه */
+  /* اتصال دوطرفه: تغییر فهرست راست ← انتخاب روی نقشه + پنل */
+  sel.onchange = function () { if (this.value) selectCountry(this.value); };
+  /* توضیح بنر بسته به وضعیت بازی */
+  var note = banner.querySelector('p');
+  if (note) {
+    if (ST) {
+      note.textContent = '\u26a0\ufe0f \u0628\u0627\u0632\u06cc \u00ab' + ST.player +
+        '\u00bb \u062f\u0631 \u062c\u0631\u06cc\u0627\u0646 \u0627\u0633\u062a. '
+        + '\u0628\u0627\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u0628\u0627\u0632\u06cc \u062c\u062f\u06cc\u062f\u060c \u06a9\u0634\u0648\u0631 \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u061b '
+        + '\u067e\u06cc\u0634 \u0627\u0632 \u062d\u0630\u0641\u060c \u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u06cc \u0627\u0632 \u0630\u062e\u06cc\u0631\u0647 \u0641\u0639\u0644\u06cc \u06af\u0631\u0641\u062a\u0647 \u0645\u06cc\u200c\u0634\u0648\u062f (game_state.json.bak).';
+    } else {
+      note.textContent = '\u0628\u0627\u0632\u06cc\u200c\u0627\u06cc \u062f\u0631 \u062c\u0631\u06cc\u0627\u0646 \u0646\u06cc\u0633\u062a. \u06a9\u0634\u0648\u0631 \u062e\u0648\u062f \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u0648 \u0628\u0627\u0632\u06cc \u0631\u0627 \u0622\u063a\u0627\u0632 \u06a9\u0646.';
+    }
+  }
 }
 
 function selectCountry(fa, silent) {
   SELECTED = fa;
-  refreshPolygons();
+  /* سینک یک‌طرفه نقشه ← پنل: دراپ‌داون راست روی همان کشور قرار می‌گیرد */
+  var sel = el('startCountry');
+  if (sel && MAP && MAP[fa]) sel.value = fa;
+  refreshPolygons();   /* رنگ/ارتفاع نشانگر انتخابی روی نقشه */
   getJSON('api/country?name=' + encodeURIComponent(fa), function (r) {
     if (!r.ok) { flash(r.error || 'خطا'); return; }
     renderCountryPanel(r);
@@ -327,18 +344,51 @@ function endDay() {
   }, function () { flash('خطا در پایان دور.'); });
 }
 
-function startGame() {
+/* پنجره تأیید شروع بازی جدید — دو دکمه: «🆕 شروع بازی جدید» / «انصراف» */
+function confirmBox(onYes) {
+  var ovl = document.createElement('div');
+  ovl.style.cssText = 'position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.6);'
+    + 'z-index:50;display:flex;align-items:center;justify-content:center;direction:rtl;';
+  var box = document.createElement('div');
+  box.style.cssText = 'background:#0e1626;border:1px solid #3a77d0;border-radius:12px;'
+    + 'padding:18px;max-width:420px;font-family:Tahoma;';
+  box.innerHTML = '<b>🆕 شروع بازی جدید</b><p class="small" style="color:#ffd479;margin:8px 0"></p>'
+    + '<div class="small muted" style="margin-bottom:10px">💾 از ذخیرهٔ کنونی پشتیبان گرفته می‌شود: game_state.json.bak</div>'
+    + '<div style="display:flex;gap:8px">'
+    + '<button class="warn" style="background:#7a2430;border-color:#a03a45">🆕 شروع بازی جدید</button>'
+    + '<button style="background:#16233d;border-color:#2c3f66">انصراف</button></div>';
+  box.querySelector('p').textContent = ST
+    ? ('بازی «' + ST.player + '» در جریان است. با شروع بازی جدید، ذخیرهٔ کنونی حذف و با بازی جدید جایگزین می‌شود (پشتیبان .bak حفظ می‌شود).')
+    : '';
+  var btns = box.querySelectorAll('button');
+  btns[1].onclick = function () { document.body.removeChild(ovl); };   /* انصراف — هیچی نمی‌کند */
+  btns[0].onclick = function () { document.body.removeChild(ovl); onYes(); };
+  ovl.appendChild(box);
+  document.body.appendChild(ovl);
+}
+
+function startGame(confirmed) {
   var sel = el('startCountry');
   var c = sel.value;
+  if (!c) { flash('برای شروع، ابتدا کشور را انتخاب کن.'); return; }
   el('startErr').textContent = '';
-  postJSON('api/init', { country: c }, function (r) {
-    if (!r.ok) { el('startErr').textContent = r.error || 'خطا'; return; }
+  /* بازی فعال = تأیید الزامی؛ بدون بازی فعال = شروع مستقیم بدون تأیید اضافی */
+  if (confirmed !== true && ST) {
+    confirmBox(function () { startGame(true); });
+    return;
+  }
+  var payload = { country: c };
+  if (confirmed === true) payload.confirm = 'بله';
+  postJSON('api/init', payload, function (r) {
+    if (!r.ok) {
+      if (r.needConfirm) { confirmBox(function () { startGame(true); }); return; }
+      el('startErr').textContent = r.error || 'خطا';
+      return;
+    }
     flash(r.out || 'بازی آغاز شد!');
-    SELECTED = null;
-    el('countryInfo').style.display = 'none';
-    el('idleInfo').style.display = 'block';
-    loadState();
-    if (ST && MAP[c] && MAP[c].lat != null) {
+    SELECTED = c;                      /* داشبورد کشور انتخاب‌شده پس از شروع */
+    loadState();                       /* loadState خودش SELECTED را به پنل می‌راند */
+    if (MAP[c] && MAP[c].lat != null) {
       globe.pointOfView({ lat: MAP[c].lat, lng: MAP[c].lon, altitude: 1.9 }, 900);
     }
   }, function () { el('startErr').textContent = 'خطای شبکه'; });
@@ -373,7 +423,7 @@ function bindToolbar() {
     this.textContent = (TEX === 'img/earth-dark.jpg') ? '🖼 بافت: تیره' : '🖼 بافت: واقعی';
   };
   el('btnEnd').onclick = endDay;
-  el('btnStart').onclick = startGame;
+  el('btnStart').onclick = function () { startGame(false); };
 }
 
 /* ---------- شمارنده FPS ---------- */

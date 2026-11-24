@@ -14,6 +14,7 @@
 import io
 import json
 import os
+import shutil
 import sys
 import threading
 import webbrowser
@@ -327,15 +328,37 @@ class Handler(BaseHTTPRequestHandler):
             return
         s = get_state()
         if path == "api/init":
-            if s is not None:
-                self._json(dict(ok=False, error="بازی در جریان است. برای بازی جدید از نسخه وب متن استفاده کن."))
-                return
             country = str(body.get("country", "")).strip()
             if not country:
-                self._json(dict(ok=False, error="نام کشور را بفرست."))
+                self._json(dict(ok=False, error="\u0646\u0627\u0645 \u06a9\u0634\u0648\u0631 \u0631\u0627 \u0628\u0641\u0631\u0633\u062a."))
                 return
-            res = run_engine(["init", country])
+            if s is not None:
+                # \u0628\u0627\u0632\u06cc \u0641\u0639\u0627\u0644 \u062f\u0627\u0631\u062f \u2014 \u0628\u062f\u0648\u0646 \u062a\u0623\u06cc\u06cc\u062f \u0635\u0631\u06cc\u062d \u06a9\u0627\u0631\u0628\u0631 \u0647\u06cc\u0686 reset \u0627\u0646\u062c\u0627\u0645 \u0646\u0645\u06cc\u200c\u0634\u0648\u062f
+                if str(body.get("confirm", "")) != "\u0628\u0644\u0647":
+                    self._json(dict(ok=False, needConfirm=True,
+                                    error="\u0628\u0627\u0632\u06cc \u062f\u0631 \u062c\u0631\u06cc\u0627\u0646 \u0627\u0633\u062a. "
+                                          "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u0628\u0627\u0632\u06cc \u062c\u062f\u06cc\u062f\u060c \u062f\u0631 \u067e\u0646\u062c\u0631\u0647 \u062a\u0623\u06cc\u06cc\u062f "
+                                          "\u062f\u06a9\u0645\u0647 \u00ab\u0634\u0631\u0648\u0639 \u0628\u0627\u0632\u06cc \u062c\u062f\u06cc\u062f\u00bb \u0631\u0627 \u0628\u0632\u0646."))
+                    return
+                # \u062d\u0641\u0627\u0638 \u0627\u0632 \u0630\u062e\u06cc\u0631\u0647: \u067e\u0634\u062a\u06cc\u0628\u0627\u0646 game_state.json \u2190 .bak \u0642\u0628\u0644 \u0627\u0632 \u0647\u0631 reset
+                bak = STATE + ".bak"
+                try:
+                    shutil.copyfile(STATE, bak)
+                except OSError as e:
+                    self._json(dict(ok=False,
+                                    error="\u067e\u0634\u062a\u06cc\u0628\u0627\u0646\u200c\u06af\u06cc\u0631\u06cc \u0630\u062e\u06cc\u0631\u0647 \u0642\u0628\u0644\u06cc "
+                                          "\u0646\u0627\u0645\u0648\u0641\u0642 \u0628\u0648\u062f\u061b reset \u0627\u0646\u062c\u0627\u0645 \u0646\u0634\u062f: %s" % e))
+                    return
+                res = run_engine(["reset", country])
+                res["backup"] = bak
+                res["out"] = ((res.get("out") or "") + "\n" if res.get("out") else "") + (
+                    "\U0001f4be \u0627\u0632 \u0630\u062e\u06cc\u0631\u0647 \u06a9\u0646\u0648\u0646\u06cc "
+                    "\u067e\u0634\u062a\u06cc\u0628\u0627\u0646 \u06af\u0631\u0641\u062a\u0647 \u0634\u062f: game_state.json.bak")
+            else:
+                # \u0628\u062f\u0648\u0646 \u0628\u0627\u0632\u06cc \u0641\u0639\u0627\u0644 \u2014 \u0634\u0631\u0648\u0639 \u0645\u0633\u062a\u0642\u06cc\u0645 \u0648 \u0628\u062f\u0648\u0646 \u062a\u0623\u06cc\u06cc\u062f \u0627\u0636\u0627\u0641\u06cc
+                res = run_engine(["init", country])
             self._json(dict(res, state=api_state(get_state(True))))
+            return
         elif path == "api/act":
             if s is None:
                 self._json(dict(ok=False, error="بازی\u200cای ساخته نشده."))
