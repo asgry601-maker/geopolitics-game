@@ -103,6 +103,7 @@ function initGlobe() {
       return (SELECTED && f._fa === SELECTED) ? 0.055 : 0.012;
     })
     .onPolygonClick(function (f) {
+      if (PROV.taken && (Date.now() - PROV.taken) < 350) return;   /* کلیک متعلق به استان بود */
       if (f._fa == null) { flash('این سرزمین در بازی حضور ندارد.'); return; }
       selectCountry(f._fa);
     })
@@ -316,6 +317,7 @@ function renderStartWidget() {
 
 function selectCountry(fa, silent) {
   SELECTED = fa;
+  provOnCountryChange();   /* B2: مرز استان‌های کشور جدید؛ playerCountry مستقل می‌ماند */
   openPanel();   /* کلیک کشور → پنل کشویی باز شود؛ playerCountry بدون تغییر می‌ماند */
   /* سینک یک‌طرفه نقشه ← پنل: دراپ‌داون راست روی همان کشور قرار می‌گیرد */
   var sel = el('startCountry');
@@ -329,6 +331,7 @@ function selectCountry(fa, silent) {
 }
 
 function renderCountryPanel(r) {
+  LAST_COUNTRY_R = r;   /* B2: برای رندر مجدد پنل پس از انتخاب استان */
   var box = el('countryInfo');
   el('idleInfo').style.display = 'none';
   box.style.display = 'block';
@@ -400,7 +403,333 @@ function renderCountryPanel(r) {
       + ST.player + '» است؛ این پنل فقط اطلاعات «' + r.name
       + '» را نشان می‌دهد. برای تغییر کشور زیر کنترل از «شروع بازی جدید» استفاده کنید.</div>';
   }
+  h += provPanelHtml();   /* B2: بخش استان (اگر استان‌ای انتخاب شده باشد) */
   box.innerHTML = h;
+  provAfterPanel();       /* B2: اتصال دکمه رفع انتخاب استان */
+}
+
+/* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
+var LAST_COUNTRY_R = null;   /* آخرین داده پنل کشور — برای رندر مجدد پنل پس از انتخاب استان */
+var PROV = {
+  on: true,            /* نمایش مرز استان‌ها روشن/خاموش */
+  idx: null,           /* index.json — تنها منبع شناسایی فایل کشورها (پرلازی) */
+  cache: {},           /* ایزو۳ ⇒ FeatureCollection — لزی‑لودینگ + کش حافظه */
+  iso: null,           /* کشوری که مرز استان‌هایش هم‌اکنون روی کره است */
+  sel: null,           /* استان انتخاب‌شده (یک feature) */
+  layerObj: null,      /* گروه THREE الحاقی به صحنه (مرز انتخاب‌شده) */
+  linesMesh: null, step: null, taken: 0
+};
+
+function provIso(fa) {
+  if (!MAP || !MAP[fa] || !PROV.idx || !PROV.idx.countries) return null;
+  var iso = MAP[fa].iso3;
+  if (!iso || !PROV.idx.countries[iso]) return null;   /* بدون داده استان = بدون لایه */
+  return iso;
+}
+
+function provName(p) {
+  var pp = (p && p.properties) || p || {};
+  if (pp.country === 'IRN' && pp.name_fa) return pp.name_fa;   /* ایران = فارسی (داده موجود) */
+  return pp.name_en || pp.name_fa || pp.id || '—';
+}
+
+/* حلقه‌های بیرونی استان‌ها (حفره‌ها رسم نمی‌شوند — خوانایی مرز) + undo آنتی‌مریدین */
+function provRings(gj, wantTouched) {
+  var rings = [];
+  var fs = (gj && gj.features) || [];
+  for (var i = 0; i < fs.length; i++) {
+    var g = fs[i] && fs[i].geometry;
+    if (!g || !g.coordinates) continue;
+    var polys = (g.type === 'Polygon') ? [g.coordinates] :
+                (g.type === 'MultiPolygon') ? g.coordinates : [];
+    for (var p = 0; p < polys.length; p++) {
+      var ring = polys[p] && polys[p][0];
+      if (!ring || ring.length < 4) continue;
+      /* انتقال پیوسته طول جغرافیایی (خط عرض جغرافیایی مورب روی خط تاریخ امن می‌شود) */
+      var out = [], off = 0, prev = null;
+      for (var k = 0; k < ring.length; k++) {
+        var lng = ring[k][0], lat = ring[k][1];
+        if (prev != null) {
+          while (lng + off - prev > 180) off -= 360;
+          while (lng + off - prev < -180) off += 360;
+        }
+        prev = lng + off;
+        out.push([lat, lng + off]);
+      }
+      rings.push(out);
+    }
+  }
+  return rings;
+}
+
+function provOneRings(f, wantTouched) { return provRings({ features: [f] }, wantTouched); }
+
+/* PIP — آزمون نقطه‌درون استاندارد؛ حفره‌ها احترام می‌شود */
+function pipRing(lat, lng, ring) {
+  var inside = false;
+  for (var i = 0, j = ring.length - 1; i < ring.length; j = i, i++) {
+    var xi = ring[i][1], yi = ring[i][0], xj = ring[j][1], yj = ring[j][0];
+    if (((xi > lat) !== (xj > lat)) && (lng < (yj - yi) * (lat - xi) / (xj - xi) + yi)) inside = !inside;
+  }
+  return inside;
+}
+
+function provHit(lat, lng, f) {
+  var g = f && f.geometry;
+  if (!g || !g.coordinates) return false;
+  var polys = (g.type === 'Polygon') ? [g.coordinates] :
+              (g.type === 'MultiPolygon') ? g.coordinates : [];
+  for (var p = 0; p < polys.length; p++) {
+    if (!polys[p] || !polys[p][0]) continue;
+    if (!pipRing(lat, lng, polys[p][0])) continue;
+    var hole = false;
+    for (var hh = 1; hh < polys[p].length; hh++) {
+      if (polys[p][hh] && pipRing(lat, lng, polys[p][hh])) { hole = true; break; }
+    }
+    if (!hole) return true;
+  }
+  return false;
+}
+
+/* مساحت کروی تقریبی (داده ساده‌شده) — تنها محاسبه مجاز؛ بدون سکوت داده جعلی */
+function provAreaKm2(f) {
+  var g = f && f.geometry;
+  if (!g || !g.coordinates) return null;
+  var polys = (g.type === 'Polygon') ? [g.coordinates] :
+              (g.type === 'MultiPolygon') ? g.coordinates : [];
+  var total = 0, R = 6371.0;
+  for (var p = 0; p < polys.length; p++) {
+    var ring = polys[p] && polys[p][0];
+    if (!ring || ring.length < 4) continue;
+    var s = 0;
+    for (var i = 0; i < ring.length - 1; i++) {
+      var l1 = ring[i][0] * Math.PI / 180, f1 = ring[i][1] * Math.PI / 180;
+      var l2 = ring[i + 1][0] * Math.PI / 180, f2 = ring[i + 1][1] * Math.PI / 180;
+      s += (l2 - l1) * (2 + Math.sin(f1) + Math.sin(f2));
+    }
+    total += Math.abs(s * R * R / 2);
+  }
+  return total > 0 ? total : null;
+}
+
+function provParts(f) {
+  var g = f && f.geometry;
+  if (!g || !g.coordinates) return 0;
+  if (g.type === 'Polygon') return 1;
+  if (g.type === 'MultiPolygon') return g.coordinates.length;
+  return 0;
+}
+
+function provBuildAlt() {   /* کمی بالاتر از کپ کشوری؛ روی سطح کره نه شناور جدا */
+  return (SELECTED ? 0.055 : 0.012) + 0.004;
+}
+
+function provMakeLines(rings, alt, hex, op) {
+  var pos = [];
+  for (var r = 0; r < rings.length; r++) {
+    var ring = rings[r];
+    for (var k = 0; k < ring.length - 1; k++) {
+      var a = globe.getCoords(ring[k][0], ring[k][1], alt);
+      var b = globe.getCoords(ring[k + 1][0], ring[k + 1][1], alt);
+      pos.push(a.x, a.y, a.z, b.x, b.y, b.z);
+    }
+  }
+  var geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(pos), 3));
+  var mat = new THREE.LineBasicMaterial({ color: hex, transparent: true, opacity: op });
+  return new THREE.LineSegments(geo, mat);
+}
+
+function provDisposeGroup() {
+  var g = PROV.layerObj;
+  if (!g) return;
+  try { globe.scene().remove(g); } catch (e2) { /* محافظت */ }
+  for (var i = 0; i < g.children.length; i++) {
+    var c = g.children[i];
+    if (c && c.geometry && c.geometry.dispose) c.geometry.dispose();
+    if (c && c.material && c.material.dispose) c.material.dispose();
+  }
+  PROV.layerObj = null; PROV.linesMesh = null;
+}
+
+function provShow(iso) {
+  if (!globe || !iso) return;
+  provData(iso, function (gj) {
+    if (!gj || iso !== PROV.iso || !PROV.on) return;   /* تعویض کشور/خاموش‌سازی در حین لود */
+    provDisposeGroup();
+    var rings = provRings(gj);
+    if (!rings.length) return;
+    var grp = new THREE.Group();
+    var seg = provMakeLines(rings, provBuildAlt(), 0x2ee6d6, 0.7);
+    grp.add(seg);
+    PROV.linesMesh = seg;
+    PROV.layerObj = grp;
+    try { globe.scene().add(grp); } catch (e3) { /* محافظت */ }
+  });
+}
+
+function provRefreshSelLine() {
+  var g = PROV.layerObj;
+  if (!g) return;
+  if (PROV.selMesh) {
+    g.remove(PROV.selMesh);
+    PROV.selMesh.geometry.dispose();
+    PROV.selMesh.material.dispose();
+    PROV.selMesh = null;
+  }
+  if (!PROV.sel) return;
+  var rings = provOneRings(PROV.sel);
+  if (!rings.length) return;
+  var sel = provMakeLines(rings, provBuildAlt() + 0.002, 0xff9e2c, 1.0);
+  g.add(sel);
+  PROV.selMesh = sel;
+}
+
+function provData(iso, cb) {       /* Lazy Loading + کش */
+  if (PROV.cache[iso]) { cb(PROV.cache[iso]); return; }
+  getJSON('data/provinces/' + iso + '.json', function (gj) {
+    PROV.cache[iso] = gj;
+    cb(gj);
+  }, function (st, tx) { flash('خطای بارگذاری استان‌های ' + iso + ': ' + netErrMsg(st, tx)); cb(null); });
+}
+
+function provLoadIndex(cb) {
+  if (PROV.idx) { cb(true); return; }
+  getJSON('data/provinces/index.json', function (d) {
+    PROV.idx = d;
+    cb(true);
+  }, function (st, tx) { flash('خطای بارگذاری فهرست استان‌ها: ' + netErrMsg(st, tx)); cb(false); });
+}
+
+function provOnCountryChange() {   /* انتخاب کشور عوض شد ← مرز قدیمی پاک، جدید ساخته */
+  PROV.sel = null;
+  if (!PROV.on) { provDisposeGroup(); PROV.iso = null; return; }
+  provLoadIndex(function (ok) {
+    if (!ok || !SELECTED) return;
+    var iso = provIso(SELECTED);
+    if (iso) { PROV.iso = iso; provShow(iso); }
+    else { provDisposeGroup(); PROV.iso = null; }   /* کشور بدون داده استان */
+  });
+}
+
+function provSelect(ft) {
+  if (ft === PROV.sel) return;
+  PROV.sel = ft;
+  provRefreshSelLine();
+  provRenderPanel();
+}
+
+function provClear() {
+  if (!PROV.sel) return;
+  PROV.sel = null;
+  provRefreshSelLine();
+  provRenderPanel();
+}
+
+function provOff() {   /* خاموش‌سازی کامل لایه */
+  PROV.sel = null;
+  provDisposeGroup();
+  PROV.iso = null;
+  provRenderPanel();
+}
+
+function provPanelHtml() {
+  if (!PROV.sel) return '';
+  var p = PROV.sel.properties || {};
+  var h = '<h3>\ud83d\uddfa اطلاعات استان</h3>';
+  h += '<div class="provBox small">';
+  h += '<div class="row"><span class="muted">نام استان</span><span>' + provName(PROV.sel) + '</span></div>';
+  h += '<div class="row"><span class="muted">کشور</span><span class="small">' + (p.country || SELECTED || '—') + '</span></div>';
+  if (p.name_en && p.country === 'IRN') h += '<div class="row"><span class="muted">نام اصلی</span><span class="small">' + p.name_en + '</span></div>';
+  h += '<div class="row"><span class="muted">شناسه استان</span><span class="small">' + (p.id || '—') + '</span></div>';
+  if (p.iso) h += '<div class="row"><span class="muted">کد رسمی</span><span class="small">' + p.iso + '</span></div>';
+  var parts = provParts(PROV.sel);
+  if (parts > 1) h += '<div class="row"><span class="muted">بخش‌های جغرافیایی</span><span>' + parts + '</span></div>';
+  var ar = provAreaKm2(PROV.sel);
+  if (ar != null) {
+    var arS = (ar >= 10000) ? (Math.round(ar / 1000) + ' هزارنkm²') : Math.round(ar) + ' km²';
+    h += '<div class="row"><span class="muted">مساحت تقریبی</span><span>' + arS + '</span></div>';
+  }
+  h += '<div style="margin-top:6px"><button id="btnProvClear">✖ رفع انتخاب استان</button></div>';
+  h += '</div>';
+  return h;
+}
+
+function provRenderPanel() {
+  if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+}
+
+function provAfterPanel() {
+  var b = document.getElementById('btnProvClear');
+  if (b) b.onclick = function () { provClear(); };
+}
+
+/* کلیک روی استان: raycast کره ساده + آزمون نقطه‌درون — تنها در pointerup کوتاه (غیر درگ) */
+function provBindPointer() {
+  if (!globe) return;
+  var host = document.getElementById('globe');
+  if (!host || !window.addEventListener) return;
+  host.addEventListener('pointerdown', function (e) {
+    PROV.step = { x: e.clientX, y: e.clientY, t: Date.now() };
+  }, true);
+  host.addEventListener('pointerup', function (e) {
+    var s = PROV.step;
+    PROV.step = null;
+    if (!s) return;
+    var drag = Math.abs(e.clientX - s.x) > 4 || Math.abs(e.clientY - s.y) > 4 || (Date.now() - s.t) > 700;
+    if (drag) return;
+    var hit = provPick(e, host);
+    if (hit) {
+      PROV.taken = Date.now();      /* کلیک متعلق به استان است، نه انتخاب کشور */
+      provSelect(hit);
+    } else if (PROV.sel) {
+      provClear();                  /* کلیک بیرون استان‌ها = پاک شدن انتخاب */
+    }
+  }, true);
+}
+
+function provPick(e, host) {
+  if (!PROV.iso || !globe || !globe.camera || !globe.renderer || !globe.toGeoCoords) return null;
+  if (!PROV.cache[PROV.iso]) return null;
+  var cv = globe.renderer().domElement;
+  var w = cv ? cv.clientWidth : host.clientWidth;
+  var hgt = cv ? cv.clientHeight : host.clientHeight;
+  if (!w || !hgt) return null;
+  var cam = globe.camera();
+  var ndx = (e.clientX - host.getBoundingClientRect().left) / w * 2 - 1;
+  var ndy = -((e.clientY - host.getBoundingClientRect().top) / hgt * 2 - 1);
+  var v = new THREE.Vector3(ndx, ndy, 0.5).unproject(cam);
+  var d3 = v.sub(cam.position);
+  var len = Math.sqrt(d3.x * d3.x + d3.y * d3.y + d3.z * d3.z);
+  if (!len) return null;
+  var dx = d3.x / len, dy = d3.y / len, dz = d3.z / len;
+  var ox = cam.position.x, oy = cam.position.y, oz = cam.position.z;
+  var R = 100 * (1 + provBuildAlt());   /* شعاع کلیک ≈ سطح مرز استان */
+  var b = 2 * (ox * dx + oy * dy + oz * dz);
+  var c = (ox * ox + oy * oy + oz * oz) - R * R;
+  var disc = b * b - 4 * c;
+  if (disc <= 0) return null;
+  var t = (-b - Math.sqrt(disc)) / 2;
+  if (t <= 0) return null;
+  var gc = globe.toGeoCoords({ x: ox + t * dx, y: oy + t * dy, z: oz + t * dz });
+  var fs = PROV.cache[PROV.iso].features;
+  for (var i = 0; i < fs.length; i++) {
+    /* شماره‌گذاری طول جغرافیایی در حالت عبور از خط تاریخ: هر سه گزینه آزمون */
+    for (var ww = -1; ww <= 1; ww++) {
+      if (provHit(gc.lat, gc.lng + ww * 360, fs[i])) return fs[i];
+    }
+  }
+  return null;
+}
+
+function provToggleBtn() {
+  var bp = document.getElementById('btnProv');
+  if (bp) bp.onclick = function () {
+    PROV.on = !PROV.on;
+    this.textContent = PROV.on ? '\ud83d\uddfa استان: روشن' : '\ud83d\uddfa استان: خاموش';
+    if (PROV.on) { PROV.iso = null; provOnCountryChange(); }
+    else { provOff(); }
+  };
 }
 
 /* ---------- اقدامات ---------- */
@@ -491,6 +820,7 @@ function bindToolbar() {
     this.textContent = (TEX === 'img/earth-dark.jpg') ? '🖼 بافت: تیره' : '🖼 بافت: واقعی';
   };
   el('btnEnd').onclick = endDay;
+  provToggleBtn();   /* B2: دکمه مرز استان‌ها (اگر در HTML باشد) */
   var tb = el('panelToggle');
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
   el('btnStart').onclick = function () { startGame(false); };
@@ -513,4 +843,5 @@ function startFps() {
 
 boot();
 bindToolbar();
+provBindPointer();   /* B2: کلیک استان — پس از ساخته شدن globe در boot */
 setPanel(false);   /* پنل کشویی پیش‌فرض بسته است */

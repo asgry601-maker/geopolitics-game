@@ -14,6 +14,7 @@
 import io
 import json
 import os
+import re
 import shutil
 import sys
 import threading
@@ -275,6 +276,10 @@ for rel_path, disk in [
 ]:
     STATIC[rel_path] = disk
 
+# فاز B2 — سرو داده‌های استان‌ها (فقط نام‌های تحت الگوی سخت؛ مسیر traversal ممکن نیست)
+PROV_DIR = os.path.join(HERE, "data", "provinces")
+_PROV_RE = re.compile(r"^data/provinces/((?:index|LICENSES|[A-Z]{3})\.json)$")
+
 CTYPES = {
     ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
     ".json": "application/json; charset=utf-8", ".geojson": "application/json; charset=utf-8",
@@ -314,6 +319,16 @@ class Handler(BaseHTTPRequestHandler):
             data = f.read()
         self._send(200, data, CTYPES.get(ext, "application/octet-stream"))
 
+    def _serve_province(self, name):
+        disk = os.path.join(PROV_DIR, name)
+        try:
+            with open(disk, "rb") as f:
+                data = f.read()
+        except OSError:
+            self._json(dict(error="پرونده استان یافت نشد."), 404)
+            return
+        self._send(200, data, "application/json; charset=utf-8")
+
     def _do_get(self):
         u = urlparse(self.path)
         path = u.path.lstrip("/")
@@ -329,6 +344,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(api_country(s, nm))
         elif path == "api/version":
             self._json(dict(ok=True, phase="A", engine=ENGINE_DIR, state=STATE))
+        elif _PROV_RE.match(path):
+            self._serve_province(_PROV_RE.match(path).group(1))
         elif path in STATIC:
             self._serve_static(path)
         else:

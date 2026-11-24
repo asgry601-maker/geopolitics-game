@@ -1,0 +1,1750 @@
+{
+ "source": "geoBoundaries gbOpen ADM1",
+ "upstream": "https://www.geoboundaries.org",
+ "pinned_commit": "9469f09",
+ "fetched": "2026-11-24",
+ "build_tool": "phaseA/tools/build_provinces.py",
+ "note": "مجوز هر کشور اختصاصی است؛ فیلد license از boundaryLicense همان کشور در API geoBoundaries برداشته شده است. share_alike=true یعنی مشتقات این بخش باید تحت همان مجوز منتشر شوند.",
+ "countries": {
+  "FRA": {
+   "license": "Etalab Open License 2.0",
+   "share_alike": false,
+   "source": "Institut national de l'information géographique et forestière (IGN-F)",
+   "source_url": "geoservices.ign.fr/adminexpress",
+   "attribution": "Institut national de l'information géographique et forestière (IGN-F) — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Etalab Open License 2.0",
+   "license_url": "geoservices.ign.fr/sites/default/files/2021-11/IGNF_ADMIN_EXPRESS_3-1.html",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "JAM": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2011"
+  },
+  "HTI": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SDN": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Information Management Working Group (IMWG), OCHA ROSEA",
+   "source_url": "data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2",
+   "attribution": "Information Management Working Group (IMWG), OCHA ROSEA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/sudan-administrative-boundaries-levels-0-2",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "NPL": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Survey Department of Nepal, OCHA FISS",
+   "source_url": "data.humdata.org/dataset/administrative-bounadries-of-nepal",
+   "attribution": "Survey Department of Nepal, OCHA FISS — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/administrative-bounadries-of-nepal",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "SVN": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Eurostat- European Commission",
+   "source_url": "ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts",
+   "attribution": "Eurostat- European Commission — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "ec.europa.eu/info/legal-notice_en",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "VUT": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "IND": {
+   "license": "Creative Commons Attribution 2.5 India (CC BY 2.5 IN)",
+   "share_alike": false,
+   "source": "DataMeet India community, Election Commission of India",
+   "source_url": "github.com/datameet/maps",
+   "attribution": "DataMeet India community, Election Commission of India — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 India (CC BY 2.5 IN)",
+   "license_url": "github.com/datameet/maps",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2011"
+  },
+  "TON": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ARE": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GHA": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "Open Street Map",
+   "source_url": "osm-boundaries.com/",
+   "attribution": "Open Street Map — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "ZMB": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Zambia Data Hub",
+   "source_url": "zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about",
+   "attribution": "Zambia Data Hub — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "zambia-nsdi-mlnr.hub.arcgis.com/datasets/6fe71ff483ab491782c8524ec3d1a3b8_0/about",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "ITA": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "ISTAT, National Institute of Statistics",
+   "source_url": "www.istat.it/it/archivio/222527",
+   "attribution": "ISTAT, National Institute of Statistics — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "www.istat.it/it/note-legali",
+   "source_data_update": "Wed Aug 16 14:38:11 2023",
+   "year": "2023"
+  },
+  "CUB": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "AZE": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "geoBoundaries, OpenStreetMap",
+   "source_url": "www.openstreetmap.org/search?query=azerbaijan#map=7/40.195/47.886",
+   "attribution": "geoBoundaries, OpenStreetMap — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "MUS": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "geoBoundaries, OpenStreetMap",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "geoBoundaries, OpenStreetMap — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "BLZ": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Wed Feb 22 15:10:30 2023",
+   "year": "2006"
+  },
+  "PRK": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "World Food Programme, OCHA ROAP",
+   "source_url": "data.humdata.org/dataset/dpr-korea-administrative-boundaries",
+   "attribution": "World Food Programme, OCHA ROAP — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/dpr-korea-administrative-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2018"
+  },
+  "MKD": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "EuroGeographics and NTES (Nomenclature of Territorial Units for Statistics - Republic of Macedonia State Statistical Office), Regional IM Working Group - Europe",
+   "source_url": "data.humdata.org/dataset/fyrom-administrative-levels-1-4-from-eurogeographics-and-ntes",
+   "attribution": "EuroGeographics and NTES (Nomenclature of Territorial Units for Statistics - Republic of Macedonia State Statistical Office), Regional IM Working Group - Europe — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "data.humdata.org/dataset/fyrom-administrative-levels-1-4-from-eurogeographics-and-ntes",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "KEN": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "RCMRD GeoPortal, Africa GeoPortal",
+   "source_url": "rcmrd.africageoportal.com/datasets/africageoportal",
+   "attribution": "RCMRD GeoPortal, Africa GeoPortal — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "rcmrd.africageoportal.com/datasets/africageoportal",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "KHM": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "BLR": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "geoBoundaries, CIESIN",
+   "source_url": "sedac.ciesin.columbia.edu/data/collection/gpw-v3/maps/gallery/search?facets=region",
+   "attribution": "geoBoundaries, CIESIN — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "creativecommons.org/licenses/by/3.0/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2005"
+  },
+  "TKM": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2007"
+  },
+  "PNG": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Papua New Guinea National Statistics Office, OCHA ROAP",
+   "source_url": "data.humdata.org/dataset/papua-new-guinea-admin-level-0-international-boundaries",
+   "attribution": "Papua New Guinea National Statistics Office, OCHA ROAP — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/papua-new-guinea-admin-level-0-international-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "BRA": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Mon Apr 17 21:17:52 2023",
+   "year": "2006"
+  },
+  "MDA": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "UNHCR, OCHA FISS",
+   "source_url": "data.humdata.org/dataset/moldova-administrative-level-0-1-boundaries",
+   "attribution": "UNHCR, OCHA FISS — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/moldova-administrative-level-0-1-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "PER": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Wikimedia Commons",
+   "source_url": "en.wikipedia.org/wiki/Administrative_divisions_of_Peru",
+   "attribution": "Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Wed Feb 21 08:01:37 2024",
+   "year": "2008"
+  },
+  "MLT": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, d-maps.com",
+   "source_url": "d-maps.com/carte.php?num_car=60336&lang=en",
+   "attribution": "geoBoundaries, d-maps.com — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "d-maps.com/conditions.php?lang=en",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "IRL": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Ordce Survey Ireland",
+   "source_url": "data-osi.opendata.arcgis.com/datasets/cac5ddcbbe934edc881d1611c6b910c7/explore?location=53.390427%2C-8.379110%2C7.80",
+   "attribution": "Ordce Survey Ireland — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "www.arcgis.com/sharing/rest/content/items/cac5ddcbbe934edc881d1611c6b910c7/info/metadata/metadata.xml?format=default&output=html",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "SOM": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "BWA": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SLE": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Government of Sierra Leone, OCHA ROWCA",
+   "source_url": "data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries",
+   "attribution": "Government of Sierra Leone, OCHA ROWCA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/sierra-leone-all-ad-min-level-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2014"
+  },
+  "HND": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GMB": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Knippenberg, Erwin, & Moritz, Meyer. “The Hidden Potential of Mobile Phone Data Insights on COVID-19 in the Gambia.” Data Blog, The World Bank Data Catalog",
+   "source_url": "blogs.worldbank.org/opendata/hidden-potential-mobile-phone-data-insights-covid-19-gambia",
+   "attribution": "Knippenberg, Erwin, & Moritz, Meyer. “The Hidden Potential of Mobile Phone Data Insights on COVID-19 in the Gambia.” Data Blog, The World Bank Data Catalog — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "datacatalog.worldbank.org/search/dataset/0038034",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "CAF": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2006"
+  },
+  "LBR": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "UNMIL, OCHA ROWCA",
+   "source_url": "data.humdata.org/dataset/liberia-admin-level-2-boundaries",
+   "attribution": "UNMIL, OCHA ROWCA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/liberia-admin-level-2-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "BGD": {
+   "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "UZB": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "NOR": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Kartverket",
+   "source_url": "kartkatalog.geonorge.no/metadata/administrative-enheter-fylker/6093c8a8-fa80-11e6-bc64-92361f002671",
+   "attribution": "Kartverket — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "kartkatalog.geonorge.no/metadata/administrative-enheter-fylker/6093c8a8-fa80-11e6-bc64-92361f002671",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "MNE": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "TUR": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "Open Street Map",
+   "source_url": "osm-boundaries.com/",
+   "attribution": "Open Street Map — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Aug 31 09:55:30 2023",
+   "year": "2021"
+  },
+  "BIH": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Wikimedia Commons",
+   "source_url": "en.wikipedia.org/wiki/Political_divisions_of_Bosnia_and_Herzegovina",
+   "attribution": "Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Wed Feb 21 08:01:51 2024",
+   "year": "2013"
+  },
+  "CHN": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "ETH": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Open Africa, Code for Ethiopia",
+   "source_url": "africaopendata.org/dataset/ethiopia-shapefiles",
+   "attribution": "Open Africa, Code for Ethiopia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "africaopendata.org/dataset/ethiopia-shapefiles",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "PAN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GAB": {
+   "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "share_alike": true,
+   "source": "geoBoundaries, Wikipedia",
+   "source_url": "en.wikipedia.org/wiki/Subdivisions_of_Gabon#/media/File",
+   "attribution": "geoBoundaries, Wikipedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "license_url": "en.wikipedia.org/wiki/Subdivisions_of_Gabon#/media/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2005"
+  },
+  "TJK": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CZE": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Czech Office for Surveying",
+   "source_url": "geoportal.cuzk.cz/(S(0jvahy1mipdkur5tenlb1uhp))/Default.aspx?lng=EN&mode=TextMeta&side=dsady_RUIAN&metadataID=CZ-CUZK-SH-V&mapid=5&menu=252",
+   "attribution": "Czech Office for Surveying — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "creativecommons.org/licenses/by/4.0/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "DEU": {
+   "license": "Data license Germany - Attribution - Version 2.0",
+   "share_alike": false,
+   "source": "Federal Agency for Cartography and Geodesy",
+   "source_url": "gdz.bkg.bund.de/index.php/default/digitale-geodaten/verwaltungsgebiete/nuts-gebiete-1-250-000-stand-31-12-nuts250-31-12.html",
+   "attribution": "Federal Agency for Cartography and Geodesy — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Data license Germany - Attribution - Version 2.0",
+   "license_url": "www.govdata.de/dl-de/by-2-0",
+   "source_data_update": "Sun Feb 26 12:29:46 2023",
+   "year": "2021"
+  },
+  "ISL": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "KAZ": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SUR": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "FJI": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "en.wikipedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "en.wikipedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2006"
+  },
+  "MDG": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "PHL": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines",
+   "source_url": "data.humdata.org/dataset/philippines-administrative-levels-0-to-3",
+   "attribution": "National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/philippines-administrative-levels-0-to-3",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "MLI": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "DNCT - Direction Nationale des Collectivités Territoriales, United Nations Office for the Coordination of Humanitarian Affairs, Mali",
+   "source_url": "data.humdata.org/dataset/administrative-boundaries-cod-mli",
+   "attribution": "DNCT - Direction Nationale des Collectivités Territoriales, United Nations Office for the Coordination of Humanitarian Affairs, Mali — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "data.humdata.org/dataset/administrative-boundaries-cod-mli",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "SLB": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "BEL": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Eurostat- European Commission",
+   "source_url": "ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts",
+   "attribution": "Eurostat- European Commission — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "ec.europa.eu/info/legal-notice_en",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "TTO": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GIN": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "World Food Programme, OCHA ROWCA",
+   "source_url": "ckan.ev.openindustry.in/pt_BR/dataset/guinea-geodatabase/resource/4ed92c38-a5ea-4c53-a4c8-1b01f2fcec32?inner_span=True",
+   "attribution": "World Food Programme, OCHA ROWCA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/guinea-geodatabase",
+   "source_data_update": "Wed Aug 30 12:59:14 2023",
+   "year": "2017"
+  },
+  "TCD": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GNB": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "BGR": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "ZWE": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Zimbabwe National Statistics Agency (ZIMSTAT www.zimstat.co.zw) Central Statistics Office, OCHA ROSEA",
+   "source_url": "data.humdata.org/dataset/zimbabwe-administrative-levels-0-3-boundaries",
+   "attribution": "Zimbabwe National Statistics Agency (ZIMSTAT www.zimstat.co.zw) Central Statistics Office, OCHA ROSEA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/zimbabwe-administrative-levels-0-3-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "BFA": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "World Bank",
+   "source_url": "datacatalog.worldbank.org/dataset/burkina-faso-administrative-boundaries-2017",
+   "attribution": "World Bank — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "datacatalog.worldbank.org/public-licenses#cc-by",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "MRT": {
+   "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "share_alike": true,
+   "source": "Princeton University Library",
+   "source_url": "maps.princeton.edu/catalog/stanford-nw291zj7245",
+   "attribution": "Princeton University Library — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "license_url": "maps.princeton.edu/catalog/stanford-nw291zj7245/metadata",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "SAU": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GRC": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "EuroGeoGraphics, Regional IM Working Group - Europe",
+   "source_url": "data.humdata.org/dataset/gree",
+   "attribution": "EuroGeoGraphics, Regional IM Working Group - Europe — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "data.humdata.org/dataset/gree",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "DJI": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "VNM": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikipedia",
+   "source_url": "commons.wikimedia.org/wiki/Category",
+   "attribution": "geoBoundaries, Wikipedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2008"
+  },
+  "NGA": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "GRID3",
+   "source_url": "data.grid3.org/datasets/grid3-nigeria-state-boundaries/explore?location=8.992006%2C8.685290%2C6.82",
+   "attribution": "GRID3 — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "data.grid3.org/datasets/grid3-nigeria-state-boundaries/explore?location=8.992006%2C8.685290%2C6.82",
+   "source_data_update": "Sun Feb 26 12:26:14 2023",
+   "year": "2022"
+  },
+  "DZA": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CYP": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "MEX": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Instituto Nacional de Estadística y Geografía (INEGI)",
+   "source_url": "data.humdata.org/dataset/mexican-administrative-level-0-country-1-estado-and-2-municipio-boundary-polygons",
+   "attribution": "Instituto Nacional de Estadística y Geografía (INEGI) — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/mexican-administrative-level-0-country-1-estado-and-2-municipio-boundary-polygons",
+   "source_data_update": "Wed Feb 21 08:01:17 2024",
+   "year": "2020"
+  },
+  "CHE": {
+   "license": "Federal Office of Topography swisstopo License",
+   "share_alike": false,
+   "source": "Federal Office of Topography swisstopo",
+   "source_url": "www.swisstopo.admin.ch/en/geodata/landscape/boundaries3d.html",
+   "attribution": "Federal Office of Topography swisstopo — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Federal Office of Topography swisstopo License",
+   "license_url": "www.swisstopo.admin.ch/en/home/meta/conditions/geodata/ogd.html",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "TWN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "RWA": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "The Rwanda Geo Portal",
+   "source_url": "rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0",
+   "attribution": "The Rwanda Geo Portal — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "rwanda.africageoportal.com/datasets/dac12729b2cd4f0db92fddaa6a80460d_0",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "JPN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "osm-boundaries.com",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "URY": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "LAO": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "FIN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "PRT": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "DG Territory",
+   "source_url": "snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231907",
+   "attribution": "DG Territory — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "snig.dgterritorio.gov.pt/rndg/srv/por/catalog.search#/metadata/5e3debf1-6cde-4ff2-8301-a86799231907",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "IRQ": {
+   "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "license_url": "creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "GTM": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "PSE": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "geoBoundaries, Open Data Watch",
+   "source_url": "opendatawatch.com/about/",
+   "attribution": "geoBoundaries, Open Data Watch — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "opendatawatch.com/publications/open-data-to-support-sustainable-development-goals/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "HRV": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SEN": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "Government of Senegal, OCHA ROWCA",
+   "source_url": "data.humdata.org/dataset/senegal-administrative-boundaries",
+   "attribution": "Government of Senegal, OCHA ROWCA — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/senegal-administrative-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "YEM": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SSD": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "South Sudan Information Management Working Group (IMWG), National Bureau of Statistics (NBS), and OCHA, OCHA South Sudan",
+   "source_url": "data.humdata.org/dataset/south-sudan-administrative-boundaries",
+   "attribution": "South Sudan Information Management Working Group (IMWG), National Bureau of Statistics (NBS), and OCHA, OCHA South Sudan — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/south-sudan-administrative-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "ROU": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "World Bank",
+   "source_url": "www.arcgis.com/home/item.html?id=361134ff4ff44e78a9aeec01af9a5175",
+   "attribution": "World Bank — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "data.worldbank.org/summary-terms-of-use",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CMR": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "MMR": {
+   "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Myanmar Analytics Project, geoBoundaries",
+   "source_url": "data.mmanalytics.org/dataset/border-shapefiles/resource/b641b45f-898d-483b-986d-f9763af4f6c6",
+   "attribution": "Myanmar Analytics Project, geoBoundaries — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 (CC BY 4.0)",
+   "license_url": "data.mmanalytics.org/dataset/border-shapefiles",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "LVA": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Geoportal of Latvia",
+   "source_url": "geolatvija.lv/geo/p/658",
+   "attribution": "Geoportal of Latvia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "geolatvija.lv/geo/p/658",
+   "source_data_update": "Tue Mar 21 13:39:02 2023",
+   "year": "2021"
+  },
+  "NIC": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "osm-boundaries.com/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "VEN": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "OCHA Venezuela, Instituto Nacional de Estadística",
+   "source_url": "data.humdata.org/dataset/venezuela-administrative-level-0-1-and-2-boundaries",
+   "attribution": "OCHA Venezuela, Instituto Nacional de Estadística — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "Data https",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "LTU": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "IRN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "UKR": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "TLS": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "TGO": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "NER": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "IPUMS DHS",
+   "source_url": "www.idhsdata.org/idhs/gis.shtml",
+   "attribution": "IPUMS DHS — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "spatialdata.dhsprogram.com/references/subnational_data_schema.pdf",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2012"
+  },
+  "LBY": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "COD": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "BRN": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons; credit to user 'Tachymetre'",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons; credit to user 'Tachymetre' — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Wed May 3 23:20:00 2023",
+   "year": "2011"
+  },
+  "AUT": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "geoBoundaries, Federal Office for Metrology and Survey, Austria",
+   "source_url": "www.bev.gv.at/portal/page?_pageid=713,2639317&_dad=portal&_schema=PORTAL",
+   "attribution": "geoBoundaries, Federal Office for Metrology and Survey, Austria — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "twitter.com/WMgeoLab/status/1253487894313959424",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "TUN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "AUS": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Australian Bureau of Statistics",
+   "source_url": "www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files/STE_2021_AUST_SHP_GDA2020.zip",
+   "attribution": "Australian Bureau of Statistics — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "www.abs.gov.au/website-privacy-copyright-and-disclaimer#copyright-and-creative-commons",
+   "source_data_update": "Mon Apr 3 09:47:39 2023",
+   "year": "2021"
+  },
+  "BHR": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "EGY": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CHL": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "La Biblioteca del Congreso Nacional de Chile (BCN), OCHA ROLAC",
+   "source_url": "data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region",
+   "attribution": "La Biblioteca del Congreso Nacional de Chile (BCN), OCHA ROLAC — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/chile-administrative-level-0-country-1-region-region",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "ISR": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "en.wikipedia.org/wiki/Wikipedia",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2006"
+  },
+  "MAR": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "HUN": {
+   "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "license_url": "commons.wikimedia.org/w/index.php?search=Maps+of+Hungary&title=Special",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2011"
+  },
+  "RUS": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ZAF": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "OCHA ROSEA, South African Municipal Demarcation Board",
+   "source_url": "data.humdata.org/dataset/south-africa-admin-level-1-boundaries",
+   "attribution": "OCHA ROSEA, South African Municipal Demarcation Board — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/south-africa-admin-level-1-boundaries",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2020"
+  },
+  "PRY": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Direcion General de Estadica, Encuestas y Censos",
+   "source_url": "geo.stp.gov.py/user/dgeec/tables/paraguay_2012_departamentos/public",
+   "attribution": "Direcion General de Estadica, Encuestas y Censos — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "twitter.com/WMgeoLab/status/1179001467669078017/photo/2",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2012"
+  },
+  "DOM": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Thu May 4 20:55:12 2023",
+   "year": "2022"
+  },
+  "LBN": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "upload.wikimedia.org/wikipedia/commons/c/c9/North_Governorate1.png",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GBR": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Eurostat- European Commission",
+   "source_url": "ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts",
+   "attribution": "Eurostat- European Commission — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "ec.europa.eu/info/legal-notice_en",
+   "source_data_update": "Sat Apr 22 13:00:40 2023",
+   "year": "2021"
+  },
+  "NLD": {
+   "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "share_alike": false,
+   "source": "National Georegister",
+   "source_url": "nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/208bc283-7c66-4ce7-8ad3-1cf3e8933fb5?tab=relations",
+   "attribution": "National Georegister — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "license_url": "nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/208bc283-7c66-4ce7-8ad3-1cf3e8933fb5?tab=general",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2022"
+  },
+  "SYR": {
+   "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "share_alike": false,
+   "source": "United Nations Cartographic Section (UNCS) and United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA), OCHA ROSC",
+   "source_url": "data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places",
+   "attribution": "United Nations Cartographic Section (UNCS) and United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA), OCHA ROSC — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+   "license_url": "data.humdata.org/dataset/syrian-arab-republic-administrative-boundaries-populated-places",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SGP": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "Urban Redevelopment Authority, derived from ADM 3",
+   "source_url": "data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea",
+   "attribution": "Urban Redevelopment Authority, derived from ADM 3 — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "CPV": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ERI": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SWZ": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GNQ": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "IDN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "SRB": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ALB": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikipedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikipedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "SLV": {
+   "license": "Creative Commons Attribution-ShareAlike 2.0",
+   "share_alike": true,
+   "source": "Open Street Map",
+   "source_url": "osm-boundaries.com/",
+   "attribution": "Open Street Map — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 2.0",
+   "license_url": "osm-boundaries.com/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "BOL": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "GeoBolivia, Derived from ADM3 layer",
+   "source_url": "geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db",
+   "attribution": "GeoBolivia, Derived from ADM3 layer — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "geo.gob.bo/geonetwork/srv/spa/catalog.search#/metadata/aeeb85a9-23df-48d4-a4e5-dd19e8b206db",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "SVK": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CAN": {
+   "license": "Open Government Canada 2.0",
+   "share_alike": false,
+   "source": "Statistics Canada (StatCan)",
+   "source_url": "www12.statcan.gc.ca/census-recensement/2011/geo/bound-limit/bound-limit-2016-eng.cfm",
+   "attribution": "Statistics Canada (StatCan) — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Government Canada 2.0",
+   "license_url": "www.statcan.gc.ca/eng/reference/licence",
+   "source_data_update": "Fri Apr 7 13:57:16 2023",
+   "year": "2023"
+  },
+  "NZL": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "NZ Stats",
+   "source_url": "www.stats.govt.nz/browse_for_stats/Maps_and_geography/Geographic-areas/digital-boundary-files.aspx",
+   "attribution": "NZ Stats — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "www.stats.govt.nz/about_us/about-this-site/copyright-terms-of-use.aspx",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "TZA": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "MOZ": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ESP": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Instituto de Geografico Nacional",
+   "source_url": "centrodedescargas.cnig.es/CentroDescargas/index.jsp",
+   "attribution": "Instituto de Geografico Nacional — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "centrodedescargas.cnig.es/CentroDescargas/index.jsp#",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "MDV": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "AFG": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Wikimedia, geoBoundaries",
+   "source_url": "en.wikipedia.org/wiki/Provinces_of_Afghanistan",
+   "attribution": "Wikimedia, geoBoundaries — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2007"
+  },
+  "THA": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "COG": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "GUY": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "osm-boundaries.com",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "QAT": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "geoBoundaries, Qatar Open Data Portal",
+   "source_url": "www.data.gov.qa/explore/dataset/gis-statistics/export/",
+   "attribution": "geoBoundaries, Qatar Open Data Portal — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "www.data.gov.qa/pages/license/annexes",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "AGO": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "U.S. Census Bureau",
+   "source_url": "www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html",
+   "attribution": "U.S. Census Bureau — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.census.gov/geographies/mapping-files/time-series/demo/international-programs/subnationalpopulation.html",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "CRI": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "MYS": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "PAK": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikipedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikipedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "creativecommons.org/share-your-work/public-domain/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2019"
+  },
+  "BRB": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2005"
+  },
+  "NAM": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Fri Apr 21 14:54:43 2023",
+   "year": "2022"
+  },
+  "KWT": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "BHS": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "Haiti GeoPortal",
+   "source_url": "//haiti.caribbeangeoportal.com/datasets/caribgeoportal",
+   "attribution": "Haiti GeoPortal — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "httpshttps",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "09-09-2017 to 24-08-2020"
+  },
+  "BTN": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons; credit to author 'Babbage'",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons; credit to author 'Babbage' — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Wed May 3 23:23:22 2023",
+   "year": "2010"
+  },
+  "LUX": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "LSO": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ECU": {
+   "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2011"
+  },
+  "DNK": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "geoBoundaries, Web Vectors Map",
+   "source_url": "webvectormaps.com/administrative-map-of-denmark-by-regions/",
+   "attribution": "geoBoundaries, Web Vectors Map — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "webvectormaps.com/administrative-map-of-denmark-by-regions/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "COL": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "USA": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "United States Census Bureau, MAF/TIGER Database",
+   "source_url": "www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html",
+   "attribution": "United States Census Bureau, MAF/TIGER Database — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2018"
+  },
+  "GEO": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2015"
+  },
+  "BEN": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia Commons",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia Commons — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2012"
+  },
+  "UGA": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "KGZ": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "JOR": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2006"
+  },
+  "KOR": {
+   "license": "Public Domain",
+   "share_alike": false,
+   "source": "Natural Earth",
+   "source_url": "www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-details/",
+   "attribution": "Natural Earth — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Public Domain",
+   "license_url": "www.naturalearthdata.com/about/terms-of-use/",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2021"
+  },
+  "LKA": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "CIV": {
+   "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "share_alike": false,
+   "source": "World Bank Group, OCHA Côte d’Ivoire",
+   "source_url": "datacatalog.worldbank.org/dataset/cote-divoire-administrative-boundaries-2016",
+   "attribution": "World Bank Group, OCHA Côte d’Ivoire — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 4.0 International (CC BY 4.0)",
+   "license_url": "datacatalog.worldbank.org/public-licenses#cc-by",
+   "source_data_update": "Wed Aug 30 10:51:06 2023",
+   "year": "2016"
+  },
+  "MNG": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "ARG": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2006"
+  },
+  "EST": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2016"
+  },
+  "SWE": {
+   "license": "Creative Commons Attribution 3.0 License",
+   "share_alike": false,
+   "source": "geoBoundaries, Erik Frohne",
+   "source_url": "upload.wikimedia.org/wikipedia/commons/3/31/Sweden_Uppsala_location_map.svg",
+   "attribution": "geoBoundaries, Erik Frohne — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 3.0 License",
+   "license_url": "commons.wikimedia.org/w/index.php?curid=5675559",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2009"
+  },
+  "ARM": {
+   "license": "Creative Commons Attribution 2.5 Generic",
+   "share_alike": false,
+   "source": "geoBoundaries, Wikimedia",
+   "source_url": "commons.wikimedia.org/wiki/File",
+   "attribution": "geoBoundaries, Wikimedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution 2.5 Generic",
+   "license_url": "commons.wikimedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2005"
+  },
+  "WSM": {
+   "license": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "share_alike": true,
+   "source": "Wikipedia",
+   "source_url": "en.wikipedia.org/wiki/File",
+   "attribution": "Wikipedia — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Creative Commons Attribution-ShareAlike 3.0 Unported",
+   "license_url": "en.wikipedia.org/wiki/File",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2018"
+  },
+  "POL": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2017"
+  },
+  "OMN": {
+   "license": "Open Data Commons Open Database License 1.0",
+   "share_alike": true,
+   "source": "OpenStreetMap, Wambacher",
+   "source_url": "wambachers-osm.website/boundaries/",
+   "attribution": "OpenStreetMap, Wambacher — داده برگرفته از geoBoundaries (gbOpen/ADM1); مجوز: Open Data Commons Open Database License 1.0",
+   "license_url": "www.openstreetmap.org/copyright",
+   "source_data_update": "Thu Jan 19 07:31:04 2023",
+   "year": "2010"
+  }
+ }
+}
