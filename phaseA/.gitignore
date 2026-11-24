@@ -1,0 +1,4 @@
+api_key.local
+__pycache__/
+run_log.txt
+*.pyc

@@ -1,0 +1,1220 @@
+{
+ "آمریکا": {
+  "en": "United States of America",
+  "iso3": "USA",
+  "ne": "United States of America",
+  "lat": 39.5,
+  "lon": -99.06
+ },
+ "کانادا": {
+  "en": "Canada",
+  "iso3": "CAN",
+  "ne": "Canada",
+  "lat": 57.75,
+  "lon": -101.57
+ },
+ "مکزیک": {
+  "en": "Mexico",
+  "iso3": "MEX",
+  "ne": "Mexico",
+  "lat": 23.94,
+  "lon": -102.58
+ },
+ "ایران": {
+  "en": "Iran",
+  "iso3": "IRN",
+  "ne": "Iran",
+  "lat": 32.52,
+  "lon": 54.29
+ },
+ "عراق": {
+  "en": "Iraq",
+  "iso3": "IRQ",
+  "ne": "Iraq",
+  "lat": 33.04,
+  "lon": 43.76
+ },
+ "سوریه": {
+  "en": "Syria",
+  "iso3": "SYR",
+  "ne": "Syria",
+  "lat": 35.01,
+  "lon": 38.54
+ },
+ "لبنان": {
+  "en": "Lebanon",
+  "iso3": "LBN",
+  "ne": "Lebanon",
+  "lat": 33.91,
+  "lon": 35.87
+ },
+ "اردن": {
+  "en": "Jordan",
+  "iso3": "JOR",
+  "ne": "Jordan",
+  "lat": 31.25,
+  "lon": 36.78
+ },
+ "اسرائیل": {
+  "en": "Israel",
+  "iso3": "ISR",
+  "ne": "Israel",
+  "lat": 31.48,
+  "lon": 35.0
+ },
+ "فلسطین": {
+  "en": "Palestine",
+  "iso3": "PSE",
+  "ne": "Palestine",
+  "lat": 31.94,
+  "lon": 35.27
+ },
+ "عربستان": {
+  "en": "Saudi Arabia",
+  "iso3": "SAU",
+  "ne": "Saudi Arabia",
+  "lat": 24.12,
+  "lon": 44.52
+ },
+ "امارات": {
+  "en": "United Arab Emirates",
+  "iso3": "ARE",
+  "ne": "United Arab Emirates",
+  "lat": 23.87,
+  "lon": 54.21
+ },
+ "قطر": {
+  "en": "Qatar",
+  "iso3": "QAT",
+  "ne": "Qatar",
+  "lat": 25.32,
+  "lon": 51.18
+ },
+ "کویت": {
+  "en": "Kuwait",
+  "iso3": "KWT",
+  "ne": "Kuwait",
+  "lat": 29.31,
+  "lon": 47.6
+ },
+ "بحرین": {
+  "en": "Bahrain",
+  "iso3": "BHR",
+  "ne": null,
+  "lat": 26.03,
+  "lon": 50.55
+ },
+ "عمان": {
+  "en": "Oman",
+  "iso3": "OMN",
+  "ne": "Oman",
+  "lat": 20.58,
+  "lon": 56.1
+ },
+ "یمن": {
+  "en": "Yemen",
+  "iso3": "YEM",
+  "ne": "Yemen",
+  "lat": 15.91,
+  "lon": 47.54
+ },
+ "ترکیه": {
+  "en": "Turkey",
+  "iso3": "TUR",
+  "ne": "Turkey",
+  "lat": 38.99,
+  "lon": 35.39
+ },
+ "مصر": {
+  "en": "Egypt",
+  "iso3": "EGY",
+  "ne": "Egypt",
+  "lat": 26.51,
+  "lon": 29.84
+ },
+ "لیبی": {
+  "en": "Libya",
+  "iso3": "LBY",
+  "ne": "Libya",
+  "lat": 27.0,
+  "lon": 17.97
+ },
+ "تونس": {
+  "en": "Tunisia",
+  "iso3": "TUN",
+  "ne": "Tunisia",
+  "lat": 34.17,
+  "lon": 9.53
+ },
+ "الجزایر": {
+  "en": "Algeria",
+  "iso3": "DZA",
+  "ne": "Algeria",
+  "lat": 28.19,
+  "lon": 2.6
+ },
+ "مراکش": {
+  "en": "Morocco",
+  "iso3": "MAR",
+  "ne": "Morocco",
+  "lat": 29.89,
+  "lon": -8.42
+ },
+ "روسیه": {
+  "en": "Russia",
+  "iso3": "RUS",
+  "ne": "Russia",
+  "lat": 61.69,
+  "lon": 99.22
+ },
+ "آلمان": {
+  "en": "Germany",
+  "iso3": "DEU",
+  "ne": "Germany",
+  "lat": 51.13,
+  "lon": 10.29
+ },
+ "فرانسه": {
+  "en": "France",
+  "iso3": "FRA",
+  "ne": "France",
+  "lat": 46.61,
+  "lon": 2.34
+ },
+ "بریتانیا": {
+  "en": "United Kingdom",
+  "iso3": "GBR",
+  "ne": "United Kingdom",
+  "lat": 53.88,
+  "lon": -2.66
+ },
+ "ایتالیا": {
+  "en": "Italy",
+  "iso3": "ITA",
+  "ne": "Italy",
+  "lat": 43.47,
+  "lon": 12.22
+ },
+ "اسپانیا": {
+  "en": "Spain",
+  "iso3": "ESP",
+  "ne": "Spain",
+  "lat": 40.35,
+  "lon": -3.62
+ },
+ "پرتغال": {
+  "en": "Portugal",
+  "iso3": "PRT",
+  "ne": "Portugal",
+  "lat": 39.63,
+  "lon": -8.06
+ },
+ "هلند": {
+  "en": "Netherlands",
+  "iso3": "NLD",
+  "ne": "Netherlands",
+  "lat": 52.3,
+  "lon": 5.51
+ },
+ "بلژیک": {
+  "en": "Belgium",
+  "iso3": "BEL",
+  "ne": "Belgium",
+  "lat": 50.65,
+  "lon": 4.58
+ },
+ "سوئیس": {
+  "en": "Switzerland",
+  "iso3": "CHE",
+  "ne": "Switzerland",
+  "lat": 46.79,
+  "lon": 8.12
+ },
+ "اتریش": {
+  "en": "Austria",
+  "iso3": "AUT",
+  "ne": "Austria",
+  "lat": 47.61,
+  "lon": 14.08
+ },
+ "سوئد": {
+  "en": "Sweden",
+  "iso3": "SWE",
+  "ne": "Sweden",
+  "lat": 62.81,
+  "lon": 16.6
+ },
+ "نروژ": {
+  "en": "Norway",
+  "iso3": "NOR",
+  "ne": "Norway",
+  "lat": 64.54,
+  "lon": 14.24
+ },
+ "دانمارک": {
+  "en": "Denmark",
+  "iso3": "DNK",
+  "ne": "Denmark",
+  "lat": 56.22,
+  "lon": 9.31
+ },
+ "فنلاند": {
+  "en": "Finland",
+  "iso3": "FIN",
+  "ne": "Finland",
+  "lat": 64.5,
+  "lon": 26.21
+ },
+ "ایسلند": {
+  "en": "Iceland",
+  "iso3": "ISL",
+  "ne": "Iceland",
+  "lat": 65.07,
+  "lon": -18.76
+ },
+ "ایرلند": {
+  "en": "Ireland",
+  "iso3": "IRL",
+  "ne": "Ireland",
+  "lat": 53.18,
+  "lon": -8.01
+ },
+ "لهستان": {
+  "en": "Poland",
+  "iso3": "POL",
+  "ne": "Poland",
+  "lat": 52.15,
+  "lon": 19.31
+ },
+ "چک": {
+  "en": "Czechia",
+  "iso3": "CZE",
+  "ne": "Czechia",
+  "lat": 49.78,
+  "lon": 15.33
+ },
+ "اسلواکی": {
+  "en": "Slovakia",
+  "iso3": "SVK",
+  "ne": "Slovakia",
+  "lat": 48.73,
+  "lon": 19.51
+ },
+ "مجارستان": {
+  "en": "Hungary",
+  "iso3": "HUN",
+  "ne": "Hungary",
+  "lat": 47.2,
+  "lon": 19.36
+ },
+ "رومانی": {
+  "en": "Romania",
+  "iso3": "ROU",
+  "ne": "Romania",
+  "lat": 45.86,
+  "lon": 24.94
+ },
+ "بلغارستان": {
+  "en": "Bulgaria",
+  "iso3": "BGR",
+  "ne": "Bulgaria",
+  "lat": 42.75,
+  "lon": 25.2
+ },
+ "یونان": {
+  "en": "Greece",
+  "iso3": "GRC",
+  "ne": "Greece",
+  "lat": 39.34,
+  "lon": 22.56
+ },
+ "صربستان": {
+  "en": "Republic of Serbia",
+  "iso3": "SRB",
+  "ne": "Republic of Serbia",
+  "lat": 44.23,
+  "lon": 20.82
+ },
+ "کرواسی": {
+  "en": "Croatia",
+  "iso3": "HRV",
+  "ne": "Croatia",
+  "lat": 45.02,
+  "lon": 16.57
+ },
+ "بوسنی": {
+  "en": "Bosnia and Herz.",
+  "iso3": "BIH",
+  "ne": "Bosnia and Herzegovina",
+  "lat": 44.18,
+  "lon": 17.82
+ },
+ "آلبانی": {
+  "en": "Albania",
+  "iso3": "ALB",
+  "ne": "Albania",
+  "lat": 41.14,
+  "lon": 20.03
+ },
+ "مقدونیه شمالی": {
+  "en": "North Macedonia",
+  "iso3": "MKD",
+  "ne": "Macedonia",
+  "lat": 41.61,
+  "lon": 21.7
+ },
+ "اسلوونی": {
+  "en": "Slovenia",
+  "iso3": "SVN",
+  "ne": "Slovenia",
+  "lat": 46.13,
+  "lon": 14.94
+ },
+ "مونته‌نگرو": {
+  "en": "Montenegro",
+  "iso3": "MNE",
+  "ne": "Montenegro",
+  "lat": 42.79,
+  "lon": 19.29
+ },
+ "اوکراین": {
+  "en": "Ukraine",
+  "iso3": "UKR",
+  "ne": "Ukraine",
+  "lat": 49.15,
+  "lon": 31.23
+ },
+ "بلاروس": {
+  "en": "Belarus",
+  "iso3": "BLR",
+  "ne": "Belarus",
+  "lat": 53.51,
+  "lon": 27.98
+ },
+ "مولداوی": {
+  "en": "Moldova",
+  "iso3": "MDA",
+  "ne": "Moldova",
+  "lat": 47.2,
+  "lon": 28.41
+ },
+ "لتونی": {
+  "en": "Latvia",
+  "iso3": "LVA",
+  "ne": "Latvia",
+  "lat": 56.81,
+  "lon": 24.83
+ },
+ "لیتوانی": {
+  "en": "Lithuania",
+  "iso3": "LTU",
+  "ne": "Lithuania",
+  "lat": 55.28,
+  "lon": 23.88
+ },
+ "استونی": {
+  "en": "Estonia",
+  "iso3": "EST",
+  "ne": "Estonia",
+  "lat": 58.64,
+  "lon": 25.82
+ },
+ "لوکزامبورگ": {
+  "en": "Luxembourg",
+  "iso3": "LUX",
+  "ne": "Luxembourg",
+  "lat": 49.77,
+  "lon": 5.97
+ },
+ "قبرس": {
+  "en": "Cyprus",
+  "iso3": "CYP",
+  "ne": "Cyprus",
+  "lat": 34.91,
+  "lon": 33.04
+ },
+ "مالت": {
+  "en": "Malta",
+  "iso3": "MLT",
+  "ne": null,
+  "lat": 35.94,
+  "lon": 14.38
+ },
+ "چین": {
+  "en": "China",
+  "iso3": "CHN",
+  "ne": "China",
+  "lat": 36.61,
+  "lon": 103.87
+ },
+ "ژاپن": {
+  "en": "Japan",
+  "iso3": "JPN",
+  "ne": "Japan",
+  "lat": 36.02,
+  "lon": 136.88
+ },
+ "کره جنوبی": {
+  "en": "South Korea",
+  "iso3": "KOR",
+  "ne": "South Korea",
+  "lat": 36.43,
+  "lon": 127.82
+ },
+ "کره شمالی": {
+  "en": "North Korea",
+  "iso3": "PRK",
+  "ne": "North Korea",
+  "lat": 40.14,
+  "lon": 127.17
+ },
+ "تایوان": {
+  "en": "Taiwan",
+  "iso3": "TWN",
+  "ne": "Taiwan",
+  "lat": 23.74,
+  "lon": 120.97
+ },
+ "مغولستان": {
+  "en": "Mongolia",
+  "iso3": "MNG",
+  "ne": "Mongolia",
+  "lat": 46.82,
+  "lon": 102.95
+ },
+ "هند": {
+  "en": "India",
+  "iso3": "IND",
+  "ne": "India",
+  "lat": 22.93,
+  "lon": 79.59
+ },
+ "پاکستان": {
+  "en": "Pakistan",
+  "iso3": "PAK",
+  "ne": "Pakistan",
+  "lat": 29.97,
+  "lon": 69.41
+ },
+ "بنگلادش": {
+  "en": "Bangladesh",
+  "iso3": "BGD",
+  "ne": "Bangladesh",
+  "lat": 23.84,
+  "lon": 90.27
+ },
+ "سری‌لانکا": {
+  "en": "Sri Lanka",
+  "iso3": "LKA",
+  "ne": "Sri Lanka",
+  "lat": 7.7,
+  "lon": 80.67
+ },
+ "نپال": {
+  "en": "Nepal",
+  "iso3": "NPL",
+  "ne": "Nepal",
+  "lat": 28.24,
+  "lon": 84.01
+ },
+ "بوتان": {
+  "en": "Bhutan",
+  "iso3": "BTN",
+  "ne": "Bhutan",
+  "lat": 27.43,
+  "lon": 90.47
+ },
+ "مالدیو": {
+  "en": "Maldives",
+  "iso3": "MDV",
+  "ne": null,
+  "lat": 3.2,
+  "lon": 73.22
+ },
+ "افغانستان": {
+  "en": "Afghanistan",
+  "iso3": "AFG",
+  "ne": "Afghanistan",
+  "lat": 33.86,
+  "lon": 66.09
+ },
+ "اندونزی": {
+  "en": "Indonesia",
+  "iso3": "IDN",
+  "ne": "Indonesia",
+  "lat": -0.25,
+  "lon": 114.02
+ },
+ "مالزی": {
+  "en": "Malaysia",
+  "iso3": "MYS",
+  "ne": "Malaysia",
+  "lat": 3.55,
+  "lon": 114.68
+ },
+ "سنگاپور": {
+  "en": "Singapore",
+  "iso3": "SGP",
+  "ne": null,
+  "lat": 1.35,
+  "lon": 103.82
+ },
+ "تایلند": {
+  "en": "Thailand",
+  "iso3": "THA",
+  "ne": "Thailand",
+  "lat": 15.02,
+  "lon": 101.01
+ },
+ "ویتنام": {
+  "en": "Vietnam",
+  "iso3": "VNM",
+  "ne": "Vietnam",
+  "lat": 16.66,
+  "lon": 106.29
+ },
+ "فیلیپین": {
+  "en": "Philippines",
+  "iso3": "PHL",
+  "ne": "Philippines",
+  "lat": 15.75,
+  "lon": 121.54
+ },
+ "میانمار": {
+  "en": "Myanmar",
+  "iso3": "MMR",
+  "ne": "Myanmar",
+  "lat": 21.02,
+  "lon": 96.51
+ },
+ "کامبوج": {
+  "en": "Cambodia",
+  "iso3": "KHM",
+  "ne": "Cambodia",
+  "lat": 12.68,
+  "lon": 104.88
+ },
+ "لائوس": {
+  "en": "Laos",
+  "iso3": "LAO",
+  "ne": "Laos",
+  "lat": 18.44,
+  "lon": 103.75
+ },
+ "برونئی": {
+  "en": "Brunei",
+  "iso3": "BRN",
+  "ne": "Brunei",
+  "lat": 4.69,
+  "lon": 114.92
+ },
+ "تیمور شرقی": {
+  "en": "Timor-Leste",
+  "iso3": "TLS",
+  "ne": "East Timor",
+  "lat": -8.77,
+  "lon": 125.97
+ },
+ "نیجریه": {
+  "en": "Nigeria",
+  "iso3": "NGA",
+  "ne": "Nigeria",
+  "lat": 9.55,
+  "lon": 8.0
+ },
+ "آفریقای جنوبی": {
+  "en": "South Africa",
+  "iso3": "ZAF",
+  "ne": "South Africa",
+  "lat": -28.96,
+  "lon": 25.12
+ },
+ "اتیوپی": {
+  "en": "Ethiopia",
+  "iso3": "ETH",
+  "ne": "Ethiopia",
+  "lat": 8.65,
+  "lon": 39.55
+ },
+ "کنیا": {
+  "en": "Kenya",
+  "iso3": "KEN",
+  "ne": "Kenya",
+  "lat": 0.6,
+  "lon": 37.79
+ },
+ "غانا": {
+  "en": "Ghana",
+  "iso3": "GHA",
+  "ne": "Ghana",
+  "lat": 7.93,
+  "lon": -1.24
+ },
+ "سنگال": {
+  "en": "Senegal",
+  "iso3": "SEN",
+  "ne": "Senegal",
+  "lat": 14.35,
+  "lon": -14.51
+ },
+ "ساحل عاج": {
+  "en": "Ivory Coast",
+  "iso3": "CIV",
+  "ne": "Ivory Coast",
+  "lat": 7.55,
+  "lon": -5.61
+ },
+ "کامرون": {
+  "en": "Cameroon",
+  "iso3": "CMR",
+  "ne": "Cameroon",
+  "lat": 5.66,
+  "lon": 12.61
+ },
+ "اوگاندا": {
+  "en": "Uganda",
+  "iso3": "UGA",
+  "ne": "Uganda",
+  "lat": 1.3,
+  "lon": 32.36
+ },
+ "تانزانیا": {
+  "en": "United Republic of Tanzania",
+  "iso3": "TZA",
+  "ne": "United Republic of Tanzania",
+  "lat": -6.26,
+  "lon": 34.75
+ },
+ "رواندا": {
+  "en": "Rwanda",
+  "iso3": "RWA",
+  "ne": "Rwanda",
+  "lat": -2.01,
+  "lon": 29.92
+ },
+ "زیمبابوه": {
+  "en": "Zimbabwe",
+  "iso3": "ZWE",
+  "ne": "Zimbabwe",
+  "lat": -18.91,
+  "lon": 29.79
+ },
+ "زامبیا": {
+  "en": "Zambia",
+  "iso3": "ZMB",
+  "ne": "Zambia",
+  "lat": -13.4,
+  "lon": 27.73
+ },
+ "موزامبیک": {
+  "en": "Mozambique",
+  "iso3": "MOZ",
+  "ne": "Mozambique",
+  "lat": -17.23,
+  "lon": 35.47
+ },
+ "آنگولا": {
+  "en": "Angola",
+  "iso3": "AGO",
+  "ne": "Angola",
+  "lat": -12.29,
+  "lon": 17.5
+ },
+ "نامیبیا": {
+  "en": "Namibia",
+  "iso3": "NAM",
+  "ne": "Namibia",
+  "lat": -22.1,
+  "lon": 17.16
+ },
+ "بوتسوانا": {
+  "en": "Botswana",
+  "iso3": "BWA",
+  "ne": "Botswana",
+  "lat": -22.1,
+  "lon": 23.77
+ },
+ "سودان": {
+  "en": "Sudan",
+  "iso3": "SDN",
+  "ne": "Sudan",
+  "lat": 15.99,
+  "lon": 29.86
+ },
+ "سودان جنوبی": {
+  "en": "South Sudan",
+  "iso3": "SSD",
+  "ne": "South Sudan",
+  "lat": 7.29,
+  "lon": 30.2
+ },
+ "چاد": {
+  "en": "Chad",
+  "iso3": "TCD",
+  "ne": "Chad",
+  "lat": 15.33,
+  "lon": 18.58
+ },
+ "نیجر": {
+  "en": "Niger",
+  "iso3": "NER",
+  "ne": "Niger",
+  "lat": 17.35,
+  "lon": 9.32
+ },
+ "مالی": {
+  "en": "Mali",
+  "iso3": "MLI",
+  "ne": "Mali",
+  "lat": 17.27,
+  "lon": -3.54
+ },
+ "موریتانی": {
+  "en": "Mauritania",
+  "iso3": "MRT",
+  "ne": "Mauritania",
+  "lat": 20.21,
+  "lon": -10.33
+ },
+ "بورکینافاسو": {
+  "en": "Burkina Faso",
+  "iso3": "BFA",
+  "ne": "Burkina Faso",
+  "lat": 12.31,
+  "lon": -1.78
+ },
+ "گینه": {
+  "en": "Guinea",
+  "iso3": "GIN",
+  "ne": "Guinea",
+  "lat": 10.45,
+  "lon": -11.06
+ },
+ "سیرالئون": {
+  "en": "Sierra Leone",
+  "iso3": "SLE",
+  "ne": "Sierra Leone",
+  "lat": 8.53,
+  "lon": -11.8
+ },
+ "لیبریا": {
+  "en": "Liberia",
+  "iso3": "LBR",
+  "ne": "Liberia",
+  "lat": 6.43,
+  "lon": -9.41
+ },
+ "توگو": {
+  "en": "Togo",
+  "iso3": "TGO",
+  "ne": "Togo",
+  "lat": 8.44,
+  "lon": 1.0
+ },
+ "بنین": {
+  "en": "Benin",
+  "iso3": "BEN",
+  "ne": "Benin",
+  "lat": 9.65,
+  "lon": 2.34
+ },
+ "گابن": {
+  "en": "Gabon",
+  "iso3": "GAB",
+  "ne": "Gabon",
+  "lat": -0.65,
+  "lon": 11.69
+ },
+ "کنگو": {
+  "en": "Republic of the Congo",
+  "iso3": "COG",
+  "ne": "Republic of the Congo",
+  "lat": -0.84,
+  "lon": 15.13
+ },
+ "کنگو دموکراتیک": {
+  "en": "Dem. Rep. Congo",
+  "iso3": "COD",
+  "ne": "Democratic Republic of the Congo",
+  "lat": -2.85,
+  "lon": 23.58
+ },
+ "آفریقای مرکزی": {
+  "en": "Central African Republic",
+  "iso3": "CAF",
+  "ne": "Central African Republic",
+  "lat": 6.54,
+  "lon": 20.37
+ },
+ "اریتره": {
+  "en": "Eritrea",
+  "iso3": "ERI",
+  "ne": "Eritrea",
+  "lat": 15.43,
+  "lon": 38.68
+ },
+ "جیبوتی": {
+  "en": "Djibouti",
+  "iso3": "DJI",
+  "ne": "Djibouti",
+  "lat": 11.77,
+  "lon": 42.5
+ },
+ "سومالی": {
+  "en": "Somalia",
+  "iso3": "SOM",
+  "ne": "Somalia",
+  "lat": 4.75,
+  "lon": 45.73
+ },
+ "ماداگاسکار": {
+  "en": "Madagascar",
+  "iso3": "MDG",
+  "ne": "Madagascar",
+  "lat": -19.36,
+  "lon": 46.69
+ },
+ "موریس": {
+  "en": "Mauritius",
+  "iso3": "MUS",
+  "ne": null,
+  "lat": -20.28,
+  "lon": 57.57
+ },
+ "لسوتو": {
+  "en": "Lesotho",
+  "iso3": "LSO",
+  "ne": "Lesotho",
+  "lat": -29.63,
+  "lon": 28.17
+ },
+ "اسواتینی": {
+  "en": "eSwatini",
+  "iso3": "SWZ",
+  "ne": "Swaziland",
+  "lat": -26.49,
+  "lon": 31.4
+ },
+ "گامبیا": {
+  "en": "Gambia",
+  "iso3": "GMB",
+  "ne": "Gambia",
+  "lat": 13.48,
+  "lon": -15.43
+ },
+ "گینه بیسائو": {
+  "en": "Guinea-Bissau",
+  "iso3": "GNB",
+  "ne": "Guinea-Bissau",
+  "lat": 12.02,
+  "lon": -15.11
+ },
+ "گینه استوایی": {
+  "en": "Equatorial Guinea",
+  "iso3": "GNQ",
+  "ne": "Equatorial Guinea",
+  "lat": 1.65,
+  "lon": 10.37
+ },
+ "کیپ‌ورد": {
+  "en": "Cape Verde",
+  "iso3": "CPV",
+  "ne": null,
+  "lat": 15.12,
+  "lon": -23.61
+ },
+ "برزیل": {
+  "en": "Brazil",
+  "iso3": "BRA",
+  "ne": "Brazil",
+  "lat": -10.81,
+  "lon": -53.05
+ },
+ "آرژانتین": {
+  "en": "Argentina",
+  "iso3": "ARG",
+  "ne": "Argentina",
+  "lat": -35.22,
+  "lon": -65.15
+ },
+ "شیلی": {
+  "en": "Chile",
+  "iso3": "CHL",
+  "ne": "Chile",
+  "lat": -37.34,
+  "lon": -71.67
+ },
+ "کلمبیا": {
+  "en": "Colombia",
+  "iso3": "COL",
+  "ne": "Colombia",
+  "lat": 3.93,
+  "lon": -73.08
+ },
+ "پرو": {
+  "en": "Peru",
+  "iso3": "PER",
+  "ne": "Peru",
+  "lat": -9.19,
+  "lon": -74.39
+ },
+ "ونزوئلا": {
+  "en": "Venezuela",
+  "iso3": "VEN",
+  "ne": "Venezuela",
+  "lat": 7.16,
+  "lon": -66.16
+ },
+ "اکوادور": {
+  "en": "Ecuador",
+  "iso3": "ECU",
+  "ne": "Ecuador",
+  "lat": -1.45,
+  "lon": -78.38
+ },
+ "بولیوی": {
+  "en": "Bolivia",
+  "iso3": "BOL",
+  "ne": "Bolivia",
+  "lat": -16.73,
+  "lon": -64.64
+ },
+ "پاراگوئه": {
+  "en": "Paraguay",
+  "iso3": "PRY",
+  "ne": "Paraguay",
+  "lat": -23.25,
+  "lon": -58.39
+ },
+ "اوروگوئه": {
+  "en": "Uruguay",
+  "iso3": "URY",
+  "ne": "Uruguay",
+  "lat": -32.78,
+  "lon": -56.0
+ },
+ "گویان": {
+  "en": "Guyana",
+  "iso3": "GUY",
+  "ne": "Guyana",
+  "lat": 4.79,
+  "lon": -58.97
+ },
+ "سورینام": {
+  "en": "Suriname",
+  "iso3": "SUR",
+  "ne": "Suriname",
+  "lat": 4.12,
+  "lon": -55.91
+ },
+ "کوبا": {
+  "en": "Cuba",
+  "iso3": "CUB",
+  "ne": "Cuba",
+  "lat": 21.63,
+  "lon": -78.96
+ },
+ "هائیتی": {
+  "en": "Haiti",
+  "iso3": "HTI",
+  "ne": "Haiti",
+  "lat": 18.9,
+  "lon": -72.66
+ },
+ "دومینیکان": {
+  "en": "Dominican Republic",
+  "iso3": "DOM",
+  "ne": "Dominican Republic",
+  "lat": 18.88,
+  "lon": -70.46
+ },
+ "جامائیکا": {
+  "en": "Jamaica",
+  "iso3": "JAM",
+  "ne": "Jamaica",
+  "lat": 18.14,
+  "lon": -77.32
+ },
+ "ترینیداد و توباگو": {
+  "en": "Trinidad and Tobago",
+  "iso3": "TTO",
+  "ne": "Trinidad and Tobago",
+  "lat": 10.43,
+  "lon": -61.33
+ },
+ "کاستاریکا": {
+  "en": "Costa Rica",
+  "iso3": "CRI",
+  "ne": "Costa Rica",
+  "lat": 9.97,
+  "lon": -84.18
+ },
+ "پاناما": {
+  "en": "Panama",
+  "iso3": "PAN",
+  "ne": "Panama",
+  "lat": 8.53,
+  "lon": -80.11
+ },
+ "گواتمالا": {
+  "en": "Guatemala",
+  "iso3": "GTM",
+  "ne": "Guatemala",
+  "lat": 15.7,
+  "lon": -90.37
+ },
+ "هندوراس": {
+  "en": "Honduras",
+  "iso3": "HND",
+  "ne": "Honduras",
+  "lat": 14.82,
+  "lon": -86.59
+ },
+ "السالوادور": {
+  "en": "El Salvador",
+  "iso3": "SLV",
+  "ne": "El Salvador",
+  "lat": 13.73,
+  "lon": -88.87
+ },
+ "نیکاراگوئه": {
+  "en": "Nicaragua",
+  "iso3": "NIC",
+  "ne": "Nicaragua",
+  "lat": 12.85,
+  "lon": -85.02
+ },
+ "بلیز": {
+  "en": "Belize",
+  "iso3": "BLZ",
+  "ne": "Belize",
+  "lat": 17.2,
+  "lon": -88.7
+ },
+ "باهاماس": {
+  "en": "Bahamas",
+  "iso3": "BHS",
+  "ne": "The Bahamas",
+  "lat": 24.51,
+  "lon": -77.92
+ },
+ "باربادوس": {
+  "en": "Barbados",
+  "iso3": "BRB",
+  "ne": null,
+  "lat": 13.19,
+  "lon": -59.54
+ },
+ "استرالیا": {
+  "en": "Australia",
+  "iso3": "AUS",
+  "ne": "Australia",
+  "lat": -25.56,
+  "lon": 134.38
+ },
+ "نیوزیلند": {
+  "en": "New Zealand",
+  "iso3": "NZL",
+  "ne": "New Zealand",
+  "lat": -43.99,
+  "lon": 170.51
+ },
+ "پاپوآ گینه نو": {
+  "en": "Papua New Guinea",
+  "iso3": "PNG",
+  "ne": "Papua New Guinea",
+  "lat": -6.65,
+  "lon": 144.33
+ },
+ "فیجی": {
+  "en": "Fiji",
+  "iso3": "FJI",
+  "ne": "Fiji",
+  "lat": -17.83,
+  "lon": 178.0
+ },
+ "ساموآ": {
+  "en": "Samoa",
+  "iso3": "WSM",
+  "ne": null,
+  "lat": -13.75,
+  "lon": -172.1
+ },
+ "تونگا": {
+  "en": "Tonga",
+  "iso3": "TON",
+  "ne": null,
+  "lat": -21.18,
+  "lon": -175.2
+ },
+ "وانواتو": {
+  "en": "Vanuatu",
+  "iso3": "VUT",
+  "ne": "Vanuatu",
+  "lat": -15.22,
+  "lon": 166.91
+ },
+ "جزایر سلیمان": {
+  "en": "Solomon Islands",
+  "iso3": "SLB",
+  "ne": "Solomon Islands",
+  "lat": -7.9,
+  "lon": 159.1
+ },
+ "قزاقستان": {
+  "en": "Kazakhstan",
+  "iso3": "KAZ",
+  "ne": "Kazakhstan",
+  "lat": 48.19,
+  "lon": 67.28
+ },
+ "ازبکستان": {
+  "en": "Uzbekistan",
+  "iso3": "UZB",
+  "ne": "Uzbekistan",
+  "lat": 41.75,
+  "lon": 63.2
+ },
+ "ترکمنستان": {
+  "en": "Turkmenistan",
+  "iso3": "TKM",
+  "ne": "Turkmenistan",
+  "lat": 39.09,
+  "lon": 59.28
+ },
+ "تاجیکستان": {
+  "en": "Tajikistan",
+  "iso3": "TJK",
+  "ne": "Tajikistan",
+  "lat": 38.58,
+  "lon": 71.03
+ },
+ "قرقیزستان": {
+  "en": "Kyrgyzstan",
+  "iso3": "KGZ",
+  "ne": "Kyrgyzstan",
+  "lat": 41.51,
+  "lon": 74.62
+ },
+ "آذربایجان": {
+  "en": "Azerbaijan",
+  "iso3": "AZE",
+  "ne": "Azerbaijan",
+  "lat": 40.28,
+  "lon": 47.68
+ },
+ "ارمنستان": {
+  "en": "Armenia",
+  "iso3": "ARM",
+  "ne": "Armenia",
+  "lat": 40.22,
+  "lon": 45.0
+ },
+ "گرجستان": {
+  "en": "Georgia",
+  "iso3": "GEO",
+  "ne": "Georgia",
+  "lat": 42.16,
+  "lon": 43.48
+ }
+}
