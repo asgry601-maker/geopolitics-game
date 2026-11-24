@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>🔍 تست تشخیصی WebGL 1 — فاز A</title>
+<style>
+html, body { background: #0b1220; color: #e6ecf7; font-family: Tahoma, sans-serif; font-size: 14px; margin: 0; padding: 16px; }
+h2 { color: #ffd479; font-size: 16px; }
+.step { border: 1px solid #223252; border-radius: 10px; padding: 10px 14px; margin: 10px 0; background: #0e1626; }
+.pass { border-color: #2e7d4f; }
+.fail { border-color: #a03a45; }
+.t { font-weight: bold; }
+.ok { color: #7fd08f; } .bad { color: #ff9d9d; } .inf { color: #8fa8d4; }
+pre { background: #070b14; border: 1px solid #1c2a45; border-radius: 8px; padding: 8px;
+  font-size: 12px; white-space: pre-wrap; max-height: 220px; overflow-y: auto; }
+canvas { border: 1px solid #33486e; border-radius: 6px; margin: 6px 0; background: #000; }
+button { background: #2456a8; color: #fff; border: 0; border-radius: 8px; padding: 8px 16px;
+  font-family: Tahoma; font-size: 14px; cursor: pointer; margin: 4px 0; }
+.mut { color: #8395b5; font-size: 12px; }
+</style>
+</head>
+<body>
+<h2>🔍 تست تشخیصی مستقل WebGL 1 — علت نمایش نشدن کره را مشخص می‌کند</h2>
+<p class="mut">این صفحه بدون سرور و فقط با دابل‌کلیک اجرا می‌شود. کنار این فایل باید پوشه <b>lib</b> باشد.
+در پایان، روی «کپی گزارش» بزن و نتیجه را برای من بفرست.</p>
+<div id="steps"></div>
+<div class="step">
+  <div class="t">📋 خطاهای ثبت‌شده در همین صفحه</div>
+  <pre id="errlog">(هنوز خطایی ثبت نشده)</pre>
+  <button id="copyBtn">📋 کپی گزارش</button>
+  <span id="copyDone" class="ok"></span>
+</div>
+<script src="lib/three.min.js"></script>
+<script src="lib/globe.gl.min.js"></script>
+<script src="test-webgl.js"></script>
+</body>
+</html>
