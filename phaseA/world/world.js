@@ -111,7 +111,7 @@ function initGlobe() {
     .labelLat(function (d) { return d.lat; })
     .labelLng(function (d) { return d.lon; })
     .labelText(function (d) { return d.en; })
-    .labelSize(function (d) { return d.kind === 'prov' ? 0.32 : 0.45; })
+    .labelSize(function (d) { return d.kind === 'prov' ? (d.size || 0.18) : 0.45; })
     .labelDotRadius(function (d) { return d.kind === 'country' && d.point ? 0.28 : 0; })
     .labelColor(function (d) {
       if (d.kind === 'prov') return (PROV.sel === d.f) ? '#ffb347' : '#8ff0e5';
@@ -194,11 +194,22 @@ function provLabelsFor(iso) {
   var fs=(PROV.cache[iso]&&PROV.cache[iso].features)||[],candidates=[];
   for(var i=0;i<fs.length;i++){var f=fs[i],pp=(f&&f.properties)||{},pt=provLabelPoint(f),nm=pp.name_en||pp.name||pp.id;if(pt&&nm)candidates.push({f:f,en:String(nm),lat:pt.lat,lon:pt.lon,area:pt.area||0});}
   candidates.sort(function(a,b){return b.area-a.area;});
+  /* اندازه نوشته متناسب با مساحت واقعی تقریبی استان؛ تصحیح اثر عرض جغرافیایی */
+  var areas=[];
+  for(var ai=0;ai<candidates.length;ai++)areas.push(Math.max(0.000001,candidates[ai].area));
+  areas.sort(function(a,b){return a-b;});
+  var medianArea=areas.length?areas[Math.floor(areas.length/2)]:1;
   var out=[],minSep=0.35,maxLabels=90;
   for(var c=0;c<candidates.length&&out.length<maxLabels;c++){
     var d=candidates[c],keep=true;
     for(var j=0;j<out.length;j++){var r1=d.lat*Math.PI/180,r2=out[j].lat*Math.PI/180,dl=(d.lon-out[j].lon)*Math.PI/180,dp=r1-r2,a=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(r1)*Math.cos(r2)*Math.sin(dl/2)*Math.sin(dl/2),dist=2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))*180/Math.PI;if(dist<minSep){keep=false;break;}}
-    if(keep)out.push({kind:'prov',fa:SELECTED,iso3:iso,en:d.en,lat:d.lat,lon:d.lon,point:false,f:d.f});
+    if(keep){
+      var relative=Math.sqrt(Math.max(0.08,d.area/medianArea));
+      var size=Math.max(0.13,Math.min(0.34,0.29*relative));
+      var nameFactor=Math.min(1,Math.sqrt(14/Math.max(1,d.en.length)));
+      size=Math.max(0.11,size*nameFactor);
+      out.push({kind:'prov',fa:SELECTED,iso3:iso,en:d.en,lat:d.lat,lon:d.lon,area:d.area,size:size,point:false,f:d.f});
+    }
   }
   LBL_CACHE[iso]=out;return out;
 }
