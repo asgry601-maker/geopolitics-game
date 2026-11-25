@@ -204,10 +204,11 @@ function provLabelsFor(iso) {
     var d=candidates[c],keep=true;
     for(var j=0;j<out.length;j++){var r1=d.lat*Math.PI/180,r2=out[j].lat*Math.PI/180,dl=(d.lon-out[j].lon)*Math.PI/180,dp=r1-r2,a=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(r1)*Math.cos(r2)*Math.sin(dl/2)*Math.sin(dl/2),dist=2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))*180/Math.PI;if(dist<minSep){keep=false;break;}}
     if(keep){
-      var relative=Math.sqrt(Math.max(0.08,d.area/medianArea));
-      var size=Math.max(0.13,Math.min(0.34,0.29*relative));
+      /* استان‌های کوچک، مخصوصاً در کشورهای پرتراکم، برچسب کوچک‌تری می‌گیرند. */
+      var relative=Math.sqrt(Math.max(0.025,d.area/medianArea));
+      var size=Math.max(0.055,Math.min(0.32,0.27*relative));
       var nameFactor=Math.min(1,Math.sqrt(14/Math.max(1,d.en.length)));
-      size=Math.max(0.11,size*nameFactor);
+      size=Math.max(0.05,size*nameFactor);
       out.push({kind:'prov',fa:SELECTED,iso3:iso,en:d.en,lat:d.lat,lon:d.lon,area:d.area,size:size,point:false,f:d.f});
     }
   }
