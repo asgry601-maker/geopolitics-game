@@ -259,6 +259,9 @@ def _default_arsenal(rel_map):
     budgets = {1: 90, 2: 55, 3: 30, 4: 16, 5: 8}
     out = {}
     for name, c in COUNTRIES.items():
+        if name in ("اسکاتلند", "ولز", "ایرلند شمالی"):
+            out[name] = {}
+            continue
         if name in ARSENALS:
             out[name] = dict(ARSENALS[name])
             continue
@@ -421,9 +424,8 @@ def _migrate_uk_split(s):
     for name in ("اسکاتلند", "ولز", "ایرلند شمالی"):
         s["politics"].setdefault(name, dict(parties=dict(AI_PARTY_BASE), press=[]))
     s.setdefault("arsenal", {})
-    fresh = _default_arsenal(s["relations"])
     for name in ("اسکاتلند", "ولز", "ایرلند شمالی"):
-        s["arsenal"].setdefault(name, dict(fresh.get(name, {})))
+        s["arsenal"].setdefault(name, {})
         world[name].setdefault("_arsenal", s["arsenal"][name])
     s["country_split_version"] = 1
     return s
