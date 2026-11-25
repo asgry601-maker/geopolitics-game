@@ -110,12 +110,19 @@ function initGlobe() {
     .labelsData([])
     .labelLat(function (d) { return d.lat; })
     .labelLng(function (d) { return d.lon; })
-    .labelText(function (d) { return d.en; })   /* نام لاتین روی سطح کره (فونت تعبیه‌شده globe.gl فقط لاتین دارد) */
-    .labelSize(0.45)
-    .labelDotRadius(function (d) { return d.point ? 0.28 : 0; })
-    .labelColor(function (d) { return (d.fa === SELECTED) ? '#ffd166' : '#e8eef8'; })
-    .labelAltitude(0.012)
-    .onLabelClick(function (d) { selectCountry(d.fa); });
+    .labelText(function (d) { return d.en; })
+    .labelSize(function (d) { return d.kind === 'prov' ? 0.32 : 0.45; })
+    .labelDotRadius(function (d) { return d.kind === 'country' && d.point ? 0.28 : 0; })
+    .labelColor(function (d) {
+      if (d.kind === 'prov') return (PROV.sel === d.f) ? '#ffb347' : '#8ff0e5';
+      return (d.fa === SELECTED) ? '#ffd166' : '#e8eef8';
+    })
+    .labelAltitude(function (d) { return d.kind === 'prov' ? 0.018 : 0.012; })
+    .labelsTransitionDuration(0)
+    .onLabelClick(function (d) {
+      if (d.kind === 'prov') { PROV.taken = Date.now(); provSelect(d.f); }
+      else { selectCountry(d.fa); }
+    });
 
   var ctrl = globe.controls();
   ctrl.autoRotate = ROT;
@@ -133,18 +140,67 @@ function initGlobe() {
 
 function refreshPolygons() {
   if (!globe || !FEATS) return;
-  globe.polygonsData(FEATS.slice());   // ساخت مجدد برای اعمال رنگ‌بندی تازه
-  globe.labelsData(labelsList());
+  globe.polygonsData(FEATS.slice());
+  refreshLabels();
 }
-
+var LBL_COUNTRY = null, LBL_ALL = [], LBL_SIG = '', LBL_CACHE = {};
+var PROV_LABELS_ENABLED = true;
 function labelsList() {
+  if (LBL_COUNTRY) return LBL_COUNTRY;
   var out = [];
   if (!MAP) return out;
-  for (var fa in MAP) {
+  for (var fa in MAP) if (Object.prototype.hasOwnProperty.call(MAP, fa)) {
     var m = MAP[fa];
-    out.push({ fa: fa, en: m.en || fa, lat: m.lat, lon: m.lon, point: !m.ne });
+    out.push({ kind: 'country', fa: fa, en: m.en || fa, lat: m.lat, lon: m.lon, point: !m.ne });
   }
+  LBL_COUNTRY = out;
   return out;
+}
+function refreshLabels() {
+  if (!globe || !MAP) return;
+  var countries = labelsList(), provinces = [];
+  if (PROV_LABELS_ENABLED && PROV.on && PROV.iso && PROV.cache[PROV.iso]) provinces = provLabelsFor(PROV.iso);
+  var sig = (PROV_LABELS_ENABLED && PROV.on ? (PROV.iso || '') : '') + ':' + provinces.length;
+  if (sig === LBL_SIG && LBL_ALL.length === countries.length + provinces.length) return;
+  LBL_SIG = sig; LBL_ALL = countries.concat(provinces); globe.labelsData(LBL_ALL);
+}
+function provRingCentroid(ring) {
+  if (!ring || ring.length < 4) return null;
+  var a2=0,cx=0,cy=0;
+  for(var i=0;i<ring.length-1;i++){var j=i+1,x=ring[i][0],y=ring[i][1],xx=ring[j][0],yy=ring[j][1],cr=x*yy-xx*y;a2+=cr;cx+=(x+xx)*cr;cy+=(y+yy)*cr;}
+  if(Math.abs(a2)<1e-10)return null;
+  return {lon:cx/(3*a2),lat:cy/(3*a2),area:Math.abs(a2)/2};
+}
+function provLabelPoint(feature) {
+  var g=feature&&feature.geometry;if(!g||!g.coordinates)return null;
+  var polys=g.type==='Polygon'?[g.coordinates]:(g.type==='MultiPolygon'?g.coordinates:[]);
+  var best=null,bestArea=-1;
+  for(var p=0;p<polys.length;p++){var ring=polys[p]&&polys[p][0],c=provRingCentroid(ring);if(c&&c.area>bestArea){best=c;bestArea=c.area;}}
+  if(!best)return null;
+  if(!provHit(best.lat,best.lon,feature)){
+    var coords=polys[0]&&polys[0][0],lat=0,lon=0,count=0;if(!coords||!coords.length)return null;
+    for(var k=0;k<coords.length-1;k++){lon+=coords[k][0];lat+=coords[k][1];count++;}
+    if(!count)return null;best={lon:lon/count,lat:lat/count};
+    if(!provHit(best.lat,best.lon,feature)){
+      var minLon=Infinity,maxLon=-Infinity,minLat=Infinity,maxLat=-Infinity;
+      for(var q=0;q<coords.length;q++){minLon=Math.min(minLon,coords[q][0]);maxLon=Math.max(maxLon,coords[q][0]);minLat=Math.min(minLat,coords[q][1]);maxLat=Math.max(maxLat,coords[q][1]);}
+      best={lon:(minLon+maxLon)/2,lat:(minLat+maxLat)/2};if(!provHit(best.lat,best.lon,feature))return null;
+    }
+  }
+  return best;
+}
+function provLabelsFor(iso) {
+  if(LBL_CACHE[iso])return LBL_CACHE[iso];
+  var fs=(PROV.cache[iso]&&PROV.cache[iso].features)||[],candidates=[];
+  for(var i=0;i<fs.length;i++){var f=fs[i],pp=(f&&f.properties)||{},pt=provLabelPoint(f),nm=pp.name_en||pp.name||pp.id;if(pt&&nm)candidates.push({f:f,en:String(nm),lat:pt.lat,lon:pt.lon,area:pt.area||0});}
+  candidates.sort(function(a,b){return b.area-a.area;});
+  var out=[],minSep=0.35,maxLabels=90;
+  for(var c=0;c<candidates.length&&out.length<maxLabels;c++){
+    var d=candidates[c],keep=true;
+    for(var j=0;j<out.length;j++){var r1=d.lat*Math.PI/180,r2=out[j].lat*Math.PI/180,dl=(d.lon-out[j].lon)*Math.PI/180,dp=r1-r2,a=Math.sin(dp/2)*Math.sin(dp/2)+Math.cos(r1)*Math.cos(r2)*Math.sin(dl/2)*Math.sin(dl/2),dist=2*Math.atan2(Math.sqrt(a),Math.sqrt(Math.max(0,1-a)))*180/Math.PI;if(dist<minSep){keep=false;break;}}
+    if(keep)out.push({kind:'prov',fa:SELECTED,iso3:iso,en:d.en,lat:d.lat,lon:d.lon,point:false,f:d.f});
+  }
+  LBL_CACHE[iso]=out;return out;
 }
 
 /* ---------- شبکه ---------- */
@@ -411,10 +467,7 @@ function renderCountryPanel(r) {
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
 var LAST_COUNTRY_R = null;   /* آخرین داده پنل کشور — برای رندر مجدد پنل پس از انتخاب استان */
 var PROV = {
-  on: true,            /* نمایش مرز استان‌ها روشن/خاموش */
-  idx: null,           /* index.json — تنها منبع شناسایی فایل کشورها (پرلازی) */
-  cache: {},           /* ایزو۳ ⇒ FeatureCollection — لزی‑لودینگ + کش حافظه */
-  iso: null,           /* کشوری که مرز استان‌هایش هم‌اکنون روی کره است */
+  on: true, idx: null, cache: {}, iso: null, requestId: 0,           /* کشوری که مرز استان‌هایش هم‌اکنون روی کره است */
   sel: null,           /* استان انتخاب‌شده (یک feature) */
   layerObj: null,      /* گروه THREE الحاقی به صحنه (مرز انتخاب‌شده) */
   linesMesh: null, step: null, taken: 0
@@ -429,8 +482,7 @@ function provIso(fa) {
 
 function provName(p) {
   var pp = (p && p.properties) || p || {};
-  if (pp.country === 'IRN' && pp.name_fa) return pp.name_fa;   /* ایران = فارسی (داده موجود) */
-  return pp.name_en || pp.name_fa || pp.id || '—';
+  return pp.name_en || pp.name || pp.name_fa || pp.id || '—';
 }
 
 /* حلقه‌های بیرونی استان‌ها (حفره‌ها رسم نمی‌شوند — خوانایی مرز) + undo آنتی‌مریدین */
@@ -552,19 +604,13 @@ function provDisposeGroup() {
   PROV.layerObj = null; PROV.linesMesh = null;
 }
 
-function provShow(iso) {
+function provShow(iso, requestId) {
   if (!globe || !iso) return;
   provData(iso, function (gj) {
-    if (!gj || iso !== PROV.iso || !PROV.on) return;   /* تعویض کشور/خاموش‌سازی در حین لود */
-    provDisposeGroup();
-    var rings = provRings(gj);
-    if (!rings.length) return;
-    var grp = new THREE.Group();
-    var seg = provMakeLines(rings, provBuildAlt(), 0x2ee6d6, 0.7);
-    grp.add(seg);
-    PROV.linesMesh = seg;
-    PROV.layerObj = grp;
-    try { globe.scene().add(grp); } catch (e3) { /* محافظت */ }
+    if (!gj || iso !== PROV.iso || !PROV.on || requestId !== PROV.requestId) return;
+    provDisposeGroup(); var rings=provRings(gj);
+    if(rings.length){var grp=new THREE.Group(),seg=provMakeLines(rings,provBuildAlt(),0x2ee6d6,0.7);grp.add(seg);PROV.linesMesh=seg;PROV.layerObj=grp;try{globe.scene().add(grp);}catch(e3){}}
+    refreshLabels();
   });
 }
 
@@ -601,14 +647,15 @@ function provLoadIndex(cb) {
   }, function (st, tx) { flash('خطای بارگذاری فهرست استان‌ها: ' + netErrMsg(st, tx)); cb(false); });
 }
 
-function provOnCountryChange() {   /* انتخاب کشور عوض شد ← مرز قدیمی پاک، جدید ساخته */
-  PROV.sel = null;
-  if (!PROV.on) { provDisposeGroup(); PROV.iso = null; return; }
-  provLoadIndex(function (ok) {
-    if (!ok || !SELECTED) return;
-    var iso = provIso(SELECTED);
-    if (iso) { PROV.iso = iso; provShow(iso); }
-    else { provDisposeGroup(); PROV.iso = null; }   /* کشور بدون داده استان */
+function provOnCountryChange() {
+  var requestId=++PROV.requestId;PROV.sel=null;provDisposeGroup();LBL_SIG='';
+  if(!PROV.on){PROV.iso=null;refreshLabels();return;}
+  PROV.iso=null;refreshLabels();
+  provLoadIndex(function(ok){
+    if(!ok||requestId!==PROV.requestId||!SELECTED)return;
+    var iso=provIso(SELECTED);
+    if(iso){PROV.iso=iso;provShow(iso,requestId);}
+    else{provDisposeGroup();PROV.iso=null;refreshLabels();}
   });
 }
 
@@ -626,12 +673,7 @@ function provClear() {
   provRenderPanel();
 }
 
-function provOff() {   /* خاموش‌سازی کامل لایه */
-  PROV.sel = null;
-  provDisposeGroup();
-  PROV.iso = null;
-  provRenderPanel();
-}
+function provOff() {++PROV.requestId;PROV.sel=null;provDisposeGroup();PROV.iso=null;LBL_SIG='';refreshLabels();provRenderPanel();}
 
 function provPanelHtml() {
   if (!PROV.sel) return '';
