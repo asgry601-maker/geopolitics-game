@@ -143,7 +143,8 @@ function refreshPolygons() {
   globe.polygonsData(FEATS.slice());
   refreshLabels();
 }
-var LBL_COUNTRY = null, LBL_ALL = [], LBL_SIG = '', LBL_CACHE = {};
+var LBL_COUNTRY = null, LBL_ALL = [], LBL_ACTIVE_ISO = null, LBL_ACTIVE_PROV = null, LBL_CACHE = {};
+var LBL_EMPTY_PROV = [];
 var PROV_LABELS_ENABLED = true;
 function labelsList() {
   if (LBL_COUNTRY) return LBL_COUNTRY;
@@ -158,11 +159,18 @@ function labelsList() {
 }
 function refreshLabels() {
   if (!globe || !MAP) return;
-  var countries = labelsList(), provinces = [];
-  if (PROV_LABELS_ENABLED && PROV.on && PROV.iso && PROV.cache[PROV.iso]) provinces = provLabelsFor(PROV.iso);
-  var sig = (PROV_LABELS_ENABLED && PROV.on ? (PROV.iso || '') : '') + ':' + provinces.length;
-  if (sig === LBL_SIG && LBL_ALL.length === countries.length + provinces.length) return;
-  LBL_SIG = sig; LBL_ALL = countries.concat(provinces); globe.labelsData(LBL_ALL);
+  var countries = labelsList(), provinces = LBL_EMPTY_PROV, iso = null;
+  if (PROV_LABELS_ENABLED && PROV.on && PROV.iso && PROV.cache[PROV.iso]) {
+    iso = PROV.iso;
+    provinces = provLabelsFor(iso);
+  }
+  /* مقایسهٔ هویت آرایه‌ها، نه فقط تعداد؛ از بازسازی بی‌دلیل TextGeometry جلوگیری می‌کند. */
+  if (countries === LBL_COUNTRY && provinces === LBL_ACTIVE_PROV && iso === LBL_ACTIVE_ISO) return;
+  LBL_ACTIVE_ISO = iso;
+  LBL_ACTIVE_PROV = provinces;
+  /* وقتی استان فعالی نداریم، همان آرایهٔ ثابت کشورها را نگه می‌داریم. */
+  LBL_ALL = provinces.length ? countries.concat(provinces) : countries;
+  globe.labelsData(LBL_ALL);
 }
 function provRingCentroid(ring) {
   if (!ring || ring.length < 4) return null;
@@ -209,7 +217,7 @@ function provLabelsFor(iso) {
       var size=Math.max(0.055,Math.min(0.32,0.27*relative));
       var nameFactor=Math.min(1,Math.sqrt(14/Math.max(1,d.en.length)));
       size=Math.max(0.05,size*nameFactor);
-      out.push({kind:'prov',fa:SELECTED,iso3:iso,en:d.en,lat:d.lat,lon:d.lon,area:d.area,size:size,point:false,f:d.f});
+      out.push({kind:'prov',iso3:iso,en:d.en,lat:d.lat,lon:d.lon,area:d.area,size:size,point:false,f:d.f});
     }
   }
   LBL_CACHE[iso]=out;return out;
@@ -660,8 +668,7 @@ function provLoadIndex(cb) {
 }
 
 function provOnCountryChange() {
-  var requestId=++PROV.requestId;PROV.sel=null;provDisposeGroup();LBL_SIG='';
-  if(!PROV.on){PROV.iso=null;refreshLabels();return;}
+  var requestId=++PROV.requestId;PROV.sel=null;provDisposeGroup();if(!PROV.on){PROV.iso=null;refreshLabels();return;}
   PROV.iso=null;refreshLabels();
   provLoadIndex(function(ok){
     if(!ok||requestId!==PROV.requestId||!SELECTED)return;
@@ -685,7 +692,7 @@ function provClear() {
   provRenderPanel();
 }
 
-function provOff() {++PROV.requestId;PROV.sel=null;provDisposeGroup();PROV.iso=null;LBL_SIG='';refreshLabels();provRenderPanel();}
+function provOff() {++PROV.requestId;PROV.sel=null;provDisposeGroup();PROV.iso=null;refreshLabels();provRenderPanel();}
 
 function provPanelHtml() {
   if (!PROV.sel) return '';
