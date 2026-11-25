@@ -192,7 +192,7 @@ function provLabelPoint(feature) {
 function provLabelsFor(iso) {
   if(LBL_CACHE[iso])return LBL_CACHE[iso];
   var fs=(PROV.cache[iso]&&PROV.cache[iso].features)||[],candidates=[];
-  for(var i=0;i<fs.length;i++){var f=fs[i],pp=(f&&f.properties)||{},pt=provLabelPoint(f),nm=pp.name_en||pp.name||pp.id;if(pt&&nm)candidates.push({f:f,en:String(nm),lat:pt.lat,lon:pt.lon,area:pt.area||0});}
+  for(var i=0;i<fs.length;i++){var f=fs[i],pp=(f&&f.properties)||{},pt=provLabelPoint(f),nm=pp.name_en||pp.name||pp.id;if(pt&&nm)candidates.push({f:f,en:String(nm),lat:pt.lat,lon:pt.lon,area:(pt.area||0)*Math.max(0.15,Math.cos(pt.lat*Math.PI/180))});}
   candidates.sort(function(a,b){return b.area-a.area;});
   /* اندازه نوشته متناسب با مساحت واقعی تقریبی استان؛ تصحیح اثر عرض جغرافیایی */
   var areas=[];
