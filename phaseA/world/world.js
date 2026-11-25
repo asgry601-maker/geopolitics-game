@@ -117,7 +117,7 @@ function initGlobe() {
       if (d.kind === 'prov') return (PROV.sel === d.f) ? '#ffb347' : '#8ff0e5';
       return (d.fa === SELECTED) ? '#ffd166' : '#e8eef8';
     })
-    .labelAltitude(function (d) { return d.kind === 'prov' ? 0.018 : 0.012; })
+    .labelAltitude(function (d) { return d.kind === 'prov' ? 0.07 : 0.012; })
     .labelsTransitionDuration(0)
     .onLabelClick(function (d) {
       if (d.kind === 'prov') { PROV.taken = Date.now(); provSelect(d.f); }
