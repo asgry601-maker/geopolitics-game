@@ -1,23 +1,23 @@
 {
-  "schema_version": "1.8.0",
+  "schema_version": "1.9.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 54,
-    "pending_countries": 120,
+    "researched_countries": 61,
+    "pending_countries": 113,
     "last_batch": [
-      "IRQ",
-      "SYR",
-      "LBN",
-      "JOR",
-      "PSE",
-      "QAT",
-      "KWT"
+      "BHR",
+      "OMN",
+      "YEM",
+      "LBY",
+      "TUN",
+      "ISL",
+      "SVK"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -2487,59 +2487,513 @@
     "BHR": {
       "country_name_fa": "بحرین",
       "country_name_en": "Bahrain",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_constitutional_hereditary_monarchy_bicameral_parliament",
+      "government_model": "پادشاهی موروثی با پادشاه در رأس قوه مجریه؛ مجلس ملی دو مجلسی است و شورای نمایندگان انتخابی در کنار شورای شورا با اعضای منصوب پادشاه فعالیت می‌کند. احزاب به شکل رسمی مجاز نیستند و انجمن‌های سیاسی ثبت‌شده فعالیت می‌کنند.",
+      "parties": [
+        {
+          "id": "bhr_al_asalah",
+          "name_fa": "جمعیت اصالت اسلامی",
+          "name_en": "Al Asalah Islamic Society",
+          "entity_type": "political_association",
+          "political_role": "انجمن سیاسی سلفی و محافظه‌کار؛ در پارلمان و سیاست اجتماعی نقش داشته است.",
+          "ideological_profile": "سلفی‌گری سیاسی و محافظه‌کاری اجتماعی",
+          "legal_status": "political_association",
+          "confidence": "medium"
+        },
+        {
+          "id": "bhr_minbar",
+          "name_fa": "انجمن تریبون ملی اسلامی",
+          "name_en": "Islamic National Tribune Society (Al-Minbar)",
+          "entity_type": "political_association",
+          "political_role": "انجمن سیاسی اسلام‌گرای سنی نزدیک به جریان اخوان‌المسلمین بحرین؛ در پارلمان حضور داشته است.",
+          "ideological_profile": "اسلام‌گرایی سنی و محافظه‌کاری",
+          "legal_status": "political_association",
+          "confidence": "medium"
+        },
+        {
+          "id": "bhr_waad",
+          "name_fa": "جمعیت عمل ملی دموکراتیک",
+          "name_en": "National Democratic Action Society (Wa'ad)",
+          "entity_type": "political_association",
+          "political_role": "جریان چپ‌گرا و سکولار مخالف؛ فعالیت آن در سال‌های اخیر با محدودیت و انحلال مواجه شده است.",
+          "ideological_profile": "چپ‌گرایی، سکولاریسم و اصلاحات دموکراتیک",
+          "legal_status": "dissolved_or_restricted",
+          "confidence": "medium"
+        },
+        {
+          "id": "bhr_al_wifaq",
+          "name_fa": "جمعیت وفاق ملی اسلامی",
+          "name_en": "Al-Wefaq National Islamic Society",
+          "entity_type": "political_association",
+          "political_role": "بزرگ‌ترین جریان مخالف شیعه؛ در ۲۰۱۶ منحل شد و در انتخابات ۲۰۲۲ نیز شرکت نداشت.",
+          "ideological_profile": "اسلام‌گرایی شیعی و مطالبه اصلاحات سیاسی و نمایندگی",
+          "legal_status": "dissolved_2016",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bhr_ruling_family",
+          "name_fa": "خاندان حاکم آل خلیفه",
+          "name_en": "Al Khalifa ruling family",
+          "entity_type": "ruling_family_network",
+          "policy_positions": {
+            "governance": "حفظ سلطنت و تمرکز تصمیم‌گیری در پادشاه و دولت؛ مدیریت اصلاحات نهادی از بالا."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_sunni_progovernment",
+          "name_fa": "جریان‌های سنی حامی دولت",
+          "name_en": "Pro-government Sunni political currents",
+          "entity_type": "cross_association_current",
+          "policy_positions": {
+            "governance": "حمایت از ساختار سلطنت و مشارکت در نهادهای رسمی؛ گرایش‌های مذهبی و اقتصادی متنوع."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bhr_shia_opposition",
+          "name_fa": "جریان‌های مخالف شیعه",
+          "name_en": "Shia opposition currents",
+          "entity_type": "cross_association_current",
+          "policy_positions": {
+            "representation": "مطالبه مشارکت سیاسی برابر، آزادی زندانیان سیاسی و اصلاح ساختار انتخاباتی؛ بخشی از این جریان‌ها ممنوع یا محدودند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_liberal_left",
+          "name_fa": "جریان‌های لیبرال و چپ",
+          "name_en": "Liberal and left political currents",
+          "entity_type": "cross_association_current",
+          "policy_positions": {
+            "governance": "اصلاحات قانون اساسی، آزادی‌های مدنی و گسترش پاسخ‌گویی دولت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bhr_king",
+          "name_fa": "پادشاه و دربار",
+          "name_en": "King and Royal Court",
+          "role": "مرکز اصلی قدرت سیاسی و انتصاب‌های کلیدی؛ حمد بن عیسی آل خلیفه پادشاه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_crown_prince_pm",
+          "name_fa": "ولیعهد و نخست‌وزیر",
+          "name_en": "Crown Prince and Prime Minister",
+          "role": "سلمان بن حمد آل خلیفه هم ولیعهد و هم نخست‌وزیر است و نقش محوری در اداره دولت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_council_representatives",
+          "name_fa": "شورای نمایندگان",
+          "name_en": "Council of Representatives",
+          "role": "مجلس منتخب ۴۰ نفره؛ دوره آن با فرمان سلطنتی تا دسامبر ۲۰۲۷ تمدید شده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_shura_council",
+          "name_fa": "شورای شورا",
+          "name_en": "Shura Council",
+          "role": "مجلس ۴۰ نفره منصوب پادشاه؛ در قانون‌گذاری با شورای نمایندگان مشارکت می‌کند.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhr_security",
+          "name_fa": "نهادهای امنیتی و وزارت کشور",
+          "name_en": "Security institutions and Ministry of Interior",
+          "role": "نهادهای مهم در امنیت داخلی و مدیریت اعتراضات و نظم عمومی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Hamad bin Isa Al Khalifa",
+        "prime_minister": "Salman bin Hamad Al Khalifa",
+        "parliament": "National Assembly",
+        "status": "دوره دو مجلس تا دسامبر ۲۰۲۷ تمدید شده است؛ انتخابات بعدی بر اساس برنامه فعلی در نوامبر ۲۰۲۷ انتظار می‌رود."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "political_reform",
+          "sectarian_representation",
+          "public_finance",
+          "oil_and_aluminium",
+          "relations_with_saudi_arabia",
+          "relations_with_iran",
+          "civil_liberties",
+          "parliamentary_competition"
+        ],
+        "rule": "انجمن‌های سیاسی را معادل احزاب آزاد و رقابتی فرض نکن؛ انجمن‌های منحل‌شده را در گروه‌های فعال ثبت نکن و وضعیت حقوقی آنها را جدا نگه دار."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Bahrain 2022 Council of Representatives election",
+            "url": "https://data.ipu.org/parliament/BH/BH-LC01/election/BH-LC01-E20221112/",
+            "date": "2022-11-12"
+          },
+          {
+            "name": "International IDEA — Bahrain election schedule update",
+            "url": "https://www.idea.int/democracytracker/elections-list",
+            "date": "2026-11-01"
+          }
+        ],
+        "notes": "احزاب رسمی در بحرین مجاز نیستند؛ ساختار سیاسی با انجمن‌های سیاسی ثبت‌شده و جریان‌های غیررسمی مدل شده است. تمدید دوره پارلمان تا دسامبر ۲۰۲۷ طبق فرمان سلطنتی ۲۹ آوریل ۲۰۲۶ انجام شده است. وفاق در ۲۰۱۶ منحل شد و نباید به‌عنوان حزب فعال یا گروه پارلمانی فعلی نمایش داده شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "bhr_al_asalah_group",
+          "name_en": "Al Asalah parliamentary current",
+          "party_id": "bhr_al_asalah"
+        },
+        {
+          "id": "bhr_minbar_group",
+          "name_en": "Al-Minbar parliamentary current",
+          "party_id": "bhr_minbar"
+        }
+      ]
     },
     "OMN": {
       "country_name_fa": "عمان",
       "country_name_en": "Oman",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "hereditary_absolute_monarchy_with_bicameral_consultative_council",
+      "government_model": "سلطنت موروثی با تمرکز قدرت در سلطان؛ شورای عمان از مجلس شورا با اعضای منتخب و مجلس دولت با اعضای منصوب تشکیل شده است. احزاب سیاسی رقابتی وجود ندارند.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "omn_al_said",
+          "name_fa": "خاندان آل‌سعید و دربار سلطنتی",
+          "name_en": "Al Said ruling family and Royal Court",
+          "entity_type": "ruling_family_network",
+          "policy_positions": {
+            "governance": "حفظ ثبات سلطنت، تمرکز تصمیم‌گیری در سلطان و اجرای تدریجی اصلاحات اداری."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "omn_technocrats",
+          "name_fa": "شبکه تکنوکرات‌های دولت",
+          "name_en": "Government technocratic network",
+          "entity_type": "elite_network",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "economy": "تنوع‌بخشی اقتصادی، اجرای چشم‌انداز عمان ۲۰۴۰، توسعه لجستیک، گردشگری و سرمایه‌گذاری."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "omn_shura_independents",
+          "name_fa": "نمایندگان مستقل مجلس شورا",
+          "name_en": "Shura Council independent representatives",
+          "entity_type": "parliamentary_current",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "governance": "طرح مطالبات حوزه‌های انتخابیه، نظارت و اصلاحات خدمات عمومی در چارچوب اختیارات محدود مجلس."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "omn_regional_social",
+          "name_fa": "شبکه‌های اجتماعی و منطقه‌ای",
+          "name_en": "Regional and social networks",
+          "entity_type": "social_network",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "domestic": "نمایندگی مطالبات محلی، اشتغال، خدمات و توازن مناطق؛ بدون سازمان حزبی سراسری."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "omn_sultan",
+          "name_fa": "سلطان و دربار",
+          "name_en": "Sultan and Royal Court",
+          "role": "مرکز اصلی قدرت و فرمانده کل نیروهای مسلح؛ هیثم بن طارق سلطان عمان است.",
+          "confidence": "high"
+        },
+        {
+          "id": "omn_council_ministers",
+          "name_fa": "شورای وزیران",
+          "name_en": "Council of Ministers",
+          "role": "دولت مجری سیاست‌های کشور و مسئول اداره وزارتخانه‌ها؛ زیر نظر سلطان.",
+          "confidence": "high"
+        },
+        {
+          "id": "omn_shura",
+          "name_fa": "مجلس شورا",
+          "name_en": "Shura Council",
+          "role": "مجلس منتخب با نقش مشورتی و قانون‌گذاری در حدود مقرر در قانون اساسی؛ اعضا از طریق انتخابات انتخاب می‌شوند.",
+          "confidence": "high"
+        },
+        {
+          "id": "omn_state_council",
+          "name_fa": "مجلس دولت",
+          "name_en": "State Council",
+          "role": "مجلس علیا با اعضای منصوب فرمان سلطنتی.",
+          "confidence": "high"
+        },
+        {
+          "id": "omn_security",
+          "name_fa": "نهادهای امنیتی و نیروهای مسلح",
+          "name_en": "Security institutions and Armed Forces",
+          "role": "نهادهای کلیدی در امنیت داخلی و سیاست خارجی؛ فرماندهی عالی با سلطان است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "sultan": "Haitham bin Tariq Al Said",
+        "head_of_government": "Sultan Haitham bin Tariq",
+        "prime_minister": null,
+        "legislature": "Council of Oman",
+        "status": "سلطان ریاست دولت را نیز بر عهده دارد؛ مجلس شورا منتخب و مجلس دولت منصوب است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "vision_2040",
+          "oil_and_gas_revenue",
+          "youth_employment",
+          "fiscal_reform",
+          "regional_mediation",
+          "relations_with_iran",
+          "relations_with_gcc",
+          "shura_council_oversight"
+        ],
+        "rule": "برای عمان حزب یا اپوزیسیون پارلمانی ساختگی نساز؛ مجلس شورا و شبکه‌های اجتماعی را به‌عنوان کانال‌های محدود مشارکت و مطالبه‌گری مدل کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Oman Ministry of Foreign Affairs — The Basic Statute of the State",
+            "url": "https://www.fm.gov.om/en/about-oman/government/constitution/",
+            "date": "2026-11-26"
+          },
+          {
+            "name": "Oman Ministry of Foreign Affairs — Government and Council of Oman",
+            "url": "https://www.fm.gov.om/en/about-oman/government/",
+            "date": "2026-11-26"
+          }
+        ],
+        "notes": "قانون اساسی عمان شورای عمان را با دو مجلس تعریف می‌کند: مجلس شورا با اعضای منتخب و مجلس دولت با اعضای منصوب. این ساختار به معنی نظام چندحزبی نیست؛ احزاب سیاسی رقابتی وجود ندارند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "omn_shura_council",
+          "name_en": "Shura Council elected members",
+          "role": "elected consultative chamber"
+        },
+        {
+          "id": "omn_state_council",
+          "name_en": "State Council appointed members",
+          "role": "appointed upper chamber"
+        }
+      ]
     },
     "YEM": {
       "country_name_fa": "یمن",
       "country_name_en": "Yemen",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "fragmented_transitional_republic_with_competing_de_facto_authorities",
+      "government_model": "جمهوری انتقالی با اقتدار منقسم؛ مجلس رهبری ریاست‌جمهوری و دولت مورد شناسایی بین‌المللی در بخش‌هایی از کشور فعالیت می‌کنند، در حالی که حوثی‌ها در صنعا و بخش‌های پرجمعیت شمالی ساختار حاکم موازی دارند. انتخابات سراسری برگزار نشده است.",
+      "parties": [
+        {
+          "id": "yem_gpc",
+          "name_fa": "کنگره عمومی خلق",
+          "name_en": "General People's Congress (GPC)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی حاکم در دوره علی عبدالله صالح؛ پس از جنگ به جناح‌ها و شبکه‌های رقیب تقسیم شده است.",
+          "ideological_profile": "ملی‌گرایی یمنی، عمل‌گرایی و شبکه‌های patronage",
+          "legal_status": "political_activity_fragmented",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_islah",
+          "name_fa": "حزب تجمع اصلاح یمن",
+          "name_en": "Yemeni Congregation for Reform (Islah)",
+          "entity_type": "party",
+          "political_role": "حزب اسلام‌گرای سنی و یکی از مهم‌ترین جریان‌های سیاسی در اردوگاه دولت مورد شناسایی بین‌المللی.",
+          "ideological_profile": "اسلام‌گرایی سنی، محافظه‌کاری و ائتلاف‌گرایی",
+          "legal_status": "operating_but_conflict_affected",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_nasserite",
+          "name_fa": "سازمان وحدت‌گراهای ناصری",
+          "name_en": "Nasserist Unionist People's Organisation",
+          "entity_type": "party",
+          "political_role": "حزب کوچک‌تر ملی‌گرا و ناصری با حضور در ائتلاف‌های سیاسی دولت.",
+          "ideological_profile": "ناصریسم، جمهوری‌خواهی و ملی‌گرایی عربی",
+          "legal_status": "operating_but_conflict_affected",
+          "confidence": "medium"
+        },
+        {
+          "id": "yem_baath",
+          "name_fa": "حزب بعث سوسیالیست عرب",
+          "name_en": "Arab Socialist Ba'ath Party – Yemen",
+          "entity_type": "party",
+          "political_role": "جریان کوچک‌تر بعثی و ملی‌گرای عرب؛ نفوذ آن در ساختارهای سیاسی پراکنده است.",
+          "ideological_profile": "بعثیسم و ملی‌گرایی عربی",
+          "legal_status": "operating_but_conflict_affected",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "yem_presidential_leadership",
+          "name_fa": "مجلس رهبری ریاست‌جمهوری",
+          "name_en": "Presidential Leadership Council (PLC)",
+          "entity_type": "transitional_governing_council",
+          "policy_positions": {
+            "governance": "ائتلافی از رهبران و نمایندگان جریان‌های ضدحوثی با اختلافات داخلی؛ ریاست آن با رشاد العلیمی است.",
+            "foreign_policy": "وابستگی دیپلماتیک و مالی قابل توجه به عربستان و حمایت بین‌المللی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "yem_houthi_authority",
+          "name_fa": "انصارالله و حاکمیت صنعا",
+          "name_en": "Ansar Allah / Sana'a de facto authorities",
+          "entity_type": "de_facto_governing_movement",
+          "policy_positions": {
+            "governance": "ساختار حاکم موازی در صنعا و بخش‌هایی از شمال؛ مبتنی بر رهبری جنبش و نهادهای منصوب.",
+            "foreign_policy": "روابط نزدیک با ایران و مواضع تقابلی با اسرائیل و ائتلاف‌های غربی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "yem_southern_currents",
+          "name_fa": "جریان‌های سیاسی جنوب و مطالبه‌گران خودمختاری",
+          "name_en": "Southern political and autonomy currents",
+          "entity_type": "regional_political_current",
+          "policy_positions": {
+            "territorial": "مطالبه خودمختاری یا استقلال جنوب و بازتعریف ساختار دولت؛ پس از فروپاشی شورای انتقالی جنوب در ۲۰۲۶، جریان‌های جنوبی پراکنده و چندپاره‌اند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "yem_gpc_splits",
+          "name_fa": "شاخه‌ها و شبکه‌های منشعب کنگره عمومی خلق",
+          "name_en": "Fragmented GPC networks",
+          "entity_type": "intraparty_network",
+          "policy_positions": {
+            "governance": "شبکه‌های مختلف حزب در مناطق تحت کنترل دولت و حوثی‌ها و در تبعید؛ مواضع و پیوندهای سیاسی یکسان نیست."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "yem_local_tribal",
+          "name_fa": "شبکه‌های قبیله‌ای و محلی",
+          "name_en": "Tribal and local networks",
+          "entity_type": "local_power_network",
+          "policy_positions": {
+            "governance": "نفوذ محلی و میانجی‌گری اجتماعی؛ مواضع آنها بر اساس منطقه و موازنه‌های محلی متغیر است."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "yem_plc",
+          "name_fa": "مجلس رهبری ریاست‌جمهوری",
+          "name_en": "Presidential Leadership Council",
+          "role": "بالاترین نهاد اجرایی دولت مورد شناسایی بین‌المللی؛ رشاد العلیمی رئیس آن است.",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_cabinet",
+          "name_fa": "دولت شایع الزندانی",
+          "name_en": "Shaya al-Zindani Cabinet",
+          "role": "دولت منصوب PLC؛ نخست‌وزیر از ژانویه ۲۰۲۶ شایع محسن الزندانی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_houthi_sana",
+          "name_fa": "نهادهای حاکم در صنعا",
+          "name_en": "Sana'a de facto governing institutions",
+          "role": "ساختار اجرایی و امنیتی حوثی‌ها در مناطق تحت کنترل آنها؛ خارج از دولت مورد شناسایی بین‌المللی.",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_parliament",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "پارلمان منتخب قدیمی با فعالیت محدود و منقسم؛ فاقد انتخابات جدید و نمایندگی کامل مناطق کشور.",
+          "confidence": "high"
+        },
+        {
+          "id": "yem_regional_backers",
+          "name_fa": "حامیان منطقه‌ای و میانجی‌ها",
+          "name_en": "Regional patrons and mediators",
+          "role": "عربستان، امارات، ایران و سازمان ملل بر موازنه سیاسی و روند مذاکرات اثرگذارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "plc_chairman": "Rashad al-Alimi",
+        "prime_minister": "Shaya Mohsen Zindani",
+        "de_facto_sanaa_leader": "Abdul-Malik al-Houthi",
+        "status": "دولت مورد شناسایی بین‌المللی و حاکمیت حوثی‌ها هم‌زمان وجود دارند؛ شورای انتقالی جنوب در ۲۰۲۶ فروپاشید و نیروهای سیاسی جنوب همچنان پراکنده‌اند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "national_unity_and_federalism",
+          "ceasefire_and_peace_process",
+          "humanitarian_access",
+          "oil_and_revenue_sharing",
+          "relations_with_saudi_arabia",
+          "relations_with_iran",
+          "southern_autonomy",
+          "public_services"
+        ],
+        "rule": "یمن را به‌صورت یک دولت یکپارچه با کنترل کامل مدل نکن؛ بازیگران دولت، حوثی‌ها، شبکه‌های محلی و جریان‌های جنوب باید جداگانه و با کنترل سرزمینی متفاوت شبیه‌سازی شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — Yemen 2026: Southern Transitional Council's fall and renewed conflict",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10427/",
+            "date": "2026-10-05"
+          },
+          {
+            "name": "Reuters — Yemen appoints Shaya al-Zindani as new prime minister",
+            "url": "https://www.reuters.com/world/middle-east/yemen-accepts-prime-ministers-resignation-appoints-foreign-minister-new-pm-2026-01-15/",
+            "date": "2026-01-15"
+          },
+          {
+            "name": "Associated Press — Yemen's ruling council names new cabinet after southern clashes",
+            "url": "https://apnews.com/article/af7b34220d94bb8a8ad41a53be24251e",
+            "date": "2026-02-06"
+          }
+        ],
+        "notes": "داده‌های ۵ نوامبر ۲۰۲۶ به بعد از نظر زمانی برای snapshot استفاده نشده‌اند. گزارش اکتبر ۲۰۲۶ فروپاشی شورای انتقالی جنوب و ازسرگیری درگیری‌ها را ثبت می‌کند. حوثی‌ها به‌عنوان حاکمیت بالفعل در مناطق تحت کنترل، نه دولت مورد شناسایی بین‌المللی، ثبت شده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "yem_gpc_network",
+          "name_en": "General People's Congress networks",
+          "party_id": "yem_gpc"
+        },
+        {
+          "id": "yem_islah_network",
+          "name_en": "Islah political bloc",
+          "party_id": "yem_islah"
+        }
+      ]
     },
     "TUR": {
       "country_name_fa": "ترکیه",
@@ -2944,40 +3398,423 @@
     "LBY": {
       "country_name_fa": "لیبی",
       "country_name_en": "Libya",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "divided_transitional_republic_with_competing_governments",
+      "government_model": "جمهوری انتقالی با دو مرکز رقیب قدرت در غرب و شرق؛ دولت وحدت ملی در طرابلس از شناسایی بین‌المللی برخوردار است و دولت ثبات ملی در شرق با حمایت مجلس نمایندگان و نیروهای خلیفه حفتر فعالیت می‌کند. انتخابات ملی از ۲۰۲۱ به تعویق افتاده است.",
+      "parties": [
+        {
+          "id": "lby_justice_construction",
+          "name_fa": "حزب عدالت و سازندگی",
+          "name_en": "Justice and Construction Party",
+          "entity_type": "party",
+          "political_role": "حزب اسلام‌گرای نزدیک به اخوان‌المسلمین لیبی و بازیگر سیاسی پس از ۲۰۱۱.",
+          "ideological_profile": "اسلام‌گرایی سیاسی و محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lby_national_forces",
+          "name_fa": "ائتلاف نیروهای ملی",
+          "name_en": "National Forces Alliance",
+          "entity_type": "electoral_coalition",
+          "political_role": "ائتلاف ملی‌گرا و سکولار مرتبط با محمود جبریل؛ نفوذ آن در دوره‌های اخیر کاهش یافته و شبکه‌هایش پراکنده‌اند.",
+          "ideological_profile": "ملی‌گرایی لیبیایی، سکولاریسم و میانه‌روی",
+          "legal_status": "political_network_fragmented",
+          "confidence": "medium"
+        },
+        {
+          "id": "lby_national_front",
+          "name_fa": "حزب جبهه ملی",
+          "name_en": "National Front Party",
+          "entity_type": "party",
+          "political_role": "حزب ملی‌گرا و جمهوری‌خواه با ریشه در مخالفان حکومت قذافی.",
+          "ideological_profile": "جمهوری‌خواهی و ملی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lby_union_homeland",
+          "name_fa": "حزب اتحاد برای میهن",
+          "name_en": "Union for the Homeland",
+          "entity_type": "party",
+          "political_role": "حزب سیاسی کوچک‌تر و سکولار با حضور در سیاست پس از ۲۰۱۱.",
+          "ideological_profile": "سکولاریسم و ملی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lby_tripoli_gnu",
+          "name_fa": "دولت وحدت ملی و شبکه‌های غرب لیبی",
+          "name_en": "Government of National Unity and western networks",
+          "entity_type": "governing_coalition",
+          "policy_positions": {
+            "governance": "حفظ دولت مستقر در طرابلس و مخالفت با جایگزینی آن بدون توافق سیاسی؛ متکی به ائتلافی از شبکه‌های سیاسی و محلی غرب."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lby_east_hoR_gns",
+          "name_fa": "مجلس نمایندگان و دولت ثبات ملی شرق",
+          "name_en": "House of Representatives and Government of National Stability",
+          "entity_type": "rival_governing_coalition",
+          "policy_positions": {
+            "governance": "حمایت از تشکیل دولت یکپارچه جدید برای برگزاری انتخابات؛ پایگاه سیاسی در شرق و بخش‌هایی از جنوب."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lby_haftar_network",
+          "name_fa": "شبکه سیاسی و نظامی خلیفه حفتر",
+          "name_en": "Khalifa Haftar political-military network",
+          "entity_type": "power_network",
+          "policy_positions": {
+            "security": "تمرکز قدرت امنیتی در شرق و نقش محوری فرماندهی ارتش ملی لیبی؛ نفوذ خانوادگی و نهادی گسترده."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lby_high_state_council",
+          "name_fa": "شورای عالی دولت",
+          "name_en": "High State Council",
+          "entity_type": "constitutional_advisory_body",
+          "policy_positions": {
+            "governance": "نهاد مشورتی و سیاسی برآمده از توافق لیبی؛ در اختلاف بر سر قوانین انتخاباتی و دولت وحدت نقش دارد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lby_misrata_local",
+          "name_fa": "شبکه‌های سیاسی و اجتماعی مصراته",
+          "name_en": "Misrata political and civic networks",
+          "entity_type": "regional_current",
+          "policy_positions": {
+            "governance": "تأکید بر مشارکت در دولت مرکزی، امنیت محلی و مخالفت با توافق‌های انحصاری میان نخبگان شرق و غرب."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "lby_south_local",
+          "name_fa": "جریان‌های محلی جنوب و فزان",
+          "name_en": "Fezzan and southern local currents",
+          "entity_type": "regional_current",
+          "policy_positions": {
+            "governance": "مطالبه سهم در درآمد نفت، خدمات عمومی، نمایندگی منطقه‌ای و تضمین امنیت محلی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lby_tripoli_gov",
+          "name_fa": "دولت وحدت ملی طرابلس",
+          "name_en": "Tripoli Government of National Unity",
+          "role": "دولت مورد شناسایی سازمان ملل به ریاست عبدالحمید دبیبه؛ کنترل آن بر همه کشور کامل نیست.",
+          "confidence": "high"
+        },
+        {
+          "id": "lby_east_gov",
+          "name_fa": "دولت ثبات ملی شرق",
+          "name_en": "Eastern Government of National Stability",
+          "role": "دولت مستقر در شرق به ریاست اسامه حماد و مورد حمایت مجلس نمایندگان.",
+          "confidence": "high"
+        },
+        {
+          "id": "lby_hoR",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "نهاد قانون‌گذاری مستقر در شرق که نقش اصلی در حمایت از دولت ثبات ملی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "lby_hsc",
+          "name_fa": "شورای عالی دولت",
+          "name_en": "High State Council",
+          "role": "نهاد سیاسی مشورتی در طرابلس و طرف مذاکرات مربوط به چارچوب انتخاباتی.",
+          "confidence": "high"
+        },
+        {
+          "id": "lby_haftar_lna",
+          "name_fa": "ارتش ملی لیبی و فرماندهی حفتر",
+          "name_en": "Libyan National Army and Haftar command",
+          "role": "قدرت نظامی مسلط در شرق و بخش‌هایی از جنوب؛ مرکز قدرت مستقل از دولت طرابلس.",
+          "confidence": "high"
+        },
+        {
+          "id": "lby_noc",
+          "name_fa": "شرکت ملی نفت",
+          "name_en": "National Oil Corporation",
+          "role": "نهاد کلیدی اقتصادی و مدیریت تولید و صادرات نفت؛ درآمدهای نفتی در منازعات سیاسی نقش محوری دارد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "tripoli_prime_minister": "Abdul Hamid Dbeibah",
+        "eastern_prime_minister": "Osama Hammad",
+        "house_of_representatives_speaker": "Aguila Saleh",
+        "high_state_council_chair": "Mohamed Takala",
+        "eastern_commander": "Khalifa Haftar",
+        "status": "کشور میان دو مرکز رقیب تقسیم شده؛ نقشه راه سازمان ملل برای چارچوب انتخاباتی و وحدت نهادها همچنان حل‌نشده است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "election_framework",
+          "unified_government",
+          "oil_revenue_distribution",
+          "central_bank_independence",
+          "local_militia_integration",
+          "foreign_influence",
+          "regional_autonomy",
+          "public_services"
+        ],
+        "rule": "لیبی را با دولت واحد و احزاب پارلمانی عادی نمایش نده؛ دولت طرابلس، دولت شرق، مجلس، شورای عالی دولت و شبکه حفتر مراکز مستقل و رقیب‌اند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UN Security Council Report — Libya August 2026 forecast",
+            "url": "https://www.securitycouncilreport.org/monthly-forecast/2026-08/libya-69.php",
+            "date": "2026-08-01"
+          },
+          {
+            "name": "Reuters — Libya's messy frozen conflict",
+            "url": "https://www.reuters.com/world/africa/libyas-messy-frozen-conflict-2026-11-24/",
+            "date": "2026-11-24"
+          },
+          {
+            "name": "UNSMIL — Political process and structured dialogue",
+            "url": "https://unsmil.unmissions.org/",
+            "date": "2026-06-07"
+          }
+        ],
+        "notes": "توصیف ساختار سیاسی بر وضعیت پیش از ۵ نوامبر ۲۰۲۶ متمرکز است. گزارش ۲۴ نوامبر فقط برای تأیید استمرار شکاف شرق و غرب استفاده شده و تحولات پس از snapshot وارد وضعیت آغاز بازی نشده‌اند. احزاب انتخاباتی ۲۰۱۲-۲۰۱۴ به‌عنوان احزاب فعال با کرسی فعلی فرض نشده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lby_hoR_east",
+          "name_en": "House of Representatives eastern bloc",
+          "role": "eastern political institution"
+        },
+        {
+          "id": "lby_hsc_tripoli",
+          "name_en": "High State Council",
+          "role": "consultative political institution"
+        }
+      ]
     },
     "TUN": {
       "country_name_fa": "تونس",
       "country_name_en": "Tunisia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_republic_with_dominant_presidency_and_weak_parliament",
+      "government_model": "جمهوری ریاستی بر پایه قانون اساسی ۲۰۲۲؛ رئیس‌جمهور اختیار گسترده اجرایی دارد و دولت در برابر او پاسخ‌گوست. انتخابات پارلمانی ۲۰۲۲-۲۰۲۳ با مشارکت بسیار پایین و تحریم بخش بزرگی از اپوزیسیون برگزار شد.",
+      "parties": [
+        {
+          "id": "tun_en nahdha",
+          "name_fa": "جنبش النهضه",
+          "name_en": "Ennahda Movement",
+          "entity_type": "party",
+          "political_role": "حزب اسلام‌گرای مهم پس از انقلاب ۲۰۱۱؛ رهبری آن با محدودیت و بازداشت روبه‌رو شده و فعالیت سیاسی آن به‌شدت محدود است.",
+          "ideological_profile": "اسلام‌گرایی دموکراتیک و محافظه‌کاری اجتماعی",
+          "legal_status": "legally_registered_but_severely_restricted",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_free_destourian",
+          "name_fa": "حزب دستوری آزاد",
+          "name_en": "Free Destourian Party (PDL)",
+          "entity_type": "party",
+          "political_role": "حزب سکولار و نوستالژیک نسبت به دولت پیش از انقلاب؛ رهبر آن عبیر موسی با پرونده قضایی و بازداشت مواجه شده است.",
+          "ideological_profile": "دستورگرایی، سکولاریسم و ملی‌گرایی",
+          "legal_status": "registered_but_restricted",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_attayar",
+          "name_fa": "جریان دموکراتیک",
+          "name_en": "Democratic Current (Attayar)",
+          "entity_type": "party",
+          "political_role": "حزب سوسیال‌دموکرات و ضدفساد که با تمرکز قدرت ریاست‌جمهوری مخالف است.",
+          "ideological_profile": "سوسیال‌دموکراسی، حاکمیت قانون و ضدفساد",
+          "legal_status": "registered_opposition",
+          "confidence": "medium"
+        },
+        {
+          "id": "tun_chaab",
+          "name_fa": "جنبش الشعب",
+          "name_en": "Echaab Movement",
+          "entity_type": "party",
+          "political_role": "جریان ملی‌گرای عرب و چپ‌گرا؛ برخی چهره‌های آن از مسیر سیاسی قیس سعید حمایت کرده‌اند.",
+          "ideological_profile": "ناصریسم، ملی‌گرایی عربی و عدالت اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "tun_republican",
+          "name_fa": "حزب جمهوری‌خواه",
+          "name_en": "Republican Party",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو و سکولار منتقد تمرکز قدرت و مدافع بازگشت به رقابت سیاسی.",
+          "ideological_profile": "لیبرالیسم اجتماعی و جمهوری‌خواهی",
+          "legal_status": "registered_opposition",
+          "confidence": "medium"
+        },
+        {
+          "id": "tun_mouvement_echaab",
+          "name_fa": "جریان‌های چپ و اتحادیه‌ای",
+          "name_en": "Left-wing and trade-union political currents",
+          "entity_type": "cross_party_current",
+          "political_role": "شبکه‌های چپ و اتحادیه‌ای، از جمله طیف‌های نزدیک به اتحادیه عمومی کار تونس؛ مواضع آنها یکسان نیست.",
+          "ideological_profile": "چپ‌گرایی، حقوق کار و عدالت اجتماعی",
+          "legal_status": "political_current_not_single_party",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tun_saied_supporters",
+          "name_fa": "جریان حامی قیس سعید",
+          "name_en": "Kais Saied supporters",
+          "entity_type": "presidential_current",
+          "policy_positions": {
+            "governance": "حمایت از تمرکز قدرت در ریاست‌جمهوری و روایت ضدنخبگانی؛ قیس سعید مستقل و فاقد حزب رسمی است.",
+            "economy": "تأکید بر حاکمیت اقتصادی و مبارزه با فساد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "tun_national_salvation_front",
+          "name_fa": "جبهه نجات ملی",
+          "name_en": "National Salvation Front",
+          "entity_type": "opposition_coalition",
+          "policy_positions": {
+            "governance": "ائتلافی از احزاب و چهره‌های مخالف تمرکز قدرت؛ شامل النهضه و دیگر جریان‌ها، با اختلافات داخلی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "tun_civil_society",
+          "name_fa": "جامعه مدنی و اتحادیه عمومی کار",
+          "name_en": "Civil society and UGTT",
+          "entity_type": "institutional_social_current",
+          "policy_positions": {
+            "labor": "دفاع از حقوق کار، گفت‌وگوی اجتماعی و استقلال تشکل‌های مدنی؛ مواضع نسبت به دولت در دوره‌های مختلف تغییر می‌کند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "tun_old_regime_networks",
+          "name_fa": "شبکه‌های اداری و سیاسی دوره پیش از انقلاب",
+          "name_en": "Pre-2011 administrative and political networks",
+          "entity_type": "elite_network",
+          "policy_positions": {
+            "governance": "حضور پراکنده در ساختار اداری و برخی جریان‌های سیاسی؛ یک حزب واحد یا بلوک هماهنگ نیستند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tun_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قدرت اجرایی و انتصاب دولت؛ قیس سعید رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_cabinet",
+          "name_fa": "دولت سارا ظفرانی",
+          "name_en": "Sara Zaafarani Cabinet",
+          "role": "دولت منصوب رئیس‌جمهور و پاسخ‌گو به او؛ سارا ظفرانی از مارس ۲۰۲۵ نخست‌وزیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_assembly",
+          "name_fa": "مجلس نمایندگان مردم",
+          "name_en": "Assembly of the Representatives of the People",
+          "role": "مجلس ۱۶۱ نفره با اختیارات محدودتر در ساختار قانون اساسی ۲۰۲۲؛ انتخابات اخیر مشارکت پایینی داشت.",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_regional_council",
+          "name_fa": "شورای ملی مناطق و نواحی",
+          "name_en": "National Council of Regions and Districts",
+          "role": "مجلس دوم در ساختار جدید با نمایندگی منطقه‌ای و محلی.",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_ugtt",
+          "name_fa": "اتحادیه عمومی کار تونس",
+          "name_en": "Tunisian General Labour Union (UGTT)",
+          "role": "یکی از مهم‌ترین سازمان‌های اجتماعی و کارگری کشور و بازیگر مستقل در گفت‌وگوی سیاسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "tun_judiciary",
+          "name_fa": "قوه قضائیه و نهادهای نظارتی",
+          "name_en": "Judiciary and oversight institutions",
+          "role": "استقلال و اختیارات این نهادها در دوره تمرکز قدرت ریاست‌جمهوری محل مناقشه است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Kais Saied",
+        "prime_minister": "Sara Zaafarani",
+        "parliament": "Assembly of the Representatives of the People",
+        "status": "قیس سعید در انتخابات اکتبر ۲۰۲۴ برای دوره دوم انتخاب شد؛ دولت و ساختار اجرایی تحت سلطه ریاست‌جمهوری قرار دارند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "presidential_power",
+          "constitutional_order",
+          "political_prisoners_and_rights",
+          "economic_sovereignty",
+          "public_debt",
+          "migration_policy",
+          "relations_with_eu",
+          "role_of_ugtt"
+        ],
+        "rule": "قیس سعید را به‌عنوان رئیس‌جمهور مستقل و نه رهبر حزب ثبت کن؛ احزاب اپوزیسیون واقعی را حفظ کن اما محدودیت حقوقی و فشار سیاسی بر آنها را نیز مدل کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Associated Press — Tunisia 2024 presidential election",
+            "url": "https://apnews.com/article/9cb6593c3154b0e9a32131d1afe6d118",
+            "date": "2024-10-04"
+          },
+          {
+            "name": "Le Monde — Tunisia's authoritarian transition",
+            "url": "https://www.lemonde.fr/en/opinion/article/2026/07/27/tunisia-is-no-longer-in-a-stalled-democratic-transition-it-has-entered-into-an-unfinished-authoritarian-one_6755894_23.html",
+            "date": "2026-07-27"
+          },
+          {
+            "name": "IPU Parline — Tunisia parliamentary data",
+            "url": "https://data.ipu.org/",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "انتخابات مجلس ۲۰۲۲-۲۰۲۳ با مشارکت بسیار پایین و تحریم گسترده احزاب مخالف برگزار شد؛ تعداد زیادی از نمایندگان مستقل‌اند و نباید از نتیجه آن یک اکثریت حزبی جعلی ساخت. قیس سعید در انتخابات ۲۰۲۴ مستقل بود. وضعیت احزاب و رهبران اپوزیسیون با محدودیت و پرونده‌های قضایی همراه است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "tun_independent_majority",
+          "name_en": "Independent MPs",
+          "role": "dominant parliamentary category"
+        },
+        {
+          "id": "tun_opposition_parties",
+          "name_en": "Opposition party representatives",
+          "role": "fragmented opposition"
+        }
+      ]
     },
     "DZA": {
       "country_name_fa": "الجزایر",
@@ -7280,21 +8117,203 @@
     "ISL": {
       "country_name_fa": "ایسلند",
       "country_name_en": "Iceland",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_proportional_representation",
+      "government_model": "جمهوری پارلمانی با نظام انتخاباتی تناسبی و دولت‌های ائتلافی؛ رئیس‌جمهور عمدتاً نقش تشریفاتی دارد و نخست‌وزیر از حمایت اکثریت مجلس آلتینگ برخوردار است.",
+      "parties": [
+        {
+          "id": "isl_sda",
+          "name_fa": "ائتلاف سوسیال‌دموکرات",
+          "name_en": "Social Democratic Alliance (Samfylkingin)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پس از انتخابات نوامبر ۲۰۲۴ و رهبر دولت ائتلافی.",
+          "ideological_profile": "سوسیال‌دموکراسی، رفاه اجتماعی و گرایش طرفدار اروپا",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 15
+        },
+        {
+          "id": "isl_independence",
+          "name_fa": "حزب استقلال",
+          "name_en": "Independence Party",
+          "entity_type": "party",
+          "political_role": "حزب راست میانه و محافظه‌کار؛ دومین حزب بزرگ در انتخابات ۲۰۲۴.",
+          "ideological_profile": "محافظه‌کاری، بازار آزاد و استقلال ملی",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 14
+        },
+        {
+          "id": "isl_reform",
+          "name_fa": "حزب اصلاحات لیبرال",
+          "name_en": "Liberal Reform Party (Viðreisn)",
+          "entity_type": "party",
+          "political_role": "حزب لیبرال میانه‌رو و شریک ائتلاف حاکم.",
+          "ideological_profile": "لیبرالیسم اقتصادی و اجتماعی و گرایش طرفدار اتحادیه اروپا",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 11
+        },
+        {
+          "id": "isl_peoples",
+          "name_fa": "حزب مردم",
+          "name_en": "People's Party (Flokkur fólksins)",
+          "entity_type": "party",
+          "political_role": "حزب رفاه‌گرا و پوپولیست میانه‌رو؛ شریک دولت ائتلافی.",
+          "ideological_profile": "رفاه اجتماعی، حمایت از گروه‌های آسیب‌پذیر و سیاست‌های اقتصادی حمایتی",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 10
+        },
+        {
+          "id": "isl_centre",
+          "name_fa": "حزب مرکز",
+          "name_en": "Centre Party (Miðflokkurinn)",
+          "entity_type": "party",
+          "political_role": "حزب ملی‌گرای میانه‌رو و منتقد برخی سیاست‌های مهاجرتی و اروپایی.",
+          "ideological_profile": "محافظه‌کاری، تمرکززدایی و شکاکیت نسبت به اتحادیه اروپا",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 8
+        },
+        {
+          "id": "isl_progressive",
+          "name_fa": "حزب ترقی‌خواه",
+          "name_en": "Progressive Party",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو کشاورزی و لیبرال-مرکزی؛ از احزاب قدیمی کشور.",
+          "ideological_profile": "میانه‌گرایی، منافع روستایی و توسعه منطقه‌ای",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2024": 5
+        }
+      ],
+      "factions": [
+        {
+          "id": "isl_government_coalition",
+          "name_fa": "ائتلاف دولت سوسیال‌دموکرات، اصلاحات و مردم",
+          "name_en": "SDA–Reform–People's Party coalition",
+          "entity_type": "governing_coalition",
+          "policy_positions": {
+            "economy": "کنترل تورم و هزینه زندگی، مسکن و خدمات عمومی؛ حفظ انضباط مالی.",
+            "europe": "برگزاری همه‌پرسی درباره ازسرگیری مذاکرات عضویت در اتحادیه اروپا تا ۲۰۲۷."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "isl_eurosceptic_current",
+          "name_fa": "جریان شکاک به اتحادیه اروپا",
+          "name_en": "Eurosceptic political current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حفظ استقلال تصمیم‌گیری و مخالفت با پیوستن به اتحادیه اروپا؛ در حزب مرکز و بخش‌هایی از حزب استقلال حضور دارد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "isl_green_left",
+          "name_fa": "جریان سبز و چپ",
+          "name_en": "Green and left current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "environment": "سیاست‌های اقلیمی، عدالت اجتماعی و حفاظت از منابع طبیعی؛ پس از انتخابات ۲۰۲۴ نمایندگی پارلمانی مستقل آن کاهش یافته است."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "isl_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام عمدتاً تشریفاتی و حافظ قانون اساسی؛ هالا توماسدوتیر رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "isl_cabinet",
+          "name_fa": "دولت کریسترون فروستادوتیر",
+          "name_en": "Kristrún Frostadóttir Government",
+          "role": "دولت ائتلافی سه‌حزبی به رهبری حزب سوسیال‌دموکرات.",
+          "confidence": "high"
+        },
+        {
+          "id": "isl_althing",
+          "name_fa": "مجلس آلتینگ",
+          "name_en": "Althing",
+          "role": "پارلمان ۶۳ نفره و مرکز اصلی قانون‌گذاری و نظارت بر دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "isl_central_bank",
+          "name_fa": "بانک مرکزی ایسلند",
+          "name_en": "Central Bank of Iceland",
+          "role": "نهاد مستقل مهم در سیاست پولی و کنترل تورم.",
+          "confidence": "high"
+        },
+        {
+          "id": "isl_labour_social",
+          "name_fa": "اتحادیه‌های کارگری و تشکل‌های اجتماعی",
+          "name_en": "Labour unions and civic organisations",
+          "role": "بازیگران مهم چانه‌زنی دستمزد، سیاست رفاهی و گفت‌وگوی اجتماعی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Halla Tómasdóttir",
+        "prime_minister": "Kristrún Frostadóttir",
+        "coalition": [
+          "Social Democratic Alliance",
+          "Liberal Reform Party",
+          "People's Party"
+        ],
+        "coalition_seats": 36,
+        "status": "ائتلاف سه‌حزبی از ۲۱ دسامبر ۲۰۲۴ دولت را تشکیل داده است؛ همه‌پرسی درباره مسیر اتحادیه اروپا تا ۲۰۲۷ در دستور کار قرار دارد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "inflation_and_cost_of_living",
+          "housing",
+          "fisheries_and_energy",
+          "tourism_management",
+          "eu_membership_referendum",
+          "immigration",
+          "welfare_state",
+          "coalition_stability"
+        ],
+        "rule": "سیاست ایسلند بر پایه ائتلاف‌های پارلمانی و احزاب واقعی مدل شود؛ اعداد کرسی به انتخابات ۲۰۲۴ مربوط‌اند و باید با انتخابات بعدی به‌روزرسانی شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Government of Iceland — New Icelandic Government takes office",
+            "url": "https://www.mfa.is/news/article/2024-12-21-New-Icelandic-Government-takes-office/",
+            "date": "2024-12-21"
+          },
+          {
+            "name": "IPU Parline — Iceland November 2024 parliamentary election",
+            "url": "https://data.ipu.org/parliament/IS/IS-LC01/election/IS-LC01-E20241130/",
+            "date": "2024-11-30"
+          }
+        ],
+        "notes": "ترکیب کرسی‌ها مربوط به انتخابات ۳۰ نوامبر ۲۰۲۴ است: SDA 15، استقلال 14، اصلاحات 11، مردم 10، مرکز 8 و ترقی‌خواه 5. ائتلاف حاکم ۳۶ کرسی از ۶۳ کرسی دارد. رئیس‌جمهور هالا توماسدوتیر و نخست‌وزیر کریسترون فروستادوتیر هستند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "isl_government_bloc",
+          "name_en": "Government coalition",
+          "role": "governing coalition",
+          "seats": 36
+        },
+        {
+          "id": "isl_opposition_bloc",
+          "name_en": "Opposition parties",
+          "role": "opposition",
+          "seats": 27
+        }
+      ]
     },
     "IRL": {
       "country_name_fa": "ایرلند",
@@ -8085,21 +9104,239 @@
     "SVK": {
       "country_name_fa": "اسلواکی",
       "country_name_en": "Slovakia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_proportional_representation",
+      "government_model": "جمهوری پارلمانی چندحزبی با نظام تناسبی؛ دولت ائتلافی سه‌حزبی به رهبری اسمر-اس‌دی تشکیل شده و پارلمان ۱۵۰ کرسی دارد. انتخابات بعدی طبق برنامه در سپتامبر ۲۰۲۷ پیش‌بینی می‌شود.",
+      "parties": [
+        {
+          "id": "svk_smer",
+          "name_fa": "جهت‌گیری – سوسیال‌دموکراسی",
+          "name_en": "Direction – Social Democracy (Smer-SD)",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر رابرت فیتسو و بزرگ‌ترین حزب ائتلاف حاکم.",
+          "ideological_profile": "سوسیال‌دموکراسی ملی‌گرا، محافظه‌کاری اجتماعی و سیاست خارجی عمل‌گرایانه/منتقد کمک نظامی به اوکراین",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 42
+        },
+        {
+          "id": "svk_progressive",
+          "name_fa": "اسلواکی پیشرو",
+          "name_en": "Progressive Slovakia (PS)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون؛ به رهبری میخال شیمچکا.",
+          "ideological_profile": "لیبرالیسم اجتماعی، طرفداری از اتحادیه اروپا و حمایت از اوکراین",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 32
+        },
+        {
+          "id": "svk_hlas",
+          "name_fa": "صدا – سوسیال‌دموکراسی",
+          "name_en": "Voice – Social Democracy (Hlas-SD)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم؛ حزب منشعب از اسمر و دارای گرایش میانه‌روتر.",
+          "ideological_profile": "سوسیال‌دموکراسی میانه‌رو و محافظه‌کاری اجتماعی",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 27
+        },
+        {
+          "id": "svk_slovensko",
+          "name_fa": "اسلواکی و دوستان",
+          "name_en": "Slovensko and Friends",
+          "entity_type": "electoral_coalition",
+          "political_role": "ائتلاف اپوزیسیون با ریشه در جنبش اولانو و احزاب کوچک هم‌پیمان.",
+          "ideological_profile": "محافظه‌کاری، ضدفساد و گرایش طرفدار غرب",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 16
+        },
+        {
+          "id": "svk_kdh",
+          "name_fa": "جنبش دموکرات مسیحی",
+          "name_en": "Christian Democratic Movement (KDH)",
+          "entity_type": "party",
+          "political_role": "حزب محافظه‌کار مسیحی و اپوزیسیون پارلمانی.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 12
+        },
+        {
+          "id": "svk_sas",
+          "name_fa": "آزادی و همبستگی",
+          "name_en": "Freedom and Solidarity (SaS)",
+          "entity_type": "party",
+          "political_role": "حزب لیبرال اقتصادی و اپوزیسیون پارلمانی.",
+          "ideological_profile": "لیبرالیسم اقتصادی، بازار آزاد و گرایش طرفدار اتحادیه اروپا",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 11
+        },
+        {
+          "id": "svk_sns",
+          "name_fa": "حزب ملی اسلواکی",
+          "name_en": "Slovak National Party (SNS)",
+          "entity_type": "party",
+          "political_role": "شریک ملی‌گرای ائتلاف حاکم؛ از نظر کرسی و انسجام داخلی کوچک‌تر از اسمر است.",
+          "ideological_profile": "ملی‌گرایی اسلواکی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered",
+          "confidence": "high",
+          "seats_2023": 10
+        }
+      ],
+      "factions": [
+        {
+          "id": "svk_government_coalition",
+          "name_fa": "ائتلاف اسمر، هلاس و حزب ملی",
+          "name_en": "Smer–Hlas–SNS governing coalition",
+          "entity_type": "governing_coalition",
+          "policy_positions": {
+            "foreign_policy": "رویکرد انتقادی به کمک نظامی به اوکراین و مخالفت با برخی تحریم‌ها علیه روسیه؛ اعضای ائتلاف در جزئیات اختلاف دارند.",
+            "domestic": "تمرکز بر سیاست‌های اجتماعی و ملی‌گرایانه و افزایش نقش دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "svk_pro_european_opposition",
+          "name_fa": "جریان اپوزیسیون لیبرال و طرفدار اروپا",
+          "name_en": "Liberal and pro-European opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حمایت از اتحادیه اروپا و ناتو و پشتیبانی از اوکراین؛ شامل PS و SaS و بخشی از احزاب دیگر."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "svk_conservative_opposition",
+          "name_fa": "جریان محافظه‌کار اپوزیسیون",
+          "name_en": "Conservative opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "محافظه‌کاری اجتماعی و مخالفت با برخی سیاست‌های دولت؛ شامل KDH و بخش‌هایی از Slovensko."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "svk_hungarian_minority",
+          "name_fa": "جریان نمایندگی اقلیت مجار",
+          "name_en": "Hungarian minority political current",
+          "entity_type": "minority_current",
+          "policy_positions": {
+            "representation": "حقوق زبانی، فرهنگی و نمایندگی سیاسی اقلیت مجار؛ در انتخابات ۲۰۲۳ حزب آلیانس از آستانه ورود به پارلمان عبور نکرد."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "svk_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس کشور و فرمانده کل نیروهای مسلح با اختیارات قانون اساسی؛ پیتر پلگرینی رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "svk_cabinet",
+          "name_fa": "دولت رابرت فیتسو",
+          "name_en": "Robert Fico Government",
+          "role": "قوه مجریه ائتلافی متشکل از اسمر، هلاس و حزب ملی اسلواکی.",
+          "confidence": "high"
+        },
+        {
+          "id": "svk_national_council",
+          "name_fa": "شورای ملی اسلواکی",
+          "name_en": "National Council",
+          "role": "پارلمان ۱۵۰ نفره؛ ائتلاف حاکم پس از خروج‌ها و اختلافات داخلی با اکثریت شکننده و حمایت نمایندگان مستقل اداره شده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "svk_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد قضایی مستقل و مرجع رسیدگی به اختلافات قانون اساسی؛ اپوزیسیون درباره برخی اصلاحات دولت به آن مراجعه می‌کند.",
+          "confidence": "high"
+        },
+        {
+          "id": "svk_presidential_office",
+          "name_fa": "دفتر ریاست‌جمهوری و نهادهای نظارتی",
+          "name_en": "Presidential office and oversight institutions",
+          "role": "در تعادل نهادی و مناقشات بر سر اصلاحات قانونی نقش دارند.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Peter Pellegrini",
+        "prime_minister": "Robert Fico",
+        "coalition": [
+          "Smer-SD",
+          "Hlas-SD",
+          "Slovak National Party"
+        ],
+        "status": "ائتلاف حاکم با اختلافات و خروج برخی نمایندگان روبه‌رو بوده است؛ در نوامبر ۲۰۲۶ مجلس به حذف رأی‌گیری پستی برای شهروندان خارج از کشور رأی داد و طرح هنوز نیازمند امضای رئیس‌جمهور است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_and_nato_relations",
+          "ukraine_policy",
+          "relations_with_russia",
+          "rule_of_law",
+          "media_and_public_broadcasting",
+          "social_policy",
+          "minority_rights",
+          "coalition_stability"
+        ],
+        "rule": "ترکیب کرسی‌های انتخابات ۲۰۲۳ را از وضعیت جاری ائتلاف و حمایت نمایندگان مستقل جدا نگه دار؛ تصمیم‌های قانونی مناقشه‌برانگیز را به‌عنوان رخدادهای تاریخ‌دار ثبت کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Slovakia September 2023 parliamentary election",
+            "url": "https://data.ipu.org/parliament/SK/SK-LC01/election/SK-LC01-E20230930/",
+            "date": "2023-09-30"
+          },
+          {
+            "name": "Reuters — Slovakia scraps mail-in voting, opposition protests",
+            "url": "https://www.reuters.com/world/slovakia-scraps-mail-in-voting-opposition-protests-2026-11-24/",
+            "date": "2026-11-24"
+          },
+          {
+            "name": "Associated Press — Slovakia lawmakers approve Fico's postal voting plan",
+            "url": "https://apnews.com/article/becd0427f94b902eb11ce04c6dc007ec",
+            "date": "2026-11-24"
+          }
+        ],
+        "notes": "توزیع کرسی‌ها به انتخابات ۲۰۲۳ مربوط است: اسمر ۴۲، PS ۳۲، هلاس ۲۷، ائتلاف اسلواکی و دوستان ۱۶، KDH ۱۲، SaS ۱۱ و SNS ۱۰. ائتلاف در آغاز ۷۹ کرسی داشت اما اختلافات و خروج نمایندگان باعث نوسان حمایت پارلمانی شد. رأی ۲۴ نوامبر ۲۰۲۶ درباره حذف رأی‌گیری پستی پس از snapshot آغاز بازی است و در رخدادهای روزانه، نه وضعیت آغازین، باید ثبت شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "svk_government_bloc",
+          "name_en": "Government coalition",
+          "role": "governing coalition"
+        },
+        {
+          "id": "svk_progressive_group",
+          "name_en": "Progressive Slovakia parliamentary group",
+          "party_id": "svk_progressive",
+          "role": "opposition"
+        },
+        {
+          "id": "svk_kdh_group",
+          "name_en": "Christian Democratic Movement group",
+          "party_id": "svk_kdh",
+          "role": "opposition"
+        },
+        {
+          "id": "svk_sas_group",
+          "name_en": "Freedom and Solidarity group",
+          "party_id": "svk_sas",
+          "role": "opposition"
+        }
+      ]
     },
     "HUN": {
       "country_name_fa": "مجارستان",
