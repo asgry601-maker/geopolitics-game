@@ -58,6 +58,18 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
   border-radius: 8px; padding: 8px; max-height: 160px; overflow-y: auto; font-size: 12px;
   display: none; }
 @media (max-width: 900px) { :root { --panelw: 46vw; } }
+
+/* داشبورد کشور — تب‌های سبک و سازگار با صفحه‌نمایش کوچک */
+.dashTabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; margin:10px 0; }
+.dashTab { padding:7px 3px; font-size:11px; min-width:0; white-space:normal; }
+.dashTab.active { background:#2456a8; border-color:#5a91e8; color:#fff; }
+.dashCard { background:#0e1626; border:1px solid #1c2a45; border-radius:9px; padding:9px; margin:7px 0; }
+.dashNote { border:1px dashed #52617a; border-radius:8px; padding:8px; margin:7px 0; color:#aebbd0; font-size:12px; line-height:1.8; }
+.dashGrid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.dashMetric { background:#101a2e; border:1px solid #223252; border-radius:7px; padding:7px; min-width:0; }
+.dashMetric b { display:block; color:#ffd479; font-size:14px; margin-top:3px; }
+@media (max-width:520px) { .dashTabs { grid-template-columns:repeat(2,minmax(0,1fr)); } .dashGrid { grid-template-columns:1fr 1fr; } }
+
 </style>
 </head>
 <body>
