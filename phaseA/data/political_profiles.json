@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.6.0",
+  "schema_version": "1.7.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 40,
-    "pending_countries": 134,
+    "researched_countries": 47,
+    "pending_countries": 127,
     "last_batch": [
-      "ESP",
-      "PRT",
-      "NLD",
-      "BEL",
-      "SWE",
-      "NOR",
-      "DNK"
+      "GRC",
+      "POL",
+      "CZE",
+      "AUT",
+      "CHE",
+      "IRL",
+      "FIN"
     ]
   },
   "notes": [
@@ -28,7 +28,8 @@
     "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.",
     "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.",
     "نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.",
-    "نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود."
+    "نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.",
+    "نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند."
   ],
   "countries": {
     "USA": {
@@ -4466,40 +4467,469 @@
     "CHE": {
       "country_name_fa": "سوئیس",
       "country_name_en": "Switzerland",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_directorial_republic_consensus_multiparty_democracy",
+      "government_model": "جمهوری فدرال با دموکراسی مستقیم و نظام شورایی؛ دولت فدرال هفت‌نفره میان چهار حزب اصلی تقسیم شده و اپوزیسیون رسمی به سبک پارلمانی وجود ندارد.",
+      "parties": [
+        {
+          "id": "che_svp",
+          "name_fa": "حزب مردم سوئیس",
+          "name_en": "Swiss People's Party (SVP/UDC)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان و دارای دو کرسی در شورای فدرال.",
+          "ideological_profile": "محافظه‌کاری ملی و راست‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 62
+        },
+        {
+          "id": "che_sp",
+          "name_fa": "حزب سوسیال‌دموکرات",
+          "name_en": "Social Democratic Party (SP/PS)",
+          "entity_type": "party",
+          "political_role": "حزب چپ میانه و دارای دو کرسی در شورای فدرال.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 41
+        },
+        {
+          "id": "che_fdp",
+          "name_fa": "اف‌دی‌پی. لیبرال‌ها",
+          "name_en": "FDP.The Liberals",
+          "entity_type": "party",
+          "political_role": "حزب لیبرال و دارای دو کرسی در شورای فدرال.",
+          "ideological_profile": "لیبرالیسم اقتصادی و آزادی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 28
+        },
+        {
+          "id": "che_centre",
+          "name_fa": "حزب مرکز",
+          "name_en": "The Centre",
+          "entity_type": "party",
+          "political_role": "حزب میانه و دارای یک کرسی در شورای فدرال.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 29
+        },
+        {
+          "id": "che_greens",
+          "name_fa": "حزب سبز سوئیس",
+          "name_en": "Green Party of Switzerland",
+          "entity_type": "party",
+          "political_role": "حزب سبز خارج از شورای فدرال.",
+          "ideological_profile": "سبزگرایی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 23
+        },
+        {
+          "id": "che_glp",
+          "name_fa": "لیبرال‌های سبز",
+          "name_en": "Green Liberal Party (GLP)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو سبز و لیبرال.",
+          "ideological_profile": "لیبرالیسم اجتماعی و سیاست اقلیمی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 10
+        },
+        {
+          "id": "che_evp",
+          "name_fa": "حزب مردم انجیلی",
+          "name_en": "Evangelical People's Party (EVP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک مسیحی اجتماعی.",
+          "ideological_profile": "دموکراسی مسیحی و عدالت اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 2
+        },
+        {
+          "id": "che_mcg",
+          "name_fa": "جنبش شهروندان ژنو",
+          "name_en": "Geneva Citizens' Movement (MCG)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای ژنو.",
+          "ideological_profile": "منطقه‌گرایی و پوپولیسم محلی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 2
+        }
+      ],
+      "factions": [
+        {
+          "id": "che_svp_sovereignty",
+          "name_fa": "جریان حاکمیت‌گرا SVP",
+          "name_en": "SVP sovereignty current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "EU": "حفظ استقلال تصمیم‌گیری و مخالفت با نزدیکی نهادی گسترده به اتحادیه اروپا."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "che_fdp_market",
+          "name_fa": "جریان بازارمحور FDP",
+          "name_en": "FDP market-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "رقابت، مالیات پایین و مقررات محدود."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "che_sp_social",
+          "name_fa": "جریان رفاهی SP",
+          "name_en": "SP welfare current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "welfare": "خدمات عمومی، بیمه اجتماعی و برابری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "che_green_climate",
+          "name_fa": "جریان اقلیمی سبز",
+          "name_en": "Green climate current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "climate": "کاهش انتشار، انرژی پاک و حفاظت از محیط‌زیست."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "che_federal_council",
+          "name_fa": "شورای فدرال هفت‌نفره",
+          "name_en": "Federal Council",
+          "role": "قوه مجریه جمعی؛ اعضا از چهار حزب اصلی و به‌صورت توافقی انتخاب می‌شوند.",
+          "confidence": "high"
+        },
+        {
+          "id": "che_federal_assembly",
+          "name_fa": "مجمع فدرال",
+          "name_en": "Federal Assembly",
+          "role": "پارلمان دو مجلسی شامل شورای ملی و شورای ایالت‌ها؛ اعضای شورای فدرال را انتخاب می‌کند.",
+          "confidence": "high"
+        },
+        {
+          "id": "che_cantons",
+          "name_fa": "کانتون‌ها",
+          "name_en": "Cantons",
+          "role": "۲۶ واحد فدرال با اختیارات گسترده و نقش مستقیم در سیاست‌گذاری.",
+          "confidence": "high"
+        },
+        {
+          "id": "che_referendums",
+          "name_fa": "همه‌پرسی و ابتکار مردمی",
+          "name_en": "Referendums and Popular Initiatives",
+          "role": "سازوکار مستقیم مردم برای تصویب، رد یا پیشنهاد تغییر قانون اساسی و قوانین.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Federal Council (rotating presidency)",
+        "coalition": [
+          "SVP",
+          "SP",
+          "FDP.The Liberals",
+          "The Centre"
+        ],
+        "status": "دولت شورایی هفت‌نفره: SVP دو، SP دو، FDP دو و The Centre یک کرسی؛ ریاست سالانه تشریفاتی و چرخشی است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "EU_relations",
+          "immigration",
+          "healthcare_costs",
+          "pensions",
+          "climate_and_energy",
+          "taxation",
+          "neutrality",
+          "direct_democracy"
+        ],
+        "rule": "به‌جای مدل دولت/اپوزیسیون، اجماع چهارجانبه، رأی‌گیری‌های مستقیم و اختلاف کانتون‌ها را شبیه‌سازی کن؛ احزاب خارج از شورای فدرال نیز از طریق پارلمان و همه‌پرسی نفوذ دارند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CH Info — Political parties in the Federal Council and Parliament",
+            "url": "https://www.ch-info.swiss/en/direkte-demokratie/parteien-von-links-bis-rechts",
+            "date": "2026-11-27",
+            "notes": "ترکیب شورای فدرال و کرسی‌های احزاب در شورای ملی در دوره ۲۰۲۳ تا ۲۰۲۷."
+          },
+          {
+            "name": "IPU Parline — Switzerland 2023 National Council election",
+            "url": "https://data.ipu.org/parliament/CH/CH-LC01/election/CH-LC01-E20231022/",
+            "date": "2023-12-04",
+            "notes": "نتایج رسمی انتخابات و ساختار دو مجلسی."
+          }
+        ],
+        "notes": "سوئیس نظام اجماع‌محور دارد؛ نباید یک حزب را به‌عنوان دولت و سایر احزاب را اپوزیسیون رسمی در نظر گرفت. آمار شورای ملی مربوط به دوره ۲۰۲۳–۲۰۲۷ است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "che_svp_group",
+          "name_en": "Swiss People's Party (SVP/UDC)",
+          "party_id": "che_svp"
+        },
+        {
+          "id": "che_sp_group",
+          "name_en": "Social Democratic Party (SP/PS)",
+          "party_id": "che_sp"
+        },
+        {
+          "id": "che_fdp_group",
+          "name_en": "FDP.The Liberals",
+          "party_id": "che_fdp"
+        },
+        {
+          "id": "che_centre_group",
+          "name_en": "The Centre",
+          "party_id": "che_centre"
+        },
+        {
+          "id": "che_greens_group",
+          "name_en": "Green Party of Switzerland",
+          "party_id": "che_greens"
+        },
+        {
+          "id": "che_glp_group",
+          "name_en": "Green Liberal Party (GLP)",
+          "party_id": "che_glp"
+        },
+        {
+          "id": "che_evp_group",
+          "name_en": "Evangelical People's Party (EVP)",
+          "party_id": "che_evp"
+        },
+        {
+          "id": "che_mcg_group",
+          "name_en": "Geneva Citizens' Movement (MCG)",
+          "party_id": "che_mcg"
+        }
+      ]
     },
     "AUT": {
       "country_name_fa": "اتریش",
       "country_name_en": "Austria",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_republic_multiparty_democracy",
+      "government_model": "جمهوری فدرال پارلمانی با دولت ائتلافی سه‌حزبی ÖVP، SPÖ و NEOS؛ حزب آزادی FPÖ با وجود کسب بیشترین کرسی در انتخابات ۲۰۲۴ در دولت نیست.",
+      "parties": [
+        {
+          "id": "aut_fpo",
+          "name_fa": "حزب آزادی اتریش",
+          "name_en": "Freedom Party of Austria (FPÖ)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان و اپوزیسیون؛ در انتخابات ۲۰۲۴ اول شد اما دولت تشکیل نداد.",
+          "ideological_profile": "راست پوپولیست و ملی‌محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 57
+        },
+        {
+          "id": "aut_ovp",
+          "name_fa": "حزب مردم اتریش",
+          "name_en": "Austrian People's Party (ÖVP)",
+          "entity_type": "party",
+          "political_role": "رهبر ائتلاف دولت و حزب صدراعظم کریستیان اشتوکر.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری میانه‌رو",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 51
+        },
+        {
+          "id": "aut_spo",
+          "name_fa": "حزب سوسیال‌دموکرات اتریش",
+          "name_en": "Social Democratic Party of Austria (SPÖ)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف دولت و معاون صدراعظم از این حزب است.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 41
+        },
+        {
+          "id": "aut_neos",
+          "name_fa": "نئوس – اتریش نو",
+          "name_en": "NEOS – The New Austria",
+          "entity_type": "party",
+          "political_role": "شریک سوم دولت ائتلافی.",
+          "ideological_profile": "لیبرالیسم اجتماعی و اصلاحات آموزشی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 18
+        },
+        {
+          "id": "aut_greens",
+          "name_fa": "سبزها – آلترناتیو سبز",
+          "name_en": "The Greens – The Green Alternative",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سبز؛ در دولت قبلی شریک ÖVP بود.",
+          "ideological_profile": "سبزگرایی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 16
+        }
+      ],
+      "factions": [
+        {
+          "id": "aut_ovp_economic",
+          "name_fa": "جریان اقتصادی و تجاری ÖVP",
+          "name_en": "ÖVP business and economic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "انضباط مالی، حمایت از کسب‌وکار و کاهش بار مالیاتی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aut_ovp_conservative",
+          "name_fa": "جریان محافظه‌کار اجتماعی ÖVP",
+          "name_en": "ÖVP social-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "سیاست مهاجرتی سخت‌گیرانه‌تر و ارزش‌های محافظه‌کارانه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aut_spo_labour",
+          "name_fa": "جریان کارگری و رفاهی SPÖ",
+          "name_en": "SPÖ labour and welfare current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "labor": "حمایت از اتحادیه‌ها، مسکن اجتماعی و خدمات عمومی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aut_fpo_national",
+          "name_fa": "جریان ملی‌پوپولیست FPÖ",
+          "name_en": "FPÖ national-populist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "migration": "سیاست محدودکننده مهاجرت و انتقاد از نهادهای فراملی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "aut_presidency",
+          "name_fa": "ریاست‌جمهوری فدرال",
+          "name_en": "Federal Presidency",
+          "role": "رئیس‌جمهور منتخب مستقیم با اختیارات قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "aut_cabinet",
+          "name_fa": "دولت کریستیان اشتوکر",
+          "name_en": "Christian Stocker Cabinet",
+          "role": "دولت ائتلافی ÖVP–SPÖ–NEOS.",
+          "confidence": "high"
+        },
+        {
+          "id": "aut_nationalrat",
+          "name_fa": "شورای ملی",
+          "name_en": "National Council",
+          "role": "مجلس سفلی ۱۸۳ نفره؛ مبنای اعتماد و قانون‌گذاری.",
+          "confidence": "high"
+        },
+        {
+          "id": "aut_bundesrat",
+          "name_fa": "شورای فدرال",
+          "name_en": "Federal Council",
+          "role": "مجلس نمایندگی ایالت‌ها با اختیارات بازنگری و مشارکت در قانون‌گذاری.",
+          "confidence": "high"
+        },
+        {
+          "id": "aut_lander",
+          "name_fa": "ایالت‌های فدرال",
+          "name_en": "Federal Länder",
+          "role": "دولت‌های ایالتی با اختیارات در آموزش، پلیس و امور منطقه‌ای.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "chancellor": "Christian Stocker",
+        "party": "ÖVP",
+        "coalition": [
+          "ÖVP",
+          "SPÖ",
+          "NEOS"
+        ],
+        "status": "ائتلاف سه‌حزبی با ۱۱۰ کرسی از ۱۸۳ کرسی؛ FPÖ با ۵۷ کرسی بزرگ‌ترین حزب منفرد اما خارج از دولت است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "migration",
+          "budget_deficit",
+          "housing",
+          "healthcare",
+          "labour",
+          "EU_policy",
+          "energy",
+          "neutrality"
+        ],
+        "rule": "ائتلاف از سه حزب با پایگاه‌های متفاوت تشکیل شده و برای مهار کسری بودجه و اختلافات مهاجرتی نیازمند مصالحه است؛ افزایش محبوبیت FPÖ فشار اپوزیسیون را بالا می‌برد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Austria 2024 National Council election",
+            "url": "https://data.ipu.org/parliament/AT/AT-LC01/election/AT-LC01-E20240929/",
+            "date": "2024-10-24",
+            "notes": "نتایج رسمی انتخابات ۲۰۲۴ و توزیع کرسی‌ها."
+          },
+          {
+            "name": "Reuters — Austrian government's No. 2 figure says he will step down",
+            "url": "https://www.reuters.com/world/austrian-governments-no-2-figure-says-he-will-step-down-2026-10-04/",
+            "date": "2026-10-04",
+            "notes": "ترکیب دولت سه‌حزبی و وضعیت رهبری SPÖ در پاییز ۲۰۲۶."
+          }
+        ],
+        "notes": "کرسی‌ها مطابق انتخابات ۲۰۲۴؛ وضعیت ائتلاف و تغییرات رهبری SPÖ مطابق گزارش اکتبر ۲۰۲۶."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "aut_fpo_group",
+          "name_en": "Freedom Party of Austria (FPÖ)",
+          "party_id": "aut_fpo"
+        },
+        {
+          "id": "aut_ovp_group",
+          "name_en": "Austrian People's Party (ÖVP)",
+          "party_id": "aut_ovp"
+        },
+        {
+          "id": "aut_spo_group",
+          "name_en": "Social Democratic Party of Austria (SPÖ)",
+          "party_id": "aut_spo"
+        },
+        {
+          "id": "aut_neos_group",
+          "name_en": "NEOS – The New Austria",
+          "party_id": "aut_neos"
+        },
+        {
+          "id": "aut_greens_group",
+          "name_en": "The Greens – The Green Alternative",
+          "party_id": "aut_greens"
+        }
+      ]
     },
     "SWE": {
       "country_name_fa": "سوئد",
@@ -5360,21 +5790,289 @@
     "FIN": {
       "country_name_fa": "فنلاند",
       "country_name_en": "Finland",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_democracy",
+      "government_model": "جمهوری پارلمانی با دولت ائتلافی چهارحزبی راست میانه و محافظه‌کار به رهبری پتری اورپو؛ ائتلاف ۱۰۸ کرسی از ۲۰۰ کرسی دارد.",
+      "parties": [
+        {
+          "id": "fin_ncp",
+          "name_fa": "حزب ائتلاف ملی",
+          "name_en": "National Coalition Party (NCP)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب دولت و حزب نخست‌وزیر.",
+          "ideological_profile": "محافظه‌کاری لیبرال و بازارگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 48
+        },
+        {
+          "id": "fin_finns",
+          "name_fa": "حزب فنلاندی‌ها",
+          "name_en": "Finns Party",
+          "entity_type": "party",
+          "political_role": "شریک دولت؛ راست ملی‌گرا و منتقد مهاجرت.",
+          "ideological_profile": "ملی‌محافظه‌کاری و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 45
+        },
+        {
+          "id": "fin_sdp",
+          "name_fa": "حزب سوسیال‌دموکرات فنلاند",
+          "name_en": "Social Democratic Party of Finland (SDP)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 43
+        },
+        {
+          "id": "fin_centre",
+          "name_fa": "حزب مرکز",
+          "name_en": "Centre Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون میانه‌رو و منطقه‌گرا.",
+          "ideological_profile": "میانه‌گرایی و کشاورزی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 23
+        },
+        {
+          "id": "fin_green",
+          "name_fa": "اتحادیه سبز",
+          "name_en": "Green League",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سبز.",
+          "ideological_profile": "سبزگرایی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 13
+        },
+        {
+          "id": "fin_left",
+          "name_fa": "اتحاد چپ",
+          "name_en": "Left Alliance",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ.",
+          "ideological_profile": "سوسیالیسم دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 11
+        },
+        {
+          "id": "fin_sfp",
+          "name_fa": "حزب مردم سوئدی فنلاند",
+          "name_en": "Swedish People's Party of Finland (SFP/RKP)",
+          "entity_type": "party",
+          "political_role": "شریک دولت؛ نماینده جامعه سوئدی‌زبان و لیبرال.",
+          "ideological_profile": "لیبرالیسم اجتماعی و حقوق اقلیت زبانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 10
+        },
+        {
+          "id": "fin_kd",
+          "name_fa": "دموکرات‌های مسیحی",
+          "name_en": "Christian Democrats (KD)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 5
+        },
+        {
+          "id": "fin_liikenyt",
+          "name_fa": "جنبش اکنون",
+          "name_en": "Movement Now (Liike Nyt)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون با یک نماینده.",
+          "ideological_profile": "لیبرالیسم اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 1
+        },
+        {
+          "id": "fin_vornanen",
+          "name_fa": "گروه پارلمانی تیمو وورنانن",
+          "name_en": "Timo Vornanen Parliamentary Group",
+          "entity_type": "party",
+          "political_role": "گروه مستقل یک‌نفره در پارلمان؛ حزب سراسری محسوب نمی‌شود.",
+          "ideological_profile": "مستقل",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 1
+        }
+      ],
+      "factions": [
+        {
+          "id": "fin_ncp_fiscal",
+          "name_fa": "جریان انضباط مالی NCP",
+          "name_en": "NCP fiscal-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش کسری بودجه، اصلاح هزینه‌های عمومی و تقویت رقابت‌پذیری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fin_finns_national",
+          "name_fa": "جریان ملی‌محافظه‌کار حزب فنلاندی‌ها",
+          "name_en": "Finns Party national-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "migration": "محدودسازی مهاجرت و اولویت‌دهی به هویت و منافع ملی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fin_sdp_welfare",
+          "name_fa": "جریان رفاهی سوسیال‌دموکرات",
+          "name_en": "SDP welfare current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "welfare": "حفظ خدمات عمومی، آموزش و نظام رفاه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fin_green_transition",
+          "name_fa": "جریان گذار سبز",
+          "name_en": "Green transition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "climate": "کاهش انتشار و توسعه انرژی پاک؛ در سبزها و بخشی از احزاب دیگر."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "fin_presidency",
+          "name_fa": "ریاست‌جمهوری الکساندر استاب",
+          "name_en": "Presidency of Alexander Stubb",
+          "role": "رئیس‌جمهور منتخب مستقیم و مسئول مهم سیاست خارجی در همکاری با دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "fin_cabinet",
+          "name_fa": "دولت پتری اورپو",
+          "name_en": "Petteri Orpo Cabinet",
+          "role": "دولت ائتلافی NCP، Finns Party، SFP و KD.",
+          "confidence": "high"
+        },
+        {
+          "id": "fin_eduskunta",
+          "name_fa": "ادوسکونتا",
+          "name_en": "Eduskunta",
+          "role": "پارلمان تک‌مجلسی ۲۰۰ نفره؛ دولت اکثریت شکننده دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "fin_local",
+          "name_fa": "شهرداری‌ها و مناطق خدمات رفاهی",
+          "name_en": "Municipalities and Wellbeing Services Counties",
+          "role": "مراکز قدرت محلی و منطقه‌ای در خدمات عمومی و درمان.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Petteri Orpo",
+        "party": "National Coalition Party",
+        "coalition": [
+          "National Coalition Party",
+          "Finns Party",
+          "Swedish People's Party of Finland",
+          "Christian Democrats"
+        ],
+        "status": "ائتلاف چهارحزبی با ۱۰۸ کرسی از ۲۰۰ کرسی."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "public_finances",
+          "migration",
+          "employment",
+          "healthcare",
+          "education",
+          "NATO_and_security",
+          "Russia_border",
+          "climate_and_energy"
+        ],
+        "rule": "ائتلاف بر سر سیاست مالی و مهاجرت اختلافات داخلی دارد؛ حزب فنلاندی‌ها در مهاجرت موضع سخت‌گیرانه‌تر و SFP موضع لیبرال‌تری دارد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Finnish Parliament — Parliamentary groups",
+            "url": "https://www.eduskunta.fi/en/members-and-parliamentary-bodies/parliamentary-groups",
+            "date": "2026-11-27",
+            "notes": "تعداد اعضای گروه‌های پارلمانی و جایگاه دولت/اپوزیسیون."
+          },
+          {
+            "name": "IPU Parline — Finland 2023 parliamentary election",
+            "url": "https://data.ipu.org/parliament/FI/FI-LC01/election/FI-LC01-E20230402/",
+            "date": "2023-04-13",
+            "notes": "نتایج رسمی انتخابات و شکل‌گیری دولت ائتلافی."
+          }
+        ],
+        "notes": "ترکیب گروه‌های پارلمانی بر اساس صفحه رسمی ادوسکونتا؛ اعضای مستقل جدا از احزاب سراسری ثبت شده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "fin_ncp_group",
+          "name_en": "National Coalition Party (NCP)",
+          "party_id": "fin_ncp"
+        },
+        {
+          "id": "fin_finns_group",
+          "name_en": "Finns Party",
+          "party_id": "fin_finns"
+        },
+        {
+          "id": "fin_sdp_group",
+          "name_en": "Social Democratic Party of Finland (SDP)",
+          "party_id": "fin_sdp"
+        },
+        {
+          "id": "fin_centre_group",
+          "name_en": "Centre Party",
+          "party_id": "fin_centre"
+        },
+        {
+          "id": "fin_green_group",
+          "name_en": "Green League",
+          "party_id": "fin_green"
+        },
+        {
+          "id": "fin_left_group",
+          "name_en": "Left Alliance",
+          "party_id": "fin_left"
+        },
+        {
+          "id": "fin_sfp_group",
+          "name_en": "Swedish People's Party of Finland (SFP/RKP)",
+          "party_id": "fin_sfp"
+        },
+        {
+          "id": "fin_kd_group",
+          "name_en": "Christian Democrats (KD)",
+          "party_id": "fin_kd"
+        },
+        {
+          "id": "fin_liikenyt_group",
+          "name_en": "Movement Now (Liike Nyt)",
+          "party_id": "fin_liikenyt"
+        },
+        {
+          "id": "fin_vornanen_group",
+          "name_en": "Timo Vornanen Parliamentary Group",
+          "party_id": "fin_vornanen"
+        }
+      ]
     },
     "ISL": {
       "country_name_fa": "ایسلند",
@@ -5398,59 +6096,788 @@
     "IRL": {
       "country_name_fa": "ایرلند",
       "country_name_en": "Ireland",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_democracy",
+      "government_model": "جمهوری پارلمانی با دولت ائتلافی Fianna Fáil و Fine Gael و پشتیبانی شماری از نمایندگان مستقل؛ رئیس‌جمهور کاترین کانولی از نوامبر ۲۰۲۵.",
+      "parties": [
+        {
+          "id": "irl_ff",
+          "name_fa": "فیانا فیل",
+          "name_en": "Fianna Fáil",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب ائتلاف دولت و حزب نخست‌وزیر میشائل مارتین.",
+          "ideological_profile": "میانه‌گرایی و جمهوری‌خواهی ملی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 48
+        },
+        {
+          "id": "irl_fg",
+          "name_fa": "فینه گائل",
+          "name_en": "Fine Gael",
+          "entity_type": "party",
+          "political_role": "شریک اصلی دولت؛ راست میانه و اروپاگرا.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری لیبرال",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 38
+        },
+        {
+          "id": "irl_sf",
+          "name_fa": "شین فین",
+          "name_en": "Sinn Féin",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون؛ ملی‌گرای ایرلندی و چپ میانه.",
+          "ideological_profile": "چپ ملی‌گرا و جمهوری‌خواهی ایرلندی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 39
+        },
+        {
+          "id": "irl_sd",
+          "name_fa": "سوسیال دموکرات‌ها",
+          "name_en": "Social Democrats",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ میانه.",
+          "ideological_profile": "سوسیال‌دموکراسی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 12
+        },
+        {
+          "id": "irl_labour",
+          "name_fa": "حزب کارگر",
+          "name_en": "Labour Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سوسیال‌دموکرات.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 11
+        },
+        {
+          "id": "irl_independent",
+          "name_fa": "نمایندگان مستقل",
+          "name_en": "Independent TDs",
+          "entity_type": "party",
+          "political_role": "گروهی ناهمگون از نمایندگان مستقل؛ بخشی از آنها توافق پشتیبانی از دولت دارند و همه یک حزب یا بلوک واحد نیستند.",
+          "ideological_profile": "متنوع و وابسته به نماینده",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 15
+        },
+        {
+          "id": "irl_ind_ireland",
+          "name_fa": "ایرلند مستقل",
+          "name_en": "Independent Ireland",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با گرایش محافظه‌کار و منطقه‌ای.",
+          "ideological_profile": "محافظه‌کاری و پوپولیسم منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 4
+        },
+        {
+          "id": "irl_pbpa",
+          "name_fa": "مردم پیش از سود – همبستگی",
+          "name_en": "People Before Profit–Solidarity",
+          "entity_type": "party",
+          "political_role": "ائتلاف چپ رادیکال.",
+          "ideological_profile": "سوسیالیسم و چپ کارگری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 5
+        },
+        {
+          "id": "irl_aontu",
+          "name_fa": "آونتو",
+          "name_en": "Aontú",
+          "entity_type": "party",
+          "political_role": "حزب کوچک جمهوری‌خواه با مواضع محافظه‌کار اجتماعی.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و جمهوری‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 2
+        },
+        {
+          "id": "irl_green",
+          "name_fa": "حزب سبز",
+          "name_en": "Green Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک محیط‌زیستی؛ پس از انتخابات ۲۰۲۴ در دولت نیست.",
+          "ideological_profile": "سبزگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 1
+        }
+      ],
+      "factions": [
+        {
+          "id": "irl_ff_pragmatic",
+          "name_fa": "جریان عمل‌گرای فیانا فیل",
+          "name_en": "Fianna Fáil pragmatic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حمایت از کسب‌وکار، خدمات عمومی و مصالحه اقتصادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "irl_fg_market",
+          "name_fa": "جریان بازارمحور فینه گائل",
+          "name_en": "Fine Gael market-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "جذب سرمایه خارجی، انضباط مالی و سیاست‌های pro-business."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "irl_sf_unity",
+          "name_fa": "جریان وحدت ایرلند شین فین",
+          "name_en": "Sinn Féin Irish-unity current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "constitutional": "حمایت از بحث و برنامه‌ریزی برای وحدت ایرلند و همکاری شمال–جنوب."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "irl_left_social",
+          "name_fa": "جریان چپ رفاهی",
+          "name_en": "Irish social-welfare left current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "housing": "تمرکز بر مسکن عمومی، هزینه زندگی و خدمات درمانی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "irl_presidency",
+          "name_fa": "ریاست‌جمهوری کاترین کانولی",
+          "name_en": "Presidency of Catherine Connolly",
+          "role": "رئیس کشور منتخب مستقیم با نقش عمدتاً تشریفاتی و اختیارات قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "irl_cabinet",
+          "name_fa": "دولت میشائل مارتین",
+          "name_en": "Micheál Martin Cabinet",
+          "role": "قوه مجریه ائتلافی متکی بر Fianna Fáil، Fine Gael و مستقل‌های حامی.",
+          "confidence": "high"
+        },
+        {
+          "id": "irl_dail",
+          "name_fa": "دایل ایرن",
+          "name_en": "Dáil Éireann",
+          "role": "مجلس سفلی ۱۷۴ نفره پس از انتخابات ۲۰۲۴؛ اعتماد دولت به آن وابسته است.",
+          "confidence": "high"
+        },
+        {
+          "id": "irl_seanad",
+          "name_fa": "سیناد ایرن",
+          "name_en": "Seanad Éireann",
+          "role": "مجلس علیا با اعضای منتخب غیرمستقیم و منصوب.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "taoiseach": "Micheál Martin",
+        "party": "Fianna Fáil",
+        "coalition": [
+          "Fianna Fáil",
+          "Fine Gael",
+          "Independent supporting TDs"
+        ],
+        "status": "دولت ائتلافی با حمایت نمایندگان مستقل؛ حمایت مستقل‌ها را نباید به‌عنوان ادغام در دو حزب حاکم نمایش داد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "housing",
+          "healthcare",
+          "cost_of_living",
+          "Irish_unity",
+          "migration",
+          "corporate_tax",
+          "neutrality",
+          "EU_policy"
+        ],
+        "rule": "نمایندگان مستقل و توافق‌های پشتیبانی، نقش تعیین‌کننده در اکثریت دارند؛ آرایش سیاسی شمال ایرلند جدا از جمهوری ایرلند مدل شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Robert Schuman Foundation — Ireland political system and representation",
+            "url": "https://www.robert-schuman.eu/en/our-information-files/ireland",
+            "date": "2026-10-27",
+            "notes": "ترکیب احزاب در دایل و سیناد، رئیس‌جمهور و نخست‌وزیر."
+          },
+          {
+            "name": "IPU Parline — Ireland 2024 general election",
+            "url": "https://data.ipu.org/parliament/IE/IE-LC01/election/IE-LC01-E20241129/",
+            "date": "2025-01-15",
+            "notes": "نتایج رسمی انتخابات ۲۰۲۴."
+          }
+        ],
+        "notes": "کرسی‌ها بر اساس نتیجه انتخابات ۲۰۲۴ و گزارش ترکیب پارلمان؛ مستقل‌های حامی دولت به‌صورت حزب مستقل فرض نشده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "irl_ff_group",
+          "name_en": "Fianna Fáil",
+          "party_id": "irl_ff"
+        },
+        {
+          "id": "irl_fg_group",
+          "name_en": "Fine Gael",
+          "party_id": "irl_fg"
+        },
+        {
+          "id": "irl_sf_group",
+          "name_en": "Sinn Féin",
+          "party_id": "irl_sf"
+        },
+        {
+          "id": "irl_sd_group",
+          "name_en": "Social Democrats",
+          "party_id": "irl_sd"
+        },
+        {
+          "id": "irl_labour_group",
+          "name_en": "Labour Party",
+          "party_id": "irl_labour"
+        },
+        {
+          "id": "irl_independent_group",
+          "name_en": "Independent TDs",
+          "party_id": "irl_independent"
+        },
+        {
+          "id": "irl_ind_ireland_group",
+          "name_en": "Independent Ireland",
+          "party_id": "irl_ind_ireland"
+        },
+        {
+          "id": "irl_pbpa_group",
+          "name_en": "People Before Profit–Solidarity",
+          "party_id": "irl_pbpa"
+        },
+        {
+          "id": "irl_aontu_group",
+          "name_en": "Aontú",
+          "party_id": "irl_aontu"
+        },
+        {
+          "id": "irl_green_group",
+          "name_en": "Green Party",
+          "party_id": "irl_green"
+        }
+      ]
     },
     "POL": {
       "country_name_fa": "لهستان",
       "country_name_en": "Poland",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_democracy_with_presidential_veto",
+      "government_model": "جمهوری پارلمانی با رئیس‌جمهور منتخب مستقیم و دولت ائتلافی میانه‌رو به رهبری دونالد توسک؛ اختلاف ساختاری میان دولت، رئیس‌جمهور و دادگاه قانون اساسی.",
+      "parties": [
+        {
+          "id": "pol_ko",
+          "name_fa": "ائتلاف مدنی",
+          "name_en": "Civic Coalition (KO)",
+          "entity_type": "party",
+          "political_role": "بلوک اصلی دولت و شامل پلتفرم مدنی، مدرن و جریان‌های متحد؛ نخست‌وزیر از این بلوک است.",
+          "ideological_profile": "لیبرالیسم میانه‌رو، محافظه‌کاری لیبرال و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 157
+        },
+        {
+          "id": "pol_pis",
+          "name_fa": "قانون و عدالت",
+          "name_en": "Law and Justice (PiS)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون؛ رئیس‌جمهور کارول ناوروتسکی از اردوگاه سیاسی نزدیک به آن است.",
+          "ideological_profile": "محافظه‌کاری ملی و پوپولیسم راست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 194
+        },
+        {
+          "id": "pol_third_way",
+          "name_fa": "راه سوم",
+          "name_en": "Third Way (Poland 2050 and Polish People's Party)",
+          "entity_type": "party",
+          "political_role": "ائتلاف انتخاباتی ۲۰۲۳؛ اجزای آن در دوره بعدی جداگانه عمل کرده‌اند و بخشی از دولت را تشکیل می‌دهند.",
+          "ideological_profile": "میانه‌گرایی، دموکراسی مسیحی و لیبرالیسم اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 65
+        },
+        {
+          "id": "pol_left",
+          "name_fa": "چپ",
+          "name_en": "The Left (Lewica)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک دولت ائتلافی؛ شامل جریان‌های چپ و سوسیال‌دموکرات.",
+          "ideological_profile": "سوسیال‌دموکراسی و چپ ترقی‌خواه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 26
+        },
+        {
+          "id": "pol_confederation",
+          "name_fa": "کنفدراسیون آزادی و استقلال",
+          "name_en": "Confederation Liberty and Independence",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست ملی‌گرا و آزادی‌خواه اقتصادی.",
+          "ideological_profile": "ملی‌لیبرالیسم و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 18
+        },
+        {
+          "id": "pol_conf_polish_crown",
+          "name_fa": "کنفدراسیون تاج لهستان",
+          "name_en": "Confederation of the Polish Crown",
+          "entity_type": "party",
+          "political_role": "جریان ملی‌گرای رادیکال؛ در ۲۰۲۶ بازیگری جدا از ائتلاف اولیه کنفدراسیون و دارای وزن رو به رشد.",
+          "ideological_profile": "ملی‌گرایی رادیکال و سنت‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "pol_together",
+          "name_fa": "با هم",
+          "name_en": "Together (Razem)",
+          "entity_type": "party",
+          "political_role": "چپ مستقل که از ائتلاف دولت فاصله دارد.",
+          "ideological_profile": "سوسیالیسم دموکراتیک و چپ‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "pol_direct_democracy",
+          "name_fa": "دموکراسی مستقیم",
+          "name_en": "Direct Democracy",
+          "entity_type": "party",
+          "political_role": "گروه کوچک پارلمانی/نمایندگان مستقل با ترکیب متغیر.",
+          "ideological_profile": "پوپولیسم و اصلاح نهادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "pol_ko_liberal",
+          "name_fa": "جریان لیبرال و اروپاگرای ائتلاف مدنی",
+          "name_en": "Civic Coalition liberal and pro-European current",
+          "entity_type": "coalition_current",
+          "policy_positions": {
+            "EU": "تقویت پیوند با اتحادیه اروپا و بازسازی روابط نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pol_ko_centrist",
+          "name_fa": "جریان میانه‌رو و اصلاح‌طلب",
+          "name_en": "Civic Coalition centrist reform current",
+          "entity_type": "coalition_current",
+          "policy_positions": {
+            "governance": "اصلاح نهادها و بازگرداندن استقلال قضایی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pol_pis_national",
+          "name_fa": "جریان ملی‌محافظه‌کار PiS",
+          "name_en": "PiS national-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حاکمیت ملی، سیاست اجتماعی محافظه‌کارانه و نقش پررنگ دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pol_conf_national",
+          "name_fa": "جریان ملی‌گرای کنفدراسیون",
+          "name_en": "Confederation nationalist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "EU": "مخالفت با انتقال اختیارات بیشتر به اتحادیه اروپا و سیاست مهاجرت محدودکننده."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "pol_presidency",
+          "name_fa": "ریاست‌جمهوری کارول ناوروتسکی",
+          "name_en": "Presidency of Karol Nawrocki",
+          "role": "رئیس‌جمهور منتخب مستقیم با حق وتو و نقش مهم در انتصاب‌ها.",
+          "confidence": "high"
+        },
+        {
+          "id": "pol_cabinet",
+          "name_fa": "دولت دونالد توسک",
+          "name_en": "Donald Tusk Cabinet",
+          "role": "قوه مجریه ائتلافی متشکل از KO، بخش‌هایی از راه سوم و چپ.",
+          "confidence": "high"
+        },
+        {
+          "id": "pol_sejm",
+          "name_fa": "سِیم",
+          "name_en": "Sejm",
+          "role": "مجلس سفلی ۴۶۰ نفره و مرکز اصلی اعتماد و قانون‌گذاری.",
+          "confidence": "high"
+        },
+        {
+          "id": "pol_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس علیا با نقش بازنگری قوانین.",
+          "confidence": "high"
+        },
+        {
+          "id": "pol_constitutional",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Tribunal",
+          "role": "نهاد قضایی درگیر اختلاف بر سر مشروعیت انتصاب‌ها و صلاحیت اعضا.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Donald Tusk",
+        "party": "Civic Coalition",
+        "coalition": [
+          "Civic Coalition",
+          "Polish People's Party",
+          "Poland 2050",
+          "The Left"
+        ],
+        "status": "دولت ائتلافی؛ تعداد کرسی‌های کنونی گروه‌ها به‌دلیل تغییر وابستگی نمایندگان با نتایج اولیه انتخابات ۲۰۲۳ یکسان نیست."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "EU_rule_of_law",
+          "judicial_reform",
+          "Ukraine_support",
+          "migration",
+          "abortion_and_social_policy",
+          "energy_transition",
+          "defence_spending",
+          "cost_of_living"
+        ],
+        "rule": "اعداد کرسی ثبت‌شده نتایج انتخابات ۲۰۲۳ هستند؛ در بازی، تغییرات گروه‌ها و نمایندگان مستقل را با رخدادهای سیاسی مدل کن. اختلاف دولت و رئیس‌جمهور بر سر انتصاب‌ها و قوانین می‌تواند بن‌بست ایجاد کند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Poland 2023 parliamentary election",
+            "url": "https://data.ipu.org/parliament/PL/PL-LC01/election/PL-LC01-E20231015/",
+            "date": "2023-11-13",
+            "notes": "نتایج اولیه رسمی انتخابات ۲۰۲۳ و ترکیب ائتلاف‌ها."
+          },
+          {
+            "name": "Le Monde — Poland's Constitutional Tribunal crisis ahead of 2027 elections",
+            "url": "https://www.lemonde.fr/en/international/article/2026/11/04/poland-s-crisis-over-constitutional-tribunal-points-to-fierce-campaign-ahead-of-elections_6771581_4.html",
+            "date": "2026-11-04",
+            "notes": "وضعیت اختلاف دولت و رئیس‌جمهور و همگرایی بخشی از PiS با راست رادیکال."
+          },
+          {
+            "name": "Polling Forecast — current Sejm membership",
+            "url": "https://www.pollingforecast.com/pl/members",
+            "date": "2026-11-24",
+            "notes": "ردیابی تغییر وابستگی نمایندگان؛ منبع ثانویه برای تحولات پس از انتخابات."
+          }
+        ],
+        "notes": "کرسی‌های اصلی در فایل به نتایج رسمی ۲۰۲۳ اشاره دارند؛ منبع ردیابی اعضای کنونی نشان می‌دهد شمار گروه‌ها و وابستگی نمایندگان تغییر کرده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "pol_ko_group",
+          "name_en": "Civic Coalition (KO)",
+          "party_id": "pol_ko"
+        },
+        {
+          "id": "pol_pis_group",
+          "name_en": "Law and Justice (PiS)",
+          "party_id": "pol_pis"
+        },
+        {
+          "id": "pol_third_way_group",
+          "name_en": "Third Way (Poland 2050 and Polish People's Party)",
+          "party_id": "pol_third_way"
+        },
+        {
+          "id": "pol_left_group",
+          "name_en": "The Left (Lewica)",
+          "party_id": "pol_left"
+        },
+        {
+          "id": "pol_confederation_group",
+          "name_en": "Confederation Liberty and Independence",
+          "party_id": "pol_confederation"
+        },
+        {
+          "id": "pol_conf_polish_crown_group",
+          "name_en": "Confederation of the Polish Crown",
+          "party_id": "pol_conf_polish_crown"
+        },
+        {
+          "id": "pol_together_group",
+          "name_en": "Together (Razem)",
+          "party_id": "pol_together"
+        },
+        {
+          "id": "pol_direct_democracy_group",
+          "name_en": "Direct Democracy",
+          "party_id": "pol_direct_democracy"
+        }
+      ]
     },
     "CZE": {
       "country_name_fa": "چک",
       "country_name_en": "Czechia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_democracy",
+      "government_model": "جمهوری پارلمانی با دولت ائتلافی سه‌حزبی به رهبری آندری بابیش؛ مجلس نمایندگان اکثریت دولت را دارد و سنا در اختیار اپوزیسیون pro-European است.",
+      "parties": [
+        {
+          "id": "cze_ano",
+          "name_fa": "اقدام شهروندان ناراضی",
+          "name_en": "ANO 2011",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب دولت و حزب نخست‌وزیر؛ جنبش پوپولیست میانه‌گرا.",
+          "ideological_profile": "پوپولیسم میانه‌گرا و عمل‌گرایی اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 80
+        },
+        {
+          "id": "cze_spolu",
+          "name_fa": "با هم",
+          "name_en": "SPOLU Coalition (ODS, KDU-ČSL, TOP 09)",
+          "entity_type": "party",
+          "political_role": "ائتلاف انتخاباتی اپوزیسیون متشکل از سه حزب راست میانه و دموکرات مسیحی.",
+          "ideological_profile": "محافظه‌کاری، دموکراسی مسیحی و لیبرالیسم",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 52
+        },
+        {
+          "id": "cze_stan",
+          "name_fa": "شهرداران و مستقل‌ها",
+          "name_en": "Mayors and Independents (STAN)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون میانه‌رو و pro-European.",
+          "ideological_profile": "لیبرالیسم اجتماعی و تمرکززدایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 22
+        },
+        {
+          "id": "cze_pirates",
+          "name_fa": "حزب دزدان دریایی چک",
+          "name_en": "Czech Pirate Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون لیبرال و ترقی‌خواه.",
+          "ideological_profile": "لیبرالیسم اجتماعی و شفافیت حکمرانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 18
+        },
+        {
+          "id": "cze_spd",
+          "name_fa": "آزادی و دموکراسی مستقیم",
+          "name_en": "Freedom and Direct Democracy (SPD)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی؛ ملی‌گرا و ضد مهاجرت.",
+          "ideological_profile": "ملی‌گرایی و پوپولیسم راست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 15
+        },
+        {
+          "id": "cze_motorists",
+          "name_fa": "رانندگان برای خودشان",
+          "name_en": "Motorists for Themselves (AUTO)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی؛ منتقد سیاست‌های اقلیمی اتحادیه اروپا.",
+          "ideological_profile": "راست محافظه‌کار و ضد مقررات اقلیمی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 13
+        }
+      ],
+      "factions": [
+        {
+          "id": "cze_ano_pragmatic",
+          "name_fa": "جریان عمل‌گرای ANO",
+          "name_en": "ANO pragmatic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تمرکز بر هزینه زندگی، حمایت اقتصادی و مدیریت اجرایی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "cze_spd_national",
+          "name_fa": "جریان ملی‌گرای SPD",
+          "name_en": "SPD nationalist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "migration": "مخالفت با مهاجرت گسترده و بدبینی به برخی سیاست‌های اتحادیه اروپا."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "cze_auto_green_sceptic",
+          "name_fa": "جریان منتقد سیاست اقلیمی AUTO",
+          "name_en": "AUTO climate-policy sceptic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "climate": "مخالفت با بخش‌هایی از مقررات اقلیمی و Green Deal اروپا."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "cze_pro_eu_opposition",
+          "name_fa": "جریان اپوزیسیون طرفدار اتحادیه اروپا",
+          "name_en": "Pro-European opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "EU": "حمایت از همکاری اروپایی و موضع قوی‌تر در حمایت از اوکراین."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "cze_president",
+          "name_fa": "ریاست‌جمهوری پتر پاول",
+          "name_en": "Presidency of Petr Pavel",
+          "role": "رئیس‌جمهور منتخب مستقیم و فرمانده کل نیروهای مسلح در چارچوب قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "cze_cabinet",
+          "name_fa": "دولت آندری بابیش",
+          "name_en": "Andrej Babiš Cabinet",
+          "role": "قوه مجریه متکی بر ANO، SPD و AUTO.",
+          "confidence": "high"
+        },
+        {
+          "id": "cze_chamber",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Deputies",
+          "role": "مجلس سفلی ۲۰۰ نفره؛ ائتلاف دولت ۱۰۸ کرسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "cze_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس علیا ۸۱ نفره؛ اپوزیسیون طرفدار غرب پس از انتخابات اکتبر ۲۰۲۶ اکثریت را حفظ کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "cze_constitutional",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد قضایی مستقل و مرجع نظارت قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Andrej Babiš",
+        "party": "ANO",
+        "coalition": [
+          "ANO",
+          "Freedom and Direct Democracy (SPD)",
+          "Motorists for Themselves (AUTO)"
+        ],
+        "status": "دولت ائتلافی با ۱۰۸ کرسی از ۲۰۰ کرسی؛ رأی اعتماد در ۱۵ ژانویه ۲۰۲۶."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "Ukraine_policy",
+          "EU_climate_policy",
+          "migration",
+          "taxation",
+          "public_broadcasting",
+          "energy",
+          "NATO_relations"
+        ],
+        "rule": "دولت در مجلس سفلی اکثریت دارد اما سنا در اختیار اپوزیسیون است؛ مواضع دولت درباره اوکراین و سیاست اقلیمی با رئیس‌جمهور و احزاب مخالف تفاوت دارد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Czechia 2025 Chamber election",
+            "url": "https://data.ipu.org/parliament/CZ/CZ-LC01/election/CZ-LC01-E20251003/",
+            "date": "2026-01-15",
+            "notes": "نتایج دقیق انتخابات ۲۰۲۵ و ائتلاف ANO–SPD–AUTO."
+          },
+          {
+            "name": "AP — Czech Senate election results, October 2026",
+            "url": "https://apnews.com/article/d206f3edbc7ea0f73b0dbd07b339820b",
+            "date": "2026-10-17",
+            "notes": "پیروزی اپوزیسیون pro-Western در ۲۲ کرسی از ۲۷ کرسی مورد رقابت."
+          },
+          {
+            "name": "Reuters — Babis suffers setback in Senate elections",
+            "url": "https://www.reuters.com/world/czech-pm-babis-suffers-setback-senate-elections-2026-10-17/",
+            "date": "2026-10-17",
+            "notes": "تحلیل نتیجه سنا و پیامدهای سیاسی."
+          }
+        ],
+        "notes": "نتایج مجلس سفلی از IPU و وضعیت سنا از انتخابات اکتبر ۲۰۲۶ ثبت شده است؛ دولت و اکثریت سنا در دست بلوک‌های متفاوت‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "cze_ano_group",
+          "name_en": "ANO 2011",
+          "party_id": "cze_ano"
+        },
+        {
+          "id": "cze_spolu_group",
+          "name_en": "SPOLU Coalition (ODS, KDU-ČSL, TOP 09)",
+          "party_id": "cze_spolu"
+        },
+        {
+          "id": "cze_stan_group",
+          "name_en": "Mayors and Independents (STAN)",
+          "party_id": "cze_stan"
+        },
+        {
+          "id": "cze_pirates_group",
+          "name_en": "Czech Pirate Party",
+          "party_id": "cze_pirates"
+        },
+        {
+          "id": "cze_spd_group",
+          "name_en": "Freedom and Direct Democracy (SPD)",
+          "party_id": "cze_spd"
+        },
+        {
+          "id": "cze_motorists_group",
+          "name_en": "Motorists for Themselves (AUTO)",
+          "party_id": "cze_motorists"
+        }
+      ]
     },
     "SVK": {
       "country_name_fa": "اسلواکی",
@@ -5531,21 +6958,268 @@
     "GRC": {
       "country_name_fa": "یونان",
       "country_name_en": "Greece",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_democracy",
+      "government_model": "جمهوری پارلمانی چندحزبی؛ دولت محافظه‌کار به رهبری حزب دموکراسی نوین. پارلمان ۳۰۰ کرسی دارد، اما ترکیب گروه‌ها در دوره ۲۰۲۳ تا ۲۰۲۶ به‌دلیل جدایی نمایندگان تغییر کرده است.",
+      "parties": [
+        {
+          "id": "grc_nd",
+          "name_fa": "دموکراسی نوین",
+          "name_en": "New Democracy (ND)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و حزب نخست‌وزیر؛ راست میانه.",
+          "ideological_profile": "محافظه‌کاری لیبرال و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 158
+        },
+        {
+          "id": "grc_pasok",
+          "name_fa": "جنبش سوسیالیستی پان‌هلنیک – جنبش تغییر",
+          "name_en": "PASOK–Movement for Change",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی میانه‌چپ؛ پس از ادغام و بازآرایی جریان‌های سوسیالیستی.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 32
+        },
+        {
+          "id": "grc_syriza",
+          "name_fa": "ائتلاف چپ رادیکال",
+          "name_en": "SYRIZA",
+          "entity_type": "party",
+          "political_role": "حزب چپ؛ در این دوره با انشعاب و کاهش گروه پارلمانی روبه‌رو بوده است.",
+          "ideological_profile": "چپ‌گرایی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 47
+        },
+        {
+          "id": "grc_kke",
+          "name_fa": "حزب کمونیست یونان",
+          "name_en": "Communist Party of Greece (KKE)",
+          "entity_type": "party",
+          "political_role": "حزب کمونیست مستقل و مخالف دولت.",
+          "ideological_profile": "مارکسیسم–لنینیسم و کمونیسم",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 21
+        },
+        {
+          "id": "grc_greek_solution",
+          "name_fa": "راه‌حل یونانی",
+          "name_en": "Greek Solution",
+          "entity_type": "party",
+          "political_role": "حزب ملی‌محافظه‌کار و راست‌گرا.",
+          "ideological_profile": "ملی‌محافظه‌کاری و شکاکیت به اتحادیه اروپا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 12
+        },
+        {
+          "id": "grc_niki",
+          "name_fa": "پیروزی",
+          "name_en": "Niki",
+          "entity_type": "party",
+          "political_role": "حزب کوچک محافظه‌کار اجتماعی و مذهبی.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و سنت‌گرایی مذهبی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 10
+        },
+        {
+          "id": "grc_course_freedom",
+          "name_fa": "مسیر آزادی",
+          "name_en": "Course of Freedom",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون با مواضع ضدنخبگانی و عدالت‌خواهانه.",
+          "ideological_profile": "چپ پوپولیست و حاکمیت قانون",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 8
+        },
+        {
+          "id": "grc_new_left",
+          "name_fa": "چپ نو",
+          "name_en": "New Left",
+          "entity_type": "party",
+          "political_role": "جریان منشعب از SYRIZA؛ در ۲۰۲۶ گروه پارلمانی مستقل خود را از دست داده و وضعیت نمایندگانش متغیر است.",
+          "ideological_profile": "چپ دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        },
+        {
+          "id": "grc_spartans",
+          "name_fa": "اسپارتی‌ها",
+          "name_en": "Spartans",
+          "entity_type": "party",
+          "political_role": "حزب راست افراطی که گروه پارلمانی‌اش از هم پاشیده و نمایندگان باقی‌مانده مستقل‌اند.",
+          "ideological_profile": "ملی‌گرایی راست افراطی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "grc_nd_reform",
+          "name_fa": "جریان اصلاح‌طلب و تکنوکرات دموکراسی نوین",
+          "name_en": "ND reformist and technocratic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "اصلاحات بازار، جذب سرمایه و مدیریت مالی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "grc_nd_conservative",
+          "name_fa": "جریان محافظه‌کار اجتماعی دموکراسی نوین",
+          "name_en": "ND social-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر نظم اجتماعی، امنیت و سنت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "grc_pasok_social",
+          "name_fa": "جریان سوسیال‌دموکرات PASOK",
+          "name_en": "PASOK social-democratic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "welfare": "تقویت خدمات عمومی، کار و سیاست‌های بازتوزیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "grc_syriza_left",
+          "name_fa": "جریان‌های چپ و اصلاح‌طلب SYRIZA",
+          "name_en": "SYRIZA left and reformist currents",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "نقش فعال دولت و حمایت اجتماعی؛ اختلافات داخلی درباره رهبری و راهبرد."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "grc_presidency",
+          "name_fa": "ریاست‌جمهوری یونان",
+          "name_en": "Presidency",
+          "role": "رئیس کشور با نقش عمدتاً تشریفاتی و اختیارات قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "grc_cabinet",
+          "name_fa": "دولت کیریاکوس میتسوتاکیس",
+          "name_en": "Mitsotakis Cabinet",
+          "role": "قوه مجریه به ریاست نخست‌وزیر و متکی بر اکثریت حزب دموکراسی نوین.",
+          "confidence": "high"
+        },
+        {
+          "id": "grc_hellenic_parliament",
+          "name_fa": "پارلمان یونان",
+          "name_en": "Hellenic Parliament",
+          "role": "مجلس تک‌مجلسی ۳۰۰ کرسی؛ انشعاب‌ها و نمایندگان مستقل در شمارش گروه‌ها اثر دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "grc_judiciary",
+          "name_fa": "نظام قضایی و شورای دولت",
+          "name_en": "Judiciary and Council of State",
+          "role": "نهادهای قضایی و نظارتی با نقش در کنترل قانونی تصمیمات دولت.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Kyriakos Mitsotakis",
+        "party": "New Democracy",
+        "coalition": [
+          "New Democracy"
+        ],
+        "status": "دولت تک‌حزبی با اکثریت حاصل از انتخابات ژوئن ۲۰۲۳؛ وضعیت گروه‌های پارلمانی بعداً به‌دلیل انشعاب‌ها تغییر کرده است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "wages_and_pensions",
+          "public_services",
+          "migration",
+          "tourism",
+          "debt_and_fiscal_policy",
+          "EU_relations",
+          "rule_of_law"
+        ],
+        "rule": "کرسی‌های ذکرشده برای احزاب اصلی، نتیجه انتخابات ۲۰۲۳ هستند نه شمارش لحظه‌ای ۲۰۲۶؛ گروه‌های پارلمانی و مستقل‌ها باید جداگانه و پویا مدل شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Greece 2023 parliamentary election",
+            "url": "https://data.ipu.org/parliament/GR/GR-LC01/election/GR-LC01-E20230625/",
+            "date": "2023-07-03",
+            "notes": "نتایج رسمی انتخابات و ترکیب اولیه پارلمان."
+          },
+          {
+            "name": "Politik O Test — Greek parties and parliamentary fragmentation in November 2026",
+            "url": "https://politikotest.gr/analyseis/ta-nea-kommata-tou-2026?lang=en",
+            "date": "2026-11-20",
+            "notes": "گزارش تحلیلی از گروه‌های پارلمانی، انشعاب‌ها و نمایندگان مستقل؛ منبع ثانویه."
+          }
+        ],
+        "notes": "ترکیب پارلمان یونان در ۲۰۲۶ به‌سرعت تغییر کرده است؛ ارقام کرسی‌های احزاب اصلی به‌عنوان نتیجه انتخابات ۲۰۲۳ برچسب خورده‌اند و نباید وضعیت جاری تلقی شوند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "grc_nd_group",
+          "name_en": "New Democracy (ND)",
+          "party_id": "grc_nd"
+        },
+        {
+          "id": "grc_pasok_group",
+          "name_en": "PASOK–Movement for Change",
+          "party_id": "grc_pasok"
+        },
+        {
+          "id": "grc_syriza_group",
+          "name_en": "SYRIZA",
+          "party_id": "grc_syriza"
+        },
+        {
+          "id": "grc_kke_group",
+          "name_en": "Communist Party of Greece (KKE)",
+          "party_id": "grc_kke"
+        },
+        {
+          "id": "grc_greek_solution_group",
+          "name_en": "Greek Solution",
+          "party_id": "grc_greek_solution"
+        },
+        {
+          "id": "grc_niki_group",
+          "name_en": "Niki",
+          "party_id": "grc_niki"
+        },
+        {
+          "id": "grc_course_freedom_group",
+          "name_en": "Course of Freedom",
+          "party_id": "grc_course_freedom"
+        },
+        {
+          "id": "grc_new_left_group",
+          "name_en": "New Left",
+          "party_id": "grc_new_left"
+        },
+        {
+          "id": "grc_spartans_group",
+          "name_en": "Spartans",
+          "party_id": "grc_spartans"
+        }
+      ]
     },
     "SRB": {
       "country_name_fa": "صربستان",
