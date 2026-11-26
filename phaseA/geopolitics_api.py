@@ -395,6 +395,22 @@ class Handler(BaseHTTPRequestHandler):
                 res = run_engine(["init", country])
             self._json(dict(res, state=api_state(get_state(True))))
             return
+        elif path == "api/time":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای در جریان نیست."))
+                return
+            minutes = body.get("minutes")
+            if minutes not in (300, 1440):
+                self._json(dict(ok=False, error="گام زمانی نامعتبر است."), 400)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    G.advance_time(current, minutes)
+                state_now = get_state(True)
+                self._json(dict(ok=True, out="زمان بازی جلو رفت.", state=api_state(state_now)))
+            except Exception as e:
+                self._json(dict(ok=False, error="خطا در جلو بردن زمان: %s" % e), 500)
         elif path == "api/act":
             if s is None:
                 self._json(dict(ok=False, error="بازی\u200cای ساخته نشده."))
