@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 33,
-    "pending_countries": 141,
+    "researched_countries": 40,
+    "pending_countries": 134,
     "last_batch": [
-      "BGD",
-      "THA",
-      "MYS",
-      "PHL",
-      "VNM",
-      "DZA",
-      "MAR"
+      "ESP",
+      "PRT",
+      "NLD",
+      "BEL",
+      "SWE",
+      "NOR",
+      "DNK"
     ]
   },
   "notes": [
@@ -27,7 +27,8 @@
     "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.",
     "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.",
     "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.",
-    "نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است."
+    "نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.",
+    "نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود."
   ],
   "countries": {
     "USA": {
@@ -3245,78 +3246,1222 @@
     "ESP": {
       "country_name_fa": "اسپانیا",
       "country_name_en": "Spain",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_constitutional_monarchy_multiparty_decentralized",
+      "government_model": "پادشاهی مشروطه پارلمانی با دولت ائتلافی/اقلیتی و ساختار خودمختاری‌های منطقه‌ای؛ پارلمان در تاریخ مبنا منحل و انتخابات زودهنگام ۲۹ نوامبر در پیش است.",
+      "parties": [
+        {
+          "id": "esp_psoe",
+          "name_fa": "حزب کارگران سوسیالیست اسپانیا",
+          "name_en": "Spanish Socialist Workers' Party (PSOE)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی دولت ائتلافی پیش از انتخابات زودهنگام؛ نخست‌وزیر از این حزب است.",
+          "ideological_profile": "سوسیال‌دموکراسی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_pp",
+          "name_fa": "حزب مردم",
+          "name_en": "People's Party (PP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی و حزب راست میانه.",
+          "ideological_profile": "محافظه‌کاری، دموکراسی مسیحی و اقتصاد بازار",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_vox",
+          "name_fa": "وُکس",
+          "name_en": "Vox",
+          "entity_type": "party",
+          "political_role": "حزب راست ملی‌گرا و اپوزیسیون؛ بازیگر بالقوه ائتلاف پس از انتخابات.",
+          "ideological_profile": "ملی‌گرایی اسپانیایی و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_sumar",
+          "name_fa": "ائتلاف سومار",
+          "name_en": "Sumar",
+          "entity_type": "party",
+          "political_role": "شریک چپ‌گرای PSOE در دولت پیش از انحلال پارلمان؛ ائتلافی از چند جریان و حزب.",
+          "ideological_profile": "چپ‌گرایی، سبزگرایی و چپ میانه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_junts",
+          "name_fa": "با هم برای کاتالونیا",
+          "name_en": "Junts per Catalunya",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای کاتالانی؛ حمایت پارلمانی آن در دوره قبل برای دولت مهم بود.",
+          "ideological_profile": "ملی‌گرایی کاتالانی و استقلال‌طلبی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_erc",
+          "name_fa": "چپ جمهوری‌خواه کاتالونیا",
+          "name_en": "Republican Left of Catalonia (ERC)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای کاتالانی با گرایش جمهوری‌خواه و استقلال‌طلب.",
+          "ideological_profile": "چپ جمهوری‌خواه و ملی‌گرایی کاتالانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_ehbildu",
+          "name_fa": "ائتلاف EH Bildu",
+          "name_en": "EH Bildu",
+          "entity_type": "party",
+          "political_role": "ائتلاف چپ‌گرای باسکی؛ بازیگر پارلمانی منطقه‌ای.",
+          "ideological_profile": "چپ‌گرایی و ملی‌گرایی باسکی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_pnv",
+          "name_fa": "حزب ملی‌گرای باسک",
+          "name_en": "Basque Nationalist Party (PNV)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای باسکی با سنت دموکرات مسیحی و میانه‌رو.",
+          "ideological_profile": "ملی‌گرایی باسکی و دموکراسی مسیحی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_bng",
+          "name_fa": "بلوک ملی‌گرای گالیسیا",
+          "name_en": "Galician Nationalist Bloc (BNG)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای گالیسیا.",
+          "ideological_profile": "ملی‌گرایی گالیسایی و چپ میانه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_cc",
+          "name_fa": "ائتلاف قناری",
+          "name_en": "Canarian Coalition (CC)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای جزایر قناری؛ وزن پارلمانی محدود اما گاه تعیین‌کننده.",
+          "ideological_profile": "منطقه‌گرایی قناری و میانه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "esp_psoe_socialdem",
+          "name_fa": "جریان سوسیال‌دموکرات PSOE",
+          "name_en": "PSOE social-democratic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حمایت از خدمات عمومی، حقوق کار و سیاست‌های بازتوزیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_pp_moderate",
+          "name_fa": "جریان میانه‌رو حزب مردم",
+          "name_en": "PP moderate-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات و مقررات در کنار حفظ نهادهای محافظه‌کارانه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_sumar_plural",
+          "name_fa": "جریان‌های چپ و سبز در سومار",
+          "name_en": "Sumar left and green currents",
+          "entity_type": "coalition_current",
+          "policy_positions": {
+            "domestic": "حقوق اجتماعی و کار؛ سیاست اقلیمی و خدمات عمومی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "esp_regionalist",
+          "name_fa": "جریان‌های منطقه‌گرا و خودمختاری‌خواه",
+          "name_en": "Regionalist and autonomy currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "territorial": "تمرکززدایی، اختیارات منطقه‌ای و در برخی احزاب حق تعیین سرنوشت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "esp_monarchy",
+          "name_fa": "پادشاهی و پادشاه",
+          "name_en": "Crown and King",
+          "role": "رئیس کشور در نظام مشروطه؛ اختیارات عمدتاً تشریفاتی و قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "esp_caretaker_cabinet",
+          "name_fa": "دولت موقت به ریاست پدرو سانچز",
+          "name_en": "Caretaker Cabinet",
+          "role": "قوه مجریه؛ دولت پس از انحلال پارلمان تا تشکیل دولت جدید به کار ادامه می‌دهد.",
+          "confidence": "high"
+        },
+        {
+          "id": "esp_cortes",
+          "name_fa": "کورتس خنرالس",
+          "name_en": "Cortes Generales",
+          "role": "قوه مقننه دو مجلسی؛ در تاریخ مبنا پارلمان منحل و روند انتخابات در جریان است.",
+          "confidence": "high"
+        },
+        {
+          "id": "esp_autonomous",
+          "name_fa": "جوامع خودمختار",
+          "name_en": "Autonomous Communities",
+          "role": "مراکز قدرت منطقه‌ای با اختیارات قانون اساسی و دولت‌های محلی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Pedro Sánchez",
+        "party": "PSOE",
+        "coalition": [
+          "PSOE",
+          "Sumar"
+        ],
+        "status": "در ۵ نوامبر ۲۰۲۶ دولت در وضعیت caretaker پس از انحلال پارلمان و اعلام انتخابات زودهنگام ۲۹ نوامبر قرار داشت؛ نتیجه انتخابات هنوز معلوم نبود."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "housing",
+          "employment",
+          "migration",
+          "regional_autonomy",
+          "taxation",
+          "public_services",
+          "climate_and_energy",
+          "EU_policy"
+        ],
+        "rule": "تا پیش از اعلام نتیجه انتخابات ۲۹ نوامبر، تغییر قدرت یا ترکیب دولت جدید را قطعی فرض نکن؛ احزاب منطقه‌ای می‌توانند در پارلمان آینده نقش ائتلافی داشته باشند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "La Moncloa — XV Legislature and cabinet composition",
+            "url": "https://www.lamoncloa.gob.es/lang/en/gobierno/bylegislature/paginas/20231120_xv_legislature.aspx",
+            "date": "2026-11-04",
+            "notes": "ترکیب دولت در تاریخ مبنا و ریاست پدرو سانچز؛ صفحه رسمی دولت."
+          },
+          {
+            "name": "Congress of Deputies — functions of the Cortes Generales",
+            "url": "https://www.congreso.es/en/cem/func",
+            "date": "2026-11-27",
+            "notes": "نقش مجلس نمایندگان، سنا و روند تشکیل دولت."
+          },
+          {
+            "name": "Reuters — Spain's snap election, November 29",
+            "url": "https://www.reuters.com/world/europe/spains-snap-election-why-it-matters-who-might-win-2026-11-26/",
+            "date": "2026-11-26",
+            "notes": "برای تأیید تاریخ انتخابات اعلام‌شده؛ نتایج پس از تاریخ snapshot در داده پایه وارد نشده‌اند."
+          }
+        ],
+        "notes": "snapshot در ۵ نوامبر ۲۰۲۶: انتخابات زودهنگام ۲۹ نوامبر هنوز برگزار نشده بود؛ کرسی‌ها و نتیجه احتمالی انتخابات آینده به‌عنوان واقعیت ثبت نشده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "esp_psoe_group",
+          "name_en": "Spanish Socialist Workers' Party (PSOE)",
+          "party_id": "esp_psoe"
+        },
+        {
+          "id": "esp_pp_group",
+          "name_en": "People's Party (PP)",
+          "party_id": "esp_pp"
+        },
+        {
+          "id": "esp_vox_group",
+          "name_en": "Vox",
+          "party_id": "esp_vox"
+        },
+        {
+          "id": "esp_sumar_group",
+          "name_en": "Sumar",
+          "party_id": "esp_sumar"
+        },
+        {
+          "id": "esp_junts_group",
+          "name_en": "Junts per Catalunya",
+          "party_id": "esp_junts"
+        },
+        {
+          "id": "esp_erc_group",
+          "name_en": "Republican Left of Catalonia (ERC)",
+          "party_id": "esp_erc"
+        },
+        {
+          "id": "esp_ehbildu_group",
+          "name_en": "EH Bildu",
+          "party_id": "esp_ehbildu"
+        },
+        {
+          "id": "esp_pnv_group",
+          "name_en": "Basque Nationalist Party (PNV)",
+          "party_id": "esp_pnv"
+        },
+        {
+          "id": "esp_bng_group",
+          "name_en": "Galician Nationalist Bloc (BNG)",
+          "party_id": "esp_bng"
+        },
+        {
+          "id": "esp_cc_group",
+          "name_en": "Canarian Coalition (CC)",
+          "party_id": "esp_cc"
+        }
+      ]
     },
     "PRT": {
       "country_name_fa": "پرتغال",
       "country_name_en": "Portugal",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_parliamentary_multiparty_democracy",
+      "government_model": "جمهوری نیمه‌ریاستی با دولت اقلیت ائتلافی راست میانه؛ رئیس‌جمهور مستقیماً انتخاب می‌شود و دولت در برابر مجلس پاسخگو است.",
+      "parties": [
+        {
+          "id": "prt_psd",
+          "name_fa": "حزب سوسیال‌دموکرات",
+          "name_en": "Social Democratic Party (PSD/PPD)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین جزء ائتلاف حاکم AD و حزب نخست‌وزیر.",
+          "ideological_profile": "راست میانه، محافظه‌کاری میانه‌رو و بازارگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 89
+        },
+        {
+          "id": "prt_cds",
+          "name_fa": "مرکز دموکراتیک و اجتماعی – حزب مردم",
+          "name_en": "CDS–People's Party (CDS-PP)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی PSD در AD.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 2
+        },
+        {
+          "id": "prt_ps",
+          "name_fa": "حزب سوسیالیست",
+          "name_en": "Socialist Party (PS)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 58
+        },
+        {
+          "id": "prt_chega",
+          "name_fa": "چگا",
+          "name_en": "Chega",
+          "entity_type": "party",
+          "political_role": "حزب راست پوپولیست و ملی‌گرا؛ اپوزیسیون بزرگ.",
+          "ideological_profile": "راست پوپولیست و ملی‌محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 60
+        },
+        {
+          "id": "prt_il",
+          "name_fa": "ابتکار لیبرال",
+          "name_en": "Liberal Initiative (IL)",
+          "entity_type": "party",
+          "political_role": "حزب لیبرال با نمایندگی پارلمانی.",
+          "ideological_profile": "لیبرالیسم اقتصادی و آزادی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 9
+        },
+        {
+          "id": "prt_livre",
+          "name_fa": "لیوره",
+          "name_en": "LIVRE",
+          "entity_type": "party",
+          "political_role": "حزب سبز و ترقی‌خواه.",
+          "ideological_profile": "چپ سبز و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 6
+        },
+        {
+          "id": "prt_pcp",
+          "name_fa": "حزب کمونیست پرتغال",
+          "name_en": "Portuguese Communist Party (PCP)",
+          "entity_type": "party",
+          "political_role": "حزب کمونیست؛ در انتخابات با ائتلاف CDU شرکت کرد.",
+          "ideological_profile": "کمونیسم و چپ کارگری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "prt_be",
+          "name_fa": "بلوک چپ",
+          "name_en": "Left Bloc (BE)",
+          "entity_type": "party",
+          "political_role": "حزب چپ‌گرا با نمایندگی محدود.",
+          "ideological_profile": "سوسیالیسم دموکراتیک و چپ ترقی‌خواه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 1
+        },
+        {
+          "id": "prt_pan",
+          "name_fa": "مردم–حیوانات–طبیعت",
+          "name_en": "People–Animals–Nature (PAN)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک محیط‌زیستی و حقوق حیوانات.",
+          "ideological_profile": "سبزگرایی و حقوق حیوانات",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 1
+        },
+        {
+          "id": "prt_jpp",
+          "name_fa": "با هم برای مردم",
+          "name_en": "Together for the People (JPP)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای با یک کرسی.",
+          "ideological_profile": "منطقه‌گرایی و عمل‌گرایی محلی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 1
+        }
+      ],
+      "factions": [
+        {
+          "id": "prt_psd_liberal",
+          "name_fa": "جریان لیبرال اقتصادی PSD",
+          "name_en": "PSD economic-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "انضباط مالی، رقابت‌پذیری و کاهش موانع کسب‌وکار."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "prt_psd_social",
+          "name_fa": "جریان محافظه‌کار اجتماعی PSD",
+          "name_en": "PSD social-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر سنت‌های اجتماعی و ثبات نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "prt_ps_left",
+          "name_fa": "جریان چپ حزب سوسیالیست",
+          "name_en": "PS left current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "نقش فعال دولت رفاه و حمایت از حقوق کار."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "prt_chega_populist",
+          "name_fa": "جریان ملی‌پوپولیست چگا",
+          "name_en": "Chega national-populist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "سیاست سخت‌گیرانه مهاجرتی و ضدنخبگانی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prt_president",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس کشور منتخب مستقیم با اختیارات قانون اساسی و نقش در انتصاب نخست‌وزیر.",
+          "confidence": "high"
+        },
+        {
+          "id": "prt_cabinet",
+          "name_fa": "نخست‌وزیر و شورای وزیران",
+          "name_en": "Prime Minister and Council of Ministers",
+          "role": "قوه مجریه به ریاست لوئیس مونته‌نگرو.",
+          "confidence": "high"
+        },
+        {
+          "id": "prt_assembly",
+          "name_fa": "مجمع جمهوری",
+          "name_en": "Assembly of the Republic",
+          "role": "پارلمان تک‌مجلسی با ۲۳۰ نماینده؛ دولت برای تصویب قوانین به حمایت موردی نیاز دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "prt_courts",
+          "name_fa": "نظام قضایی و دادگاه قانون اساسی",
+          "name_en": "Judiciary and Constitutional Court",
+          "role": "نظارت قضایی و بررسی انطباق قوانین با قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Luís Montenegro",
+        "party": "PSD",
+        "coalition": [
+          "PSD",
+          "CDS-PP"
+        ],
+        "status": "دولت اقلیت ائتلافی AD؛ ۹۱ کرسی از ۲۳۰ کرسی، بدون اکثریت مستقل."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "budget_and_deficit",
+          "taxation",
+          "healthcare",
+          "housing",
+          "migration",
+          "labor_policy",
+          "EU_funds",
+          "privatization"
+        ],
+        "rule": "دولت برای بودجه و لوایح مهم به رأی یا امتناع احزاب بیرون ائتلاف نیاز دارد؛ توافق موردی با PS یا Chega به‌معنی ورود آنها به دولت نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Assembly of the Republic — official 2025 election results",
+            "url": "https://www.parlamento.pt/sites/EN/Parliament/Paginas/Election-results.aspx",
+            "date": "2025-05-18",
+            "notes": "توزیع رسمی کرسی‌های انتخابات ۱۸ مه ۲۰۲۵."
+          },
+          {
+            "name": "Veramundi — Portugal XXV Constitutional Government",
+            "url": "https://veramundi.com/governo/pt?lang=en",
+            "date": "2026-10-25",
+            "notes": "ترکیب دولت اقلیت AD و نخست‌وزیر؛ منبع ثانویه برای ساختار دولت."
+          }
+        ],
+        "notes": "کرسی‌ها بر اساس انتخابات ۱۸ مه ۲۰۲۵؛ PSD و CDS-PP با ائتلاف AD در بیشتر حوزه‌ها رقابت کردند. تعداد کرسی احزاب مطابق نتایج رسمی پارلمان است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "prt_psd_group",
+          "name_en": "Social Democratic Party (PSD/PPD)",
+          "party_id": "prt_psd"
+        },
+        {
+          "id": "prt_cds_group",
+          "name_en": "CDS–People's Party (CDS-PP)",
+          "party_id": "prt_cds"
+        },
+        {
+          "id": "prt_ps_group",
+          "name_en": "Socialist Party (PS)",
+          "party_id": "prt_ps"
+        },
+        {
+          "id": "prt_chega_group",
+          "name_en": "Chega",
+          "party_id": "prt_chega"
+        },
+        {
+          "id": "prt_il_group",
+          "name_en": "Liberal Initiative (IL)",
+          "party_id": "prt_il"
+        },
+        {
+          "id": "prt_livre_group",
+          "name_en": "LIVRE",
+          "party_id": "prt_livre"
+        },
+        {
+          "id": "prt_pcp_group",
+          "name_en": "Portuguese Communist Party (PCP)",
+          "party_id": "prt_pcp"
+        },
+        {
+          "id": "prt_be_group",
+          "name_en": "Left Bloc (BE)",
+          "party_id": "prt_be"
+        },
+        {
+          "id": "prt_pan_group",
+          "name_en": "People–Animals–Nature (PAN)",
+          "party_id": "prt_pan"
+        },
+        {
+          "id": "prt_jpp_group",
+          "name_en": "Together for the People (JPP)",
+          "party_id": "prt_jpp"
+        }
+      ]
     },
     "NLD": {
       "country_name_fa": "هلند",
       "country_name_en": "Netherlands",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_democracy",
+      "government_model": "پادشاهی مشروطه پارلمانی با نظام چندحزبی و دولت اقلیت سه‌حزبی.",
+      "parties": [
+        {
+          "id": "nld_d66",
+          "name_fa": "۶۶ دموکرات",
+          "name_en": "Democrats 66 (D66)",
+          "entity_type": "party",
+          "political_role": "شریک اصلی ائتلاف حاکم و حزب نخست‌وزیر.",
+          "ideological_profile": "لیبرالیسم اجتماعی و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 26
+        },
+        {
+          "id": "nld_pvv",
+          "name_fa": "حزب آزادی",
+          "name_en": "Party for Freedom (PVV)",
+          "entity_type": "party",
+          "political_role": "از بزرگ‌ترین احزاب اپوزیسیون؛ راست پوپولیست.",
+          "ideological_profile": "ملی‌گرایی و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 26
+        },
+        {
+          "id": "nld_vvd",
+          "name_fa": "حزب مردم برای آزادی و دموکراسی",
+          "name_en": "People's Party for Freedom and Democracy (VVD)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی؛ لیبرال راست میانه.",
+          "ideological_profile": "لیبرالیسم اقتصادی و محافظه‌کاری میانه‌رو",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 22
+        },
+        {
+          "id": "nld_glpvda",
+          "name_fa": "چپ سبز–حزب کارگر",
+          "name_en": "GroenLinks–PvdA",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین بلوک چپ اپوزیسیون.",
+          "ideological_profile": "سبزگرایی و سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 20
+        },
+        {
+          "id": "nld_cda",
+          "name_fa": "فراخوان دموکرات مسیحی",
+          "name_en": "Christian Democratic Appeal (CDA)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 18
+        },
+        {
+          "id": "nld_ja21",
+          "name_fa": "پاسخ درست ۲۰۲۱",
+          "name_en": "JA21",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست میانه/محافظه‌کار.",
+          "ideological_profile": "محافظه‌کاری و لیبرالیسم ملی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 9
+        },
+        {
+          "id": "nld_fvd",
+          "name_fa": "مجمع برای دموکراسی",
+          "name_en": "Forum for Democracy (FvD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست پوپولیست و ملی‌گرا.",
+          "ideological_profile": "ملی‌گرایی و شکاکیت نسبت به اتحادیه اروپا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 7
+        },
+        {
+          "id": "nld_bbb",
+          "name_fa": "جنبش شهروند–کشاورز",
+          "name_en": "Farmer–Citizen Movement (BBB)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای و کشاورزی‌محور؛ اپوزیسیون.",
+          "ideological_profile": "منافع روستایی و کشاورزی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 4
+        },
+        {
+          "id": "nld_denk",
+          "name_fa": "دِنک",
+          "name_en": "DENK",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با تمرکز بر نمایندگی و برابری اجتماعی.",
+          "ideological_profile": "چندفرهنگ‌گرایی و عدالت اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "nld_cu",
+          "name_fa": "اتحادیه مسیحی",
+          "name_en": "Christian Union (CU)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک مسیحی و اجتماعی.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "nld_sp",
+          "name_fa": "حزب سوسیالیست",
+          "name_en": "Socialist Party (SP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ.",
+          "ideological_profile": "سوسیالیسم دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "nld_sgp",
+          "name_fa": "حزب سیاسی اصلاح‌شده",
+          "name_en": "Reformed Political Party (SGP)",
+          "entity_type": "party",
+          "political_role": "حزب محافظه‌کار مذهبی.",
+          "ideological_profile": "محافظه‌کاری مسیحی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "nld_pvdd",
+          "name_fa": "حزب حیوانات",
+          "name_en": "Party for the Animals (PvdD)",
+          "entity_type": "party",
+          "political_role": "حزب محیط‌زیستی و حقوق حیوانات.",
+          "ideological_profile": "سبزگرایی و حقوق حیوانات",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        },
+        {
+          "id": "nld_50plus",
+          "name_fa": "پنجاه‌پلاس",
+          "name_en": "50PLUS",
+          "entity_type": "party",
+          "political_role": "حزب متمرکز بر مسائل سالمندان.",
+          "ideological_profile": "منافع بازنشستگان و سیاست رفاهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 2
+        },
+        {
+          "id": "nld_volt",
+          "name_fa": "ولت هلند",
+          "name_en": "Volt Netherlands",
+          "entity_type": "party",
+          "political_role": "حزب کوچک فدرالیست و اروپایی‌گرا.",
+          "ideological_profile": "لیبرالیسم اجتماعی و فدرالیسم اروپایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 1
+        }
+      ],
+      "factions": [
+        {
+          "id": "nld_vvd_market",
+          "name_fa": "جریان بازارمحور VVD",
+          "name_en": "VVD market-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش مقررات، رقابت و انضباط مالی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nld_cda_social",
+          "name_fa": "جریان جامعه‌محور CDA",
+          "name_en": "CDA communitarian current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر خانواده، جامعه مدنی و مسئولیت اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nld_d66_progressive",
+          "name_fa": "جریان ترقی‌خواه D66",
+          "name_en": "D66 progressive-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حقوق مدنی، اصلاحات نهادی و همکاری اروپایی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nld_green_left",
+          "name_fa": "جریان سبز و سوسیال‌دموکرات",
+          "name_en": "Green and social-democratic current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "climate": "گذار انرژی و سیاست‌های رفاهی؛ در چند حزب و به‌ویژه بلوک GroenLinks–PvdA."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nld_crown",
+          "name_fa": "پادشاهی",
+          "name_en": "Crown",
+          "role": "نهاد سلطنت مشروطه با نقش عمدتاً تشریفاتی.",
+          "confidence": "high"
+        },
+        {
+          "id": "nld_cabinet",
+          "name_fa": "کابینه و نخست‌وزیری",
+          "name_en": "Cabinet and Prime Minister",
+          "role": "قوه مجریه به ریاست راب یتن.",
+          "confidence": "high"
+        },
+        {
+          "id": "nld_states_general",
+          "name_fa": "مجلسین ایالات کل",
+          "name_en": "States General",
+          "role": "مجلس نمایندگان و سنا؛ دولت اقلیت برای قانون‌گذاری به توافق با اپوزیسیون نیاز دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "nld_council_state",
+          "name_fa": "شورای دولت",
+          "name_en": "Council of State",
+          "role": "نهاد مشورتی و قضایی عالی در نظام اداری و قانون‌گذاری.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Rob Jetten",
+        "party": "D66",
+        "coalition": [
+          "D66",
+          "CDA",
+          "VVD"
+        ],
+        "status": "دولت اقلیت سه‌حزبی؛ مجموعاً ۶۶ کرسی از ۱۵۰ کرسی مجلس نمایندگان."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "migration",
+          "housing",
+          "healthcare",
+          "climate",
+          "taxation",
+          "EU_integration",
+          "agriculture",
+          "Ukraine_support"
+        ],
+        "rule": "ائتلاف برای تصویب بودجه و قوانین به پشتیبانی موردی اپوزیسیون نیاز دارد؛ اختلافات مالیاتی درون ائتلاف می‌تواند ثبات دولت را تحت فشار قرار دهد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Dutch Electoral Council — official 2025 House election result",
+            "url": "https://www.kiesraad.nl/actueel/nieuws/2025/11/7/kiesraad-uitslag-tweede-kamerverkiezing-betrouwbaar",
+            "date": "2025-11-07",
+            "notes": "نتیجه نهایی رسمی انتخابات ۲۹ اکتبر ۲۰۲۵ و توزیع ۱۵۰ کرسی."
+          },
+          {
+            "name": "Associated Press — Rob Jetten sworn in to lead minority coalition",
+            "url": "https://apnews.com/article/897876739f2ce60e41167a1040956353",
+            "date": "2026-02-23",
+            "notes": "تشکیل دولت اقلیت D66–CDA–VVD و نخست‌وزیری راب یتن."
+          }
+        ],
+        "notes": "توزیع کرسی‌ها بر اساس نتیجه نهایی انتخابات ۲۰۲۵؛ دولت سه‌حزبی در ۲۰۲۶ اقلیت است و نباید با ائتلاف انتخاباتی قبلی اشتباه گرفته شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "nld_d66_group",
+          "name_en": "Democrats 66 (D66)",
+          "party_id": "nld_d66"
+        },
+        {
+          "id": "nld_pvv_group",
+          "name_en": "Party for Freedom (PVV)",
+          "party_id": "nld_pvv"
+        },
+        {
+          "id": "nld_vvd_group",
+          "name_en": "People's Party for Freedom and Democracy (VVD)",
+          "party_id": "nld_vvd"
+        },
+        {
+          "id": "nld_glpvda_group",
+          "name_en": "GroenLinks–PvdA",
+          "party_id": "nld_glpvda"
+        },
+        {
+          "id": "nld_cda_group",
+          "name_en": "Christian Democratic Appeal (CDA)",
+          "party_id": "nld_cda"
+        },
+        {
+          "id": "nld_ja21_group",
+          "name_en": "JA21",
+          "party_id": "nld_ja21"
+        },
+        {
+          "id": "nld_fvd_group",
+          "name_en": "Forum for Democracy (FvD)",
+          "party_id": "nld_fvd"
+        },
+        {
+          "id": "nld_bbb_group",
+          "name_en": "Farmer–Citizen Movement (BBB)",
+          "party_id": "nld_bbb"
+        },
+        {
+          "id": "nld_denk_group",
+          "name_en": "DENK",
+          "party_id": "nld_denk"
+        },
+        {
+          "id": "nld_cu_group",
+          "name_en": "Christian Union (CU)",
+          "party_id": "nld_cu"
+        },
+        {
+          "id": "nld_sp_group",
+          "name_en": "Socialist Party (SP)",
+          "party_id": "nld_sp"
+        },
+        {
+          "id": "nld_sgp_group",
+          "name_en": "Reformed Political Party (SGP)",
+          "party_id": "nld_sgp"
+        },
+        {
+          "id": "nld_pvdd_group",
+          "name_en": "Party for the Animals (PvdD)",
+          "party_id": "nld_pvdd"
+        },
+        {
+          "id": "nld_50plus_group",
+          "name_en": "50PLUS",
+          "party_id": "nld_50plus"
+        },
+        {
+          "id": "nld_volt_group",
+          "name_en": "Volt Netherlands",
+          "party_id": "nld_volt"
+        }
+      ]
     },
     "BEL": {
       "country_name_fa": "بلژیک",
       "country_name_en": "Belgium",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه فدرال و پارلمانی با نظام حزبی دوگانه منطقه‌ای فرانسوی‌زبان/هلندی‌زبان و دولت ائتلافی پنج‌حزبی.",
+      "parties": [
+        {
+          "id": "bel_nva",
+          "name_fa": "اتحاد نوین فلاندری",
+          "name_en": "New Flemish Alliance (N-VA)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب دولت ائتلافی؛ نخست‌وزیر از این حزب است.",
+          "ideological_profile": "ملی‌گرایی فلاندری و محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 24
+        },
+        {
+          "id": "bel_mr",
+          "name_fa": "جنبش اصلاح",
+          "name_en": "Reformist Movement (MR)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی فرانسوی‌زبان؛ لیبرال راست.",
+          "ideological_profile": "لیبرالیسم و بازار آزاد",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 20
+        },
+        {
+          "id": "bel_lesengages",
+          "name_fa": "متعهدها",
+          "name_en": "Les Engagés",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی فرانسوی‌زبان.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 14
+        },
+        {
+          "id": "bel_vooruit",
+          "name_fa": "پیشرو",
+          "name_en": "Vooruit",
+          "entity_type": "party",
+          "political_role": "شریک سوسیال‌دموکرات فلاندری دولت.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 13
+        },
+        {
+          "id": "bel_cdv",
+          "name_fa": "دموکرات مسیحی و فلاندری",
+          "name_en": "Christian Democratic and Flemish (CD&V)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی دولت.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌رو",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 11
+        },
+        {
+          "id": "bel_vb",
+          "name_fa": "منافع فلاندری",
+          "name_en": "Vlaams Belang (VB)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست ملی‌گرا و فلاندری.",
+          "ideological_profile": "ملی‌گرایی فلاندری و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 20
+        },
+        {
+          "id": "bel_ps",
+          "name_fa": "حزب سوسیالیست",
+          "name_en": "Socialist Party (PS)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی فرانسوی‌زبان.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 16
+        },
+        {
+          "id": "bel_pvda",
+          "name_fa": "حزب کارگر بلژیک",
+          "name_en": "Workers' Party of Belgium (PVDA-PTB)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ سراسری.",
+          "ideological_profile": "مارکسیسم و چپ رادیکال",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 15
+        },
+        {
+          "id": "bel_eco",
+          "name_fa": "اکولو و گرون",
+          "name_en": "Ecolo and Groen",
+          "entity_type": "party",
+          "political_role": "احزاب سبز در دو جامعه زبانی؛ اپوزیسیون.",
+          "ideological_profile": "سبزگرایی و محیط‌زیست‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 9
+        },
+        {
+          "id": "bel_anders",
+          "name_fa": "آندرس",
+          "name_en": "Anders.",
+          "entity_type": "party",
+          "political_role": "لیبرال فلاندری؛ اپوزیسیون در مجلس فدرال.",
+          "ideological_profile": "لیبرالیسم",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 8
+        }
+      ],
+      "factions": [
+        {
+          "id": "bel_flemish_autonomy",
+          "name_fa": "جریان خودمختاری فلاندری",
+          "name_en": "Flemish autonomy current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "territorial": "افزایش اختیارات فلاندری و اصلاح ساختار فدرال؛ شدت آن بین احزاب متفاوت است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bel_francophone_liberal",
+          "name_fa": "جریان لیبرال فرانسوی‌زبان",
+          "name_en": "Francophone liberal current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات و حمایت از کسب‌وکار؛ عمدتاً در MR."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bel_social_democratic",
+          "name_fa": "جریان سوسیال‌دموکرات",
+          "name_en": "Social-democratic current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "labor": "حمایت از حقوق کار و نظام رفاه؛ در PS و Vooruit."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bel_green",
+          "name_fa": "جریان سبز بلژیک",
+          "name_en": "Belgian green current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "climate": "گذار انرژی و سیاست‌های اقلیمی؛ در Ecolo و Groen."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bel_crown",
+          "name_fa": "پادشاه و سلطنت",
+          "name_en": "Crown and King",
+          "role": "رئیس کشور مشروطه با نقش تشریفاتی و وظایف قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "bel_federal_cabinet",
+          "name_fa": "دولت فدرال به ریاست بارت د وِوِر",
+          "name_en": "Federal Cabinet",
+          "role": "قوه مجریه ائتلافی پنج‌حزبی.",
+          "confidence": "high"
+        },
+        {
+          "id": "bel_chamber",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Representatives",
+          "role": "مجلس منتخب فدرال و مبنای اعتماد دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "bel_regions",
+          "name_fa": "مناطق و جوامع فدرال",
+          "name_en": "Regions and Communities",
+          "role": "مراکز قدرت دارای اختیارات گسترده در امور منطقه‌ای، زبانی و اجتماعی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Bart De Wever",
+        "party": "N-VA",
+        "coalition": [
+          "N-VA",
+          "MR",
+          "Les Engagés",
+          "Vooruit",
+          "CD&V"
+        ],
+        "status": "ائتلاف پنج‌حزبی با ۸۱ کرسی از ۱۵۰ کرسی مجلس نمایندگان طبق داده IPU."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "federalism",
+          "language_and_region",
+          "migration",
+          "budget_and_taxation",
+          "labor",
+          "energy",
+          "EU_policy",
+          "security"
+        ],
+        "rule": "رفتار احزاب باید با توجه به جامعه زبانی و سطح فدرال/منطقه‌ای مدل شود؛ حزب‌های هم‌خانواده در دو جامعه زبانی الزاماً یک موضع واحد ندارند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Belgium 2024 House election and government formation",
+            "url": "https://data.ipu.org/parliament/BE/BE-LC01/election/BE-LC01-E20240609/",
+            "date": "2025-02-03",
+            "notes": "نتایج انتخابات، کرسی‌های حزب‌ها و ائتلاف دولت دِ وِوِر."
+          },
+          {
+            "name": "Open the Parliament — Belgian Chamber composition",
+            "url": "https://opentheparliament.com/en/",
+            "date": "2026-11-19",
+            "notes": "توزیع به‌روزتر گروه‌های اکثریت و اپوزیسیون؛ برای تطبیق ساختار حزبی."
+          }
+        ],
+        "notes": "بلژیک ساختار حزبی و ائتلافی پیچیده و چندزبانه دارد؛ ارقام دولت ائتلافی در منبع IPU و گروه‌های اپوزیسیون به‌عنوان بلوک سیاسی ثبت شده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "bel_nva_group",
+          "name_en": "New Flemish Alliance (N-VA)",
+          "party_id": "bel_nva"
+        },
+        {
+          "id": "bel_mr_group",
+          "name_en": "Reformist Movement (MR)",
+          "party_id": "bel_mr"
+        },
+        {
+          "id": "bel_lesengages_group",
+          "name_en": "Les Engagés",
+          "party_id": "bel_lesengages"
+        },
+        {
+          "id": "bel_vooruit_group",
+          "name_en": "Vooruit",
+          "party_id": "bel_vooruit"
+        },
+        {
+          "id": "bel_cdv_group",
+          "name_en": "Christian Democratic and Flemish (CD&V)",
+          "party_id": "bel_cdv"
+        },
+        {
+          "id": "bel_vb_group",
+          "name_en": "Vlaams Belang (VB)",
+          "party_id": "bel_vb"
+        },
+        {
+          "id": "bel_ps_group",
+          "name_en": "Socialist Party (PS)",
+          "party_id": "bel_ps"
+        },
+        {
+          "id": "bel_pvda_group",
+          "name_en": "Workers' Party of Belgium (PVDA-PTB)",
+          "party_id": "bel_pvda"
+        },
+        {
+          "id": "bel_eco_group",
+          "name_en": "Ecolo and Groen",
+          "party_id": "bel_eco"
+        },
+        {
+          "id": "bel_anders_group",
+          "name_en": "Anders.",
+          "party_id": "bel_anders"
+        }
+      ]
     },
     "CHE": {
       "country_name_fa": "سوئیس",
@@ -3359,59 +4504,858 @@
     "SWE": {
       "country_name_fa": "سوئد",
       "country_name_en": "Sweden",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_democracy",
+      "government_model": "پادشاهی مشروطه پارلمانی با هشت حزب در ریکسداگ؛ در ۵ نوامبر ۲۰۲۶ تشکیل دولت جدید ناموفق و دولت موقت کریسترسون برقرار بود.",
+      "parties": [
+        {
+          "id": "swe_sap",
+          "name_fa": "حزب سوسیال‌دموکرات سوئد",
+          "name_en": "Swedish Social Democratic Party",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان و رهبر بلوک چپ میانه.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 99
+        },
+        {
+          "id": "swe_moderates",
+          "name_fa": "حزب میانه‌روها",
+          "name_en": "Moderate Party",
+          "entity_type": "party",
+          "political_role": "حزب راست میانه؛ نخست‌وزیر دولت موقت از این حزب است.",
+          "ideological_profile": "محافظه‌کاری لیبرال و بازارگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 70
+        },
+        {
+          "id": "swe_sd",
+          "name_fa": "دموکرات‌های سوئد",
+          "name_en": "Sweden Democrats",
+          "entity_type": "party",
+          "political_role": "حزب بزرگ ملی‌گرا و راست پوپولیست؛ خارج از کابینه موقت.",
+          "ideological_profile": "ملی‌گرایی و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 62
+        },
+        {
+          "id": "swe_left",
+          "name_fa": "حزب چپ",
+          "name_en": "Left Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ.",
+          "ideological_profile": "سوسیالیسم دموکراتیک و فمینیسم",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 30
+        },
+        {
+          "id": "swe_centre",
+          "name_fa": "حزب مرکز",
+          "name_en": "Centre Party",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو؛ رهبر آن نامزد نخست‌وزیری در رأی‌گیری ۳ نوامبر بود که رد شد.",
+          "ideological_profile": "لیبرالیسم اجتماعی و تمرکززدایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 25
+        },
+        {
+          "id": "swe_kd",
+          "name_fa": "دموکرات‌های مسیحی",
+          "name_en": "Christian Democrats",
+          "entity_type": "party",
+          "political_role": "عضو دولت موقت و حزب راست میانه اجتماعی.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 22
+        },
+        {
+          "id": "swe_green",
+          "name_fa": "حزب سبز",
+          "name_en": "Green Party",
+          "entity_type": "party",
+          "political_role": "حزب سبز اپوزیسیون.",
+          "ideological_profile": "سبزگرایی و ترقی‌خواهی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 22
+        },
+        {
+          "id": "swe_liberals",
+          "name_fa": "لیبرال‌ها",
+          "name_en": "Liberals",
+          "entity_type": "party",
+          "political_role": "عضو دولت موقت؛ حزب لیبرال اجتماعی.",
+          "ideological_profile": "لیبرالیسم اجتماعی و آموزش‌محوری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 19
+        }
+      ],
+      "factions": [
+        {
+          "id": "swe_sap_reformist",
+          "name_fa": "جریان اصلاح‌طلب و رفاهی سوسیال‌دموکرات",
+          "name_en": "Social Democratic welfare reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حفظ دولت رفاه، خدمات عمومی و سازش با بازار کار."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "swe_moderate_market",
+          "name_fa": "جریان بازارمحور میانه‌روها",
+          "name_en": "Moderate market-liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات، بازار رقابتی و اصلاحات خدمات عمومی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "swe_sd_national",
+          "name_fa": "جریان ملی‌محافظه‌کار دموکرات‌های سوئد",
+          "name_en": "Sweden Democrats national-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "migration": "محدودسازی مهاجرت و تأکید بر هویت ملی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "swe_left_green",
+          "name_fa": "جریان چپ و سبز",
+          "name_en": "Left and green current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "climate": "عدالت اجتماعی، سیاست اقلیمی و گسترش خدمات عمومی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "swe_crown",
+          "name_fa": "پادشاهی سوئد",
+          "name_en": "Swedish Crown",
+          "role": "نهاد سلطنت مشروطه با نقش عمدتاً تشریفاتی.",
+          "confidence": "high"
+        },
+        {
+          "id": "swe_caretaker",
+          "name_fa": "دولت موقت اولف کریسترسون",
+          "name_en": "Caretaker Government",
+          "role": "دولت موقت متشکل از میانه‌روها، دموکرات‌های مسیحی و لیبرال‌ها.",
+          "confidence": "high"
+        },
+        {
+          "id": "swe_riksdag",
+          "name_fa": "ریکسداگ",
+          "name_en": "Riksdag",
+          "role": "پارلمان تک‌مجلسی ۳۴۹ نفره؛ رأی ۳ نوامبر نامزد نخست‌وزیری را رد کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "swe_municipal",
+          "name_fa": "دولت‌های منطقه‌ای و شهرداری‌ها",
+          "name_en": "Regions and Municipalities",
+          "role": "مراکز قدرت منتخب در خدمات درمانی و محلی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Ulf Kristersson",
+        "party": "Moderate Party",
+        "coalition": [
+          "Moderate Party",
+          "Christian Democrats",
+          "Liberals"
+        ],
+        "status": "دولت موقت؛ پیشنهاد نخست‌وزیری Elisabeth Thand Ringqvist در ۳ نوامبر با ۳۲۴ رأی مخالف رد شد. تا تشکیل دولت جدید، کریسترسون نخست‌وزیر موقت باقی ماند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "migration",
+          "welfare",
+          "taxation",
+          "energy",
+          "crime_and_justice",
+          "EU_policy",
+          "labor",
+          "climate"
+        ],
+        "rule": "در snapshot، نتیجه انتخابات ۱۳ سپتامبر مشخص است اما دولت جدید تشکیل نشده؛ احزاب حامی نامزد ردشده را نباید به‌عنوان دولت مستقر نمایش داد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Swedish Riksdag — final seat distribution after 2026 election",
+            "url": "https://www.riksdagen.se/en/news/articles/2026/sep/19/the-new-riksdag-after-the-elections_cmsad780a37-f1ae-4d47-a4a7-b6ea2a69a21een/",
+            "date": "2026-09-19",
+            "notes": "توزیع نهایی ۳۴۹ کرسی میان هشت حزب."
+          },
+          {
+            "name": "Swedish Riksdag — no to Elisabeth Thand Ringqvist as Prime Minister",
+            "url": "https://www.riksdagen.se/en/news/articles/2026/nov/3/no-to-elisabeth-thand-ringqvist-cen-as-prime_cms6afacb7c-be00-432a-b75e-37e169872323en/",
+            "date": "2026-11-03",
+            "notes": "رأی رد نامزد نخست‌وزیری و تأیید وضعیت دولت موقت کریسترسون."
+          }
+        ],
+        "notes": "snapshot در ۵ نوامبر ۲۰۲۶، دو روز پس از رد نامزد نخست‌وزیری؛ ترکیب دولت موقت از منبع رسمی پارلمان ثبت شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "swe_sap_group",
+          "name_en": "Swedish Social Democratic Party",
+          "party_id": "swe_sap"
+        },
+        {
+          "id": "swe_moderates_group",
+          "name_en": "Moderate Party",
+          "party_id": "swe_moderates"
+        },
+        {
+          "id": "swe_sd_group",
+          "name_en": "Sweden Democrats",
+          "party_id": "swe_sd"
+        },
+        {
+          "id": "swe_left_group",
+          "name_en": "Left Party",
+          "party_id": "swe_left"
+        },
+        {
+          "id": "swe_centre_group",
+          "name_en": "Centre Party",
+          "party_id": "swe_centre"
+        },
+        {
+          "id": "swe_kd_group",
+          "name_en": "Christian Democrats",
+          "party_id": "swe_kd"
+        },
+        {
+          "id": "swe_green_group",
+          "name_en": "Green Party",
+          "party_id": "swe_green"
+        },
+        {
+          "id": "swe_liberals_group",
+          "name_en": "Liberals",
+          "party_id": "swe_liberals"
+        }
+      ]
     },
     "NOR": {
       "country_name_fa": "نروژ",
       "country_name_en": "Norway",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_democracy",
+      "government_model": "پادشاهی مشروطه پارلمانی با مجلس تک‌مجلسی و دولت اقلیت تک‌حزبی کارگر.",
+      "parties": [
+        {
+          "id": "nor_labour",
+          "name_fa": "حزب کارگر",
+          "name_en": "Labour Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ دولت اقلیت به رهبری یوناس گار استوره.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 53
+        },
+        {
+          "id": "nor_progress",
+          "name_fa": "حزب پیشرفت",
+          "name_en": "Progress Party",
+          "entity_type": "party",
+          "political_role": "دومین حزب بزرگ پارلمان و اپوزیسیون راست.",
+          "ideological_profile": "راست پوپولیست و لیبرالیسم اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 47
+        },
+        {
+          "id": "nor_conservative",
+          "name_fa": "حزب محافظه‌کار",
+          "name_en": "Conservative Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست میانه.",
+          "ideological_profile": "محافظه‌کاری و بازارگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 24
+        },
+        {
+          "id": "nor_svp",
+          "name_fa": "چپ سوسیالیست",
+          "name_en": "Socialist Left Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ؛ گاه حامی موردی دولت.",
+          "ideological_profile": "سوسیالیسم دموکراتیک و سبزگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 9
+        },
+        {
+          "id": "nor_centre",
+          "name_fa": "حزب مرکز",
+          "name_en": "Centre Party",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو و منطقه‌گرا؛ اپوزیسیون پس از خروج از دولت در ۲۰۲۵.",
+          "ideological_profile": "کشاورزی‌گرایی و تمرکززدایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 9
+        },
+        {
+          "id": "nor_red",
+          "name_fa": "حزب سرخ",
+          "name_en": "Red Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ.",
+          "ideological_profile": "سوسیالیسم و چپ ضدسرمایه‌داری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 9
+        },
+        {
+          "id": "nor_green",
+          "name_fa": "حزب سبز",
+          "name_en": "Green Party",
+          "entity_type": "party",
+          "political_role": "حزب سبز با نمایندگی پارلمانی.",
+          "ideological_profile": "سبزگرایی و سیاست اقلیمی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 8
+        },
+        {
+          "id": "nor_kd",
+          "name_fa": "حزب دموکرات مسیحی",
+          "name_en": "Christian Democratic Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک میانه‌رو محافظه‌کار.",
+          "ideological_profile": "دموکراسی مسیحی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 7
+        },
+        {
+          "id": "nor_liberal",
+          "name_fa": "حزب لیبرال",
+          "name_en": "Liberal Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک لیبرال؛ سه کرسی.",
+          "ideological_profile": "لیبرالیسم اجتماعی و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 3
+        }
+      ],
+      "factions": [
+        {
+          "id": "nor_labour_pragmatic",
+          "name_fa": "جریان عمل‌گرای حزب کارگر",
+          "name_en": "Labour pragmatic governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "سازش میان سیاست رفاهی، مدیریت مالی و بخش خصوصی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nor_labour_left",
+          "name_fa": "جریان چپ کارگری",
+          "name_en": "Labour left current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "labor": "تقویت اتحادیه‌ها، خدمات عمومی و سیاست بازتوزیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nor_progress_populist",
+          "name_fa": "جریان پوپولیست حزب پیشرفت",
+          "name_en": "Progress Party populist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "taxation": "کاهش مالیات و مقررات؛ انتقاد از هزینه‌های دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nor_green_transition",
+          "name_fa": "جریان گذار سبز",
+          "name_en": "Green transition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "energy": "گذار انرژی و کاهش وابستگی به سوخت‌های فسیلی؛ در چند حزب."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nor_monarchy",
+          "name_fa": "پادشاهی نروژ",
+          "name_en": "Norwegian Crown",
+          "role": "نهاد سلطنت مشروطه با نقش عمدتاً تشریفاتی.",
+          "confidence": "high"
+        },
+        {
+          "id": "nor_cabinet",
+          "name_fa": "دولت یوناس گار استوره",
+          "name_en": "Jonas Gahr Støre Cabinet",
+          "role": "دولت اقلیت تک‌حزبی حزب کارگر.",
+          "confidence": "high"
+        },
+        {
+          "id": "nor_storting",
+          "name_fa": "استورتینگ",
+          "name_en": "Storting",
+          "role": "پارلمان ۱۶۹ نفره و مرکز قانون‌گذاری و نظارت بر دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "nor_local",
+          "name_fa": "دولت‌های محلی و منطقه‌ای",
+          "name_en": "Municipal and County Authorities",
+          "role": "مراکز قدرت منتخب در خدمات عمومی و سیاست منطقه‌ای.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Jonas Gahr Støre",
+        "party": "Labour Party",
+        "coalition": [
+          "Labour Party"
+        ],
+        "status": "دولت اقلیت تک‌حزبی؛ حزب کارگر ۵۳ کرسی از ۱۶۹ کرسی دارد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_and_gas",
+          "wealth_tax",
+          "cost_of_living",
+          "welfare",
+          "climate",
+          "EU_and_EEA",
+          "Ukraine_support",
+          "rural_policy"
+        ],
+        "rule": "دولت برای تصویب بودجه و قوانین به توافق موردی با احزاب بیرون دولت نیاز دارد؛ احزاب چپ و سبز می‌توانند در موضوعات مشخص حمایت یا مخالفت کنند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Norway 2025 parliamentary election",
+            "url": "https://data.ipu.org/parliament/NO/NO-LC01/election/NO-LC01-E20250908/",
+            "date": "2025-10-15",
+            "notes": "توزیع کرسی‌های ۹ حزب و وضعیت دولت اقلیت حزب کارگر."
+          },
+          {
+            "name": "Statistics Norway — Storting election results",
+            "url": "https://www.ssb.no/en/valg/stortingsvalg/statistikk/stortingsvalet",
+            "date": "2026-01-06",
+            "notes": "آمار رسمی آرای احزاب در انتخابات ۲۰۲۵."
+          }
+        ],
+        "notes": "کرسی‌ها از انتخابات ۸ سپتامبر ۲۰۲۵؛ دولت پس از خروج حزب مرکز از ائتلاف در فوریه ۲۰۲۵ به‌صورت اقلیت تک‌حزبی اداره می‌شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "nor_labour_group",
+          "name_en": "Labour Party",
+          "party_id": "nor_labour"
+        },
+        {
+          "id": "nor_progress_group",
+          "name_en": "Progress Party",
+          "party_id": "nor_progress"
+        },
+        {
+          "id": "nor_conservative_group",
+          "name_en": "Conservative Party",
+          "party_id": "nor_conservative"
+        },
+        {
+          "id": "nor_svp_group",
+          "name_en": "Socialist Left Party",
+          "party_id": "nor_svp"
+        },
+        {
+          "id": "nor_centre_group",
+          "name_en": "Centre Party",
+          "party_id": "nor_centre"
+        },
+        {
+          "id": "nor_red_group",
+          "name_en": "Red Party",
+          "party_id": "nor_red"
+        },
+        {
+          "id": "nor_green_group",
+          "name_en": "Green Party",
+          "party_id": "nor_green"
+        },
+        {
+          "id": "nor_kd_group",
+          "name_en": "Christian Democratic Party",
+          "party_id": "nor_kd"
+        },
+        {
+          "id": "nor_liberal_group",
+          "name_en": "Liberal Party",
+          "party_id": "nor_liberal"
+        }
+      ]
     },
     "DNK": {
       "country_name_fa": "دانمارک",
       "country_name_en": "Denmark",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_democracy",
+      "government_model": "پادشاهی مشروطه پارلمانی با مجلس تک‌مجلسی و دولت اقلیت چهارحزبی پس از انتخابات زودهنگام ۲۰۲۶.",
+      "parties": [
+        {
+          "id": "dnk_socialdem",
+          "name_fa": "سوسیال‌دموکرات‌ها",
+          "name_en": "Social Democrats",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب و حزب نخست‌وزیر؛ رهبر دولت ائتلافی.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 38
+        },
+        {
+          "id": "dnk_sf",
+          "name_fa": "حزب مردم سوسیالیست / چپ سبز",
+          "name_en": "Socialist People's Party (SF)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم.",
+          "ideological_profile": "چپ سبز و سوسیالیسم دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 20
+        },
+        {
+          "id": "dnk_venstre",
+          "name_fa": "ونستره / حزب لیبرال",
+          "name_en": "Liberal Party (Venstre)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست میانه؛ در دولت قبلی شریک سوسیال‌دموکرات‌ها بود.",
+          "ideological_profile": "لیبرالیسم و کشاورزی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 18
+        },
+        {
+          "id": "dnk_liberal_alliance",
+          "name_fa": "اتحاد لیبرال",
+          "name_en": "Liberal Alliance",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون لیبرال راست.",
+          "ideological_profile": "لیبرالیسم کلاسیک و بازار آزاد",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 16
+        },
+        {
+          "id": "dnk_df",
+          "name_fa": "حزب مردم دانمارک",
+          "name_en": "Danish People's Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون ملی‌گرا؛ افزایش کرسی در انتخابات ۲۰۲۶.",
+          "ideological_profile": "ملی‌محافظه‌کاری و راست پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 16
+        },
+        {
+          "id": "dnk_moderates",
+          "name_fa": "میانه‌روها",
+          "name_en": "Moderates",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم.",
+          "ideological_profile": "میانه‌گرایی و عمل‌گرایی سیاسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 14
+        },
+        {
+          "id": "dnk_conservative",
+          "name_fa": "حزب مردم محافظه‌کار",
+          "name_en": "Conservative People's Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون محافظه‌کار.",
+          "ideological_profile": "محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 13
+        },
+        {
+          "id": "dnk_redgreen",
+          "name_fa": "فهرست وحدت – اتحاد سرخ‌سبز",
+          "name_en": "Unity List–Red-Green Alliance",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ.",
+          "ideological_profile": "سوسیالیسم و چپ سبز",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 11
+        },
+        {
+          "id": "dnk_radikale",
+          "name_fa": "حزب سوسیال‌لیبرال",
+          "name_en": "Social Liberal Party (Radikale Venstre)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم.",
+          "ideological_profile": "سوسیال‌لیبرالیسم و اروپاگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats": 10
+        },
+        {
+          "id": "dnk_danmarksdem",
+          "name_fa": "دموکرات‌های دانمارک",
+          "name_en": "Denmark Democrats",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست‌گرا و منطقه‌محور.",
+          "ideological_profile": "محافظه‌کاری ملی و سیاست منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 10
+        },
+        {
+          "id": "dnk_alternative",
+          "name_fa": "آلترناتیو",
+          "name_en": "The Alternative",
+          "entity_type": "party",
+          "political_role": "حزب کوچک سبز و ترقی‌خواه.",
+          "ideological_profile": "سبزگرایی و دموکراسی مشارکتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "seats": 5
+        },
+        {
+          "id": "dnk_citizens",
+          "name_fa": "حزب شهروندان",
+          "name_en": "Citizens' Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک تازه‌وارد پارلمان.",
+          "ideological_profile": "راست ملی‌گرا و ضدنخبگانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low",
+          "seats": 4
+        },
+        {
+          "id": "dnk_greenland_faroe",
+          "name_fa": "احزاب گرینلند و جزایر فارو",
+          "name_en": "Greenlandic and Faroese parties",
+          "entity_type": "party",
+          "political_role": "نمایندگان سرزمین‌های خودگردان در پارلمان دانمارک؛ مستقل از احزاب سرزمین اصلی.",
+          "ideological_profile": "منطقه‌گرایی و خودگردانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "dnk_socialdem_welfare",
+          "name_fa": "جریان دولت رفاه سوسیال‌دموکرات",
+          "name_en": "Social Democratic welfare current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حفظ خدمات عمومی، امنیت شغلی و سیاست‌های رفاهی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "dnk_sf_green",
+          "name_fa": "جریان سبز و برابری‌خواه SF",
+          "name_en": "SF green egalitarian current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "climate": "سیاست اقلیمی قوی و بازتوزیع اقتصادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "dnk_moderate_centrist",
+          "name_fa": "جریان میانه‌گرای ائتلاف",
+          "name_en": "Centrist coalition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "مصالحه میان چپ میانه و مرکز؛ در Social Democrats، Moderates و Radikale."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "dnk_national_conservative",
+          "name_fa": "جریان ملی‌محافظه‌کار",
+          "name_en": "National-conservative current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "migration": "سیاست مهاجرتی محدودکننده‌تر و تأکید بر حاکمیت ملی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "dnk_crown",
+          "name_fa": "پادشاهی دانمارک",
+          "name_en": "Danish Crown",
+          "role": "نهاد سلطنت مشروطه با نقش تشریفاتی و قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "dnk_cabinet",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Cabinet and Prime Minister",
+          "role": "قوه مجریه به ریاست مته فردریکسن.",
+          "confidence": "high"
+        },
+        {
+          "id": "dnk_folketing",
+          "name_fa": "فولکتینگ",
+          "name_en": "Folketing",
+          "role": "پارلمان ۱۷۹ کرسی؛ احزاب گرینلند و فارو نیز نمایندگی دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "dnk_autonomous",
+          "name_fa": "گرینلند و جزایر فارو",
+          "name_en": "Greenland and Faroe Islands",
+          "role": "سرزمین‌های خودگردان در قلمرو مشترک‌المنافع دانمارک.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Mette Frederiksen",
+        "party": "Social Democrats",
+        "coalition": [
+          "Social Democrats",
+          "Socialist People's Party (SF)",
+          "Moderates",
+          "Social Liberal Party (RV)"
+        ],
+        "status": "دولت اقلیت چهارحزبی با ۸۲ کرسی از ۱۷۹ کرسی؛ کابینه از ۳ ژوئن ۲۰۲۶ آغاز به کار کرد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "Greenland_and_Faroe_relations",
+          "defence",
+          "migration",
+          "welfare",
+          "cost_of_living",
+          "climate",
+          "taxation",
+          "EU_policy"
+        ],
+        "rule": "ائتلاف دولت اقلیت است؛ رأی احزاب اپوزیسیون و نمایندگان سرزمین‌های خودگردان در تصویب قوانین می‌تواند تعیین‌کننده باشد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Denmark 2026 parliamentary election",
+            "url": "https://data.ipu.org/parliament/DK/DK-LC01/election/DK-LC01-E20260324/",
+            "date": "2026-03-31",
+            "notes": "نتایج انتخابات ۲۴ مارس ۲۰۲۶، توزیع کرسی‌ها و تشکیل دولت چهارحزبی."
+          },
+          {
+            "name": "UK House of Commons Library — Denmark: 2026 election and new coalition government",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/CBP-10847/",
+            "date": "2026-06-12",
+            "notes": "شرح تشکیل دولت اقلیت به رهبری مته فردریکسن."
+          }
+        ],
+        "notes": "آمار ۱۷۵ کرسی سرزمین اصلی و چهار نماینده جداگانه گرینلند/فارو؛ دولت جدید چهارحزبی با ۸۲ کرسی از ۱۷۹ کرسی."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "dnk_socialdem_group",
+          "name_en": "Social Democrats",
+          "party_id": "dnk_socialdem"
+        },
+        {
+          "id": "dnk_sf_group",
+          "name_en": "Socialist People's Party (SF)",
+          "party_id": "dnk_sf"
+        },
+        {
+          "id": "dnk_venstre_group",
+          "name_en": "Liberal Party (Venstre)",
+          "party_id": "dnk_venstre"
+        },
+        {
+          "id": "dnk_liberal_alliance_group",
+          "name_en": "Liberal Alliance",
+          "party_id": "dnk_liberal_alliance"
+        },
+        {
+          "id": "dnk_df_group",
+          "name_en": "Danish People's Party",
+          "party_id": "dnk_df"
+        },
+        {
+          "id": "dnk_moderates_group",
+          "name_en": "Moderates",
+          "party_id": "dnk_moderates"
+        },
+        {
+          "id": "dnk_conservative_group",
+          "name_en": "Conservative People's Party",
+          "party_id": "dnk_conservative"
+        },
+        {
+          "id": "dnk_redgreen_group",
+          "name_en": "Unity List–Red-Green Alliance",
+          "party_id": "dnk_redgreen"
+        },
+        {
+          "id": "dnk_radikale_group",
+          "name_en": "Social Liberal Party (Radikale Venstre)",
+          "party_id": "dnk_radikale"
+        },
+        {
+          "id": "dnk_danmarksdem_group",
+          "name_en": "Denmark Democrats",
+          "party_id": "dnk_danmarksdem"
+        },
+        {
+          "id": "dnk_alternative_group",
+          "name_en": "The Alternative",
+          "party_id": "dnk_alternative"
+        },
+        {
+          "id": "dnk_citizens_group",
+          "name_en": "Citizens' Party",
+          "party_id": "dnk_citizens"
+        },
+        {
+          "id": "dnk_greenland_faroe_group",
+          "name_en": "Greenlandic and Faroese parties",
+          "party_id": "dnk_greenland_faroe"
+        }
+      ]
     },
     "FIN": {
       "country_name_fa": "فنلاند",
