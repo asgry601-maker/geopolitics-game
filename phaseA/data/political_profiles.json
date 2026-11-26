@@ -1,36 +1,23 @@
 {
-  "schema_version": "1.7.0",
+  "schema_version": "1.8.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 47,
-    "pending_countries": 127,
+    "researched_countries": 54,
+    "pending_countries": 120,
     "last_batch": [
-      "GRC",
-      "POL",
-      "CZE",
-      "AUT",
-      "CHE",
-      "IRL",
-      "FIN"
+      "IRQ",
+      "SYR",
+      "LBN",
+      "JOR",
+      "PSE",
+      "QAT",
+      "KWT"
     ]
   },
-  "notes": [
-    "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.",
-    "احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.",
-    "درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.",
-    "برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.",
-    "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.",
-    "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.",
-    "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.",
-    "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.",
-    "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.",
-    "نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.",
-    "نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.",
-    "نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند."
-  ],
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -722,78 +709,846 @@
     "IRQ": {
       "country_name_fa": "عراق",
       "country_name_en": "Iraq",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_republic_multiparty_consensus_system",
+      "government_model": "جمهوری فدرال پارلمانی با رقابت چندحزبی و عرف تقسیم مناصب میان شیعیان، کردها و اهل سنت؛ ائتلاف‌های انتخاباتی و چارچوب‌های فراپارلمانی نقش محوری دارند.",
+      "parties": [
+        {
+          "id": "irq_reconstruction_development",
+          "name_fa": "ائتلاف بازسازی و توسعه",
+          "name_en": "Reconstruction and Development Coalition",
+          "entity_type": "electoral_coalition",
+          "political_role": "بزرگ‌ترین ائتلاف انتخاباتی در انتخابات ۲۰۲۵ با ۴۶ کرسی؛ وابسته به جریان نخست‌وزیر پیشین محمد شیاع السودانی.",
+          "ideological_profile": "عمل‌گرایی دولتی، توسعه اقتصادی و حفظ پیوند با ائتلاف شیعی حاکم",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats_2025": 46
+        },
+        {
+          "id": "irq_state_of_law",
+          "name_fa": "ائتلاف دولت قانون",
+          "name_en": "State of Law Coalition",
+          "entity_type": "electoral_coalition",
+          "political_role": "ائتلاف شیعی مهم و عضو چارچوب هماهنگی؛ مرتبط با نوری المالکی.",
+          "ideological_profile": "شیعه‌گرایی سیاسی، دولت‌گرایی و حفظ نفوذ جریان‌های سنتی شیعه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_taqaddum",
+          "name_fa": "حزب تقدم",
+          "name_en": "Taqaddum Party",
+          "entity_type": "party",
+          "political_role": "یکی از بازیگران اصلی اهل سنت و جریان نزدیک به محمد الحلبوسی.",
+          "ideological_profile": "سیاست‌ورزی سنی، تمرکز بر استان‌های غربی و مشارکت در دولت فدرال",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_kdp",
+          "name_fa": "حزب دموکرات کردستان",
+          "name_en": "Kurdistan Democratic Party (KDP)",
+          "entity_type": "party",
+          "political_role": "یکی از دو حزب اصلی کردستان عراق؛ در سطح فدرال نیز بازیگر مهم است.",
+          "ideological_profile": "ملی‌گرایی کردی، خودمختاری منطقه‌ای و عمل‌گرایی اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_puk",
+          "name_fa": "اتحادیه میهنی کردستان",
+          "name_en": "Patriotic Union of Kurdistan (PUK)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی کردستان و مرتبط با ریاست‌جمهوری فدرال نزار آمیدی.",
+          "ideological_profile": "ملی‌گرایی کردی، فدرالیسم و روابط منطقه‌ای متوازن",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_sadiqoon",
+          "name_fa": "جنبش صادقون",
+          "name_en": "Sadiqoon Movement",
+          "entity_type": "party",
+          "political_role": "جریان سیاسی مرتبط با عصائب اهل‌الحق و عضو طیف چارچوب هماهنگی.",
+          "ideological_profile": "اسلام‌گرایی شیعی و تأکید بر نقش نیروهای همسو با بسیج مردمی در سیاست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "irq_badr",
+          "name_fa": "سازمان بدر",
+          "name_en": "Badr Organization",
+          "entity_type": "party",
+          "political_role": "بازیگر سیاسی شیعی و عضو چارچوب هماهنگی؛ دارای شبکه نفوذ نهادی.",
+          "ideological_profile": "اسلام‌گرایی شیعی، دولت‌گرایی و روابط نزدیک با ایران",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "irq_national_state_forces",
+          "name_fa": "ائتلاف نیروهای دولت ملی",
+          "name_en": "National State Forces Alliance",
+          "entity_type": "electoral_coalition",
+          "political_role": "ائتلاف شیعی با گرایش عمل‌گرایانه‌تر و مرتبط با عمار حکیم.",
+          "ideological_profile": "میانه‌روی شیعی، مصالحه سیاسی و نهادسازی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "irq_coordination_framework",
+          "name_fa": "چارچوب هماهنگی نیروهای شیعه",
+          "name_en": "Coordination Framework",
+          "entity_type": "cross_party_coalition",
+          "policy_positions": {
+            "government": "ائتلاف فراپارلمانی احزاب و جریان‌های شیعی؛ بزرگ‌ترین بلوک پس از انتخابات ۲۰۲۵ و حامی نخست‌وزیری علی الزیدی.",
+            "foreign_policy": "طیف اعضا از روابط نزدیک با ایران تا رویکردهای عمل‌گرایانه‌تر متغیر است؛ نباید آن را یکدست فرض کرد.",
+            "security": "درون ائتلاف درباره جایگاه گروه‌های مسلح و میزان ادغام آنها در دولت اختلاف وجود دارد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "irq_sunni_political_current",
+          "name_fa": "ائتلاف‌ها و جریان‌های سیاسی اهل سنت",
+          "name_en": "Sunni political coalitions",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "تأکید بر سهم در دولت فدرال، بازسازی مناطق و تضمین حقوق استان‌ها."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "irq_kurdish_federalist_current",
+          "name_fa": "جریان فدرالیست کرد",
+          "name_en": "Kurdish federalist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "territorial": "حفظ اختیارات اقلیم کردستان، سهم درآمدهای نفتی و حل اختلافات بغداد و اربیل از مسیر فدرالیسم."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "irq_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "ریاست کشور و انتصاب نخست‌وزیر؛ طبق عرف سیاسی به یک سیاستمدار کرد واگذار می‌شود.",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_cabinet",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Council of Ministers and Prime Minister",
+          "role": "مرکز اجرایی؛ علی الزیدی در تاریخ مبنا نخست‌وزیر است و کابینه با اختلافات ائتلافی روبه‌روست.",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_council",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Council of Representatives",
+          "role": "پارلمان ۳۲۹ نفره و محل ائتلاف‌سازی برای انتخاب رئیس‌جمهور و دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_coordination",
+          "name_fa": "چارچوب هماهنگی",
+          "name_en": "Coordination Framework",
+          "role": "ائتلاف فراپارلمانی شیعی با بزرگ‌ترین بلوک سیاسی و نقش محوری در تشکیل دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_pmf",
+          "name_fa": "نیروهای بسیج مردمی و شبکه‌های وابسته",
+          "name_en": "Popular Mobilisation Forces and affiliated networks",
+          "role": "بازیگر امنیتی-سیاسی متنوع؛ میزان استقلال گروه‌ها و رابطه آنها با دولت محل مناقشه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "irq_kurdistan_regional",
+          "name_fa": "حکومت اقلیم کردستان",
+          "name_en": "Kurdistan Regional Government",
+          "role": "مرکز قدرت منطقه‌ای با نهادهای اجرایی و احزاب رقیب KDP و PUK.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Nizar Amedi",
+        "prime_minister": "Ali al-Zaidi",
+        "prime_minister_support": "Coordination Framework",
+        "parliament": "Council of Representatives",
+        "status": "دولت تشکیل‌شده در مه ۲۰۲۶؛ اختلافات ائتلافی باعث خالی ماندن یا تأخیر در تکمیل برخی وزارتخانه‌ها شده است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_revenue_sharing",
+          "federalism_and_kurdistan",
+          "anti_corruption",
+          "militia_integration",
+          "relations_with_iran",
+          "relations_with_us",
+          "public_services",
+          "government_formation"
+        ],
+        "rule": "رفتار دولت از ائتلاف‌های متغیر شیعی، احزاب سنی و احزاب کردی محاسبه شود؛ چارچوب هماهنگی یک حزب واحد نیست و اختلافات داخلی آن باید حفظ شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — A new president and prime minister for Iraq",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10829/",
+            "date": "2026-09-18"
+          },
+          {
+            "name": "Iraq Independent High Electoral Commission — 2025 election results",
+            "url": "https://www.ihec.iq/wp-content/uploads/2025/11/بغداد.pdf",
+            "date": "2025-11-20"
+          },
+          {
+            "name": "Reuters — Iraqi parliament approves partial government led by PM Zaidi",
+            "url": "https://www.reuters.com/world/middle-east/iraqi-parliament-approves-partial-government-led-by-pm-zaidi-2026-05-14/",
+            "date": "2026-05-14"
+          }
+        ],
+        "notes": "نتایج ۲۰۲۵ و ساختار سیاسی تا ۵ نوامبر ۲۰۲۶ مبناست. اعداد کرسی فقط برای ائتلاف بازسازی و توسعه از منبع پارلمانی/تحلیلی ثبت شده‌اند؛ از تعمیم تعداد کرسی یک استان به کل کشور خودداری شده است. احزاب و ائتلاف‌های شیعی، سنی و کردی با هم ادغام نشده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "irq_coordination_group",
+          "name_en": "Coordination Framework parliamentary bloc",
+          "role": "governing coalition"
+        },
+        {
+          "id": "irq_reconstruction_group",
+          "name_en": "Reconstruction and Development Coalition",
+          "party_id": "irq_reconstruction_development"
+        },
+        {
+          "id": "irq_taqaddum_group",
+          "name_en": "Taqaddum parliamentary bloc",
+          "party_id": "irq_taqaddum"
+        },
+        {
+          "id": "irq_kdp_group",
+          "name_en": "KDP parliamentary group",
+          "party_id": "irq_kdp"
+        },
+        {
+          "id": "irq_puk_group",
+          "name_en": "PUK parliamentary group",
+          "party_id": "irq_puk"
+        }
+      ]
     },
     "SYR": {
       "country_name_fa": "سوریه",
       "country_name_en": "Syria",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "transitional_presidential_republic_with_limited_indirect_legislature",
+      "government_model": "جمهوری انتقالی با ریاست‌جمهوری بسیار قدرتمند، اعلامیه قانون اساسی موقت پنج‌ساله و مجلس مردمی انتقالی؛ احزاب دوره پیشین منحل شده‌اند و انتخابات سراسری رقابتی هنوز برگزار نشده است.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "syr_transitional_authority",
+          "name_fa": "هسته حاکمیت انتقالی احمد الشرع",
+          "name_en": "Ahmed al-Sharaa transitional governing network",
+          "entity_type": "governing_current",
+          "policy_positions": {
+            "governance": "تمرکز قدرت اجرایی در ریاست‌جمهوری و مدیریت دوره انتقالی؛ تأکید بر یکپارچه‌سازی نهادهای دولتی.",
+            "domestic": "بازسازی نهادهای مرکزی و تثبیت نظم سیاسی جدید؛ انتقادها درباره فراگیری و پاسخ‌گویی ادامه دارد.",
+            "foreign_policy": "تلاش برای عادی‌سازی روابط خارجی و کاهش انزوای سوریه."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "syr_hts_former_networks",
+          "name_fa": "شبکه‌های سیاسی پیشین هیئت تحریرالشام",
+          "name_en": "Former HTS-linked political networks",
+          "entity_type": "elite_network",
+          "not_a_legal_party": true,
+          "policy_positions": {
+            "governance": "بخشی از کادرهای سابق اداره ادلب در ساختارهای دولت انتقالی ادغام شده‌اند؛ این شبکه‌ها دیگر حزب قانونی ثبت‌شده محسوب نمی‌شوند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "syr_sdf_autonomous",
+          "name_fa": "نیروهای دموکراتیک سوریه و اداره خودمختار شمال و شرق",
+          "name_en": "Syrian Democratic Forces and Autonomous Administration",
+          "entity_type": "regional_political_military_administration",
+          "policy_positions": {
+            "territorial": "حمایت از تمرکززدایی و تضمین حقوق و اداره محلی کردها و دیگر جوامع شمال‌شرق؛ مذاکره بر سر ادغام در ساختار دولت مرکزی.",
+            "governance": "حفظ نهادهای محلی و مشارکت سیاسی در ساختار آینده سوریه."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "syr_southern_druze",
+          "name_fa": "جریان‌های محلی دروزی جنوب سوریه",
+          "name_en": "Southern Druze local political currents",
+          "entity_type": "regional_current",
+          "policy_positions": {
+            "territorial": "تأکید بر امنیت محلی، نمایندگی و خودگردانی/تمرکززدایی؛ مواضع رهبران و گروه‌ها یکسان نیست."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "syr_coastal_community",
+          "name_fa": "شبکه‌ها و نمایندگان محلی جوامع ساحلی و علوی",
+          "name_en": "Coastal and Alawite community networks",
+          "entity_type": "community_current",
+          "policy_positions": {
+            "domestic": "اولویت بر امنیت جامعه، جلوگیری از خشونت جمعی، پاسخ‌گویی و تضمین مشارکت در نظم سیاسی جدید."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "syr_sna_components",
+          "name_fa": "گروه‌ها و شبکه‌های پیشین ارتش ملی سوریه",
+          "name_en": "Former Syrian National Army components",
+          "entity_type": "former_opposition_network",
+          "policy_positions": {
+            "governance": "بخشی از نیروها و ساختارها در روند ادغام و بازآرایی نهادهای جدید قرار دارند؛ انسجام و میزان ادغام میان گروه‌ها متفاوت است."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "syr_presidency",
+          "name_fa": "ریاست‌جمهوری انتقالی",
+          "name_en": "Transitional Presidency",
+          "role": "مرکز اصلی قدرت اجرایی؛ احمد الشرع رئیس دوره انتقالی است و اختیارات گسترده‌ای در انتصاب‌ها دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "syr_cabinet",
+          "name_fa": "کابینه انتقالی",
+          "name_en": "Transitional Cabinet",
+          "role": "وزیران منصوب رئیس‌جمهور؛ در ساختار قانون اساسی انتقالی نخست‌وزیر مستقل وجود ندارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "syr_people_assembly",
+          "name_fa": "مجلس مردمی انتقالی",
+          "name_en": "Transitional People's Assembly",
+          "role": "مجلس ۲۱۰ نفره با ترکیب انتخاب غیرمستقیم و انتصاب ریاست‌جمهوری؛ نقش آن در تدوین قانون اساسی و قانون انتخابات انتقالی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "syr_security_institutions",
+          "name_fa": "نهادهای امنیتی و وزارت کشور",
+          "name_en": "Security institutions and Ministry of Interior",
+          "role": "در حال بازسازی و ادغام ساختارهای امنیتی پس از فروپاشی نظام پیشین.",
+          "confidence": "high"
+        },
+        {
+          "id": "syr_local_administrations",
+          "name_fa": "اداره‌های محلی و شوراهای منطقه‌ای",
+          "name_en": "Local administrations and regional councils",
+          "role": "مراکز نفوذ در مناطق مختلف، به‌ویژه شمال‌شرق و جنوب کشور؛ رابطه آنها با دولت مرکزی موضوع مذاکره است.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Ahmed al-Sharaa",
+        "head_of_state": "Ahmed al-Sharaa",
+        "head_of_government": "Presidentially appointed transitional cabinet",
+        "prime_minister": null,
+        "parliament": "Transitional People's Assembly",
+        "status": "دوره انتقالی پنج‌ساله؛ احزاب سیاسی قدیمی در ژانویه ۲۰۲۵ منحل شدند و انتخابات سراسری چندحزبی به آینده موکول شده است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_transition",
+          "centralization_vs_decentralization",
+          "minority_representation",
+          "kurdish_integration",
+          "security_sector_reform",
+          "sanctions_and_reconstruction",
+          "transitional_justice"
+        ],
+        "rule": "تا زمان شکل‌گیری قانون احزاب و انتخابات آزاد، شبکه‌های سیاسی و منطقه‌ای را به‌جای احزاب رسمی مدل کن؛ هیچ گروه محلی یا قومی را یکپارچه فرض نکن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "European Union Agency for Asylum — Syria: State structure and governance",
+            "url": "https://dip-aws.euaa.europa.eu/syria-country-focus/1-state-structure-and-governance",
+            "date": "2026-07-01"
+          },
+          {
+            "name": "UK House of Commons Library — Syria in 2026: Interim government and Kurdish integration",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/CBP-10430/",
+            "date": "2026-09-01"
+          },
+          {
+            "name": "Associated Press — Syria holds first elections since Assad's ouster",
+            "url": "https://apnews.com/article/dbfad7aecf13bfe0f005191479566808",
+            "date": "2025-10-05"
+          }
+        ],
+        "notes": "در ژانویه ۲۰۲۵ پارلمان پیشین و احزاب سیاسی از جمله حزب بعث منحل شدند. مجلس انتقالی در ۲۰۲۶ شکل گرفت؛ دو سوم اعضا از مسیر کمیته‌های انتخاباتی محلی و یک سوم با انتصاب رئیس‌جمهور تعیین می‌شوند. فهرست factions شبکه‌های سیاسی/منطقه‌ای را نشان می‌دهد، نه احزاب قانونی ثبت‌شده."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "syr_transitional_assembly",
+          "name_en": "Transitional People's Assembly",
+          "role": "transitional legislature"
+        }
+      ]
     },
     "LBN": {
       "country_name_fa": "لبنان",
       "country_name_en": "Lebanon",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "confessional_parliamentary_republic_multiparty_consensus_system",
+      "government_model": "جمهوری پارلمانی مبتنی بر تقسیم قدرت فرقه‌ای؛ ریاست‌جمهوری طبق عرف برای مارونی‌ها، نخست‌وزیری برای اهل سنت و ریاست مجلس برای شیعیان است؛ ائتلاف‌ها و توافق میان رهبران طوایف نقش اساسی دارند.",
+      "parties": [
+        {
+          "id": "lbn_hezbollah",
+          "name_fa": "حزب‌الله",
+          "name_en": "Hezbollah",
+          "entity_type": "party_and_movement",
+          "political_role": "حزب و جنبش سیاسی شیعه؛ نفوذ سیاسی و اجتماعی آن پس از تحولات امنیتی و منطقه‌ای کاهش یافته اما همچنان بازیگر مهمی است.",
+          "ideological_profile": "اسلام‌گرایی شیعی، مقاومت در برابر اسرائیل و روابط راهبردی با ایران",
+          "legal_status": "operating_political_movement",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_amal",
+          "name_fa": "جنبش امل",
+          "name_en": "Amal Movement",
+          "entity_type": "party",
+          "political_role": "حزب شیعه و شریک سنتی حزب‌الله در ائتلاف‌های پارلمانی؛ نبیه بری رئیس مجلس است.",
+          "ideological_profile": "شیعه‌گرایی سیاسی و عمل‌گرایی نهادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_lf",
+          "name_fa": "نیروهای لبنانی",
+          "name_en": "Lebanese Forces",
+          "entity_type": "party",
+          "political_role": "یکی از احزاب اصلی مسیحی و از منتقدان حزب‌الله؛ بازیگر مهم اپوزیسیون.",
+          "ideological_profile": "مسیحی‌دموکرات، حاکمیت دولت و گرایش غرب‌گرا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_fpm",
+          "name_fa": "جریان میهنی آزاد",
+          "name_en": "Free Patriotic Movement",
+          "entity_type": "party",
+          "political_role": "حزب مسیحی با نفوذ نهادی؛ ائتلاف‌های آن در سال‌های اخیر تغییر کرده است.",
+          "ideological_profile": "ملی‌گرایی لبنانی، اصلاحات نهادی و گرایش‌های متنوع در سیاست خارجی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_kataeb",
+          "name_fa": "حزب کتائب لبنان",
+          "name_en": "Kataeb Party",
+          "entity_type": "party",
+          "political_role": "حزب مسیحی قدیمی و منتقد ساختار سیاسی تحت نفوذ سلاح‌های خارج از کنترل دولت.",
+          "ideological_profile": "ملی‌گرایی لبنانی، حاکمیت دولت و اقتصاد بازار",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_psp",
+          "name_fa": "حزب سوسیالیست ترقی‌خواه",
+          "name_en": "Progressive Socialist Party",
+          "entity_type": "party",
+          "political_role": "حزب دروزی با شبکه اجتماعی و سیاسی گسترده؛ در ائتلاف‌های میانه‌رو نقش دارد.",
+          "ideological_profile": "سوسیال‌دموکراسی تاریخی، جامعه‌گرایی دروزی و عمل‌گرایی ائتلافی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_mrada",
+          "name_fa": "جریان المرده",
+          "name_en": "Marada Movement",
+          "entity_type": "party",
+          "political_role": "حزب مسیحی شمال لبنان و بازیگر ائتلاف‌های نزدیک‌تر به حزب‌الله در دوره‌های گذشته.",
+          "ideological_profile": "محافظه‌کاری مسیحی و سیاست‌ورزی منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lbn_independent_reform",
+          "name_fa": "نمایندگان مستقل و اصلاح‌طلب",
+          "name_en": "Independent and Reformist MPs",
+          "entity_type": "parliamentary_category",
+          "political_role": "نمایندگان مستقل و گروه‌های اصلاح‌طلب با مواضع متنوع؛ فاقد رهبری واحد.",
+          "ideological_profile": "از اصلاحات ضدفساد و دولت‌محوری تا گرایش‌های لیبرال",
+          "legal_status": "parliamentary_category",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lbn_sovereigntist_current",
+          "name_fa": "جریان حاکمیت‌گرا و مخالف سلاح خارج از دولت",
+          "name_en": "Sovereigntist / state-monopoly-of-force current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "security": "تقویت انحصار دولت بر تصمیم‌های امنیتی و دفاعی؛ شامل نیروهای لبنانی، کتائب و چهره‌های مستقل."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_hezbollah_allied_current",
+          "name_fa": "جریان همسو با حزب‌الله و امل",
+          "name_en": "Hezbollah–Amal aligned current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "security": "حفظ نقش سیاسی و اجتماعی محور شیعی و مخالفت با خلع‌سلاح یک‌جانبه؛ احزاب و چهره‌های این طیف مواضع یکسان ندارند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_reformist_current",
+          "name_fa": "جریان اصلاح‌طلب و ضدفساد",
+          "name_en": "Reformist and anti-corruption current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "اصلاح نظام بانکی و مالی، پاسخ‌گویی و بازسازی نهادهای عمومی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lbn_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "ریاست کشور؛ جوزف عون از ژانویه ۲۰۲۵ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_cabinet",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Council of Ministers and Prime Minister",
+          "role": "قوه مجریه به ریاست نواف سلام؛ کابینه ۲۴ نفره در فوریه ۲۰۲۵ تشکیل شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_parliament",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Deputies",
+          "role": "پارلمان ۱۲۸ نفره با کرسی‌های تقسیم‌شده بر اساس توازن فرقه‌ای.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_speaker",
+          "name_fa": "ریاست مجلس و جنبش امل",
+          "name_en": "Speakership and Amal Movement",
+          "role": "نبیه بری رئیس مجلس و چهره محوری سیاست پارلمانی شیعه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_army",
+          "name_fa": "ارتش لبنان",
+          "name_en": "Lebanese Armed Forces",
+          "role": "نهاد ملی امنیتی و بازیگر مهم در بحث حاکمیت دولت و امنیت مرزی.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbn_religious_leadership",
+          "name_fa": "مرجعیت‌ها و رهبری‌های مذهبی",
+          "name_en": "Religious authorities and communal leaderships",
+          "role": "نفوذ اجتماعی و سیاسی در نظام تقسیم قدرت فرقه‌ای؛ شامل رهبران مذهبی مسیحی، سنی، شیعه و دروزی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Joseph Aoun",
+        "prime_minister": "Nawaf Salam",
+        "parliament_speaker": "Nabih Berri",
+        "cabinet_formed": "2025-02-08",
+        "status": "دولت پس از خلأ طولانی ریاست‌جمهوری در ۲۰۲۵ تشکیل شد؛ نخست‌وزیر از حمایت اکثریت نمایندگان برخوردار شد، اما ائتلاف‌های پارلمانی همچنان متغیرند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "confessional_power_sharing",
+          "banking_and_financial_reform",
+          "sovereignty_and_arms",
+          "relations_with_iran",
+          "relations_with_saudi_arabia",
+          "relations_with_france_and_us",
+          "refugees_and_reconstruction",
+          "cabinet_stability"
+        ],
+        "rule": "سیاست لبنان باید بر اساس توازن فرقه‌ای و ائتلاف‌های موردی مدل شود؛ هیچ حزب یا رهبر مذهبی نماینده تمام یک جامعه نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "European Union Agency for Asylum — Lebanon: Political and economic developments",
+            "url": "https://www.euaa.europa.eu/lebanon-country-focus/2-political-and-economic-developments",
+            "date": "2026-01-01"
+          },
+          {
+            "name": "Congressional Research Service — Lebanon: Background and U.S. Relations",
+            "url": "https://www.everycrsreport.com/files/2026-11-09_R44759_8989be72e1b378ead69a778a3038343efb462590.html",
+            "date": "2026-11-09"
+          },
+          {
+            "name": "European Union Agency for Asylum — Lebanon country overview",
+            "url": "https://www.euaa.europa.eu/lebanon-country-focus/1-country-overview",
+            "date": "2026-01-01"
+          }
+        ],
+        "notes": "تاریخ مبنا ۵ نوامبر ۲۰۲۶ است. منبع CRS نوامبر ۹ برای تأیید ساختار دولت پس از تاریخ مبنا استفاده شده و به‌عنوان تغییر سیاسی بعد از snapshot وارد نشده است. فهرست احزاب و جریان‌ها با نظام فرقه‌ای و ائتلاف‌های متغیر سازگار شده؛ اعداد کرسی بدون تأیید مستقل درج نشده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lbn_hezbollah_group",
+          "name_en": "Hezbollah parliamentary bloc",
+          "party_id": "lbn_hezbollah"
+        },
+        {
+          "id": "lbn_amal_group",
+          "name_en": "Development and Liberation bloc",
+          "party_id": "lbn_amal"
+        },
+        {
+          "id": "lbn_lf_group",
+          "name_en": "Lebanese Forces bloc",
+          "party_id": "lbn_lf"
+        },
+        {
+          "id": "lbn_fpm_group",
+          "name_en": "Strong Lebanon bloc",
+          "party_id": "lbn_fpm"
+        },
+        {
+          "id": "lbn_kataeb_group",
+          "name_en": "Kataeb parliamentary group",
+          "party_id": "lbn_kataeb"
+        }
+      ]
     },
     "JOR": {
       "country_name_fa": "اردن",
       "country_name_en": "Jordan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_system_with_strong_royal_executive",
+      "government_model": "پادشاهی مشروطه با پارلمان منتخب و دولت منصوب پادشاه؛ قانون انتخابات ۲۰۲۲ سهمیه‌ای از کرسی‌ها را به فهرست‌های حزبی اختصاص داد و احزاب در مجلس بیستم نقش پررنگ‌تری یافته‌اند.",
+      "parties": [
+        {
+          "id": "jor_iaf",
+          "name_fa": "جبهه عمل اسلامی",
+          "name_en": "Islamic Action Front (IAF)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون پارلمانی؛ در انتخابات ۲۰۲۴ تعداد ۳۱ کرسی به دست آورد. حزب قانونی مستقل از وضعیت حقوقی اخوان‌المسلمین است.",
+          "ideological_profile": "اسلام‌گرایی سیاسی، محافظه‌کاری اجتماعی و حمایت از فلسطین",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats_2024": 31
+        },
+        {
+          "id": "jor_mithaq",
+          "name_fa": "حزب میثاق ملی",
+          "name_en": "National Charter Party (Mithaq)",
+          "entity_type": "party",
+          "political_role": "یکی از بزرگ‌ترین احزاب حامی دولت؛ در انتخابات ۲۰۲۴ تعداد ۲۱ کرسی به دست آورد.",
+          "ideological_profile": "میانه‌رو، ملی‌گرا و حامی نوسازی تدریجی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "seats_2024": 21
+        },
+        {
+          "id": "jor_irada",
+          "name_fa": "حزب اراده",
+          "name_en": "Irada Party",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی میانه‌رو با حضور در ائتلاف‌های حامی دولت.",
+          "ideological_profile": "میانه‌گرایی، اصلاحات اقتصادی و توسعه منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "jor_azm",
+          "name_fa": "حزب عزم",
+          "name_en": "Azm Party",
+          "entity_type": "party",
+          "political_role": "حزب دارای نمایندگی پارلمانی و یکی از بلوک‌های مجلس بیستم.",
+          "ideological_profile": "میانه‌گرایی و توسعه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "jor_national_islamic",
+          "name_fa": "حزب ملی اسلامی",
+          "name_en": "National Islamic Party",
+          "entity_type": "party",
+          "political_role": "حزب اسلامی میانه‌رو و بازیگر کوچک‌تر پارلمانی.",
+          "ideological_profile": "اسلام‌گرایی میانه‌رو و محافظه‌کاری اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "jor_progressive",
+          "name_fa": "حزب دموکراتیک چپ‌گرا",
+          "name_en": "Democratic Left Party",
+          "entity_type": "party",
+          "political_role": "جریان چپ کوچک‌تر در فضای حزبی و پارلمانی.",
+          "ideological_profile": "چپ‌گرایی و عدالت اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "jor_royalist_progovernment",
+          "name_fa": "جریان حامی سلطنت و دولت",
+          "name_en": "Royalist and pro-government current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "حمایت از نقش محوری پادشاه و اصلاحات سیاسی تدریجی تحت هدایت نهاد سلطنت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "jor_islamist_opposition",
+          "name_fa": "جریان اسلام‌گرای اپوزیسیون",
+          "name_en": "Islamist opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "توسعه مشارکت حزبی، محافظه‌کاری اجتماعی و انتقاد از برخی سیاست‌های دولت.",
+            "foreign_policy": "مواضع منتقدانه نسبت به اسرائیل و حمایت قوی از فلسطینیان."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "jor_tribal_independent",
+          "name_fa": "جریان‌های عشیره‌ای و مستقل",
+          "name_en": "Tribal and independent currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "تأکید بر خدمات محلی، نمایندگی حوزه‌های انتخابیه و دسترسی به دولت؛ مواضع سیاسی متنوع."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "jor_monarchy",
+          "name_fa": "پادشاه و دربار هاشمی",
+          "name_en": "Hashemite Monarchy and Royal Court",
+          "role": "مرکز اصلی قدرت اجرایی و راهبردی؛ عبدالله دوم پادشاه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "jor_cabinet",
+          "name_fa": "دولت جعفر حسان",
+          "name_en": "Jafar Hassan Cabinet",
+          "role": "دولت منصوب پادشاه و مسئول اداره اجرایی کشور.",
+          "confidence": "high"
+        },
+        {
+          "id": "jor_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۱۳۸ نفره منتخب؛ احزاب در مجلس بیستم سهم بیشتری دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "jor_senate",
+          "name_fa": "مجلس اعیان",
+          "name_en": "Senate",
+          "role": "مجلس علیا با اعضای منصوب پادشاه.",
+          "confidence": "high"
+        },
+        {
+          "id": "jor_security",
+          "name_fa": "نهادهای امنیتی و نیروهای مسلح",
+          "name_en": "Security institutions and Armed Forces",
+          "role": "نهادهای مهم در امنیت داخلی و سیاست منطقه‌ای.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Abdullah II",
+        "prime_minister": "Jafar Hassan",
+        "government_model": "Royal-appointed cabinet",
+        "house_speaker": "Ibrahim Tarawneh",
+        "status": "جعفر حسان نخست‌وزیر است؛ در ۲ نوامبر ۲۰۲۶ ابراهیم الطراونه به ریاست مجلس نمایندگان انتخاب شد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "political_modernization",
+          "public_debt_and_economy",
+          "unemployment",
+          "israel_palestine",
+          "regional_security",
+          "tribal_representation",
+          "islamist_opposition",
+          "water_and_energy"
+        ],
+        "rule": "نقش احزاب پارلمانی رو به افزایش است اما دولت و پادشاه همچنان مراکز اصلی تصمیم‌گیری‌اند؛ جبهه عمل اسلامی را با اخوان‌المسلمین یکی ندان."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Jordan House of Representatives September 2024 election",
+            "url": "https://data.ipu.org/parliament/JO/JO-LC01/election/JO-LC01-E20240910/",
+            "date": "2024-09-10"
+          },
+          {
+            "name": "Jordan News Agency Petra — Prime Minister congratulates new House Speaker",
+            "url": "https://petra.gov.jo/efront/index.php/en/news/prime-minister-congratulates-new-house-speaker",
+            "date": "2026-11-02"
+          },
+          {
+            "name": "Le Monde — Jordan's Islamists come under pressure",
+            "url": "https://www.lemonde.fr/en/international/article/2025/08/13/jordan-s-islamists-come-under-pressure_6744324_4.html",
+            "date": "2025-08-13"
+          }
+        ],
+        "notes": "نتایج ۲۰۲۴ مبنای سهم حزبی است؛ حدود ۶۰ نماینده حامی دولت و ۳۱ نماینده جبهه عمل اسلامی گزارش شده‌اند. ممنوعیت اخوان‌المسلمین در اردن در ۲۰۲۵ به‌معنی ممنوعیت خودکار جبهه عمل اسلامی نیست؛ این دو از نظر حقوقی و تشکیلاتی باید جدا ثبت شوند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "jor_iaf_group",
+          "name_en": "Islamic Action Front bloc",
+          "party_id": "jor_iaf",
+          "role": "opposition",
+          "seats": 31
+        },
+        {
+          "id": "jor_mithaq_group",
+          "name_en": "National Charter bloc",
+          "party_id": "jor_mithaq",
+          "role": "pro-government",
+          "seats": 21
+        },
+        {
+          "id": "jor_azm_group",
+          "name_en": "Azm bloc",
+          "party_id": "jor_azm"
+        },
+        {
+          "id": "jor_irada_group",
+          "name_en": "Irada bloc",
+          "party_id": "jor_irada"
+        }
+      ]
     },
     "ISR": {
       "country_name_fa": "اسرائیل",
@@ -1000,21 +1755,225 @@
     "PSE": {
       "country_name_fa": "فلسطین",
       "country_name_en": "Palestine",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "partially_recognized_state_presidential_system_with_fragmented_authority",
+      "government_model": "ساختار سیاسی چندلایه شامل ریاست دولت فلسطین، تشکیلات خودگردان در بخش‌هایی از کرانه باختری و سازمان آزادی‌بخش فلسطین؛ کنترل سرزمینی و اقتدار نهادی محدود و منقسم است و مجلس قانون‌گذاری از ۲۰۰۷ عملاً غیرفعال مانده است.",
+      "parties": [
+        {
+          "id": "pse_fatah",
+          "name_fa": "جنبش فتح",
+          "name_en": "Fatah",
+          "entity_type": "party_and_national_movement",
+          "political_role": "جریان مسلط بر ریاست تشکیلات خودگردان و نهادهای اصلی سازمان آزادی‌بخش فلسطین.",
+          "ideological_profile": "ملی‌گرایی فلسطینی، سکولاریسم ملی و دیپلماسی برای تشکیل دولت مستقل",
+          "legal_status": "operating_political_movement",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_hamas",
+          "name_fa": "جنبش مقاومت اسلامی حماس",
+          "name_en": "Hamas",
+          "entity_type": "political_movement",
+          "political_role": "جنبش اسلام‌گرای فلسطینی و رقیب اصلی فتح؛ دارای نفوذ سیاسی و اجتماعی، به‌ویژه در غزه.",
+          "ideological_profile": "اسلام‌گرایی فلسطینی و ملی‌گرایی دینی",
+          "legal_status": "political_status_contested",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_pflp",
+          "name_fa": "جبهه خلق برای آزادی فلسطین",
+          "name_en": "Popular Front for the Liberation of Palestine (PFLP)",
+          "entity_type": "party_and_movement",
+          "political_role": "جریان چپ ملی‌گرا و عضو تاریخی سازمان آزادی‌بخش فلسطین.",
+          "ideological_profile": "مارکسیسم-لنینیسم و ملی‌گرایی فلسطینی",
+          "legal_status": "operating_political_movement",
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_dflp",
+          "name_fa": "جبهه دموکراتیک برای آزادی فلسطین",
+          "name_en": "Democratic Front for the Liberation of Palestine (DFLP)",
+          "entity_type": "party_and_movement",
+          "political_role": "جریان چپ فلسطینی و عضو سازمان آزادی‌بخش فلسطین.",
+          "ideological_profile": "چپ‌گرایی و ملی‌گرایی فلسطینی",
+          "legal_status": "operating_political_movement",
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_ppp",
+          "name_fa": "حزب مردم فلسطین",
+          "name_en": "Palestinian People's Party",
+          "entity_type": "party",
+          "political_role": "حزب چپ‌گرای کوچک‌تر در چارچوب سازمان آزادی‌بخش فلسطین.",
+          "ideological_profile": "سوسیالیسم دموکراتیک و چپ ملی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_pni",
+          "name_fa": "ابتکار ملی فلسطین",
+          "name_en": "Palestinian National Initiative",
+          "entity_type": "party_and_movement",
+          "political_role": "جریان ملی‌گرای اصلاح‌طلب و مدنی به رهبری مصطفی برغوثی.",
+          "ideological_profile": "ملی‌گرایی فلسطینی، اصلاحات دموکراتیک و جامعه مدنی",
+          "legal_status": "operating_political_movement",
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_pij",
+          "name_fa": "جنبش جهاد اسلامی فلسطین",
+          "name_en": "Palestinian Islamic Jihad",
+          "entity_type": "political_movement",
+          "political_role": "جریان اسلام‌گرای فلسطینی خارج از ساختار تشکیلات خودگردان و سازمان آزادی‌بخش فلسطین.",
+          "ideological_profile": "اسلام‌گرایی سیاسی فلسطینی",
+          "legal_status": "political_status_contested",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "pse_fatah_institutional",
+          "name_fa": "جریان نهادی فتح",
+          "name_en": "Fatah institutional current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "governance": "حفظ کنترل نهادهای تشکیلات خودگردان و سازمان آزادی‌بخش فلسطین؛ رقابت بر سر جانشینی محمود عباس."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "pse_fatah_reformist",
+          "name_fa": "جریان اصلاح‌طلب و منتقد در فتح",
+          "name_en": "Reformist and dissenting Fatah current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "governance": "اصلاح رهبری، تجدید مشروعیت انتخاباتی و تغییر در ساختار تصمیم‌گیری؛ چهره‌ها و شبکه‌های آن پراکنده‌اند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_dahlan_network",
+          "name_fa": "شبکه سیاسی محمد دحلان",
+          "name_en": "Mohammed Dahlan political network",
+          "entity_type": "political_network",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "governance": "منتقد رهبری فعلی فتح و دارای شبکه‌های حمایتی خارج از ساختار اصلی رام‌الله."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pse_gaza_local",
+          "name_fa": "جریان‌های مدنی و محلی غزه",
+          "name_en": "Gaza local and civic currents",
+          "entity_type": "regional_current",
+          "policy_positions": {
+            "governance": "اولویت بر اداره مدنی، بازسازی، خدمات عمومی و مشارکت محلی؛ مواضع سیاسی متنوع."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "pse_presidency",
+          "name_fa": "ریاست دولت فلسطین و تشکیلات خودگردان",
+          "name_en": "Palestinian Presidency and Palestinian Authority",
+          "role": "محمود عباس رئیس دولت و رئیس تشکیلات خودگردان است؛ اختیارات عملی آن عمدتاً به بخش‌هایی از کرانه باختری محدود است.",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_plo",
+          "name_fa": "سازمان آزادی‌بخش فلسطین",
+          "name_en": "Palestine Liberation Organization",
+          "role": "ساختار ملی نمایندگی فلسطینیان در سطح بین‌المللی؛ تحت سلطه فتح و با مسئله نمایندگی و جانشینی روبه‌روست.",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_cabinet",
+          "name_fa": "دولت تشکیلات خودگردان",
+          "name_en": "Palestinian Authority Cabinet",
+          "role": "دولت به نخست‌وزیری محمد مصطفی؛ اداره امور اجرایی محدود در مناطق تحت اختیار تشکیلات.",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_legislative_council",
+          "name_fa": "شورای قانون‌گذاری فلسطین",
+          "name_en": "Palestinian Legislative Council",
+          "role": "از ۲۰۰۷ عملاً غیرفعال؛ انتخابات برنامه‌ریزی‌شده نوامبر ۲۰۲۶ در اکتبر به ۱۱ سپتامبر ۲۰۲۷ موکول شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_hamas_gaza",
+          "name_fa": "شبکه‌های سیاسی و اجتماعی حماس در غزه",
+          "name_en": "Hamas political and social networks in Gaza",
+          "role": "دارای نفوذ سیاسی و اجتماعی در غزه؛ جایگاه آن در ترتیبات اداره و بازسازی پساجنگ محل مذاکره است.",
+          "confidence": "high"
+        },
+        {
+          "id": "pse_israel_occupation",
+          "name_fa": "محدودیت‌های ناشی از اشغال و کنترل خارجی",
+          "name_en": "Occupation-related external constraints",
+          "role": "کنترل‌ها و محدودیت‌های خارجی بر تردد، قلمرو، درآمدها و امکان برگزاری انتخابات، ظرفیت نهادهای فلسطینی را محدود می‌کند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Mahmoud Abbas",
+        "prime_minister": "Mohammad Mustafa",
+        "vice_president_of_pLO": "Hussein al-Sheikh",
+        "plo_chair": "Mahmoud Abbas",
+        "status": "ریاست و نهادهای اصلی تحت نفوذ فتح؛ انتخابات شورای قانون‌گذاری که برای ۲۸ نوامبر ۲۰۲۶ برنامه‌ریزی شده بود در ۱۰ اکتبر به ۱۱ سپتامبر ۲۰۲۷ موکول شد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "succession_and_legitimacy",
+          "gaza_governance",
+          "west_bank_governance",
+          "israeli_restrictions",
+          "reconstruction_and_aid",
+          "fatah_hamas_relations",
+          "international_recognition",
+          "election_preparations"
+        ],
+        "rule": "تشکیلات خودگردان، سازمان آزادی‌بخش، ریاست دولت و جریان‌های سیاسی غزه را نهادهای جداگانه مدل کن؛ کنترل سرزمینی و مشروعیت سیاسی میان آنها یکسان نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "President of the State of Palestine — Decree postponing elections to September 2027",
+            "url": "https://www.president.ps/Eng/NewsPage/493202",
+            "date": "2026-10-10"
+          },
+          {
+            "name": "Chatham House — Maintaining a path to Palestinian statehood: Palestinian leadership reforms",
+            "url": "https://www.chathamhouse.org/2026/11/maintaining-path-palestinian-statehood/02-palestinian-leadership-reforms",
+            "date": "2026-11-24"
+          },
+          {
+            "name": "Reuters — Abbas pledges first Palestinian parliamentary vote in 20 years",
+            "url": "https://www.reuters.com/world/europe/abbas-pledges-first-palestinian-parliamentary-vote-20-years-doubts-mount-2026-09-24/",
+            "date": "2026-09-24"
+          }
+        ],
+        "notes": "انتخابات مجلس قانون‌گذاری که ابتدا برای ۲۸ نوامبر ۲۰۲۶ تعیین شده بود، طبق فرمان ۱۰ اکتبر ۲۰۲۶ به ۱۱ سپتامبر ۲۰۲۷ موکول شد؛ بنابراین در تاریخ مبنای ۵ نوامبر ۲۰۲۶ انتخابات آتی محسوب می‌شد. شورای قانون‌گذاری از ۲۰۰۷ عملاً غیرفعال است. سازمان آزادی‌بخش فلسطین و تشکیلات خودگردان دو ساختار متفاوت‌اند و نباید در مدل یکی شوند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "pse_fatah_plo",
+          "name_en": "Fatah-led PLO institutions",
+          "party_id": "pse_fatah",
+          "role": "dominant institutional current"
+        },
+        {
+          "id": "pse_hamas_network",
+          "name_en": "Hamas political network",
+          "party_id": "pse_hamas",
+          "role": "major rival movement"
+        }
+      ]
     },
     "SAU": {
       "country_name_fa": "عربستان",
@@ -1246,38 +2205,282 @@
     "QAT": {
       "country_name_fa": "قطر",
       "country_name_en": "Qatar",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "hereditary_absolute_monarchy_with_appointed_consultative_legislature",
+      "government_model": "امارت موروثی با محوریت امیر؛ شورای وزیران و مجلس شورا در چارچوب قانون اساسی فعالیت می‌کنند. پس از اصلاحات قانون اساسی ۲۰۲۴، اعضای مجلس شورا با فرمان امیری منصوب می‌شوند و احزاب سیاسی رقابتی وجود ندارند.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "qat_al_thani_ruling_family",
+          "name_fa": "خاندان حاکم آل ثانی",
+          "name_en": "Al Thani ruling family",
+          "entity_type": "ruling_family_network",
+          "policy_positions": {
+            "governance": "تداوم حاکمیت موروثی و حفظ ثبات سیاسی؛ تصمیم‌گیری اصلی در حلقه امیر و خاندان حاکم متمرکز است."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "qat_state_technocratic",
+          "name_fa": "شبکه تکنوکرات‌های دولت",
+          "name_en": "State technocratic network",
+          "entity_type": "elite_network",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "economy": "توسعه گاز، سرمایه‌گذاری بین‌المللی، تنوع‌بخشی اقتصادی و اجرای راهبرد ملی توسعه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "qat_tribal_social",
+          "name_fa": "شبکه‌های اجتماعی و قبیله‌ای",
+          "name_en": "Tribal and social networks",
+          "entity_type": "social_network",
+          "not_a_formal_party": true,
+          "policy_positions": {
+            "domestic": "مطالبات مربوط به شهروندی، نمایندگی اجتماعی و رابطه میان سنت‌های قبیله‌ای و دولت؛ فاقد ساختار حزبی واحد."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "qat_amir",
+          "name_fa": "امیر و دیوان امیری",
+          "name_en": "Amir and Amiri Diwan",
+          "role": "مرکز اصلی تصمیم‌گیری سیاسی و اجرایی؛ شیخ تمیم بن حمد آل ثانی امیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "qat_cabinet",
+          "name_fa": "مجلس وزیران",
+          "name_en": "Council of Ministers",
+          "role": "اداره امور اجرایی و سیاست‌های داخلی و خارجی؛ به ریاست نخست‌وزیر محمد بن عبدالرحمن آل ثانی.",
+          "confidence": "high"
+        },
+        {
+          "id": "qat_shura",
+          "name_fa": "مجلس شورا",
+          "name_en": "Shura Council",
+          "role": "نهاد قانون‌گذاری و نظارتی با ۴۹ عضو منصوب‌شده با فرمان امیری در ۲۰۲۵؛ پس از اصلاحات ۲۰۲۴ انتخابات مستقیم اعضا کنار گذاشته شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "qat_security",
+          "name_fa": "نهادهای امنیتی و وزارت کشور",
+          "name_en": "Security institutions and Ministry of Interior",
+          "role": "نهادهای اجرایی مهم در امنیت داخلی و مدیریت مرزها.",
+          "confidence": "high"
+        },
+        {
+          "id": "qat_sovereign_funds",
+          "name_fa": "نهادهای سرمایه‌گذاری دولتی",
+          "name_en": "State investment institutions",
+          "role": "مراکز مهم اقتصادی و سیاست‌گذاری سرمایه‌گذاری؛ از جمله نهادهای مرتبط با صندوق ثروت ملی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "amir": "Tamim bin Hamad Al Thani",
+        "prime_minister": "Mohammed bin Abdulrahman Al Thani",
+        "shura_council_membership": "49 appointed members",
+        "status": "امارت موروثی؛ شورای شورا پس از اصلاح قانون اساسی ۲۰۲۴ از طریق فرمان امیر منصوب می‌شود."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "natural_gas_and_energy",
+          "sovereign_investment",
+          "regional_mediation",
+          "relations_with_iran",
+          "relations_with_gulf_states",
+          "relations_with_us",
+          "labor_and_citizenship",
+          "national_development"
+        ],
+        "rule": "برای قطر احزاب انتخاباتی ساختگی تعریف نکن؛ تصمیم‌گیری را از امیر، خاندان حاکم، کابینه، مجلس شورای منصوب و شبکه‌های تکنوکراتیک مدل کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Qatar Shura Council — History",
+            "url": "https://www.shura.qa/en/Pages/About-Council/History",
+            "date": "2025-10-21"
+          },
+          {
+            "name": "Qatar Amiri Diwan — Constitution",
+            "url": "https://diwan.gov.qa/en/About-Qatar/Constitution",
+            "date": "2024-11-06"
+          },
+          {
+            "name": "Qatar Ministry of Foreign Affairs — Political System and Constitution",
+            "url": "https://mofa.gov.qa/en/state-of-qatar/political-system/constitution",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "پس از همه‌پرسی و اصلاحات قانون اساسی نوامبر ۲۰۲۴، انتخاب مستقیم اعضای مجلس شورا حذف شد و فرمان امیری اعضا را منصوب می‌کند؛ فرمان سال ۲۰۲۵ ترکیب ۴۹ نفره را تعیین کرد. احزاب سیاسی در قطر وجود ندارند؛ شبکه‌های خاندان حاکم و تکنوکرات‌ها نباید به‌عنوان حزب رسمی ثبت شوند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "qat_shura_council",
+          "name_en": "Appointed Shura Council",
+          "role": "appointed consultative legislature"
+        }
+      ]
     },
     "KWT": {
       "country_name_fa": "کویت",
       "country_name_en": "Kuwait",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "hereditary_constitutional_emirate_with_suspended_elected_legislature",
+      "government_model": "امارت موروثی با قانون اساسی ۱۹۶۲؛ از مه ۲۰۲۴ مجلس ملی منحل و برخی مواد قانون اساسی برای دوره‌ای تا چهار سال تعلیق شده‌اند و قوه مجریه با اختیارات گسترده‌تری حکومت می‌کند. احزاب رسمی ثبت‌شده وجود ندارند، اما گروه‌های سیاسی و فراکسیون‌های غیررسمی فعال‌اند.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "factions": [
+        {
+          "id": "kwt_progovernment",
+          "name_fa": "جریان حامی دولت و امارت",
+          "name_en": "Pro-government and ruling-establishment current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "حمایت از تمرکز تصمیم‌گیری در امیر و دولت و اولویت دادن به ثبات و اجرای اصلاحات اداری."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_ islamic_constitutional",
+          "name_fa": "جنبش قانون اساسی اسلامی (حدس)",
+          "name_en": "Islamic Constitutional Movement (Hadas)",
+          "entity_type": "political_movement",
+          "not_a_registered_party": true,
+          "policy_positions": {
+            "domestic": "اسلام‌گرایی سیاسی و مشارکت در سازوکارهای پارلمانی؛ طرفدار نقش اجتماعی محافظه‌کارانه."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_salafi",
+          "name_fa": "جریان‌های سلفی پارلمانی",
+          "name_en": "Salafi parliamentary currents",
+          "entity_type": "cross_party_current",
+          "not_a_registered_party": true,
+          "policy_positions": {
+            "domestic": "محافظه‌کاری دینی و اجتماعی؛ طیف‌های مختلف از همکاری با دولت تا اپوزیسیون."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "kwt_shia",
+          "name_fa": "جریان‌های سیاسی شیعه",
+          "name_en": "Shia political currents",
+          "entity_type": "cross_party_current",
+          "not_a_registered_party": true,
+          "policy_positions": {
+            "representation": "تأکید بر نمایندگی سیاسی، حقوق شهروندی و مشارکت در نهادهای دولتی؛ مواضع متنوع."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "kwt_liberal_nationalist",
+          "name_fa": "جریان لیبرال و ملی‌گرا",
+          "name_en": "Liberal and nationalist currents",
+          "entity_type": "cross_party_current",
+          "not_a_registered_party": true,
+          "policy_positions": {
+            "governance": "حمایت از پارلمان منتخب، پاسخ‌گویی دولت و حقوق مدنی؛ منتقد تمرکز طولانی‌مدت قدرت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_tribal_independent",
+          "name_fa": "جریان‌های عشیره‌ای و نمایندگان مستقل",
+          "name_en": "Tribal and independent political currents",
+          "entity_type": "cross_party_current",
+          "not_a_registered_party": true,
+          "policy_positions": {
+            "governance": "مطالبات حوزه‌ای، خدمات عمومی و حفظ نقش انتخاباتی شهروندان؛ مواضع اقتصادی و اجتماعی متنوع."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "kwt_amir",
+          "name_fa": "امیر و دیوان امیری",
+          "name_en": "Amir and Amiri Diwan",
+          "role": "مرکز اصلی قدرت؛ شیخ مشعل الاحمد الجابر الصباح امیر است و اختیار انتصاب دولت را دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_cabinet",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Council of Ministers and Prime Minister",
+          "role": "قوه مجریه به ریاست شیخ احمد عبدالله الاحمد الصباح؛ اداره کشور در دوره تعلیق مجلس.",
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_crown_prince",
+          "name_fa": "ولیعهد",
+          "name_en": "Crown Prince",
+          "role": "شیخ صباح خالد الحمد الصباح ولیعهد و جانشین تعیین‌شده امیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_al_sabah",
+          "name_fa": "خاندان آل صباح",
+          "name_en": "Al Sabah ruling family",
+          "role": "شبکه اصلی انتصاب‌ها و توازن قدرت درون حاکمیت؛ اعضای خاندان در مناصب کلیدی دولت حضور دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "kwt_former_parliamentary_networks",
+          "name_fa": "شبکه‌های پارلمانی و اپوزیسیون پیشین",
+          "name_en": "Former parliamentary and opposition networks",
+          "role": "جریان‌های سیاسی و اجتماعی که پیش از انحلال مجلس در انتخابات و نظارت پارلمانی فعال بودند؛ اکنون فاقد مجلس منتخب فعال‌اند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "emir": "Mishal Al-Ahmad Al-Jaber Al-Sabah",
+        "crown_prince": "Sabah Khaled Al-Hamad Al-Sabah",
+        "prime_minister": "Ahmad Al-Abdullah Al-Ahmad Al-Sabah",
+        "status": "مجلس ملی از ۱۰ مه ۲۰۲۴ منحل و مواد مشخصی از قانون اساسی تعلیق شده‌اند؛ دولت در تاریخ مبنا همچنان به ریاست احمد عبدالله فعالیت می‌کند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_restoration",
+          "public_finance_and_subsidies",
+          "administrative_reform",
+          "citizenship_and_electoral_law",
+          "executive_legislative_balance",
+          "tribal_and_social_representation",
+          "oil_policy"
+        ],
+        "rule": "در دوره تعلیق مجلس، فراکسیون‌ها را به‌عنوان شبکه‌های سیاسی و اجتماعی خارج از پارلمان فعال مدل کن؛ آنها را احزاب رسمی یا گروه‌های دارای کرسی فعلی نشان نده."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — Kuwait: Issues for the 119th Congress",
+            "url": "https://www.everycrsreport.com/reports/R47390.html",
+            "date": "2026-01-14"
+          },
+          {
+            "name": "Kuwait Prime Minister's Administration — Prime Minister",
+            "url": "https://pm.gov.kw/en/administration/prime-minister/",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "Kuwait Government Online — Council of Ministers",
+            "url": "https://www.e.gov.kw/sites/kgoenglish/Pages/OtherTopics/Ministers.aspx",
+            "date": "2026-07-15"
+          }
+        ],
+        "notes": "مجلس ملی در مه ۲۰۲۴ منحل و مواد قانون اساسی برای دوره‌ای تا چهار سال تعلیق شد؛ در ۲۰۲۶ همچنان مجلس منتخب فعال وجود ندارد. جریان‌های اسلامی، سلفی، شیعه، لیبرال و عشیره‌ای به‌عنوان جریان سیاسی غیررسمی ثبت شده‌اند، نه احزاب قانونی. نخست‌وزیر طبق وب‌سایت رسمی دولت شیخ احمد عبدالله است."
       },
       "parliamentary_groups": []
     },
