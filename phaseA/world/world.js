@@ -441,10 +441,22 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت</span><b>'+dashEsc(r.leader)+'</b></div>';
     h += '<div class="row"><span class="muted">ثبات سیاسی فعلی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
     if (r.parties && Object.keys(r.parties).length) {
-      h += '<h3>احزاب سیاسی</h3>'; ks=Object.keys(r.parties).sort(function(a,b){return r.parties[b]-r.parties[a];});
+      h += '<h3>جناح‌ها و سهم سیاسی</h3>';
+      ks=Object.keys(r.parties).sort(function(a,b){return r.parties[b]-r.parties[a];});
       for(i=0;i<ks.length;i++) h += barHtml(dashEsc(ks[i]),Math.min(100,r.parties[ks[i]]));
+      var rulingA = (ST && r.name === ST.player) ? 'جبهه انقلاب' : 'حاکمیت';
+      var rulingB = (ST && r.name === ST.player) ? 'ملی‌گرایان' : 'ارتش‌گرایان';
+      var rulingShare = (r.parties[rulingA] || 0) + (r.parties[rulingB] || 0);
+      var rulingState = rulingShare >= 55 ? 'پایگاه حاکمیتی قدرتمند' : (rulingShare <= 35 ? 'پایگاه حاکمیتی ضعیف' : 'پایگاه حاکمیتی متوسط');
+      h += '<h3>پایگاه جناح‌های حاکم</h3><div class="dashCard">';
+      h += '<div class="row"><span class="muted">'+dashEsc(rulingA)+' + '+dashEsc(rulingB)+'</span><b>'+rulingShare.toFixed(1)+'٪</b></div>';
+      h += '<div class="muted">'+rulingState+' · این شاخص از سهم دو جناح حاکم در مدل فعلی موتور محاسبه شده و معادل محبوبیت عمومی دولت نیست.</div></div>';
     }
-    h += dashMissing('نوع حکومت و محبوبیت دولت','نوع حکومت، محبوبیت دولت، انتخابات و اعتراضات هنوز سیستم داده و مکانیک قابل‌تغییر ندارند. این گزینه‌ها برای کشور بازیکن در مراحل بعدی قابل ویرایش می‌شوند.');
+    if (r.press && r.press.length) {
+      h += '<h3>آخرین اخبار و مطبوعات داخلی</h3>';
+      for(i=0;i<r.press.length;i++) h += '<div class="dashCard small">'+dashEsc(r.press[i])+'</div>';
+    }
+    h += dashMissing('سایر سازوکارهای سیاسی','نوع حکومت، محبوبیت عمومی دولت، انتخابات، مجلس و اعتراضات هنوز داده و مکانیک مستقل ندارند. احزاب/جناح‌ها، واکنش روزانه آن‌ها به رویدادها، اثر ائتلاف حاکم بر ثبات و تیترهای مطبوعاتی در موتور فعلی فعال‌اند.');
     if (!isPlayer) h += '<div class="dashNote">این کشور در حالت مشاهده است؛ کنترل سیاسی فقط برای کشور تحت مدیریت بازیکن فعال خواهد بود.</div>';
   } else if (tab === 'society') {
     h += '<h3>👥 جمعیت و جامعه</h3>';
