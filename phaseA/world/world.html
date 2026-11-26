@@ -17,6 +17,12 @@ html, body { height: 100%; margin: 0; padding: 0; background: #070b14; color: #d
   flex-wrap: wrap; z-index: 5; pointer-events: none; }
 #topbar .box { pointer-events: auto; display: flex; gap: 6px; background: rgba(10,16,30,.82);
   border: 1px solid #223252; border-radius: 10px; padding: 6px; }
+#gameClock { pointer-events: auto; display: flex; align-items: center; gap: 8px;
+  flex-wrap: wrap; background: rgba(10,16,30,.9); border: 1px solid #315078;
+  border-radius: 10px; padding: 7px 10px; color: #dce4f2; }
+#gameClock .clockDate { font-weight: bold; color: #b9d7ff; min-width: 145px; }
+#gameClock button { white-space: nowrap; }
+#gameClock button:disabled { opacity: .5; cursor: wait; }
 button { background: #16233d; color: #dce4f2; border: 1px solid #2c3f66; border-radius: 8px;
   padding: 6px 12px; font-family: Tahoma; font-size: 13px; cursor: pointer; }
 button:hover { background: #1e3054; }
@@ -106,7 +112,11 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         <button id="btnHome">🏠 نمای اولیه</button>
         <button id="btnTex" title="تغییر بافت">🖼 بافت: تیره</button>
         <button id="btnProv" title="نمایش مرز استان‌های کشور انتخاب‌شده">🗺 استان: روشن</button>
-        <button id="btnEnd" class="warn" title="پایان دور = یک روز">☀️ پایان روز</button>
+      </div>
+      <div id="gameClock">
+        <span id="gameClockText" class="clockDate">📅 — | 🕒 —</span>
+        <button id="btn5h" class="primary" title="جلو رفتن دقیقاً پنج ساعت">⏩ ۵ ساعت</button>
+        <button id="btnEnd" class="warn" title="جلو رفتن دقیقاً ۲۴ ساعت">☀️ یک روز کامل</button>
       </div>
     </div>
     <div id="globe"></div>
