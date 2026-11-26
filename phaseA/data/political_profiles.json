@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.18.0",
+  "schema_version": "1.19.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 152,
-    "pending_countries": 22,
+    "researched_countries": 159,
+    "pending_countries": 15,
     "last_batch": [
-      "URY",
-      "GUY",
-      "SUR",
-      "CUB",
-      "HTI",
-      "DOM",
-      "JAM"
+      "TTO",
+      "CRI",
+      "PAN",
+      "GTM",
+      "HND",
+      "SLV",
+      "NIC"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.\nنسخه 1.18.0: بسته بیست‌ودوم پژوهشی برای اروگوئه، گویان، سورینام، کوبا، هائیتی، جمهوری دومینیکن و جامائیکا اضافه شد. ساختارهای تک‌حزبی و دولت‌های انتقالی به‌صورت واقعی و بدون ساختن احزاب رقابتی یا اکثریت پارلمانی صوری ثبت شده‌اند. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اطلاعاتی که پس از این تاریخ منتشر شده‌اند فقط برای راستی‌آزمایی وضعیت تا snapshot استفاده شده‌اند و در صورت عدم امکان تفکیک زمانی، عدم قطعیت در یادداشت پروفایل ثبت شده است.",
@@ -28284,133 +28284,1183 @@
     "TTO": {
       "country_name_fa": "ترینیداد و توباگو",
       "country_name_en": "Trinidad and Tobago",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی؛ نخست‌وزیر از اکثریت مجلس نمایندگان برمی‌آید. کاملا پرساد-بیسسار از ۱ مه ۲۰۲۵ نخست‌وزیر است.",
+      "parties": [
+        {
+          "id": "tto_unc",
+          "name_fa": "کنگره ملی متحد",
+          "name_en": "United National Congress (UNC)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۲۶ کرسی از ۴۱ کرسی مجلس نمایندگان در انتخابات ۲۰۲۵.",
+          "ideological_profile": "میانه‌چپ، پوپولیسم اجتماعی و سیاست‌ورزی با پایگاه اجتماعی هندی‌تبار",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_pnm",
+          "name_fa": "جنبش ملی مردمی",
+          "name_en": "People's National Movement (PNM)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۱۳ کرسی مجلس نمایندگان.",
+          "ideological_profile": "محافظه‌کاری، ملی‌گرایی مدنی و سنت سوسیال‌دموکراتیک",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_tpp",
+          "name_fa": "حزب مردم توباگو",
+          "name_en": "Tobago People's Party (TPP)",
+          "entity_type": "party",
+          "political_role": "نیروی منطقه‌ای توباگو؛ دو کرسی مجلس نمایندگان.",
+          "ideological_profile": "خودگردانی توباگو و تمرکز بر منافع منطقه‌ای",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_cop",
+          "name_fa": "کنگره مردم",
+          "name_en": "Congress of the People (COP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک؛ در ائتلاف انتخاباتی/همکاری سیاسی با UNC مشارکت داشته، اما در انتخابات ۲۰۲۵ کرسی مستقل نگرفت.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی نهادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_pep",
+          "name_fa": "حزب توانمندسازی مترقی",
+          "name_en": "Progressive Empowerment Party (PEP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک مشارکت‌کننده در ائتلاف منافع به رهبری UNC؛ بدون کرسی مستقل در مجلس ۲۰۲۵.",
+          "ideological_profile": "عدالت اجتماعی و توانمندسازی اقتصادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_pf",
+          "name_fa": "جبهه میهنی",
+          "name_en": "Patriotic Front",
+          "entity_type": "party",
+          "political_role": "نیروی سیاسی کوچک با حضور انتخاباتی؛ بدون کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "ملی‌گرایی و سیاست‌ورزی پوپولیستی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tto_unc_coalition",
+          "name_fa": "ائتلاف منافع پیرامون UNC",
+          "name_en": "UNC Coalition of Interest",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "همکاری انتخاباتی UNC با COP، PEP، LOVE و MND و پشتیبانی برخی اتحادیه‌های کارگری؛ این گروه‌ها نباید به‌عنوان کرسی‌های جداگانه به حساب آیند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tto_pnm_opposition",
+          "name_fa": "جریان‌های درون PNM",
+          "name_en": "Currents within PNM",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جناح‌های درون حزب اپوزیسیون اصلی؛ اختلاف‌های رهبری و راهبردی در چارچوب ساختار حزب."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tto_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "کاملا پرساد-بیسسار رئیس دولت و رهبر قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "UNC با ۲۶ کرسی اکثریت مجلس منتخب را در اختیار دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "tto_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس‌جمهور رئیس کشور با نقشی عمدتاً تشریفاتی و قانون اساسی است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Christine Kangaloo",
+        "prime_minister": "Kamla Persad-Bissessar",
+        "government_type": "parliamentary constitutional monarchy",
+        "prime_minister_party": "United National Congress (UNC)",
+        "supporting_coalitions": [
+          "UNC-led Coalition of Interest"
+        ],
+        "parliamentary_context": "انتخابات ۲۸ آوریل ۲۰۲۵: UNC ۲۶، PNM ۱۳ و TPP دو کرسی از ۴۱ کرسی مجلس نمایندگان."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_security",
+          "economy",
+          "energy",
+          "labor",
+          "governance",
+          "Tobago_autonomy"
+        ],
+        "rule": "ساختار حزبی عملاً حول رقابت UNC و PNM می‌چرخد؛ ائتلاف منافع UNC با احزاب و اتحادیه‌ها از کرسی‌های مستقل آن‌ها متمایز است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس نمایندگان ۲۰۲۵",
+            "url": "https://data.ipu.org/parliament/TT/TT-LC01/election/TT-LC01-E20250428/",
+            "date": "2025-04-28"
+          },
+          {
+            "name": "Commonwealth Observer Group – گزارش انتخابات ۲۰۲۵",
+            "url": "https://comsec-web-static.s3.eu-west-1.amazonaws.com/s3fs-public/2025-07/tt-parliamentary-elections-final-cog-report-2025.pdf",
+            "date": "2025-07"
+          },
+          {
+            "name": "BTI 2026 – Trinidad and Tobago",
+            "url": "https://www.ecoi.net/en/file/local/2138490/country_report_2026_TTO.pdf",
+            "date": "2026"
+          }
+        ],
+        "notes": "نتایج کرسی‌ها بر اساس انتخابات آوریل ۲۰۲۵ است. COP، PEP، LOVE و MND در همکاری سیاسی ائتلافی ذکر شده‌اند و به‌عنوان احزاب دارای کرسی مستقل ثبت نشده‌اند."
       },
       "parliamentary_groups": []
     },
     "CRI": {
       "country_name_fa": "کاستاریکا",
       "country_name_en": "Costa Rica",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ لورا فرناندس دلگادو از ۸ مه ۲۰۲۶ رئیس‌جمهور دوره ۲۰۲۶ تا ۲۰۳۰ است. حزب مردم حاکمیت‌گرا با ۳۱ کرسی از ۵۷ کرسی مجلس اکثریت دارد.",
+      "parties": [
+        {
+          "id": "cri_ppso",
+          "name_fa": "حزب مردم حاکمیت‌گرا",
+          "name_en": "Sovereign People's Party (PPSO)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور لورا فرناندس و اکثریت پارلمانی.",
+          "ideological_profile": "محافظه‌کاری ملی، پوپولیسم و رویکرد امنیت‌محور",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_pln",
+          "name_fa": "حزب آزادی ملی",
+          "name_en": "National Liberation Party (PLN)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون با ۱۷ کرسی مجلس.",
+          "ideological_profile": "سوسیال‌دموکراسی و سنت سیاسی میانه‌رو",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_fa",
+          "name_fa": "جبهه گسترده",
+          "name_en": "Broad Front (Frente Amplio)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ با هفت کرسی مجلس.",
+          "ideological_profile": "چپ، ترقی‌خواهی و سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_pusc",
+          "name_fa": "حزب وحدت اجتماعی مسیحی",
+          "name_en": "Social Christian Unity Party (PUSC)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای یک کرسی مجلس.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری میانه‌رو",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_cac",
+          "name_fa": "ائتلاف دستورکار شهروندی",
+          "name_en": "Citizen Agenda Coalition (CAC)",
+          "entity_type": "party",
+          "political_role": "ائتلاف انتخاباتی دارای یک کرسی مجلس.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات نهادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_nueva",
+          "name_fa": "حزب جمهوری نوین",
+          "name_en": "New Republic Party",
+          "entity_type": "party",
+          "political_role": "نیروی محافظه‌کار دارای حضور انتخاباتی؛ در مجلس ۲۰۲۶ کرسی نگرفت.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و مسیحی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "cri_ppso_chavismo",
+          "name_fa": "جریان همسو با رودریگو چاوز",
+          "name_en": "Rodrigo Chaves-aligned current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "پایه سیاسی PPSO از حامیان و متحدان سیاسی رودریگو چاوز شکل گرفته و لورا فرناندس چهره اصلی این جریان در دولت است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "cri_pln_socialdem",
+          "name_fa": "جریان سوسیال‌دموکرات PLN",
+          "name_en": "PLN social-democratic tradition",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "سنت تاریخی سوسیال‌دموکرات در حزب آزادی ملی؛ طیف‌های میانه‌رو و عمل‌گرا درون حزب."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "cri_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "لورا فرناندس رئیس کشور و دولت و محور قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_leg",
+          "name_fa": "مجلس قانون‌گذاری",
+          "name_en": "Legislative Assembly",
+          "role": "PPSO با ۳۱ کرسی از ۵۷ کرسی اکثریت دارد؛ PLN با ۱۷ کرسی بزرگ‌ترین اپوزیسیون است.",
+          "confidence": "high"
+        },
+        {
+          "id": "cri_tse",
+          "name_fa": "دیوان عالی انتخابات",
+          "name_en": "Supreme Electoral Tribunal (TSE)",
+          "role": "نهاد مستقل اداره و نظارت بر انتخابات.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Laura Fernández Delgado",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Sovereign People's Party (PPSO)",
+        "supporting_coalitions": [
+          "Sovereign People's Party"
+        ],
+        "parliamentary_context": "ترکیب مجلس ۲۰۲۶ تا ۲۰۳۰: PPSO ۳۱، PLN ۱۷، جبهه گسترده ۷، PUSC یک و ائتلاف CAC یک کرسی."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_security",
+          "anti_corruption",
+          "cost_of_living",
+          "economic_policy",
+          "constitutional_reform",
+          "social_policy"
+        ],
+        "rule": "PPSO از نظر سیاسی به جریان حامی رودریگو چاوز متصل است؛ احزاب دارای کرسی مجلس طبق نتایج رسمی ۲۰۲۶ ثبت شده‌اند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Tribunal Supremo de Elecciones – اعلام انتخاب رئیس‌جمهور ۲۰۲۶",
+            "url": "https://tse.go.cr/comunicado1168.html",
+            "date": "2026-03-03"
+          },
+          {
+            "name": "Tribunal Supremo de Elecciones – ترکیب ۵۷ نماینده مجلس ۲۰۲۶",
+            "url": "https://www.tse.go.cr/comunicado1173.html",
+            "date": "2026-03-23"
+          },
+          {
+            "name": "IPU Parline – انتخابات مجلس کاستاریکا ۲۰۲۶",
+            "url": "https://data.ipu.org/parliament/CR/CR-LC01/election/CR-LC01-E20260201/",
+            "date": "2026-02-01"
+          },
+          {
+            "name": "Presidencia de Costa Rica – رئیس‌جمهور",
+            "url": "https://www.presidencia.go.cr/su-presidente/presidente-de-la-republica",
+            "date": "2026"
+          }
+        ],
+        "notes": "انتخابات سراسری ۱ فوریه ۲۰۲۶ و آغاز دوره ریاست‌جمهوری ۸ مه ۲۰۲۶ مبنای ثبت دولت و مجلس است."
       },
       "parliamentary_groups": []
     },
     "PAN": {
       "country_name_fa": "پاناما",
       "country_name_en": "Panama",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ خوزه رائول مولینو از ۱ ژوئیه ۲۰۲۴ رئیس‌جمهور است. مجلس ملی پراکنده است و هیچ حزب واحدی اکثریت ۷۱ کرسی را ندارد.",
+      "parties": [
+        {
+          "id": "pan_rm",
+          "name_fa": "تحقق اهداف",
+          "name_en": "Realizing Goals (RM)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور مولینو و بزرگ‌ترین حزب وابسته به دولت؛ ۱۴ کرسی در مجلس منتخب ۲۰۲۴.",
+          "ideological_profile": "راست‌گرایی پوپولیستی و محافظه‌کاری",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_prd",
+          "name_fa": "حزب انقلابی دموکراتیک",
+          "name_en": "Democratic Revolutionary Party (PRD)",
+          "entity_type": "party",
+          "political_role": "حزب سنتی بزرگ؛ ۱۳ کرسی مجلس.",
+          "ideological_profile": "ملی‌گرایی، سوسیال‌دموکراسی و سنت توریخویی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_cd",
+          "name_fa": "تغییر دموکراتیک",
+          "name_en": "Democratic Change (CD)",
+          "entity_type": "party",
+          "political_role": "حزب دارای هشت کرسی مجلس.",
+          "ideological_profile": "میانه‌راست و لیبرالیسم اقتصادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_p",
+          "name_fa": "حزب پاناماییست",
+          "name_en": "Panameñista Party",
+          "entity_type": "party",
+          "political_role": "حزب دارای هشت کرسی مجلس.",
+          "ideological_profile": "محافظه‌کاری و ملی‌گرایی پانامایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_moca",
+          "name_fa": "جنبش راه دیگر",
+          "name_en": "Another Way Movement (MOCA)",
+          "entity_type": "party",
+          "political_role": "نیروی اصلاح‌طلب دارای سه کرسی مجلس.",
+          "ideological_profile": "اصلاح‌طلبی، شفافیت و مبارزه با فساد",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_al",
+          "name_fa": "حزب اتحاد",
+          "name_en": "Alliance Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای دو کرسی مجلس؛ در ائتلاف انتخاباتی حامی مولینو مشارکت داشت.",
+          "ideological_profile": "محافظه‌کاری و سیاست‌ورزی انتخاباتی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_pp",
+          "name_fa": "حزب مردم",
+          "name_en": "People's Party (PP)",
+          "entity_type": "party",
+          "political_role": "حزب دارای دو کرسی مجلس.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_molirena",
+          "name_fa": "جنبش جمهوری‌خواه لیبرال ملی‌گرا",
+          "name_en": "Nationalist Republican Liberal Movement (MOLIRENA)",
+          "entity_type": "party",
+          "political_role": "حزب دارای یک کرسی مجلس.",
+          "ideological_profile": "لیبرالیسم میانه‌رو و ائتلاف‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "pan_rm_martinelli",
+          "name_fa": "جریان حامی ریکاردو مارتینلی",
+          "name_en": "Ricardo Martinelli-aligned current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "پشتیبانی سیاسی ریکاردو مارتینلی نقش مهمی در شکل‌گیری کارزار مولینو و هویت انتخاباتی RM داشت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "pan_independents",
+          "name_fa": "نمایندگان مستقل و گروه‌های شهروندی",
+          "name_en": "Independent deputies and civic currents",
+          "entity_type": "parliamentary_group",
+          "policy_positions": {
+            "domestic": "۲۰ نماینده مستقل در مجلس منتخب ۲۰۲۴ حضور دارند؛ این نمایندگان یک حزب واحد یا فراکسیون کاملاً همگن نیستند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "pan_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "خوزه رائول مولینو رئیس قوه مجریه و دولت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_leg",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۷۱ کرسی دارد و به‌دلیل حضور ۲۰ نماینده مستقل و چند حزب، پراکنده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "pan_court",
+          "name_fa": "دیوان عالی دادگستری",
+          "name_en": "Supreme Court of Justice",
+          "role": "نهاد قضایی عالی و یکی از مراکز مهم نظارت قانون اساسی و منازعات سیاسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "José Raúl Mulino",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Realizing Goals (RM)",
+        "supporting_coalitions": [
+          "Alliance Party"
+        ],
+        "parliamentary_context": "نتایج انتخابات ۲۰۲۴: RM ۱۴، PRD ۱۳، CD هشت، Panameñista هشت، MOCA سه، Alliance دو، PP دو، MOLIRENA یک و مستقل‌ها ۲۰ کرسی."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economy",
+          "canal_and_water",
+          "migration",
+          "employment",
+          "corruption",
+          "public_services"
+        ],
+        "rule": "حزب RM و حزب Alliance متحد انتخاباتی مولینو هستند؛ ۲۰ نماینده مستقل باید جدا از احزاب ثبت شوند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس ملی پاناما ۲۰۲۴",
+            "url": "https://data.ipu.org/parliament/PA/PA-LC01/election/PA-LC01-E20240505/",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "Junta Nacional de Escrutinio – اعلام رسمی رئیس‌جمهور منتخب",
+            "url": "https://jnepanama.com/wp-content/uploads/2024/05/Acta-de-Proclamacion-del-Presidente.pdf",
+            "date": "2024-05-09"
+          },
+          {
+            "name": "Congressional Research Service – Panama: 2024 Elections",
+            "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12357/IN12357.2.pdf",
+            "date": "2024-05-07"
+          }
+        ],
+        "notes": "ترکیب کرسی‌ها بر پایه نتایج انتخابات ۲۰۲۴ است؛ ارقام منابع مختلف درباره توزیع نمایندگان مستقل/احزاب ائتلافی متفاوت گزارش شده‌اند، بنابراین از جدول تفصیلی IPU استفاده شده است."
       },
       "parliamentary_groups": []
     },
     "GTM": {
       "country_name_fa": "گواتمالا",
       "country_name_en": "Guatemala",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ برناردو آرِوالو از ۱۵ ژانویه ۲۰۲۴ رئیس‌جمهور است. دولت با مجلس پراکنده و بدون اکثریت پایدار روبه‌روست؛ حزب جنبش بذر با محدودیت حقوقی و تعلیق وضعیت حزبی مواجه شده است.",
+      "parties": [
+        {
+          "id": "gtm_vamos",
+          "name_fa": "باهم برای گواتمالای متفاوت",
+          "name_en": "Vamos",
+          "entity_type": "party",
+          "political_role": "یکی از بزرگ‌ترین نیروهای پارلمانی؛ ۳۸ عضو در گروه پارلمانی گزارش‌شده نوامبر ۲۰۲۶.",
+          "ideological_profile": "محافظه‌کاری و سیاست‌ورزی سنتی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_une",
+          "name_fa": "اتحاد ملی امید",
+          "name_en": "National Unity of Hope (UNE)",
+          "entity_type": "party",
+          "political_role": "حزب مهم اپوزیسیون با ۲۲ عضو در گروه پارلمانی گزارش‌شده.",
+          "ideological_profile": "پوپولیسم اجتماعی و محافظه‌کاری اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_cabal",
+          "name_fa": "کابال",
+          "name_en": "Cabal",
+          "entity_type": "party",
+          "political_role": "نیروی مهم پارلمانی با ۱۷ عضو.",
+          "ideological_profile": "محافظه‌کاری و ملی‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_valor",
+          "name_fa": "ارزش",
+          "name_en": "Valor",
+          "entity_type": "party",
+          "political_role": "حزب راست‌گرا با ۱۰ عضو در گروه پارلمانی گزارش‌شده.",
+          "ideological_profile": "محافظه‌کاری و راست‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_viva",
+          "name_fa": "ویوا",
+          "name_en": "Viva",
+          "entity_type": "party",
+          "political_role": "حزب دارای هشت عضو در گروه پارلمانی گزارش‌شده.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و مسیحی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_todos",
+          "name_fa": "همه",
+          "name_en": "Todos",
+          "entity_type": "party",
+          "political_role": "حزب دارای شش عضو در گروه پارلمانی گزارش‌شده.",
+          "ideological_profile": "میانه‌گرایی و ائتلاف‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_ur",
+          "name_fa": "اتحاد انقلابی ملی گواتمالا – مایز – ویناک",
+          "name_en": "URNG-Maiz-Winaq",
+          "entity_type": "party",
+          "political_role": "ائتلاف/نیروی چپ با یک عضو در ترکیب پارلمانی گزارش‌شده.",
+          "ideological_profile": "چپ، حقوق بومیان و عدالت اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_semilla",
+          "name_fa": "جنبش بذر",
+          "name_en": "Seed Movement (Movimiento Semilla)",
+          "entity_type": "party",
+          "political_role": "حزب برنده انتخابات ریاست‌جمهوری ۲۰۲۳ و حزب آرِوالو؛ وضعیت حقوقی آن تعلیق/لغو شده و نمایندگان منتخب آن به‌عنوان مستقل شناخته می‌شوند، نه یک فراکسیون رسمی حزبی.",
+          "ideological_profile": "اصلاح‌طلبی، ضدفساد و میانه‌چپ",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "gtm_semilla_ind",
+          "name_fa": "نمایندگان منتخب جنبش بذر در جایگاه مستقل",
+          "name_en": "Former Semilla deputies sitting as independents",
+          "entity_type": "parliamentary_group",
+          "policy_positions": {
+            "domestic": "نمایندگان منتخب Semilla در مجلس حاضرند اما به‌دلیل وضعیت حقوقی حزب، به‌عنوان مستقل فعالیت می‌کنند و نباید با یک فراکسیون رسمی حزبی اشتباه شوند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gtm_arevalo_reform",
+          "name_fa": "ائتلاف اصلاح‌طلب پیرامون دولت آرِوالو",
+          "name_en": "Arévalo reformist governing current",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "دولت برای پیشبرد برنامه ضدفساد و اصلاحات نهادی به حمایت موردی نمایندگان و گروه‌های همسو نیاز دارد؛ اکثریت منسجم و دائمی ندارد."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "gtm_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "برناردو آرِوالو رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_congress",
+          "name_fa": "کنگره جمهوری",
+          "name_en": "Congress of the Republic",
+          "role": "پارلمان ۱۶۰ کرسی دارد؛ ترکیب فراکسیون‌ها متغیر و پراکنده است و گروه مستقل‌ها ۳۸ عضو گزارش شده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_tse",
+          "name_fa": "دیوان عالی انتخابات",
+          "name_en": "Supreme Electoral Tribunal (TSE)",
+          "role": "نهاد مدیریت انتخابات؛ در منازعات وضعیت حقوقی احزاب و نتایج انتخابات نقش کلیدی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "gtm_mp",
+          "name_fa": "دادستانی کل",
+          "name_en": "Public Prosecutor's Office",
+          "role": "یکی از مراکز اثرگذار در منازعات حقوقی و سیاسی پیرامون دولت و جنبش بذر.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Bernardo Arévalo",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Seed Movement (Movimiento Semilla; legal status suspended/cancelled, elected representatives sit as independents)",
+        "supporting_coalitions": [
+          "Issue-based reformist alliances; no stable majority"
+        ],
+        "parliamentary_context": "انتخابات ۲۰۲۳: Vamos ۳۹، UNE ۲۸ و Semilla ۲۳ کرسی اولیه کسب کردند. در ترکیب گروه‌های پارلمانی گزارش‌شده ۱۰ نوامبر ۲۰۲۶، Independientes ۳۸، Vamos ۳۸، UNE ۲۲ و Cabal ۱۷ بزرگ‌ترین گروه‌ها هستند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "judicial_independence",
+          "indigenous_rights",
+          "public_security",
+          "economic_development",
+          "institutional_conflict"
+        ],
+        "rule": "نتایج انتخابات ۲۰۲۳ را از ترکیب فراکسیون‌های متغیر در ۲۰۲۶ جدا نگه دار؛ نمایندگان Semilla به‌عنوان مستقل ثبت می‌شوند و وضعیت حقوقی حزب همچنان مناقشه‌آمیز است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات کنگره گواتمالا ۲۰۲۳",
+            "url": "https://data.ipu.org/parliament/GT/GT-LC01/election/GT-LC01-E20230625/",
+            "date": "2023-06-25"
+          },
+          {
+            "name": "Freedom House – Freedom in the World 2025: Guatemala",
+            "url": "https://www.ecoi.net/en/document/2123531.html",
+            "date": "2025"
+          },
+          {
+            "name": "Sufragio – ترکیب گروه‌های پارلمانی گواتمالا، نوامبر ۲۰۲۶",
+            "url": "https://elect.us.org/gt/",
+            "date": "2026-11-10"
+          }
+        ],
+        "notes": "اطلاعات جاری گروه‌های پارلمانی بر اساس ترکیب گزارش‌شده در ۱۰ نوامبر ۲۰۲۶ است و ممکن است با تغییر عضویت نمایندگان جابه‌جا شود. وضعیت حقوقی Semilla و استقلال نمایندگان آن باید از وضعیت سیاسی رئیس‌جمهور منتخب تفکیک شود."
       },
       "parliamentary_groups": []
     },
     "HND": {
       "country_name_fa": "هندوراس",
       "country_name_en": "Honduras",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ نصری آسفورا از ۲۷ ژانویه ۲۰۲۶ رئیس‌جمهور است. کنگره ملی ۱۲۸ کرسی دارد و میان سه حزب اصلی تقسیم شده است.",
+      "parties": [
+        {
+          "id": "hnd_pn",
+          "name_fa": "حزب ملی هندوراس",
+          "name_en": "National Party of Honduras (PNH)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور آسفورا و بزرگ‌ترین فراکسیون با ۴۹ کرسی.",
+          "ideological_profile": "محافظه‌کاری، راست میانه و بازارگرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_pl",
+          "name_fa": "حزب لیبرال هندوراس",
+          "name_en": "Liberal Party of Honduras (PLH)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی با ۴۱ کرسی کنگره.",
+          "ideological_profile": "لیبرالیسم، میانه‌گرایی و سنت لیبرال",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_libre",
+          "name_fa": "حزب آزادی و بازسازی",
+          "name_en": "Liberty and Refoundation Party (LIBRE)",
+          "entity_type": "party",
+          "political_role": "حزب دولت پیشین و اپوزیسیون با ۳۵ کرسی.",
+          "ideological_profile": "چپ، ترقی‌خواهی و اصلاحات اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_pinu",
+          "name_fa": "حزب نوآوری و وحدت",
+          "name_en": "Innovation and Unity Party (PINU)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با دو کرسی کنگره.",
+          "ideological_profile": "میانه‌چپ و اصلاح‌طلبی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_dc",
+          "name_fa": "حزب دموکرات مسیحی هندوراس",
+          "name_en": "Christian Democratic Party of Honduras (DC)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک کرسی کنگره.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "hnd_pn_government",
+          "name_fa": "جریان دولت‌محور حزب ملی",
+          "name_en": "National Party governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان پیرامون ریاست‌جمهوری آسفورا و رهبری اجرایی حزب ملی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "hnd_libre_opposition",
+          "name_fa": "جریان‌های درون LIBRE پس از دولت کاسترو",
+          "name_en": "LIBRE post-government currents",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "طیف‌های مختلف حزب پس از پایان دولت زیومارا کاسترو؛ حزب از نظر ایدئولوژیک چپ و ائتلافی باقی مانده است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "hnd_pl_liberal",
+          "name_fa": "جریان‌های سنتی حزب لیبرال",
+          "name_en": "Traditional Liberal Party currents",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان‌های میانه‌رو و لیبرال در حزب؛ نباید با ائتلاف مستقل پارلمانی یکی دانسته شوند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "hnd_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "نصری آسفورا رئیس قوه مجریه و دولت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_congress",
+          "name_fa": "کنگره ملی",
+          "name_en": "National Congress",
+          "role": "PNH با ۴۹، PLH با ۴۱، LIBRE با ۳۵، PINU با دو و DC با یک کرسی؛ هیچ حزب اکثریت مستقل ندارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_electoral",
+          "name_fa": "نهادهای انتخاباتی",
+          "name_en": "Electoral authorities (CNE/TJE)",
+          "role": "نهادهای انتخاباتی در تعیین نتایج و مدیریت منازعات انتخاباتی نقش محوری دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "hnd_armed",
+          "name_fa": "نیروهای مسلح",
+          "name_en": "Armed Forces",
+          "role": "نهاد مهم دولتی با نقش قانونی در امنیت و پشتیبانی از فرایندهای انتخاباتی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Nasry Juan Asfura Zablah",
+        "government_type": "presidential multiparty republic",
+        "president_party": "National Party of Honduras (PNH)",
+        "supporting_coalitions": [
+          "No formal majority coalition established"
+        ],
+        "parliamentary_context": "نتایج انتخابات عمومی ۳۰ نوامبر ۲۰۲۵: PNH ۴۹، PLH ۴۱، LIBRE ۳۵، PINU دو و DC یک کرسی از ۱۲۸ کرسی؛ آسفورا از ۲۷ ژانویه ۲۰۲۶ دوره خود را آغاز کرد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "security",
+          "employment",
+          "economic_policy",
+          "social_policy",
+          "institutional_reform"
+        ],
+        "rule": "دولت آسفورا از حزب ملی است اما در کنگره اکثریت مستقل ندارد؛ برای تصمیمات مهم به توافق میان‌حزبی، به‌ویژه با حزب لیبرال، نیاز خواهد داشت."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات کنگره ملی هندوراس ۲۰۲۵",
+            "url": "https://data.ipu.org/parliament/HN/HN-LC01/election/HN-LC01-E20251130/",
+            "date": "2025-11-30"
+          },
+          {
+            "name": "EU Election Observation Mission – Honduras General Elections 2025 Final Report",
+            "url": "https://www.eeas.europa.eu/sites/default/files/2026/documents/EU%20EOM%20HND%202025%20FR%20-%20EN.pdf",
+            "date": "2026"
+          },
+          {
+            "name": "La Gaceta – گواهی رسمی انتخاب رئیس‌جمهور، قطعنامه 3014-2025",
+            "url": "https://www.tsc.gob.hn/web/leyes/Certificacion-3014-2025.pdf",
+            "date": "2026-01-27"
+          }
+        ],
+        "notes": "نتایج رسمی ریاست‌جمهوری در ۲۴ دسامبر ۲۰۲۵ اعلام شد و نتایج کنگره در ۳۰ دسامبر ۲۰۲۵؛ دولت جدید از ۲۷ ژانویه ۲۰۲۶ آغاز به کار کرد."
       },
       "parliamentary_groups": []
     },
     "SLV": {
       "country_name_fa": "السالوادور",
       "country_name_en": "El Salvador",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی؛ نایب بوکله از ۱ ژوئن ۲۰۲۴ دوره دوم ریاست‌جمهوری خود را آغاز کرده است. حزب او، ایده‌های نو، ۵۴ کرسی از ۶۰ کرسی مجلس قانون‌گذاری را در اختیار دارد.",
+      "parties": [
+        {
+          "id": "slv_ni",
+          "name_fa": "ایده‌های نو",
+          "name_en": "New Ideas (Nuevas Ideas)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور بوکله و اکثریت قاطع مجلس؛ ۵۴ کرسی از ۶۰ کرسی.",
+          "ideological_profile": "پوپولیسم، شخص‌محوری و سیاست امنیت‌محور",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_arena",
+          "name_fa": "اتحاد جمهوری‌خواه ملی‌گرا",
+          "name_en": "Nationalist Republican Alliance (ARENA)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون راست؛ دو کرسی مجلس.",
+          "ideological_profile": "محافظه‌کاری، راست میانه و بازارگرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_fmln",
+          "name_fa": "جبهه آزادی‌بخش ملی فارابوندو مارتی",
+          "name_en": "Farabundo Martí National Liberation Front (FMLN)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی چپ و اپوزیسیون؛ در انتخابات مجلس ۲۰۲۴ کرسی نگرفت.",
+          "ideological_profile": "چپ، سوسیالیسم دموکراتیک و جنبش کارگری",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_pcn",
+          "name_fa": "حزب ائتلاف ملی",
+          "name_en": "National Coalition Party (PCN)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای دو کرسی مجلس.",
+          "ideological_profile": "محافظه‌کاری و ملی‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_pdc",
+          "name_fa": "حزب دموکرات مسیحی",
+          "name_en": "Christian Democratic Party (PDC)",
+          "entity_type": "party",
+          "political_role": "حزب دارای یک کرسی مجلس.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_vamos",
+          "name_fa": "واموس",
+          "name_en": "Vamos",
+          "entity_type": "party",
+          "political_role": "حزب دارای یک کرسی مجلس؛ نیروی کوچک اپوزیسیون.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "slv_ni_bukele",
+          "name_fa": "جریان سیاسی بوکله",
+          "name_en": "Bukele-aligned political current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "هویت سیاسی و راهبردی حزب ایده‌های نو به‌شدت حول رهبری و محبوبیت نایب بوکله متمرکز است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "slv_arena_opposition",
+          "name_fa": "جریان‌های اپوزیسیون سنتی راست",
+          "name_en": "Traditional right opposition currents",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ARENA و احزاب کوچک راست‌گرا در برابر اکثریت حاکم حضور محدود پارلمانی دارند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "slv_fmln_left",
+          "name_fa": "جریان چپ تاریخی",
+          "name_en": "Historical left current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "FMLN همچنان نیروی تاریخی چپ و اپوزیسیون است، اما در مجلس منتخب ۲۰۲۴ نماینده ندارد."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "slv_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "نایب بوکله مرکز اصلی تصمیم‌گیری اجرایی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_assembly",
+          "name_fa": "مجلس قانون‌گذاری",
+          "name_en": "Legislative Assembly",
+          "role": "ایده‌های نو ۵۴ کرسی از ۶۰ کرسی را در اختیار دارد؛ احزاب کوچک مجموعاً شش کرسی دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_security",
+          "name_fa": "نهادهای امنیتی و انتظامی",
+          "name_en": "Security and law-enforcement institutions",
+          "role": "سیاست امنیت عمومی و وضعیت اضطراری نقش برجسته‌ای در دستور کار دولت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "slv_judiciary",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "دادگاه‌ها و نهادهای قضایی در مناقشات قانون اساسی و اختیارات اجرایی نقش دارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Nayib Bukele",
+        "government_type": "presidential republic",
+        "president_party": "New Ideas (Nuevas Ideas)",
+        "supporting_coalitions": [
+          "New Ideas parliamentary majority"
+        ],
+        "parliamentary_context": "انتخابات مجلس ۴ فوریه ۲۰۲۴: Nuevas Ideas ۵۴، PCN دو، ARENA دو، PDC یک و Vamos یک کرسی از ۶۰ کرسی."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_security",
+          "state_of_emergency",
+          "civil_liberties",
+          "economy",
+          "digital_governance",
+          "institutional_checks"
+        ],
+        "rule": "اکثریت بزرگ حزب ایده‌های نو و تمرکز قدرت اجرایی باید در شبیه‌سازی از رقابت حزبی معمول متمایز شود؛ FMLN نیروی تاریخی مهمی است اما در مجلس فعلی کرسی ندارد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس قانون‌گذاری السالوادور ۲۰۲۴",
+            "url": "https://data.ipu.org/parliament/SV/SV-LC01/election/SV-LC01-E20240204/",
+            "date": "2024-02-04"
+          },
+          {
+            "name": "Sufragio – ثبت احزاب و کرسی‌های السالوادور",
+            "url": "https://elect.us.org/sv/parties/",
+            "date": "2026-11-10"
+          }
+        ],
+        "notes": "ترکیب کرسی‌ها بر اساس انتخابات ۲۰۲۴ است؛ اطلاعات وضعیت ثبت احزاب به‌روزرسانی ۱۰ نوامبر ۲۰۲۶ دارد. سیاست امنیتی دولت و وضعیت اضطراری از عوامل اصلی رفتار سیاسی‌اند."
       },
       "parliamentary_groups": []
     },
     "NIC": {
       "country_name_fa": "نیکاراگوئه",
       "country_name_en": "Nicaragua",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "authoritarian_dominant_party_presidential_co_presidency",
+      "government_model": "حکومت اقتدارگرای متمرکز بر خانواده اورتگا-موریو؛ دانیل اورتگا و روساریو موریو از ۲۰۲۵ به‌عنوان هم‌رئیس‌جمهور فعالیت می‌کنند. جبهه آزادی‌بخش ملی ساندینیستا تنها نیروی سیاسی مسلط و سازمان‌یافته در داخل کشور است و نظام رقابت حزبی مؤثر وجود ندارد.",
+      "parties": [
+        {
+          "id": "nic_fsln",
+          "name_fa": "جبهه آزادی‌بخش ملی ساندینیستا",
+          "name_en": "Sandinista National Liberation Front (FSLN)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و محور ساختار سیاسی؛ در عمل با دستگاه دولت و رهبری خانواده اورتگا-موریو درهم‌تنیده است.",
+          "ideological_profile": "ساندینیسمو رسمی، ملی‌گرایی و اقتدارگرایی شخص‌محور",
+          "legal_status": "dominant_ruling_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_unamos",
+          "name_fa": "اتحاد دموکراتیک نوساز",
+          "name_en": "UNAMOS (Unión Democrática Renovadora)",
+          "entity_type": "party",
+          "political_role": "گروه مخالف حکومت که رهبران و فعالان آن عمدتاً در تبعیدند و حضور سازمان‌یافته مؤثری در داخل کشور ندارد.",
+          "ideological_profile": "اپوزیسیون دموکراتیک و اصلاح‌طلب",
+          "legal_status": "exile_or_inactive",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_unab",
+          "name_fa": "اتحاد ملی آبی و سفید",
+          "name_en": "Blue and White National Unity (UNAB)",
+          "entity_type": "party",
+          "political_role": "ائتلاف مخالفان و کنشگران تبعیدی؛ نیروی انتخاباتی فعال در داخل کشور محسوب نمی‌شود.",
+          "ideological_profile": "اپوزیسیون مدنی و دموکراسی‌خواه",
+          "legal_status": "exile_or_inactive",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_cxl",
+          "name_fa": "شهروندان برای آزادی",
+          "name_en": "Citizens for Liberty (CxL)",
+          "entity_type": "party",
+          "political_role": "نیروی مخالفی که پیش از انتخابات ۲۰۲۱ فعالیت داشت؛ وضعیت قانونی و سازمانی آن از سوی حکومت محدود/لغو شده است.",
+          "ideological_profile": "لیبرالیسم و اپوزیسیون ضدحکومتی",
+          "legal_status": "cancelled_or_inactive",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "nic_ortega_murillo",
+          "name_fa": "هسته رهبری اورتگا–موریو",
+          "name_en": "Ortega–Murillo leadership circle",
+          "entity_type": "power_bloc",
+          "policy_positions": {
+            "domestic": "تصمیم‌گیری سیاسی حول دانیل اورتگا، روساریو موریو و حلقه نزدیک خانوادگی و وفاداران آنان متمرکز است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nic_fsln_apparatus",
+          "name_fa": "دستگاه حزبی و حکومتی FSLN",
+          "name_en": "FSLN party-state apparatus",
+          "entity_type": "power_bloc",
+          "policy_positions": {
+            "domestic": "ساختار حزبی با نهادهای دولتی، شبکه‌های محلی و توزیع منابع و وفاداری سیاسی درهم‌تنیده است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nic_exile_opposition",
+          "name_fa": "اپوزیسیون در تبعید",
+          "name_en": "Opposition in exile",
+          "entity_type": "opposition_coalition",
+          "policy_positions": {
+            "domestic": "گروه‌هایی مانند UNAMOS، UNAB و CxL عمدتاً خارج از کشور فعالیت می‌کنند و حضور سازمان‌یافته انتخاباتی در داخل ندارند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nic_copres",
+          "name_fa": "هم‌رئیس‌جمهوران",
+          "name_en": "Co-Presidency",
+          "role": "دانیل اورتگا و روساریو موریو در ساختار هم‌رئیس‌جمهوری، رأس قوه مجریه‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_fsln_state",
+          "name_fa": "حزب حاکم و دستگاه دولت",
+          "name_en": "FSLN and state apparatus",
+          "role": "FSLN تنها نیروی سیاسی مسلط و دارای سازمان سراسری در داخل کشور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_army_police",
+          "name_fa": "ارتش و پلیس",
+          "name_en": "Army and National Police",
+          "role": "نهادهای امنیتی و انتظامی از مراکز مهم قدرت در ساختار سیاسی‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "nic_electoral",
+          "name_fa": "شورای عالی انتخابات و قوه قضائیه",
+          "name_en": "Supreme Electoral Council and Judiciary",
+          "role": "نهادهای رسمی تحت نفوذ ساختار حاکم؛ در تعیین وضعیت حقوقی احزاب و امکان رقابت سیاسی نقش دارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "co_presidents": [
+          "Daniel Ortega",
+          "Rosario Murillo"
+        ],
+        "government_type": "authoritarian co-presidency and dominant-party system",
+        "ruling_party": "Sandinista National Liberation Front (FSLN)",
+        "supporting_coalitions": [
+          "FSLN-led state apparatus"
+        ],
+        "parliamentary_context": "رقابت حزبی مؤثر وجود ندارد. گروه‌های مخالف عمدتاً در تبعیدند و در داخل کشور سازمان‌یافتگی انتخاباتی مستقل ندارند. اصلاحیه قانون اساسی مصوب قرائت نخست در سپتامبر ۲۰۲۶ برای محدودسازی بیشتر رقابت مخالفان و افزایش دوره‌ها، نیازمند تصویب نهایی بعدی است."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "political_repression",
+          "civil_liberties",
+          "foreign_relations",
+          "state_control",
+          "security_apparatus",
+          "constitutional_changes"
+        ],
+        "rule": "نیکاراگوئه نباید به‌صورت دموکراسی چندحزبی شبیه‌سازی شود. گروه‌های مخالف در تبعید را نباید به‌عنوان احزاب فعال دارای رقابت قانونی در داخل ثبت کرد؛ اصلاحات قانون اساسی سپتامبر ۲۰۲۶ هنوز در مرحله تصویب نهایی قرار نگرفته بود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "BTI 2026 – Nicaragua Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/NIC",
+            "date": "2026"
+          },
+          {
+            "name": "La Gaceta – سند رسمی هم‌رئیس‌جمهوران",
+            "url": "https://www.pgr.gob.ni/PDF/2026/GACETA/GACETA_14_05_2026.pdf",
+            "date": "2026-05-14"
+          },
+          {
+            "name": "Reuters – اصلاحات قانون اساسی و محدودسازی اپوزیسیون، قرائت نخست",
+            "url": "https://www.reuters.com/world/americas/nicaraguan-congress-passes-ortega-backed-reform-excluding-opposition-elections-2026-09-02/",
+            "date": "2026-09-02"
+          },
+          {
+            "name": "ICNL – Civic Freedom Monitor: Nicaragua",
+            "url": "https://www.icnl.org/resources/civic-freedom-monitor/nicaragua",
+            "date": "2026-06-04"
+          }
+        ],
+        "notes": "اصلاحیه قانون اساسی سپتامبر ۲۰۲۶ در قرائت نخست تصویب شده و برای لازم‌الاجرا شدن به تصویب دوم نیاز دارد؛ آن را قانون قطعی تلقی نکن. گزارش BTI می‌گوید نظام حزبی کارکردی وجود ندارد و اپوزیسیون عمدتاً در تبعید است."
       },
       "parliamentary_groups": []
     },
