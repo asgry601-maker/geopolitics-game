@@ -1,0 +1,3151 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_reference_date": "2026-11-05",
+  "generated_at": "2026-11-27",
+  "coverage": {
+    "expected_countries": 174,
+    "registered_countries": 174,
+    "researched_countries": 0,
+    "pending_countries": 174
+  },
+  "notes": [
+    "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.",
+    "احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.",
+    "درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.",
+    "برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند."
+  ],
+  "countries": {
+    "USA": {
+      "country_name_fa": "آمریکا",
+      "country_name_en": "United States of America",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CAN": {
+      "country_name_fa": "کانادا",
+      "country_name_en": "Canada",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MEX": {
+      "country_name_fa": "مکزیک",
+      "country_name_en": "Mexico",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "IRN": {
+      "country_name_fa": "ایران",
+      "country_name_en": "Iran",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "IRQ": {
+      "country_name_fa": "عراق",
+      "country_name_en": "Iraq",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SYR": {
+      "country_name_fa": "سوریه",
+      "country_name_en": "Syria",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LBN": {
+      "country_name_fa": "لبنان",
+      "country_name_en": "Lebanon",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "JOR": {
+      "country_name_fa": "اردن",
+      "country_name_en": "Jordan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ISR": {
+      "country_name_fa": "اسرائیل",
+      "country_name_en": "Israel",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PSE": {
+      "country_name_fa": "فلسطین",
+      "country_name_en": "Palestine",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SAU": {
+      "country_name_fa": "عربستان",
+      "country_name_en": "Saudi Arabia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ARE": {
+      "country_name_fa": "امارات",
+      "country_name_en": "United Arab Emirates",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "QAT": {
+      "country_name_fa": "قطر",
+      "country_name_en": "Qatar",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KWT": {
+      "country_name_fa": "کویت",
+      "country_name_en": "Kuwait",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BHR": {
+      "country_name_fa": "بحرین",
+      "country_name_en": "Bahrain",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "OMN": {
+      "country_name_fa": "عمان",
+      "country_name_en": "Oman",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "YEM": {
+      "country_name_fa": "یمن",
+      "country_name_en": "Yemen",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TUR": {
+      "country_name_fa": "ترکیه",
+      "country_name_en": "Turkey",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "EGY": {
+      "country_name_fa": "مصر",
+      "country_name_en": "Egypt",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LBY": {
+      "country_name_fa": "لیبی",
+      "country_name_en": "Libya",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TUN": {
+      "country_name_fa": "تونس",
+      "country_name_en": "Tunisia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "DZA": {
+      "country_name_fa": "الجزایر",
+      "country_name_en": "Algeria",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MAR": {
+      "country_name_fa": "مراکش",
+      "country_name_en": "Morocco",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "RUS": {
+      "country_name_fa": "روسیه",
+      "country_name_en": "Russia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "DEU": {
+      "country_name_fa": "آلمان",
+      "country_name_en": "Germany",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "FRA": {
+      "country_name_fa": "فرانسه",
+      "country_name_en": "France",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GBR": {
+      "country_name_fa": "بریتانیا",
+      "country_name_en": "United Kingdom",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ITA": {
+      "country_name_fa": "ایتالیا",
+      "country_name_en": "Italy",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ESP": {
+      "country_name_fa": "اسپانیا",
+      "country_name_en": "Spain",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PRT": {
+      "country_name_fa": "پرتغال",
+      "country_name_en": "Portugal",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NLD": {
+      "country_name_fa": "هلند",
+      "country_name_en": "Netherlands",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BEL": {
+      "country_name_fa": "بلژیک",
+      "country_name_en": "Belgium",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CHE": {
+      "country_name_fa": "سوئیس",
+      "country_name_en": "Switzerland",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "AUT": {
+      "country_name_fa": "اتریش",
+      "country_name_en": "Austria",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SWE": {
+      "country_name_fa": "سوئد",
+      "country_name_en": "Sweden",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NOR": {
+      "country_name_fa": "نروژ",
+      "country_name_en": "Norway",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "DNK": {
+      "country_name_fa": "دانمارک",
+      "country_name_en": "Denmark",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "FIN": {
+      "country_name_fa": "فنلاند",
+      "country_name_en": "Finland",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ISL": {
+      "country_name_fa": "ایسلند",
+      "country_name_en": "Iceland",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "IRL": {
+      "country_name_fa": "ایرلند",
+      "country_name_en": "Ireland",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "POL": {
+      "country_name_fa": "لهستان",
+      "country_name_en": "Poland",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CZE": {
+      "country_name_fa": "چک",
+      "country_name_en": "Czechia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SVK": {
+      "country_name_fa": "اسلواکی",
+      "country_name_en": "Slovakia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "HUN": {
+      "country_name_fa": "مجارستان",
+      "country_name_en": "Hungary",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ROU": {
+      "country_name_fa": "رومانی",
+      "country_name_en": "Romania",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BGR": {
+      "country_name_fa": "بلغارستان",
+      "country_name_en": "Bulgaria",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GRC": {
+      "country_name_fa": "یونان",
+      "country_name_en": "Greece",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SRB": {
+      "country_name_fa": "صربستان",
+      "country_name_en": "Republic of Serbia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "HRV": {
+      "country_name_fa": "کرواسی",
+      "country_name_en": "Croatia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BIH": {
+      "country_name_fa": "بوسنی",
+      "country_name_en": "Bosnia and Herz.",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ALB": {
+      "country_name_fa": "آلبانی",
+      "country_name_en": "Albania",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MKD": {
+      "country_name_fa": "مقدونیه شمالی",
+      "country_name_en": "North Macedonia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SVN": {
+      "country_name_fa": "اسلوونی",
+      "country_name_en": "Slovenia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MNE": {
+      "country_name_fa": "مونته‌نگرو",
+      "country_name_en": "Montenegro",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "UKR": {
+      "country_name_fa": "اوکراین",
+      "country_name_en": "Ukraine",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BLR": {
+      "country_name_fa": "بلاروس",
+      "country_name_en": "Belarus",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MDA": {
+      "country_name_fa": "مولداوی",
+      "country_name_en": "Moldova",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LVA": {
+      "country_name_fa": "لتونی",
+      "country_name_en": "Latvia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LTU": {
+      "country_name_fa": "لیتوانی",
+      "country_name_en": "Lithuania",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "EST": {
+      "country_name_fa": "استونی",
+      "country_name_en": "Estonia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LUX": {
+      "country_name_fa": "لوکزامبورگ",
+      "country_name_en": "Luxembourg",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CYP": {
+      "country_name_fa": "قبرس",
+      "country_name_en": "Cyprus",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MLT": {
+      "country_name_fa": "مالت",
+      "country_name_en": "Malta",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CHN": {
+      "country_name_fa": "چین",
+      "country_name_en": "China",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "JPN": {
+      "country_name_fa": "ژاپن",
+      "country_name_en": "Japan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KOR": {
+      "country_name_fa": "کره جنوبی",
+      "country_name_en": "South Korea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PRK": {
+      "country_name_fa": "کره شمالی",
+      "country_name_en": "North Korea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TWN": {
+      "country_name_fa": "تایوان",
+      "country_name_en": "Taiwan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MNG": {
+      "country_name_fa": "مغولستان",
+      "country_name_en": "Mongolia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "IND": {
+      "country_name_fa": "هند",
+      "country_name_en": "India",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PAK": {
+      "country_name_fa": "پاکستان",
+      "country_name_en": "Pakistan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BGD": {
+      "country_name_fa": "بنگلادش",
+      "country_name_en": "Bangladesh",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LKA": {
+      "country_name_fa": "سری‌لانکا",
+      "country_name_en": "Sri Lanka",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NPL": {
+      "country_name_fa": "نپال",
+      "country_name_en": "Nepal",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BTN": {
+      "country_name_fa": "بوتان",
+      "country_name_en": "Bhutan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MDV": {
+      "country_name_fa": "مالدیو",
+      "country_name_en": "Maldives",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "AFG": {
+      "country_name_fa": "افغانستان",
+      "country_name_en": "Afghanistan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "IDN": {
+      "country_name_fa": "اندونزی",
+      "country_name_en": "Indonesia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MYS": {
+      "country_name_fa": "مالزی",
+      "country_name_en": "Malaysia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SGP": {
+      "country_name_fa": "سنگاپور",
+      "country_name_en": "Singapore",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "THA": {
+      "country_name_fa": "تایلند",
+      "country_name_en": "Thailand",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "VNM": {
+      "country_name_fa": "ویتنام",
+      "country_name_en": "Vietnam",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PHL": {
+      "country_name_fa": "فیلیپین",
+      "country_name_en": "Philippines",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MMR": {
+      "country_name_fa": "میانمار",
+      "country_name_en": "Myanmar",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KHM": {
+      "country_name_fa": "کامبوج",
+      "country_name_en": "Cambodia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LAO": {
+      "country_name_fa": "لائوس",
+      "country_name_en": "Laos",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BRN": {
+      "country_name_fa": "برونئی",
+      "country_name_en": "Brunei",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TLS": {
+      "country_name_fa": "تیمور شرقی",
+      "country_name_en": "Timor-Leste",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NGA": {
+      "country_name_fa": "نیجریه",
+      "country_name_en": "Nigeria",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ZAF": {
+      "country_name_fa": "آفریقای جنوبی",
+      "country_name_en": "South Africa",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ETH": {
+      "country_name_fa": "اتیوپی",
+      "country_name_en": "Ethiopia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KEN": {
+      "country_name_fa": "کنیا",
+      "country_name_en": "Kenya",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GHA": {
+      "country_name_fa": "غنا",
+      "country_name_en": "Ghana",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SEN": {
+      "country_name_fa": "سنگال",
+      "country_name_en": "Senegal",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CIV": {
+      "country_name_fa": "ساحل عاج",
+      "country_name_en": "Ivory Coast",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CMR": {
+      "country_name_fa": "کامرون",
+      "country_name_en": "Cameroon",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "UGA": {
+      "country_name_fa": "اوگاندا",
+      "country_name_en": "Uganda",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TZA": {
+      "country_name_fa": "تانزانیا",
+      "country_name_en": "United Republic of Tanzania",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "RWA": {
+      "country_name_fa": "رواندا",
+      "country_name_en": "Rwanda",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ZWE": {
+      "country_name_fa": "زیمبابوه",
+      "country_name_en": "Zimbabwe",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ZMB": {
+      "country_name_fa": "زامبیا",
+      "country_name_en": "Zambia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MOZ": {
+      "country_name_fa": "موزامبیک",
+      "country_name_en": "Mozambique",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "AGO": {
+      "country_name_fa": "آنگولا",
+      "country_name_en": "Angola",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NAM": {
+      "country_name_fa": "نامیبیا",
+      "country_name_en": "Namibia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BWA": {
+      "country_name_fa": "بوتسوانا",
+      "country_name_en": "Botswana",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SDN": {
+      "country_name_fa": "سودان",
+      "country_name_en": "Sudan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SSD": {
+      "country_name_fa": "سودان جنوبی",
+      "country_name_en": "South Sudan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TCD": {
+      "country_name_fa": "چاد",
+      "country_name_en": "Chad",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NER": {
+      "country_name_fa": "نیجر",
+      "country_name_en": "Niger",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MLI": {
+      "country_name_fa": "مالی",
+      "country_name_en": "Mali",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MRT": {
+      "country_name_fa": "موریتانی",
+      "country_name_en": "Mauritania",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BFA": {
+      "country_name_fa": "بورکینافاسو",
+      "country_name_en": "Burkina Faso",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GIN": {
+      "country_name_fa": "گینه",
+      "country_name_en": "Guinea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SLE": {
+      "country_name_fa": "سیرالئون",
+      "country_name_en": "Sierra Leone",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LBR": {
+      "country_name_fa": "لیبریا",
+      "country_name_en": "Liberia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TGO": {
+      "country_name_fa": "توگو",
+      "country_name_en": "Togo",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BEN": {
+      "country_name_fa": "بنین",
+      "country_name_en": "Benin",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GAB": {
+      "country_name_fa": "گابن",
+      "country_name_en": "Gabon",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "COG": {
+      "country_name_fa": "کنگو",
+      "country_name_en": "Republic of the Congo",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "COD": {
+      "country_name_fa": "کنگو دموکراتیک",
+      "country_name_en": "Dem. Rep. Congo",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CAF": {
+      "country_name_fa": "آفریقای مرکزی",
+      "country_name_en": "Central African Republic",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ERI": {
+      "country_name_fa": "اریتره",
+      "country_name_en": "Eritrea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "DJI": {
+      "country_name_fa": "جیبوتی",
+      "country_name_en": "Djibouti",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SOM": {
+      "country_name_fa": "سومالی",
+      "country_name_en": "Somalia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MDG": {
+      "country_name_fa": "ماداگاسکار",
+      "country_name_en": "Madagascar",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "MUS": {
+      "country_name_fa": "موریس",
+      "country_name_en": "Mauritius",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "LSO": {
+      "country_name_fa": "لسوتو",
+      "country_name_en": "Lesotho",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SWZ": {
+      "country_name_fa": "اسواتینی",
+      "country_name_en": "eSwatini",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GMB": {
+      "country_name_fa": "گامبیا",
+      "country_name_en": "Gambia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GNB": {
+      "country_name_fa": "گینه بیسائو",
+      "country_name_en": "Guinea-Bissau",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GNQ": {
+      "country_name_fa": "گینه استوایی",
+      "country_name_en": "Equatorial Guinea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CPV": {
+      "country_name_fa": "کیپ‌ورد",
+      "country_name_en": "Cape Verde",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BRA": {
+      "country_name_fa": "برزیل",
+      "country_name_en": "Brazil",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ARG": {
+      "country_name_fa": "آرژانتین",
+      "country_name_en": "Argentina",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CHL": {
+      "country_name_fa": "شیلی",
+      "country_name_en": "Chile",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "COL": {
+      "country_name_fa": "کلمبیا",
+      "country_name_en": "Colombia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PER": {
+      "country_name_fa": "پرو",
+      "country_name_en": "Peru",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "VEN": {
+      "country_name_fa": "ونزوئلا",
+      "country_name_en": "Venezuela",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ECU": {
+      "country_name_fa": "اکوادور",
+      "country_name_en": "Ecuador",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BOL": {
+      "country_name_fa": "بولیوی",
+      "country_name_en": "Bolivia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PRY": {
+      "country_name_fa": "پاراگوئه",
+      "country_name_en": "Paraguay",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "URY": {
+      "country_name_fa": "اوروگوئه",
+      "country_name_en": "Uruguay",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GUY": {
+      "country_name_fa": "گویان",
+      "country_name_en": "Guyana",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SUR": {
+      "country_name_fa": "سورینام",
+      "country_name_en": "Suriname",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CUB": {
+      "country_name_fa": "کوبا",
+      "country_name_en": "Cuba",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "HTI": {
+      "country_name_fa": "هائیتی",
+      "country_name_en": "Haiti",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "DOM": {
+      "country_name_fa": "دومینیکان",
+      "country_name_en": "Dominican Republic",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "JAM": {
+      "country_name_fa": "جامائیکا",
+      "country_name_en": "Jamaica",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TTO": {
+      "country_name_fa": "ترینیداد و توباگو",
+      "country_name_en": "Trinidad and Tobago",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "CRI": {
+      "country_name_fa": "کاستاریکا",
+      "country_name_en": "Costa Rica",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PAN": {
+      "country_name_fa": "پاناما",
+      "country_name_en": "Panama",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GTM": {
+      "country_name_fa": "گواتمالا",
+      "country_name_en": "Guatemala",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "HND": {
+      "country_name_fa": "هندوراس",
+      "country_name_en": "Honduras",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SLV": {
+      "country_name_fa": "السالوادور",
+      "country_name_en": "El Salvador",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NIC": {
+      "country_name_fa": "نیکاراگوئه",
+      "country_name_en": "Nicaragua",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BLZ": {
+      "country_name_fa": "بلیز",
+      "country_name_en": "Belize",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BHS": {
+      "country_name_fa": "باهاماس",
+      "country_name_en": "Bahamas",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "BRB": {
+      "country_name_fa": "باربادوس",
+      "country_name_en": "Barbados",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "AUS": {
+      "country_name_fa": "استرالیا",
+      "country_name_en": "Australia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "NZL": {
+      "country_name_fa": "نیوزیلند",
+      "country_name_en": "New Zealand",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "PNG": {
+      "country_name_fa": "پاپوآ گینه نو",
+      "country_name_en": "Papua New Guinea",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "FJI": {
+      "country_name_fa": "فیجی",
+      "country_name_en": "Fiji",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "WSM": {
+      "country_name_fa": "ساموآ",
+      "country_name_en": "Samoa",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TON": {
+      "country_name_fa": "تونگا",
+      "country_name_en": "Tonga",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "VUT": {
+      "country_name_fa": "وانواتو",
+      "country_name_en": "Vanuatu",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "SLB": {
+      "country_name_fa": "جزایر سلیمان",
+      "country_name_en": "Solomon Islands",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KAZ": {
+      "country_name_fa": "قزاقستان",
+      "country_name_en": "Kazakhstan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "UZB": {
+      "country_name_fa": "ازبکستان",
+      "country_name_en": "Uzbekistan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TKM": {
+      "country_name_fa": "ترکمنستان",
+      "country_name_en": "Turkmenistan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "TJK": {
+      "country_name_fa": "تاجیکستان",
+      "country_name_en": "Tajikistan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "KGZ": {
+      "country_name_fa": "قرقیزستان",
+      "country_name_en": "Kyrgyzstan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "AZE": {
+      "country_name_fa": "آذربایجان",
+      "country_name_en": "Azerbaijan",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "ARM": {
+      "country_name_fa": "ارمنستان",
+      "country_name_en": "Armenia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    },
+    "GEO": {
+      "country_name_fa": "گرجستان",
+      "country_name_en": "Georgia",
+      "system_type": null,
+      "government_model": null,
+      "parties": [],
+      "factions": [],
+      "power_centers": [],
+      "current_government": null,
+      "political_behavior": {},
+      "research_status": "pending",
+      "data_quality": {
+        "confidence": "unverified",
+        "last_verified": null,
+        "sources": [],
+        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      }
+    }
+  }
+}
