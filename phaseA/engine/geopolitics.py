@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """بازی استراتژیک ژئوپلیتیک متنی — ثبت وضعیت در game_state.json"""
-import json, os, random, sys
+import json, os, random, sys, datetime
 
 
 STATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "game_state.json")
 
-START_YEAR = 2025
+START_YEAR = 2026
 FINAL_YEAR = 2040
-DAYS_PER_YEAR = 30   # هر سالِ بازی سی روز جلو می‌رود
+START_DATE = datetime.date(2026, 11, 5)
 INCOME_K = 0.15      # درآمد روزانه = اقتصاد × این ضریب
 
 
@@ -339,7 +339,7 @@ DEFAULT_REL = {
 
 HELP = """
 راهنمای سریع — «ژئوپلیتیک: رقابت قدرت‌ها»
-زمان: هر «پایان دور» = یک روز؛ هر ۳۰ روز = یک سالِ بازی.
+زمان: تقویم میلادی از ۵ نوامبر ۲۰۲۶؛ ساعت بازی با گام‌های ۵ یا ۲۴ ساعت جلو می‌رود.
 
 فرمان‌ها (در منوی تعاملی هم همان کارها با شماره‌ها انجام می‌شود):
   init <کشور>| reset <کشور>| list| status [کشور]| rank| help
@@ -367,6 +367,26 @@ HELP = """
 def load():
     with open(STATE, encoding="utf-8") as f:
         s = json.load(f)
+    # مهاجرت ذخیره‌های قدیمی به تقویم میلادی؛ روزهای سپری‌شده حفظ می‌شوند.
+    if not s.get("game_date"):
+        legacy_year = int(s.get("year", 2025))
+        legacy_day = int(s.get("day", 1))
+        elapsed = max(0, (legacy_year - 2025) * 30 + legacy_day - 1)
+        migrated = START_DATE + datetime.timedelta(days=elapsed)
+        s["game_date"] = migrated.isoformat()
+        s["elapsed_days"] = elapsed
+        s["hour"] = 0
+        s["minute"] = 0
+    try:
+        current_date = datetime.date.fromisoformat(s["game_date"])
+    except (TypeError, ValueError):
+        current_date = START_DATE
+        s["game_date"] = current_date.isoformat()
+    s["year"] = current_date.year
+    s["day"] = current_date.day
+    s.setdefault("hour", 0)
+    s.setdefault("minute", 0)
+    s.setdefault("elapsed_days", 0)
     # مهاجرت ذخیره‌های قدیمی به ساختار politics سراسری
     if "politics" not in s:
         p = s.get("player", "")
@@ -1077,9 +1097,10 @@ def init_game(player):
         allies=allies0, pacts=pacts0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         turn_events={},
-        log=["سال ۲۰۲۵: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
+        log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
-        day=1, iaea_heat=0, un_censures=0,
+        game_date=START_DATE.isoformat(), hour=0, minute=0, elapsed_days=0,
+        day=START_DATE.day, iaea_heat=0, un_censures=0,
     )
     state["arsenal"] = _default_arsenal(rel)
     for name, c in state["world"].items():
@@ -1875,7 +1896,7 @@ def end_turn(s):
         return
     W = s["world"]; P = s["player"]
     s.setdefault("day", 1)
-    day = s["day"]
+    day = int(s.get("elapsed_days", 0)) + 1
     log = []
 
     # ۱) درآمد روزانه
@@ -2125,11 +2146,14 @@ def end_turn(s):
 
     # ۸) شمارش روز و گزارش
     s["ap"] = "\u221e"
-    s["day"] += 1
-    year_report = s["day"] > DAYS_PER_YEAR
+    previous_year = s["year"]
+    next_date = datetime.date.fromisoformat(s["game_date"]) + datetime.timedelta(days=1)
+    s["game_date"] = next_date.isoformat()
+    s["year"] = next_date.year
+    s["day"] = next_date.day
+    s["elapsed_days"] = day
+    year_report = next_date.year != previous_year
     if year_report:
-        s["day"] = 1
-        s["year"] += 1
         s["turn"] += 1
 
         # نهادها در پایان سال
@@ -2176,7 +2200,7 @@ def end_turn(s):
     if year_report:
         print("📢 گزارش سال " + str(s["year"] - 1))
     else:
-        print(f"🌙 گزارش روز {s.get('day', 1) - 1} — ماه {s['turn']}")
+        print("🌙 گزارش روز " + s["game_date"])
     for line in log[-8:]:
         print("  • " + line)
     if pop_lines:
@@ -2236,10 +2260,32 @@ def check_victory(s):
 
 # ---------- status ----------
 
+def advance_time(s, minutes):
+    """Advance the shared game clock; run the daily engine exactly at midnight."""
+    minutes = int(minutes)
+    if minutes not in (300, 1440):
+        raise ValueError("فقط گام ۵ ساعت یا ۲۴ ساعت مجاز است.")
+    remaining = minutes
+    while remaining > 0 and not s.get("over", False):
+        current = int(s.get("hour", 0)) * 60 + int(s.get("minute", 0))
+        step = min(remaining, 1440 - current)
+        current += step
+        remaining -= step
+        if current >= 1440:
+            s["hour"], s["minute"] = 0, 0
+            end_turn(s)
+        else:
+            s["hour"], s["minute"] = divmod(current, 60)
+    save(s)
+    return s
+
+
 def show_status(s):
     W = s["world"]; P = s["player"]; me = W[P]
     print("═" * 56)
-    print(f"  سال {s['year']} | روز {s.get('day', 1)} از {DAYS_PER_YEAR} | فرصت امروز: ∞ (نامحدود)")
+    print("  تاریخ " + s.get("game_date", START_DATE.isoformat()) +
+          " | ساعت %02d:%02d | فرصت امروز: ∞ (نامحدود)" %
+          (int(s.get("hour", 0)), int(s.get("minute", 0))))
     if s["over"]: print("  ‼ بازی به پایان رسیده — `reset` برای شروع دوباره")
     print("═" * 56)
     if s["player"] in s["eliminated"]:
