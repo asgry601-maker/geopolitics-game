@@ -1,23 +1,23 @@
 {
-  "schema_version": "1.9.0",
+  "schema_version": "1.10.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 89,
-    "pending_countries": 85,
+    "researched_countries": 96,
+    "pending_countries": 78,
     "last_batch": [
-      "PRK",
-      "TWN",
-      "MNG",
-      "LKA",
-      "NPL",
-      "BTN",
-      "MDV"
+      "AFG",
+      "SGP",
+      "MMR",
+      "KHM",
+      "LAO",
+      "BRN",
+      "TLS"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -15581,19 +15581,116 @@
     "AFG": {
       "country_name_fa": "افغانستان",
       "country_name_en": "Afghanistan",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "de_facto_theocratic_emirate_without_party_competition",
+      "government_model": "امارت اسلامی تحت حاکمیت طالبان؛ رهبر عالی در رأس ساختار و بدون نهادهای نمایندگی انتخابی.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "factions": [
+        {
+          "id": "afg_kandahar",
+          "name_fa": "هسته رهبری قندهار",
+          "name_en": "Kandahar-based supreme leadership",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "تمرکز بر اقتدار رهبر عالی و اجرای نظم امارت.",
+            "foreign_policy": "حفظ استقلال تصمیم‌گیری و تعامل محتاطانه خارجی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "afg_haqqani",
+          "name_fa": "شبکه حقانی در ساختار حاکم",
+          "name_en": "Haqqani network within governing movement",
+          "entity_type": "intra_movement_network",
+          "policy_positions": {
+            "domestic": "شبکه بانفوذ در ساختار امنیتی و حکومتی؛ میزان استقلال آن شفاف نیست.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "afg_diplomatic",
+          "name_fa": "جریان دیپلماتیک و سیاسی طالبان",
+          "name_en": "Taliban diplomatic and political current",
+          "entity_type": "intra_movement_current",
+          "policy_positions": {
+            "domestic": "پیگیری انسجام اداری و تعامل خارجی برای کاهش انزوای بین‌المللی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "afg_opposition",
+          "name_fa": "شبکه‌های سیاسی مخالف طالبان",
+          "name_en": "Anti-Taliban political opposition networks",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "طیفی ناهمگون از جمهوری‌خواهان پیشین و کنشگران مدنی؛ فاقد رقابت رسمی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "afg_leader",
+          "name_fa": "رهبر عالی امارت",
+          "name_en": "Supreme Leader",
+          "role": "هبت‌الله آخندزاده در رأس قدرت سیاسی، دینی و اداری قرار دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "afg_admin",
+          "name_fa": "اداره و کابینه بالفعل",
+          "name_en": "De facto Cabinet and Administration",
+          "role": "اداره روزمره وزارتخانه‌ها در چارچوب تصمیم‌های رهبری عالی.",
+          "confidence": "high"
+        },
+        {
+          "id": "afg_security",
+          "name_fa": "نهادهای امنیت داخلی",
+          "name_en": "Internal Security Institutions",
+          "role": "از مراکز مهم اجرای سیاست‌های حکومت و کنترل فضای داخلی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "supreme_leader": "Hibatullah Akhundzada",
+        "status": "Taliban de facto Islamic Emirate; political parties prohibited; no elected national legislature"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "recognition",
+          "sanctions_and_aid",
+          "religious_policy",
+          "education_policy",
+          "internal_unity",
+          "regional_relations"
+        ],
+        "rule": "احزاب رقابتی یا پارلمان انتخابی تعریف نشود؛ واکنش حکومت بر اساس تصمیم‌های رهبری عالی و توازن شبکه‌های درون طالبان مدل شود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "EUAA — Afghanistan: Political Opposition and Civic Space",
+            "url": "https://www.euaa.europa.eu/coi-report-afghanistan-country-focus/111-political-opposition-and-civic-space",
+            "date": "2026-02"
+          },
+          {
+            "name": "EUAA — Afghanistan Political Context",
+            "url": "https://www.euaa.europa.eu/coi-report-afghanistan-country-focus/11-political-context-and-international-relations",
+            "date": "2026"
+          },
+          {
+            "name": "Freedom House — Afghanistan 2026",
+            "url": "https://freedomhouse.org/country/afghanistan/freedom-world/2026",
+            "date": "2026"
+          }
+        ],
+        "notes": "احزاب سیاسی ممنوع‌اند؛ parties عمداً خالی است. شبکه‌های درون طالبان حزب رسمی محسوب نمی‌شوند."
       },
       "parliamentary_groups": []
     },
@@ -15968,21 +16065,176 @@
     "SGP": {
       "country_name_fa": "سنگاپور",
       "country_name_en": "Singapore",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_multiparty_dominant_party_democracy",
+      "government_model": "جمهوری پارلمانی با رقابت چندحزبی و برتری پایدار حزب اقدام مردم.",
+      "parties": [
+        {
+          "id": "sgp_pap",
+          "name_fa": "حزب اقدام مردم",
+          "name_en": "People's Action Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۸۷ کرسی از ۹۷ کرسی انتخابی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "عمل‌گرایی توسعه‌گرا و میانه‌گرایی اقتصادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "sgp_wp",
+          "name_fa": "حزب کارگران",
+          "name_en": "Workers' Party",
+          "entity_type": "party",
+          "political_role": "اصلی‌ترین اپوزیسیون؛ ۱۰ کرسی انتخابی و دو کرسی غیرحوزه‌ای.",
+          "ideological_profile": "سوسیال‌دموکراسی میانه‌رو و نظارت پارلمانی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "sgp_psp",
+          "name_fa": "حزب پیشرفت سنگاپور",
+          "name_en": "Progress Singapore Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون بدون کرسی پس از انتخابات ۲۰۲۵.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات نهادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "sgp_sdp",
+          "name_fa": "حزب دموکراتیک سنگاپور",
+          "name_en": "Singapore Democratic Party",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون باسابقه بدون کرسی انتخابی.",
+          "ideological_profile": "لیبرال‌دموکرات و اصلاح‌طلب.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "sgp_rdu",
+          "name_fa": "رد دات یونایتد",
+          "name_en": "Red Dot United",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون بدون کرسی.",
+          "ideological_profile": "اصلاح‌طلب و عدالت‌محور.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "sgp_pap_current",
+          "name_fa": "جریان مدیریتی حزب حاکم",
+          "name_en": "PAP governing and technocratic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "ثبات سیاسی، مدیریت کارآمد و سیاست‌گذاری تدریجی.",
+            "foreign_policy": "رقابت‌پذیری اقتصادی و جذب سرمایه‌گذاری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "sgp_wp_current",
+          "name_fa": "جریان پارلمانی حزب کارگران",
+          "name_en": "Workers' Party parliamentary current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تقویت نظارت پارلمانی و پاسخ‌گویی.",
+            "foreign_policy": "توجه به هزینه زندگی و حمایت اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "sgp_reform",
+          "name_fa": "جریان اصلاح‌طلب اپوزیسیون",
+          "name_en": "Opposition reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "گسترش رقابت سیاسی و تنوع دیدگاه‌ها.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "sgp_pm",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "لارنس وونگ نخست‌وزیر و رهبر حزب حاکم است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sgp_parliament",
+          "name_fa": "پارلمان",
+          "name_en": "Parliament",
+          "role": "اکثریت قاطع PAP و نمایندگی اپوزیسیون عمدتاً در اختیار WP است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sgp_president",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام ریاست کشور با اختیارات ذخیره‌ای و نظارتی قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Lawrence Wong",
+        "party": "People's Action Party",
+        "election": "2025-05-03",
+        "parliamentary_result": "PAP 87/97 elected seats; Workers' Party 10 elected seats and 2 NCMP seats"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "housing",
+          "economic_competitiveness",
+          "immigration_and_labor",
+          "social_policy",
+          "regional_trade"
+        ],
+        "rule": "برتری انتخاباتی PAP را از نبود رقابت حزبی تفکیک کن؛ اپوزیسیون پارلمانی به‌ویژه WP ظرفیت نظارت دارد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU — Singapore 2025 Election",
+            "url": "https://data.ipu.org/parliament/SG/SG-LC01/election/SG-LC01-E20250503/",
+            "date": "2025-05"
+          },
+          {
+            "name": "CNA — GE2025 results",
+            "url": "https://www.channelnewsasia.com/singapore/ge2025-pap-secures-victory-seats-opposition-challenge-5107201",
+            "date": "2025-05-04"
+          },
+          {
+            "name": "Singapore Government Gazette — Cabinet appointments",
+            "url": "https://assets.egazette.gov.sg/2025/Government%20Gazette/Notices%20under%20the%20Constitution/2307.pdf",
+            "date": "2025-06-20"
+          },
+          {
+            "name": "BTI — Singapore 2026",
+            "url": "https://bti-project.org/en/reports/country-report/SGP",
+            "date": "2026"
+          }
+        ],
+        "notes": "نتایج ۲۰۲۵ مبنای ترکیب پارلمان در تاریخ snapshot است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "sgp_pap_group",
+          "name_en": "PAP Parliamentary Group",
+          "party_id": "sgp_pap"
+        },
+        {
+          "id": "sgp_wp_group",
+          "name_en": "Workers' Party Parliamentary Group",
+          "party_id": "sgp_wp"
+        }
+      ]
     },
     "THA": {
       "country_name_fa": "تایلند",
@@ -16444,97 +16696,778 @@
     "MMR": {
       "country_name_fa": "میانمار",
       "country_name_en": "Myanmar",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "military_junta_with_fragmented_competing_governance",
+      "government_model": "حکومت نظامی پس از کودتای ۲۰۲۱ در کنار دولت وحدت ملی رقیب و ساختارهای سیاسی قومی؛ حاکمیت سرزمینی مناقشه‌برانگیز.",
+      "parties": [
+        {
+          "id": "mmr_usdp",
+          "name_fa": "حزب اتحاد و توسعه همبستگی",
+          "name_en": "Union Solidarity and Development Party",
+          "entity_type": "party",
+          "political_role": "حزب نزدیک به ارتش و بازیگر اصلی سازوکار انتخاباتی تحت مدیریت حکومت نظامی.",
+          "ideological_profile": "ملی‌گرایی دولتی و حمایت از نقش سیاسی ارتش.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mmr_nld",
+          "name_fa": "اتحادیه ملی برای دموکراسی",
+          "name_en": "National League for Democracy",
+          "entity_type": "party",
+          "political_role": "حزب پیروز انتخابات ۲۰۲۰؛ پس از کودتا توسط حکومت نظامی منحل/محروم از فعالیت قانونی.",
+          "ideological_profile": "دموکراسی انتخاباتی و اصلاحات مدنی.",
+          "legal_status": "dissolved_or_banned_by_junta",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mmr_sac",
+          "name_fa": "بلوک حاکمیت نظامی",
+          "name_en": "Military governing bloc",
+          "entity_type": "institutional_power_bloc",
+          "policy_positions": {
+            "domestic": "حفظ نقش مسلط ارتش و ساختار سیاسی تحت هدایت نظامیان.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mmr_nug",
+          "name_fa": "دولت وحدت ملی و کمیته نمایندگان پارلمان",
+          "name_en": "National Unity Government and CRPH",
+          "entity_type": "opposition_governing_network",
+          "policy_positions": {
+            "domestic": "بازگشت به حکومت منتخب و ایجاد اتحادیه فدرال دموکراتیک.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mmr_federalist",
+          "name_fa": "جریان‌های فدرالیست و سیاسی قومی",
+          "name_en": "Ethnic federalist political organisations",
+          "entity_type": "cross_group_current",
+          "policy_positions": {
+            "domestic": "خودمختاری منطقه‌ای، حقوق اقلیت‌ها و ساختار فدرال.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mmr_civil",
+          "name_fa": "جنبش مقاومت مدنی ضدکودتا",
+          "name_en": "Anti-coup civil resistance",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "پایان حاکمیت نظامی و احیای حقوق سیاسی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mmr_military",
+          "name_fa": "فرماندهی عالی ارتش",
+          "name_en": "Senior Military Command",
+          "role": "مرکز اصلی قدرت حکومت نظامی.",
+          "confidence": "high"
+        },
+        {
+          "id": "mmr_admin",
+          "name_fa": "اداره تحت کنترل حکومت نظامی",
+          "name_en": "Junta-controlled Administration",
+          "role": "دستگاه اجرایی مستقر در نایپیداو؛ کنترل آن در سراسر کشور یکسان نیست.",
+          "confidence": "high"
+        },
+        {
+          "id": "mmr_nug_pc",
+          "name_fa": "دولت وحدت ملی",
+          "name_en": "National Unity Government",
+          "role": "ساختار سیاسی رقیب با ظرفیت اجرایی منطقه‌ای متفاوت.",
+          "confidence": "high"
+        },
+        {
+          "id": "mmr_ethnic",
+          "name_fa": "اداره‌های سیاسی گروه‌های قومی",
+          "name_en": "Ethnic Organisation Administrations",
+          "role": "مجموعه‌ای متنوع از نهادهای محلی بدون فرماندهی سیاسی واحد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "de_facto_authority": "Military junta / State Administration Council",
+        "senior_leader": "Min Aung Hlaing",
+        "rival_political_authority": "National Unity Government",
+        "status": "fragmented sovereignty"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "military_civilian_relations",
+          "federalism",
+          "international_recognition",
+          "sanctions",
+          "territorial_governance",
+          "civic_space"
+        ],
+        "rule": "کنترل اداری حکومت نظامی، مشروعیت ادعایی NUG و اداره‌های قومی جدا بمانند؛ هیچ‌یک نماینده بی‌چون‌وچرای کل کشور فرض نشود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CRS — Burma: Background and Issues for Congress",
+            "url": "https://www.everycrsreport.com/files/2026-01-07_IF12331_14130a89346b1f93d105c31b76b58c1a765aae03.html",
+            "date": "2026-01-07"
+          },
+          {
+            "name": "Freedom House — Myanmar 2026",
+            "url": "https://freedomhouse.org/country/myanmar/freedom-world/2026",
+            "date": "2026"
+          },
+          {
+            "name": "BTI — Myanmar 2026",
+            "url": "https://bti-project.org/en/reports/country-report/MMR",
+            "date": "2026"
+          },
+          {
+            "name": "ISEAS — Myanmar's Emerging Governance Mosaic",
+            "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2026-68-myanmars-emerging-governance-mosaic-by-dipannita-maria-bagh-anders-kirstein-mo-thuzar",
+            "date": "2026"
+          }
+        ],
+        "notes": "به‌دلیل جنگ داخلی و تغییرات کنترل سرزمینی از درصدهای بی‌پشتوانه استفاده نشده است."
       },
       "parliamentary_groups": []
     },
     "KHM": {
       "country_name_fa": "کامبوج",
       "country_name_en": "Cambodia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "dominant_party_parliamentary_monarchy",
+      "government_model": "پادشاهی مشروطه پارلمانی با برتری ساختاری حزب خلق کامبوج و محدودیت شدید رقابت اپوزیسیون.",
+      "parties": [
+        {
+          "id": "khm_cpp",
+          "name_fa": "حزب خلق کامبوج",
+          "name_en": "Cambodian People's Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۱۲۰ کرسی از ۱۲۵ کرسی مجلس ملی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "ملی‌گرایی دولتی و محافظه‌کاری.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_funcinpec",
+          "name_fa": "جبهه متحد ملی برای کامبوج مستقل، بی‌طرف، صلح‌آمیز و همکار",
+          "name_en": "FUNCINPEC",
+          "entity_type": "party",
+          "political_role": "پنج کرسی مجلس ملی؛ حزب سلطنت‌گرا و همسو با حکومت، نه اپوزیسیون مؤثر.",
+          "ideological_profile": "سلطنت‌گرایی و ملی‌گرایی کامبوجی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_candlelight",
+          "name_fa": "حزب شمع",
+          "name_en": "Candlelight Party",
+          "entity_type": "party",
+          "political_role": "جریان اصلی اپوزیسیون انتخاباتی؛ از شرکت در انتخابات پارلمانی ۲۰۲۳ محروم شد.",
+          "ideological_profile": "اصلاح‌طلبی دموکراتیک.",
+          "legal_status": "registered_but_barred_from_2023_national_election",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_khmer_will",
+          "name_fa": "حزب اراده خمر",
+          "name_en": "Khmer Will Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک در فضای سیاسی محدود.",
+          "ideological_profile": "ملی‌گرایی و محافظه‌کاری.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "khm_hunsen",
+          "name_fa": "شبکه رهبری هون سن",
+          "name_en": "Hun Sen leadership network",
+          "entity_type": "intraparty_power_network",
+          "policy_positions": {
+            "domestic": "حفظ انسجام نخبگان حاکم و کنترل راهبردی حزب.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "khm_hunmanet",
+          "name_fa": "جریان مدیریتی دولت هون مانت",
+          "name_en": "Hun Manet governing generation",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "مدیریت اجرایی روزمره و انتقال تدریجی مسئولیت‌ها.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "khm_opposition",
+          "name_fa": "شبکه‌های اپوزیسیون دموکراتیک",
+          "name_en": "Democratic opposition networks",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "مطالبه انتخابات رقابتی و آزادی تشکل و رسانه.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "khm_pm",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "هون مانت مسئول اداره روزمره امور اجرایی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_cpp",
+          "name_fa": "رهبری حزب خلق کامبوج",
+          "name_en": "CPP Leadership",
+          "role": "هون سن رئیس حزب و چهره بسیار بانفوذ است.",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "هون سن رئیس سناست.",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس قانون‌گذاری با اکثریت قاطع CPP.",
+          "confidence": "high"
+        },
+        {
+          "id": "khm_monarchy",
+          "name_fa": "سلطنت",
+          "name_en": "Monarchy",
+          "role": "پادشاه نورودوم سیهامونی رئیس کشور با نقش عمدتاً تشریفاتی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Norodom Sihamoni",
+        "prime_minister": "Hun Manet",
+        "senate_president": "Hun Sen",
+        "ruling_party": "Cambodian People's Party",
+        "parliamentary_result_2023": "CPP 120; FUNCINPEC 5 of 125"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_growth",
+          "relations_with_china_and_vietnam",
+          "elite_unity",
+          "opposition_and_civic_space",
+          "monarchy"
+        ],
+        "rule": "اداره روزمره هون مانت را از نفوذ راهبردی هون سن تفکیک کن؛ FUNCINPEC حزب همسو با حکومت است."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CRS — Cambodia: Background and U.S. Relations",
+            "url": "https://www.everycrsreport.com/files/2026-07-02_IF10238_d8b530136e612eb7d50bf9833df949dc46bc2bcd.html",
+            "date": "2026-07-02"
+          },
+          {
+            "name": "BTI — Cambodia 2026",
+            "url": "https://bti-project.org/en/reports/country-report/KHM",
+            "date": "2026"
+          },
+          {
+            "name": "Human Rights Watch — Cambodia",
+            "url": "https://www.hrw.org/asia/cambodia",
+            "date": "2026-11-18"
+          },
+          {
+            "name": "UN — Cambodia election report",
+            "url": "https://cambodia.un.org/sites/default/files/2024-08/SR%20report.pdf",
+            "date": "2024"
+          }
+        ],
+        "notes": "نتایج انتخابات مجلس ملی ۲۰۲۳ از سنا ۲۰۲۴ جداست؛ حزب شمع از رقابت ملی ۲۰۲۳ محروم شد."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "khm_cpp_group",
+          "name_en": "CPP Parliamentary Group",
+          "party_id": "khm_cpp"
+        },
+        {
+          "id": "khm_funcinpec_group",
+          "name_en": "FUNCINPEC Parliamentary Group",
+          "party_id": "khm_funcinpec"
+        }
+      ]
     },
     "LAO": {
       "country_name_fa": "لائوس",
       "country_name_en": "Laos",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "single_party_socialist_republic",
+      "government_model": "جمهوری سوسیالیستی تک‌حزبی؛ حزب انقلابی خلق لائوس هسته رهبری قانون اساسی و سیاسی کشور است.",
+      "parties": [
+        {
+          "id": "lao_lprp",
+          "name_fa": "حزب انقلابی خلق لائوس",
+          "name_en": "Lao People's Revolutionary Party",
+          "entity_type": "party",
+          "political_role": "تنها حزب قانونی و حاکم؛ کنترل‌کننده ساختارهای اصلی دولت و مجلس.",
+          "ideological_profile": "مارکسیسم-لنینیسم و توسعه‌گرایی عمل‌گرا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lao_politburo",
+          "name_fa": "دفتر سیاسی و رهبری مرکزی حزب",
+          "name_en": "LPRP Politburo and Central Leadership",
+          "entity_type": "party_institution",
+          "policy_positions": {
+            "domestic": "حفظ وحدت حزب و کنترل سیاسی بر نهادهای دولتی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "lao_bureaucracy",
+          "name_fa": "جریان بوروکراتیک حزب-دولت",
+          "name_en": "Party-state administrative current",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "تأکید بر ثبات مالی، زیرساخت و مدیریت بدهی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "lao_security",
+          "name_fa": "شبکه‌های امنیتی و نظامی",
+          "name_en": "Security and military institutions",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "domestic": "حفظ ثبات داخلی و پیوند ساختارهای امنیتی با حزب.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lao_party",
+          "name_fa": "حزب انقلابی خلق لائوس",
+          "name_en": "Lao People's Revolutionary Party",
+          "role": "مرکز برتر تصمیم‌گیری سیاسی و تنها حزب قانونی.",
+          "confidence": "high"
+        },
+        {
+          "id": "lao_president",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "تونگلون سیسولیت رئیس‌جمهور و دبیرکل حزب است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lao_pm",
+          "name_fa": "نخست‌وزیر و دولت",
+          "name_en": "Prime Minister and Government",
+          "role": "سالومسای کوماسیت از ۵ اکتبر ۲۰۲۶ نخست‌وزیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lao_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "سونکسای سیپاندون از اکتبر ۲۰۲۶ رئیس مجلس است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Thongloun Sisoulith",
+        "prime_minister": "Saleumxay Kommasith",
+        "national_assembly_president": "Sonexay Siphandone",
+        "ruling_party": "Lao People's Revolutionary Party",
+        "leadership_change_date": "2026-10-05"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_stability",
+          "infrastructure_and_energy",
+          "relations_with_vietnam",
+          "relations_with_china",
+          "asean_policy",
+          "party_unity"
+        ],
+        "rule": "رقابت حزبی ملی وجود ندارد؛ تغییر سیاستی از مسیر اجماع و توازن درون حزب مدل شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "BTI — Laos 2026",
+            "url": "https://bti-project.org/en/reports/country-report/LAO",
+            "date": "2026"
+          },
+          {
+            "name": "KPL — Laos leadership changes",
+            "url": "https://kpl.gov.la/asean2024/en/detail.aspx?id=107870",
+            "date": "2026-10-05"
+          },
+          {
+            "name": "AP — Saleumxay Kommasith becomes prime minister",
+            "url": "https://apnews.com/article/b38217f667bc10e8a55c8f3748463593",
+            "date": "2026-10-06"
+          }
+        ],
+        "notes": "تغییر نخست‌وزیر و رئیس مجلس در ۵ اکتبر ۲۰۲۶ پیش از تاریخ آغاز سناریو رخ داده و اعمال شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lao_lprp_group",
+          "name_en": "LPRP Assembly Group",
+          "party_id": "lao_lprp"
+        }
+      ]
     },
     "BRN": {
       "country_name_fa": "برونئی",
-      "country_name_en": "Brunei",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "country_name_en": "Brunei Darussalam",
+      "system_type": "absolute_monarchy_with_limited_consultative_council",
+      "government_model": "سلطنت مطلقه؛ سلطان هم رئیس کشور و هم نخست‌وزیر است و شورای قانون‌گذاری انتصابی نقش مشورتی دارد.",
+      "parties": [
+        {
+          "id": "brn_ndp",
+          "name_fa": "حزب توسعه ملی",
+          "name_en": "National Development Party",
+          "entity_type": "party",
+          "political_role": "تنها حزب ثبت‌شده؛ فاقد کرسی در شورای قانون‌گذاری و نقش رقابتی مؤثر.",
+          "ideological_profile": "همکاری با دولت و وفاداری به سلطنت؛ اپوزیسیون مستقل نیست.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "brn_palace",
+          "name_fa": "دربار و حلقه سلطنتی",
+          "name_en": "Palace and Royal Household",
+          "entity_type": "institutional_power_center",
+          "policy_positions": {
+            "domestic": "حفظ اقتدار سلطنت و ثبات نظم سیاسی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "brn_cabinet",
+          "name_fa": "وزیران و دستگاه اجرایی",
+          "name_en": "Cabinet and Executive Administration",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "اجرای سیاست‌های سلطنت و مدیریت درآمدهای انرژی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "brn_religious",
+          "name_fa": "نهادهای دینی و مشورتی سلطنت",
+          "name_en": "Religious and Royal Advisory Institutions",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "حفظ چارچوب رسمی مالایی-اسلامی-سلطنتی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "brn_sultan",
+          "name_fa": "سلطان و نخست‌وزیر",
+          "name_en": "Sultan and Prime Minister",
+          "role": "حسن‌البلقیه عالی‌ترین مقام کشور و نخست‌وزیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "brn_cabinet",
+          "name_fa": "کابینه وزیران",
+          "name_en": "Council of Ministers",
+          "role": "وزیران منصوب سلطان مسئول اداره وزارتخانه‌ها هستند.",
+          "confidence": "high"
+        },
+        {
+          "id": "brn_legislative",
+          "name_fa": "شورای قانون‌گذاری",
+          "name_en": "Legislative Council",
+          "role": "نهاد انتصابی با نقش مشورتی؛ فاقد رقابت انتخاباتی ملی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "sultan": "Hassanal Bolkiah",
+        "prime_minister": "Hassanal Bolkiah",
+        "ruling_party": "No governing party; executive authority vested in the Sultan",
+        "only_registered_party": "National Development Party"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_and_gas_revenue",
+          "economic_diversification",
+          "monarchy",
+          "religious_policy",
+          "asean_relations"
+        ],
+        "rule": "حزب توسعه ملی را حزب حاکم یا اپوزیسیون مؤثر محسوب نکن؛ قدرت در سلطنت متمرکز است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Attorney General's Chambers — Constitution of Brunei",
+            "url": "https://www.agc.gov.bn/wp-content/uploads/2026/07/CONST.-I-2022-ED-CONSTITUTION-OF-BRUNEI-DARUSSALAM.pdf",
+            "date": "2026"
+          },
+          {
+            "name": "Freedom House — Brunei",
+            "url": "https://freedomhouse.org/dataset/1592",
+            "date": "2024"
+          },
+          {
+            "name": "U.S. State Department — Brunei Human Rights Report",
+            "url": "https://2021-2025.state.gov/wp-content/uploads/2024/02/528267_BRUNEI-2023-HUMAN-RIGHTS-REPORT.pdf",
+            "date": "2024"
+          }
+        ],
+        "notes": "تنها حزب ثبت‌شده حزب توسعه ملی است و در شورای قانون‌گذاری نماینده ندارد؛ شورا انتصابی است."
       },
       "parliamentary_groups": []
     },
     "TLS": {
       "country_name_fa": "تیمور شرقی",
       "country_name_en": "Timor-Leste",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_multiparty_parliamentary_democracy",
+      "government_model": "جمهوری نیمه‌ریاستی با پارلمان تک‌مجلسی و دولت ائتلافی؛ رئیس‌جمهور مستقیماً انتخاب می‌شود.",
+      "parties": [
+        {
+          "id": "tls_cnrt",
+          "name_fa": "کنگره ملی بازسازی تیمور",
+          "name_en": "National Congress for Timorese Reconstruction",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان با ۳۱ کرسی از ۶۵ کرسی در انتخابات ۲۰۲۳؛ محور دولت ائتلافی.",
+          "ideological_profile": "ملی‌گرایی عمل‌گرا و توسعه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_fret_ilin",
+          "name_fa": "جبهه انقلابی برای تیمور شرقی مستقل",
+          "name_en": "Revolutionary Front for an Independent East Timor (FRETILIN)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون با ۱۹ کرسی؛ حزب تاریخی استقلال‌طلب.",
+          "ideological_profile": "ملی‌گرایی استقلال‌طلب و عدالت اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_pd",
+          "name_fa": "حزب دموکراتیک",
+          "name_en": "Democratic Party",
+          "entity_type": "party",
+          "political_role": "شش کرسی در انتخابات ۲۰۲۳؛ شریک ائتلافی CNRT در دولت.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_khunto",
+          "name_fa": "کمانک هابوراس اونیاده ناسیونال تیمور اوآن",
+          "name_en": "KHUNTO",
+          "entity_type": "party",
+          "political_role": "پنج کرسی در انتخابات ۲۰۲۳؛ حزب کوچک پارلمانی.",
+          "ideological_profile": "ملی‌گرایی اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "tls_plp",
+          "name_fa": "حزب آزادی مردم",
+          "name_en": "People's Liberation Party",
+          "entity_type": "party",
+          "political_role": "چهار کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tls_gusmao",
+          "name_fa": "جریان رهبری ژانانا گوسمائو در CNRT",
+          "name_en": "Xanana Gusmão leadership current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "توسعه زیرساخت و استفاده از درآمدهای نفتی برای توسعه ملی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tls_fret_ilin",
+          "name_fa": "جریان تاریخی و سازمانی فرتیلین",
+          "name_en": "FRETILIN historical current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر میراث استقلال و عدالت اجتماعی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tls_youth",
+          "name_fa": "جریان جوانان و اصلاح‌طلبان",
+          "name_en": "Youth and reformist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اشتغال جوانان، آموزش، شفافیت و نوسازی نهادی.",
+            "foreign_policy": ""
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tls_pm",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "ژانانا گوسمائو نخست‌وزیر و رهبر CNRT است؛ دولت بر ائتلاف CNRT و PD متکی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_president",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "خوزه راموس-هورتا رئیس‌جمهور با اختیارات قانون اساسی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_parliament",
+          "name_fa": "پارلمان ملی",
+          "name_en": "National Parliament",
+          "role": "پارلمان تک‌مجلسی ۶۵ نفره؛ ائتلاف CNRT و PD اکثریت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "tls_veterans",
+          "name_fa": "شبکه رهبران استقلال",
+          "name_en": "Independence-era leaders and veterans networks",
+          "role": "چهره‌های تاریخی مقاومت همچنان در سیاست ملی اثرگذارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "José Ramos-Horta",
+        "prime_minister": "Xanana Gusmão",
+        "prime_minister_party": "CNRT",
+        "coalition": [
+          "CNRT",
+          "Democratic Party"
+        ],
+        "parliamentary_result_2023": {
+          "CNRT": 31,
+          "FRETILIN": 19,
+          "PD": 6,
+          "KHUNTO": 5,
+          "PLP": 4
+        },
+        "next_parliamentary_election_expected": "2028"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "petroleum_fund",
+          "employment_and_youth",
+          "infrastructure",
+          "relations_with_indonesia_and_australia",
+          "portugal_and_cplp",
+          "coalition_stability"
+        ],
+        "rule": "دولت ائتلافی CNRT-PD و اپوزیسیون FRETILIN مشخص بمانند؛ کرسی احزاب کوچک بر اساس نتیجه ۲۰۲۳ ثبت شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Australian DFAT — Timor-Leste Country Brief",
+            "url": "https://www.dfat.gov.au/geo/timor-leste/timor-leste-country-brief",
+            "date": "2026"
+          },
+          {
+            "name": "BTI — Timor-Leste 2026",
+            "url": "https://bti-project.org/en/reports/country-report/TLS",
+            "date": "2026"
+          },
+          {
+            "name": "World Factbook — Timor-Leste, November 2026",
+            "url": "https://world.factbook.us/country/tls/",
+            "date": "2026-11"
+          }
+        ],
+        "notes": "ترکیب پارلمان بر اساس انتخابات ۲۱ مه ۲۰۲۳ است؛ ائتلاف دولت CNRT و PD."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "tls_cnrt_pd",
+          "name_en": "CNRT–Democratic Party Governing Coalition",
+          "party_ids": [
+            "tls_cnrt",
+            "tls_pd"
+          ]
+        },
+        {
+          "id": "tls_fret_ilin_group",
+          "name_en": "FRETILIN Parliamentary Group",
+          "party_id": "tls_fret_ilin"
+        },
+        {
+          "id": "tls_small_parties",
+          "name_en": "KHUNTO and PLP Parliamentary Groups",
+          "party_ids": [
+            "tls_khunto",
+            "tls_plp"
+          ]
+        }
+      ]
     },
     "NGA": {
       "country_name_fa": "نیجریه",
