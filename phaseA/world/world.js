@@ -406,82 +406,123 @@ function selectCountry(fa, silent) {
   if (!silent) { /* آماده برای افکت‌های آینده */ }
 }
 
+var DASH_TAB = 'general';
+var DASH_TABS = [
+  ['general','اطلاعات عمومی'],['politics','سیاست داخلی'],['society','جمعیت و جامعه'],
+  ['economy','اقتصاد و بودجه'],['resources','منابع طبیعی'],['industry','صنعت و زیرساخت'],
+  ['military','وضعیت نظامی'],['relations','روابط خارجی'],['pacts','پیمان‌ها'],
+  ['sanctions','تحریم‌ها'],['diplomacy','دیپلماسی'],['news','اخبار']
+];
+
+function dashEsc(v) {
+  return String(v == null ? '—' : v).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function dashMissing(title, detail) {
+  return '<div class="dashNote"><b>⏳ ' + dashEsc(title) + '</b><br>' +
+    dashEsc(detail || 'ساختار داده و منطق این قابلیت در ادامه فاز B طراحی و پیاده‌سازی می‌شود.') +
+    '</div>';
+}
+function dashMetric(label, value) {
+  return '<div class="dashMetric"><span class="muted small">' + dashEsc(label) +
+    '</span><b>' + dashEsc(value) + '</b></div>';
+}
+function dashSectionHtml(r, isPlayer, tab) {
+  var h = '', ks, i;
+  if (tab === 'general') {
+    h += '<h3>🌐 مشخصات کشور</h3><div class="dashGrid">';
+    h += dashMetric('نام کشور',r.name) + dashMetric('نام انگلیسی',r.en || 'ثبت نشده');
+    h += dashMetric('قاره / منطقه',r.region) + dashMetric('کد کشور',r.iso3 || 'ثبت نشده');
+    h += dashMetric('رئیس کشور / دولت',r.leader) + dashMetric('رتبه جهانی',r.rank ? '#'+r.rank : '—');
+    h += '</div>' + dashMissing('اطلاعات تکمیلی جغرافیایی','پرچم، پایتخت، مساحت، زبان رسمی، واحد پول و جمعیت هنوز به داده کشورها متصل نشده‌اند.');
+  } else if (tab === 'politics') {
+    h += '<h3>🏛 ساختار سیاسی</h3>';
+    h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت</span><b>'+dashEsc(r.leader)+'</b></div>';
+    h += '<div class="row"><span class="muted">ثبات سیاسی فعلی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
+    if (r.parties && Object.keys(r.parties).length) {
+      h += '<h3>احزاب سیاسی</h3>'; ks=Object.keys(r.parties).sort(function(a,b){return r.parties[b]-r.parties[a];});
+      for(i=0;i<ks.length;i++) h += barHtml(dashEsc(ks[i]),Math.min(100,r.parties[ks[i]]));
+    }
+    h += dashMissing('نوع حکومت و محبوبیت دولت','نوع حکومت، محبوبیت دولت، انتخابات و اعتراضات هنوز سیستم داده و مکانیک قابل‌تغییر ندارند. این گزینه‌ها برای کشور بازیکن در مراحل بعدی قابل ویرایش می‌شوند.');
+    if (!isPlayer) h += '<div class="dashNote">این کشور در حالت مشاهده است؛ کنترل سیاسی فقط برای کشور تحت مدیریت بازیکن فعال خواهد بود.</div>';
+  } else if (tab === 'society') {
+    h += '<h3>👥 جمعیت و جامعه</h3>';
+    h += dashMissing('اطلاعات جمعیتی','جمعیت کل، نرخ رشد جمعیت، نیروی کار و نرخ بیکاری باید طراحی و به موتور متصل شوند.');
+    h += '<div class="dashNote">آموزش و خدمات درمانی در نسخه نخست الزامی نیستند و به توسعه بعدی موکول می‌شوند.</div>';
+  } else if (tab === 'economy') {
+    h += '<h3>📈 اقتصاد و بودجه</h3><div class="dashGrid">';
+    h += dashMetric('شاخص اقتصاد بازی',r.eco) + dashMetric('خزانه بازی',Number(r.money).toFixed(0)+' میلیارد');
+    h += '</div><div class="dashNote">این دو مقدار، شاخص‌های فعلی موتور هستند و معادل مستقیم GDP یا بودجه تفصیلی محسوب نمی‌شوند.</div>';
+    h += dashMissing('اقتصاد تفصیلی','GDP، درآمد و هزینه دولت، بودجه نظامی و عمرانی، تورم و رشد اقتصادی باید به‌صورت سیستم محاسباتی طراحی شوند.');
+  } else if (tab === 'resources') {
+    h += '<h3>⛏ منابع طبیعی</h3>';
+    h += dashMissing('منابع کشور و استان‌ها','ذخایر نفت، گاز، زغال‌سنگ، اورانیوم، آهن، طلا و سایر منابع هنوز داده‌گذاری نشده‌اند. در فاز C باید روی نقشه نیز به شکل مدل سه‌بعدی سبک دیده شوند.');
+  } else if (tab === 'industry') {
+    h += '<h3>🏭 صنعت و زیرساخت</h3>';
+    h += dashMissing('زیرساخت‌های کشور','نیروگاه، پالایشگاه، فرودگاه، بندر، مراکز صنعتی و ظرفیت تولید هنوز پیاده‌سازی نشده‌اند. هر تأسیسات در فاز C شناسه مستقل، استان، ظرفیت، تولید و نوار سلامت خواهد داشت.');
+    if (PROV.sel) h += provPanelHtml();
+    else h += '<div class="dashNote">برای مشاهده اطلاعات جغرافیایی پایه، یک استان از روی کره انتخاب کن. داده زیرساختی استان در مرحله بعد اضافه می‌شود.</div>';
+  } else if (tab === 'military') {
+    h += '<h3>🛡 وضعیت نظامی</h3><div class="dashGrid">';
+    h += dashMetric('قدرت نظامی',r.mil) + dashMetric('فناوری',r.tech);
+    h += dashMetric('کلاهک هسته‌ای (شاخص فعلی)',r.nukes) + dashMetric('تجهیزات ثبت‌شده',r.arsenal.length);
+    h += '</div>';
+    if (r.arsenal.length) { h += '<h3>تجهیزات ثبت‌شده فعلی</h3>'; for(i=0;i<r.arsenal.length;i++) h += '<div class="dashCard small">'+dashEsc(r.arsenal[i])+'</div>'; }
+    h += dashMissing('فرماندهی نظامی تفصیلی','تفکیک نیروهای زمینی، هوایی، دریایی، پدافند، موجودی و آمادگی در مراحل بعد طراحی می‌شود. پنجره فرماندهی مستقل در فاز D ساخته خواهد شد.');
+  } else if (tab === 'relations') {
+    h += '<h3>🤝 روابط خارجی</h3>';
+    if (r.rel != null && ST) h += '<h3>رابطه با کشور بازیکن ('+dashEsc(ST.player)+')</h3>'+barHtml('شاخص رابطه',r.rel,r.rel<0?'bad':'');
+    if (r.friends && r.friends.length) { h += '<h3>کشورهای نزدیک</h3>'; for(i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>'; }
+    if (r.enemies && r.enemies.length) { h += '<h3>روابط پرتنش</h3>'; for(i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>'; }
+    h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
+  } else if (tab === 'pacts') {
+    h += '<h3>📜 پیمان‌ها و اتحادها</h3>';
+    h += '<div class="dashCard">'+(r.tags && r.tags.length ? r.tags.map(dashEsc).join(' · ') : 'پیمان اختصاصی ثبت‌شده‌ای در داده فعلی این پنل نیست.')+'</div>';
+    h += dashMissing('فهرست کامل توافق‌ها','پیمان‌های نظامی و اقتصادی، توافق‌های تجاری، عدم تجاوز و عضویت سازمانی باید به ساختار مستقل و قابل مدیریت تبدیل شوند.');
+  } else if (tab === 'sanctions') {
+    h += '<h3>⛔ تحریم‌ها</h3>';
+    h += dashMissing('وضعیت تحریم‌ها','کشورهای تحریم‌کننده، نوع و محدودیت تحریم، اثر اقتصادی و روند مذاکره برای رفع تحریم هنوز به شکل پنل تفصیلی پیاده‌سازی نشده‌اند.');
+    if (ST && r.name === ST.player) h += '<div class="dashCard small">شاخص فعلی تحریم شورای امنیت در وضعیت جهان: '+dashEsc(ST.un_censures)+'</div>';
+  } else if (tab === 'diplomacy') {
+    h += '<h3>🕊 وضعیت دیپلماتیک</h3>';
+    if (r.war_with && r.war_with.length) { h += '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>'; }
+    h += dashMissing('مذاکرات و توافق‌ها','مذاکرات فعال، توافق‌های درحال بررسی، پیشنهادهای ارسالی/دریافتی، بحران‌ها و نشست‌های بین‌المللی نیازمند پنل مستقل هستند.');
+  } else if (tab === 'news') {
+    h += '<h3>📰 اخبار و رویدادها</h3>';
+    if (r.press && r.press.length) for(i=0;i<r.press.length;i++) h += '<div class="press">'+dashEsc(r.press[i])+'</div>';
+    else h += '<div class="dashNote">در حال حاضر خبر داخلی ثبت‌شده‌ای برای این کشور در داده موجود نیست.</div>';
+    h += '<div class="dashNote">خبرها فعلاً عمدتاً از متن‌های ازپیش‌تعیین‌شده موتور می‌آیند. رسانه‌های پویا با کمک AI آنلاین در فاز F اضافه می‌شوند؛ رویداد واقعی بازی منبع حقیقت خبر خواهد بود.</div>';
+  }
+  return h;
+}
+function dashSelectTab(id) {
+  DASH_TAB = id;
+  if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+}
 function renderCountryPanel(r) {
-  LAST_COUNTRY_R = r;   /* B2: برای رندر مجدد پنل پس از انتخاب استان */
+  LAST_COUNTRY_R = r;
   var box = el('countryInfo');
   el('idleInfo').style.display = 'none';
   box.style.display = 'block';
-  var h = '';
-  var isPlayer = !!(ST && ST.player === r.name);   /* playerCountry مستقل از SELECTED */
-  h += '<h2>' + r.name + '</h2>';
-  h += '<div class="muted small">' + (r.en || '') + ' · ' + (r.iso3 || '') + '</div>';
+  var isPlayer = !!(ST && ST.player === r.name), h = '';
+  h += '<h2>' + dashEsc(r.name) + '</h2>';
+  h += '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div>';
   h += '<div style="margin:4px 0">' + (isPlayer
       ? '<span class="badge" style="color:#ffd166">🏰 کشور شما — کنترل کامل</span>'
-      : '<span class="badge">👥 حالت مشاهده — کشور شما: '
-         + (ST ? ST.player : '—') + '</span>')
-    + '</div>';
-  h += '<div>';
-  for (var i = 0; i < r.tags.length; i++) h += '<span class="badge">' + r.tags[i] + '</span>';
-  h += '</div>';
-  h += '<h3>👑 رهبری</h3>';
-  h += '<div class="row"><span class="muted">رئیس دولت</span><span>' + r.leader + '</span></div>';
-  if (r.rank) h += '<div class="row"><span class="muted">رتبه جهانی</span><span>#' + r.rank + '</span></div>';
-  h += '<div class="row"><span class="muted">منطقه</span><span>' + r.region + '</span></div>';
-  if (r.trait) h += '<div class="row"><span class="muted">ویژگی</span><span class="small">' + r.trait + '</span></div>';
-  h += '<h3>📊 آمار ملی</h3>';
-  h += barHtml('نیروی نظامی', r.mil, r.mil < 30 ? 'bad' : (r.mil < 55 ? 'warn' : ''));
-  h += barHtml('اقتصاد', r.eco, r.eco < 30 ? 'bad' : (r.eco < 55 ? 'warn' : ''));
-  h += barHtml('فناوری', r.tech, r.tech < 30 ? 'bad' : (r.tech < 55 ? 'warn' : ''));
-  h += barHtml('ثبات داخلی', r.stab, r.stab < 30 ? 'bad' : (r.stab < 55 ? 'warn' : ''));
-  h += '<div class="row"><span class="muted">خزانه</span><span>' + r.money.toFixed(0) + ' میلیارد</span></div>';
-  h += '<div class="row"><span class="muted">نفوذ</span><span>' + r.influence.toFixed(0) + '</span></div>';
-  h += '<div class="row"><span class="muted">کلاهک هسته\u200cای ☢</span><span>' + r.nukes + '</span></div>';
-  if (r.rel != null && ST) {
-    h += '<h3>🤝 رابطه با شما (' + ST.player + ')</h3>';
-    h += barHtml('رابطه', r.rel, r.rel < 0 ? 'bad' : '');
+      : '<span class="badge">👥 حالت مشاهده — کشور شما: '+dashEsc(ST ? ST.player : '—')+'</span>') + '</div>';
+  h += '<div>'+(r.tags || []).map(function(t){return '<span class="badge">'+dashEsc(t)+'</span>';}).join('')+'</div>';
+  h += '<div class="dashTabs">';
+  for(var t=0;t<DASH_TABS.length;t++){
+    h += '<button type="button" class="dashTab'+(DASH_TAB===DASH_TABS[t][0]?' active':'')+
+      '" data-dash-tab="'+DASH_TABS[t][0]+'">'+DASH_TABS[t][1]+'</button>';
   }
-  if (r.war_with.length) {
-    h += '<h3>⚔ در جنگ با</h3><div>';
-    for (var w = 0; w < r.war_with.length; w++) h += '<span class="badge">' + r.war_with[w] + '</span>';
-    h += '</div>';
-  }
-  if (r.arsenal.length) {
-    h += '<h3>🛠 تجهیزات اصلی</h3>';
-    for (var a = 0; a < r.arsenal.length; a++) h += '<div class="small">• ' + r.arsenal[a] + '</div>';
-  }
-  if (r.parties && Object.keys(r.parties).length) {
-    h += '<h3>🏛 احزاب سیاسی</h3>';
-    var ks = Object.keys(r.parties).sort(function (x, y) { return r.parties[y] - r.parties[x]; });
-    for (var p = 0; p < ks.length; p++) {
-      h += barHtml(ks[p], Math.min(100, r.parties[ks[p]]));
-    }
-  }
-  if (r.friends && r.friends.length) {
-    h += '<h3>💚 نزدیک\u200cترین دوستان</h3>';
-    for (var f = 0; f < r.friends.length; f++)
-      h += '<div class="row"><span>' + r.friends[f][0] + '</span><span class="muted">رابطه ' + r.friends[f][1].toFixed(0) + '</span></div>';
-  }
-  if (r.enemies && r.enemies.length) {
-    h += '<h3>💢 دشمنان اصلی</h3>';
-    for (var e = 0; e < r.enemies.length; e++)
-      h += '<div class="row"><span>' + r.enemies[e][0] + '</span><span class="muted">رابطه ' + r.enemies[e][1].toFixed(0) + '</span></div>';
-  }
-  if (r.proxies && r.proxies.length) {
-    h += '<h3>🗡 شبکه نیابتی شما اینجا</h3>';
-    for (var x = 0; x < r.proxies.length; x++) h += '<div class="small">• ' + r.proxies[x] + '</div>';
-  }
-  if (r.press && r.press.length) {
-    h += '<h3>📰 آخرین اخبار داخلی</h3>';
-    for (var n = 0; n < r.press.length; n++) h += '<div class="press">' + r.press[n] + '</div>';
-  }
-  if (!isPlayer && ST) {
-    h += '<div class="press" style="margin-top:10px">ℹ️ کنترل شما همچنان «'
-      + ST.player + '» است؛ این پنل فقط اطلاعات «' + r.name
-      + '» را نشان می‌دهد. برای تغییر کشور زیر کنترل از «شروع بازی جدید» استفاده کنید.</div>';
-  }
-  h += provPanelHtml();   /* B2: بخش استان (اگر استان‌ای انتخاب شده باشد) */
+  h += '</div><div id="dashSection">'+dashSectionHtml(r,isPlayer,DASH_TAB)+'</div>';
+  if (DASH_TAB !== 'industry' && PROV.sel) h += provPanelHtml();
+  if (!isPlayer && ST) h += '<div class="dashNote">کشور انتخاب‌شده فقط در حالت مشاهده است؛ کشور تحت مدیریت شما همچنان «'+dashEsc(ST.player)+'» است.</div>';
   box.innerHTML = h;
-  provAfterPanel();       /* B2: اتصال دکمه رفع انتخاب استان */
+  var btns = box.querySelectorAll('[data-dash-tab]');
+  for (var b=0;b<btns.length;b++) btns[b].onclick = (function(id){return function(){dashSelectTab(id);};})(btns[b].getAttribute('data-dash-tab'));
+  provAfterPanel();
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
