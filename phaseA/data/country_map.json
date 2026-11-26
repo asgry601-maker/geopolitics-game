@@ -60,7 +60,7 @@
   "iso3": "ISR",
   "ne": "Israel",
   "lat": 31.48,
-  "lon": 35
+  "lon": 35.0
  },
  "فلسطین": {
   "en": "Palestine",
@@ -136,7 +136,7 @@
   "en": "Libya",
   "iso3": "LBY",
   "ne": "Libya",
-  "lat": 27,
+  "lat": 27.0,
   "lon": 17.97
  },
  "تونس": {
@@ -180,6 +180,13 @@
   "ne": "France",
   "lat": 46.61,
   "lon": 2.34
+ },
+ "بریتانیا": {
+  "en": "United Kingdom",
+  "iso3": "GBR",
+  "ne": "United Kingdom",
+  "lat": 53.88,
+  "lon": -2.66
  },
  "ایتالیا": {
   "en": "Italy",
@@ -613,7 +620,7 @@
   "iso3": "NGA",
   "ne": "Nigeria",
   "lat": 9.55,
-  "lon": 8
+  "lon": 8.0
  },
  "آفریقای جنوبی": {
   "en": "South Africa",
@@ -802,7 +809,7 @@
   "iso3": "TGO",
   "ne": "Togo",
   "lat": 8.44,
-  "lon": 1
+  "lon": 1.0
  },
  "بنین": {
   "en": "Benin",
@@ -984,7 +991,7 @@
   "iso3": "URY",
   "ne": "Uruguay",
   "lat": -32.78,
-  "lon": -56
+  "lon": -56.0
  },
  "گویان": {
   "en": "Guyana",
@@ -1124,7 +1131,7 @@
   "iso3": "FJI",
   "ne": "Fiji",
   "lat": -17.83,
-  "lon": 178
+  "lon": 178.0
  },
  "ساموآ": {
   "en": "Samoa",
@@ -1201,7 +1208,7 @@
   "iso3": "ARM",
   "ne": "Armenia",
   "lat": 40.22,
-  "lon": 45
+  "lon": 45.0
  },
  "گرجستان": {
   "en": "Georgia",
@@ -1209,33 +1216,5 @@
   "ne": "Georgia",
   "lat": 42.16,
   "lon": 43.48
- },
- "انگلیس": {
-  "en": "England",
-  "iso3": null,
-  "ne": "England",
-  "lat": 52.75,
-  "lon": -1.45
- },
- "اسکاتلند": {
-  "en": "Scotland",
-  "iso3": null,
-  "ne": "Scotland",
-  "lat": 56.65,
-  "lon": -4.2
- },
- "ولز": {
-  "en": "Wales",
-  "iso3": null,
-  "ne": "Wales",
-  "lat": 52.35,
-  "lon": -3.7
- },
- "ایرلند شمالی": {
-  "en": "Northern Ireland",
-  "iso3": null,
-  "ne": "Northern Ireland",
-  "lat": 54.65,
-  "lon": -6.75
  }
 }
