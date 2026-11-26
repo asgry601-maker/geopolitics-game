@@ -5,16 +5,16 @@
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 68,
-    "pending_countries": 106,
+    "researched_countries": 75,
+    "pending_countries": 99,
     "last_batch": [
-      "HUN",
-      "ROU",
-      "BGR",
-      "HRV",
-      "SVN",
-      "EST",
-      "LVA"
+      "SRB",
+      "BIH",
+      "ALB",
+      "MKD",
+      "MNE",
+      "BLR",
+      "MDA"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.",
@@ -10143,22 +10143,171 @@
     },
     "SRB": {
       "country_name_fa": "صربستان",
-      "country_name_en": "Republic of Serbia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "country_name_en": "Serbia",
+      "system_type": "parliamentary_republic_in_transition_after_competitive_election",
+      "government_model": "جمهوری پارلمانی؛ انتخابات زودهنگام ۲۵ اکتبر ۲۰۲۶ نتیجه سیاسی را تغییر داد، اما در ۵ نوامبر دولت جدید هنوز تشکیل نشده بود.",
+      "parties": [
+        {
+          "id": "srb_student_list",
+          "name_fa": "فهرست دانشجویان – دانشجویان پیروز می‌شوند",
+          "name_en": "Student List – Students Win",
+          "entity_type": "electoral_movement",
+          "political_role": "برنده انتخابات ۲۵ اکتبر؛ ۱۴۰ کرسی از ۲۵۰ کرسی طبق گزارش نهایی کمیسیون انتخابات در ۵ نوامبر. جنبش ضدفساد با چهره‌های دانشگاهی و مدنی؛ هنوز دولت تشکیل نداده.",
+          "ideological_profile": "ائتلاف اعتراضی ناهمگون؛ محور مشترک اصلاح حاکمیت قانون، پاسخگویی و مبارزه با فساد؛ مواضع ژئوپلیتیکی درون آن کاملاً یکدست نیست.",
+          "legal_status": "electoral_list",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_sns",
+          "name_fa": "حزب ترقی‌خواه صربستان",
+          "name_en": "Serbian Progressive Party (SNS)",
+          "entity_type": "party",
+          "political_role": "حزب مسلط دولت پیشین؛ فهرست متحد صربستان به رهبری الکساندر ووچیچ ۱۰۳ کرسی گرفت و در ۵ نوامبر در قدرت اجراییِ مستعفی/انتقالی باقی بود.",
+          "ideological_profile": "محافظه‌کار ملی، پوپولیست و عمل‌گرا؛ ترکیبی از گرایش‌های طرفدار اتحادیه اروپا و روابط نزدیک با روسیه و چین.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_sps",
+          "name_fa": "حزب سوسیالیست صربستان",
+          "name_en": "Socialist Party of Serbia (SPS)",
+          "entity_type": "party",
+          "political_role": "شریک دیرینه ائتلاف‌های SNS؛ در انتخابات ۲۰۲۶ در فهرست جداگانه/ائتلافی کوچک‌تر شرکت کرد.",
+          "ideological_profile": "چپ میانه اسمی، دولت‌گرا، ملی‌گرا و عمل‌گرا در ائتلاف‌سازی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_nada",
+          "name_fa": "ائتلاف امید برای صربستان",
+          "name_en": "NADA – National Democratic Alternative",
+          "entity_type": "electoral_alliance",
+          "political_role": "جریان اپوزیسیون راست و ملی‌محافظه‌کار در رقابت انتخاباتی.",
+          "ideological_profile": "محافظه‌کار ملی، حاکمیت‌گرا و منتقد امتیازدهی درباره کوزوو.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "srb_ssp",
+          "name_fa": "حزب آزادی و عدالت",
+          "name_en": "Party of Freedom and Justice (SSP)",
+          "entity_type": "party",
+          "political_role": "بخشی از اپوزیسیون سنتی و منتقد حکومت ووچیچ؛ در میان نیروهای انتخاباتی مخالف.",
+          "ideological_profile": "میانه‌رو تا میانه‌چپ، ضدفساد و طرفدار اصلاحات نهادی و همگرایی اروپایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "srb_student_anti_corruption",
+          "name_fa": "جریان ضدفساد و اصلاح نهادی جنبش دانشجویی",
+          "name_en": "Student anti-corruption and institutional reform current",
+          "entity_type": "movement_current",
+          "policy_positions": {
+            "domestic": "شفافیت قراردادهای عمومی، پاسخگویی مقام‌ها، استقلال نهادها و رسانه‌ها.",
+            "foreign_policy": "در آغاز کار از موضع‌گیری قطعی و یکپارچه درباره روسیه، اتحادیه اروپا و کوزوو پرهیز کرده است."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "srb_nationalist_sovereigntist",
+          "name_fa": "جریان ملی‌گرا و حاکمیت‌گرا",
+          "name_en": "Nationalist and sovereigntist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حفظ موضع عدم شناسایی استقلال کوزوو و توازن روابط با روسیه، چین و غرب."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "srb_presidency_acting",
+          "name_fa": "ریاست‌جمهوری موقت",
+          "name_en": "Acting Presidency",
+          "role": "ووچیچ در ۲۷ سپتامبر استعفا داد؛ رئیس مجلس آنا برنابیچ در ۵ نوامبر کفیل ریاست‌جمهوری بود و انتخابات ریاست‌جمهوری زودهنگام لازم بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_caretaker_cabinet",
+          "name_fa": "دولت انتقالی",
+          "name_en": "Caretaker Government",
+          "role": "کابینه به نخست‌وزیری جورُو ماچوت تا تشکیل دولت جدید به کار ادامه می‌دهد.",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "نتایج انتخابات ۵ نوامبر نهایی شده بود؛ مجلس جدید هنوز تشکیل جلسه نداده و فرایند تشکیل دولت آغاز نشده بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "srb_security_institutions",
+          "name_fa": "نهادهای امنیتی و اداری",
+          "name_en": "Security and Administrative Institutions",
+          "role": "نهادهای دولتی و امنیتی با تداوم اداری در دوره انتقال؛ نقش آن‌ها در انتقال قدرت و اعتماد عمومی مهم است.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Ana Brnabić (acting; following Aleksandar Vučić resignation)",
+        "head_of_government": "Đuro Macut",
+        "prime_minister": "Đuro Macut",
+        "government_party": "SNS-led outgoing coalition",
+        "status": "caretaker government; new parliament and cabinet not yet formed on 2026-11-05",
+        "election_result": "Student List 140 seats; SNS-led United Serbia 103; minority lists 7."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "rule_of_law",
+          "eu_accession",
+          "russia_relations",
+          "china_relations",
+          "kosovo_status",
+          "protest_mobilization"
+        ],
+        "rule": "در تاریخ آغاز بازی، پیروزی انتخاباتی جنبش دانشجویی قطعی شده اما انتقال قدرت هنوز انجام نشده است. دولت موقت SNS را از اکثریت منتخب جدید جدا مدل کن؛ از فرض مواضع خارجی یکپارچه برای جنبش دانشجویی خودداری شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — Serbia and 2026 parliamentary election",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12267/",
+            "date": "2026-10-30"
+          },
+          {
+            "name": "ElectioMap — Serbia parliamentary election 2026, official final allocation",
+            "url": "https://electiomap.com/serbia/parliamentary/2026",
+            "date": "2026-11-05"
+          },
+          {
+            "name": "Associated Press — EU enlargement report and Serbia",
+            "url": "https://apnews.com/article/acd61b3edcb7b5da8a21b4558f32831b",
+            "date": "2026-11-04"
+          }
+        ],
+        "notes": "گزارش نهایی تخصیص کرسی‌ها در ۵ نوامبر ۲۰۲۶ منتشر شد: ۱۴۰ کرسی فهرست دانشجویان، ۱۰۳ کرسی فهرست متحد صربستان و ۷ کرسی فهرست‌های اقلیت. در این تاریخ مجلس جدید هنوز تشکیل نشده و کابینه جدیدی روی کار نیامده بود. ارقام ۱۴۱ کرسی در برخی گزارش‌های اولیه/تحلیل‌ها با گزارش نهایی ۱۴۰ کرسی جایگزین شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "srb_student_group",
+          "name_en": "Student List Parliamentary Group",
+          "party_id": "srb_student_list"
+        },
+        {
+          "id": "srb_sns_group",
+          "name_en": "SNS-led United Serbia Parliamentary Group",
+          "party_id": "srb_sns"
+        }
+      ]
     },
     "HRV": {
       "country_name_fa": "کرواسی",
@@ -10376,61 +10525,585 @@
       ]
     },
     "BIH": {
-      "country_name_fa": "بوسنی",
-      "country_name_en": "Bosnia and Herz.",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "country_name_fa": "بوسنی و هرزگوین",
+      "country_name_en": "Bosnia and Herzegovina",
+      "system_type": "complex_federal_parliamentary_republic_with_ethno_power_sharing",
+      "government_model": "دولت فدرال پیچیده بر پایه توافق دیتون؛ ریاست‌جمهوری سه‌نفره، دو موجودیت و ساختارهای قومی/منطقه‌ای. انتخابات عمومی ۴ اکتبر ۲۰۲۶ برگزار شد و مذاکرات ائتلافی در ۵ نوامبر ادامه داشت.",
+      "parties": [
+        {
+          "id": "bih_sda",
+          "name_fa": "حزب اقدام دموکراتیک",
+          "name_en": "Party of Democratic Action (SDA)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب در بخش فدراسیون در انتخابات ۲۰۲۶؛ نیروی اصلی ملی‌گرای بوسنیایی و اپوزیسیون دولت قبلی.",
+          "ideological_profile": "محافظه‌کار بوسنیایی، دموکرات‌مسلمان و حامی حفظ دولت مرکزی چندقومیتی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_snsd",
+          "name_fa": "اتحاد سوسیال‌دموکرات‌های مستقل",
+          "name_en": "Alliance of Independent Social Democrats (SNSD)",
+          "entity_type": "party",
+          "political_role": "نیروی مسلط صرب‌های بوسنی در جمهوری صربسکا؛ بازیگر اصلی مذاکرات ائتلافی پس از انتخابات.",
+          "ideological_profile": "ملی‌گرای صرب، خودمختاری‌خواه/تمرکززدا و منتقد اختیارات دولت مرکزی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_hdz",
+          "name_fa": "اتحادیه دموکراتیک کرواسی بوسنی و هرزگوین",
+          "name_en": "Croatian Democratic Union of Bosnia and Herzegovina (HDZ BiH)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی ملی‌گرای کروات و شریک محوری دولت ائتلافی پیشین؛ در مذاکرات پس از انتخابات نیز بازیگر تعیین‌کننده.",
+          "ideological_profile": "دموکرات‌مسیحی، محافظه‌کار و حامی اصلاح قواعد انتخاباتی به نفع نمایندگی کروات‌ها.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_sdp",
+          "name_fa": "حزب سوسیال‌دموکرات بوسنی و هرزگوین",
+          "name_en": "Social Democratic Party of Bosnia and Herzegovina (SDP BiH)",
+          "entity_type": "party",
+          "political_role": "حزب چندقومیتی چپ میانه و جزء دولت ائتلافی پیشین؛ پس از انتخابات ۲۰۲۶ همچنان نیروی مهم پارلمانی.",
+          "ideological_profile": "سوسیال‌دموکرات، مدنی و طرفدار نهادهای مشترک دولت.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_nip",
+          "name_fa": "مردم و عدالت",
+          "name_en": "People and Justice (NiP)",
+          "entity_type": "party",
+          "political_role": "حزب بوسنیایی میانه‌رو و شریک ائتلافی دولت پیشین.",
+          "ideological_profile": "میانه‌رو، اصلاح‌طلب و ضدفساد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "bih_our_party",
+          "name_fa": "حزب ما",
+          "name_en": "Our Party (Naša stranka)",
+          "entity_type": "party",
+          "political_role": "حزب مدنی چندقومیتی و لیبرال؛ شریک دولت قبلی.",
+          "ideological_profile": "لیبرال، سکولار، مدنی و ترقی‌خواه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_pdp",
+          "name_fa": "حزب پیشرفت دموکراتیک",
+          "name_en": "Party of Democratic Progress (PDP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون صرب در جمهوری صربسکا و رقیب SNSD.",
+          "ideological_profile": "میانه‌راست، طرفدار اصلاحات و منتقد تمرکز قدرت SNSD.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bih_bosniak_centralist",
+          "name_fa": "جریان بوسنیاییِ حامی دولت مرکزی",
+          "name_en": "Bosniak state-centralist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ نهادهای مرکزی و تقویت کارآمدی دولت مشترک.",
+            "foreign_policy": "حمایت از مسیر اتحادیه اروپا و ناتو."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "bih_serb_entity_autonomy",
+          "name_fa": "جریان خودمختاری‌خواه صرب جمهوری صربسکا",
+          "name_en": "Republika Srpska autonomy current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ یا گسترش اختیارات جمهوری صربسکا در برابر دولت مرکزی.",
+            "foreign_policy": "روابط نزدیک‌تر با صربستان و روسیه و مخالفت با برخی تصمیم‌های دولت مرکزی."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "bih_croat_representation",
+          "name_fa": "جریان نمایندگی سیاسی کروات‌ها",
+          "name_en": "Croat political representation current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اصلاح قانون انتخابات و تضمین نمایندگی مستقل سیاسی کروات‌ها."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bih_tripartite_presidency",
+          "name_fa": "ریاست‌جمهوری سه‌نفره",
+          "name_en": "Tripartite Presidency",
+          "role": "اعضای منتخب در ۴ اکتبر: دنیس بچیروویچ، ژلکا تسویانوویچ و داریانا فیلیپوویچ؛ آغاز دوره اعضای جدید طبق روند قانونی پس از انتخابات.",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_council_ministers",
+          "name_fa": "شورای وزیران",
+          "name_en": "Council of Ministers",
+          "role": "قوه مجریه دولت مرکزی به ریاست بورجانا کریشتو؛ ترکیب ائتلافی دولت جدید در ۵ نوامبر هنوز مورد مذاکره بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_entities",
+          "name_fa": "دو موجودیت فدرال",
+          "name_en": "Federation of Bosnia and Herzegovina and Republika Srpska",
+          "role": "دارای دولت‌ها، مجالس و اختیارات گسترده؛ رقابت حزبی در سطح موجودیت‌ها به اندازه سطح مرکزی اهمیت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "bih_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "داور اختلافات قانون اساسی و تقسیم اختیارات؛ یکی از مراکز مهم تنش نهادی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Tripartite Presidency: Denis Bećirović; Željka Cvijanović; Darijana Filipović (elected 2026; transition timing applies)",
+        "head_of_government": "Borjana Krišto",
+        "chairperson_of_council_of_ministers": "Borjana Krišto",
+        "government_status": "post-election coalition negotiations; outgoing state-level coalition remains caretaker pending formation",
+        "previous_coalition": [
+          "SNSD",
+          "SDP BiH",
+          "HDZ BiH",
+          "NiP",
+          "Our Party",
+          "DNS"
+        ],
+        "note": "در ۵ نوامبر توافق ائتلافی جدید نهایی نشده بود."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "ethnic_power_sharing",
+          "state_centralization",
+          "entity_autonomy",
+          "eu_integration",
+          "electoral_law",
+          "coalition_negotiations"
+        ],
+        "rule": "هیچ تصمیم سیاسی را صرفاً به یک دولت ملی واحد نسبت نده. بازیگرها را بر اساس سه گروه قومی، دو موجودیت، سطح کانتون‌ها و نهادهای مشترک تفکیک کن؛ توافق‌های ائتلافی پس از انتخابات هنوز قطعی نیستند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "OSW — Bosnia and Herzegovina's elections, 4 October 2026",
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-10-09/bosnia-and-herzegovinas-elections-voter-apathy-and-entrenched",
+            "date": "2026-10-09"
+          },
+          {
+            "name": "N1 — Dodik and Covic post-election coalition talks",
+            "url": "https://n1info.ba/english/news/dodik-and-covic-reaffirm-alliance-vow-to-lead-bosnias-post-election-coalition-talks/",
+            "date": "2026-10-12"
+          },
+          {
+            "name": "IBNA — Bosnia government formation talks",
+            "url": "https://www.ibnaeu.com/en/2026/11/03/bosnia-herzegovina-government-formation-2026/",
+            "date": "2026-11-03"
+          }
+        ],
+        "notes": "انتخابات عمومی در ۴ اکتبر ۲۰۲۶ برگزار شد. در ۵ نوامبر مذاکرات تشکیل دولت جدید ادامه داشت و توافق نهایی وجود نداشت. SDA در مجلس فدراسیون بزرگ‌ترین حزب شد؛ SNSD در جمهوری صربسکا و HDZ BiH در نمایندگی کروات‌ها همچنان بازیگران کلیدی‌اند. ساختار پیچیده دیتون باید در مدل حفظ شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "bih_sda_group",
+          "name_en": "SDA Parliamentary Group",
+          "party_id": "bih_sda"
+        },
+        {
+          "id": "bih_snsd_group",
+          "name_en": "SNSD Parliamentary Group",
+          "party_id": "bih_snsd"
+        },
+        {
+          "id": "bih_hdz_group",
+          "name_en": "HDZ BiH Parliamentary Group",
+          "party_id": "bih_hdz"
+        },
+        {
+          "id": "bih_sdp_group",
+          "name_en": "SDP BiH Parliamentary Group",
+          "party_id": "bih_sdp"
+        }
+      ]
     },
     "ALB": {
       "country_name_fa": "آلبانی",
       "country_name_en": "Albania",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_competitive_multiparty_elections",
+      "government_model": "جمهوری پارلمانی؛ حزب سوسیالیست پس از انتخابات مه ۲۰۲۵ اکثریت پارلمانی را حفظ کرد.",
+      "parties": [
+        {
+          "id": "alb_ps",
+          "name_fa": "حزب سوسیالیست آلبانی",
+          "name_en": "Socialist Party of Albania (PS)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم به رهبری ادی راما؛ ۸۳ کرسی از ۱۴۰ کرسی در انتخابات ۱۱ مه ۲۰۲۵.",
+          "ideological_profile": "سوسیال‌دموکرات و چپ میانه؛ طرفدار ادغام در اتحادیه اروپا و توسعه زیرساخت و گردشگری.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "alb_dp",
+          "name_fa": "حزب دموکرات آلبانی",
+          "name_en": "Democratic Party of Albania (PD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی به رهبری سالی بریشا؛ ۵۳ کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "محافظه‌کار، راست میانه و طرفدار اتحادیه اروپا؛ دارای شکاف‌ها و منازعات رهبری داخلی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "alb_albania_becomes",
+          "name_fa": "جنبش آلبانی در حال شکوفایی",
+          "name_en": "Albania Becomes Movement",
+          "entity_type": "political_movement",
+          "political_role": "نیروی سیاسی تازه‌وارد؛ یک کرسی در انتخابات ۲۰۲۵ و منتقد فساد و احزاب مستقر.",
+          "ideological_profile": "ضدفساد، اصلاح‌طلب و ضدساختار سنتی؛ مواضع برنامه‌ای در حال تکامل.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "alb_pl",
+          "name_fa": "حزب آزادی",
+          "name_en": "Freedom Party (PL)",
+          "entity_type": "party",
+          "political_role": "حزب منشعب از جنبش سوسیالیست برای ادغام؛ در اپوزیسیون و دارای شبکه سیاسی قدیمی.",
+          "ideological_profile": "میانه‌رو، عمل‌گرا و منتقد دولت؛ ایدئولوژی منسجم آن محدود است.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "alb_psd",
+          "name_fa": "حزب سوسیال‌دموکرات آلبانی",
+          "name_en": "Social Democratic Party of Albania (PSD)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با نفوذ ائتلافی و محلی؛ از نیروهای دارای حضور پارلمانی.",
+          "ideological_profile": "سوسیال‌دموکرات اسمی و عمل‌گرا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "alb_ps_rama",
+          "name_fa": "جریان رهبری ادی راما در حزب سوسیالیست",
+          "name_en": "Edi Rama leadership current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "سرمایه‌گذاری، گردشگری، زیرساخت و اصلاحات اداری.",
+            "foreign_policy": "اولویت عضویت در اتحادیه اروپا و همکاری با ناتو."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "alb_dp_opposition",
+          "name_fa": "جریان اپوزیسیون محافظه‌کار",
+          "name_en": "Conservative opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "مبارزه با فساد، تغییر دولت و نقد تمرکز قدرت.",
+            "foreign_policy": "حمایت از عضویت در اتحادیه اروپا و روابط نزدیک با آمریکا."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "alb_prime_minister",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "مرکز اصلی قوه مجریه به ریاست ادی راما.",
+          "confidence": "high"
+        },
+        {
+          "id": "alb_assembly",
+          "name_fa": "مجلس آلبانی",
+          "name_en": "Assembly of Albania",
+          "role": "پارلمان ۱۴۰ نفره؛ اکثریت ۸۳ کرسی حزب سوسیالیست.",
+          "confidence": "high"
+        },
+        {
+          "id": "alb_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "باجرام بگای رئیس‌جمهور؛ مقام ریاست کشور با اختیارات محدودتر از نخست‌وزیر.",
+          "confidence": "high"
+        },
+        {
+          "id": "alb_special_anti_corruption",
+          "name_fa": "نهادهای ویژه مبارزه با فساد و جرایم سازمان‌یافته",
+          "name_en": "Special Anti-Corruption and Organized Crime Structures (SPAK)",
+          "role": "نهاد قضایی مستقل و اثرگذار بر فضای سیاسی از طریق تحقیقات پرونده‌های فساد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Bajram Begaj",
+        "head_of_government": "Edi Rama",
+        "prime_minister": "Edi Rama",
+        "governing_party": "Socialist Party of Albania",
+        "parliamentary_status": "83 of 140 seats after the 11 May 2025 election."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_accession",
+          "anti_corruption",
+          "tourism_and_investment",
+          "public_administration",
+          "judicial_independence",
+          "emigration"
+        ],
+        "rule": "اکثریت پارلمانی حزب سوسیالیست را با نفوذ اپوزیسیون در افکار عمومی و نهادهای قضایی مستقل متوازن کن؛ اختلافات درونی حزب دموکرات را نادیده نگیر."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Council of Europe PACE — Albania 2025 election results",
+            "url": "https://pace.coe.int/en/files/35761/html",
+            "date": "2026"
+          },
+          {
+            "name": "OSCE/ODIHR — Albania Parliamentary Elections 2025 Final Report",
+            "url": "https://odihr.osce.org/sites/default/files/documents/official_documents/2026/05/ALB%20Parliamentary%202025%20Final%20Report_23.10.2025.pdf",
+            "date": "2025-10-23"
+          },
+          {
+            "name": "CIDOB — European governments, June 2026",
+            "url": "https://www.cidob.org/sites/default/files/2026-06/Gobiernos_08_06_26.pdf",
+            "date": "2026-06"
+          }
+        ],
+        "notes": "انتخابات ۱۱ مه ۲۰۲۵ به پیروزی حزب سوسیالیست با ۸۳ کرسی از ۱۴۰ انجامید. حزب دموکرات ۵۳ کرسی گرفت؛ جنبش آلبانی در حال شکوفایی یک کرسی داشت. ادعاهای اپوزیسیون درباره صحت نتایج و فضای قطبی سیاسی در ارزیابی OSCE ثبت شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "alb_ps_group",
+          "name_en": "Socialist Party Parliamentary Group",
+          "party_id": "alb_ps"
+        },
+        {
+          "id": "alb_dp_group",
+          "name_en": "Democratic Party Parliamentary Group",
+          "party_id": "alb_dp"
+        }
+      ]
     },
     "MKD": {
       "country_name_fa": "مقدونیه شمالی",
       "country_name_en": "North Macedonia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_multiparty_coalition_government",
+      "government_model": "جمهوری پارلمانی؛ دولت ائتلافی به رهبری VMRO-DPMNE با مشارکت ائتلاف آلبانیایی VLEN و حزب ZNAM.",
+      "parties": [
+        {
+          "id": "mkd_vmro",
+          "name_fa": "سازمان انقلابی داخلی مقدونیه – حزب دموکراتیک وحدت ملی مقدونیه",
+          "name_en": "VMRO-DPMNE",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب دولت؛ ۵۸ کرسی در انتخابات مه ۲۰۲۴ و محور دولت هریستیجان میتسکوسکی.",
+          "ideological_profile": "محافظه‌کار ملی، راست میانه، تأکید بر هویت مقدونی و رویکرد سخت‌گیرانه‌تر در مناقشه نام/مسیر اروپایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_vlen",
+          "name_fa": "ائتلاف ولن",
+          "name_en": "VLEN / VREDI Coalition",
+          "entity_type": "electoral_alliance",
+          "political_role": "شریک آلبانیایی دولت؛ ائتلافی از احزاب آلبانیایی که جایگاه DUI را در دولت گرفت.",
+          "ideological_profile": "میانه‌رو تا راست میانه، آلبانیایی‌محور و طرفدار اصلاحات و ادغام اروپایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_znam",
+          "name_fa": "برای مقدونیه ما – زنام",
+          "name_en": "For Our Macedonia (ZNAM)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک‌تر دولت؛ منشعب از فضای سوسیال‌دموکرات.",
+          "ideological_profile": "میانه‌گرا تا محافظه‌کار اجتماعی، ملی‌محور و ضدساختار سیاسی پیشین.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_sdsm",
+          "name_fa": "اتحادیه سوسیال‌دموکرات مقدونیه",
+          "name_en": "Social Democratic Union of Macedonia (SDSM)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی اپوزیسیون؛ ۱۸ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "سوسیال‌دموکرات، چپ میانه و طرفدار اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_dui",
+          "name_fa": "اتحاد دموکراتیک برای ادغام",
+          "name_en": "Democratic Union for Integration (DUI)",
+          "entity_type": "party",
+          "political_role": "حزب آلبانیایی باسابقه و اپوزیسیون پس از خروج از دولت در ۲۰۲۴؛ محور ائتلاف جبهه اروپا.",
+          "ideological_profile": "آلبانیایی‌محور، میانه‌رو و طرفدار ادغام در اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_levica",
+          "name_fa": "چپ",
+          "name_en": "The Left (Levica)",
+          "entity_type": "party",
+          "political_role": "نیروی اپوزیسیون کوچک با مواضع ضدنخبگان و ملی‌گرایانه.",
+          "ideological_profile": "چپ رادیکال، ضدنئولیبرال و منتقد برخی سازش‌های بین‌المللی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mkd_macedonian_national",
+          "name_fa": "جریان ملی‌محافظه‌کار مقدونی",
+          "name_en": "Macedonian national-conservative current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ هویت و زبان مقدونی و مخالفت با تغییرات قانون اساسی بدون تضمین‌های سیاسی.",
+            "foreign_policy": "حمایت از عضویت در اتحادیه اروپا، اما مخالفت با امتیازدهی یک‌جانبه به بلغارستان."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "mkd_albanian_representation",
+          "name_fa": "جریان نمایندگی سیاسی آلبانیایی‌ها",
+          "name_en": "Albanian political representation current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اجرای حقوق زبانی، مشارکت در نهادهای دولتی و برابری در نمایندگی.",
+            "foreign_policy": "حمایت از ادغام اروپایی و روابط نزدیک با آلبانی و کوزوو."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mkd_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست هریستیجان میتسکوسکی.",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_assembly",
+          "name_fa": "مجلس / سوب‌رانیه",
+          "name_en": "Assembly (Sobranie)",
+          "role": "پارلمان ۱۲۰ نفره؛ ائتلاف حاکم حدود ۷۸ کرسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "گوردانا سیلیانوفسکا-داوکووا رئیس‌جمهور؛ نقش در سیاست خارجی و انتصاب‌ها در چارچوب قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "mkd_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد داوری قانون اساسی و حقوق اقلیت‌ها.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Gordana Siljanovska-Davkova",
+        "head_of_government": "Hristijan Mickoski",
+        "prime_minister": "Hristijan Mickoski",
+        "governing_parties": [
+          "VMRO-DPMNE",
+          "VLEN",
+          "ZNAM"
+        ],
+        "parliamentary_support": "Majority coalition; 78 seats reported in 120-member assembly."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_accession",
+          "bulgaria_dispute",
+          "constitutional_amendments",
+          "ethnic_power_sharing",
+          "corruption",
+          "economic_growth"
+        ],
+        "rule": "ائتلاف حاکم را سه‌جزئی مدل کن؛ VLEN نمایندگی آلبانیایی‌ها را دارد و نباید با VMRO-DPMNE یک جریان ایدئولوژیک واحد فرض شود. DUI و SDSM اپوزیسیون‌های جدا هستند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Council of Europe PACE — North Macedonia political institutions",
+            "url": "https://pace.coe.int/en/files/35757/html",
+            "date": "2026"
+          },
+          {
+            "name": "European Commission — North Macedonia 2024 governance",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=SWD%3A2024%3A693%3AFIN",
+            "date": "2024"
+          },
+          {
+            "name": "BTI 2026 — North Macedonia",
+            "url": "https://bti-project.org/en/reports/country-report/MKD",
+            "date": "2026"
+          }
+        ],
+        "notes": "انتخابات پارلمانی ۸ مه ۲۰۲۴ و تشکیل دولت در ۲۳ ژوئن ۲۰۲۴؛ VMRO-DPMNE با ۵۸ کرسی، SDSM با ۱۸، DUI با ۱۸، VLEN با ۱۴ و ZNAM و Levica هرکدام با ۶ کرسی. ائتلاف حاکم با VMRO-DPMNE، VLEN و ZNAM حدود ۷۸ کرسی دارد."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mkd_vmro_group",
+          "name_en": "VMRO-DPMNE Parliamentary Group",
+          "party_id": "mkd_vmro"
+        },
+        {
+          "id": "mkd_vlen_group",
+          "name_en": "VLEN Parliamentary Group",
+          "party_id": "mkd_vlen"
+        },
+        {
+          "id": "mkd_znam_group",
+          "name_en": "ZNAM Parliamentary Group",
+          "party_id": "mkd_znam"
+        },
+        {
+          "id": "mkd_sdsm_group",
+          "name_en": "SDSM Parliamentary Group",
+          "party_id": "mkd_sdsm"
+        },
+        {
+          "id": "mkd_dui_group",
+          "name_en": "DUI Parliamentary Group",
+          "party_id": "mkd_dui"
+        }
+      ]
     },
     "SVN": {
       "country_name_fa": "اسلوونی",
@@ -10664,21 +11337,215 @@
     "MNE": {
       "country_name_fa": "مونته‌نگرو",
       "country_name_en": "Montenegro",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_fragmented_multiparty_coalition",
+      "government_model": "جمهوری پارلمانی؛ دولت ائتلافی چندحزبی به رهبری جنبش اروپا اکنون، با تکیه بر احزاب محافظه‌کار و اقلیت‌ها.",
+      "parties": [
+        {
+          "id": "mne_pes",
+          "name_fa": "جنبش اروپا اکنون",
+          "name_en": "Europe Now! Movement (PES!)",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر و محور دولت؛ میلویکو اسپاییچ نخست‌وزیر.",
+          "ideological_profile": "میانه‌رو، اقتصادی-تکنوکراتیک و طرفدار اتحادیه اروپا؛ سیاست‌های افزایش درآمد و اصلاحات اقتصادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_dcg",
+          "name_fa": "مونته‌نگروی دموکراتیک",
+          "name_en": "Democratic Montenegro (Democrats)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی و نیروی محافظه‌کار میانه‌رو.",
+          "ideological_profile": "محافظه‌کار میانه‌رو، ضدفساد و طرفدار اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_nsd",
+          "name_fa": "دموکراسی نوین صرب",
+          "name_en": "New Serb Democracy (NSD)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی با پایگاه صرب‌گرا؛ بخشی از بلوک برای آینده مونته‌نگرو.",
+          "ideological_profile": "محافظه‌کار صرب، هویت‌محور و منتقد برخی جنبه‌های استقلال‌طلبی مونته‌نگرو.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_dnp",
+          "name_fa": "حزب دموکراتیک خلق",
+          "name_en": "Democratic People's Party (DNP)",
+          "entity_type": "party",
+          "political_role": "شریک پارلمانی/ائتلافی از بلوک برای آینده مونته‌نگرو.",
+          "ideological_profile": "ملی‌گرای صرب و محافظه‌کار.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mne_bs",
+          "name_fa": "حزب بوشنیاک",
+          "name_en": "Bosniak Party (BS)",
+          "entity_type": "party",
+          "political_role": "شریک اقلیت‌محور دولت؛ نماینده بخشی از جامعه بوشنیاک.",
+          "ideological_profile": "میانه‌رو، اقلیت‌محور و طرفدار همگرایی اروپایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_dps",
+          "name_fa": "حزب دموکراتیک سوسیالیست‌ها",
+          "name_en": "Democratic Party of Socialists (DPS)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی اپوزیسیون و نیروی مسلط سابق؛ منتقد دولت اسپاییچ.",
+          "ideological_profile": "میانه‌رو تا میانه‌چپ، مدنی و طرفدار استقلال دولت مونته‌نگرو و اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_snp",
+          "name_fa": "حزب سوسیالیست خلق مونته‌نگرو",
+          "name_en": "Socialist People's Party of Montenegro (SNP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با سابقه مشارکت در ائتلاف‌های دولت.",
+          "ideological_profile": "محافظه‌کار اجتماعی، چپ میانه اسمی و دارای گرایش‌های صرب‌گرا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mne_eu_reform",
+          "name_fa": "جریان اصلاح‌طلب طرفدار اتحادیه اروپا",
+          "name_en": "Pro-EU reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "تکمیل مذاکرات عضویت اتحادیه اروپا و اصلاح حاکمیت قانون.",
+            "economy": "اصلاحات مالی و بهبود فضای سرمایه‌گذاری."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "mne_serb_identity",
+          "name_fa": "جریان هویت‌گرای صرب",
+          "name_en": "Serb identity current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ پیوندهای فرهنگی و زبانی با صربستان و جایگاه جامعه صرب در کشور.",
+            "foreign_policy": "روابط نزدیک‌تر با صربستان؛ اختلاف بر سر نمادها و هویت ملی."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mne_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست میلویکو اسپاییچ.",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_assembly",
+          "name_fa": "مجلس مونته‌نگرو",
+          "name_en": "Parliament of Montenegro",
+          "role": "پارلمان تک‌مجلسی؛ دوام دولت به ائتلاف چندحزبی و حمایت نمایندگان اقلیت‌ها وابسته است.",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "یاکوف میلانوویچ رئیس‌جمهور؛ مقام جدا از نخست‌وزیر.",
+          "confidence": "high"
+        },
+        {
+          "id": "mne_judiciary",
+          "name_fa": "نهادهای قضایی و دادستانی",
+          "name_en": "Judiciary and Prosecutorial Institutions",
+          "role": "اصلاح استقلال قضایی و مبارزه با فساد از شروط کلیدی مسیر اتحادیه اروپا.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Jakov Milatović",
+        "head_of_government": "Milojko Spajić",
+        "prime_minister": "Milojko Spajić",
+        "governing_parties": [
+          "PES!",
+          "Democratic Montenegro",
+          "NSD",
+          "DNP",
+          "Bosniak Party",
+          "SNP",
+          "Albanian minority parties"
+        ],
+        "government_type": "broad multi-party coalition",
+        "note": "حضور و حمایت برخی احزاب در دولت/پارلمان در طول دوره تغییر کرده؛ برای محاسبه رأی باید کرسی و وضعیت هر شریک جدا نگهداری شود."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_accession",
+          "rule_of_law",
+          "ethnic_identity",
+          "serbia_relations",
+          "economic_reforms",
+          "tourism",
+          "coalition_stability"
+        ],
+        "rule": "دولت چندحزبی شکننده است؛ PES را محور اجرایی، احزاب صرب‌گرا و حزب بوشنیاک را شرکای دارای دستورکارهای متفاوت مدل کن. DPS اپوزیسیون اصلی است."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CIDOB — European governments, June 2026",
+            "url": "https://www.cidob.org/sites/default/files/2026-06/Gobiernos_08_06_26.pdf",
+            "date": "2026-06"
+          },
+          {
+            "name": "AP — EU enlargement report and Montenegro accession timeline",
+            "url": "https://apnews.com/article/acd61b3edcb7b5da8a21b4558f32831b",
+            "date": "2026-11-04"
+          },
+          {
+            "name": "GeoFiscalStatus — Who governs Europe, October 2026",
+            "url": "https://www.geofiscalstatus.com/news/who-governs-europe-a-guide-to-48-governments",
+            "date": "2026-10-30"
+          }
+        ],
+        "notes": "ترکیب دولت از ۲۰۲۳ به بعد چندین بار تغییر کرده و بلوک‌های ائتلافی شامل PES، دموکرات‌ها، NSD/DNP، حزب بوشنیاک و احزاب اقلیت بوده‌اند. این پروفایل ساختار بلوکی را ثبت می‌کند و از نسبت دادن اکثریت ثابت به همه شرکا خودداری می‌کند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mne_pes_group",
+          "name_en": "Europe Now! Parliamentary Group",
+          "party_id": "mne_pes"
+        },
+        {
+          "id": "mne_dcg_group",
+          "name_en": "Democratic Montenegro Parliamentary Group",
+          "party_id": "mne_dcg"
+        },
+        {
+          "id": "mne_nsd_group",
+          "name_en": "New Serb Democracy Parliamentary Group",
+          "party_id": "mne_nsd"
+        },
+        {
+          "id": "mne_dps_group",
+          "name_en": "DPS Parliamentary Group",
+          "party_id": "mne_dps"
+        },
+        {
+          "id": "mne_bs_group",
+          "name_en": "Bosniak Party Parliamentary Group",
+          "party_id": "mne_bs"
+        }
+      ]
     },
     "UKR": {
       "country_name_fa": "اوکراین",
@@ -10866,40 +11733,358 @@
     "BLR": {
       "country_name_fa": "بلاروس",
       "country_name_en": "Belarus",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "authoritarian_presidential_system_with_managed_noncompetitive_parties",
+      "government_model": "جمهوری ریاستی اقتدارگرا؛ احزاب قانونی عمدتاً حامی حکومت‌اند و رقابت آزاد اپوزیسیون عملاً وجود ندارد.",
+      "parties": [
+        {
+          "id": "blr_belaya_rus",
+          "name_fa": "بلایا روس / روسیه سفید",
+          "name_en": "Belaya Rus",
+          "entity_type": "pro_government_party",
+          "political_role": "حزب حامی الکساندر لوکاشنکو و بزرگ‌ترین سازمان حزبی طرفدار حکومت؛ دارای نمایندگی گسترده در نهادهای رسمی.",
+          "ideological_profile": "حاکمیت‌گرا، محافظه‌کار، طرفدار دولت قدرتمند و هم‌پیمانی با روسیه.",
+          "legal_status": "registered_pro_government",
+          "confidence": "high"
+        },
+        {
+          "id": "blr_communist",
+          "name_fa": "حزب کمونیست بلاروس",
+          "name_en": "Communist Party of Belarus",
+          "entity_type": "pro_government_party",
+          "political_role": "حزب کوچک حامی حکومت و شریک بلوک سیاسی طرفدار لوکاشنکو.",
+          "ideological_profile": "کمونیسم رسمی، دولت‌گرایی و حمایت از اتحاد نزدیک با روسیه.",
+          "legal_status": "registered_pro_government",
+          "confidence": "high"
+        },
+        {
+          "id": "blr_liberal_democratic",
+          "name_fa": "حزب لیبرال‌دموکرات بلاروس",
+          "name_en": "Liberal Democratic Party of Belarus",
+          "entity_type": "pro_government_party",
+          "political_role": "حزب ثبت‌شده و مشارکت‌کننده در انتخابات کنترل‌شده؛ اپوزیسیون مؤثر محسوب نمی‌شود.",
+          "ideological_profile": "ملی‌گرا و محافظه‌کار با مواضع رسمی سازگار با نظام سیاسی.",
+          "legal_status": "registered_pro_government",
+          "confidence": "medium"
+        },
+        {
+          "id": "blr_republican_labour",
+          "name_fa": "حزب جمهوری‌خواه کار و عدالت",
+          "name_en": "Republican Party of Labour and Justice",
+          "entity_type": "pro_government_party",
+          "political_role": "حزب کوچک حامی حکومت و بخشی از ساختار حزبی مجاز.",
+          "ideological_profile": "دولت‌گرا، نظم‌محور و حامی سیاست‌های رسمی دولت.",
+          "legal_status": "registered_pro_government",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "blr_presidential_administration",
+          "name_fa": "شبکه دولت و مدیریت ریاست‌جمهوری",
+          "name_en": "Presidential administration and state-managerial network",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "حفظ تمرکز قدرت و کنترل سیاسی؛ اولویت ثبات رژیم.",
+            "economy": "نقش بالای دولت و بنگاه‌های دولتی.",
+            "foreign_policy": "اتکای راهبردی به روسیه و همکاری امنیتی و اقتصادی نزدیک."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "blr_security_apparatus",
+          "name_fa": "نهادهای امنیتی و دستگاه انتظامی",
+          "name_en": "Security and internal enforcement apparatus",
+          "entity_type": "institutional_power_center",
+          "policy_positions": {
+            "domestic": "حفظ نظم حکومتی و محدودسازی سازمان‌دهی مستقل مخالفان.",
+            "foreign_policy": "همکاری نزدیک امنیتی با روسیه."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "blr_exiled_opposition",
+          "name_fa": "اپوزیسیون دموکراتیک در تبعید",
+          "name_en": "Democratic opposition in exile",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "انتخابات آزاد، آزادی زندانیان سیاسی و بازسازی نهادهای دموکراتیک.",
+            "foreign_policy": "گرایش غالب به نزدیکی با اتحادیه اروپا و حمایت بین‌المللی."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "blr_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "الکساندر لوکاشنکو مرکز اصلی قدرت سیاسی و اجرایی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "blr_council_ministers",
+          "name_fa": "شورای وزیران",
+          "name_en": "Council of Ministers",
+          "role": "دولت به ریاست نخست‌وزیر الکساندر تورچین؛ تابع ساختار ریاستی.",
+          "confidence": "high"
+        },
+        {
+          "id": "blr_all_belarus_assembly",
+          "name_fa": "مجمع مردمی سراسر بلاروس",
+          "name_en": "All-Belarusian People's Assembly",
+          "role": "نهاد فوق‌پارلمانی با اختیارات گسترده قانون اساسی و نظارتی؛ تحت نفوذ ساختار حاکم.",
+          "confidence": "high"
+        },
+        {
+          "id": "blr_security_services",
+          "name_fa": "نهادهای امنیتی",
+          "name_en": "Security Services",
+          "role": "مرکز مهم قدرت و کنترل سیاسی؛ مستقل از رقابت حزبی عادی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Alexander Lukashenko",
+        "head_of_government": "Alexander Turchin",
+        "prime_minister": "Alexander Turchin",
+        "governing_bloc": "pro-Lukashenko state-aligned parties",
+        "political_competition": "not meaningfully competitive"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "russia_dependence",
+          "sanctions",
+          "state_enterprise_economy",
+          "political_control",
+          "relations_with_eu",
+          "security_cooperation"
+        ],
+        "rule": "احزاب مجاز را با احزاب رقابتی دموکراتیک یکسان نکن. اپوزیسیون مستقل عمدتاً سرکوب‌شده یا در تبعید است؛ قدرت واقعی در ریاست‌جمهوری و نهادهای امنیتی متمرکز است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Associated Press — Belarus 2024 election and political environment",
+            "url": "https://apnews.com/article/f661f6bc765aab265e1032d0e3b8d447",
+            "date": "2024-02"
+          },
+          {
+            "name": "Freedom House — Nations in Transit: Belarus",
+            "url": "https://freedomhouse.org/country/belarus/nations-transit/2026",
+            "date": "2026"
+          },
+          {
+            "name": "GeoFiscalStatus — European government leaders, October 2026",
+            "url": "https://www.geofiscalstatus.com/news/who-governs-europe-a-guide-to-48-governments",
+            "date": "2026-10-30"
+          }
+        ],
+        "notes": "بلاروس نظام حزبی رقابتی ندارد. انتخابات ۲۰۲۴ با حذف اپوزیسیون واقعی برگزار شد و احزاب ثبت‌شده عمدتاً حامی حکومت‌اند. احزاب مخالف مستقل و شبکه‌های دموکراتیک در تبعید نباید به‌عنوان احزاب آزادِ حاضر در پارلمان نمایش داده شوند."
       },
       "parliamentary_groups": []
     },
     "MDA": {
       "country_name_fa": "مولداوی",
       "country_name_en": "Moldova",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_competitive_multiparty_elections",
+      "government_model": "جمهوری پارلمانی؛ حزب اقدام و همبستگی پس از انتخابات سپتامبر ۲۰۲۵ اکثریت تک‌حزبی را حفظ کرد.",
+      "parties": [
+        {
+          "id": "mda_pas",
+          "name_fa": "حزب اقدام و همبستگی",
+          "name_en": "Party of Action and Solidarity (PAS)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم با ۵۵ کرسی از ۱۰۱ کرسی؛ رئیس‌جمهور مایا ساندو از بنیان‌گذاران و چهره محوری آن است؛ نخست‌وزیر مستقل الکساندرو مونتیانو در رأس دولت.",
+          "ideological_profile": "لیبرال، میانه‌راست، اصلاح‌طلب و طرفدار ادغام در اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_patriotic_bloc",
+          "name_fa": "بلوک میهن‌پرستانه",
+          "name_en": "Patriotic Electoral Bloc (BEP)",
+          "entity_type": "electoral_alliance",
+          "political_role": "بلوک اپوزیسیون با ۲۶ کرسی؛ محور آن حزب سوسیالیست و حزب کمونیست است.",
+          "ideological_profile": "چپ تا چپ میانه اسمی، حاکمیت‌گرا و طرفدار روابط نزدیک‌تر با روسیه؛ مواضع شرکای بلوک کاملاً یکسان نیست.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_alternativa",
+          "name_fa": "بلوک آلترناتیوا",
+          "name_en": "Alternativa Bloc",
+          "entity_type": "electoral_alliance",
+          "political_role": "بلوک پارلمانی با ۸ کرسی؛ ترکیبی از چهره‌های منتقد دولت و جریان‌های میانه‌رو.",
+          "ideological_profile": "میانه‌گرا، عمل‌گرا و منتقد دولت؛ مواضع ژئوپلیتیکی درونی متنوع.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_our_party",
+          "name_fa": "حزب ما",
+          "name_en": "Our Party (Partidul Nostru)",
+          "entity_type": "party",
+          "political_role": "حزب دارای ۶ کرسی؛ منتقد ساختار دو قطبی PAS و بلوک میهن‌پرستانه.",
+          "ideological_profile": "میانه‌گرا و عمل‌گرا؛ تأکید بر مدیریت محلی و ضدفساد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mda_democracy_home",
+          "name_fa": "دموکراسی در خانه",
+          "name_en": "Democracy at Home (Democrația Acasă)",
+          "entity_type": "party",
+          "political_role": "حزب با ۶ کرسی؛ دارای مواضع ملی‌گرایانه و انتقادی نسبت به نخبگان سیاسی.",
+          "ideological_profile": "ملی‌گرا، محافظه‌کار و پوپولیست.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mda_pro_european_reform",
+          "name_fa": "جریان اصلاح‌طلب طرفدار اروپا",
+          "name_en": "Pro-European reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "ادغام در اتحادیه اروپا و کاهش آسیب‌پذیری در برابر نفوذ روسیه.",
+            "domestic": "اصلاح دادگستری، مبارزه با فساد و پاکسازی نهادها."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "mda_pro_russian_sovereigntist",
+          "name_fa": "جریان حاکمیت‌گرا و طرفدار روابط نزدیک با روسیه",
+          "name_en": "Pro-Russian sovereigntist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "روابط نزدیک‌تر با روسیه و مخالفت با شتاب ادغام در اتحادیه اروپا.",
+            "domestic": "تأکید بر حاکمیت ملی و نقد سیاست‌های دولت PAS."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "mda_gagauz_regional",
+          "name_fa": "جریان خودمختاری‌خواه گاگائوز",
+          "name_en": "Gagauz autonomy current",
+          "entity_type": "regional_current",
+          "policy_positions": {
+            "domestic": "حفظ اختیارات خودمختاری گاگائوزیا و مخالفت با مداخله بیش از حد دولت مرکزی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mda_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مایا ساندو رئیس‌جمهور و حامی اصلی مسیر اروپایی کشور.",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "دولت به ریاست الکساندرو مونتیانو؛ نخست‌وزیر مستقل با حمایت اکثریت PAS.",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_parliament",
+          "name_fa": "پارلمان مولداوی",
+          "name_en": "Parliament",
+          "role": "پارلمان ۱۰۱ نفره؛ PAS دارای ۵۵ کرسی و اپوزیسیون میان چند بلوک تقسیم شده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "mda_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد داوری قانون اساسی و یکی از بازیگران مهم مناقشات انتخاباتی و مسیر اروپایی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Maia Sandu",
+        "head_of_government": "Alexandru Munteanu",
+        "prime_minister": "Alexandru Munteanu",
+        "prime_minister_party": "Independent, supported by PAS",
+        "governing_party": "PAS",
+        "parliamentary_status": "PAS 55/101; Patriotic Bloc 26; Alternativa 8; Our Party 6; Democracy at Home 6."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_accession",
+          "russia_influence",
+          "energy_security",
+          "justice_reform",
+          "transnistria",
+          "gagauzia_autonomy",
+          "foreign_interference"
+        ],
+        "rule": "PAS اکثریت تک‌حزبی دارد، اما نخست‌وزیر مستقل است. اپوزیسیون را به چند بلوک مجزا تقسیم کن و اختلاف مسیر اروپایی/روسی را در سیاست داخلی و خارجی منعکس کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Moldova September 2025 election",
+            "url": "https://data.ipu.org/parliament/MD/MD-LC01/election/MD-LC01-E20250928/",
+            "date": "2025-09"
+          },
+          {
+            "name": "Council of Europe PACE — Moldova 2025 election report",
+            "url": "https://pace.coe.int/en/files/35722/html",
+            "date": "2026"
+          },
+          {
+            "name": "International IDEA — Moldova September 2025 election",
+            "url": "https://www.idea.int/democracytracker/country/republic-moldova",
+            "date": "2025-09"
+          }
+        ],
+        "notes": "PAS در انتخابات ۲۸ سپتامبر ۲۰۲۵ با ۵۵ کرسی از ۱۰۱ اکثریت را حفظ کرد. پارلمان در ۳۱ اکتبر ۲۰۲۵ الکساندرو مونتیانو را به نخست‌وزیری برگزید. بلوک میهن‌پرستانه ۲۶، آلترناتیوا ۸، حزب ما ۶ و دموکراسی در خانه ۶ کرسی دارند. وضعیت نخست‌وزیر بر اساس تاریخ شروع سناریو ۵ نوامبر ۲۰۲۶ ثبت شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mda_pas_group",
+          "name_en": "PAS Parliamentary Group",
+          "party_id": "mda_pas"
+        },
+        {
+          "id": "mda_patriotic_group",
+          "name_en": "Patriotic Bloc Parliamentary Group",
+          "party_id": "mda_patriotic_bloc"
+        },
+        {
+          "id": "mda_alternativa_group",
+          "name_en": "Alternativa Parliamentary Group",
+          "party_id": "mda_alternativa"
+        },
+        {
+          "id": "mda_our_party_group",
+          "name_en": "Our Party Parliamentary Group",
+          "party_id": "mda_our_party"
+        },
+        {
+          "id": "mda_democracy_home_group",
+          "name_en": "Democracy at Home Parliamentary Group",
+          "party_id": "mda_democracy_home"
+        }
+      ]
     },
     "LVA": {
       "country_name_fa": "لتونی",
