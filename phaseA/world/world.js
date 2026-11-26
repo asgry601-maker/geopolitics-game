@@ -482,9 +482,28 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += dashMissing('فرماندهی نظامی تفصیلی','تفکیک نیروهای زمینی، هوایی، دریایی، پدافند، موجودی و آمادگی در مراحل بعد طراحی می‌شود. پنجره فرماندهی مستقل در فاز D ساخته خواهد شد.');
   } else if (tab === 'relations') {
     h += '<h3>🤝 روابط خارجی</h3>';
-    if (r.rel != null && ST) h += '<h3>رابطه با کشور بازیکن ('+dashEsc(ST.player)+')</h3>'+barHtml('شاخص رابطه',r.rel,r.rel<0?'bad':'');
-    if (r.friends && r.friends.length) { h += '<h3>کشورهای نزدیک</h3>'; for(i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>'; }
-    if (r.enemies && r.enemies.length) { h += '<h3>روابط پرتنش</h3>'; for(i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>'; }
+    if (ST && r.name === ST.player) {
+      h += '<div class="dashNote">نمای کلی روابط کشور تحت مدیریت شما؛ اطلاعات زیر از وضعیت فعلی موتور بازی خوانده می‌شود.</div>';
+      var allyList = ST.allies || [], pactList = ST.pacts || [], warList = ST.wars || [], opponents = [];
+      for (i=0;i<warList.length;i++) {
+        if (warList[i] && warList[i].length === 2) {
+          if (warList[i][0] === r.name) opponents.push(warList[i][1]);
+          else if (warList[i][1] === r.name) opponents.push(warList[i][0]);
+        }
+      }
+      h += '<h3>متحدان ثبت‌شده</h3>';
+      h += allyList.length ? allyList.map(function(n){return '<div class="row"><span>'+dashEsc(n)+'</span><span class="muted">اتحاد</span></div>';}).join('') : '<div class="dashNote">در حال حاضر متحدی در فهرست موتور ثبت نشده است.</div>';
+      h += '<h3>پیمان‌های عدم تجاوز</h3>';
+      h += pactList.length ? pactList.map(function(n){return '<div class="row"><span>'+dashEsc(n)+'</span><span class="muted">عدم تجاوز</span></div>';}).join('') : '<div class="dashNote">پیمان عدم تجاوز ثبت‌شده‌ای وجود ندارد.</div>';
+      h += '<h3>وضعیت جنگ</h3>';
+      h += opponents.length ? '<div class="dashCard">در جنگ با: '+opponents.map(dashEsc).join('، ')+'</div>' : '<div class="dashNote">کشور شما در حال حاضر در جنگ ثبت‌شده‌ای نیست.</div>';
+    } else {
+      if (r.rel != null && ST) h += '<h3>رابطه با کشور بازیکن ('+dashEsc(ST.player)+')</h3>'+barHtml('شاخص رابطه',r.rel,r.rel<0?'bad':'');
+      if (r.tags && r.tags.length) h += '<div class="dashCard">وضعیت فعلی: '+r.tags.map(dashEsc).join(' · ')+'</div>';
+      if (r.friends && r.friends.length) { h += '<h3>کشورهای نزدیک</h3>'; for(i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>'; }
+      if (r.enemies && r.enemies.length) { h += '<h3>روابط پرتنش</h3>'; for(i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>'; }
+      if (r.war_with && r.war_with.length) h += '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>';
+    }
     h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
   } else if (tab === 'pacts') {
     h += '<h3>📜 پیمان‌ها و اتحادها</h3>';
