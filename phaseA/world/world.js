@@ -287,6 +287,7 @@ function boot() {
 function loadState(after) {
   getJSON('api/state', function (s) {
     ST = (s && s.exists) ? s : null;
+    renderGameClock();
     renderWorldChips();
     renderStartWidget();
     refreshPolygons();
@@ -835,13 +836,38 @@ function provToggleBtn() {
 }
 
 /* ---------- اقدامات ---------- */
-function endDay() {
-  if (!ST) { flash('اول بازی را شروع کن.'); return; }
-  postJSON('api/act', { argv: ['end'] }, function (r) {
-    if (r.out) flash(r.out);
-    loadState();
-  }, function () { flash('خطا در پایان دور.'); });
+function renderGameClock() {
+  var box = el('gameClockText');
+  if (!box) return;
+  if (!ST) { box.textContent = '📅 — | 🕒 —'; return; }
+  var parts = String(ST.game_date || '').split('-');
+  var dateText = parts.length === 3 ? parts[2] + '/' + parts[1] + '/' + parts[0] : String(ST.year || '—');
+  var hh = ('0' + (ST.hour || 0)).slice(-2);
+  var mm = ('0' + (ST.minute || 0)).slice(-2);
+  box.textContent = '📅 ' + dateText + '  |  🕒 ' + hh + ':' + mm;
 }
+
+function advanceGameTime(minutes) {
+  if (!ST) { flash('اول بازی را شروع کن.'); return; }
+  var five = el('btn5h'), day = el('btnEnd');
+  if (five) five.disabled = true;
+  if (day) day.disabled = true;
+  postJSON('api/time', { minutes: minutes }, function (r) {
+    if (r.out) flash(r.out);
+    else if (!r.ok && r.error) flash(r.error);
+    loadState(function () {
+      if (five) five.disabled = false;
+      if (day) day.disabled = false;
+    });
+  }, function (st, tx) {
+    flash(netErrMsg(st, tx) + ' — زمان جلو نرفت.');
+    if (five) five.disabled = false;
+    if (day) day.disabled = false;
+  });
+}
+
+function endDay() { advanceGameTime(1440); }
+function advanceFiveHours() { advanceGameTime(300); }
 
 /* پنجره تأیید شروع بازی جدید — دو دکمه: «🆕 شروع بازی جدید» / «انصراف» */
 function confirmBox(onYes) {
@@ -922,6 +948,7 @@ function bindToolbar() {
     this.textContent = (TEX === 'img/earth-dark.jpg') ? '🖼 بافت: تیره' : '🖼 بافت: واقعی';
   };
   el('btnEnd').onclick = endDay;
+  el('btn5h').onclick = advanceFiveHours;
   provToggleBtn();   /* B2: دکمه مرز استان‌ها (اگر در HTML باشد) */
   var tb = el('panelToggle');
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
