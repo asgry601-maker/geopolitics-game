@@ -452,9 +452,19 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '<div class="dashNote">آموزش و خدمات درمانی در نسخه نخست الزامی نیستند و به توسعه بعدی موکول می‌شوند.</div>';
   } else if (tab === 'economy') {
     h += '<h3>📈 اقتصاد و بودجه</h3><div class="dashGrid">';
-    h += dashMetric('شاخص اقتصاد بازی',r.eco) + dashMetric('خزانه بازی',Number(r.money).toFixed(0)+' میلیارد');
-    h += '</div><div class="dashNote">این دو مقدار، شاخص‌های فعلی موتور هستند و معادل مستقیم GDP یا بودجه تفصیلی محسوب نمی‌شوند.</div>';
-    h += dashMissing('اقتصاد تفصیلی','GDP، درآمد و هزینه دولت، بودجه نظامی و عمرانی، تورم و رشد اقتصادی باید به‌صورت سیستم محاسباتی طراحی شوند.');
+    h += dashMetric('شاخص اقتصاد بازی',r.eco) + dashMetric('رتبه اقتصادی جهان',r.economic_rank ? '#'+r.economic_rank : '—');
+    h += dashMetric('خزانه فعلی',Number(r.money).toFixed(1)+' میلیارد') +
+      dashMetric('درآمد روزانه موتور',Number(r.income_daily || 0).toFixed(2)+' میلیارد');
+    h += dashMetric('برآورد ۳۰روزه درآمد',Number(r.income_monthly_estimate || 0).toFixed(1)+' میلیارد');
+    h += '</div>';
+    h += '<div class="dashNote">درآمد روزانه از فرمول فعلی موتور محاسبه می‌شود؛ اگر ثبات کشور کمتر از ۳۰ باشد، نصف می‌شود. برآورد ۳۰روزه صرفاً تخمین است. شاخص اقتصاد و خزانه، GDP و بودجه تفصیلی واقعی نیستند.</div>';
+    if (r.economy_top && r.economy_top.length) {
+      h += '<h3>🏆 پنج اقتصاد برتر جهان در بازی</h3>';
+      for (i=0;i<r.economy_top.length;i++) {
+        h += '<div class="row"><span>'+dashEsc((i+1)+'. '+r.economy_top[i].name)+'</span><b>'+dashEsc(r.economy_top[i].eco)+'</b></div>';
+      }
+    }
+    h += dashMissing('بخش‌های اقتصادیِ هنوز مدل‌نشده','GDP، مالیات، هزینه‌های جاری، بودجه تفصیلی، تورم، رشد اقتصادی و تجارت هنوز در موتور فرمول و داده مستقل ندارند؛ بعداً جداگانه طراحی می‌شوند و فعلاً عدد ساختگی نمایش داده نمی‌شود.');
   } else if (tab === 'resources') {
     h += '<h3>⛏ منابع طبیعی</h3>';
     h += dashMissing('منابع کشور و استان‌ها','ذخایر نفت، گاز، زغال‌سنگ، اورانیوم، آهن، طلا و سایر منابع هنوز داده‌گذاری نشده‌اند. در فاز C باید روی نقشه نیز به شکل مدل سه‌بعدی سبک دیده شوند.');
