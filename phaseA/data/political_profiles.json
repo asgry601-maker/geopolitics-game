@@ -1,39 +1,224 @@
 {
-  "schema_version": "1.0.1",
+  "schema_version": "1.1.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 0,
-    "pending_countries": 174
+    "researched_countries": 7,
+    "pending_countries": 167,
+    "last_batch": [
+      "IRN",
+      "USA",
+      "CHN",
+      "RUS",
+      "DEU",
+      "GBR",
+      "FRA"
+    ]
   },
   "notes": [
     "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.",
     "احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.",
     "درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.",
     "برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.",
-    "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد."
+    "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.",
+    "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند."
   ],
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
       "country_name_en": "United States of America",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_presidential_two_party_dominant_democracy",
+      "government_model": "جمهوری فدرال ریاستی با دو حزب مسلط و فراکسیون‌های درون‌حزبی",
+      "parties": [
+        {
+          "id": "usa_democratic",
+          "name_fa": "حزب دموکرات",
+          "name_en": "Democratic Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم در کنگره ورودی از ژانویه ۲۰۲۷؛ در زمان شروع سناریو رئیس‌جمهور از حزب مقابل است",
+          "ideological_profile": "ائتلاف گسترده میانه‌رو تا ترقی‌خواه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_republican",
+          "name_fa": "حزب جمهوری‌خواه",
+          "name_en": "Republican Party",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و دولت فدرال در نوامبر ۲۰۲۶؛ در کنگره ورودی اقلیت",
+          "ideological_profile": "محافظه‌کار، طیف‌های سنتی و پوپولیست راست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_independent",
+          "name_fa": "مستقل‌ها",
+          "name_en": "Independents",
+          "entity_type": "parliamentary_category",
+          "political_role": "نمایندگان مستقل؛ برخی ممکن است با یکی از دو حزب هم‌پیمان رأی دهند",
+          "ideological_profile": "متنوع",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "usa_new_democrats",
+          "name_fa": "ائتلاف دموکرات‌های نو",
+          "name_en": "New Democrat Coalition",
+          "entity_type": "intraparty_caucus",
+          "policy_positions": {
+            "economy": "میانه‌روتر و عمل‌گرا؛ تأکید بر رشد و رقابت‌پذیری.",
+            "domestic": "راه‌حل‌های میانه‌رو و مصالحه دوحزبی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_progressive_caucus",
+          "name_fa": "فراکسیون ترقی‌خواهان",
+          "name_en": "Congressional Progressive Caucus",
+          "entity_type": "intraparty_caucus",
+          "policy_positions": {
+            "economy": "نقش فعال‌تر دولت، خدمات عمومی و تنظیم‌گری شرکت‌ها.",
+            "domestic": "اصلاحات اجتماعی و گسترش حمایت‌های عمومی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_blue_dog",
+          "name_fa": "ائتلاف بلو داگ",
+          "name_en": "Blue Dog Coalition",
+          "entity_type": "intraparty_caucus",
+          "policy_positions": {
+            "economy": "انضباط مالی و احتیاط در هزینه‌کرد.",
+            "security": "تأکید بر امنیت ملی و منافع حوزه‌های انتخابیه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_gop_conservative",
+          "name_fa": "جریان محافظه‌کار جمهوری‌خواه",
+          "name_en": "Republican conservative currents",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات و مقررات‌زدایی در بخش مهمی از طیف.",
+            "domestic": "تأکید بر ارزش‌های محافظه‌کارانه و اختیارات ایالت‌ها."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_gop_populist",
+          "name_fa": "جریان پوپولیست ملی‌گرا در جمهوری‌خواهان",
+          "name_en": "Republican national-populist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "گرایش به اولویت دادن به منافع ملی و تردید نسبت به تعهدات خارجی پرهزینه.",
+            "trade": "حمایت بخشی از جریان از سیاست تجاری حمایتی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "usa_restraint_current",
+          "name_fa": "گرایش خویشتن‌داری در سیاست خارجی",
+          "name_en": "Foreign-policy restraint tendency",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "احتیاط نسبت به مداخله نظامی خارجی؛ جریان بین‌حزبی و نه حزب رسمی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "presidency",
+          "name_fa": "ریاست‌جمهوری و دولت فدرال",
+          "name_en": "Presidency and Federal Executive",
+          "role": "قوه مجریه؛ دونالد ترامپ در تاریخ شروع سناریو",
+          "confidence": "high"
+        },
+        {
+          "id": "congress",
+          "name_fa": "کنگره",
+          "name_en": "Congress",
+          "role": "قوه قانون‌گذاری؛ کنترل هر دو مجلس در انتخابات ۳ نوامبر به دموکرات‌ها رسید و از ژانویه ۲۰۲۷ آغاز می‌شود",
+          "confidence": "high"
+        },
+        {
+          "id": "supreme_court",
+          "name_fa": "دیوان عالی",
+          "name_en": "Supreme Court",
+          "role": "نهاد قضایی عالی و مفسر قانون اساسی",
+          "confidence": "high"
+        },
+        {
+          "id": "states",
+          "name_fa": "دولت‌های ایالتی",
+          "name_en": "State Governments",
+          "role": "مراکز قدرت فدرالی و مستقل در حوزه‌های قانون اساسی خود",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Donald Trump",
+        "party": "Republican Party",
+        "congress_transition": {
+          "incoming_house_control": "Democratic Party",
+          "incoming_senate_control": "Democratic Party",
+          "effective_date": "2027-01-03",
+          "status_on_scenario_start": "election_results_projected_or_partly_reported; transition pending"
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "taxation",
+          "healthcare",
+          "immigration",
+          "trade",
+          "foreign_intervention",
+          "sanctions",
+          "climate",
+          "federalism"
+        ],
+        "rule": "وزن واکنش‌ها بر اساس جناح و کنترل نهادی؛ پیروزی انتخاباتی به‌معنی انتقال فوری کنترل کنگره نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Associated Press — 2026 midterm results and Congress transition",
+            "url": "https://apnews.com/article/ef6199e25927a9ac9f4c18eae0e497cd",
+            "date": "2026-11-04"
+          },
+          {
+            "name": "TIME — Democratic House caucuses",
+            "url": "https://time.com/article/2026/11/23/a-guide-to-the-4-caucuses-that-could-shape-the-democratic-house/",
+            "date": "2026-11-23"
+          },
+          {
+            "name": "Associated Press — Democratic House majority update",
+            "url": "https://apnews.com/article/721096a4d9ba2cd68683692361798cdb",
+            "date": "2026-11-23"
+          }
+        ],
+        "notes": "نتیجه انتخابات میان‌دوره‌ای ۳ نوامبر ۲۰۲۶ در ۵ نوامبر هنوز در مرحله شمارش/اعلام اولیه بود؛ انتقال کنترل کنگره به ژانویه ۲۰۲۷ زمان‌بندی شده است. فراکسیون‌ها به‌عنوان گروه‌های درون‌حزبی ثبت شده‌اند، نه احزاب مستقل."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "dem_house",
+          "name_en": "Democratic House Caucus",
+          "party_id": "usa_democratic"
+        },
+        {
+          "id": "rep_house",
+          "name_en": "Republican House Conference",
+          "party_id": "usa_republican"
+        }
+      ]
     },
     "CAN": {
       "country_name_fa": "کانادا",
@@ -76,19 +261,152 @@
     "IRN": {
       "country_name_fa": "ایران",
       "country_name_en": "Iran",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "theocratic_republic_with_limited_managed_electoral_competition",
+      "government_model": "جمهوری اسلامی با رهبری عالی دینی، نهادهای انتخابی و نهادهای نظارتی/انتصابی",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "factions": [
+        {
+          "id": "irn_reformist_current",
+          "name_fa": "جریان اصلاح‌طلب",
+          "name_en": "Reformist current",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "اصلاحات تدریجی درون چارچوب جمهوری اسلامی، گسترش مشارکت و برخی آزادی‌های مدنی؛ دسترسی محدود به مراکز قدرت در وضعیت پس از جنگ.",
+            "economy": "گرایش متنوع؛ در میان چهره‌های نزدیک به دولت، اولویت به کاهش فشار اقتصادی و بهبود مدیریت.",
+            "foreign_policy": "عموماً متمایل‌تر به دیپلماسی و کاهش تنش با غرب در مقایسه با اصولگرایان سخت‌گیر."
+          },
+          "confidence": "medium",
+          "current_influence": "marginalized_or_constrained"
+        },
+        {
+          "id": "irn_principlist_current",
+          "name_fa": "اصولگرایان / جریان اصولگرا",
+          "name_en": "Principlist current",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "حفظ اصول ایدئولوژیک جمهوری اسلامی و نقش نهادهای دینی و انقلابی؛ طیف درونی ناهمگون.",
+            "economy": "طیف متنوع؛ بخشی دولت‌گرا و بخشی حامی شبکه‌های اقتصادی وابسته به نهادهای حاکم.",
+            "foreign_policy": "عموماً بدبین‌تر به غرب و متمایل به همکاری با شرکای غیرغربی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "irn_pragmatist_realist",
+          "name_fa": "جریان عمل‌گرا / واقع‌گرا",
+          "name_en": "Pragmatist / realist current",
+          "entity_type": "elite_current",
+          "policy_positions": {
+            "domestic": "اولویت به تداوم نظام و اداره بحران؛ نه یک حزب منسجم و نه الزاماً جریان اصلاح‌طلب.",
+            "economy": "تأکید بر مهار فشار اقتصادی و بازسازی ظرفیت اداره کشور.",
+            "foreign_policy": "حمایت نسبی از مذاکره و کاهش تنش در صورت حفظ خطوط قرمز نظام."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "irn_paydari_hardline",
+          "name_fa": "جبهه پایداری و طیف سخت‌گیر",
+          "name_en": "Paydari / hardline current",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "مواضع ایدئولوژیک سخت‌گیرانه‌تر و مقاومت در برابر امتیازدهی سیاسی.",
+            "economy": "موضع اقتصادی واحد و کاملاً منسجم برای کل طیف احراز نشده.",
+            "foreign_policy": "مخالفت با امتیازدهی به آمریکا و رویکرد مصالحه‌جویانه."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "supreme_leader_office",
+          "name_fa": "دفتر رهبر و نهاد رهبری",
+          "name_en": "Supreme Leader and Office",
+          "role": "مرجع نهایی تصمیم‌گیری در سیاست‌های کلان",
+          "confidence": "high"
+        },
+        {
+          "id": "irgc",
+          "name_fa": "سپاه پاسداران انقلاب اسلامی",
+          "name_en": "Islamic Revolutionary Guard Corps",
+          "role": "مرکز قدرت امنیتی، نظامی، سیاسی و اقتصادی؛ شبکه‌های وابسته",
+          "confidence": "high"
+        },
+        {
+          "id": "presidency",
+          "name_fa": "ریاست‌جمهوری و دولت",
+          "name_en": "Presidency and Cabinet",
+          "role": "اداره اجرایی و سیاست‌گذاری روزمره در محدوده اختیارات قانون اساسی",
+          "confidence": "high"
+        },
+        {
+          "id": "guardian_council",
+          "name_fa": "شورای نگهبان",
+          "name_en": "Guardian Council",
+          "role": "نظارت بر قوانین و صلاحیت نامزدهای انتخاباتی",
+          "confidence": "high"
+        },
+        {
+          "id": "majlis",
+          "name_fa": "مجلس شورای اسلامی",
+          "name_en": "Islamic Consultative Assembly",
+          "role": "نهاد قانون‌گذاری انتخابی با محدودیت‌های نهادی",
+          "confidence": "high"
+        },
+        {
+          "id": "sns_council",
+          "name_fa": "شورای عالی امنیت ملی",
+          "name_en": "Supreme National Security Council",
+          "role": "هماهنگی تصمیم‌های امنیت ملی و سیاست خارجی کلان",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Mojtaba Khamenei",
+        "supreme_leader": "Mojtaba Khamenei",
+        "head_of_government": "Masoud Pezeshkian",
+        "president": "Masoud Pezeshkian",
+        "parliament_speaker": "Mohammad Baqer Qalibaf",
+        "scenario_note": "در تاریخ شروع سناریو ۵ نوامبر ۲۰۲۶، گزارش Reuters از پیام رهبر و دیدار مقام امنیتی ایران با رئیس‌جمهور روسیه حکایت دارد؛ رهبری عالی با مجتبی خامنه‌ای و ریاست‌جمهوری با مسعود پزشکیان ثبت می‌شود."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "sanctions",
+          "economic_crisis",
+          "negotiation",
+          "war_and_ceasefire",
+          "domestic_reform",
+          "elite_competition"
+        ],
+        "rule": "رفتار باید از مواضع هر جریان و قدرت واقعی نهادها محاسبه شود؛ هیچ جریان واحدی به کل کشور تعمیم داده نشود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Reuters — Iran leadership and security talks",
+            "url": "https://www.reuters.com/world/middle-east/putin-met-iranian-security-council-chief-rezaei-moscow-2026-11-05/",
+            "date": "2026-11-05"
+          },
+          {
+            "name": "Stimson Center — Iran’s Political System After the War",
+            "url": "https://www.stimson.org/2026/irans-political-system-after-the-war/",
+            "date": "2026-08-03"
+          },
+          {
+            "name": "RFE/RL — The Islamic Republic 3.0: Who Holds Power In Iran?",
+            "url": "https://www.rferl.org/a/iran-irgc-khamenei-qalibaf/33756085.html",
+            "date": "2026-05-13"
+          },
+          {
+            "name": "UK House of Commons Library — Iran introductory country profile",
+            "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10588/CBP-10588.pdf",
+            "date": "2026-03-20"
+          }
+        ],
+        "notes": "در ایران احزاب به معنای احزاب رقابتی غربی محور اصلی سیاست نیستند؛ به همین دلیل فهرست parties خالی مانده و جریان‌ها و مراکز قدرت جدا ثبت شده‌اند. عناوین «میانه‌رو سپاه» و «تندرو سپاه» به‌عنوان حزب یا جناح رسمی تثبیت نشده‌اند؛ در مدل باید گرایش اشخاص/شبکه‌های امنیتی جداگانه و با منبع ثبت شود."
       },
       "parliamentary_groups": []
     },
@@ -456,76 +774,934 @@
     "RUS": {
       "country_name_fa": "روسیه",
       "country_name_en": "Russia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "authoritarian_presidential_system_with_managed_multiparty_parliament",
+      "government_model": "جمهوری ریاستی متمرکز با رقابت حزبی محدود و اکثریت مسلط حزب حاکم",
+      "parties": [
+        {
+          "id": "rus_united_russia",
+          "name_fa": "روسیه واحد",
+          "name_en": "United Russia",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و اکثریت پارلمان",
+          "ideological_profile": "محافظه‌کاری دولتی، حمایت از دولت و نظم موجود",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "parliamentary_seats": 349
+        },
+        {
+          "id": "rus_cprf",
+          "name_fa": "حزب کمونیست فدراسیون روسیه",
+          "name_en": "Communist Party of the Russian Federation",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی نظام‌مند",
+          "ideological_profile": "کمونیسم/چپ ملی و دولت‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "parliamentary_seats": 37
+        },
+        {
+          "id": "rus_ldpr",
+          "name_fa": "حزب لیبرال دموکرات روسیه",
+          "name_en": "Liberal Democratic Party of Russia",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی نظام‌مند",
+          "ideological_profile": "ملی‌گرایی و پوپولیسم راست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high",
+          "parliamentary_seats": 23
+        },
+        {
+          "id": "rus_new_people",
+          "name_fa": "مردم جدید",
+          "name_en": "New People",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی کوچک‌تر",
+          "ideological_profile": "لیبرالیسم اقتصادی نسبی و نوسازی مدیریتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "parliamentary_seats": 19
+        },
+        {
+          "id": "rus_just_russia",
+          "name_fa": "روسیه عادلانه",
+          "name_en": "A Just Russia",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی نظام‌مند",
+          "ideological_profile": "چپ میانه/سوسیال‌دموکراتیک و دولت رفاه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "parliamentary_seats": 17
+        },
+        {
+          "id": "rus_rodina",
+          "name_fa": "رودینا / میهن",
+          "name_en": "Rodina",
+          "entity_type": "party",
+          "political_role": "نمایندگی محدود پارلمانی",
+          "ideological_profile": "ملی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium",
+          "parliamentary_seats": 1
+        }
+      ],
+      "factions": [
+        {
+          "id": "rus_state_conservative",
+          "name_fa": "جریان محافظه‌کار دولتی",
+          "name_en": "State-conservative current",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "حفظ تمرکز قدرت و ثبات سیاسی.",
+            "foreign_policy": "تأکید بر حاکمیت ملی و مخالفت با فشار خارجی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "rus_nationalist",
+          "name_fa": "جریان ملی‌گرا",
+          "name_en": "Nationalist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "تأکید بر قدرت و جایگاه ژئوپولیتیکی روسیه؛ شدت و شکل آن میان احزاب متفاوت است."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قدرت اجرایی و سیاست‌گذاری کلان",
+          "confidence": "high"
+        },
+        {
+          "id": "united_russia",
+          "name_fa": "حزب روسیه واحد",
+          "name_en": "United Russia",
+          "role": "اکثریت مسلط دومای دولتی و ستون پارلمانی دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "security_services",
+          "name_fa": "نهادهای امنیتی و اجرایی",
+          "name_en": "Security and Executive Institutions",
+          "role": "نفوذ قابل توجه در ساختار قدرت؛ جزئیات نفوذ داخلی نیازمند داده تکمیلی",
+          "confidence": "medium"
+        },
+        {
+          "id": "state_duma",
+          "name_fa": "دومای دولتی",
+          "name_en": "State Duma",
+          "role": "مجلس قانون‌گذاری با اکثریت حزب روسیه واحد",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Vladimir Putin",
+        "governing_party": "United Russia",
+        "duma_election_date": "2026-09",
+        "note": "ترکیب کرسی‌ها بر اساس گزارش پژوهشی پارلمان اروپا از نتایج انتخابات دومای ۲۰۲۶."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "sanctions",
+          "war_and_security",
+          "state_stability",
+          "economic_sovereignty",
+          "trade",
+          "foreign_alignment"
+        ],
+        "rule": "احزاب پارلمانی از نظر قانونی و نقش سیاسی یکسان نیستند؛ حضور اپوزیسیون پارلمانی به‌تنهایی به معنی رقابت برابر برای قدرت اجرایی نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "European Parliament Research Service — 2026 State Duma elections",
+            "url": "https://research.europarl.europa.eu/EPRS_BRI(2026)791526?locale=EN",
+            "date": "2026-10-27"
+          },
+          {
+            "name": "Ministry of Justice of the Russian Federation — registered political parties",
+            "url": "https://minjust.gov.ru/ru/pages/politicheskie-partii/",
+            "date": "2026-11-24"
+          }
+        ],
+        "notes": "تعداد کرسی‌ها مربوط به دومای نهم پس از انتخابات سپتامبر ۲۰۲۶ است و از گزارش EPRS گرفته شده؛ این داده‌ها با فهرست احزاب ثبت‌شده وزارت دادگستری یکسان نیستند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "rus_ur_faction",
+          "name_en": "United Russia faction",
+          "party_id": "rus_united_russia",
+          "seats": 349
+        },
+        {
+          "id": "rus_cprf_faction",
+          "name_en": "CPRF faction",
+          "party_id": "rus_cprf",
+          "seats": 37
+        },
+        {
+          "id": "rus_ldpr_faction",
+          "name_en": "LDPR faction",
+          "party_id": "rus_ldpr",
+          "seats": 23
+        },
+        {
+          "id": "rus_new_people_faction",
+          "name_en": "New People faction",
+          "party_id": "rus_new_people",
+          "seats": 19
+        },
+        {
+          "id": "rus_just_russia_faction",
+          "name_en": "A Just Russia faction",
+          "party_id": "rus_just_russia",
+          "seats": 17
+        },
+        {
+          "id": "rus_rodina_faction",
+          "name_en": "Rodina representation",
+          "party_id": "rus_rodina",
+          "seats": 1
+        },
+        {
+          "id": "rus_independents",
+          "name_en": "Unaffiliated / Independents",
+          "party_id": null,
+          "seats": 4
+        }
+      ]
     },
     "DEU": {
       "country_name_fa": "آلمان",
       "country_name_en": "Germany",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_multiparty_democracy",
+      "government_model": "جمهوری فدرال پارلمانی با دولت ائتلافی",
+      "parties": [
+        {
+          "id": "deu_cdu",
+          "name_fa": "اتحادیه دموکرات مسیحی",
+          "name_en": "Christian Democratic Union (CDU)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم",
+          "ideological_profile": "دموکراسی مسیحی، محافظه‌کاری میانه‌رو و اقتصاد اجتماعی بازار",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "deu_csu",
+          "name_fa": "اتحادیه سوسیال مسیحی بایرن",
+          "name_en": "Christian Social Union (CSU)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ حزب خواهر CDU در بایرن",
+          "ideological_profile": "محافظه‌کاری مسیحی و منطقه‌گرایی باواریایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "deu_spd",
+          "name_fa": "حزب سوسیال دموکرات آلمان",
+          "name_en": "Social Democratic Party of Germany (SPD)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم",
+          "ideological_profile": "سوسیال‌دموکراسی و اقتصاد بازار اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "deu_afd",
+          "name_fa": "آلترناتیو برای آلمان",
+          "name_en": "Alternative for Germany (AfD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "راست پوپولیست و ملی‌گرا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "deu_greens",
+          "name_fa": "اتحاد ۹۰/سبزها",
+          "name_en": "Alliance 90/The Greens",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "سبزها، محیط‌زیست‌گرایی و لیبرالیسم اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "deu_left",
+          "name_fa": "چپ",
+          "name_en": "The Left (Die Linke)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "چپ دموکراتیک و سوسیالیسم دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "deu_cdu_economic_liberal",
+          "name_fa": "جریان اقتصاد بازار و انضباط مالی در اتحادیه",
+          "name_en": "Market-oriented / fiscal-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر رقابت‌پذیری، کاهش موانع کسب‌وکار و انضباط مالی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "deu_spd_social",
+          "name_fa": "جریان رفاه اجتماعی در SPD",
+          "name_en": "Social-policy current in SPD",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حمایت از خدمات عمومی، حقوق کار و سازوکارهای حمایت اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "deu_green_climate",
+          "name_fa": "جریان اقلیم‌محور در سبزها",
+          "name_en": "Climate-oriented current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "climate": "اولویت بالا برای گذار انرژی و سیاست اقلیمی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "chancellery",
+          "name_fa": "صدراعظمی و کابینه فدرال",
+          "name_en": "Chancellery and Federal Cabinet",
+          "role": "قوه مجریه ائتلافی",
+          "confidence": "high"
+        },
+        {
+          "id": "bundestag",
+          "name_fa": "بوندستاگ",
+          "name_en": "Bundestag",
+          "role": "پارلمان فدرال؛ ائتلاف و اپوزیسیون بر اساس گروه‌های پارلمانی",
+          "confidence": "high"
+        },
+        {
+          "id": "bundesrat",
+          "name_fa": "بوندسرات",
+          "name_en": "Bundesrat",
+          "role": "نمایندگی دولت‌های ایالتی در قانون‌گذاری فدرال",
+          "confidence": "high"
+        },
+        {
+          "id": "constitutional_court",
+          "name_fa": "دادگاه قانون اساسی فدرال",
+          "name_en": "Federal Constitutional Court",
+          "role": "نظارت قضایی بر قانون اساسی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "chancellor": "Friedrich Merz",
+        "coalition": [
+          "CDU",
+          "CSU",
+          "SPD"
+        ],
+        "coalition_status": "governing_majority"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "budget_and_debt",
+          "industry_and_jobs",
+          "energy_transition",
+          "migration",
+          "european_integration",
+          "defence_and_security",
+          "coalition_discipline"
+        ],
+        "rule": "تصمیم دولت باید محدودیت‌های توافق ائتلافی و رأی گروه‌های پارلمانی را لحاظ کند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "German Bundestag — Coalitions and opposition in the Bundestag",
+            "url": "https://www.bundestag.de/resource/blob/196254/841afa54614d4e021dd770954b31b4f4/kapitel_06_06_koalitionen_und_opposition_im_bundestag-data.pdf",
+            "date": "2026-10-01"
+          },
+          {
+            "name": "German Federal Government — coalition priorities",
+            "url": "https://www.bundesregierung.de/breg-de/service/fragen-und-antworten/schwerpunkt-des-koalitionsvertrags-2344224",
+            "date": "2026-05-04"
+          },
+          {
+            "name": "German Bundestag — cabinet composition",
+            "url": "https://www.bundestag.de/resource/blob/196242/026c74538cb9da18a9ef9a0b92149396/Kapitel_06_02_Zusammensetzung_der_Bundeskabinette_-_Namensliste-data.pdf",
+            "date": "2026-08-05"
+          }
+        ],
+        "notes": "ترکیب ائتلاف حاکم CDU/CSU-SPD و گروه‌های اپوزیسیون بر اساس داده‌نامه رسمی بوندستاگ ثبت شده است. فیلدهای نفوذ داخلی جناح‌ها فعلاً عددی نیستند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "deu_union_group",
+          "name_en": "CDU/CSU parliamentary group",
+          "party_ids": [
+            "deu_cdu",
+            "deu_csu"
+          ],
+          "role": "government"
+        },
+        {
+          "id": "deu_spd_group",
+          "name_en": "SPD parliamentary group",
+          "party_id": "deu_spd",
+          "role": "government"
+        },
+        {
+          "id": "deu_afd_group",
+          "name_en": "AfD parliamentary group",
+          "party_id": "deu_afd",
+          "role": "opposition"
+        },
+        {
+          "id": "deu_greens_group",
+          "name_en": "Alliance 90/The Greens parliamentary group",
+          "party_id": "deu_greens",
+          "role": "opposition"
+        },
+        {
+          "id": "deu_left_group",
+          "name_en": "The Left parliamentary group",
+          "party_id": "deu_left",
+          "role": "opposition"
+        }
+      ]
     },
     "FRA": {
       "country_name_fa": "فرانسه",
       "country_name_en": "France",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_multiparty_republic_fragmented_parliament",
+      "government_model": "جمهوری نیمه‌ریاستی با پارلمان چندقطبی و دولت ائتلافی/اقلیت",
+      "parties": [
+        {
+          "id": "fra_rn",
+          "name_fa": "اجتماع ملی",
+          "name_en": "National Rally (RN)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین بلوک پارلمانی؛ اپوزیسیون",
+          "ideological_profile": "راست ملی‌گرا و پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_renaissance",
+          "name_fa": "رنسانس / ائتلاف با هم برای جمهوری",
+          "name_en": "Renaissance / Ensemble pour la République",
+          "entity_type": "party",
+          "political_role": "هسته بلوک ریاست‌جمهوری و دولت",
+          "ideological_profile": "میانه‌رو لیبرال و طرفدار اتحادیه اروپا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_lfi",
+          "name_fa": "فرانسه تسلیم‌ناپذیر",
+          "name_en": "La France Insoumise (LFI)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "چپ رادیکال و چپ پوپولیست",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_ps",
+          "name_fa": "حزب سوسیالیست",
+          "name_en": "Socialist Party (PS)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ موضع‌گیری موردی در قبال دولت",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_lr",
+          "name_fa": "جمهوری‌خواهان",
+          "name_en": "The Republicans (LR)",
+          "entity_type": "party",
+          "political_role": "بخشی از ائتلاف/حمایت دولت؛ درون حزب اختلاف‌نظر وجود دارد",
+          "ideological_profile": "راست میانه و محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_ecologists",
+          "name_fa": "اکولوژیست‌ها",
+          "name_en": "The Ecologists",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "سبزها و محیط‌زیست‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_modem",
+          "name_fa": "جنبش دموکراتیک",
+          "name_en": "Democratic Movement (MoDem)",
+          "entity_type": "party",
+          "political_role": "هم‌پیمان بلوک مرکزی دولت",
+          "ideological_profile": "میانه‌گرایی و لیبرالیسم اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_horizons",
+          "name_fa": "هورایزنز",
+          "name_en": "Horizons",
+          "entity_type": "party",
+          "political_role": "هم‌پیمان بلوک مرکزی دولت",
+          "ideological_profile": "راست میانه و لیبرالیسم اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "fra_udr",
+          "name_fa": "اتحاد راست برای جمهوری",
+          "name_en": "Union of the Right for the Republic (UDR)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون راست؛ هم‌سویی موردی با RN",
+          "ideological_profile": "راست محافظه‌کار و ملی‌گرا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "fra_pcf",
+          "name_fa": "حزب کمونیست فرانسه",
+          "name_en": "French Communist Party (PCF)",
+          "entity_type": "party",
+          "political_role": "حضور در ائتلاف‌ها و گروه‌های چپ",
+          "ideological_profile": "کمونیسم دموکراتیک و چپ",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "fra_presidential_centre",
+          "name_fa": "بلوک مرکزی ریاست‌جمهوری",
+          "name_en": "Presidential centre bloc",
+          "entity_type": "coalition",
+          "policy_positions": {
+            "domestic": "حمایت از تداوم اصلاحات اجرایی و ثبات دولت.",
+            "economy": "ترکیبی از اصلاحات بازار و حمایت‌های اجتماعی محدود."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fra_left_union",
+          "name_fa": "ائتلاف چپ و جبهه مردمی نو",
+          "name_en": "Left alliance / New Popular Front",
+          "entity_type": "coalition",
+          "policy_positions": {
+            "economy": "طیف چپ با تأکید بیشتر بر خدمات عمومی و بازتوزیع.",
+            "foreign_policy": "اختلافات داخلی درباره اروپا، سیاست دفاعی و اوکراین."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fra_national_right",
+          "name_fa": "جریان راست ملی‌گرا",
+          "name_en": "National right current",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "immigration": "سیاست مهاجرتی سخت‌گیرانه‌تر.",
+            "foreign_policy": "تأکید بر حاکمیت ملی و اولویت منافع ملی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه و تعیین نخست‌وزیر",
+          "confidence": "high"
+        },
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "اداره دولت و نیازمند پشتیبانی/تحمل پارلمان",
+          "confidence": "high"
+        },
+        {
+          "id": "national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "پارلمان چندقطبی با گروه‌های رسمی مستقل از احزاب",
+          "confidence": "high"
+        },
+        {
+          "id": "senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس دوم قانون‌گذاری",
+          "confidence": "high"
+        },
+        {
+          "id": "constitutional_council",
+          "name_fa": "شورای قانون اساسی",
+          "name_en": "Constitutional Council",
+          "role": "نظارت بر قانون اساسی و انتخابات",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Emmanuel Macron",
+        "prime_minister": "Sébastien Lecornu",
+        "government_support": [
+          "Renaissance",
+          "MoDem",
+          "Horizons",
+          "Union of Democrats and Independents",
+          "The Republicans"
+        ],
+        "status": "minority_or_fragile_coalition"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "budget",
+          "pensions",
+          "immigration",
+          "european_integration",
+          "climate",
+          "foreign_policy",
+          "confidence_votes"
+        ],
+        "rule": "گروه‌های پارلمانی با احزاب یکی نیستند؛ دولت برای بقا به توافق‌های موردی و جلوگیری از رأی عدم اعتماد نیاز دارد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "French National Assembly — political groups",
+            "url": "https://www.assemblee-nationale.fr/dyn/les-groupes-politiques",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "French National Assembly — 2026 changes to group composition",
+            "url": "https://www2.assemblee-nationale.fr/17/les-groupes-politiques/modifications-a-la-composition-des-groupes/2026",
+            "date": "2026-11-25"
+          },
+          {
+            "name": "Légifrance — government composition decree",
+            "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000054883000/2026-09-24",
+            "date": "2026-09-24"
+          },
+          {
+            "name": "Robert Schuman Foundation — France political system and representation",
+            "url": "https://www.robert-schuman.eu/en/our-information-files/france",
+            "date": "2026-10-29"
+          }
+        ],
+        "notes": "فهرست گروه‌های مجلس ملی از وب‌سایت رسمی مجلس گرفته شده؛ وضعیت ائتلاف دولت بر اساس منابع اکتبر ۲۰۲۶ است. تعداد اعضای گروه‌ها به دلیل تغییرات مداوم در فایل پایه ذخیره نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "fra_rn_group",
+          "name_en": "Rassemblement National",
+          "party_id": "fra_rn"
+        },
+        {
+          "id": "fra_epr_group",
+          "name_en": "Ensemble pour la République",
+          "party_id": "fra_renaissance"
+        },
+        {
+          "id": "fra_lfi_nfp_group",
+          "name_en": "La France insoumise - Nouveau Front Populaire",
+          "party_id": "fra_lfi"
+        },
+        {
+          "id": "fra_soc_group",
+          "name_en": "Socialistes et apparentés",
+          "party_id": "fra_ps"
+        },
+        {
+          "id": "fra_dr_group",
+          "name_en": "Droite Républicaine",
+          "party_id": "fra_lr"
+        },
+        {
+          "id": "fra_ecos_group",
+          "name_en": "Écologiste et Social",
+          "party_id": "fra_ecologists"
+        },
+        {
+          "id": "fra_dem_group",
+          "name_en": "Les Démocrates",
+          "party_id": "fra_modem"
+        },
+        {
+          "id": "fra_hor_group",
+          "name_en": "Horizons & Indépendants",
+          "party_id": "fra_horizons"
+        },
+        {
+          "id": "fra_liot_group",
+          "name_en": "Libertés, Indépendants, Outre-mer et Territoires",
+          "party_id": null
+        },
+        {
+          "id": "fra_gdr_group",
+          "name_en": "Gauche Démocrate et Républicaine",
+          "party_id": "fra_pcf"
+        },
+        {
+          "id": "fra_udr_group",
+          "name_en": "Union des droites pour la République",
+          "party_id": "fra_udr"
+        },
+        {
+          "id": "fra_non_inscrits",
+          "name_en": "Députés non inscrits",
+          "party_id": null
+        }
+      ]
     },
     "GBR": {
       "country_name_fa": "بریتانیا",
       "country_name_en": "United Kingdom",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "unitary_parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی؛ دولت مبتنی بر اکثریت مجلس عوام",
+      "parties": [
+        {
+          "id": "gbr_labour",
+          "name_fa": "حزب کارگر",
+          "name_en": "Labour Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و دولت اکثریت",
+          "ideological_profile": "سوسیال‌دموکراسی و میانه‌چپ؛ طیف‌های درونی متنوع",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_conservative",
+          "name_fa": "حزب محافظه‌کار",
+          "name_en": "Conservative Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون رسمی",
+          "ideological_profile": "محافظه‌کاری و راست میانه",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_libdem",
+          "name_fa": "لیبرال دموکرات‌ها",
+          "name_en": "Liberal Democrats",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "لیبرالیسم اجتماعی و میانه‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_reform",
+          "name_fa": "ریفورم یوکی",
+          "name_en": "Reform UK",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "پوپولیسم راست و ملی‌گرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_snp",
+          "name_fa": "حزب ملی اسکاتلند",
+          "name_en": "Scottish National Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ طرفدار استقلال اسکاتلند",
+          "ideological_profile": "ملی‌گرایی اسکاتلندی و سوسیال‌دموکراسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_green",
+          "name_fa": "حزب سبز انگلستان و ولز",
+          "name_en": "Green Party of England and Wales",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "سیاست سبز و عدالت اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_plaid",
+          "name_fa": "پلاید کامری",
+          "name_en": "Plaid Cymru",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ ملی‌گرایی ولزی",
+          "ideological_profile": "ملی‌گرایی ولزی و میانه‌چپ",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_sinnfein",
+          "name_fa": "شین فین",
+          "name_en": "Sinn Féin",
+          "entity_type": "party",
+          "political_role": "نمایندگی ایرلند شمالی؛ سیاست عدم حضور در وست‌مینستر",
+          "ideological_profile": "ملی‌گرایی ایرلندی و چپ‌گرا",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_dup",
+          "name_fa": "حزب اتحادگرای دموکراتیک",
+          "name_en": "Democratic Unionist Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ اتحادگرای ایرلند شمالی",
+          "ideological_profile": "محافظه‌کاری اجتماعی و اتحادگرایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gbr_sdlp",
+          "name_fa": "حزب سوسیال دموکرات و کارگر",
+          "name_en": "Social Democratic and Labour Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ ایرلند شمالی",
+          "ideological_profile": "سوسیال‌دموکراسی و ملی‌گرایی ایرلندی میانه‌رو",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "gbr_labour_moderates",
+          "name_fa": "جریان میانه‌رو و عمل‌گرای کارگر",
+          "name_en": "Labour moderates",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر انضباط مالی، رشد و اصلاحات تدریجی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gbr_labour_left",
+          "name_fa": "جریان چپ حزب کارگر",
+          "name_en": "Labour left",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر خدمات عمومی، حقوق کار و مداخله بیشتر دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gbr_tory_one_nation",
+          "name_fa": "محافظه‌کاران یک ملت",
+          "name_en": "One Nation Conservatives",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "محافظه‌کاری میانه‌رو و نهادگرا."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gbr_tory_right",
+          "name_fa": "جریان راست محافظه‌کار",
+          "name_en": "Conservative right",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات و دولت کوچک‌تر؛ مواضع مهاجرتی سخت‌گیرانه‌تر در بخشی از طیف."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه؛ نخست‌وزیر در تاریخ شروع سناریو اندی برنهام است",
+          "confidence": "high"
+        },
+        {
+          "id": "house_commons",
+          "name_fa": "مجلس عوام",
+          "name_en": "House of Commons",
+          "role": "مرکز قانون‌گذاری و تعیین دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "house_lords",
+          "name_fa": "مجلس اعیان",
+          "name_en": "House of Lords",
+          "role": "مجلس بازنگری و بررسی قوانین",
+          "confidence": "high"
+        },
+        {
+          "id": "devolved_governments",
+          "name_fa": "دولت‌های واگذارشده اسکاتلند، ولز و ایرلند شمالی",
+          "name_en": "Devolved Governments",
+          "role": "مراکز قدرت منطقه‌ای در حوزه اختیارات واگذارشده",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Andy Burnham",
+        "party": "Labour Party",
+        "status": "majority_government"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_services",
+          "tax_and_spending",
+          "immigration",
+          "devolution",
+          "trade",
+          "foreign_policy",
+          "climate"
+        ],
+        "rule": "احزاب منطقه‌ای و سیاست‌های عدم حضور پارلمانی مانند Sinn Féin باید جدا از احزاب سراسری مدل شوند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK Government — Prime Minister",
+            "url": "https://www.gov.uk/government/ministers/prime-minister",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "UK Parliament — State of the parties",
+            "url": "https://members.parliament.uk/parties/Commons",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "UK Parliament — MPs and political parties",
+            "url": "https://www.parliament.uk/about/mps-and-lords/members/partysystem/",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "سمت نخست‌وزیری و ترکیب احزاب مجلس عوام بر اساس صفحات رسمی دولت و پارلمان بررسی شده است. تعداد نمایندگان در این نسخه ذخیره نشده تا با تغییرات روزانه بدون به‌روزرسانی داده کهنه نشود."
       },
       "parliamentary_groups": []
     },
@@ -1216,19 +2392,174 @@
     "CHN": {
       "country_name_fa": "چین",
       "country_name_en": "China",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
+      "system_type": "single_dominant_party_state_with_consultative_minor_parties",
+      "government_model": "دولت حزبی متمرکز تحت رهبری حزب کمونیست چین؛ احزاب کوچک مشارکتی و مشورتی",
+      "parties": [
+        {
+          "id": "chn_ccp",
+          "name_fa": "حزب کمونیست چین",
+          "name_en": "Communist Party of China",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و مرکز اصلی قدرت سیاسی",
+          "ideological_profile": "مارکسیسم-لنینیسم، سوسیالیسم با ویژگی‌های چینی و رهبری متمرکز",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_rcck",
+          "name_fa": "کمیته انقلابی کومین‌تانگ چین",
+          "name_en": "Revolutionary Committee of the Chinese Kuomintang",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی تحت رهبری حزب کمونیست",
+          "ideological_profile": "همکاری سیاسی و مشورت در چارچوب جبهه متحد",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_cdl",
+          "name_fa": "اتحادیه دموکراتیک چین",
+          "name_en": "China Democratic League",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "مشورت سیاست عمومی و مشارکت در ساختار مشورتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_cndca",
+          "name_fa": "انجمن ملی ساخت دموکراتیک چین",
+          "name_en": "China National Democratic Construction Association",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "دارای پیوند تاریخی با بخش‌های اقتصادی و حرفه‌ای؛ مشارکت مشورتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_capd",
+          "name_fa": "انجمن چین برای ترویج دموکراسی",
+          "name_en": "China Association for Promoting Democracy",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "مشارکت مشورتی و اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_cpwp",
+          "name_fa": "حزب دموکراتیک دهقانان و کارگران چین",
+          "name_en": "Chinese Peasants and Workers Democratic Party",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "مشارکت مشورتی؛ پیوندهای تاریخی با حوزه‌های سلامت و اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_zhi_gong",
+          "name_fa": "حزب ژی‌گونگ چین",
+          "name_en": "China Zhi Gong Party",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "پیوند با چینی‌های خارج از کشور و مشورت سیاسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_jiusan",
+          "name_fa": "انجمن جیوسان",
+          "name_en": "Jiusan Society",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "دارای پایگاه حرفه‌ای در علوم، فناوری و آموزش؛ مشارکت مشورتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "chn_tsl",
+          "name_fa": "اتحادیه خودگردانی دموکراتیک تایوان",
+          "name_en": "Taiwan Democratic Self-Government League",
+          "entity_type": "party",
+          "political_role": "حزب مشارکتی/مشورتی",
+          "ideological_profile": "مشارکت در ساختار مشورتی؛ مرتبط با موضوع تایوان",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
       "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "power_centers": [
+        {
+          "id": "ccp_general_secretary",
+          "name_fa": "دبیرکل حزب کمونیست",
+          "name_en": "CPC General Secretary",
+          "role": "بالاترین مقام حزبی و مرکز اصلی هدایت سیاسی",
+          "confidence": "high"
+        },
+        {
+          "id": "politburo_standing_committee",
+          "name_fa": "کمیته دائمی دفتر سیاسی",
+          "name_en": "Politburo Standing Committee",
+          "role": "هسته عالی تصمیم‌گیری حزب",
+          "confidence": "high"
+        },
+        {
+          "id": "central_military_commission",
+          "name_fa": "کمیسیون مرکزی نظامی حزب",
+          "name_en": "Central Military Commission",
+          "role": "فرماندهی سیاسی نیروهای مسلح",
+          "confidence": "high"
+        },
+        {
+          "id": "state_council",
+          "name_fa": "شورای دولتی",
+          "name_en": "State Council",
+          "role": "اداره اجرایی دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "npc_cppcc",
+          "name_fa": "کنگره ملی خلق و کنفرانس مشورتی سیاسی خلق چین",
+          "name_en": "NPC and CPPCC",
+          "role": "نهاد قانون‌گذاری و ساختار مشورتی سیاسی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "party": "Communist Party of China",
+        "general_secretary": "Xi Jinping",
+        "president": "Xi Jinping",
+        "premier": "Li Qiang"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_growth",
+          "party_discipline",
+          "social_stability",
+          "technology",
+          "trade",
+          "territorial_integrity",
+          "foreign_pressure"
+        ],
+        "rule": "احزاب کوچک نباید به‌صورت اپوزیسیون انتخاباتی یا رقیب واقعی حزب کمونیست شبیه‌سازی شوند؛ نقش آن‌ها مشورتی/مشارکتی است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — China’s Political System",
+            "url": "https://www.everycrsreport.com/reports/IF12505.html",
+            "date": "2026-04-27"
+          },
+          {
+            "name": "State Council Information Office — China’s Political Party System",
+            "url": "https://english.www.gov.cn/news/topnews/202106/26/content_WS60d66223c6d0df57f98dbe58.html",
+            "date": "2021-06-26"
+          }
+        ],
+        "notes": "منابع رسمی چین نقش احزاب کوچک را مشارکتی و مشورتی تحت رهبری حزب کمونیست توصیف می‌کنند؛ گزارش CRS ساختار واقعی قدرت و برتری حزب را مستقلانه توضیح می‌دهد. فهرست جریان‌های درون‌حزبی در این مرحله عمداً خالی است تا از برچسب‌گذاری غیرمستند پرهیز شود."
       },
       "parliamentary_groups": []
     },
