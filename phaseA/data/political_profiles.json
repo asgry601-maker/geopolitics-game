@@ -5,19 +5,19 @@
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 82,
-    "pending_countries": 92,
+    "researched_countries": 89,
+    "pending_countries": 85,
     "last_batch": [
-      "LTU",
-      "LUX",
-      "CYP",
-      "MLT",
-      "KAZ",
-      "AZE",
-      "GEO"
+      "PRK",
+      "TWN",
+      "MNG",
+      "LKA",
+      "NPL",
+      "BTN",
+      "MDV"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -13733,59 +13733,524 @@
     "PRK": {
       "country_name_fa": "کره شمالی",
       "country_name_en": "North Korea",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "hereditary_totalitarian_one_party_state",
+      "government_model": "دولت تک‌حزبی اقتدارگرای موروثی؛ حزب کارگران کره مرکز اصلی قدرت است و نهادهای انتخابی نقش رقابتی مستقل ندارند.",
+      "parties": [
+        {
+          "id": "prk_wpk",
+          "name_fa": "حزب کارگران کره",
+          "name_en": "Workers' Party of Korea (WPK)",
+          "entity_type": "ruling_party",
+          "political_role": "حزب حاکم و هسته اصلی ساختار دولت؛ کیم جونگ اون دبیرکل حزب است.",
+          "ideological_profile": "جوچه، سونگون در میراث تاریخی، ملی‌گرایی کره‌ای و سوسیالیسم دولتی با محوریت رهبری",
+          "legal_status": "ruling_monopoly",
+          "confidence": "high"
+        },
+        {
+          "id": "prk_kspd",
+          "name_fa": "حزب سوسیال‌دموکرات کره",
+          "name_en": "Korean Social Democratic Party (KSDP)",
+          "entity_type": "satellite_party",
+          "political_role": "حزب اقماری قانونی در جبهه دموکراتیک میهن؛ فاقد رقابت مستقل با حزب حاکم.",
+          "ideological_profile": "سوسیال‌دموکراسی اسمی در چارچوب نظام رسمی و جبهه حاکم",
+          "legal_status": "satellite_party_no_independent_competition",
+          "confidence": "high"
+        },
+        {
+          "id": "prk_chondoist",
+          "name_fa": "حزب چوندوئیست چونگو",
+          "name_en": "Chondoist Chongu Party",
+          "entity_type": "satellite_party",
+          "political_role": "حزب اقماری کوچک در جبهه دموکراتیک میهن؛ فاقد نقش اپوزیسیون مستقل.",
+          "ideological_profile": "ریشه در جنبش مذهبی چوندوئیسم و ملی‌گرایی کره‌ای؛ فعالیت در چارچوب رسمی",
+          "legal_status": "satellite_party_no_independent_competition",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "prk_party_apparatus",
+          "name_fa": "دستگاه مرکزی حزب و سازمان‌دهی",
+          "name_en": "Central Party apparatus and Organization and Guidance Department",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "domestic": "نظارت سیاسی و گزینش کادرها؛ حفظ وفاداری نخبگان به رهبر.",
+            "economy": "تخصیص منابع و امتیازهای اقتصادی از طریق شبکه‌های حزبی و دولتی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "prk_military_elite",
+          "name_fa": "نخبگان نظامی و کمیسیون امور دولتی",
+          "name_en": "Military elite and State Affairs Commission",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "security": "اجرای اولویت‌های امنیتی و دفاعی رهبر؛ نفوذ نهادی در سیاست‌گذاری."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "prk_security_organs",
+          "name_fa": "نهادهای امنیت داخلی و امنیت دولتی",
+          "name_en": "Internal security and State Security institutions",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "domestic": "کنترل سیاسی، امنیت رژیم و نظارت بر جامعه."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prk_leader",
+          "name_fa": "رهبر عالی و دبیرکل حزب",
+          "name_en": "Supreme Leader and WPK General Secretary",
+          "role": "کیم جونگ اون در رأس نظام سیاسی و فرماندهی عالی قرار دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "prk_wpk_cc",
+          "name_fa": "کمیته مرکزی و دفتر سیاسی حزب",
+          "name_en": "WPK Central Committee and Politburo",
+          "role": "مرکز اصلی تصمیم‌گیری حزبی و نظارت بر دولت و نیروهای مسلح.",
+          "confidence": "high"
+        },
+        {
+          "id": "prk_state_affairs",
+          "name_fa": "کمیسیون امور دولتی",
+          "name_en": "State Affairs Commission",
+          "role": "نهاد عالی دولتی تحت رهبری کیم جونگ اون.",
+          "confidence": "high"
+        },
+        {
+          "id": "prk_spa",
+          "name_fa": "مجمع عالی خلق",
+          "name_en": "Supreme People's Assembly",
+          "role": "نهاد قانون‌گذاری رسمی؛ عمدتاً تصویب و تنفیذ تصمیم‌های حزب و رهبری.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "supreme_leader": "Kim Jong-un",
+        "party": "Workers' Party of Korea",
+        "head_of_state": "Kim Jong-un (President of State Affairs)",
+        "prime_minister": "Pak Thae-song",
+        "status": "hereditary one-party authoritarian state"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "regime_security",
+          "sanctions_and_trade",
+          "relations_with_china",
+          "relations_with_russia",
+          "inter_korean_relations",
+          "nuclear_diplomacy"
+        ],
+        "rule": "حزب کارگران تنها نیروی حاکم واقعی است. دو حزب اقماری و جبهه دموکراتیک را به‌عنوان احزاب رقیب مدل نکن؛ رقابت واقعی درون شبکه نخبگان و دستگاه‌های حزبی، دولتی و نظامی رخ می‌دهد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — North Korea in 2026: Frequently asked questions",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12204/",
+            "date": "2026-09-18"
+          },
+          {
+            "name": "Reuters — North Korea ruling party revisions bolster Kim Jong Un's control",
+            "url": "https://www.reuters.com/world/asia-pacific/north-korea-ruling-party-revisions-bolster-kim-jong-uns-control-report-says-2026-09-03/",
+            "date": "2026-09-03"
+          },
+          {
+            "name": "BTI 2026 — North Korea Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/PRK",
+            "date": "2026"
+          }
+        ],
+        "notes": "حزب‌های اقماری در ساختار جبهه دموکراتیک میهن ثبت شده‌اند، نه به‌عنوان اپوزیسیون مستقل. تغییرات اساسنامه حزب کارگران در کنگره نهم ۲۰۲۶ تمرکز اختیار را در دست کیم جونگ اون بیشتر کرد."
+      }
     },
     "TWN": {
       "country_name_fa": "تایوان",
       "country_name_en": "Taiwan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_multiparty_democracy",
+      "government_model": "نظام نیمه‌ریاستی دموکراتیک با رئیس‌جمهور منتخب مستقیم و مجلس قانون‌گذاری تک‌مجلسی؛ رقابت حزبی واقعی و دولت تقسیم‌شده.",
+      "parties": [
+        {
+          "id": "twn_dpp",
+          "name_fa": "حزب پیشرو دموکراتیک",
+          "name_en": "Democratic Progressive Party (DPP)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور لای چینگ‌ده و دولت اجرایی؛ در مجلس اقلیت دارد.",
+          "ideological_profile": "میانه‌چپ تا میانه، ترقی‌خواهی اجتماعی و تأکید بر هویت و خودمختاری تایوان",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_kmt",
+          "name_fa": "کومینتانگ / حزب ملی‌گرا",
+          "name_en": "Kuomintang (KMT)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب مخالف و نیروی اصلی اکثریت مخالف در مجلس.",
+          "ideological_profile": "محافظه‌کاری، جمهوری‌خواهی چینی تاریخی و حمایت از کاهش تنش از طریق تعامل با پکن؛ درون‌حزبی طیف‌های متفاوت دارد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_tpp",
+          "name_fa": "حزب مردم تایوان",
+          "name_en": "Taiwan People's Party (TPP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک‌تر میانه‌گرا؛ در بسیاری از رأی‌گیری‌ها با KMT علیه دولت همسو می‌شود، اما مستقل از آن است.",
+          "ideological_profile": "میانه‌گرایی، عمل‌گرایی و اصلاحات حکمرانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_pfp",
+          "name_fa": "حزب اول مردم",
+          "name_en": "People First Party (PFP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با نفوذ انتخاباتی محدود در سطح ملی؛ در مجلس فعلی کرسی ندارد.",
+          "ideological_profile": "میانه‌گرایی محافظه‌کار و میراث جریان پان‌آبی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "twn_dpp_sovereignty",
+          "name_fa": "جریان حاکمیت‌خواه و هویت‌محور در DPP",
+          "name_en": "DPP sovereignty and Taiwan identity current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "تأکید بر حفظ وضع موجود، هویت دموکراتیک تایوان و همکاری امنیتی با آمریکا؛ مخالفت با فشار پکن."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "twn_kmt_engagement",
+          "name_fa": "جریان تعامل و تنش‌زدایی در KMT",
+          "name_en": "KMT cross-strait engagement current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "حمایت از گفت‌وگو و مبادلات با سرزمین اصلی برای کاهش تنش؛ طیف‌های حزب درباره آینده روابط دیدگاه یکسان ندارند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "twn_tpp_reform",
+          "name_fa": "جریان اصلاح‌گر و میانه‌گرای TPP",
+          "name_en": "TPP centrist governance reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر اصلاح حکمرانی، شفافیت و مسائل معیشتی؛ تلاش برای فاصله گرفتن از دو قطب اصلی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "twn_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "لای چینگ‌ده از مه ۲۰۲۴ رئیس‌جمهور است و ریاست قوه مجریه را برعهده دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_executive_yuan",
+          "name_fa": "یوان اجرایی",
+          "name_en": "Executive Yuan",
+          "role": "کابینه به ریاست چو جونگ‌تای؛ نخست‌وزیر از سوی رئیس‌جمهور منصوب می‌شود.",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_legislative_yuan",
+          "name_fa": "یوان قانون‌گذاری",
+          "name_en": "Legislative Yuan",
+          "role": "مجلس ۱۱۳ کرسی؛ KMT و متحدان مستقل و TPP اکثریت عملی را در برابر دولت DPP تشکیل می‌دهند.",
+          "confidence": "high"
+        },
+        {
+          "id": "twn_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "مرجع رسیدگی به اختلافات قانون اساسی و نظارت قضایی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Lai Ching-te",
+        "vice_president": "Hsiao Bi-khim",
+        "premier": "Cho Jung-tai",
+        "ruling_party": "Democratic Progressive Party",
+        "legislature": {
+          "total_seats": 113,
+          "kmt": 52,
+          "dpp": 51,
+          "tpp": 8,
+          "independents": 2
+        },
+        "status": "DPP executive with opposition-controlled legislature; local elections scheduled 2026-11-28"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cross_strait_relations",
+          "defence_and_us_relations",
+          "energy_security",
+          "housing_and_cost_of_living",
+          "constitutional_balance",
+          "identity_and_language"
+        ],
+        "rule": "رئیس‌جمهور و دولت DPP باید با مجلس تحت کنترل ائتلاف مخالف مذاکره کنند. KMT و TPP را یک حزب یا ائتلاف دائمی فرض نکن؛ همکاری آن‌ها موضوعی و قابل تغییر است."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — Taiwan: Political and Security Issues",
+            "url": "https://www.everycrsreport.com/files/2026-10-20_IF10275_e23faaff617ad2458e8532b67e52e9f951a4ccf8.html",
+            "date": "2026-10-20"
+          },
+          {
+            "name": "Focus Taiwan — KMT, TPP legislators reject all Control Yuan nominees",
+            "url": "https://focustaiwan.tw/politics/202609290017",
+            "date": "2026-09-29"
+          },
+          {
+            "name": "Focus Taiwan — Parties name 16 committee conveners for new Legislative Yuan session",
+            "url": "https://focustaiwan.tw/politics/202610080008",
+            "date": "2026-10-08"
+          }
+        ],
+        "notes": "وضعیت پارلمان و دولت تقسیم‌شده در تاریخ مرجع سناریو ثبت شده است. انتخابات محلی ۲۸ نوامبر ۲۰۲۶ پس از تاریخ شروع سناریو قرار دارد و در وضعیت آغازین اعمال نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "twn_dpp_caucus",
+          "name_en": "Democratic Progressive Party caucus",
+          "party_id": "twn_dpp"
+        },
+        {
+          "id": "twn_kmt_caucus",
+          "name_en": "Kuomintang caucus",
+          "party_id": "twn_kmt"
+        },
+        {
+          "id": "twn_tpp_caucus",
+          "name_en": "Taiwan People's Party caucus",
+          "party_id": "twn_tpp"
+        }
+      ]
     },
     "MNG": {
       "country_name_fa": "مغولستان",
       "country_name_en": "Mongolia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_parliamentary_multiparty_democracy",
+      "government_model": "جمهوری دموکراتیک با پارلمان تک‌مجلسی ۱۲۶ نفره و دولت متکی به اعتماد مجلس؛ رئیس‌جمهور منتخب مستقیم اختیارات محدودتر دارد.",
+      "parties": [
+        {
+          "id": "mng_mpp",
+          "name_fa": "حزب مردم مغولستان",
+          "name_en": "Mongolian People's Party (MPP)",
+          "entity_type": "party",
+          "political_role": "حزب بزرگ و محور دولت ائتلافی؛ ۶۸ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "سوسیال‌دموکراسی تاریخی با گرایش عمل‌گرای توسعه‌گرا و ملی‌محافظه‌کار در بخشی از رهبری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_dp",
+          "name_fa": "حزب دموکرات",
+          "name_en": "Democratic Party (DP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۴۲ کرسی در انتخابات ۲۰۲۴؛ در دوره‌هایی پارلمان را تحریم کرده است.",
+          "ideological_profile": "لیبرال‌دموکراسی، بازارگرایی و اصلاحات سیاسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_hun",
+          "name_fa": "حزب هان",
+          "name_en": "HUN Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک شریک دولت؛ ۸ کرسی در انتخابات ۲۰۲۴ و دو وزیر در کابینه ۲۰۲۶.",
+          "ideological_profile": "میانه‌گرایی، اصلاح‌طلبی و سیاست‌های نسل جوان",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_national_coalition",
+          "name_fa": "ائتلاف ملی",
+          "name_en": "National Coalition",
+          "entity_type": "electoral_coalition",
+          "political_role": "ائتلاف انتخاباتی با ۴ کرسی در انتخابات ۲۰۲۴؛ یک عضو در کابینه اوچرال در ۲۰۲۶.",
+          "ideological_profile": "ائتلافی با گرایش‌های ملی‌گرا و محافظه‌کار؛ مواضع اجزای آن یکدست نیست.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mng_cwgp",
+          "name_fa": "حزب اراده مدنی – سبزها",
+          "name_en": "Civil Will–Green Party (CWGP)",
+          "entity_type": "party",
+          "political_role": "حزب دارای ۴ کرسی در انتخابات ۲۰۲۴؛ در دولت اوچرال شریک کابینه نیست.",
+          "ideological_profile": "سبزگرایی، سیاست محیط‌زیستی و اصلاح‌طلبی مدنی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mng_mpp_presidential",
+          "name_fa": "جریان نزدیک به ریاست‌جمهوری در MPP",
+          "name_en": "MPP presidential-aligned current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حفظ انسجام حزب و مدیریت تعارض میان نخبگان؛ حمایت از نقش فعال دولت در توسعه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mng_mpp_oyunerdene",
+          "name_fa": "شبکه نخبگان دولت پیشین و جناح‌های درون MPP",
+          "name_en": "MPP legacy leadership networks",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "رقابت بر سر رهبری حزب، انتصابات و پاسخ‌گویی در پرونده‌های فساد."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mng_anti_corruption",
+          "name_fa": "جریان ضدفساد و اصلاح حکمرانی",
+          "name_en": "Anti-corruption and governance reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "مطالبه شفافیت، محدود کردن رانت و اصلاح مدیریت منابع معدنی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mng_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "اُخناگین خورلسوخ رئیس‌جمهور است؛ اختیارات اجرایی او از نخست‌وزیر محدودتر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_state_great_hural",
+          "name_fa": "مجلس دولت بزرگ",
+          "name_en": "State Great Hural",
+          "role": "پارلمان تک‌مجلسی ۱۲۶ نفره و مرجع انتخاب نخست‌وزیر و نظارت بر دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه اجرایی به ریاست نیام-اوسورین اوچرال از ۳۰ مارس ۲۰۲۶.",
+          "confidence": "high"
+        },
+        {
+          "id": "mng_mining_sector",
+          "name_fa": "شبکه‌های اقتصادی و معدنی",
+          "name_en": "Mining and business interests",
+          "role": "ذی‌نفعان مهم در زغال‌سنگ، مس و پروژه اویو تولغوی؛ نفوذشان بر سیاست اقتصادی بالاست.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Ukhnaagiin Khürelsükh",
+        "prime_minister": "Nyam-Osoryn Uchral",
+        "ruling_party": "Mongolian People's Party",
+        "coalition": [
+          "MPP",
+          "HUN Party",
+          "National Coalition"
+        ],
+        "parliament_seats_2024": {
+          "MPP": 68,
+          "DP": 42,
+          "HUN": 8,
+          "National_Coalition": 4,
+          "CWGP": 4
+        },
+        "cabinet_composition": {
+          "MPP": 16,
+          "HUN": 2,
+          "National_Coalition": 1
+        },
+        "status": "Uchral cabinet formed April 2026 after repeated leadership changes"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "mining_revenue_and_royalties",
+          "anti_corruption",
+          "relations_with_china_and_russia",
+          "democratic_checks",
+          "urban_rural_development",
+          "environment"
+        ],
+        "rule": "حزب MPP بزرگ‌ترین حزب است اما درون آن رقابت رهبری جدی وجود دارد. دولت اوچرال در ۲۰۲۶ با HUN و نماینده‌ای از ائتلاف ملی همکاری کابینه‌ای دارد؛ این را با ائتلاف قدیمی MPP-DP-HUN اشتباه نگیر."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — Mongolia: In Brief",
+            "url": "https://www.everycrsreport.com/reports/R49352.html",
+            "date": "2026-09-16"
+          },
+          {
+            "name": "Associated Press — Mongolia's third prime minister in a year",
+            "url": "https://apnews.com/article/52e8e0a4268910359d2899cdff819f2b",
+            "date": "2026-03-30"
+          },
+          {
+            "name": "Japan Ministry of Foreign Affairs — Diplomatic Bluebook 2026, Mongolia",
+            "url": "https://www.mofa.go.jp/policy/other/bluebook/2026/en_html/chapter2/c020202.html",
+            "date": "2026"
+          }
+        ],
+        "notes": "ترکیب کابینه در آوریل ۲۰۲۶ با دولت قبلی متفاوت است. مجلس ۱۲۶ کرسی دارد؛ تعداد کرسی‌های احزاب بر پایه انتخابات ۲۰۲۴ است و ترکیب کابینه ۲۰۲۶ جداگانه ثبت شده."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mng_mpp_group",
+          "name_en": "Mongolian People's Party parliamentary group",
+          "party_id": "mng_mpp"
+        },
+        {
+          "id": "mng_dp_group",
+          "name_en": "Democratic Party parliamentary group",
+          "party_id": "mng_dp"
+        },
+        {
+          "id": "mng_hun_group",
+          "name_en": "HUN Party parliamentary group",
+          "party_id": "mng_hun"
+        },
+        {
+          "id": "mng_small_parties",
+          "name_en": "National Coalition and Civil Will-Green groups",
+          "party_ids": [
+            "mng_national_coalition",
+            "mng_cwgp"
+          ]
+        }
+      ]
     },
     "IND": {
       "country_name_fa": "هند",
@@ -14279,78 +14744,839 @@
     "LKA": {
       "country_name_fa": "سری‌لانکا",
       "country_name_en": "Sri Lanka",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_republic_multiparty_democracy",
+      "government_model": "جمهوری با رئیس‌جمهور اجرایی و نخست‌وزیر؛ پارلمان تک‌مجلسی ۲۲۵ نفره. حزب حاکم ائتلاف گسترده ملی خلق است.",
+      "parties": [
+        {
+          "id": "lka_npp",
+          "name_fa": "قدرت ملی خلق / جاثیکا جانا بالاواگایا",
+          "name_en": "National People's Power (NPP / Jathika Jana Balawegaya)",
+          "entity_type": "electoral_alliance",
+          "political_role": "ائتلاف حاکم با ۱۵۹ کرسی؛ رئیس‌جمهور و نخست‌وزیر از این ائتلاف‌اند.",
+          "ideological_profile": "چپ و سوسیال‌دموکراسی، ضدفساد و اصلاح‌طلبی؛ ائتلافی با گروه‌های مختلف",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_jvp",
+          "name_fa": "جبهه آزادی‌بخش خلق",
+          "name_en": "Janatha Vimukthi Peramuna (JVP)",
+          "entity_type": "party",
+          "political_role": "هسته سازمانی و تاریخی اصلی NPP؛ حزب رئیس‌جمهور.",
+          "ideological_profile": "چپ‌گرایی و ریشه‌های مارکسیستی؛ در دوره جدید برنامه انتخاباتی عمل‌گرایانه‌تر",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_sjb",
+          "name_fa": "قدرت مردم متحد",
+          "name_en": "Samagi Jana Balawegaya (SJB)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی با ۴۰ کرسی.",
+          "ideological_profile": "میانه‌رو تا میانه‌چپ، سوسیال‌دموکراسی و اقتصاد بازار",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_itak",
+          "name_fa": "حزب فدرال / ایلانکای تامیل آراسو کاچچی",
+          "name_en": "Ilankai Tamil Arasu Kachchi (ITAK)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی نماینده بخشی از جامعه تامیل؛ ۸ کرسی.",
+          "ideological_profile": "فدرالیسم، حقوق اقلیت تامیل و تمرکززدایی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_ndf",
+          "name_fa": "جبهه دموکراتیک جدید",
+          "name_en": "New Democratic Front (NDF)",
+          "entity_type": "electoral_alliance",
+          "political_role": "ائتلاف کوچک با ۵ کرسی؛ مرتبط با بخشی از نیروهای میانه‌رو و دولت‌های پیشین.",
+          "ideological_profile": "میانه‌گرایی و عمل‌گرایی اقتصادی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lka_slpp",
+          "name_fa": "جبهه مردم سری‌لانکا",
+          "name_en": "Sri Lanka Podujana Peramuna (SLPP)",
+          "entity_type": "party",
+          "political_role": "حزب خانواده راجاپاکسا؛ پس از شکست انتخاباتی ۲۰۲۴ تنها ۳ کرسی دارد.",
+          "ideological_profile": "ملی‌گرایی سینhalایی، محافظه‌کاری و توسعه‌گرایی دولتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_slmc",
+          "name_fa": "کنگره مسلمانان سری‌لانکا",
+          "name_en": "Sri Lanka Muslim Congress (SLMC)",
+          "entity_type": "party",
+          "political_role": "حزب نماینده بخشی از رأی‌دهندگان مسلمان؛ ۳ کرسی.",
+          "ideological_profile": "نمایندگی اقلیت مسلمان و سیاست منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_sarvajana",
+          "name_fa": "سارواجانا بالایا",
+          "name_en": "Sarvajana Balaya",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک کرسی فهرست ملی.",
+          "ideological_profile": "ملی‌گرایی و محافظه‌کاری",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lka_npp_reform",
+          "name_fa": "جریان اصلاح‌طلب ضدفساد در NPP",
+          "name_en": "NPP anti-corruption reform current",
+          "entity_type": "coalition_current",
+          "policy_positions": {
+            "domestic": "اصلاح نهادها، پاسخ‌گویی و مبارزه با فساد.",
+            "economy": "تلاش برای حمایت اجتماعی همراه با تداوم ثبات کلان و تعهدات مالی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lka_jvp_core",
+          "name_fa": "هسته سازمانی JVP در ائتلاف NPP",
+          "name_en": "JVP organizational core within NPP",
+          "entity_type": "intra_coalition_current",
+          "policy_positions": {
+            "domestic": "انضباط تشکیلاتی و نقش دولت در توسعه و اصلاح ساختار سیاسی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lka_tamil_devolution",
+          "name_fa": "جریان‌های تامیلِ خواهان تمرکززدایی",
+          "name_en": "Tamil devolution and rights current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حقوق زبانی و مدنی، پاسخ‌گویی درباره جنگ داخلی و اختیارات استانی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lka_presidency",
+          "name_fa": "ریاست‌جمهوری اجرایی",
+          "name_en": "Executive Presidency",
+          "role": "آنورا کومارا دیسانایاکه رئیس‌جمهور و رئیس کابینه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_prime_minister",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "هارینی آماراسوریا نخست‌وزیر است؛ دولت از اکثریت بزرگ NPP برخوردار است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_parliament",
+          "name_fa": "پارلمان سری‌لانکا",
+          "name_en": "Parliament of Sri Lanka",
+          "role": "مجلس ۲۲۵ کرسی با اکثریت دو‌سوم NPP پس از انتخابات نوامبر ۲۰۲۴.",
+          "confidence": "high"
+        },
+        {
+          "id": "lka_provincial",
+          "name_fa": "شوراهای استانی و نهادهای محلی",
+          "name_en": "Provincial Councils and local institutions",
+          "role": "ساختارهای منتخب و موضوع مهم مناقشه تمرکززدایی؛ اختیارات و فعالیت شوراها در دوره‌های مختلف محدود و نامتوازن بوده است.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Anura Kumara Dissanayake",
+        "prime_minister": "Harini Amarasuriya",
+        "ruling_alliance": "National People's Power (NPP)",
+        "parliament_seats": {
+          "NPP": 159,
+          "SJB": 40,
+          "ITAK": 8,
+          "NDF": 5,
+          "SLPP": 3,
+          "SLMC": 3,
+          "Sarvajana_Balaya": 1,
+          "UNP": 1,
+          "DTNA": 1,
+          "ACTC": 1,
+          "ACMC": 1,
+          "Independent_Group_17": 1,
+          "SLLP": 1
+        },
+        "status": "NPP single-alliance government with two-thirds parliamentary majority"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption_and_governance",
+          "imf_and_debt_restructuring",
+          "cost_of_living",
+          "ethnic_reconciliation",
+          "provincial_devolution",
+          "relations_with_india_and_china"
+        ],
+        "rule": "NPP ائتلافی فراگیرتر از JVP است؛ این دو را یک موجودیت واحد تلقی نکن. دولت اکثریت بزرگ دارد اما اجرای وعده‌های اقتصادی با محدودیت بدهی و توافق‌های مالی روبه‌روست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Parliament of Sri Lanka — General Election 2024 Results",
+            "url": "https://www.parliament.lk/en/election-2024/results",
+            "date": "2024-11-15"
+          },
+          {
+            "name": "IPU Parline — Sri Lanka November 2024 election",
+            "url": "https://data.ipu.org/parliament/LK/LK-LC01/election/LK-LC01-E20241114/",
+            "date": "2024-11-14"
+          },
+          {
+            "name": "Cabinet Office of Sri Lanka — Cabinet of Ministers",
+            "url": "https://www.cabinetoffice.gov.lk/cab/index.php?id=12&lang=en&option=com_content",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "NPP ائتلاف انتخاباتی و حکومتی است که JVP هسته اصلی آن محسوب می‌شود. نتایج کرسی‌ها از پارلمان رسمی گرفته شده است؛ احزاب کوچک تک‌کرسی در جدول کرسی‌ها نیز ثبت شده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lka_npp_group",
+          "name_en": "National People's Power",
+          "party_id": "lka_npp"
+        },
+        {
+          "id": "lka_sjb_group",
+          "name_en": "Samagi Jana Balawegaya",
+          "party_id": "lka_sjb"
+        },
+        {
+          "id": "lka_tamil_group",
+          "name_en": "Tamil parliamentary parties",
+          "party_ids": [
+            "lka_itak",
+            "lka_slmc"
+          ]
+        },
+        {
+          "id": "lka_other_groups",
+          "name_en": "Other parliamentary parties and independents",
+          "party_ids": [
+            "lka_ndf",
+            "lka_slpp",
+            "lka_sarvajana"
+          ]
+        }
+      ]
     },
     "NPL": {
       "country_name_fa": "نپال",
       "country_name_en": "Nepal",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_multiparty_republic",
+      "government_model": "جمهوری فدرال پارلمانی؛ دولت جدید پس از انتخابات زودهنگام مارس ۲۰۲۶ با اکثریت قاطع حزب راستریا سواتانترا تشکیل شد.",
+      "parties": [
+        {
+          "id": "npl_rsp",
+          "name_fa": "حزب راستریا سواتانترا",
+          "name_en": "Rastriya Swatantra Party (RSP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم با ۱۸۲ کرسی از ۲۷۵؛ بالندرا شاه رهبر و نخست‌وزیر.",
+          "ideological_profile": "میانه‌گرا، اصلاح‌طلب، ضدفساد و تمرکز بر حکمرانی و خدمات عمومی؛ هویت ایدئولوژیک در حال تحول",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_nc",
+          "name_fa": "کنگره نپال",
+          "name_en": "Nepali Congress (NC)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی با ۳۸ کرسی؛ حزب تاریخی میانه‌رو.",
+          "ideological_profile": "سوسیال‌دموکراسی میانه‌رو، دموکراسی پارلمانی و اقتصاد مختلط",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_cpn_uml",
+          "name_fa": "حزب کمونیست نپال – مارکسیست لنینیست متحد",
+          "name_en": "Communist Party of Nepal (Unified Marxist–Leninist), CPN-UML",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون با ۲۵ کرسی؛ حزب مهم چپ میانه و ملی‌گرا.",
+          "ideological_profile": "کمونیسم پارلمانی، سوسیال‌دموکراسی و توسعه‌گرایی دولتی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_ncp",
+          "name_fa": "حزب کمونیست نپال",
+          "name_en": "Nepali Communist Party (NCP)",
+          "entity_type": "party",
+          "political_role": "حزب چپ با ۱۷ کرسی؛ مرتبط با جریان پوشپا کمال داهال.",
+          "ideological_profile": "چپ‌گرایی و میراث جنبش مائوئیستی در قالب رقابت پارلمانی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_shram_sanskriti",
+          "name_fa": "حزب شرام سانسکریتی",
+          "name_en": "Shram Sanskriti Party",
+          "entity_type": "party",
+          "political_role": "حزب جدید با ۷ کرسی؛ پایگاه آن به جنبش‌های محلی و مطالبات کار و فرهنگ پیوند دارد.",
+          "ideological_profile": "عدالت اجتماعی، کارمحوری و اصلاح‌طلبی محلی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "npl_rpp",
+          "name_fa": "حزب ملی دموکراتیک",
+          "name_en": "Rastriya Prajatantra Party (RPP)",
+          "entity_type": "party",
+          "political_role": "حزب محافظه‌کار با ۵ کرسی.",
+          "ideological_profile": "محافظه‌کاری، سلطنت‌طلبی در بخشی از جریان و هویت هندو",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "npl_rsp_technocratic",
+          "name_fa": "جریان تکنوکرات و اصلاح‌گر در RSP",
+          "name_en": "RSP technocratic governance current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاح خدمات عمومی، دیجیتالی‌سازی و مقابله با فساد.",
+            "economy": "جذب سرمایه‌گذاری، ایجاد اشتغال و بهبود مدیریت دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "npl_old_guard",
+          "name_fa": "جریان احزاب سنتی و نخبگان پیشین",
+          "name_en": "Traditional party establishment",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ شبکه‌های حزبی قدیمی و دفاع از تجربه و سازوکارهای سنتی ائتلافی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "npl_federal_identity",
+          "name_fa": "جریان‌های فدرالی و هویتی منطقه‌ای",
+          "name_en": "Federal, ethnic and regional representation currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تقویت اختیارات استان‌ها، نمایندگی گروه‌های قومی و زبانی و اجرای کامل فدرالیسم."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "npl_prime_minister",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "بالندرا شاه از ۲۷ مارس ۲۰۲۶ نخست‌وزیر و رهبر دولت RSP است.",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رام چاندرا پائودل رئیس‌جمهور و رئیس کشور با نقش عمدتاً قانون اساسی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۲۷۵ کرسی؛ RSP دارای ۱۸۲ کرسی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس علیا با اعضای منتخب غیرمستقیم و انتصابی؛ RSP در آن کرسی ندارد و برای قوانین خاص نیازمند تعامل با دیگر احزاب است.",
+          "confidence": "high"
+        },
+        {
+          "id": "npl_provinces",
+          "name_fa": "دولت‌های استانی",
+          "name_en": "Provincial Governments",
+          "role": "مراکز قدرت فدرال با ائتلاف‌ها و توازن‌های حزبی محلی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Ram Chandra Poudel",
+        "prime_minister": "Balendra Shah",
+        "ruling_party": "Rastriya Swatantra Party",
+        "election_date": "2026-03-05",
+        "house_seats": {
+          "RSP": 182,
+          "Nepali_Congress": 38,
+          "CPN_UML": 25,
+          "Nepali_Communist_Party": 17,
+          "Shram_Sanskriti": 7,
+          "RPP": 5,
+          "independent": 1
+        },
+        "status": "single-party majority government; RSP has no seats in the National Assembly"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "federalism_and_provincial_governance",
+          "employment_and_migration",
+          "relations_with_india_and_china",
+          "infrastructure",
+          "public_services"
+        ],
+        "rule": "پیروزی RSP گسست مهمی از احزاب سنتی است؛ اکثریت مجلس سفلی قوی است اما مجلس علیا و دولت‌های استانی همچنان به مذاکره بین‌حزبی نیاز دارند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — Nepal: 2026 legislative election and future prospects",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10622/",
+            "date": "2026-06-02"
+          },
+          {
+            "name": "IPU Parline — Nepal March 2026 election",
+            "url": "https://data.ipu.org/parliament/NP/NP-LC01/election/NP-LC01-E20260305/",
+            "date": "2026-03-05"
+          },
+          {
+            "name": "UK Home Office — Nepal political affiliation country note",
+            "url": "https://www.gov.uk/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+            "date": "2026-05"
+          }
+        ],
+        "notes": "انتخابات زودهنگام ۵ مارس ۲۰۲۶ و دولت بالندرا شاه پیش از تاریخ شروع سناریو شکل گرفته‌اند. اعتراضات و تغییرات سیاسی ۲۰۲۵ در شکل‌گیری انتخابات نقش داشتند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "npl_rsp_group",
+          "name_en": "Rastriya Swatantra Party",
+          "party_id": "npl_rsp"
+        },
+        {
+          "id": "npl_nc_group",
+          "name_en": "Nepali Congress",
+          "party_id": "npl_nc"
+        },
+        {
+          "id": "npl_uml_group",
+          "name_en": "CPN-UML",
+          "party_id": "npl_cpn_uml"
+        },
+        {
+          "id": "npl_communist_group",
+          "name_en": "Nepali Communist Party",
+          "party_id": "npl_ncp"
+        },
+        {
+          "id": "npl_small_groups",
+          "name_en": "Shram Sanskriti and RPP",
+          "party_ids": [
+            "npl_shram_sanskriti",
+            "npl_rpp"
+          ]
+        }
+      ]
     },
     "BTN": {
       "country_name_fa": "بوتان",
       "country_name_en": "Bhutan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "constitutional_monarchy_parliamentary_two_party_democracy",
+      "government_model": "پادشاهی مشروطه با نظام پارلمانی؛ انتخابات مجلس ملی میان احزاب واجد شرایط و رقابت عمدتاً دوحزبی برگزار می‌شود.",
+      "parties": [
+        {
+          "id": "btn_pdp",
+          "name_fa": "حزب دموکراتیک خلق",
+          "name_en": "People's Democratic Party (PDP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم با ۳۱ کرسی از ۴۷؛ حزب نخست‌وزیر.",
+          "ideological_profile": "میانه‌گرایی، توسعه اجتماعی و اقتصادی و اصلاحات تدریجی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "btn_btp",
+          "name_fa": "حزب تندرل بوتان",
+          "name_en": "Bhutan Tendrel Party (BTP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون رسمی با ۱۶ کرسی؛ رهبر حزب پما چوانگ رهبر اپوزیسیون است.",
+          "ideological_profile": "میانه‌گرایی و توسعه متوازن؛ مواضع حزبی در نظام دوحزبی محدود",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "btn_dnt",
+          "name_fa": "حزب دروک نیامروپ تشوگپا",
+          "name_en": "Druk Nyamrup Tshogpa (DNT)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده؛ در انتخابات ۲۰۲۳–۲۰۲۴ به دور نهایی نرسید و در مجلس فعلی کرسی ندارد.",
+          "ideological_profile": "توسعه متوازن، رفاه اجتماعی و خدمات عمومی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "btn_dpt",
+          "name_fa": "حزب دروک فوئنسوم تشوگپا",
+          "name_en": "Druk Phuensum Tshogpa (DPT)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده قدیمی؛ در مجلس فعلی نمایندگی ندارد.",
+          "ideological_profile": "محافظه‌کاری و توسعه ملی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "btn_dtp",
+          "name_fa": "حزب دروک توئندرل",
+          "name_en": "Druk Thuendrel Tshogpa (DTT)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده؛ در مجلس ملی فعلی کرسی ندارد.",
+          "ideological_profile": "توسعه‌گرایی و سیاست‌های رفاهی؛ ساختار و وزن انتخاباتی محدود",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "btn_gnh",
+          "name_fa": "جریان توسعه مبتنی بر شادی ملی ناخالص",
+          "name_en": "Gross National Happiness development current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "توازن میان رشد، حفاظت محیط‌زیست، فرهنگ و رفاه اجتماعی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "btn_monarchy",
+          "name_fa": "نهاد سلطنت و اجماع قانون اساسی",
+          "name_en": "Monarchy and constitutional consensus",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "حفظ ثبات سلطنت مشروطه و گذار دموکراتیک؛ پادشاه در چارچوب قانون اساسی نقش وحدت‌بخش دارد."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "btn_king",
+          "name_fa": "پادشاه بوتان",
+          "name_en": "King of Bhutan",
+          "role": "جیگمه خسار نامگیل وانگچوک رئیس کشور و نماد وحدت ملی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "btn_prime_minister",
+          "name_fa": "نخست‌وزیر و شورای وزیران",
+          "name_en": "Prime Minister and Lhengye Zhungtshog",
+          "role": "تشرینگ توبگی نخست‌وزیر؛ قوه اجرایی در دست کابینه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "btn_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس سفلی ۴۷ کرسی؛ PDP اکثریت و BTP اپوزیسیون رسمی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "btn_national_council",
+          "name_fa": "شورای ملی",
+          "name_en": "National Council",
+          "role": "مجلس علیا و نهاد بازنگری و مشورتی در ساختار دو مجلسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Jigme Khesar Namgyel Wangchuck",
+        "prime_minister": "Tshering Tobgay",
+        "ruling_party": "People's Democratic Party",
+        "national_assembly_seats": {
+          "PDP": 31,
+          "BTP": 16
+        },
+        "status": "PDP government for 2024-2028"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "gross_national_happiness",
+          "hydropower_and_energy",
+          "youth_employment",
+          "relations_with_india_and_china",
+          "environment_and_climate",
+          "tourism"
+        ],
+        "rule": "در انتخابات مجلس ملی فقط دو حزب واجد شرایط به رقابت نهایی می‌رسند؛ احزاب ثبت‌شده دیگر را نباید به‌عنوان فراکسیون‌های دارای کرسی مدل کرد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "National Assembly of Bhutan — Member Overview",
+            "url": "https://nab.parliament.gov.bt/members",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "Office of the Prime Minister of Bhutan — Current Government",
+            "url": "https://pmo.gov.bt/about-us/",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "Election Commission of Bhutan — Registered Political Parties",
+            "url": "https://ecb.bt/",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "وب‌سایت رسمی مجلس ملی ترکیب فعلی را PDP با ۳۱ و BTP با ۱۶ عضو نشان می‌دهد. احزاب ثبت‌شده بدون کرسی جدا از احزاب پارلمانی ثبت شده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "btn_pdp_group",
+          "name_en": "People's Democratic Party",
+          "party_id": "btn_pdp"
+        },
+        {
+          "id": "btn_btp_group",
+          "name_en": "Bhutan Tendrel Party",
+          "party_id": "btn_btp"
+        }
+      ]
     },
     "MDV": {
       "country_name_fa": "مالدیو",
       "country_name_en": "Maldives",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی با رئیس‌جمهور منتخب مستقیم و مجلس خلق تک‌مجلسی؛ حزب حاکم از اکثریت بسیار بزرگ برخوردار است.",
+      "parties": [
+        {
+          "id": "mdv_pnc",
+          "name_fa": "کنگره ملی خلق",
+          "name_en": "People's National Congress (PNC)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور محمد معز و حزب حاکم؛ ۶۶ کرسی از ۹۳ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "محافظه‌کاری، ملی‌گرایی و تأکید بر حاکمیت ملی و سیاست‌های اسلامی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_mdp",
+          "name_fa": "حزب دموکراتیک مالدیو",
+          "name_en": "Maldivian Democratic Party (MDP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۱۲ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "لیبرال‌دموکراسی، اصلاح‌طلبی و گرایش طرفدار نهادهای دموکراتیک",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_mda",
+          "name_fa": "اتحاد توسعه مالدیو",
+          "name_en": "Maldives Development Alliance (MDA)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با دو کرسی؛ از نیروهای همسو با ائتلاف حاکم.",
+          "ideological_profile": "توسعه‌گرایی و سیاست منطقه‌ای",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mdv_jp",
+          "name_fa": "حزب جمهوری‌خواه / جومهوری",
+          "name_en": "Jumhooree Party (JP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک کرسی؛ رهبر آن در ائتلاف سیاسی گسترده‌تر حامی دولت نقش داشته است.",
+          "ideological_profile": "میانه‌گرایی و عمل‌گرایی سیاسی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mdv_mnp",
+          "name_fa": "حزب ملی مالدیو",
+          "name_en": "Maldives National Party (MNP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "ملی‌گرایی و تمرکز بر حاکمیت و منافع جزایر",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mdv_pnf",
+          "name_fa": "جبهه ملی خلق",
+          "name_en": "People's National Front (PNF)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده در ۲۰۲۴؛ در انتخابات پارلمانی ۲۰۲۴ کرسی نگرفت.",
+          "ideological_profile": "جریان سیاسی جدید با هویت ملی‌گرا؛ نفوذ پارلمانی محدود",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "mdv_adhaalath",
+          "name_fa": "حزب عدالت",
+          "name_en": "Adhaalath Party",
+          "entity_type": "party",
+          "political_role": "حزب اسلامی ثبت‌شده؛ در تاریخ مرجع سناریو حزب کوچک خارج از حزب حاکم بود؛ در ۱۴ نوامبر ۲۰۲۶ توافق ائتلافی با PNC امضا کرد که پس از تاریخ شروع سناریو است.",
+          "ideological_profile": "اسلام‌گرایی سیاسی و محافظه‌کاری اجتماعی",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mdv_pnc_presidential",
+          "name_fa": "جریان ریاست‌جمهوری و رهبری PNC",
+          "name_en": "Presidential and PNC leadership network",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "foreign_policy": "تأکید بر استقلال و حاکمیت ملی و بازتنظیم روابط خارجی.",
+            "domestic": "تمرکز بر انسجام ائتلاف حاکم و کنترل دستور کار پارلمان."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_mdp_reform",
+          "name_fa": "جریان اصلاح‌طلب دموکراتیک",
+          "name_en": "Democratic reform current",
+          "entity_type": "opposition_current",
+          "policy_positions": {
+            "domestic": "تأکید بر استقلال نهادها، پاسخ‌گویی و رقابت سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mdv_islamic_conservative",
+          "name_fa": "جریان محافظه‌کار اسلامی",
+          "name_en": "Islamic conservative current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر نقش اسلام در قوانین و سیاست اجتماعی؛ احزاب و افراد مختلف در این جریان قرار می‌گیرند."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mdv_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "محمد معز رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_peoples_majlis",
+          "name_fa": "مجلس خلق",
+          "name_en": "People's Majlis",
+          "role": "پارلمان تک‌مجلسی؛ PNC در انتخابات ۲۰۲۴ اکثریت ۶۶ کرسی از ۹۳ کرسی را کسب کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_cabinet",
+          "name_fa": "کابینه و دستگاه اجرایی",
+          "name_en": "Cabinet and Executive",
+          "role": "اجرای سیاست دولت تحت هدایت رئیس‌جمهور.",
+          "confidence": "high"
+        },
+        {
+          "id": "mdv_island_councils",
+          "name_fa": "شوراهای جزایر و شهرداری‌ها",
+          "name_en": "Island and City Councils",
+          "role": "نهادهای محلی مهم در کشوری متشکل از جزایر پراکنده؛ منابع و اختیارات محلی بر سیاست اثر می‌گذارند.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Mohamed Muizzu",
+        "ruling_party": "People's National Congress",
+        "parliament_seats_2024": {
+          "PNC": 66,
+          "MDP": 12,
+          "MDA": 2,
+          "JP": 1,
+          "MNP": 1,
+          "independents": 11
+        },
+        "status_on_scenario_start": "PNC-led government; Adhaalath Party not yet formally joined the governing coalition",
+        "post_snapshot_update": {
+          "date": "2026-11-14",
+          "event": "PNC and Adhaalath Party signed a coalition agreement and agreed to cooperate through the remainder of the term and support Muizzu in 2028"
+        },
+        "registered_parties_as_of_2026_11_26": 7
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "sovereignty_and_foreign_alignment",
+          "tourism_and_debt",
+          "island_development",
+          "religious_and_social_policy",
+          "climate_and_sea_level",
+          "relations_with_india_and_china"
+        ],
+        "rule": "PNC اکثریت بزرگ مجلس را دارد. MDP اپوزیسیون اصلی است. Adhaalath در تاریخ آغاز سناریو هنوز به‌طور رسمی به ائتلاف حاکم نپیوسته بود؛ توافق ۱۴ نوامبر ۲۰۲۶ باید فقط به‌عنوان رویداد پس از شروع سناریو اعمال شود. PPM و The Democrats در ۲۰۲۵/۲۰۲۶ منحل شده‌اند و نباید به‌عنوان احزاب فعال ثبت شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Maldives April 2024 election",
+            "url": "https://data.ipu.org/parliament/MV/MV-LC01/election/MV-LC01-E20240421/",
+            "date": "2024-04-21"
+          },
+          {
+            "name": "Elections Commission of Maldives — Register of Political Parties",
+            "url": "https://www.elections.gov.mv/en/parties",
+            "date": "2026-11-26"
+          },
+          {
+            "name": "The Standard Maldives — Adhaalath formally joins PNC coalition",
+            "url": "https://standard.mv/adhaalath-formally-joins-pnc-coalition-to-back-president-muizzus-re-election/",
+            "date": "2026-11-16"
+          }
+        ],
+        "notes": "اطلاعات وضعیت ائتلاف در ۵ نوامبر ۲۰۲۶ از توافقی که ۱۴ نوامبر امضا شد جدا شده است. فهرست رسمی کمیسیون انتخابات در ۲۶ نوامبر ۲۰۲۶ هفت حزب ثبت‌شده را نشان می‌دهد و چند حزب سابق را منحل‌شده اعلام کرده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mdv_pnc_group",
+          "name_en": "People's National Congress parliamentary group",
+          "party_id": "mdv_pnc"
+        },
+        {
+          "id": "mdv_mdp_group",
+          "name_en": "Maldivian Democratic Party parliamentary group",
+          "party_id": "mdv_mdp"
+        },
+        {
+          "id": "mdv_small_groups",
+          "name_en": "Other parties and independents",
+          "party_ids": [
+            "mdv_mda",
+            "mdv_jp",
+            "mdv_mnp"
+          ]
+        }
+      ]
     },
     "AFG": {
       "country_name_fa": "افغانستان",
