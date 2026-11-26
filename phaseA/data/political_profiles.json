@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.19.0",
+  "schema_version": "1.20.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 159,
-    "pending_countries": 15,
+    "researched_countries": 166,
+    "pending_countries": 8,
     "last_batch": [
-      "TTO",
-      "CRI",
-      "PAN",
-      "GTM",
-      "HND",
-      "SLV",
-      "NIC"
+      "BLZ",
+      "BHS",
+      "BRB",
+      "NZL",
+      "PNG",
+      "FJI",
+      "WSM"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.\nنسخه 1.18.0: بسته بیست‌ودوم پژوهشی برای اروگوئه، گویان، سورینام، کوبا، هائیتی، جمهوری دومینیکن و جامائیکا اضافه شد. ساختارهای تک‌حزبی و دولت‌های انتقالی به‌صورت واقعی و بدون ساختن احزاب رقابتی یا اکثریت پارلمانی صوری ثبت شده‌اند. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اطلاعاتی که پس از این تاریخ منتشر شده‌اند فقط برای راستی‌آزمایی وضعیت تا snapshot استفاده شده‌اند و در صورت عدم امکان تفکیک زمانی، عدم قطعیت در یادداشت پروفایل ثبت شده است.",
@@ -29467,57 +29467,461 @@
     "BLZ": {
       "country_name_fa": "بلیز",
       "country_name_en": "Belize",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی در چارچوب کشورهای مشترک‌المنافع؛ جان بریسنیو از مارس ۲۰۲۵ نخست‌وزیر دولت حزب متحد مردم است.",
+      "parties": [
+        {
+          "id": "blz_pup",
+          "name_fa": "حزب متحد مردم",
+          "name_en": "People's United Party (PUP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۲۶ کرسی از ۳۱ کرسی مجلس نمایندگان در انتخابات ۲۰۲۵.",
+          "ideological_profile": "میانه‌چپ، سوسیال‌دموکراسی و ملی‌گرایی بلیزی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_udp",
+          "name_fa": "حزب متحد دموکراتیک",
+          "name_en": "United Democratic Party (UDP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ پنج کرسی مجلس نمایندگان در انتخابات ۲۰۲۵.",
+          "ideological_profile": "میانه‌راست، محافظه‌کاری و بازارگرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_godp",
+          "name_fa": "حزب توسعه فرصت عمومی",
+          "name_en": "General Opportunity Development Party (GODP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک شرکت‌کننده در انتخابات ۲۰۲۵؛ بدون کرسی.",
+          "ideological_profile": "توسعه‌گرایی و سیاست‌ورزی محلی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_pnp",
+          "name_fa": "حزب ملی مردم",
+          "name_en": "People's National Party (PNP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک انتخاباتی؛ بدون کرسی در مجلس ۲۰۲۵.",
+          "ideological_profile": "ملی‌گرایی و سیاست‌ورزی اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_pdm",
+          "name_fa": "جنبش دموکراتیک مردم",
+          "name_en": "People's Democratic Movement (PDM)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک شرکت‌کننده در انتخابات ۲۰۲۵؛ بدون کرسی.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_bjm",
+          "name_fa": "جنبش عدالت بلیز",
+          "name_en": "Belizean Justice Movement (BJM)",
+          "entity_type": "party",
+          "political_role": "نیروی کوچک شرکت‌کننده در انتخابات ۲۰۲۵؛ بدون کرسی.",
+          "ideological_profile": "عدالت اجتماعی و اصلاحات حکمرانی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "blz_pup_government",
+          "name_fa": "جریان دولت‌محور PUP",
+          "name_en": "PUP governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان حامی دولت جان بریسنیو و تداوم برنامه‌های رفاهی، آموزش و خدمات عمومی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "blz_udp_opposition",
+          "name_fa": "جریان‌های درون UDP",
+          "name_en": "Currents within UDP",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "رقابت بر سر رهبری و بازسازی اپوزیسیون پس از شکست انتخاباتی ۲۰۲۵."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "blz_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "جان بریسنیو رئیس دولت و رهبر قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "PUP با ۲۶ کرسی اکثریت قاطع مجلس منتخب را دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس علیا با اعضای منصوب؛ نقش بازبینی قانون‌گذاری و نظارت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "blz_gg",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه و رئیس کشور در ساختار مشروطه.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "John Briceño",
+        "government_type": "parliamentary constitutional monarchy",
+        "prime_minister_party": "People's United Party (PUP)",
+        "supporting_coalitions": [
+          "PUP"
+        ],
+        "parliamentary_context": "انتخابات ۱۲ مارس ۲۰۲۵: PUP با ۲۶ و UDP با پنج کرسی از ۳۱ کرسی مجلس نمایندگان پیروز شدند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "healthcare",
+          "education",
+          "minimum_wage",
+          "economic_stability",
+          "climate_resilience"
+        ],
+        "rule": "رقابت اصلی میان PUP و UDP است؛ احزاب کوچک ثبت‌شده در انتخابات ۲۰۲۵ نباید به‌عنوان احزاب دارای کرسی معرفی شوند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس نمایندگان بلیز ۲۰۲۵",
+            "url": "https://data.ipu.org/parliament/BZ/BZ-LC01/election/BZ-LC01-E20250312/",
+            "date": "2025-03-12"
+          },
+          {
+            "name": "Elections and Boundaries Commission – فهرست احزاب انتخابات ۲۰۲۵",
+            "url": "https://elections.gov.bz/wp-content/uploads/2025/03/NOTICE-THAT-A-POLL-WILL-BE-TAKEN-3.pdf",
+            "date": "2025-02-25"
+          }
+        ],
+        "notes": "نتایج انتخابات زودهنگام ۲۰۲۵ مبنای ترکیب مجلس و دولت دوم جان بریسنیو است."
       },
       "parliamentary_groups": []
     },
     "BHS": {
-      "country_name_fa": "باهاماس",
+      "country_name_fa": "باهاما",
       "country_name_en": "Bahamas",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی؛ فیلیپ دیویس و حزب لیبرال مترقی در انتخابات ۱۲ مه ۲۰۲۶ دوباره دولت را تشکیل دادند.",
+      "parties": [
+        {
+          "id": "bhs_plp",
+          "name_fa": "حزب لیبرال مترقی",
+          "name_en": "Progressive Liberal Party (PLP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۳۳ کرسی از ۴۱ کرسی مجلس نمایندگان در انتخابات ۲۰۲۶.",
+          "ideological_profile": "میانه‌چپ، سوسیال‌دموکراسی و ملی‌گرایی باهامایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bhs_fnm",
+          "name_fa": "جنبش ملی آزاد",
+          "name_en": "Free National Movement (FNM)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ هشت کرسی مجلس نمایندگان.",
+          "ideological_profile": "میانه‌راست، محافظه‌کاری و بازارگرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bhs_coi",
+          "name_fa": "ائتلاف مستقل‌ها",
+          "name_en": "Coalition of Independents (COI)",
+          "entity_type": "party",
+          "political_role": "ائتلاف انتخاباتی سوم؛ در انتخابات ۲۰۲۶ رأی قابل توجهی گرفت اما کرسی کسب نکرد.",
+          "ideological_profile": "ضدساختار سنتی و اصلاح‌طلبی سیاسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bhs_plp_government",
+          "name_fa": "جریان دولت‌محور PLP",
+          "name_en": "PLP governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان حامی فیلیپ دیویس و تداوم برنامه‌های اقتصادی و اجتماعی دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bhs_fnm_reform",
+          "name_fa": "جریان بازسازی FNM",
+          "name_en": "FNM renewal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "بحث‌های درون حزب درباره رهبری و بازسازی اپوزیسیون پس از شکست انتخابات ۲۰۲۶."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bhs_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "فیلیپ دیویس رئیس دولت و رهبر قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhs_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Assembly",
+          "role": "PLP با ۳۳ کرسی اکثریت قاطع مجلس ۴۱ کرسی را در اختیار دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhs_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "اعضای سنا منصوب می‌شوند و نقش بازبینی و نظارت قانون‌گذاری دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "bhs_gg",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه و رئیس کشور در نظام مشروطه.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Philip Davis",
+        "government_type": "parliamentary constitutional monarchy",
+        "prime_minister_party": "Progressive Liberal Party (PLP)",
+        "supporting_coalitions": [
+          "PLP"
+        ],
+        "parliamentary_context": "انتخابات ۱۲ مه ۲۰۲۶: PLP با ۳۳ و FNM با هشت کرسی از ۴۱ کرسی مجلس نمایندگان؛ نتایج IPU در زمان ثبت به‌عنوان غیررسمی علامت‌گذاری شده است."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "tourism",
+          "cost_of_living",
+          "public_security",
+          "housing",
+          "climate_change",
+          "economic_diversification"
+        ],
+        "rule": "PLP و FNM دو حزب اصلی پارلمانی‌اند؛ COI نیروی انتخاباتی مهمی بود اما کرسی نگرفت."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس نمایندگان باهاما ۲۰۲۶",
+            "url": "https://data.ipu.org/parliament/BS/BS-LC01/election/BS-LC01-E20260512/",
+            "date": "2026-05-12"
+          },
+          {
+            "name": "Office of the Prime Minister – اعلام انحلال پارلمان و انتخابات ۲۰۲۶",
+            "url": "https://opm.gov.bs/statement-by-prime-minister-the-hon-philip-edward-davis-on-the-dissolution-of-parliament-and-the-2026-general-election/",
+            "date": "2026-04"
+          }
+        ],
+        "notes": "IPU ترکیب کرسی‌ها را بر اساس داده‌های پارلمان گزارش می‌کند اما نتیجه را در صفحه انتخابات هنوز unofficial نشان می‌دهد؛ بنابراین سطح اطمینان متوسط ثبت شده است."
       },
       "parliamentary_groups": []
     },
     "BRB": {
       "country_name_fa": "باربادوس",
       "country_name_en": "Barbados",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_republic_multiparty",
+      "government_model": "جمهوری پارلمانی؛ میا موتلی در انتخابات ۱۱ فوریه ۲۰۲۶ برای سومین دوره پیاپی پیروز شد و حزب کارگر باربادوس هر ۳۰ کرسی انتخابی مجلس نمایندگان را به دست آورد.",
+      "parties": [
+        {
+          "id": "brb_blp",
+          "name_fa": "حزب کارگر باربادوس",
+          "name_en": "Barbados Labour Party (BLP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ هر ۳۰ کرسی انتخابی مجلس نمایندگان در انتخابات ۲۰۲۶.",
+          "ideological_profile": "میانه‌چپ، سوسیال‌دموکراسی و ترقی‌خواهی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_dlp",
+          "name_fa": "حزب کارگر دموکراتیک",
+          "name_en": "Democratic Labour Party (DLP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سنتی؛ در انتخابات ۲۰۲۶ هیچ کرسی مجلس نمایندگان کسب نکرد.",
+          "ideological_profile": "سوسیال‌دموکراسی، محافظه‌کاری اجتماعی و ملی‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_fod",
+          "name_fa": "دوستان دموکراسی",
+          "name_en": "Friends of Democracy (FoD)",
+          "entity_type": "party",
+          "political_role": "حزب/گروه انتخاباتی کوچک؛ ۱۲ نامزد در انتخابات ۲۰۲۶، بدون کرسی.",
+          "ideological_profile": "اصلاح‌طلبی و مشارکت شهروندی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_pcp",
+          "name_fa": "ائتلاف مردم برای پیشرفت",
+          "name_en": "People's Coalition for Progress (PCP)",
+          "entity_type": "party",
+          "political_role": "گروه انتخاباتی کوچک؛ ۱۲ نامزد در انتخابات ۲۰۲۶، بدون کرسی.",
+          "ideological_profile": "توسعه‌گرایی و عدالت اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_bfp",
+          "name_fa": "حزب آزاد باجان",
+          "name_en": "Bajan Free Party (BFP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با سه نامزد در انتخابات ۲۰۲۶، بدون کرسی.",
+          "ideological_profile": "آزادی‌خواهی و اصلاحات سیاسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_solutions",
+          "name_fa": "راهکارهای باربادوس",
+          "name_en": "Solutions Barbados",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک نامزد در انتخابات ۲۰۲۶، بدون کرسی.",
+          "ideological_profile": "اصلاحات حکمرانی و سیاست‌گذاری مبتنی بر راهکار",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_bsp",
+          "name_fa": "حزب حاکمیت باربادوس",
+          "name_en": "Barbados Sovereignty Party (BSP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک نامزد در انتخابات ۲۰۲۶، بدون کرسی.",
+          "ideological_profile": "حاکمیت‌گرایی و استقلال سیاسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "brb_blp_mottley",
+          "name_fa": "جریان رهبری میا موتلی",
+          "name_en": "Mia Mottley leadership current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان غالب در BLP پیرامون نخست‌وزیر و برنامه توسعه و دیپلماسی دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "brb_dlp_opposition",
+          "name_fa": "جریان بازسازی DLP",
+          "name_en": "DLP opposition renewal",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حزب در پی بازسازی رهبری و پایگاه انتخاباتی پس از شکست‌های پیاپی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "brb_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "میا موتلی رئیس دولت و رهبر قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_house",
+          "name_fa": "مجلس مجمع",
+          "name_en": "House of Assembly",
+          "role": "BLP هر ۳۰ کرسی انتخابی را در اختیار دارد؛ رئیس مجلس طبق اصلاحیه قانون اساسی می‌تواند از بیرون نمایندگان انتخاب شود.",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "اعضای سنا منصوب می‌شوند و نقش بازبینی قانون‌گذاری دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "brb_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس‌جمهور رئیس کشور است؛ جمهوری باربادوس از ۲۰۲۱ جایگزین سلطنت شد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Jeffrey Bostic",
+        "prime_minister": "Mia Mottley",
+        "government_type": "parliamentary republic",
+        "prime_minister_party": "Barbados Labour Party (BLP)",
+        "supporting_coalitions": [
+          "BLP"
+        ],
+        "parliamentary_context": "انتخابات ۱۱ فوریه ۲۰۲۶: BLP هر ۳۰ کرسی انتخابی را برد؛ DLP و شش نیروی دیگر بدون کرسی ماندند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "taxation",
+          "public_security",
+          "climate_finance",
+          "tourism",
+          "economic_resilience"
+        ],
+        "rule": "اکثریت یک‌دست BLP باید در بازی به‌عنوان تسلط کامل بر مجلس منتخب منعکس شود، اما سنا و نهادهای مستقل همچنان ساختارهای جداگانه‌اند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس باربادوس ۲۰۲۶",
+            "url": "https://data.ipu.org/parliament/BB/BB-LC01/election/BB-LC01-E20260211/",
+            "date": "2026-02-11"
+          },
+          {
+            "name": "Commonwealth Observer Group – گزارش انتخابات عمومی باربادوس ۲۰۲۶",
+            "url": "https://comsec-web-static.s3.eu-west-1.amazonaws.com/s3fs-public/2026-06/Barbados%202026%20General%20Election%20Report.pdf",
+            "date": "2026-06"
+          }
+        ],
+        "notes": "باربادوس از ۲۰۲۱ جمهوری پارلمانی است. در انتخابات ۲۰۲۶، BLP تمام کرسی‌های انتخابی مجلس را کسب کرد؛ رئیس مجلس می‌تواند طبق اصلاحیه قانون اساسی از بیرون مجلس منصوب شود."
       },
       "parliamentary_groups": []
     },
@@ -29710,76 +30114,729 @@
     "NZL": {
       "country_name_fa": "نیوزیلند",
       "country_name_en": "New Zealand",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_mmp",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی با نظام تناسبی مختلط (MMP). در تاریخ مرجع سناریو، ۵ نوامبر ۲۰۲۶، انتخابات ۷ نوامبر هنوز برگزار نشده بود؛ کریستوفر لاکسون نخست‌وزیر دولت ائتلافی حزب ملی، ACT و نیوزیلند فرست است.",
+      "parties": [
+        {
+          "id": "nzl_national",
+          "name_fa": "حزب ملی نیوزیلند",
+          "name_en": "New Zealand National Party",
+          "entity_type": "party",
+          "political_role": "حزب اصلی دولت ائتلافی؛ در انتخابات ۲۰۲۳ تعداد ۴۸ کرسی کسب کرد.",
+          "ideological_profile": "محافظه‌کاری میانه‌راست و لیبرالیسم اقتصادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_labour",
+          "name_fa": "حزب کارگر نیوزیلند",
+          "name_en": "New Zealand Labour Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۳۴ کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "میانه‌چپ، سوسیال‌دموکراسی و رفاه اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_green",
+          "name_fa": "حزب سبز آوتئاروا نیوزیلند",
+          "name_en": "Green Party of Aotearoa New Zealand",
+          "entity_type": "party",
+          "political_role": "حزب چپ سبز؛ ۱۵ کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "سیاست سبز، عدالت اجتماعی و محیط‌زیست",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_act",
+          "name_fa": "ACT نیوزیلند",
+          "name_en": "ACT New Zealand",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف دولت؛ ۱۱ کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "لیبرالیسم کلاسیک، آزادی‌خواهی اقتصادی و اصلاح دولت",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_nzfirst",
+          "name_fa": "نیوزیلند فرست",
+          "name_en": "New Zealand First",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف دولت؛ هشت کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "پوپولیسم ملی، محافظه‌کاری و حاکمیت‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_maori",
+          "name_fa": "تِ پاتی مائوری",
+          "name_en": "Te Pāti Māori",
+          "entity_type": "party",
+          "political_role": "حزب بومی مائوری و نیروی مستقل پارلمانی؛ شش کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "حقوق بومیان، خودمختاری مائوری و عدالت اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_top",
+          "name_fa": "حزب فرصت‌ها",
+          "name_en": "The Opportunities Party (TOP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک انتخاباتی؛ در انتخابات ۲۰۲۳ کرسی نگرفت.",
+          "ideological_profile": "مرکزگرایی اصلاح‌طلب و سیاست‌گذاری مبتنی بر شواهد",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "nzl_national_liberal",
+          "name_fa": "جریان لیبرال اقتصادی حزب ملی",
+          "name_en": "National Party economic liberal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان حامی کاهش مالیات، مقررات‌زدایی و رشد بخش خصوصی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nzl_labour_progressive",
+          "name_fa": "جریان ترقی‌خواه حزب کارگر",
+          "name_en": "Labour progressive current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان حامی خدمات عمومی، حقوق کار و سیاست‌های بازتوزیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nzl_maori_movement",
+          "name_fa": "جنبش سیاسی مائوری",
+          "name_en": "Māori political movement",
+          "entity_type": "political_movement",
+          "policy_positions": {
+            "domestic": "مطالبات مربوط به پیمان وایتانگی، زبان و فرهنگ مائوری و خودگردانی بومیان؛ Te Pāti Māori حزب پارلمانی مستقل آن است."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nzl_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "کریستوفر لاکسون رئیس دولت و رهبر ائتلاف حاکم است.",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "پارلمان تک‌مجلسی؛ دولت با توافق ائتلافی سه حزب اکثریت را شکل می‌دهد.",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_gg",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه و مقام تشریفاتی در تشکیل دولت و انتصاب نخست‌وزیر.",
+          "confidence": "high"
+        },
+        {
+          "id": "nzl_treaty",
+          "name_fa": "نهادهای پیمان وایتانگی",
+          "name_en": "Waitangi institutions",
+          "role": "نهادهای حقوقی و مشورتی مرتبط با پیمان وایتانگی و حقوق مائوری.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Christopher Luxon",
+        "government_type": "parliamentary constitutional monarchy with MMP",
+        "prime_minister_party": "New Zealand National Party",
+        "supporting_coalitions": [
+          "ACT New Zealand",
+          "New Zealand First"
+        ],
+        "parliamentary_context": "در تاریخ مرجع سناریو ۵ نوامبر ۲۰۲۶، ترکیب آخرین پارلمان منتخب از انتخابات ۲۰۲۳ بود: National ۴۸، Labour ۳۴، Green ۱۵، ACT ۱۱، NZ First هشت و Te Pāti Māori شش کرسی؛ پارلمان در ۱ اکتبر منحل و انتخابات ۷ نوامبر برنامه‌ریزی شده بود."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "housing",
+          "cost_of_living",
+          "public_services",
+          "Māori_rights",
+          "climate_policy",
+          "migration",
+          "fiscal_policy"
+        ],
+        "rule": "برای سناریوی ۵ نوامبر ۲۰۲۶، از نتیجه انتخابات ۷ نوامبر استفاده نکن؛ دولت ائتلافی لاکسون در دوره انتخابات در وضعیت caretaker قرار می‌گیرد و نتیجه انتخابات هنوز معلوم نیست."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Elections New Zealand – نتایج رسمی انتخابات ۲۰۲۳",
+            "url": "https://elections.nz/media-and-news/2023/official-results-for-the-2023-general-election",
+            "date": "2023-11-03"
+          },
+          {
+            "name": "IPU Parline – انتخابات مجلس نیوزیلند ۲۰۲۳",
+            "url": "https://data.ipu.org/parliament/NZ/NZ-LC01/election/NZ-LC01-E20231014/",
+            "date": "2023-10-14"
+          },
+          {
+            "name": "New Zealand Parliament – انحلال پارلمان ۵۴ در آستانه انتخابات ۲۰۲۶",
+            "url": "https://www3.parliament.nz/en/mps-and-electorates/house-seating-plan/",
+            "date": "2026-10"
+          }
+        ],
+        "notes": "تاریخ snapshot بازی ۵ نوامبر ۲۰۲۶ است؛ بنابراین انتخابات ۷ نوامبر و نتایج مقدماتی یا نهایی پس از آن عمداً وارد وضعیت جاری بازی نشده‌اند."
       },
       "parliamentary_groups": []
     },
     "PNG": {
       "country_name_fa": "پاپوآ گینه نو",
       "country_name_en": "Papua New Guinea",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه و دموکراسی پارلمانی چندحزبی با ائتلاف‌های سیال؛ جیمز ماراپه نخست‌وزیر و رهبر ائتلاف دولت است. انتخابات بعدی طبق چرخه عادی در ۲۰۲۷ انتظار می‌رود.",
+      "parties": [
+        {
+          "id": "png_pangu",
+          "name_fa": "حزب اتحاد پاپوآ و نیوگینی",
+          "name_en": "Papua and Niugini Union Pati (PANGU)",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر ماراپه و محور دولت ائتلافی؛ در انتخابات ۲۰۲۲ دست‌کم ۳۷ کرسی اولیه و در نتایج تفصیلی IPU ۳۹ کرسی ثبت شد.",
+          "ideological_profile": "ملی‌گرایی، توسعه‌گرایی و عمل‌گرایی ائتلافی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_pnc",
+          "name_fa": "حزب کنگره ملی مردم",
+          "name_en": "People's National Congress Party (PNC)",
+          "entity_type": "party",
+          "political_role": "حزب بزرگ اپوزیسیون و رقیب سیاسی پیتر اونیل؛ ۱۵ کرسی در انتخابات ۲۰۲۲.",
+          "ideological_profile": "محافظه‌کاری و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_urp",
+          "name_fa": "حزب منابع متحد",
+          "name_en": "United Resources Party (URP)",
+          "entity_type": "party",
+          "political_role": "حزب مهم ائتلافی با ۱۱ کرسی در انتخابات ۲۰۲۲.",
+          "ideological_profile": "محافظه‌کاری و تمرکز بر توسعه منابع و مناطق",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_nup",
+          "name_fa": "حزب متحد ملی",
+          "name_en": "National Alliance Party (NA)",
+          "entity_type": "party",
+          "political_role": "حزب باسابقه با حضور پارلمانی و ائتلاف‌پذیری بالا.",
+          "ideological_profile": "میانه‌گرایی و سیاست‌ورزی منطقه‌ای",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_pp",
+          "name_fa": "حزب مردم",
+          "name_en": "People's Party",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی کوچک و شریک بالقوه ائتلاف‌ها.",
+          "ideological_profile": "توسعه‌گرایی و سیاست‌ورزی محلی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_ppp",
+          "name_fa": "حزب پیشرفت مردم",
+          "name_en": "People's Progress Party (PPP)",
+          "entity_type": "party",
+          "political_role": "حزب باسابقه با شبکه منطقه‌ای و حضور در ائتلاف‌های پارلمانی.",
+          "ideological_profile": "محافظه‌کاری و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "png_ind",
+          "name_fa": "نمایندگان مستقل",
+          "name_en": "Independent MPs",
+          "entity_type": "parliamentary_group",
+          "political_role": "نمایندگان مستقل؛ در انتخابات ۲۰۲۲ حدود ۱۰ کرسی در داده‌های IPU ثبت شد.",
+          "ideological_profile": "نمایندگی محلی و منطقه‌ای",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "png_marape_coalition",
+          "name_fa": "ائتلاف دولت ماراپه",
+          "name_en": "Marape governing coalition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ائتلاف چندحزبی با جابه‌جایی احزاب و نمایندگان؛ وفاداری پارلمانی می‌تواند در طول دوره تغییر کند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "png_oneill_opposition",
+          "name_fa": "جریان اپوزیسیون پیتر اونیل",
+          "name_en": "Peter O'Neill opposition current",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "PNC و متحدان اپوزیسیون دولت ماراپه؛ رقابت عمدتاً حول اعتماد پارلمان و مدیریت منابع است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "png_provincial",
+          "name_fa": "شبکه‌های نمایندگی استانی و محلی",
+          "name_en": "Provincial and local patronage networks",
+          "entity_type": "power_bloc",
+          "policy_positions": {
+            "domestic": "هویت‌های منطقه‌ای و حوزه‌ای در رفتار نمایندگان و تشکیل ائتلاف‌ها نقش پررنگ دارند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "png_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and National Executive Council",
+          "role": "جیمز ماراپه رئیس دولت و هماهنگ‌کننده ائتلاف حاکم است.",
+          "confidence": "high"
+        },
+        {
+          "id": "png_parliament",
+          "name_fa": "پارلمان ملی",
+          "name_en": "National Parliament",
+          "role": "پارلمان تک‌مجلسی با ۱۱۸ کرسی؛ احزاب و نمایندگان مستقل در ائتلاف‌های متغیر مشارکت دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "png_governor",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه و مقام تشریفاتی در نظام وست‌مینستر.",
+          "confidence": "high"
+        },
+        {
+          "id": "png_provinces",
+          "name_fa": "دولت‌های استانی و مناطق خودمختار",
+          "name_en": "Provincial Governments and Autonomous Region of Bougainville",
+          "role": "ساختارهای استانی و خودمختاری بوگنویل در توزیع قدرت و سیاست محلی اثرگذارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "James Marape",
+        "government_type": "parliamentary constitutional monarchy",
+        "prime_minister_party": "PANGU Party",
+        "supporting_coalitions": [
+          "Multi-party Marape coalition"
+        ],
+        "parliamentary_context": "آخرین انتخابات عمومی در ژوئیه ۲۰۲۲: PANGU ۳۹، PNC ۱۵، URP ۱۱، دیگر احزاب ۴۰ و مستقل‌ها ۱۰ کرسی در جمع‌بندی IPU؛ پارلمان ۱۱۸ کرسی دارد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "resource_revenue",
+          "infrastructure",
+          "provincial_development",
+          "public_services",
+          "land_rights",
+          "coalition_stability"
+        ],
+        "rule": "احزاب PNG غالباً سازمان‌های ائتلافی و شخص‌محورند؛ وفاداری نمایندگان و تشکیل دولت می‌تواند تغییر کند. اعداد انتخابات ۲۰۲۲ را با وضعیت جاری گروه‌های پارلمانی یکی نکن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات پارلمان ملی پاپوآ گینه نو ۲۰۲۲",
+            "url": "https://data.ipu.org/parliament/PG/PG-LC01/election/PG-LC01-E20220704/",
+            "date": "2022-07"
+          },
+          {
+            "name": "Department of Prime Minister and National Executive Council – بازآرایی کابینه ماراپه در ۲۰۲۶",
+            "url": "https://www.pmnec.gov.pg/prime-minister-marape-flags-cabinet-re-alignment-after-three-new-ministers-sworn-in/",
+            "date": "2026-01-15"
+          }
+        ],
+        "notes": "ساختار حزبی سیال است و اعداد کرسی‌ها از انتخابات ۲۰۲۲ می‌آیند؛ IPU در متن نتایج اولیه PANGU را ۳۷ کرسی و در جدول نهایی تفصیلی ۳۹ کرسی گزارش می‌کند. برای بازی از جدول تفصیلی استفاده شده است."
       },
       "parliamentary_groups": []
     },
     "FJI": {
       "country_name_fa": "فیجی",
       "country_name_en": "Fiji",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_republic_multiparty",
+      "government_model": "جمهوری پارلمانی چندحزبی؛ سیتیوِنی رابوکا نخست‌وزیر و رهبر ائتلاف متشکل از اتحاد مردم، حزب فدراسیون ملی و حزب لیبرال سوسیال‌دموکرات است. انتخابات عمومی بعدی در چرخه ۲۰۲۶ قرار دارد؛ در تاریخ مرجع ۵ نوامبر ۲۰۲۶ دولت مستقر همچنان در قدرت بود.",
+      "parties": [
+        {
+          "id": "fji_pa",
+          "name_fa": "اتحاد مردم",
+          "name_en": "The People's Alliance (PA)",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر رابوکا و بزرگ‌ترین شریک ائتلاف دولت؛ در انتخابات ۲۰۲۲ بیست‌ویک کرسی گرفت.",
+          "ideological_profile": "میانه‌راست، محافظه‌کاری و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_nfp",
+          "name_fa": "حزب فدراسیون ملی",
+          "name_en": "National Federation Party (NFP)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف دولت؛ پنج کرسی در انتخابات ۲۰۲۲.",
+          "ideological_profile": "میانه‌رو، لیبرال و چندقومیتی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_sodelpa",
+          "name_fa": "حزب لیبرال سوسیال‌دموکرات",
+          "name_en": "Social Democratic Liberal Party (SODELPA)",
+          "entity_type": "party",
+          "political_role": "شریک سوم ائتلاف دولت؛ سه کرسی در انتخابات ۲۰۲۲.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_fijifirst",
+          "name_fa": "فیجی‌فرست",
+          "name_en": "FijiFirst",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی و حزب دولت پیشین؛ ۲۶ کرسی در انتخابات ۲۰۲۲.",
+          "ideological_profile": "ملی‌گرایی مدنی، توسعه‌گرایی و دولت‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_flp",
+          "name_fa": "حزب کارگر فیجی",
+          "name_en": "Fiji Labour Party (FLP)",
+          "entity_type": "party",
+          "political_role": "حزب باسابقه با حضور انتخاباتی؛ در انتخابات ۲۰۲۲ کرسی نگرفت.",
+          "ideological_profile": "سوسیال‌دموکراسی و حقوق کار",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_nfp_alt",
+          "name_fa": "حزب نسل نو",
+          "name_en": "New Generation Party (NGP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک ثبت‌شده و شرکت‌کننده در انتخابات ۲۰۲۲؛ بدون کرسی.",
+          "ideological_profile": "اصلاح‌طلبی و نسل‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_unity",
+          "name_fa": "فیجی متحد",
+          "name_en": "Unity Fiji",
+          "entity_type": "party",
+          "political_role": "حزب کوچک ثبت‌شده و شرکت‌کننده در انتخابات ۲۰۲۲؛ بدون کرسی.",
+          "ideological_profile": "میانه‌گرایی و وحدت ملی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_weunite",
+          "name_fa": "ما فیجی را متحد می‌کنیم",
+          "name_en": "We Unite Fiji Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک ثبت‌شده در انتخابات ۲۰۲۲؛ بدون کرسی.",
+          "ideological_profile": "وحدت‌گرایی و سیاست‌ورزی اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "fji_coalition_tripartite",
+          "name_fa": "ائتلاف سه‌حزبی رابوکا",
+          "name_en": "Rabuka tripartite coalition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ائتلاف PA، NFP و SODELPA با توافق تشکیل دولت پس از انتخابات نزدیک ۲۰۲۲."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fji_sodelpa_internal",
+          "name_fa": "جریان‌های درون SODELPA",
+          "name_en": "SODELPA internal currents",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اختلاف‌های رهبری و جهت‌گیری حزب در تصمیم برای ورود به ائتلاف دولت نقش تعیین‌کننده داشت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "fji_fijifirst_opposition",
+          "name_fa": "جریان اپوزیسیون فیجی‌فرست",
+          "name_en": "FijiFirst opposition current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حزب دولت پیشین پس از انتقال قدرت در ۲۰۲۲ به اپوزیسیون رفت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "fji_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "سیتیوِنی رابوکا رئیس دولت و رهبر ائتلاف سه‌حزبی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_parliament",
+          "name_fa": "پارلمان فیجی",
+          "name_en": "Parliament of Fiji",
+          "role": "پارلمان تک‌مجلسی با ۵۵ کرسی در انتخابات ۲۰۲۲؛ احزاب ائتلافی اکثریت اندکی تشکیل دادند.",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس‌جمهور رئیس کشور با نقش عمدتاً تشریفاتی و قانون اساسی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "fji_electoral",
+          "name_fa": "کمیسیون انتخابات و دفتر انتخابات",
+          "name_en": "Electoral Commission and Fijian Elections Office",
+          "role": "نهادهای مستقل اداره انتخابات و ثبت احزاب.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Ratu Wiliame Katonivere",
+        "prime_minister": "Sitiveni Rabuka",
+        "government_type": "parliamentary republic",
+        "prime_minister_party": "The People's Alliance (PA)",
+        "supporting_coalitions": [
+          "National Federation Party (NFP)",
+          "Social Democratic Liberal Party (SODELPA)"
+        ],
+        "parliamentary_context": "انتخابات ۲۰۲۲: PA ۲۱، FijiFirst ۲۶، NFP پنج و SODELPA سه کرسی از ۵۵ کرسی. PA و NFP و SODELPA با توافق ائتلافی دولت را تشکیل دادند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_reform",
+          "ethnic_relations",
+          "cost_of_living",
+          "tourism",
+          "land_and_resources",
+          "coalition_stability"
+        ],
+        "rule": "نظام فیجی چندحزبی است اما ائتلاف پس از انتخابات تعیین‌کننده است؛ سهم احزاب در کابینه و توافق ائتلافی را از تعداد کرسی‌های انتخابات جدا ثبت کن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Parliament of Fiji – اطلاعات انتخابات و دوره پارلمان",
+            "url": "https://www.parliament.gov.fj/elections/",
+            "date": "2026"
+          },
+          {
+            "name": "Electoral Commission of Fiji – گزارش مشترک انتخابات عمومی ۲۰۲۲",
+            "url": "https://www.parliament.gov.fj/wp-content/uploads/2023/11/131-2022-General-Election-Joint-Report-by-the-Electoral-Commission-and-Supervisor-of-Elections.pdf",
+            "date": "2023-11"
+          },
+          {
+            "name": "Office of the Prime Minister Fiji – توافق ائتلافی دولت رابوکا",
+            "url": "https://www.pmoffice.gov.fj/prime-minister-honourable-sitiveni-rabukas-inaugural-address-to-the-nation/",
+            "date": "2022-12"
+          }
+        ],
+        "notes": "فهرست احزاب و ساختار ائتلاف بر اساس انتخابات ۲۰۲۲ و اسناد رسمی پارلمان است. یک کرسی در ۲۰۲۶ پس از درگذشت نماینده خالی ماند و طبق اعلام کمیسیون تا انتخابات بعدی خالی می‌ماند."
       },
       "parliamentary_groups": []
     },
     "WSM": {
       "country_name_fa": "ساموآ",
       "country_name_en": "Samoa",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "دموکراسی پارلمانی در چارچوب پادشاهی مشروطه ساموآ؛ لاآئولی لئواتئا اشمیت پس از انتخابات زودهنگام ۲۹ اوت ۲۰۲۵ نخست‌وزیر شد. حزب FAST با ۳۰ کرسی از ۵۱ کرسی منتخب اکثریت دارد.",
+      "parties": [
+        {
+          "id": "wsm_fast",
+          "name_fa": "ایمان به خدای ساموآ، یکپارچه",
+          "name_en": "Faʻatuatua i le Atua Samoa ua Tasi (FAST)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۳۰ کرسی از ۵۱ کرسی منتخب در انتخابات ۲۰۲۵.",
+          "ideological_profile": "محافظه‌کاری اجتماعی، مسیحیت سیاسی و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_hrpp",
+          "name_fa": "حزب حمایت از حقوق بشر",
+          "name_en": "Human Rights Protection Party (HRPP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۱۴ کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "محافظه‌کاری، ملی‌گرایی و سیاست‌ورزی سنتی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_sup",
+          "name_fa": "حزب اتحاد ساموآ",
+          "name_en": "Samoa Uniting Party (SUP)",
+          "entity_type": "party",
+          "political_role": "حزب تشکیل‌شده توسط فیامه نائومی ماتاآفا پس از جدایی از FAST؛ سه کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "میانه‌گرایی و سیاست‌ورزی اصلاح‌طلبانه",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_slp",
+          "name_fa": "حزب کارگر ساموآ",
+          "name_en": "Samoa Labour Party (SLP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک شرکت‌کننده در انتخابات ۲۰۲۵؛ بدون کرسی.",
+          "ideological_profile": "سوسیال‌دموکراسی و حقوق کار",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_trrp",
+          "name_fa": "حزب اصلاح‌طلب جمهوری‌خواه توموا ما پوله",
+          "name_en": "Tumua ma Pule Reform Republican Party (TMRRP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک انتخاباتی؛ بدون کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "اصلاح‌طلبی جمهوری‌خواه و نمایندگی محلی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "wsm_fast_leadership",
+          "name_fa": "جریان رهبری لاآئولی اشمیت",
+          "name_en": "La'auli Leuatea Schmidt leadership",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان رهبری FAST پس از جدایی نخست‌وزیر پیشین فیامه ماتاآفا از حزب."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "wsm_fiame_sup",
+          "name_fa": "جریان سیاسی فیامه ماتاآفا",
+          "name_en": "Fiame Naomi Mata'afa current",
+          "entity_type": "political_movement",
+          "policy_positions": {
+            "domestic": "جریان پیرامون نخست‌وزیر پیشین که پس از اخراج از FAST حزب SUP را تأسیس کرد."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "wsm_hrpp_oldguard",
+          "name_fa": "جریان سنتی HRPP",
+          "name_en": "HRPP traditional leadership",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان حزب قدیمی حاکم با پایگاه سنتی و رهبری تویلاپا سایله‌له مالیه‌لگائوی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "wsm_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "لاآئولی لئواتئا اشمیت رئیس دولت و رهبر حزب اکثریت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_assembly",
+          "name_fa": "مجلس قانون‌گذاری",
+          "name_en": "Legislative Assembly",
+          "role": "مجلس با ۵۱ کرسی منتخب؛ FAST با ۳۰ کرسی اکثریت دارد و چهار نماینده مستقل نیز انتخاب شدند.",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_head",
+          "name_fa": "رئیس کشور",
+          "name_en": "Head of State",
+          "role": "مقام رئیس کشور در ساختار مشروطه؛ نقش رسمی در احضار و انحلال مجلس و تشریفات تشکیل دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "wsm_council",
+          "name_fa": "شورای رؤسای سنتی و ساختارهای فاماتوآ",
+          "name_en": "Traditional chiefly and fa'amatai institutions",
+          "role": "نهادهای سنتی و رؤسای محلی در زندگی اجتماعی و سیاست محلی نقش مهم دارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "La'aulialemalietoa Leuatea Polataivao Schmidt (La'auli)",
+        "government_type": "parliamentary constitutional monarchy",
+        "prime_minister_party": "Faʻatuatua i le Atua Samoa ua Tasi (FAST)",
+        "supporting_coalitions": [
+          "FAST"
+        ],
+        "parliamentary_context": "انتخابات ۲۹ اوت ۲۰۲۵: FAST ۳۰، HRPP ۱۴، Samoa Uniting Party سه و مستقل‌ها چهار کرسی از ۵۱ کرسی منتخب؛ برای رعایت سهمیه جنسیتی ممکن است کرسی‌های افزوده زنان طبق قانون فعال شوند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "village_governance",
+          "customary_land",
+          "church_and_state",
+          "foreign_policy",
+          "infrastructure"
+        ],
+        "rule": "FAST پس از جدایی فیامه ماتاآفا همچنان حزب حاکم است؛ SUP حزب جداگانه و کوچک است و نباید با FAST ادغام شود. کرسی‌های افزوده زنان را از ۵۱ کرسی انتخابی تفکیک کن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – انتخابات مجلس قانون‌گذاری ساموآ ۲۰۲۵",
+            "url": "https://data.ipu.org/parliament/WS/WS-LC01/election/WS-LC01-E20250829/",
+            "date": "2025-08-29"
+          },
+          {
+            "name": "Reuters – نتیجه انتخابات زودهنگام ساموآ ۲۰۲۵",
+            "url": "https://www.reuters.com/world/asia-pacific/samoas-national-election-returns-fast-party-with-new-leader-2025-09-05/",
+            "date": "2025-09-05"
+          },
+          {
+            "name": "Embassy of Japan in Samoa – تشکیل دولت جدید در سپتامبر ۲۰۲۵",
+            "url": "https://www.ws.emb-japan.go.jp/itpr_ja/11_000001_00525.html",
+            "date": "2025-09-30"
+          }
+        ],
+        "notes": "نتایج ۵۱ کرسی منتخب بر اساس IPU و گزارش رسمی/دیپلماتیک است. در ساموآ سازوکار کرسی‌های افزوده زنان وجود دارد؛ این کرسی‌ها را نباید با نتایج انتخاباتی احزاب یکی دانست."
       },
       "parliamentary_groups": []
     },
