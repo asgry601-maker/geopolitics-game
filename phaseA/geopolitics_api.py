@@ -220,6 +220,12 @@ def api_country(s, name):
         enemies = sorted(((o, r) for o, r in pairs if r < 0), key=lambda x: x[1])[:5]
     prx_mine = [px.get("name") or G.proxy_label(px["sponsor"], px["host"])
                 for px in s.get("proxies", []) if px["host"] == name]
+    # اقتصاد: فقط شاخص‌ها و فرمول‌های واقعاً موجود در موتور؛ بدون جعل GDP یا بودجه تفصیلی.
+    income_daily = c.get("eco", 0) * G.INCOME_K * (0.5 if c.get("stab", 0) < 30 else 1.0)
+    alive = [n for n in W if n not in s.get("eliminated", [])]
+    eco_sorted = sorted(alive, key=lambda n: -W[n].get("eco", 0))
+    eco_rank = eco_sorted.index(name) + 1 if name in eco_sorted else None
+    economy_top = [dict(name=n, eco=round(W[n].get("eco", 0), 1)) for n in eco_sorted[:5]]
     return dict(
         ok=True, name=name, **meta,
         leader=G.leader(name), rank=G.rank_of(s, name),
@@ -228,6 +234,8 @@ def api_country(s, name):
         tech=round(c.get("tech", 0), 1), stab=round(c.get("stab", 0), 1),
         money=round(c.get("money", 0), 1), influence=round(c.get("influence", 0), 1),
         nukes=c.get("nukes", 0), rel=rel, tags=tags, war_with=war_with,
+        income_daily=round(income_daily, 2), income_monthly_estimate=round(income_daily * 30, 1),
+        economic_rank=eco_rank, economy_top=economy_top,
         arsenal=[("%s× %d" % (k, v)) for k, v in sorted(ars.items(), key=lambda x: -x[1])][:4],
         parties=dict((p, round(v, 1)) for p, v in (pol.get("parties") or {}).items()),
         press=(pol.get("press") or [])[-4:],
