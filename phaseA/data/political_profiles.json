@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.13.0",
+  "schema_version": "1.14.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 117,
-    "pending_countries": 57,
+    "researched_countries": 124,
+    "pending_countries": 50,
     "last_batch": [
-      "BWA",
-      "SDN",
-      "SSD",
-      "TCD",
-      "NER",
-      "MLI",
-      "MRT"
+      "BFA",
+      "GIN",
+      "SLE",
+      "LBR",
+      "TGO",
+      "BEN",
+      "GAB"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.",
@@ -21546,135 +21546,1210 @@
     "BFA": {
       "country_name_fa": "بورکینافاسو",
       "country_name_en": "Burkina Faso",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "military_led_transitional_state_no_party_system",
+      "government_model": "دولت انتقالی تحت رهبری نظامی؛ احزاب سیاسی در ژانویه ۲۰۲۶ منحل شدند و مجلس انتقالی در مارس ۲۰۲۶ به مجلس قانون‌گذاری خلق تغییر نام داد.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "factions": [
+        {
+          "id": "bfa_transition_executive",
+          "name_fa": "هسته اجرایی و رهبری انتقالی",
+          "name_en": "Transitional executive and leadership",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "domestic": "حفظ چارچوب انتقالی، تمرکز تصمیم‌گیری و اجرای منشور انقلاب مردمی.",
+            "foreign_policy": "تأکید بر حاکمیت ملی و بازتنظیم روابط خارجی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bfa_defence_security",
+          "name_fa": "نهادهای دفاعی و امنیتی",
+          "name_en": "Defence and Security Forces",
+          "entity_type": "institutional_power_center",
+          "policy_positions": {
+            "domestic": "نقش رسمی در ساختار انتقالی و نمایندگی در مجلس قانون‌گذاری خلق؛ اولویت سیاستی امنیت و تمامیت ارضی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bfa_civil_society",
+          "name_fa": "شبکه‌های جامعه مدنی و نمایندگان منطقه‌ای",
+          "name_en": "Civil society and regional representation networks",
+          "entity_type": "institutional_network",
+          "policy_positions": {
+            "domestic": "نمایندگی مطالبات منطقه‌ای، اجتماعی و خدمات عمومی در چارچوب انتقالی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bfa_presidency",
+          "name_fa": "ریاست‌جمهوری و دولت انتقالی",
+          "name_en": "Transitional Presidency and Government",
+          "role": "کاپیتان ابراهیم ترائوره رئیس دولت و محور اجرایی ساختار انتقالی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bfa_assembly",
+          "name_fa": "مجلس قانون‌گذاری خلق",
+          "name_en": "People's Legislative Assembly",
+          "role": "مجلس انتقالی ۷۱ نفره؛ ترکیب آن بر پایه انتصاب رئیس دولت، نمایندگی مناطق، نیروهای دفاعی و امنیتی و جامعه مدنی است؛ احزاب کرسی ندارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "bfa_security",
+          "name_fa": "نیروهای دفاعی و امنیتی",
+          "name_en": "Defence and Security Forces",
+          "role": "مرکز قدرت نهادی و یکی از گروه‌های دارای کرسی در مجلس انتقالی.",
+          "confidence": "high"
+        },
+        {
+          "id": "bfa_transition_charter",
+          "name_fa": "منشور انقلاب مردمی و نهادهای انتقال",
+          "name_en": "Revolution Charter and transition institutions",
+          "role": "چارچوب حقوقی انتقال؛ دوره انتقالی اعلام‌شده تا ژوئیه ۲۰۲۹ ادامه دارد، مگر آنکه تغییر رسمی صورت گیرد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Captain Ibrahim Traoré",
+        "government_type": "military-led transition",
+        "ruling_party": null,
+        "political_parties_status": "All political parties and political formations dissolved by decree in January 2026; party laws repealed in February 2026.",
+        "transition_charter": "Revolution Charter adopted 2026-03-27",
+        "people_legislative_assembly": {
+          "total_seats": 71,
+          "head_of_state_designated": 24,
+          "regional_stakeholders": 17,
+          "defence_security_forces": 16,
+          "civil_society": 14
+        },
+        "transition_end_target": "2029-07"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "national_security",
+          "transition_legitimacy",
+          "territorial_control",
+          "public_services",
+          "sovereignty_and_foreign_policy",
+          "regional_cooperation"
+        ],
+        "rule": "هیچ حزب رسمی یا اپوزیسیون پارلمانی حزبی در ساختار فعلی ثبت نشود؛ شبکه‌های نهادی و اجتماعی را به‌جای احزاب ساختگی مدل کن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Burkina Faso People's Legislative Assembly 2026",
+            "url": "https://data.ipu.org/parliament/BF/BF-LC01/election/BF-LC01-E20260327/",
+            "date": "2026-03"
+          },
+          {
+            "name": "Présidence du Faso — dissolution of political parties",
+            "url": "https://www.presidencedufaso.bf/conseil-des-ministres-du-29-janvier-2026-2/",
+            "date": "2026-01-29"
+          },
+          {
+            "name": "Government of Burkina Faso — repeal of party laws",
+            "url": "https://gouvernement.gov.bf/actualites/abrogation-de-la-loi-sur-la-charte-des-partis-et-formations-politiques-leur-financement-public-et-le-statut-de-lopposition-politique-lalt-adopte-a-lunanimite-le-projet-de/",
+            "date": "2026-02-09"
+          }
+        ],
+        "notes": "احزاب منحل‌شده را به‌عنوان بازیگران فعال ثبت نکن. مجلس ۷۱ نفره پس از منشور ۲۷ مارس ۲۰۲۶ نمایندگی حزبی ندارد."
       },
       "parliamentary_groups": []
     },
     "GIN": {
       "country_name_fa": "گینه",
       "country_name_en": "Guinea",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_dominant_party_post_transition",
+      "government_model": "جمهوری ریاستی پس از پایان دوره انتقالی نظامی؛ مامادی دومبویا در انتخابات ریاست‌جمهوری دسامبر ۲۰۲۵ پیروز شد و حزب/جنبش حامی او در مجلس ۲۰۲۶ اکثریت بزرگی به دست آورد.",
+      "parties": [
+        {
+          "id": "gin_gmd",
+          "name_fa": "نسل برای مدرنیته و توسعه",
+          "name_en": "Generation for Modernity and Development (GMD)",
+          "entity_type": "party",
+          "political_role": "نیروی سیاسی حامی رئیس‌جمهور؛ بیش از ۹۰ کرسی از ۱۴۷ کرسی مجلس ملی در انتخابات ۲۰۲۶ طبق گزارش اولیه.",
+          "ideological_profile": "توسعه‌گرایی، نوسازی دولتی و حمایت از رهبری دومبویا؛ برنامه حزبی مستقل باید با احتیاط تفسیر شود.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "gin_frondeg",
+          "name_fa": "جبهه دموکراتیک گینه",
+          "name_en": "Democratic Front of Guinea (FRONDEG)",
+          "entity_type": "party",
+          "political_role": "نیروی اپوزیسیون؛ در انتخابات ۲۰۲۶ یک کرسی مجلس به دست آورد و درباره روند انتخابات انتقادهایی مطرح کرد.",
+          "ideological_profile": "اپوزیسیون انتخاباتی و اصلاح‌طلبی سیاسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "gin_bloc_liberal",
+          "name_fa": "بلوک لیبرال",
+          "name_en": "Liberal Bloc (BL)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون؛ یک کرسی در مجلس ۲۰۲۶.",
+          "ideological_profile": "لیبرالیسم سیاسی و اصلاحات نهادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "gin_fan",
+          "name_fa": "جبهه اتحاد ملی",
+          "name_en": "National Alliance Front (FAN)",
+          "entity_type": "party",
+          "political_role": "از تشکل‌های شرکت‌کننده در انتخابات ریاست‌جمهوری ۲۰۲۵؛ کرسی مجلس ۲۰۲۶ برای آن در منابع بررسی‌شده احراز نشد.",
+          "ideological_profile": "برنامه و جایگاه ملی با اطلاعات عمومی محدود.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        },
+        {
+          "id": "gin_arp",
+          "name_fa": "اتحاد برای رنسانس و پیشرفت",
+          "name_en": "Alliance for Renewal and Progress (ARP)",
+          "entity_type": "party",
+          "political_role": "از تشکل‌های شرکت‌کننده در انتخابات ریاست‌جمهوری ۲۰۲۵؛ نمایندگی پارلمانی تأییدشده در منابع بررسی‌شده ندارد.",
+          "ideological_profile": "اطلاعات برنامه‌ای محدود.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "gin_gmd_governing",
+          "name_fa": "شبکه دولت و حامیان دومبویا",
+          "name_en": "Doumbouya governing network",
+          "entity_type": "intraparty_power_network",
+          "policy_positions": {
+            "domestic": "تمرکز بر تثبیت نظم پس از انتقال، توسعه زیرساخت و پروژه‌های معدنی بزرگ.",
+            "foreign_policy": "جذب سرمایه و حفظ اختیار دولت بر منابع راهبردی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "gin_opposition_civic",
+          "name_fa": "ائتلاف‌های اپوزیسیون و جامعه مدنی",
+          "name_en": "Opposition coalitions and civic networks",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "مطالبه رقابت انتخاباتی منصفانه، آزادی تشکل و پاسخ‌گویی نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gin_military_state",
+          "name_fa": "شبکه‌های نظامی و امنیتی دولت",
+          "name_en": "Military and security establishment",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "domestic": "حفظ انسجام دولت و نقش نهادی نیروهای مسلح پس از انتقال سیاسی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "gin_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مامادی دومبویا پس از انتخابات دسامبر ۲۰۲۵ و تأیید نتیجه در ژانویه ۲۰۲۶ رئیس‌جمهور شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "gin_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۱۴۷ نفره منتخب در مه ۲۰۲۶؛ GMD بیش از ۹۰ کرسی و احزاب FRONDEG و Bloc Libéral هرکدام یک کرسی گزارش‌شده دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "gin_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "نهاد دوم پارلمان طبق قانون اساسی جدید؛ بخشی از اعضا انتخاب غیرمستقیم و بخشی منصوب رئیس‌جمهور هستند.",
+          "confidence": "medium"
+        },
+        {
+          "id": "gin_mining",
+          "name_fa": "نهادهای دولت و بخش معدنی",
+          "name_en": "State and mining-sector institutions",
+          "role": "مدیریت بوکسیت، پروژه سیماندو و قراردادهای منابع معدنی از محورهای مهم سیاست‌گذاری است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Mamadi Doumbouya",
+        "ruling_party": "Generation for Modernity and Development (GMD)",
+        "presidential_election_date": "2025-12-28",
+        "presidential_result_percent": 86.72,
+        "parliamentary_election_date": "2026-05-31",
+        "parliamentary_result": {
+          "total_seats": 147,
+          "GMD": "over 90",
+          "FRONDEG": 1,
+          "Liberal Bloc": 1,
+          "other_allies_and_parties": "remaining seats; exact breakdown not asserted"
+        },
+        "transition_status": "The transitional period ended with the first session of the new National Assembly on 2026-07-17."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "mining_and_resource_policy",
+          "constitutional_order",
+          "civil_liberties",
+          "opposition_competition",
+          "regional_security",
+          "infrastructure_and_jobs"
+        ],
+        "rule": "نتیجه انتخابات ریاست‌جمهوری ۲۰۲۵ و مجلس ۲۰۲۶ را جدا نگه دار؛ ۴۰ حزب منحل‌شده در مارس ۲۰۲۶ را بدون مدرک بازگشت، فعال فرض نکن و تعداد دقیق کرسی‌های متحدان را حدس نزن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Guinea 2026 National Assembly election",
+            "url": "https://data.ipu.org/parliament/GN/GN-LC01/election/GN-LC01-E20260531/",
+            "date": "2026-05"
+          },
+          {
+            "name": "Associated Press — Doumbouya confirmed president-elect",
+            "url": "https://apnews.com/article/b3cf4eb1e045a525542f59347b08fe1a",
+            "date": "2026-01"
+          },
+          {
+            "name": "Africanews — 2025 presidential results",
+            "url": "https://www.aa.com.tr/en/africa/mamady-doumbouya-declared-winner-of-guineas-presidential-election-results-show/3785551",
+            "date": "2025-12"
+          }
+        ],
+        "notes": "در انتخابات مجلس ۲۰۲۶ ارقام GMD به‌صورت «بیش از ۹۰» در منبع IPU آمده؛ عدد دقیق ساخته نشده است. ادعای انحلال ۴۰ حزب در مارس ۲۰۲۶ در مدل به‌عنوان محدودیت فضای حزبی لحاظ می‌شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "gin_gmd_group",
+          "name_en": "GMD Parliamentary Group",
+          "party_id": "gin_gmd"
+        }
+      ]
     },
     "SLE": {
       "country_name_fa": "سیرالئون",
       "country_name_en": "Sierra Leone",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_multiparty_two_party_dominant_democracy",
+      "government_model": "جمهوری ریاستی چندحزبی با رقابت مسلط دو حزب SLPP و APC؛ اختلاف بر سر شفافیت انتخابات ۲۰۲۳ با توافق سیاسی برای بازگشت به همکاری نهادی همراه شد.",
+      "parties": [
+        {
+          "id": "sle_slpp",
+          "name_fa": "حزب مردم سیرالئون",
+          "name_en": "Sierra Leone People's Party (SLPP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ رئیس‌جمهور جولیوس مادا بیو از این حزب است؛ ۸۱ کرسی از ۱۳۵ کرسی انتخابی در انتخابات پارلمانی ۲۰۲۳.",
+          "ideological_profile": "سوسیال‌دموکراسی، توسعه‌گرایی و ملی‌گرایی مدنی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "sle_apc",
+          "name_fa": "کنگره همه مردم",
+          "name_en": "All People's Congress (APC)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ۵۴ کرسی از ۱۳۵ کرسی انتخابی در انتخابات ۲۰۲۳؛ در اعتراض به نتایج مدتی از نهادهای انتخابی کناره‌گیری کرد و سپس توافق سیاسی برای بازگشت حاصل شد.",
+          "ideological_profile": "محافظه‌کاری و شبکه‌های سیاسی سراسری.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "sle_ngc",
+          "name_fa": "ائتلاف بزرگ ملی",
+          "name_en": "National Grand Coalition (NGC)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با پایگاه منطقه‌ای؛ در پارلمان ملی کرسی قابل توجهی ندارد.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات حکمرانی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "sle_pmdc",
+          "name_fa": "جنبش مردمی برای تغییر دموکراتیک",
+          "name_en": "People's Movement for Democratic Change (PMDC)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با نفوذ محلی، به‌ویژه در منطقه کونو.",
+          "ideological_profile": "اصلاح‌طلبی و نمایندگی منطقه‌ای.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "sle_slpp_governing",
+          "name_fa": "جریان دولت و رهبری SLPP",
+          "name_en": "SLPP governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "برنامه توسعه، خدمات عمومی و مدیریت هزینه‌های زندگی.",
+            "foreign_policy": "همکاری منطقه‌ای و روابط توسعه‌ای."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "sle_apc_opposition",
+          "name_fa": "جریان رهبری و اپوزیسیون APC",
+          "name_en": "APC opposition current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "نظارت بر دولت، رقابت انتخاباتی و اصلاحات نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "sle_electoral_reform",
+          "name_fa": "جریان اصلاحات انتخاباتی و جامعه مدنی",
+          "name_en": "Electoral reform and civil society current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "شفافیت شمارش آرا، اعتماد عمومی و اجرای توافق‌های سیاسی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "sle_presidency",
+          "name_fa": "ریاست‌جمهوری و دولت",
+          "name_en": "Presidency and Government",
+          "role": "جولیوس مادا بیو رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sle_parliament",
+          "name_fa": "پارلمان",
+          "name_en": "Parliament",
+          "role": "SLPP و APC تنها دو حزب دارای کرسی در نتیجه انتخابات ۲۰۲۳ بودند؛ مجلس همچنین شامل نمایندگان رؤسای عالی سنتی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sle_electoral_commission",
+          "name_fa": "کمیسیون انتخابات",
+          "name_en": "Electoral Commission for Sierra Leone",
+          "role": "نهاد مستقل اداره انتخابات و ثبت نتایج.",
+          "confidence": "high"
+        },
+        {
+          "id": "sle_chieftaincy",
+          "name_fa": "رؤسای عالی سنتی و شوراهای محلی",
+          "name_en": "Paramount Chiefs and local councils",
+          "role": "بازیگران نهادی و محلی در نمایندگی مناطق و حل اختلافات اجتماعی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Julius Maada Bio",
+        "ruling_party": "Sierra Leone People's Party (SLPP)",
+        "presidential_election_date": "2023-06-24",
+        "parliamentary_election_date": "2023-06-24",
+        "parliamentary_result_elected_seats": {
+          "SLPP": 81,
+          "APC": 54,
+          "total": 135
+        },
+        "note": "۱۴ کرسی پارلمان برای Paramount Chiefs جدا از ۱۳۵ کرسی انتخابی است؛ اختلافات پس از انتخابات با توافق سیاسی و بازگشت APC به نهادها مدیریت شد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "mining_and_resource_governance",
+          "food_security",
+          "electoral_trust",
+          "regional_development",
+          "youth_employment"
+        ],
+        "rule": "SLPP و APC دو حزب مسلط‌اند؛ توافق پس از انتخابات ۲۰۲۳ را به‌معنای حذف رقابت حزبی یا ائتلاف رسمی دائمی تلقی نکن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Sierra Leone 2023 election",
+            "url": "https://data.ipu.org/parliament/SL/SL-LC01/election/SL-LC01-E20230624/",
+            "date": "2023-06"
+          },
+          {
+            "name": "International IDEA — State of Democracy in Sierra Leone 2025",
+            "url": "https://www.idea.int/publications/catalogue/html/state-democracy-sierra-leone-assessment-2025-report",
+            "date": "2025"
+          },
+          {
+            "name": "EU/Capacity4dev — Sierra Leone enabling environment report",
+            "url": "https://capacity4dev.europa.eu/system/files/documents/2026-04/sierra-leone-enabling-environm.pdf",
+            "date": "2026-04"
+          }
+        ],
+        "notes": "اعداد ۸۱ و ۵۴ مربوط به ۱۳۵ کرسی انتخابی است؛ ۱۴ نماینده رؤسای عالی سنتی جدا هستند. نگرانی ناظران درباره شفافیت انتخابات ۲۰۲۳ در سابقه سیاسی ثبت شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "sle_slpp_group",
+          "name_en": "SLPP Parliamentary Group",
+          "party_id": "sle_slpp"
+        },
+        {
+          "id": "sle_apc_group",
+          "name_en": "APC Parliamentary Group",
+          "party_id": "sle_apc"
+        }
+      ]
     },
     "LBR": {
       "country_name_fa": "لیبریا",
       "country_name_en": "Liberia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_multiparty_democracy",
+      "government_model": "جمهوری ریاستی چندحزبی؛ جوزف بوآکای از حزب وحدت در انتخابات ۲۰۲۳ پیروز شد و دولت با شبکه‌ای از احزاب و متحدان سیاسی همکاری می‌کند.",
+      "parties": [
+        {
+          "id": "lbr_up",
+          "name_fa": "حزب وحدت",
+          "name_en": "Unity Party (UP)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور جوزف بوآکای و هسته دولت از ژانویه ۲۰۲۴.",
+          "ideological_profile": "میانه‌گرایی، توسعه‌گرایی و اصلاحات حکمرانی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_cdc",
+          "name_fa": "ائتلاف تغییر دموکراتیک",
+          "name_en": "Coalition for Democratic Change (CDC)",
+          "entity_type": "party_coalition",
+          "political_role": "ائتلاف اپوزیسیون اصلی به رهبری سیاسی جورج ویا و حزب کنگره تغییر دموکراتیک.",
+          "ideological_profile": "ائتلاف گسترده پوپولیستی و محافظه‌کار با پایگاه ملی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_mdr",
+          "name_fa": "جنبش دموکراسی و بازسازی",
+          "name_en": "Movement for Democracy and Reconstruction (MDR)",
+          "entity_type": "party",
+          "political_role": "متحد مهم انتخاباتی حزب وحدت؛ جرمایا کوونگ از این جریان معاون رئیس‌جمهور شد.",
+          "ideological_profile": "میانه‌گرایی و سیاست ائتلافی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_alp",
+          "name_fa": "حزب همه لیبریایی",
+          "name_en": "All Liberian Party (ALP)",
+          "entity_type": "party",
+          "political_role": "حزب ملی کوچک‌تر با حضور در ائتلاف‌ها و رقابت‌های پارلمانی.",
+          "ideological_profile": "اصلاح‌طلبی و میانه‌گرایی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "lbr_lp",
+          "name_fa": "حزب آزادی",
+          "name_en": "Liberty Party (LP)",
+          "entity_type": "party",
+          "political_role": "حزب باسابقه؛ بخشی از رهبران و اعضای آن در ائتلاف‌های انتخاباتی با حزب وحدت همکاری کرده‌اند.",
+          "ideological_profile": "لیبرالیسم و اصلاحات نهادی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "lbr_anc",
+          "name_fa": "کنگره ملی جایگزین",
+          "name_en": "Alternative National Congress (ANC)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون و بازیگر ائتلافی؛ جایگاه آن در پارلمان باید جدا از ائتلاف‌های انتخاباتی سنجیده شود.",
+          "ideological_profile": "اصلاح‌طلبی، مدیریت‌گرایی و میانه‌گرایی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "lbr_pup",
+          "name_fa": "حزب اتحاد مردم",
+          "name_en": "People's Unification Party (PUP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک ملی با سابقه حضور پارلمانی.",
+          "ideological_profile": "اطلاعات برنامه‌ای محدود؛ عمل‌گرایی انتخاباتی.",
+          "legal_status": "registered",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lbr_up_government",
+          "name_fa": "جریان دولت و ائتلاف حزب وحدت",
+          "name_en": "Unity Party governing coalition",
+          "entity_type": "cross_party_governing_network",
+          "policy_positions": {
+            "domestic": "اصلاحات اداری، خدمات عمومی، زیرساخت و مبارزه با فساد.",
+            "foreign_policy": "همکاری با شرکای بین‌المللی و نهادهای منطقه‌ای."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_cdc_opposition",
+          "name_fa": "شبکه اپوزیسیون CDC",
+          "name_en": "CDC opposition network",
+          "entity_type": "party_coalition_network",
+          "policy_positions": {
+            "domestic": "نظارت بر دولت و حفظ پایگاه انتخاباتی ائتلاف.",
+            "foreign_policy": "موضع‌گیری بر اساس منافع ملی و رقابت حزبی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "lbr_regional_brokers",
+          "name_fa": "شبکه‌های سیاسی شهرستانی و محلی",
+          "name_en": "County and local political networks",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "چانه‌زنی بر سر توسعه منطقه‌ای، خدمات و تخصیص منابع عمومی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lbr_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "جوزف نیوما بوآکای رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_vice_presidency",
+          "name_fa": "معاونت ریاست‌جمهوری",
+          "name_en": "Vice Presidency",
+          "role": "جرمایا کوونگ معاون رئیس‌جمهور و رئیس سنا به اعتبار سمت خود است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_legislature",
+          "name_fa": "مجلس قانون‌گذاری دو مجلسی",
+          "name_en": "Bicameral Legislature",
+          "role": "مجلس نمایندگان و سنا؛ احزاب متعدد و مستقل‌ها در آن حضور دارند و جابه‌جایی ائتلاف‌ها ممکن است.",
+          "confidence": "high"
+        },
+        {
+          "id": "lbr_nec",
+          "name_fa": "کمیسیون ملی انتخابات",
+          "name_en": "National Elections Commission",
+          "role": "مرجع رسمی تأیید و انتشار نتایج انتخابات.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Joseph Nyuma Boakai",
+        "vice_president": "Jeremiah Kpan Koung",
+        "ruling_party": "Unity Party (UP)",
+        "government_since": "2024-01-22",
+        "presidential_election": "2023-10-10 and 2023-11-14 runoff",
+        "legislature": "Bicameral; party composition and alliances should be treated separately for House and Senate; no single combined seat count asserted here."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "infrastructure_and_electricity",
+          "employment",
+          "agriculture",
+          "county_development",
+          "public_finance"
+        ],
+        "rule": "نتایج مجلس نمایندگان و سنا را با هم جمع نکن؛ ائتلاف انتخاباتی UP و MDR را به‌معنای ادغام دو حزب فرض نکن و برای کرسی‌ها از جدول رسمی NEC در هر مجلس جداگانه استفاده کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Liberia National Elections Commission — Official election results",
+            "url": "https://www.nec.gov.lr/election-results/",
+            "date": "2026"
+          },
+          {
+            "name": "IPU Parline — Liberia 2023 House election",
+            "url": "https://data.ipu.org/parliament/LR/LR-LC01/election/LR-LC01-E20231010/",
+            "date": "2023-10"
+          },
+          {
+            "name": "IPU Parline — Liberia 2023 Senate election",
+            "url": "https://data.ipu.org/parliament/LR/LR-UC01/election/LR-UC01-E20231010/",
+            "date": "2023-10"
+          },
+          {
+            "name": "OHCHR — Human rights in the 2023 electoral context in Liberia",
+            "url": "https://liberia.un.org/sites/default/files/2024-08/OHCHR%20Public%20Report%20Human%20Rights%20in%20the%202023%20electoral%20context%20in%20Liberia.pdf",
+            "date": "2024-08"
+          }
+        ],
+        "notes": "بوآکای در دور دوم ۱۴ نوامبر ۲۰۲۳ پیروز شد و در ژانویه ۲۰۲۴ سوگند خورد. به‌دلیل تفاوت ارقام ترکیب مجلس در منابع و احتمال تغییر وابستگی نمایندگان، در این نسخه تعداد کرسی‌ها قطعی‌سازی نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lbr_up_group",
+          "name_en": "Unity Party Parliamentary Group",
+          "party_id": "lbr_up"
+        },
+        {
+          "id": "lbr_cdc_group",
+          "name_en": "Coalition for Democratic Change Parliamentary Group",
+          "party_id": "lbr_cdc"
+        }
+      ]
     },
     "TGO": {
       "country_name_fa": "توگو",
       "country_name_en": "Togo",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_dominant_party_state",
+      "government_model": "جمهوری پارلمانی در چارچوب جمهوری پنجم؛ قدرت اجرایی در دست رئیس شورای وزیران و رهبر اکثریت پارلمان است و ریاست‌جمهوری نقشی عمدتاً تشریفاتی دارد.",
+      "parties": [
+        {
+          "id": "tgo_unir",
+          "name_fa": "اتحاد برای جمهوری",
+          "name_en": "Union for the Republic (UNIR)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و مسلط؛ ۱۰۸ کرسی از ۱۱۳ کرسی مجلس ملی در انتخابات ۲۰۲۴ و ۳۴ کرسی انتخابی از ۴۱ کرسی انتخابی سنا در ۲۰۲۵.",
+          "ideological_profile": "محافظه‌کاری دولتی و توسعه‌گرایی؛ متکی بر شبکه سیاسی خانواده گناسینگبه.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_ufc",
+          "name_fa": "اتحاد نیروهای تغییر",
+          "name_en": "Union of Forces for Change (UFC)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون تاریخی؛ در دوره‌های مختلف وارد گفت‌وگو یا همکاری محدود با دولت شده است.",
+          "ideological_profile": "سوسیال‌دموکراسی و اصلاحات سیاسی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_dmp",
+          "name_fa": "جنبش میهنی برای دموکراسی و توسعه",
+          "name_en": "Patriotic Movement for Democracy and Development (MPDD)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون.",
+          "ideological_profile": "اصلاح‌طلبی و دموکراسی‌خواهی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tgo_nct",
+          "name_fa": "تعهد نوین توگو",
+          "name_en": "New Togolese Commitment (NET)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون و بازیگر ائتلافی.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات نهادی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tgo_pdp",
+          "name_fa": "حزب دموکراتیک پان‌آفریقایی",
+          "name_en": "Pan-African Democratic Party (PDP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون.",
+          "ideological_profile": "پان‌آفریقایی‌گرایی و اصلاحات سیاسی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tgo_unir_elite",
+          "name_fa": "شبکه رهبری UNIR و دولت",
+          "name_en": "UNIR and governing elite network",
+          "entity_type": "intraparty_power_network",
+          "policy_positions": {
+            "domestic": "حفظ اکثریت پارلمانی، ثبات ساختار جمهوری پنجم و تداوم سیاست‌های اجرایی.",
+            "foreign_policy": "حفظ روابط منطقه‌ای و همکاری اقتصادی خارجی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_opposition_coalition",
+          "name_fa": "ائتلاف‌ها و جریان‌های اپوزیسیون",
+          "name_en": "Opposition coalitions and currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اصلاح قانون اساسی، رقابت سیاسی و افزایش پاسخ‌گویی نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tgo_civic",
+          "name_fa": "جامعه مدنی و شبکه‌های اعتراضی",
+          "name_en": "Civil society and civic movements",
+          "entity_type": "civic_network",
+          "policy_positions": {
+            "domestic": "آزادی‌های مدنی، مشارکت سیاسی و نظارت بر دولت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tgo_council_presidency",
+          "name_fa": "ریاست شورای وزیران",
+          "name_en": "Presidency of the Council of Ministers",
+          "role": "فور گناسینگبه از ۳ مه ۲۰۲۵ رئیس شورای وزیران و رئیس دولت است؛ این سمت مرکز قدرت اجرایی محسوب می‌شود.",
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_republic_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency of the Republic",
+          "role": "ژان-لوسین ساوی دو تووه رئیس‌جمهور منتخب پارلمان با نقش عمدتاً تشریفاتی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "UNIR با ۱۰۸ کرسی از ۱۱۳ کرسی اکثریت قاطع دارد؛ رهبر اکثریت رئیس شورای وزیران می‌شود.",
+          "confidence": "high"
+        },
+        {
+          "id": "tgo_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس دوم؛ ۴۱ عضو انتخابی و ۲۰ عضو منصوب در ترکیب ۶۱ نفره گزارش‌شده.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Jean-Lucien Savi de Tové",
+        "president_of_council_of_ministers": "Faure Essozimna Gnassingbé",
+        "head_of_government": "Faure Essozimna Gnassingbé",
+        "ruling_party": "Union for the Republic (UNIR)",
+        "fifth_republic_in_force": "2025-05",
+        "national_assembly_result_2024": {
+          "UNIR": 108,
+          "total": 113
+        },
+        "senate_result_2025": {
+          "UNIR_elected": 34,
+          "elected_seats": 41,
+          "appointed_seats": 20,
+          "total_seats": 61
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_legitimacy",
+          "opposition_and_civic_space",
+          "regional_security",
+          "employment",
+          "agriculture_and_trade",
+          "relations_with_ecowas"
+        ],
+        "rule": "سمت نخست‌وزیری در ساختار جمهوری پنجم حذف شده است؛ فور گناسینگبه را رئیس شورای وزیران/رئیس دولت ثبت کن و ژان-لوسین ساوی دو تووه را رئیس‌جمهور تشریفاتی بدان."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Library of Congress — Togo new Constitution promulgated",
+            "url": "https://www.loc.gov/item/global-legal-monitor/2024-05-16/togo-new-constitution-promulgated/",
+            "date": "2024-05"
+          },
+          {
+            "name": "IPU Parline — Togo parliamentary oversight and head of government",
+            "url": "https://data.ipu.org/parliament/TG/TG-LC01/law-making-oversight/oversight/",
+            "date": "2026"
+          },
+          {
+            "name": "Crédit Agricole — Togo political outline",
+            "url": "https://international.groupecreditagricole.com/en/international-support/togo/economic-overview",
+            "date": "2026"
+          },
+          {
+            "name": "BTI — Togo 2026",
+            "url": "https://bti-project.org/en/reports/country-report/TGO",
+            "date": "2026"
+          }
+        ],
+        "notes": "در جمهوری پنجم، ریاست شورای وزیران قدرت اجرایی اصلی را دارد. ائتلاف اپوزیسیون راه‌اندازی‌شده در اوت ۲۰۲۶ شامل همه احزاب مخالف نیست؛ آن را معادل ائتلاف واحد کل اپوزیسیون ثبت نکن."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "tgo_unir_group",
+          "name_en": "UNIR Parliamentary Group",
+          "party_id": "tgo_unir"
+        }
+      ]
     },
     "BEN": {
       "country_name_fa": "بنین",
       "country_name_en": "Benin",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_dominant_coalition_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی با سلطه ائتلاف حاکم؛ روموالد واداگنی در مه ۲۰۲۶ جانشین پاتریس تالون شد و ائتلاف حاکم همه کرسی‌های مجلس ملی را در انتخابات ژانویه ۲۰۲۶ به دست آورد.",
+      "parties": [
+        {
+          "id": "ben_up_r",
+          "name_fa": "اتحاد ترقی‌خواه برای نوسازی",
+          "name_en": "Progressive Union for Renewal (UP-R)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی ائتلاف حاکم؛ ۶۰ کرسی از ۱۰۹ کرسی مجلس ملی در انتخابات ژانویه ۲۰۲۶.",
+          "ideological_profile": "میانه‌گرایی، توسعه‌گرایی و حمایت از اصلاحات دولت تالون.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_br",
+          "name_fa": "بلوک جمهوری‌خواه",
+          "name_en": "Republican Bloc (BR)",
+          "entity_type": "party",
+          "political_role": "شریک اصلی ائتلاف حاکم؛ ۴۹ کرسی از ۱۰۹ کرسی مجلس ملی در انتخابات ژانویه ۲۰۲۶.",
+          "ideological_profile": "محافظه‌کاری میانه‌رو و توسعه‌گرایی دولتی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_ld",
+          "name_fa": "دموکرات‌ها",
+          "name_en": "The Democrats (Les Démocrates, LD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ در انتخابات ژانویه ۲۰۲۶ با وجود حدود ۱۶ درصد آرای ملی، به‌دلیل نرسیدن به آستانه‌های حوزه‌ای کرسی مجلس به دست نیاورد؛ نامزد اصلی آن نیز از رقابت ریاست‌جمهوری کنار ماند.",
+          "ideological_profile": "اپوزیسیون اصلاح‌طلب و مرتبط با رئیس‌جمهور پیشین توماس بونی یایی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_fcbe",
+          "name_fa": "نیروهای کاوری برای بنین نوظهور",
+          "name_en": "Cauris Forces for an Emerging Benin (FCBE)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک؛ در انتخابات ۲۰۲۶ حدود ۴٫۸ درصد رأی گرفت و کرسی مجلس به دست نیاورد.",
+          "ideological_profile": "میانه‌گرایی و سیاست انتخاباتی عمل‌گرا.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ben_wadagni_government",
+          "name_fa": "جریان دولت واداگنی",
+          "name_en": "Wadagni governing current",
+          "entity_type": "cross_party_governing_network",
+          "policy_positions": {
+            "domestic": "تداوم اصلاحات اقتصادی، اشتغال، خدمات عمومی و توسعه زیرساخت.",
+            "foreign_policy": "همکاری منطقه‌ای برای تجارت و امنیت مرزی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ben_talon_legacy",
+          "name_fa": "شبکه سیاسی و میراث دولت تالون",
+          "name_en": "Talon-era governing network",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ بخشی از اصلاحات نهادی و اقتصادی دوره تالون و نفوذ در ائتلاف حاکم."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ben_democrats_opposition",
+          "name_fa": "جریان اپوزیسیون دموکرات‌ها",
+          "name_en": "Democrats opposition current",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "مطالبه رقابت سیاسی بازتر و اصلاح مقررات انتخاباتی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ben_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "روموالد واداگنی در ۲۴ مه ۲۰۲۶ سوگند خورد و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "UP-R دارای ۶۰ و BR دارای ۴۹ کرسی است؛ هیچ حزب اپوزیسیون در مجلس جدید کرسی ندارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "مرجع نهایی اعلام نتایج انتخابات و نظارت قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "ben_electoral_commission",
+          "name_fa": "کمیسیون مستقل ملی انتخابات",
+          "name_en": "Autonomous National Electoral Commission",
+          "role": "نهاد اجرایی انتخابات و اعلام نتایج اولیه.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Romuald Wadagni",
+        "vice_president": "Mariam Chabi Talata",
+        "predecessor": "Patrice Talon",
+        "presidential_inauguration": "2026-05-24",
+        "ruling_coalition": [
+          "Progressive Union for Renewal (UP-R)",
+          "Republican Bloc (BR)"
+        ],
+        "national_assembly_result_2026": {
+          "UP_R": 60,
+          "BR": 49,
+          "total": 109
+        },
+        "opposition_seats": 0
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_growth",
+          "jobs_and_living_standards",
+          "northern_security",
+          "electoral_competition",
+          "public_services",
+          "regional_trade"
+        ],
+        "rule": "UP-R و BR دو حزب جدا در یک ائتلاف حاکم‌اند؛ آن‌ها را در داده حزبی ادغام نکن. حذف اپوزیسیون از مجلس نتیجه آستانه‌های انتخاباتی و شرایط رقابت است، نه نبود احزاب مخالف."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Benin January 2026 National Assembly election",
+            "url": "https://data.ipu.org/parliament/BJ/BJ-LC01/election/BJ-LC01-E20260111/",
+            "date": "2026-01"
+          },
+          {
+            "name": "Associated Press — Constitutional Court confirms Wadagni victory",
+            "url": "https://apnews.com/article/7dada8f8e3a2a80bc7274eca874e6fda",
+            "date": "2026-04-16"
+          },
+          {
+            "name": "Reuters — Wadagni takes office",
+            "url": "https://www.reuters.com/world/africa/benins-wadagni-takes-office-vows-better-living-standards-security-2026-05-24/",
+            "date": "2026-05-24"
+          },
+          {
+            "name": "Constitutional Court of Benin — Wadagni inauguration",
+            "url": "https://courconstitutionnelle.bj/fr/actualities-view/au-palais-des-congres-la-cour-constitutionnelle-consacre-linvestiture-du-president-romuald-wadagni",
+            "date": "2026-05-24"
+          }
+        ],
+        "notes": "واداگنی در ۲۴ مه ۲۰۲۶ به قدرت رسید. ائتلاف UP-R و BR تمام ۱۰۹ کرسی مجلس را در انتخابات ژانویه گرفت؛ حزب دموکرات با وجود رأی ملی قابل توجه به‌دلیل آستانه حوزه‌ای کرسی نگرفت."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "ben_up_r_group",
+          "name_en": "UP-R Parliamentary Group",
+          "party_id": "ben_up_r"
+        },
+        {
+          "id": "ben_br_group",
+          "name_en": "Republican Bloc Parliamentary Group",
+          "party_id": "ben_br"
+        }
+      ]
     },
     "GAB": {
       "country_name_fa": "گابن",
       "country_name_en": "Gabon",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_multiparty_dominant_party_transition_completed",
+      "government_model": "جمهوری ریاستی چندحزبی پس از پایان دوره انتقالی ۲۰۲۳ تا ۲۰۲۵؛ بریس کلوتِر اولیگی انگوما پس از پیروزی در انتخابات ریاست‌جمهوری آوریل ۲۰۲۵ رئیس‌جمهور شد و حزب UDB در مجلس اکثریت بزرگی دارد.",
+      "parties": [
+        {
+          "id": "gab_udb",
+          "name_fa": "اتحاد دموکراتیک سازندگان",
+          "name_en": "Democratic Union of Builders (UDB)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور بریس اولیگی انگوما؛ بیش از ۱۰۰ کرسی از ۱۴۵ کرسی مجلس ملی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "ملی‌گرایی توسعه‌گرا و حمایت از برنامه اصلاحات پس از انتقال.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "gab_pdg",
+          "name_fa": "حزب دموکراتیک گابن",
+          "name_en": "Gabonese Democratic Party (PDG)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم سابق و اپوزیسیون اصلی؛ ۱۵ کرسی در مجلس ملی ۲۰۲۵.",
+          "ideological_profile": "محافظه‌کاری دولتی و شبکه سیاسی دوره بونگو.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "gab_ensemble",
+          "name_fa": "با هم برای گابن",
+          "name_en": "Ensemble pour le Gabon (EPG)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون به رهبری آلن-کلود بیلیه-بی-نز، نخست‌وزیر سابق؛ در انتخابات ۲۰۲۵ از نیروهای رقیب UDB بود.",
+          "ideological_profile": "اپوزیسیون انتخاباتی و اصلاحات حکمرانی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "gab_other_parties",
+          "name_fa": "احزاب کوچک و مستقل",
+          "name_en": "Other small parties and independents",
+          "entity_type": "parliamentary_category",
+          "political_role": "چند حزب دیگر کرسی‌های باقی‌مانده مجلس ملی را میان خود تقسیم کردند؛ بدون ادغام در یک حزب واحد.",
+          "ideological_profile": "متنوع.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "gab_udb_reform",
+          "name_fa": "جریان اصلاحات و دولت جدید UDB",
+          "name_en": "UDB reform and governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "بازسازی نهادها، اصلاح حکمرانی و تثبیت نظم سیاسی پس از کودتا.",
+            "foreign_policy": "بازگشت به همکاری‌های منطقه‌ای و بین‌المللی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "gab_pdg_legacy",
+          "name_fa": "شبکه‌های سیاسی و اداری دوره PDG",
+          "name_en": "PDG-era political and administrative networks",
+          "entity_type": "institutional_network",
+          "policy_positions": {
+            "domestic": "حفظ نفوذ شبکه‌های سیاسی و اداری پیشین و سازگاری با نظم جدید."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "gab_opposition",
+          "name_fa": "جریان‌های اپوزیسیون و جامعه مدنی",
+          "name_en": "Opposition and civil society currents",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "نظارت بر دولت جدید، آزادی‌های مدنی و رقابت سیاسی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "gab_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "بریس کلوتِر اولیگی انگوما در ۳ مه ۲۰۲۵ پس از پیروزی در انتخابات آوریل سوگند خورد.",
+          "confidence": "high"
+        },
+        {
+          "id": "gab_government",
+          "name_fa": "دولت و کابینه",
+          "name_en": "Government and Cabinet",
+          "role": "قوه مجریه پس از پایان رسمی دوره انتقالی در دسامبر ۲۰۲۵.",
+          "confidence": "high"
+        },
+        {
+          "id": "gab_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "UDB بیش از ۱۰۰ کرسی از ۱۴۵ کرسی را در انتخابات سپتامبر و اکتبر ۲۰۲۵ به دست آورد؛ PDG با ۱۵ کرسی دوم شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "gab_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس دوم ۷۰ نفره؛ انتخابات غیرمستقیم نوامبر ۲۰۲۵ و آغاز کار در دسامبر ۲۰۲۵ به پایان دوره انتقالی کمک کرد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Brice Clotaire Oligui Nguema",
+        "ruling_party": "Democratic Union of Builders (UDB)",
+        "presidential_election_date": "2025-04-12",
+        "presidential_result_percent": 94.85,
+        "inauguration": "2025-05-03",
+        "national_assembly_election_date": "2025-09-27",
+        "national_assembly_result": {
+          "UDB": "over 100",
+          "PDG": 15,
+          "total": 145,
+          "other_parties": "remaining seats"
+        },
+        "senate": "70 members; indirect elections in November 2025"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "institutional_reform",
+          "oil_and_mining_governance",
+          "public_services",
+          "political_opening",
+          "civil_liberties",
+          "regional_diplomacy"
+        ],
+        "rule": "دوره انتقالی در دسامبر ۲۰۲۵ پایان یافت؛ گابن را در نوامبر ۲۰۲۶ دولت انتقالی ننام. ارقام UDB به‌صورت بیش از ۱۰۰ ثبت شده و عدد دقیق حدس زده نشود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Gabon September 2025 National Assembly election",
+            "url": "https://data.ipu.org/parliament/GA/GA-LC01/election/GA-LC01-E20250927/",
+            "date": "2025-09"
+          },
+          {
+            "name": "United Nations — Secretary-General report on UNOCA 2026",
+            "url": "https://unsco.unmissions.org/sites/default/files/2026-06/sg_report_on_unoca_s_2026.445_e.pdf.pdf",
+            "date": "2026-06"
+          },
+          {
+            "name": "United Nations — Gabon political transition and 2025 presidential election",
+            "url": "https://documents.un.org/api/symbol/access?l=en&s=S%2F2025%2F342&t=pdf",
+            "date": "2025-05"
+          }
+        ],
+        "notes": "انتخابات ریاست‌جمهوری آوریل ۲۰۲۵ و مجلس سپتامبر/اکتبر ۲۰۲۵ پس از کودتای ۲۰۲۳ برگزار شدند. UDB اکثریت بزرگ دارد؛ PDG با ۱۵ کرسی دوم است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "gab_udb_group",
+          "name_en": "UDB Parliamentary Group",
+          "party_id": "gab_udb"
+        },
+        {
+          "id": "gab_pdg_group",
+          "name_en": "PDG Parliamentary Group",
+          "party_id": "gab_pdg"
+        }
+      ]
     },
     "COG": {
       "country_name_fa": "کنگو",
