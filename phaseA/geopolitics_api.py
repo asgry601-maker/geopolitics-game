@@ -169,7 +169,9 @@ def api_state(s):
     wars = [s["at_war"][i:i + 2] for i in range(0, len(s.get("at_war", [])) - 1, 2)]
     return dict(
         exists=True, mark=mark(s), player=P, year=s.get("year"), turn=s.get("turn"),
-        day=s.get("day"), ap=s.get("ap"), over=s.get("over", False),
+        day=s.get("day"), game_date=s.get("game_date"),
+        hour=s.get("hour", 0), minute=s.get("minute", 0),
+        ap=s.get("ap"), over=s.get("over", False),
         countries=countries, regions=regions,
         wars=wars, allies=list(s.get("allies", [])), pacts=list(s.get("pacts", [])),
         eliminated=list(s.get("eliminated", [])),
