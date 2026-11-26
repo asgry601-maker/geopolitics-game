@@ -508,9 +508,15 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += hasPlayerPact ? '<div class="dashCard">📜 پیمان عدم تجاوز با کشور بازیکن ثبت شده است.</div>' : '<div class="dashNote">پیمان عدم تجاوزی با کشور بازیکن ثبت نشده است.</div>';
       h += '<h3>وضعیت جنگ</h3>';
       h += r.war_with && r.war_with.length ? '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>' : '<div class="dashNote">در حال حاضر جنگ ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
-      if (r.friends && r.friends.length) { h += '<h3>کشورهای نزدیک</h3>'; for(i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>'; }
-      if (r.enemies && r.enemies.length) { h += '<h3>روابط پرتنش</h3>'; for(i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>'; }
       h += '<div class="dashNote">اتحادها و پیمان‌های این کشور با سایر کشورهای جهان هنوز در موتور به‌صورت شبکهٔ مستقل ثبت نشده‌اند؛ اینجا فقط وضعیت آن در برابر کشور بازیکن نمایش داده می‌شود.</div>';
+    }
+    if (r.friends && r.friends.length) {
+      h += '<h3>کشورهای نزدیک</h3>';
+      for (i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>';
+    }
+    if (r.enemies && r.enemies.length) {
+      h += '<h3>روابط پرتنش</h3>';
+      for (i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>';
     }
     h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
   } else if (tab === 'pacts') {
