@@ -33,10 +33,10 @@ var REGION_COLORS = {
   'خاورمیانه و شمال آفریقا': '#c98a4b',
   'اروپا': '#5a8fd4',
   'شرق آسیا': '#d45a7a',
-  'جنوب و جنوب\u200cشرق آسیا': '#5ad4a2',
+  'جنوب و جنوب\u200cشرق آسیا': '#c49a52',
   'آفریقای جنوب صحرا': '#b9a13a',
   'آمریکای شمالی': '#7a5ad4',
-  'آمریکای لاتین و کارائیب': '#4bb9c9',
+  'آمریکای لاتین و کارائیب': '#8b70b8',
   'اقیانوسیه': '#9c6bd6',
   'آسیای مرکزی و قفقاز': '#8fae4e'
 };
@@ -114,7 +114,7 @@ function initGlobe() {
     .labelSize(function (d) { return d.kind === 'prov' ? (d.size || 0.18) : 0.45; })
     .labelDotRadius(function (d) { return d.kind === 'country' && d.point ? 0.28 : 0; })
     .labelColor(function (d) {
-      if (d.kind === 'prov') return (PROV.sel === d.f) ? '#ffb347' : '#8ff0e5';
+      if (d.kind === 'prov') return (PROV.sel === d.f) ? '#ffb347' : '#b8c4d6';
       return (d.fa === SELECTED) ? '#ffd166' : '#e8eef8';
     })
     .labelAltitude(function (d) { return d.kind === 'prov' ? 0.07 : 0.012; })
@@ -629,7 +629,7 @@ function provShow(iso, requestId) {
   provData(iso, function (gj) {
     if (!gj || iso !== PROV.iso || !PROV.on || requestId !== PROV.requestId) return;
     provDisposeGroup(); var rings=provRings(gj);
-    if(rings.length){var grp=new THREE.Group(),seg=provMakeLines(rings,provBuildAlt(),0x2ee6d6,0.7);grp.add(seg);PROV.linesMesh=seg;PROV.layerObj=grp;try{globe.scene().add(grp);}catch(e3){}}
+    if(rings.length){var grp=new THREE.Group(),seg=provMakeLines(rings,provBuildAlt(),0x9aa9bd,0.65);grp.add(seg);PROV.linesMesh=seg;PROV.layerObj=grp;try{globe.scene().add(grp);}catch(e3){}}
     refreshLabels();
   });
 }
