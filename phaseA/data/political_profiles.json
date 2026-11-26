@@ -1,20 +1,18 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 7,
-    "pending_countries": 167,
+    "researched_countries": 12,
+    "pending_countries": 162,
     "last_batch": [
-      "IRN",
-      "USA",
-      "CHN",
-      "RUS",
-      "DEU",
-      "GBR",
-      "FRA"
+      "IND",
+      "JPN",
+      "SAU",
+      "PAK",
+      "CAN"
     ]
   },
   "notes": [
@@ -23,7 +21,8 @@
     "درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.",
     "برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.",
     "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.",
-    "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند."
+    "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.",
+    "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است."
   ],
   "countries": {
     "USA": {
@@ -223,19 +222,164 @@
     "CAN": {
       "country_name_fa": "کانادا",
       "country_name_en": "Canada",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "federal_parliamentary_multiparty_democracy_constitutional_monarchy",
+      "government_model": "پادشاهی مشروطه فدرال با دولت پارلمانی و احزاب ملی/منطقه‌ای",
+      "parties": [
+        {
+          "id": "can_liberal",
+          "name_fa": "حزب لیبرال کانادا",
+          "name_en": "Liberal Party of Canada",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و دولت اکثریت",
+          "ideological_profile": "لیبرالیسم اجتماعی و میانه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "can_conservative",
+          "name_fa": "حزب محافظه‌کار کانادا",
+          "name_en": "Conservative Party of Canada",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون رسمی",
+          "ideological_profile": "محافظه‌کاری و بازارگرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "can_bloc",
+          "name_fa": "بلوک کبکوآ",
+          "name_en": "Bloc Québécois",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون منطقه‌ای",
+          "ideological_profile": "ملی‌گرایی کبک و تمرکز بر منافع کبک",
+          "confidence": "medium"
+        },
+        {
+          "id": "can_ndp",
+          "name_fa": "حزب دموکرات جدید",
+          "name_en": "New Democratic Party (NDP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ زیر حد نصاب وضعیت رسمی حزبی در مجلس",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "confidence": "medium"
+        },
+        {
+          "id": "can_green",
+          "name_fa": "حزب سبز کانادا",
+          "name_en": "Green Party of Canada",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ نمایندگی محدود",
+          "ideological_profile": "سیاست سبز و محیط‌زیست‌گرایی",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "can_liberal_centrists",
+          "name_fa": "جریان میانه‌رو و مالی‌محور لیبرال‌ها",
+          "name_en": "Liberal centrist / fiscal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر ثبات مالی، سرمایه‌گذاری و رقابت‌پذیری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "can_liberal_progressive",
+          "name_fa": "جریان ترقی‌خواه لیبرال‌ها",
+          "name_en": "Liberal progressive current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر خدمات عمومی و سیاست‌های اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "can_conservative_fiscal",
+          "name_fa": "جریان محافظه‌کار مالی",
+          "name_en": "Fiscal conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "انضباط هزینه‌ها، کاهش مالیات و مقررات."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه اجرایی فدرال",
+          "confidence": "high"
+        },
+        {
+          "id": "house_commons",
+          "name_fa": "مجلس عوام",
+          "name_en": "House of Commons",
+          "role": "مجلس منتخب و مبنای تشکیل دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس انتصابی بازنگری قوانین",
+          "confidence": "high"
+        },
+        {
+          "id": "provinces",
+          "name_fa": "دولت‌های استانی و قلمرویی",
+          "name_en": "Provincial and Territorial Governments",
+          "role": "مراکز قدرت فدرال با اختیارات قانون اساسی",
+          "confidence": "high"
+        },
+        {
+          "id": "crown_governor_general",
+          "name_fa": "پادشاه و فرماندار کل",
+          "name_en": "Crown and Governor General",
+          "role": "نهاد سلطنت مشروطه و وظایف تشریفاتی/قانون اساسی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Mark Carney",
+        "party": "Liberal Party of Canada",
+        "status": "majority_government_as_of_2026-11-01"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "federalism",
+          "resource_policy",
+          "immigration",
+          "housing",
+          "climate",
+          "trade_and_us_relations",
+          "indigenous_relations"
+        ],
+        "rule": "بلوک کبکوآ حزب منطقه‌ای است؛ حد نصاب شناسایی رسمی حزب پارلمانی باید از تعداد کرسی و قواعد مجلس محاسبه شود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Prime Minister of Canada — official biography",
+            "url": "https://www.pm.gc.ca/en/about",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "Prime Minister of Canada — by-elections notice",
+            "url": "https://www.pm.gc.ca/en/news/news-releases/2026/11/01/prime-minister-carney-announces-elections",
+            "date": "2026-11-01"
+          },
+          {
+            "name": "The Political Record — House of Commons standings, dated Nov 1 2026",
+            "url": "https://politicalrecord.ca/house/",
+            "date": "2026-11-01"
+          }
+        ],
+        "notes": "نخست‌وزیر از وب‌سایت رسمی دولت کانادا تأیید شده؛ وضعیت اکثریت پارلمانی در ۱ نوامبر ۲۰۲۶ از داده تاریخ‌دار مستقل مبتنی بر فهرست اعضای مجلس ثبت شده است."
       },
       "parliamentary_groups": []
     },
@@ -361,12 +505,22 @@
         }
       ],
       "current_government": {
-        "head_of_state": "Mojtaba Khamenei",
-        "supreme_leader": "Mojtaba Khamenei",
+        "head_of_state": "PLAYER_CONTROLLED",
+        "supreme_leader": "PLAYER_CONTROLLED",
         "head_of_government": "Masoud Pezeshkian",
         "president": "Masoud Pezeshkian",
         "parliament_speaker": "Mohammad Baqer Qalibaf",
-        "scenario_note": "در تاریخ شروع سناریو ۵ نوامبر ۲۰۲۶، گزارش Reuters از پیام رهبر و دیدار مقام امنیتی ایران با رئیس‌جمهور روسیه حکایت دارد؛ رهبری عالی با مجتبی خامنه‌ای و ریاست‌جمهوری با مسعود پزشکیان ثبت می‌شود."
+        "scenario_note": "در تاریخ شروع سناریو ۵ نوامبر ۲۰۲۶، گزارش Reuters از پیام رهبر و دیدار مقام امنیتی ایران با رئیس‌جمهور روسیه حکایت دارد؛ رهبری عالی با مجتبی خامنه‌ای و ریاست‌جمهوری با مسعود پزشکیان ثبت می‌شود.",
+        "real_world_baseline": {
+          "supreme_leader": "Mojtaba Khamenei",
+          "president": "Masoud Pezeshkian",
+          "reference_date": "2026-11-05"
+        },
+        "scenario_override": {
+          "supreme_leader": "PLAYER_CONTROLLED",
+          "president": "Masoud Pezeshkian",
+          "note": "در سناریوی بازی، بازیکن رهبر ایران است؛ این جایگزین نقش رهبر در بازی است و نباید به‌عنوان واقعیت تاریخی بیرون از بازی نمایش داده شود."
+        }
       },
       "political_behavior": {
         "response_dimensions": [
@@ -406,7 +560,7 @@
             "date": "2026-03-20"
           }
         ],
-        "notes": "در ایران احزاب به معنای احزاب رقابتی غربی محور اصلی سیاست نیستند؛ به همین دلیل فهرست parties خالی مانده و جریان‌ها و مراکز قدرت جدا ثبت شده‌اند. عناوین «میانه‌رو سپاه» و «تندرو سپاه» به‌عنوان حزب یا جناح رسمی تثبیت نشده‌اند؛ در مدل باید گرایش اشخاص/شبکه‌های امنیتی جداگانه و با منبع ثبت شود."
+        "notes": "در ایران احزاب به معنای احزاب رقابتی غربی محور اصلی سیاست نیستند؛ به همین دلیل فهرست parties خالی مانده و جریان‌ها و مراکز قدرت جدا ثبت شده‌اند. عناوین «میانه‌رو سپاه» و «تندرو سپاه» به‌عنوان حزب یا جناح رسمی تثبیت نشده‌اند؛ در مدل باید گرایش اشخاص/شبکه‌های امنیتی جداگانه و با منبع ثبت شود. در داده سناریوی بازی، بازیکن رهبر ایران است و این نقش به‌صورت override جدا از مرجع تاریخی ثبت شده است."
       },
       "parliamentary_groups": []
     },
@@ -527,19 +681,116 @@
     "SAU": {
       "country_name_fa": "عربستان",
       "country_name_en": "Saudi Arabia",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "absolute_monarchy_without_legal_party_competition",
+      "government_model": "پادشاهی مطلقه؛ احزاب سیاسی وجود ندارند و مجلس شورا انتصابی است",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "factions": [
+        {
+          "id": "sau_royal_house",
+          "name_fa": "خاندان آل سعود و شبکه‌های درباری",
+          "name_en": "House of Saud and royal court networks",
+          "entity_type": "power_network",
+          "policy_positions": {
+            "role": "شبکه اصلی انتصاب‌ها، جانشینی و هماهنگی قدرت؛ جناح‌بندی‌ها غیررسمی و نیازمند شواهد موردی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "sau_technocratic_reform",
+          "name_fa": "شبکه مدیران تکنوکرات و برنامه تحول",
+          "name_en": "Technocratic reform network",
+          "entity_type": "policy_network",
+          "policy_positions": {
+            "economy": "اجرای برنامه‌های تنوع‌بخشی اقتصادی و پروژه‌های Vision 2030."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "sau_religious_establishment",
+          "name_fa": "نهاد دینی رسمی",
+          "name_en": "Official religious establishment",
+          "entity_type": "institutional_network",
+          "policy_positions": {
+            "domestic": "نقش مذهبی و اجتماعی در چارچوبی که دولت تعیین می‌کند."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "monarch",
+          "name_fa": "پادشاه",
+          "name_en": "King",
+          "role": "رأس دولت و حاکمیت",
+          "confidence": "high"
+        },
+        {
+          "id": "crown_prince_prime_minister",
+          "name_fa": "ولیعهد و نخست‌وزیر",
+          "name_en": "Crown Prince and Prime Minister",
+          "role": "مرکز اصلی مدیریت اجرایی و برنامه‌های تحول",
+          "confidence": "high"
+        },
+        {
+          "id": "royal_court",
+          "name_fa": "دربار سلطنتی",
+          "name_en": "Royal Court",
+          "role": "هماهنگی و شبکه نفوذ خاندان حاکم",
+          "confidence": "high"
+        },
+        {
+          "id": "council_of_ministers",
+          "name_fa": "شورای وزیران",
+          "name_en": "Council of Ministers",
+          "role": "اداره اجرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "shura_council",
+          "name_fa": "مجلس شورا",
+          "name_en": "Majlis al-Shura",
+          "role": "نهاد مشورتی با اعضای منصوب پادشاه؛ نه پارلمان منتخب رقابتی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Salman bin Abdulaziz Al Saud",
+        "crown_prince": "Mohammed bin Salman",
+        "prime_minister": "Mohammed bin Salman",
+        "party_system": "no_legal_political_parties"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "vision_2030",
+          "oil_and_energy",
+          "social_reform",
+          "royal_succession",
+          "religious_legitimacy",
+          "regional_security"
+        ],
+        "rule": "به‌جای انتخابات و احزاب، تصمیم‌گیری از شبکه سلطنتی، دولت و مراکز نهادی مدل شود؛ احزاب ساختگی ساخته نشوند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "UK House of Commons Library — Saudi Arabia profile",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9828/",
+            "date": "2026-11-2026"
+          },
+          {
+            "name": "BTI 2026 — Saudi Arabia country report",
+            "url": "https://bti-project.org/en/reports/country-report/SAU",
+            "date": "2026-03-01"
+          }
+        ],
+        "notes": "منابع پارلمانی بریتانیا و BTI نبود احزاب سیاسی و انتصابی بودن مجلس شورا را تأیید می‌کنند."
       },
       "parliamentary_groups": []
     },
@@ -2566,19 +2817,174 @@
     "JPN": {
       "country_name_fa": "ژاپن",
       "country_name_en": "Japan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "constitutional_monarchy_parliamentary_multiparty_democracy",
+      "government_model": "پادشاهی مشروطه پارلمانی با حزب مسلط و ائتلاف راست میانه",
+      "parties": [
+        {
+          "id": "jpn_ldp",
+          "name_fa": "حزب لیبرال دموکرات",
+          "name_en": "Liberal Democratic Party (LDP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و رهبر ائتلاف",
+          "ideological_profile": "محافظه‌کاری، توسعه اقتصادی و اتحاد امنیتی با آمریکا",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_ishin",
+          "name_fa": "حزب نوآوری ژاپن",
+          "name_en": "Japan Innovation Party (Nippon Ishin)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم",
+          "ideological_profile": "اصلاحات ساختاری، تمرکززدایی و کاهش هزینه دولت",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_centrist_reform",
+          "name_fa": "ائتلاف اصلاحات میانه‌رو",
+          "name_en": "Centrist Reform Alliance",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی؛ ائتلاف انتخاباتی",
+          "ideological_profile": "میانه‌گرایی و اصلاحات سیاسی/اجتماعی",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_dpfp",
+          "name_fa": "حزب دموکراتیک برای مردم",
+          "name_en": "Democratic Party for the People",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "میانه‌گرایی و سیاست‌های اقتصادی با تأکید بر درآمد",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_sanseito",
+          "name_fa": "سانسیتو",
+          "name_en": "Sanseito",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی کوچک‌تر",
+          "ideological_profile": "پوپولیسم ملی‌گرا و محافظه‌کاری",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_team_mirai",
+          "name_fa": "تیم میرای",
+          "name_en": "Team Mirai",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی کوچک‌تر",
+          "ideological_profile": "فناوری‌محوری و اصلاح حکمرانی",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_jcp",
+          "name_fa": "حزب کمونیست ژاپن",
+          "name_en": "Japanese Communist Party (JCP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "چپ و صلح‌طلبی",
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_reiwa",
+          "name_fa": "ریوا شینسنگومی",
+          "name_en": "Reiwa Shinsengumi",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "چپ پوپولیست و بازتوزیع اقتصادی",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "jpn_ldp_conservative",
+          "name_fa": "جریان محافظه‌کار در LDP",
+          "name_en": "LDP conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "security": "تأکید بر بازدارندگی و تقویت توان دفاعی.",
+            "economy": "ترکیبی از حمایت صنعتی و سیاست‌های بازار."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "jpn_ldp_moderate",
+          "name_fa": "جریان میانه‌رو در LDP",
+          "name_en": "LDP moderate current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "تأکید بر مدیریت روابط منطقه‌ای و ثبات ائتلاف‌ها."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه",
+          "confidence": "high"
+        },
+        {
+          "id": "national_diet",
+          "name_fa": "مجلس ملی ژاپن",
+          "name_en": "National Diet",
+          "role": "پارلمان دو مجلسی",
+          "confidence": "high"
+        },
+        {
+          "id": "ruling_coalition",
+          "name_fa": "ائتلاف حاکم LDP و Nippon Ishin",
+          "name_en": "LDP–Nippon Ishin coalition",
+          "role": "اکثریت حاکم در مجلس نمایندگان پس از انتخابات فوریه ۲۰۲۶",
+          "confidence": "high"
+        },
+        {
+          "id": "emperor",
+          "name_fa": "نهاد امپراتوری",
+          "name_en": "Imperial Institution",
+          "role": "نهاد نمادین قانون اساسی؛ فاقد قدرت اجرایی روزمره",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Sanae Takaichi",
+        "governing_party": "LDP",
+        "coalition": [
+          "LDP",
+          "Nippon Ishin"
+        ],
+        "status": "strong_coalition_majority"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "taxation",
+          "defence_policy",
+          "constitutional_revision",
+          "ageing_society",
+          "energy",
+          "relations_with_china"
+        ],
+        "rule": "نقش امپراتور نمادین است؛ تصمیم اجرایی باید از نخست‌وزیر، کابینه و پارلمان ناشی شود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Australian DFAT — Japan country brief",
+            "url": "https://www.dfat.gov.au/geo/japan/japan-country-brief",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "IPU Parline — February 2026 House of Representatives election",
+            "url": "https://data.ipu.org/parliament/JP/JP-LC01/election/JP-LC01-E20260208/",
+            "date": "2026-02-08"
+          }
+        ],
+        "notes": "نتایج انتخابات فوریه ۲۰۲۶ مجلس نمایندگان از IPU Parline و ترکیب دولت از دولت استرالیا ثبت شده است."
       },
       "parliamentary_groups": []
     },
@@ -2661,38 +3067,356 @@
     "IND": {
       "country_name_fa": "هند",
       "country_name_en": "India",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "federal_parliamentary_multiparty_democracy",
+      "government_model": "جمهوری فدرال پارلمانی با ائتلاف ملی و احزاب منطقه‌ای قدرتمند",
+      "parties": [
+        {
+          "id": "ind_bjp",
+          "name_fa": "حزب بهاراتیا جاناتا",
+          "name_en": "Bharatiya Janata Party (BJP)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی دولت و رهبر ائتلاف NDA",
+          "ideological_profile": "ملی‌گرایی هندو، محافظه‌کاری و توسعه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_inc",
+          "name_fa": "کنگره ملی هند",
+          "name_en": "Indian National Congress (INC)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی اپوزیسیون و محور ائتلاف INDIA",
+          "ideological_profile": "چندگرایی، سکولاریسم و میانه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_sp",
+          "name_fa": "حزب ساماجوادی",
+          "name_en": "Samajwadi Party (SP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "سوسیالیسم منطقه‌ای و سیاست عدالت اجتماعی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_aitc",
+          "name_fa": "کنگره ترینامول سراسر هند",
+          "name_en": "All India Trinamool Congress (AITC)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون و حزب منطقه‌ای",
+          "ideological_profile": "میانه‌چپ و منطقه‌گرایی بنگال غربی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_dmk",
+          "name_fa": "دراویدا مونترا کازاگام",
+          "name_en": "Dravida Munnetra Kazhagam (DMK)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای و عضو ائتلاف INDIA",
+          "ideological_profile": "دراویدیسم، سکولاریسم و فدرالیسم",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_tdp",
+          "name_fa": "حزب تلوگو دسام",
+          "name_en": "Telugu Desam Party (TDP)",
+          "entity_type": "party",
+          "political_role": "متحد ائتلاف NDA",
+          "ideological_profile": "منطقه‌گرایی آندرا پرادش و توسعه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_jdu",
+          "name_fa": "جاناتا دال (متحد)",
+          "name_en": "Janata Dal (United)",
+          "entity_type": "party",
+          "political_role": "متحد ائتلاف NDA",
+          "ideological_profile": "سیاست منطقه‌ای و میانه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_shiv_sena",
+          "name_fa": "شیو سنا",
+          "name_en": "Shiv Sena",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای؛ جناح‌ها و انشعاب‌ها باید جدا شوند",
+          "ideological_profile": "منطقه‌گرایی ماهاراشترا و ملی‌گرایی هندو",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ind_nda",
+          "name_fa": "ائتلاف دموکراتیک ملی",
+          "name_en": "National Democratic Alliance (NDA)",
+          "entity_type": "coalition",
+          "policy_positions": {
+            "role": "ائتلاف حاکم به رهبری BJP؛ احزاب عضو مستقل باقی می‌مانند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ind_india",
+          "name_fa": "ائتلاف توسعه‌گرای فراگیر ملی هند",
+          "name_en": "Indian National Developmental Inclusive Alliance (INDIA)",
+          "entity_type": "coalition",
+          "policy_positions": {
+            "role": "ائتلاف اپوزیسیون با احزاب ملی و منطقه‌ای؛ انسجام و اولویت‌های اعضا یکسان نیست."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و شورای وزیران",
+          "name_en": "Prime Minister and Council of Ministers",
+          "role": "مرکز اجرایی اصلی",
+          "confidence": "high"
+        },
+        {
+          "id": "lok_sabha",
+          "name_fa": "لوک سبها",
+          "name_en": "Lok Sabha",
+          "role": "مجلس منتخب و محور اعتماد دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "rajya_sabha",
+          "name_fa": "راجیا سبها",
+          "name_en": "Rajya Sabha",
+          "role": "مجلس علیا با نمایندگی ایالت‌ها",
+          "confidence": "high"
+        },
+        {
+          "id": "state_governments",
+          "name_fa": "دولت‌های ایالتی",
+          "name_en": "State Governments",
+          "role": "مراکز قدرت فدرال با احزاب منطقه‌ای مهم",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Narendra Modi",
+        "governing_party": "BJP",
+        "coalition": "NDA",
+        "status": "coalition_government"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "federalism",
+          "jobs_and_growth",
+          "welfare",
+          "religion_and_identity",
+          "regional_autonomy",
+          "foreign_policy",
+          "agriculture"
+        ],
+        "rule": "احزاب منطقه‌ای می‌توانند در ائتلاف ملی نقش تعیین‌کننده داشته باشند؛ وفاداری ائتلافی باید پویا باشد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Digital Sansad — Lok Sabha party-wise representation",
+            "url": "https://sansad.in/ls",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "IPU Parline — 2024 Lok Sabha election",
+            "url": "https://data.ipu.org/parliament/IN/IN-LC01/election/IN-LC01-E20240419/",
+            "date": "2024-06-04"
+          },
+          {
+            "name": "CRS — India’s Domestic Political Setting",
+            "url": "https://www.everycrsreport.com/files/2026-05-07_IF10298_55a558ddc808de449630a2bdae686a60f2238d71.pdf",
+            "date": "2026-05-07"
+          }
+        ],
+        "notes": "ترکیب دولت مرکزی بر اساس انتخابات ۲۰۲۴ و وضعیت جاری لوک سبها بررسی شده؛ نتایج انتخابات ایالتی ۲۰۲۶ نباید با ترکیب پارلمان ملی اشتباه گرفته شوند."
       },
       "parliamentary_groups": []
     },
     "PAK": {
       "country_name_fa": "پاکستان",
       "country_name_en": "Pakistan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "federal_parliamentary_republic_with_strong_military_influence",
+      "government_model": "جمهوری فدرال پارلمانی با احزاب رقابتی، ائتلاف‌های شکننده و نفوذ بالای ارتش",
+      "parties": [
+        {
+          "id": "pak_pmln",
+          "name_fa": "مسلم لیگ پاکستان (ن)",
+          "name_en": "Pakistan Muslim League (Nawaz) (PML-N)",
+          "entity_type": "party",
+          "political_role": "رهبر ائتلاف دولت",
+          "ideological_profile": "محافظه‌کاری، توسعه‌گرایی و شبکه‌های سیاسی پنجاب",
+          "confidence": "medium"
+        },
+        {
+          "id": "pak_ppp",
+          "name_fa": "حزب مردم پاکستان",
+          "name_en": "Pakistan Peoples Party (PPP)",
+          "entity_type": "party",
+          "political_role": "شریک حمایت‌کننده ائتلاف دولت",
+          "ideological_profile": "سوسیال‌دموکراسی و سیاست منطقه‌ای سند",
+          "confidence": "medium"
+        },
+        {
+          "id": "pak_pti",
+          "name_fa": "جنبش عدالت پاکستان",
+          "name_en": "Pakistan Tehreek-e-Insaf (PTI)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ وضعیت سازمانی و انتخاباتی تحت فشار و مناقشه",
+          "ideological_profile": "پوپولیسم ضدفساد و ملی‌گرایی پاکستانی",
+          "confidence": "medium"
+        },
+        {
+          "id": "pak_mqm",
+          "name_fa": "جنبش قومی متحده پاکستان",
+          "name_en": "Muttahida Qaumi Movement Pakistan (MQM-P)",
+          "entity_type": "party",
+          "political_role": "شریک پارلمانی/ائتلافی در سطح فدرال",
+          "ideological_profile": "سیاست شهری و نمایندگی اردو‌زبانان سند",
+          "confidence": "medium"
+        },
+        {
+          "id": "pak_jui",
+          "name_fa": "جمعیت علمای اسلام",
+          "name_en": "Jamiat Ulema-e-Islam (F)",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی و مذهبی؛ موضع‌گیری موردی",
+          "ideological_profile": "اسلام‌گرایی محافظه‌کار",
+          "confidence": "medium"
+        },
+        {
+          "id": "pak_ipp",
+          "name_fa": "حزب استحکام پاکستان",
+          "name_en": "Istehkam-e-Pakistan Party (IPP)",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی کوچک‌تر",
+          "ideological_profile": "میانه‌رو و حامی ساختار سیاسی موجود",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "pak_punjab_elites",
+          "name_fa": "شبکه‌های سیاسی و اقتصادی پنجاب",
+          "name_en": "Punjab political and business networks",
+          "entity_type": "regional_power_network",
+          "policy_positions": {
+            "role": "شبکه‌های محلی و استانی مؤثر بر ائتلاف‌سازی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "pak_military_establishment",
+          "name_fa": "نهاد نظامی و امنیتی",
+          "name_en": "Military establishment",
+          "entity_type": "institutional_power_center",
+          "policy_positions": {
+            "security": "نفوذ قابل توجه در امنیت ملی، سیاست خارجی و سیاست داخلی؛ در بازی به‌عنوان نهاد مستقل از احزاب ثبت شود."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "pak_religious_parties",
+          "name_fa": "جریان‌های مذهبی و اسلام‌گرا",
+          "name_en": "Religious political currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "مواضع متنوع در قانون‌گذاری اجتماعی و آموزش؛ نباید یک بلوک واحد فرض شوند."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "prime_minister_cabinet",
+          "name_fa": "نخست‌وزیر و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه اجرایی فدرال",
+          "confidence": "high"
+        },
+        {
+          "id": "national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس منتخب و مبنای اعتماد دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس عالی با نمایندگی واحدهای فدرال",
+          "confidence": "high"
+        },
+        {
+          "id": "military_establishment",
+          "name_fa": "فرماندهی نیروهای مسلح و ستاد ارتش",
+          "name_en": "Military Establishment",
+          "role": "مرکز قدرت امنیتی با نفوذ سیاسی قابل توجه",
+          "confidence": "high"
+        },
+        {
+          "id": "provincial_governments",
+          "name_fa": "دولت‌های ایالتی",
+          "name_en": "Provincial Governments",
+          "role": "مراکز قدرت استانی و ائتلاف‌های منطقه‌ای",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Shehbaz Sharif",
+        "president": "Asif Ali Zardari",
+        "leading_party": "PML-N",
+        "supporting_parties": [
+          "PPP",
+          "MQM-P",
+          "other parliamentary allies"
+        ],
+        "status": "coalition_government"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "civil_military_relations",
+          "federalism",
+          "economic_stabilization",
+          "religious_policy",
+          "regional_security",
+          "party_coalitions"
+        ],
+        "rule": "ارتش باید به‌عنوان مرکز قدرت نهادی جدا از احزاب ثبت شود؛ ائتلاف‌های پارلمانی ممکن است با حمایت بیرونی و بدون عضویت رسمی در کابینه شکل بگیرند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Australian DFAT — Pakistan country brief",
+            "url": "https://www.dfat.gov.au/geo/pakistan/pakistan-country-brief",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "National Assembly of Pakistan — composition",
+            "url": "https://na.gov.pk/en/composition.php",
+            "date": "2026-11-2026"
+          },
+          {
+            "name": "Senate of Pakistan — party-wise list",
+            "url": "https://www.senate.gov.pk/2web/19-12-2025-PARTYWISE%20LIST.pdf",
+            "date": "2025-12-19"
+          }
+        ],
+        "notes": "منابع رسمی دولت و مجلس برای ساختار حکومتی استفاده شده‌اند؛ ترکیب دقیق کرسی‌ها و وضعیت حقوقی/انتخاباتی PTI نیازمند بررسی تکمیلی جداگانه است."
       },
       "parliamentary_groups": []
     },
