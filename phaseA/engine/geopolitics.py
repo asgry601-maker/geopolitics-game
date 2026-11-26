@@ -2200,7 +2200,7 @@ def end_turn(s):
     if year_report:
         print("📢 گزارش سال " + str(s["year"] - 1))
     else:
-        print("🌙 گزارش روز " + s["game_date"])
+        print("🌙 گزارش روز " + (datetime.date.fromisoformat(s["game_date"]) - datetime.timedelta(days=1)).isoformat())
     for line in log[-8:]:
         print("  • " + line)
     if pop_lines:
