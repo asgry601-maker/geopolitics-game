@@ -1,23 +1,23 @@
 {
-  "schema_version": "1.11.0",
+  "schema_version": "1.12.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 103,
-    "pending_countries": 71,
+    "researched_countries": 110,
+    "pending_countries": 64,
     "last_batch": [
-      "ETH",
-      "KEN",
-      "GHA",
-      "SEN",
-      "CIV",
-      "CMR",
-      "UGA"
+      "TZA",
+      "RWA",
+      "ZWE",
+      "ZMB",
+      "MOZ",
+      "AGO",
+      "NAM"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -19109,133 +19109,1306 @@
     "TZA": {
       "country_name_fa": "تانزانیا",
       "country_name_en": "United Republic of Tanzania",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_dominant_party_electoral_system",
+      "government_model": "جمهوری ریاستی چندحزبی با سلطه تاریخی CCM؛ انتخابات اکتبر ۲۰۲۵ با محدودیت جدی رقابت همراه بود.",
+      "parties": [
+        {
+          "id": "tza_ccm",
+          "name_fa": "حزب انقلاب",
+          "name_en": "Chama Cha Mapinduzi (CCM)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۲۷۰ کرسی از ۲۷۲ کرسی مستقیم مجلس در انتخابات ۲۰۲۵.",
+          "ideological_profile": "ملی‌گرایی دولتی و توسعه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_act",
+          "name_fa": "اتحاد برای تغییر و شفافیت – وطن‌پرستان",
+          "name_en": "ACT-Wazalendo",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون؛ دو کرسی مستقیم در انتخابات ۲۰۲۵؛ پایگاه مهم در زنگبار.",
+          "ideological_profile": "اصلاحات دموکراتیک و عدالت اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_chadema",
+          "name_fa": "حزب دموکراسی و توسعه",
+          "name_en": "CHADEMA",
+          "entity_type": "party",
+          "political_role": "مهم‌ترین اپوزیسیون سرزمین اصلی؛ در انتخابات ۲۰۲۵ به‌دلیل اختلاف بر سر آیین‌نامه انتخابات و محدودیت‌های قضایی از رقابت کنار ماند.",
+          "ideological_profile": "لیبرال‌دموکراسی و اصلاحات نهادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_chaumma",
+          "name_fa": "اتحاد ملی برای ساختار و شفافیت",
+          "name_en": "CHAUMMA",
+          "entity_type": "party",
+          "political_role": "حزب کوچک؛ دو کرسی ویژه زنان در ترکیب مجلس پس از انتخابات ۲۰۲۵.",
+          "ideological_profile": "اصلاح‌طلبی و شفافیت.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tza_ccm_reform",
+          "name_fa": "جریان اصلاح‌طلب درون CCM",
+          "name_en": "CCM reformist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاحات محدود سیاسی و اقتصادی و حفظ انسجام حزب."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tza_ccm_hardline",
+          "name_fa": "جریان محافظه‌کار و امنیت‌محور CCM",
+          "name_en": "CCM conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اولویت ثبات حکومت و کنترل سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tza_opposition",
+          "name_fa": "جریان اصلاحات انتخاباتی اپوزیسیون",
+          "name_en": "Opposition electoral-reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اصلاح کمیسیون انتخابات، آزادی فعالیت حزبی و رقابت منصفانه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tza_zanzibar",
+          "name_fa": "جریان‌های سیاسی زنگبار",
+          "name_en": "Zanzibar political currents",
+          "entity_type": "regional_political_current",
+          "policy_positions": {
+            "domestic": "خودمختاری زنگبار و تقسیم قدرت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tza_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "سامیا سولوهو حسن از ۳ نوامبر ۲۰۲۵ دوره دوم را آغاز کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_ccm_power",
+          "name_fa": "رهبری حزب CCM",
+          "name_en": "CCM leadership",
+          "role": "حزب و دولت در ساختار سیاسی به‌شدت درهم‌تنیده‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_parl",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "CCM اکثریت قاطع دارد؛ CHADEMA در انتخابات ۲۰۲۵ نماینده منتخب مستقیم نداشت.",
+          "confidence": "high"
+        },
+        {
+          "id": "tza_zanzibar_power",
+          "name_fa": "دولت و مجلس زنگبار",
+          "name_en": "Zanzibar Government and House of Representatives",
+          "role": "نهادهای خودمختار زنگبار در کنار ساختار اتحادیه عمل می‌کنند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Samia Suluhu Hassan",
+        "ruling_party": "Chama Cha Mapinduzi (CCM)",
+        "election_date": "2025-10-29",
+        "parliamentary_result_2025": {
+          "CCM_direct": 270,
+          "ACT_Wazalendo_direct": 2,
+          "CHAUMMA_women_special_seats": 2
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "political_reform",
+          "election_legitimacy",
+          "civil_liberties",
+          "cost_of_living",
+          "employment",
+          "zanzibar_autonomy"
+        ],
+        "rule": "انتخابات ۲۰۲۵ با تحریم CHADEMA، رد صلاحیت نامزد ACT-Wazalendo و اعتراض‌های گسترده همراه بود؛ نتایج رسمی را از ارزیابی ناظران جدا نگه دار."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Tanzania 2025 election",
+            "url": "https://data.ipu.org/parliament/tz/TZ-LC01/election/TZ-LC01-E20251029/",
+            "date": "2025-10"
+          },
+          {
+            "name": "African Union Election Observation Mission — Preliminary Statement",
+            "url": "https://www.au.int/en/pressreleases/20251105/aueom-preliminary-statement-october-2025-general-elections-tanzania",
+            "date": "2025-11-05"
+          },
+          {
+            "name": "BTI 2026 — Tanzania Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/TZA",
+            "date": "2026"
+          },
+          {
+            "name": "Freedom House — Tanzania 2026",
+            "url": "https://freedomhouse.org/country/tanzania/freedom-world/2026",
+            "date": "2026"
+          }
+        ],
+        "notes": "کرسی‌های مستقیم و سهمیه‌های زنان جدا نگهداری شده‌اند؛ محدودیت فعالیت CHADEMA در snapshot باید لحاظ شود."
       },
       "parliamentary_groups": []
     },
     "RWA": {
       "country_name_fa": "رواندا",
       "country_name_en": "Rwanda",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_dominant_party_coalition_system",
+      "government_model": "جمهوری ریاستی با سلطه RPF و ائتلاف احزاب همسو؛ انتخابات چندحزبی برگزار می‌شود اما رقابت و فعالیت مخالفان محدود است.",
+      "parties": [
+        {
+          "id": "rwa_rpf",
+          "name_fa": "جبهه میهن‌پرست رواندا",
+          "name_en": "Rwandan Patriotic Front (RPF/FPR)",
+          "entity_type": "party",
+          "political_role": "نیروی مسلط حکومت؛ ۳۷ کرسی از ۵۳ کرسی مستقیم مجلس در ۲۰۲۴.",
+          "ideological_profile": "ملی‌گرایی و توسعه‌گرایی دولتی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_psd",
+          "name_fa": "حزب سوسیال‌دموکرات",
+          "name_en": "Social Democratic Party (PSD)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ پنج کرسی مستقیم در ۲۰۲۴.",
+          "ideological_profile": "سوسیال‌دموکراسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_pl",
+          "name_fa": "حزب لیبرال",
+          "name_en": "Liberal Party (PL)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ پنج کرسی مستقیم در ۲۰۲۴.",
+          "ideological_profile": "لیبرالیسم و میانه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_ps",
+          "name_fa": "حزب سوسیالیست ایمبراکوری",
+          "name_en": "Social Party Imberakuri",
+          "entity_type": "party",
+          "political_role": "حزب کوچک؛ دو کرسی مستقیم در ۲۰۲۴.",
+          "ideological_profile": "سوسیالیسم و عدالت اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_pdi",
+          "name_fa": "حزب دموکراتیک ایده‌آل",
+          "name_en": "Ideal Democratic Party (PDI)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک همسو با ائتلاف حاکم؛ دو کرسی مستقیم در ۲۰۲۴.",
+          "ideological_profile": "میانه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_dgpr",
+          "name_fa": "حزب سبز دموکراتیک رواندا",
+          "name_en": "Democratic Green Party of Rwanda (DGPR)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای دو کرسی مستقیم در ۲۰۲۴.",
+          "ideological_profile": "سبزگرایی و اصلاح‌طلبی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_ppc",
+          "name_fa": "حزب پیشرفت و توافق",
+          "name_en": "Party for Progress and Concord (PPC)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک همسو با RPF؛ بدون وزن مستقل بزرگ.",
+          "ideological_profile": "توسعه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "rwa_psp",
+          "name_fa": "حزب رفاه و همبستگی",
+          "name_en": "Prosperity and Solidarity Party (PSP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک عضو ائتلاف همسو با RPF.",
+          "ideological_profile": "همبستگی اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "rwa_udpr",
+          "name_fa": "اتحاد دموکراتیک مردم رواندا",
+          "name_en": "Democratic Union of the Rwandan People (UDPR)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک عضو ائتلاف همسو با RPF.",
+          "ideological_profile": "میانه‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "rwa_rpf_network",
+          "name_fa": "رهبری و شبکه حکومتی RPF",
+          "name_en": "RPF governing network",
+          "entity_type": "intraparty_power_network",
+          "policy_positions": {
+            "domestic": "حفظ انسجام حکومت، توسعه اقتصادی و ثبات سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "rwa_security",
+          "name_fa": "جریان امنیت و دولت‌سازی",
+          "name_en": "Security and state-building current",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "security": "اولویت ثبات و امنیت ملی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "rwa_opposition",
+          "name_fa": "شبکه‌های اپوزیسیون و جامعه مدنی",
+          "name_en": "Opposition and civil-society networks",
+          "entity_type": "opposition_network",
+          "policy_positions": {
+            "domestic": "مطالبه فضای رقابتی‌تر و آزادی تشکل."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "rwa_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "پل کاگامه رئیس‌جمهور و رهبر اصلی ساختار سیاسی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_rpf_power",
+          "name_fa": "رهبری RPF",
+          "name_en": "RPF leadership",
+          "role": "محور ائتلاف حاکم و شبکه نخبگان سیاسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_parl",
+          "name_fa": "پارلمان",
+          "name_en": "Parliament",
+          "role": "مجلس نمایندگان و سنا؛ بخشی از کرسی‌ها سهمیه‌ای یا غیرمستقیم‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "rwa_forum",
+          "name_fa": "مجمع مشورتی ملی سازمان‌های سیاسی",
+          "name_en": "National Consultative Forum of Political Organizations",
+          "role": "چارچوب رسمی هماهنگی احزاب ثبت‌شده.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Paul Kagame",
+        "prime_minister": "Justin Nsengiyumva",
+        "ruling_party": "Rwandan Patriotic Front (RPF)",
+        "election_date": "2024-07-15",
+        "parliamentary_result_2024_direct": {
+          "RPF": 37,
+          "PSD": 5,
+          "PL": 5,
+          "PS_Imberakuri": 2,
+          "PDI": 2,
+          "DGPR": 2
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_development",
+          "national_security",
+          "regional_stability",
+          "political_competition",
+          "civil_society"
+        ],
+        "rule": "کرسی‌های مستقیم را از سهمیه‌های زنان، جوانان و نمایندگان گروه‌های خاص تفکیک کن؛ احزاب همسو با RPF را اپوزیسیون مستقل فرض نکن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Rwanda 2024 election",
+            "url": "https://data.ipu.org/parliament/RW/RW-LC01/election/RW-LC01-E20240715/",
+            "date": "2024-07"
+          },
+          {
+            "name": "BTI 2026 — Rwanda Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/RWA",
+            "date": "2026"
+          },
+          {
+            "name": "International IDEA — Rwanda",
+            "url": "https://www.idea.int/democracytracker/country/rwanda",
+            "date": "2026"
+          }
+        ],
+        "notes": "پل کاگامه در انتخابات ۲۰۲۴ با بیش از ۹۹ درصد آرا دوباره انتخاب شد؛ محدودیت نامزدها و رقابت سیاسی باید در رفتار سیاسی منعکس شود."
       },
       "parliamentary_groups": []
     },
     "ZWE": {
       "country_name_fa": "زیمبابوه",
       "country_name_en": "Zimbabwe",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_dominant_party_system_under_constitutional_transition",
+      "government_model": "جمهوری ریاستی با سلطه ZANU-PF؛ اصلاحات قانون اساسی مصوب ۲۰۲۶ انتخابات بعدی را به ۲۰۳۰ منتقل و انتخاب رئیس‌جمهور را به پارلمان واگذار کرده است؛ مشروعیت اصلاحات محل مناقشه است.",
+      "parties": [
+        {
+          "id": "zwe_zanupf",
+          "name_fa": "اتحاد ملی آفریقایی زیمبابوه – جبهه میهن‌پرست",
+          "name_en": "ZANU-PF",
+          "entity_type": "party",
+          "political_role": "حزب حاکم از ۱۹۸۰؛ اکثریت پارلمانی دارد و اصلاحات قانون اساسی ۲۰۲۶ را پیش برد.",
+          "ideological_profile": "ملی‌گرایی آزادی‌بخش و دولت‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "zwe_mdc",
+          "name_fa": "جنبش تغییر دموکراتیک",
+          "name_en": "Movement for Democratic Change (MDC)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی اپوزیسیون؛ پس از انشعاب‌ها و بحران رهبری، شاخه‌های مختلفی از آن باقی مانده‌اند.",
+          "ideological_profile": "سوسیال‌دموکراسی و اصلاحات دموکراتیک.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_ccc",
+          "name_fa": "ائتلاف شهروندان برای تغییر",
+          "name_en": "Citizens Coalition for Change (CCC)",
+          "entity_type": "party",
+          "political_role": "نیروی اپوزیسیون شکل‌گرفته در ۲۰۲۲؛ با اختلافات رهبری و تضعیف سازمانی روبه‌رو شد.",
+          "ideological_profile": "اصلاح‌طلبی و دموکراسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_nca",
+          "name_fa": "مجمع ملی قانون اساسی",
+          "name_en": "National Constitutional Assembly (NCA)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون با تمرکز بر اصلاح قانون اساسی.",
+          "ideological_profile": "اصلاح‌طلبی قانون اساسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "zwe_mnangagwa",
+          "name_fa": "جریان امرسون منانگاگوا",
+          "name_en": "Mnangagwa governing faction",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حفظ کنترل حزب و دولت و تثبیت اصلاحات قانون اساسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_security",
+          "name_fa": "شبکه‌های امنیتی و نظامی همسو با حاکمیت",
+          "name_en": "Security and military-linked networks",
+          "entity_type": "institutional_power_network",
+          "policy_positions": {
+            "security": "نهادهای امنیتی و نظامی از مراکز اثرگذار در توازن قدرت‌اند."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_chiwenga",
+          "name_fa": "جریان چیونگا و رقبای درون‌حزبی",
+          "name_en": "Chiwenga-aligned intra-party networks",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "رقابت بر سر جانشینی و توازن قدرت درون ZANU-PF؛ میزان نفوذ دقیق نامطمئن است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_opposition",
+          "name_fa": "جریان‌های اپوزیسیون دموکراتیک",
+          "name_en": "Democratic opposition currents",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "رقابت انتخاباتی آزاد و محدود کردن تمرکز قدرت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "zwe_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "امرسون منانگاگوا رئیس‌جمهور است؛ اصلاحات ۲۰۲۶ شیوه انتخاب و دوره را تغییر داده.",
+          "confidence": "high"
+        },
+        {
+          "id": "zwe_zanupf_power",
+          "name_fa": "رهبری ZANU-PF",
+          "name_en": "ZANU-PF leadership",
+          "role": "حزب مسلط و مرکز اصلی قدرت سیاسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "zwe_parl",
+          "name_fa": "پارلمان",
+          "name_en": "Parliament",
+          "role": "اصلاحات قانون اساسی در ژوئن ۲۰۲۶ تصویب شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "zwe_security_power",
+          "name_fa": "نهادهای امنیتی و دفاعی",
+          "name_en": "Security and Defence Institutions",
+          "role": "در توازن قدرت و سیاست داخلی نقش نهادی مهم دارند.",
+          "confidence": "medium"
+        },
+        {
+          "id": "zwe_courts",
+          "name_fa": "دادگاه‌های عالی و قانون اساسی",
+          "name_en": "Superior and Constitutional Courts",
+          "role": "رسیدگی به چالش‌های حقوقی اصلاحات قانون اساسی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Emmerson Dambudzo Mnangagwa",
+        "ruling_party": "ZANU-PF",
+        "constitutional_amendment_2026": {
+          "signed_date": "2026-07-07",
+          "next_general_election_year": 2030,
+          "presidential_selection": "elected by Parliament rather than direct popular vote",
+          "term_length_years": 7,
+          "status_on_snapshot": "enacted; legal and political challenges unresolved"
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_order",
+          "succession_and_term_limits",
+          "currency_and_inflation",
+          "mining",
+          "agriculture",
+          "opposition_rights"
+        ],
+        "rule": "اصلاحیه شماره ۳ در ۷ ژوئیه ۲۰۲۶ امضا شده بود؛ در snapshot چالش‌های حقوقی حل‌نشده بود. انشعاب‌های CCC را ساده‌سازی نکن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Associated Press — Zimbabwe constitutional amendments",
+            "url": "https://apnews.com/article/5be7e9711d7b7c81a0d7dc8e0196fdfe",
+            "date": "2026-07"
+          },
+          {
+            "name": "BTI 2026 — Zimbabwe",
+            "url": "https://bti-project.org/en/reports/country-report/ZWE",
+            "date": "2026"
+          },
+          {
+            "name": "dotzedw Insights — Zimbabwe political system",
+            "url": "https://insights.dotzedw.com/elections/?country=ZWE",
+            "date": "2026"
+          }
+        ],
+        "notes": "اصلاحات قانون اساسی و تغییرات زمان انتخابات مطابق وضعیت تا ۵ نوامبر ۲۰۲۶ ثبت شده‌اند؛ وزن جناح‌های غیررسمی با احتیاط مدل شود."
       },
       "parliamentary_groups": []
     },
     "ZMB": {
       "country_name_fa": "زامبیا",
       "country_name_en": "Zambia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_democracy",
+      "government_model": "جمهوری ریاستی چندحزبی؛ انتخابات اوت ۲۰۲۶ به پیروزی دوباره هاکاینده هیچیلما و اکثریت UPND انجامید.",
+      "parties": [
+        {
+          "id": "zmb_upnd",
+          "name_fa": "حزب متحد برای توسعه ملی",
+          "name_en": "United Party for National Development (UPND)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۱۶۰ کرسی از ۲۶۶ کرسی مورد رقابت مجلس در انتخابات ۱۳ اوت ۲۰۲۶.",
+          "ideological_profile": "توسعه‌گرایی و اصلاحات بازار.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "zmb_nrpup",
+          "name_fa": "حزب آشتی ملی برای وحدت و رفاه",
+          "name_en": "National Reconciliation Party for Unity and Prosperity (NRPUP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی مجلس جدید با ۷۶ کرسی؛ نامزد آن نتیجه ریاست‌جمهوری را به چالش کشید.",
+          "ideological_profile": "ملی‌گرایی و عدالت اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "zmb_pf",
+          "name_fa": "جبهه میهن‌پرست",
+          "name_en": "Patriotic Front (PF)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم پیشین؛ پس از اختلافات داخلی بخشی از صحنه اپوزیسیون است.",
+          "ideological_profile": "ملی‌گرایی و توسعه‌گرایی دولتی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "zmb_sp",
+          "name_fa": "حزب سوسیالیست",
+          "name_en": "Socialist Party",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون با گرایش چپ و نقد سیاست‌های بازارمحور.",
+          "ideological_profile": "سوسیالیسم دموکراتیک.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "zmb_cf",
+          "name_fa": "شهروندان نخست",
+          "name_en": "Citizens First",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون؛ در انتخابات ۲۰۲۶ نامزد ریاست‌جمهوری معرفی کرد.",
+          "ideological_profile": "اصلاح‌طلبی و سیاست ضدفساد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "zmb_upnd_govern",
+          "name_fa": "جریان دولت و رهبری UPND",
+          "name_en": "UPND governing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "ثبات کلان، بازسازی بدهی، معدن و سرمایه‌گذاری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zmb_upnd_services",
+          "name_fa": "جریان اصلاحات و خدمات عمومی UPND",
+          "name_en": "UPND public-services current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "آموزش، خدمات عمومی، کشاورزی و زیرساخت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zmb_nrpup",
+          "name_fa": "جریان اپوزیسیون NRPUP",
+          "name_en": "NRPUP opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "نقد سیاست اقتصادی دولت و اولویت‌های توسعه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zmb_pf_network",
+          "name_fa": "شبکه‌های باقی‌مانده جبهه میهن‌پرست",
+          "name_en": "Patriotic Front networks",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "بازسازی سازمانی و تعیین رهبری پس از اختلافات داخلی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "zmb_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "هاکاینده هیچیلما از سپتامبر ۲۰۲۶ دوره دوم را آغاز کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "zmb_upnd_power",
+          "name_fa": "رهبری UPND",
+          "name_en": "UPND leadership",
+          "role": "مرکز سازمانی حزب حاکم.",
+          "confidence": "high"
+        },
+        {
+          "id": "zmb_parl",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "UPND با ۱۶۰ کرسی از ۲۶۶ کرسی مورد رقابت اکثریت دارد؛ NRPUP اپوزیسیون اصلی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "zmb_ec",
+          "name_fa": "کمیسیون انتخابات زامبیا",
+          "name_en": "Electoral Commission of Zambia",
+          "role": "نهاد اعلام‌کننده نتایج انتخابات اوت ۲۰۲۶.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Hakainde Hichilema",
+        "vice_president": "Mutale Nalumango",
+        "ruling_party": "UPND",
+        "election_date": "2026-08-13",
+        "parliamentary_result_2026": {
+          "UPND": 160,
+          "NRPUP": 76,
+          "seats_at_stake": 266,
+          "total_chamber_capacity": 280
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "debt_restructuring",
+          "copper_and_mining",
+          "electricity",
+          "cost_of_living",
+          "agriculture",
+          "public_services",
+          "electoral_trust"
+        ],
+        "rule": "نتیجه رسمی ۲۰۲۶ را مبنا بگیر؛ اعتراض نامزد رقیب را مناقشه سیاسی ثبت کن، نه تغییر خودکار نتیجه."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Zambia August 2026 election",
+            "url": "https://data.ipu.org/parliament/ZM/ZM-LC01/election/ZM-LC01-E20260813/",
+            "date": "2026-08"
+          },
+          {
+            "name": "State House Zambia — Hichilema second term",
+            "url": "https://www.sh.gov.zm/president-hakainde-hichilema-secures-second-term-in-decisive-election-victory/",
+            "date": "2026-08-18"
+          },
+          {
+            "name": "IFES — Zambia 2026 General Elections",
+            "url": "https://www.ifes.org/tools-resources/election-snapshots/elections-zambia-2026-general-elections",
+            "date": "2026-08"
+          }
+        ],
+        "notes": "ساختار مجلس در ۲۰۲۶ گسترش یافته است؛ ۲۶۶ کرسی مورد رقابت با ظرفیت ۲۸۰ کرسی مجلس یکی نیست."
       },
       "parliamentary_groups": []
     },
     "MOZ": {
       "country_name_fa": "موزامبیک",
       "country_name_en": "Mozambique",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_dominant_party_system",
+      "government_model": "جمهوری ریاستی چندحزبی با سلطه تاریخی FRELIMO؛ پس از انتخابات مناقشه‌برانگیز ۲۰۲۴ دانیل چاپو رئیس‌جمهور شد.",
+      "parties": [
+        {
+          "id": "moz_frelimo",
+          "name_fa": "جبهه آزادی‌بخش موزامبیک",
+          "name_en": "FRELIMO",
+          "entity_type": "party",
+          "political_role": "حزب حاکم از استقلال؛ ۱۷۱ کرسی از ۲۵۰ کرسی مجلس در ۲۰۲۴.",
+          "ideological_profile": "ملی‌گرایی آزادی‌بخش و توسعه‌گرایی دولتی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_podemos",
+          "name_fa": "حزب خوش‌بینی برای توسعه موزامبیک",
+          "name_en": "PODEMOS",
+          "entity_type": "party",
+          "political_role": "دومین نیروی پارلمانی با ۴۳ کرسی؛ از نامزدی ونسیو موندلانه حمایت کرد.",
+          "ideological_profile": "اصلاح‌طلبی و مبارزه با فساد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_renamo",
+          "name_fa": "مقاومت ملی موزامبیک",
+          "name_en": "RENAMO",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون تاریخی؛ ۲۸ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "محافظه‌کاری و تمرکززدایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_mdm",
+          "name_fa": "جنبش دموکراتیک موزامبیک",
+          "name_en": "MDM",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون کوچک با ۸ کرسی در ۲۰۲۴.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "moz_frelimo",
+          "name_fa": "جریان رهبری و دولت FRELIMO",
+          "name_en": "FRELIMO governing leadership",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تداوم دولت، توسعه زیرساخت و مدیریت منابع طبیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "moz_reform",
+          "name_fa": "جریان اصلاح‌طلب درون حاکمیت",
+          "name_en": "Reformist current within FRELIMO",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاح نظام انتخاباتی و تمرکززدایی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "moz_mondlane",
+          "name_fa": "جریان ونسیو موندلانه و حامیان PODEMOS",
+          "name_en": "Venâncio Mondlane and PODEMOS movement",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اعتراض به نتایج انتخابات، شفافیت و اصلاحات سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "moz_renamo",
+          "name_fa": "شبکه‌های سیاسی و محلی RENAMO",
+          "name_en": "RENAMO local networks",
+          "entity_type": "party_network",
+          "policy_positions": {
+            "domestic": "تمرکززدایی و بازسازی نقش اپوزیسیون."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "moz_north",
+          "name_fa": "جریان‌های محلی و جامعه مدنی شمال",
+          "name_en": "Northern Mozambique civil-society currents",
+          "entity_type": "regional_civil_society_current",
+          "policy_positions": {
+            "domestic": "امنیت انسانی و بازسازی مناطق آسیب‌دیده."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "moz_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "دانیل چاپو از ۱۵ ژانویه ۲۰۲۵ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_frelimo_power",
+          "name_fa": "رهبری FRELIMO",
+          "name_en": "FRELIMO leadership",
+          "role": "مرکز اصلی قدرت حزبی و اجرایی.",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_assembly",
+          "name_fa": "مجلس جمهوری",
+          "name_en": "Assembly of the Republic",
+          "role": "FRELIMO اکثریت دو‌سوم دارد؛ PODEMOS دومین گروه پارلمانی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "moz_council",
+          "name_fa": "شورای قانون اساسی",
+          "name_en": "Constitutional Council",
+          "role": "مرجع تأیید نهایی نتایج و مناقشات قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Daniel Francisco Chapo",
+        "ruling_party": "FRELIMO",
+        "president_since": "2025-01-15",
+        "parliamentary_result_2024": {
+          "FRELIMO": 171,
+          "PODEMOS": 43,
+          "RENAMO": 28,
+          "MDM": 8
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "electoral_legitimacy",
+          "natural_gas",
+          "youth_employment",
+          "decentralisation",
+          "public_security",
+          "northern_recovery",
+          "political_reconciliation"
+        ],
+        "rule": "نتیجه نهایی شورای قانون اساسی را از ادعاهای اپوزیسیون و گزارش ناظران جدا نگه دار؛ اعتراض‌ها و روند گفت‌وگوی اصلاح حکمرانی را در نظر بگیر."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Mozambique 2024 election",
+            "url": "https://data.ipu.org/parliament/MZ/MZ-LC01/election/MZ-LC01-E20241009/",
+            "date": "2024-10"
+          },
+          {
+            "name": "Commonwealth Observer Group — Mozambique 2024 report",
+            "url": "https://comsec-web-static.s3.eu-west-1.amazonaws.com/s3fs-public/2025-09/mozambique-cog-report-2024.pdf",
+            "date": "2025-09"
+          },
+          {
+            "name": "EU Election Observation Mission — Mozambique Final Report",
+            "url": "https://www.europarl.europa.eu/cmsdata/298609/Mozambique%20-%20General%20Elections%2C%209%20October%202024%2C%20EU%20EOM%20Final%20Report.pdf",
+            "date": "2025"
+          }
+        ],
+        "notes": "کرسی‌ها مطابق نتیجه نهایی: FRELIMO ۱۷۱، PODEMOS ۴۳، RENAMO ۲۸ و MDM هشت. ارزیابی ناظران درباره شفافیت جداگانه لحاظ شود."
       },
       "parliamentary_groups": []
     },
     "AGO": {
       "country_name_fa": "آنگولا",
       "country_name_en": "Angola",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_dominant_party_multiparty_system",
+      "government_model": "جمهوری ریاستی با سلطه طولانی‌مدت MPLA؛ اپوزیسیون UNITA در انتخابات ۲۰۲۲ رشد قابل توجهی کرد.",
+      "parties": [
+        {
+          "id": "ago_mpla",
+          "name_fa": "جنبش مردمی برای آزادی آنگولا",
+          "name_en": "MPLA",
+          "entity_type": "party",
+          "political_role": "حزب حاکم از ۱۹۷۵؛ ۱۲۴ کرسی از ۲۲۰ کرسی مجلس در ۲۰۲۲.",
+          "ideological_profile": "ملی‌گرایی آزادی‌بخش و دولت‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_unita",
+          "name_fa": "اتحاد ملی برای استقلال کامل آنگولا",
+          "name_en": "UNITA",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین اپوزیسیون؛ ۹۰ کرسی در ۲۰۲۲.",
+          "ideological_profile": "لیبرالیسم و اصلاحات سیاسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_prs",
+          "name_fa": "حزب نوسازی اجتماعی",
+          "name_en": "Social Renewal Party (PRS)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای نمایندگی پارلمانی در ۲۰۲۲.",
+          "ideological_profile": "سوسیال‌دموکراسی و تمرکززدایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_fnla",
+          "name_fa": "جبهه ملی آزادی آنگولا",
+          "name_en": "National Front for the Liberation of Angola (FNLA)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی کوچک؛ یک کرسی در ۲۰۲۲.",
+          "ideological_profile": "ملی‌گرایی و میراث جنبش استقلال.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_pha",
+          "name_fa": "حزب اومانیست آنگولا",
+          "name_en": "Humanist Party of Angola (PHA)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای نمایندگی در مجلس پس از انتخابات ۲۰۲۲.",
+          "ideological_profile": "اومانیسم و اصلاحات اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ago_lourenco",
+          "name_fa": "جریان ریاست‌جمهوری ژوآئو لورنسو",
+          "name_en": "João Lourenço presidential current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاحات اقتصادی و مبارزه اعلامی با فساد."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ago_oldguard",
+          "name_fa": "شبکه‌های قدیمی نخبگان MPLA",
+          "name_en": "MPLA legacy elite networks",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حفظ نفوذ شبکه‌های قدیمی اقتصادی و سیاسی؛ وزن دقیق نامطمئن است."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ago_unita",
+          "name_fa": "جریان رهبری و اصلاح‌طلب UNITA",
+          "name_en": "UNITA leadership current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "رقابت انتخاباتی و تمرکززدایی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ago_civil",
+          "name_fa": "جامعه مدنی و جنبش‌های شهری",
+          "name_en": "Civil society and urban movements",
+          "entity_type": "civil_society_current",
+          "policy_positions": {
+            "domestic": "شفافیت درآمد نفتی، خدمات عمومی و پاسخ‌گویی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ago_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "ژوآئو لورنسو رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_mpla_power",
+          "name_fa": "رهبری MPLA",
+          "name_en": "MPLA leadership",
+          "role": "حزب حاکم و شبکه غالب در دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "MPLA اکثریت و UNITA بزرگ‌ترین اپوزیسیون را دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ago_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد مهم در مناقشات انتخاباتی و قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "João Manuel Gonçalves Lourenço",
+        "ruling_party": "MPLA",
+        "election_date": "2022-08-24",
+        "parliamentary_result_2022": {
+          "MPLA": 124,
+          "UNITA": 90,
+          "PRS": 2,
+          "FNLA": 2,
+          "other_or_independent": 2
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_and_gas",
+          "economic_diversification",
+          "anti_corruption",
+          "youth_unemployment",
+          "election_competition",
+          "decentralisation"
+        ],
+        "rule": "نتیجه ۲۰۲۲ مبناست؛ MPLA به ۱۲۴ کرسی کاهش و UNITA به ۹۰ کرسی افزایش یافت."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Angola 2022 election",
+            "url": "https://data.ipu.org/parliament/AO/AO-LC01/election/AO-LC01-E20220824/",
+            "date": "2022-08"
+          },
+          {
+            "name": "BTI 2026 — Angola",
+            "url": "https://bti-project.org/en/reports/country-report/AGO",
+            "date": "2026"
+          },
+          {
+            "name": "Freedom House — Angola 2026",
+            "url": "https://freedomhouse.org/country/angola/freedom-world/2026",
+            "date": "2026"
+          }
+        ],
+        "notes": "کرسی‌های سایر احزاب کوچک و مستقل به‌صورت تجمیعی آمده تا از انتساب نادرست کرسی جلوگیری شود."
       },
       "parliamentary_groups": []
     },
     "NAM": {
       "country_name_fa": "نامیبیا",
       "country_name_en": "Namibia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_democracy",
+      "government_model": "جمهوری ریاستی چندحزبی؛ SWAPO از زمان استقلال دولت را تشکیل داده و در انتخابات ۲۰۲۴ اکثریت خود را حفظ کرد اما سهم آن کاهش یافت.",
+      "parties": [
+        {
+          "id": "nam_swapo",
+          "name_fa": "حزب SWAPO نامیبیا",
+          "name_en": "SWAPO Party of Namibia",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ ۵۱ کرسی از ۹۶ کرسی تخصیص‌یافته مجلس در ۲۰۲۴؛ رئیس‌جمهور از این حزب است.",
+          "ideological_profile": "ملی‌گرایی آزادی‌بخش و سوسیال‌دموکراسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_ipc",
+          "name_fa": "میهن‌پرستان مستقل برای تغییر",
+          "name_en": "Independent Patriots for Change (IPC)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین اپوزیسیون با ۲۰ کرسی در ۲۰۲۴.",
+          "ideological_profile": "اصلاح‌طلبی و پاسخ‌گویی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_ar",
+          "name_fa": "جنبش بازآرایی مثبت",
+          "name_en": "Affirmative Repositioning (AR)",
+          "entity_type": "party",
+          "political_role": "نیروی جوان و منتقد؛ شش کرسی در نتیجه نهایی مجلس ۲۰۲۴.",
+          "ideological_profile": "عدالت اجتماعی، زمین و مسکن.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_lpm",
+          "name_fa": "جنبش بی‌زمین‌ها",
+          "name_en": "Landless People's Movement (LPM)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون با پنج کرسی در ۲۰۲۴.",
+          "ideological_profile": "اصلاحات ارضی و عدالت توزیعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_pdm",
+          "name_fa": "جنبش دموکراتیک مردمی",
+          "name_en": "Popular Democratic Movement (PDM)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون با پنج کرسی در ۲۰۲۴.",
+          "ideological_profile": "محافظه‌کاری میانه‌رو.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_udf",
+          "name_fa": "جبهه متحد دموکراتیک",
+          "name_en": "United Democratic Front (UDF)",
+          "entity_type": "party",
+          "political_role": "حزب منطقه‌ای با دو کرسی در ۲۰۲۴.",
+          "ideological_profile": "نمایندگی منطقه‌ای.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "nam_app",
+          "name_fa": "حزب همه مردم",
+          "name_en": "All People's Party (APP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با یک کرسی در ۲۰۲۴.",
+          "ideological_profile": "توسعه محلی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "nam_swanu",
+          "name_fa": "اتحادیه ملی آفریقای جنوب غربی",
+          "name_en": "South West Africa National Union (SWANU)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی کوچک با یک کرسی در ۲۰۲۴.",
+          "ideological_profile": "سوسیالیسم و پان‌آفریقایی‌گرایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "nam_swapo_old",
+          "name_fa": "جریان قدیمی و شبکه رهبری SWAPO",
+          "name_en": "SWAPO legacy leadership network",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تداوم نقش حزب آزادی‌بخش و ثبات دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nam_swapo_renewal",
+          "name_fa": "جریان نوسازی درون SWAPO",
+          "name_en": "SWAPO renewal current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جذب رأی‌دهندگان جوان و پاسخ به کاهش حمایت انتخاباتی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nam_youth",
+          "name_fa": "جریان جوانان و عدالت زمین",
+          "name_en": "Youth and land-reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "زمین و مسکن، اشتغال و کاهش نابرابری."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nam_opposition",
+          "name_fa": "جریان هماهنگی اپوزیسیون",
+          "name_en": "Opposition coordination current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "نظارت پارلمانی و اصلاح خدمات عمومی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nam_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "نتومبو ناندی-اندایتواه از مارس ۲۰۲۵ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_swapo_power",
+          "name_fa": "رهبری SWAPO",
+          "name_en": "SWAPO leadership",
+          "role": "حزب حاکم و مرکز اصلی سازمان سیاسی دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "SWAPO اکثریت ۵۱ کرسی از ۹۶ کرسی تخصیص‌یافته را دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "nam_council",
+          "name_fa": "شورای ملی",
+          "name_en": "National Council",
+          "role": "مجلس دوم با نمایندگی منطقه‌ای و نقش بازبینی قانون‌گذاری.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Netumbo Nandi-Ndaitwah",
+        "prime_minister": "Elijah Ngurare",
+        "ruling_party": "SWAPO Party of Namibia",
+        "election_date": "2024-11-27",
+        "parliamentary_result_2024": {
+          "SWAPO": 51,
+          "IPC": 20,
+          "AR": 6,
+          "LPM": 5,
+          "PDM": 5,
+          "UDF": 2,
+          "APP": 1,
+          "BCP": 1,
+          "NEFF": 1,
+          "NDP": 1,
+          "NUDO": 1,
+          "RP": 1,
+          "SWANU": 1
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "uranium_and_mining",
+          "fishing_and_energy",
+          "land_reform",
+          "youth_unemployment",
+          "housing",
+          "income_inequality"
+        ],
+        "rule": "نتیجه نهایی ۲۰۲۴ را لحاظ کن؛ SWAPO از ۶۳ کرسی ۲۰۱۹ به ۵۱ کرسی کاهش یافت اما اکثریت را حفظ کرد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Electoral Commission of Namibia — 2024 results",
+            "url": "https://ecn.kuikmedia.com/elections/2024-presidential-and-national-assembly-elections/",
+            "date": "2025-01-03"
+          },
+          {
+            "name": "IPU Parline — Namibia 2024 election",
+            "url": "https://data.ipu.org/parliament/NA/NA-LC01/election/NA-LC01-E20241127/",
+            "date": "2024-11"
+          },
+          {
+            "name": "Government Gazette — Namibia election declaration",
+            "url": "https://d4f7y6nbupj5z.cloudfront.net/wp-content/uploads/2024/12/20241203-Speech_Results-Declaration-speech-Namibia-3Dec2024ETN3.pdf",
+            "date": "2024-12-03"
+          }
+        ],
+        "notes": "در نتیجه نهایی ۹۶ کرسی تخصیص‌یافته، سهم AR شش کرسی است؛ گزارش‌های اولیه هفت کرسی ذکر کرده بودند."
       },
       "parliamentary_groups": []
     },
