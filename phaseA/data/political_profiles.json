@@ -1,23 +1,23 @@
 {
-  "schema_version": "1.12.0",
+  "schema_version": "1.13.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 110,
-    "pending_countries": 64,
+    "researched_countries": 117,
+    "pending_countries": 57,
     "last_batch": [
-      "TZA",
-      "RWA",
-      "ZWE",
-      "ZMB",
-      "MOZ",
-      "AGO",
-      "NAM"
+      "BWA",
+      "SDN",
+      "SSD",
+      "TCD",
+      "NER",
+      "MLI",
+      "MRT"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -20415,135 +20415,1133 @@
     "BWA": {
       "country_name_fa": "بوتسوانا",
       "country_name_en": "Botswana",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty_dominant_coalition",
+      "government_model": "جمهوری پارلمانی چندحزبی؛ ائتلاف UDC پس از پیروزی ۲۰۲۴ دولت را تشکیل داد و به سلطه ۵۸ ساله BDP پایان داد.",
+      "parties": [
+        {
+          "id": "bwa_udc",
+          "name_fa": "چتر برای تغییر",
+          "name_en": "Umbrella for Democratic Change (UDC)",
+          "entity_type": "coalition",
+          "political_role": "ائتلاف حاکم؛ ۳۶ کرسی از ۶۱ کرسی انتخابی در ۲۰۲۴؛ متشکل از BNF، BPP و Alliance for Progressives.",
+          "ideological_profile": "ائتلاف میانه‌رو و اصلاح‌طلب",
+          "legal_status": "registered_coalition",
+          "confidence": "high"
+        },
+        {
+          "id": "bwa_bcp",
+          "name_fa": "حزب کنگره بوتسوانا",
+          "name_en": "Botswana Congress Party (BCP)",
+          "entity_type": "party",
+          "political_role": "۱۵ کرسی در انتخابات ۲۰۲۴؛ مستقل از ائتلاف UDC.",
+          "ideological_profile": "سوسیال‌دموکراسی و اصلاحات حکمرانی",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "bwa_bpf",
+          "name_fa": "جبهه میهن‌پرست بوتسوانا",
+          "name_en": "Botswana Patriotic Front (BPF)",
+          "entity_type": "party",
+          "political_role": "۵ کرسی در ۲۰۲۴؛ منشعب از BDP.",
+          "ideological_profile": "محافظه‌کاری ملی",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "bwa_bdp",
+          "name_fa": "حزب دموکراتیک بوتسوانا",
+          "name_en": "Botswana Democratic Party (BDP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم پیشین؛ ۴ کرسی در ۲۰۲۴ پس از ۵۸ سال حکومت.",
+          "ideological_profile": "محافظه‌کاری میانه‌رو و توسعه‌گرایی دولتی",
+          "legal_status": "registered",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bwa_udc_currents",
+          "name_fa": "جریان‌های درون ائتلاف UDC",
+          "name_en": "UDC constituent-party currents",
+          "entity_type": "coalition_current",
+          "political_role": "جریان‌های احزاب تشکیل‌دهنده ائتلاف؛ حفظ انسجام و اجرای برنامه مشترک.",
+          "policy_positions": {
+            "domestic": "توافق بر سر اصلاحات و تقسیم مسئولیت‌های دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bwa_diamond",
+          "name_fa": "ذی‌نفعان صنعت الماس",
+          "name_en": "Diamond-sector economic stakeholders",
+          "entity_type": "economic_interest_network",
+          "political_role": "شبکه‌های اقتصادی مرتبط با صنعت الماس.",
+          "policy_positions": {
+            "domestic": "تنوع‌بخشی اقتصاد و مدیریت وابستگی به الماس."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bwa_exec",
+          "name_fa": "ریاست‌جمهوری و کابینه",
+          "name_en": "Presidency and Cabinet",
+          "role": "دوما بوکو رئیس‌جمهور و رهبر دولت ائتلافی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bwa_parl",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "UDC 36، BCP 15، BPF 5، BDP 4 و مستقل 1 کرسی انتخابی در ۲۰۲۴.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Duma Boko",
+        "ruling_party": "Umbrella for Democratic Change (UDC)",
+        "election_date": "2024-10-30",
+        "parliamentary_result_2024": {
+          "UDC": 36,
+          "BCP": 15,
+          "BPF": 5,
+          "BDP": 4,
+          "independents": 1
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_diversification",
+          "diamond_market",
+          "employment",
+          "public_services",
+          "coalition_cohesion",
+          "anti_corruption"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Botswana 2024 election",
+            "url": "https://data.ipu.org/parliament/BW/BW-LC01/election/BW-LC01-E20241030/",
+            "date": "2024-10"
+          },
+          {
+            "name": "African Union — Botswana 2024 election results",
+            "url": "https://developer.peaceau.org/uploads/1255-report-of-the-auc-chairperson-2024-2nd-semester-psc-report-on-elections-in-africa-nnc-revised-en-1-.pdf",
+            "date": "2025"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "bwa_udc_group",
+          "name_en": "UDC Parliamentary Group",
+          "party_id": "bwa_udc"
+        },
+        {
+          "id": "bwa_bcp_group",
+          "name_en": "BCP Parliamentary Group",
+          "party_id": "bwa_bcp"
+        },
+        {
+          "id": "bwa_bpf_group",
+          "name_en": "BPF Parliamentary Group",
+          "party_id": "bwa_bpf"
+        },
+        {
+          "id": "bwa_bdp_group",
+          "name_en": "BDP Parliamentary Group",
+          "party_id": "bwa_bdp"
+        }
+      ],
+      "research_status": "researched_initial"
     },
     "SDN": {
       "country_name_fa": "سودان",
       "country_name_en": "Sudan",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "fragmented_military_wartime_dual_authority",
+      "government_model": "حاکمیت ملی عملاً چندپاره و نظامی است؛ دولت همسو با SAF در پورت‌سودان و اداره موازی خودخوانده همسو با RSF در نیالا ادعای حکمرانی دارند.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "sdn_democratic_bloc",
+          "name_fa": "بلوک دموکراتیک همسو با نیروهای مسلح",
+          "name_en": "SAF-aligned Democratic Bloc",
+          "entity_type": "political_military_coalition",
+          "political_role": "ائتلاف احزاب و گروه‌های مسلح همسو با SAF؛ شامل DUP، جنبش عدالت و برابری و جنبش آزادی‌بخش سودان به رهبری مینی مناوی.",
+          "policy_positions": {
+            "domestic": "حفظ ساختار دولت پورت‌سودان و تشکیل نهادهای انتقالی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_taasis",
+          "name_fa": "ائتلاف تأسیس",
+          "name_en": "Tasis / Sudan Founding Alliance",
+          "entity_type": "political_military_coalition",
+          "political_role": "ائتلاف نیروهای پشتیبانی سریع، SPLM-N و گروه‌های سیاسی و مدنی؛ پایه اداره موازی خودخوانده نیالا.",
+          "policy_positions": {
+            "domestic": "ساختار غیرمتمرکز و دولت موازی؛ تقسیم قدرت در ائتلاف محل اختلاف."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_somoud",
+          "name_fa": "ائتلاف صمود",
+          "name_en": "Somoud civilian coalition",
+          "entity_type": "civilian_political_coalition",
+          "political_role": "ائتلاف غیرحزبی نیروهای مدنی، اتحادیه‌ها، گروه‌های دموکراسی‌خواه، زنان و جوانان مرتبط با عبدالله حمدوک.",
+          "policy_positions": {
+            "domestic": "گذار غیرنظامی، توقف جنگ و بازسازی نظم دموکراتیک."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_nairobi",
+          "name_fa": "جریان مدنی اعلامیه نایروبی",
+          "name_en": "Nairobi Declaration civilian current",
+          "entity_type": "cross_party_current",
+          "political_role": "جریان صلح‌طلب شامل حزب امت، حزب کنگره سودان و گروه‌های مدنی.",
+          "policy_positions": {
+            "domestic": "راه‌حل سیاسی، آتش‌بس و گذار غیرنظامی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "sdn_saf",
+          "name_fa": "نیروهای مسلح سودان و شورای حاکمیت",
+          "name_en": "Sudanese Armed Forces and Sovereignty Council",
+          "role": "عبدالفتاح البرهان رهبر بالفعل اردوگاه دولتی و مرکز قدرت مناطق تحت کنترل SAF.",
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_gov",
+          "name_fa": "دولت پورت‌سودان",
+          "name_en": "Port Sudan de facto government",
+          "role": "کامل ادریس از مه ۲۰۲۵ نخست‌وزیر دولت همسو با SAF است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_rsf",
+          "name_fa": "نیروهای پشتیبانی سریع و اداره نیالا",
+          "name_en": "Rapid Support Forces and Nyala parallel administration",
+          "role": "حمیدتی رهبر RSF و رئیس شورای ریاستی دولت موازی خودخوانده موسوم به دولت صلح و وحدت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sdn_civil",
+          "name_fa": "ائتلاف‌های مدنی",
+          "name_en": "Civilian coalitions",
+          "role": "نیروی سیاسی سوم برای صلح و گذار؛ فاقد کنترل یکپارچه بر دولت ملی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "de_facto_leader": "Abdel Fattah al-Burhan",
+        "prime_minister": "Kamil Idris",
+        "parallel_administration_leader": "Mohamed Hamdan Dagalo (Hemedti)",
+        "capital_of_government": "Port Sudan",
+        "political_status": "fragmented_dual_authority"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "ceasefire_and_peace_process",
+          "civilian_transition",
+          "territorial_governance",
+          "humanitarian_access",
+          "federalism",
+          "external_mediation"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "EUAA — Sudan: Security Situation, October 2026",
+            "url": "https://www.euaa.europa.eu/coi/sudan-security-situation/1-general-description-security-situation",
+            "date": "2026-10"
+          },
+          {
+            "name": "EUAA — Sudan: Country Focus, October 2026",
+            "url": "https://www.euaa.europa.eu/coi/11-political-situation-and-functioning-government/112-political-situation",
+            "date": "2026-10"
+          },
+          {
+            "name": "UK Home Office — Sudan security situation",
+            "url": "https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-security-situation-sudan-july-2026-accessible",
+            "date": "2026-07"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [],
+      "research_status": "researched_initial"
     },
     "SSD": {
       "country_name_fa": "سودان جنوبی",
       "country_name_en": "South Sudan",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_transitional_power_sharing",
+      "government_model": "جمهوری ریاستی در دوره انتقالیِ تقسیم قدرت. در ۵ نوامبر ۲۰۲۶ ساختار سیاسی متأثر از توافق صلح ۲۰۱۸ بود؛ انتخابات برای فوریه ۲۰۲۷ برنامه‌ریزی شده و مجلس انتقالی منصوب‌شده در سپتامبر ۲۰۲۶ منحل شده بود.",
+      "parties": [
+        {
+          "id": "ssd_splm",
+          "name_fa": "جنبش آزادی‌بخش خلق سودان",
+          "name_en": "Sudan People's Liberation Movement (SPLM)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و نیروی اصلی دولت انتقالی به رهبری سالوا کییر.",
+          "ideological_profile": "ملی‌گرایی سودان جنوبی و دولت‌سازی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_iop",
+          "name_fa": "حزب آی.او",
+          "name_en": "I.O. Party",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده در ژوئن ۲۰۲۶ به رهبری استیون پار کول؛ از جنبش SPLM/A-IO ریک مشار متمایز است.",
+          "ideological_profile": "هویت برنامه‌ای مستقل هنوز در حال تثبیت.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_ndm",
+          "name_fa": "جنبش دموکراتیک ملی",
+          "name_en": "National Democratic Movement (NDM)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده؛ مرتبط با ائتلاف‌های مخالف و روند صلح.",
+          "ideological_profile": "اصلاحات سیاسی و مشارکت چندحزبی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_plp",
+          "name_fa": "حزب لیبرال خلق",
+          "name_en": "People's Liberal Party (PLP)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده در ژوئن ۲۰۲۶.",
+          "ideological_profile": "لیبرالیسم و اصلاحات حکمرانی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "ssd_ssnmc",
+          "name_fa": "جنبش ملی سودان جنوبی برای تغییر",
+          "name_en": "South Sudan National Movement for Change (SSNMC)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده در ژوئن ۲۰۲۶.",
+          "ideological_profile": "اصلاحات و تغییر سیاسی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "ssd_rssp",
+          "name_fa": "حزب احیای سودان جنوبی",
+          "name_en": "Revive South Sudan Party (RSSP)",
+          "entity_type": "party",
+          "political_role": "حزب ثبت‌شده در ژوئن ۲۰۲۶.",
+          "ideological_profile": "وحدت ملی و بازسازی حکمرانی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ssd_machar",
+          "name_fa": "جنبش SPLM/A در اپوزیسیونِ ریک مشار",
+          "name_en": "SPLM/A-IO faction led by Riek Machar",
+          "entity_type": "political_movement",
+          "political_role": "جریان سیاسی امضاکننده توافق صلح؛ از حزب ثبت‌شده I.O به رهبری استیون پار کول متمایز است.",
+          "policy_positions": {
+            "domestic": "تقسیم قدرت و اجرای توافق صلح؛ اختلافات رهبری و امنیتی بر انتقال اثر دارد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_ssoa",
+          "name_fa": "ائتلاف مخالفان سودان جنوبی",
+          "name_en": "South Sudan Opposition Alliance (SSOA)",
+          "entity_type": "political_coalition",
+          "political_role": "ائتلاف چندحزبی امضاکننده توافق صلح و یکی از اجزای ساختار تقسیم قدرت.",
+          "policy_positions": {
+            "domestic": "مشارکت در دولت انتقالی و اصلاحات سیاسی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_other",
+          "name_fa": "احزاب و ائتلاف‌های مخالف دیگر",
+          "name_en": "Other Opposition Parties and Coalitions",
+          "entity_type": "cross_party_current",
+          "political_role": "مجموعه احزاب ثبت‌شده و ائتلاف‌های انتخاباتی در حال تغییر.",
+          "policy_positions": {
+            "domestic": "رقابت انتخاباتی و گذار از تقسیم قدرت انتقالی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ssd_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "سالوا کییر رئیس‌جمهور و رهبر SPLM است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_tgonu",
+          "name_fa": "دولت وحدت ملی انتقالی",
+          "name_en": "Revitalized Transitional Government of National Unity",
+          "role": "ساختار تقسیم قدرت میان SPLM، SPLM-IO و گروه‌های توافق صلح.",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_parl",
+          "name_fa": "مجلس انتقالی ملی",
+          "name_en": "Transitional National Legislative Assembly",
+          "role": "مجلس ۵۵۰ نفره منصوب‌شده طبق توافق صلح؛ تا سپتامبر ۲۰۲۶ فعال بود و سپس منحل شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ssd_ppc",
+          "name_fa": "شورای احزاب سیاسی",
+          "name_en": "Political Parties Council",
+          "role": "نهاد ثبت و نظارت بر احزاب؛ ثبت ۴۶ حزب و چند ائتلاف تا اکتبر ۲۰۲۶ گزارش شده بود.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Salva Kiir Mayardit",
+        "ruling_party": "Sudan People's Liberation Movement (SPLM)",
+        "election_planned_date": "2027-02-11",
+        "transitional_assembly_status": "dissolved_2026-09-22"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "peace_agreement_implementation",
+          "power_sharing",
+          "election_preparation",
+          "federalism",
+          "oil_revenue_sharing",
+          "intercommunal_reconciliation"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "South Sudan Political Parties Council — Official Register",
+            "url": "https://ppc.gov.ss/list-of-registered-political-parties/",
+            "date": "2026-10"
+          },
+          {
+            "name": "PPC — IO Party registration",
+            "url": "https://ppc.gov.ss/ppc-registers-io-party-approves-four-other-political-parties/",
+            "date": "2026-07"
+          },
+          {
+            "name": "IPU — Transitional National Legislative Assembly",
+            "url": "https://data.ipu.org/parliament/SS/SS-LC01/",
+            "date": "2025-09"
+          },
+          {
+            "name": "JMECS — R-ARCSS implementation report",
+            "url": "https://jmecsouthsudan.com/index.php/reports/rjmec-quarterly-reports/273-rjmec-quarterly-report-on-the-status-of-implementation-of-the-r-arcss-from-1st-april-to-30th-june-2026/file",
+            "date": "2026-06"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [],
+      "research_status": "researched_initial"
     },
     "TCD": {
       "country_name_fa": "چاد",
       "country_name_en": "Chad",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_republic_dominant_party",
+      "government_model": "جمهوری ریاستی با سلطه حزب جنبش نجات میهن (MPS). انتخابات مجلس ۲۰۲۴ اکثریت قاطع را به MPS داد؛ اپوزیسیون قانونی حضور دارد اما میدان رقابت نامتوازن است.",
+      "parties": [
+        {
+          "id": "tcd_mps",
+          "name_fa": "جنبش نجات میهن",
+          "name_en": "Patriotic Salvation Movement (MPS)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و حزب رئیس‌جمهور؛ ۱۲۴ کرسی از ۱۸۸ کرسی مجلس در انتخابات ۲۰۲۴.",
+          "ideological_profile": "حزب حاکم دولت‌گرا.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_rndt",
+          "name_fa": "همگرایی ملی دموکرات‌های چادی – بیداری",
+          "name_en": "RNDT / Le Réveil",
+          "entity_type": "party",
+          "political_role": "۱۲ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "ملی‌گرایی و مشارکت پارلمانی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_rdp",
+          "name_fa": "همایش برای دموکراسی و پیشرفت",
+          "name_en": "Rally for Democracy and Progress (RDP)",
+          "entity_type": "party",
+          "political_role": "۸ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "میانه‌رو و اصلاح‌طلب.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_undr",
+          "name_fa": "اتحادیه ملی برای دموکراسی و نوسازی",
+          "name_en": "National Union for Democracy and Renewal (UNDR)",
+          "entity_type": "party",
+          "political_role": "۸ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "اپوزیسیون انتخاباتی و اصلاح‌طلب.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_pcs",
+          "name_fa": "صلح و انسجام اجتماعی",
+          "name_en": "Peace and Social Cohesion (PCS)",
+          "entity_type": "party",
+          "political_role": "۳ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "صلح‌محوری.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tcd_mptr",
+          "name_fa": "جنبش میهن‌پرستان چاد برای جمهوری",
+          "name_en": "Movement of Chadian Patriots for the Republic (MPTR)",
+          "entity_type": "party",
+          "political_role": "۲ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "ملی‌گرایی جمهوری‌خواه.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tcd_pld",
+          "name_fa": "حزب آزادی‌ها و توسعه",
+          "name_en": "Party for Freedoms and Development (PLD)",
+          "entity_type": "party",
+          "political_role": "۲ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "آزادی‌خواهی و اصلاحات.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tcd_urd",
+          "name_fa": "اتحادیه برای نوسازی و دموکراسی",
+          "name_en": "Union for Renewal and Democracy (URD)",
+          "entity_type": "party",
+          "political_role": "۲ کرسی در انتخابات ۲۰۲۴.",
+          "ideological_profile": "اصلاحات نهادی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "tcd_transformateurs",
+          "name_fa": "دگرگون‌سازان",
+          "name_en": "Les Transformateurs",
+          "entity_type": "party",
+          "political_role": "جریان مهم اپوزیسیون به رهبری سوکس ماسرا؛ انتخابات مجلس ۲۰۲۴ را تحریم کرد و کرسی انتخاباتی نگرفت.",
+          "ideological_profile": "اصلاح‌طلبی سیاسی و تغییر ساختار قدرت.",
+          "legal_status": "registered_but_restricted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tcd_pres",
+          "name_fa": "ائتلاف ریاست‌جمهوری و نخبگان حاکم",
+          "name_en": "Presidential governing network",
+          "entity_type": "governing_elite_network",
+          "political_role": "شبکه سیاسی و اداری نزدیک به ریاست‌جمهوری.",
+          "policy_positions": {
+            "domestic": "تمرکز قدرت اجرایی و حفظ انسجام ائتلاف حاکم."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_opposition",
+          "name_fa": "جریان‌های اپوزیسیون انتخاباتی و مدنی",
+          "name_en": "Electoral and civic opposition currents",
+          "entity_type": "cross_party_current",
+          "political_role": "احزاب و گروه‌های مخالف دولت.",
+          "policy_positions": {
+            "domestic": "رقابت منصفانه، آزادی فعالیت سیاسی و اصلاحات نهادی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tcd_regional",
+          "name_fa": "شبکه‌های نخبگان منطقه‌ای",
+          "name_en": "Regional elite networks",
+          "entity_type": "regional_power_network",
+          "political_role": "شبکه‌های محلی و منطقه‌ای اثرگذار در سیاست ملی.",
+          "policy_positions": {
+            "domestic": "نمایندگی مناطق و مشارکت در دولت."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tcd_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "محمد ادریس دبی رئیس‌جمهور از مه ۲۰۲۴ و مرکز اصلی قدرت اجرایی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "آلامای هالینا از مه ۲۰۲۴ نخست‌وزیر و منصوب رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_parl",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "MPS در انتخابات ۲۰۲۴ اکثریت ۱۲۴ از ۱۸۸ کرسی را کسب کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "tcd_senate",
+          "name_fa": "سنای چاد",
+          "name_en": "Senate",
+          "role": "مجلس دوم قانون‌گذاری با اعضای منتخب غیرمستقیم و انتصابی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Mahamat Idriss Déby",
+        "prime_minister": "Allamaye Halina",
+        "ruling_party": "Patriotic Salvation Movement (MPS)",
+        "election_date": "2024-12-29",
+        "parliamentary_result_2024": {
+          "MPS": 124,
+          "RNDT": 12,
+          "RDP": 8,
+          "UNDR": 8,
+          "PCS": 3,
+          "MPTR": 2,
+          "PLD": 2,
+          "URD": 2,
+          "others": 27
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "executive_consolidation",
+          "constitutional_checks",
+          "regional_representation",
+          "oil_revenue",
+          "civil_liberties",
+          "opposition_dialogue"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Chad 2024 election",
+            "url": "https://data.ipu.org/parliament/TD/TD-LC01/election/TD-LC01-E20241229/",
+            "date": "2024-12"
+          },
+          {
+            "name": "UN Secretary-General report S/2025/342",
+            "url": "https://digitallibrary.un.org/record/4082909/files/S_2025_342-EN.pdf",
+            "date": "2025-05"
+          },
+          {
+            "name": "Human Rights Watch — World Report 2026: Chad",
+            "url": "https://www.hrw.org/world-report/2026/country-chapters/chad",
+            "date": "2026"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "tcd_mps_group",
+          "name_en": "MPS Parliamentary Group",
+          "party_id": "tcd_mps"
+        },
+        {
+          "id": "tcd_rndt_group",
+          "name_en": "RNDT Parliamentary Group",
+          "party_id": "tcd_rndt"
+        },
+        {
+          "id": "tcd_rdp_group",
+          "name_en": "RDP Parliamentary Group",
+          "party_id": "tcd_rdp"
+        },
+        {
+          "id": "tcd_undr_group",
+          "name_en": "UNDR Parliamentary Group",
+          "party_id": "tcd_undr"
+        }
+      ],
+      "research_status": "researched_initial"
     },
     "NER": {
       "country_name_fa": "نیجر",
       "country_name_en": "Niger",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "military_transition_parties_dissolved",
+      "government_model": "حکومت انتقالی نظامی تحت رهبری شورای ملی حفاظت از میهن (CNSP). احزاب سیاسی در مارس ۲۰۲۵ رسماً منحل شدند؛ نهادهای انتخابی ملی جای خود را به ساختارهای انتصابی انتقالی داده‌اند.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "ner_cnsp",
+          "name_fa": "شورای ملی حفاظت از میهن",
+          "name_en": "National Council for the Safeguard of the Homeland (CNSP)",
+          "entity_type": "military_governing_council",
+          "political_role": "مرکز اصلی قدرت پس از کودتای ۲۰۲۳؛ تحت رهبری ژنرال عبدالرحمان تیانی.",
+          "policy_positions": {
+            "domestic": "تمرکز قدرت در شورای نظامی و چارچوب بازتأسیس ملی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ner_support",
+          "name_fa": "شبکه‌های حامی گذار نظامی",
+          "name_en": "Pro-transition civic networks",
+          "entity_type": "civic_support_network",
+          "political_role": "گروه‌ها و چهره‌های مدنی حامی مسیر انتقالی؛ فاقد وضعیت حزب رسمی.",
+          "policy_positions": {
+            "domestic": "حاکمیت ملی و پشتیبانی از روند انتقالی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ner_former",
+          "name_fa": "شبکه‌های احزاب منحل‌شده و اپوزیسیون",
+          "name_en": "Former-party and opposition networks",
+          "entity_type": "informal_opposition_network",
+          "political_role": "شبکه‌های سیاسی سابق که پس از فرمان ۲۰۲۵ دیگر احزاب قانونی فعال نیستند.",
+          "policy_positions": {
+            "domestic": "بازگشت به نظم قانون اساسی و ازسرگیری رقابت سیاسی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ner_head",
+          "name_fa": "ریاست حکومت انتقالی",
+          "name_en": "Head of the Transition",
+          "role": "ژنرال عبدالرحمان تیانی رئیس دولت و رهبر ساختار انتقالی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ner_cnsp_power",
+          "name_fa": "شورای ملی حفاظت از میهن",
+          "name_en": "CNSP",
+          "role": "شورای نظامی حاکم و مرجع اصلی تصمیم‌گیری سیاسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "ner_consult",
+          "name_fa": "شورای مشورتی انتقالی",
+          "name_en": "Transitional Consultative Council",
+          "role": "نهاد انتصابی مشورتی؛ جایگزین مجلس منتخب نیست.",
+          "confidence": "medium"
+        },
+        {
+          "id": "ner_cabinet",
+          "name_fa": "دولت انتقالی",
+          "name_en": "Transitional Cabinet",
+          "role": "اجرای سیاست‌های انتقالی و مقررات انحلال احزاب.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Abdourahamane Tiani",
+        "prime_minister": "Ali Lamine Zeine",
+        "ruling_council": "CNSP",
+        "political_status": "military_transition_no_legal_parties"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "transition_legitimacy",
+          "national_sovereignty",
+          "civilian_return_to_government",
+          "regional_security",
+          "foreign_relations",
+          "political_reopening"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Le Sahel — Ordinance 2025-06 dissolving political parties",
+            "url": "https://www.lesahel.org/ordonnance-n-2025-06-du-26-mars-2025-portant-dissolution-des-partis-politiques/",
+            "date": "2025-03-28"
+          },
+          {
+            "name": "Freedom House — Niger 2026",
+            "url": "https://freedomhouse.org/country/niger/freedom-world/2026",
+            "date": "2026"
+          },
+          {
+            "name": "Niger — Charter of Refoundation and dissolution ordinance",
+            "url": "https://droit-et-politique-en-afrique.info/wp-content/uploads/2025/04/Niger-Charte-de-la-refondation-du-26-mars-2025-Ordonnance-de-dissolution-des-partis-politiques-du-26-mars-2025.pdf",
+            "date": "2025-03"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [],
+      "research_status": "researched_initial"
     },
     "MLI": {
       "country_name_fa": "مالی",
       "country_name_en": "Mali",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "military_transition_parties_dissolved",
+      "government_model": "حکومت انتقالی نظامی پس از کودتاهای ۲۰۲۰ و ۲۰۲۱. احزاب و سازمان‌های سیاسی در مه ۲۰۲۵ منحل شدند؛ شورای ملی انتقالی ۱۴۷ نفره نهاد قانون‌گذاری انتصابی است.",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "mli_junta",
+          "name_fa": "رهبری نظامی انتقالی",
+          "name_en": "Military Transition Leadership",
+          "entity_type": "military_governing_network",
+          "political_role": "آسیمی گویتا رئیس دوره انتقالی و مرکز قدرت اجرایی است.",
+          "policy_positions": {
+            "domestic": "حاکمیت و بازسازی دولت با تمرکز قدرت در رهبری انتقالی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "mli_cnt",
+          "name_fa": "شورای ملی انتقالی",
+          "name_en": "National Transitional Council (CNT)",
+          "entity_type": "appointed_transition_body",
+          "political_role": "نهاد قانون‌گذاری انتقالی ۱۴۷ نفره؛ اعضا منصوب می‌شوند.",
+          "policy_positions": {
+            "domestic": "بررسی و تصویب مقررات دوره انتقالی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "mli_civic",
+          "name_fa": "شبکه‌های مدنی و صنفی",
+          "name_en": "Civil Society and Trade Union Networks",
+          "entity_type": "civic_network",
+          "political_role": "نمایندگان صنفی، جامعه مدنی، زنان و جوانان در ساختارهای انتقالی.",
+          "policy_positions": {
+            "domestic": "مطالبات معیشتی، خدمات عمومی و پاسخ‌گویی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mli_former",
+          "name_fa": "شبکه‌های احزاب منحل‌شده",
+          "name_en": "Dissolved political-party networks",
+          "entity_type": "informal_opposition_network",
+          "political_role": "احزاب سابق پس از فرمان ۲۰۲۵ دیگر احزاب قانونی فعال نیستند.",
+          "policy_positions": {
+            "domestic": "طیفی از بازگشت به رقابت انتخاباتی تا مخالفت با تداوم حکومت نظامی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mli_pres",
+          "name_fa": "ریاست دوره انتقالی",
+          "name_en": "Transition Presidency",
+          "role": "آسیمی گویتا رئیس دوره انتقالی و رئیس دولت است؛ منشور اصلاح‌شده ۲۰۲۵ دوره پنج‌ساله قابل تمدید را پیش‌بینی کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mli_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "ژنرال عبدالله مایگا نخست‌وزیر است.",
+          "confidence": "high"
+        },
+        {
+          "id": "mli_cnt_power",
+          "name_fa": "شورای ملی انتقالی",
+          "name_en": "National Transitional Council",
+          "role": "نهاد قانون‌گذاری ۱۴۷ نفره با اعضای منصوب از گروه‌های نظامی، مدنی، صنفی و اجتماعی.",
+          "confidence": "high"
+        },
+        {
+          "id": "mli_security",
+          "name_fa": "نهادهای نظامی و امنیتی",
+          "name_en": "Military and Security Institutions",
+          "role": "نیروهای مسلح و حلقه نظامی نزدیک به رهبری انتقالی از مراکز اصلی قدرت هستند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "transition_president": "Assimi Goita",
+        "prime_minister": "Abdoulaye Maiga",
+        "political_status": "military_transition_no_legal_parties",
+        "transition_charter_revision_date": "2025-07"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "transition_duration",
+          "civilian_political_space",
+          "security_and_sovereignty",
+          "public_services",
+          "regional_cooperation",
+          "election_timetable"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "BTI 2026 — Mali Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/MLI",
+            "date": "2026"
+          },
+          {
+            "name": "Government of Mali — Official Journal, party dissolution decree",
+            "url": "https://sgg-mali.ml/JO/2025/mali-jo-2025-04-sp.pdf",
+            "date": "2025-05"
+          },
+          {
+            "name": "Government of Mali — Revised Transition Charter",
+            "url": "https://sgg-mali.ml/JO/2025/mali-jo-2025-21.pdf",
+            "date": "2025-07"
+          },
+          {
+            "name": "CIA World Leaders — Mali",
+            "url": "https://www.cia.gov/resources/world-leaders/foreign-governments/mali",
+            "date": "2026-08"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [],
+      "research_status": "researched_initial"
     },
     "MRT": {
       "country_name_fa": "موریتانی",
       "country_name_en": "Mauritania",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_republic_multiparty_dominant_party",
+      "government_model": "جمهوری اسلامی با نظام ریاستی و مجلس ملی تک‌مجلسی. حزب انصاف (El Insaf) حزب حاکم و دارای اکثریت بزرگ است؛ احزاب مخالف از جمله توصل حضور پارلمانی دارند، اما میدان رقابت نامتوازن است.",
+      "parties": [
+        {
+          "id": "mrt_insaf",
+          "name_fa": "حزب انصاف",
+          "name_en": "El Insaf",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و نزدیک به رئیس‌جمهور؛ ۱۰۷ کرسی از ۱۷۶ کرسی مجلس در انتخابات ۲۰۲۳.",
+          "ideological_profile": "میانه‌رو، دولت‌گرا و ائتلافی.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_tewassoul",
+          "name_fa": "تواصل – تجمع ملی برای اصلاح و توسعه",
+          "name_en": "National Rally for Reform and Development (Tewassoul)",
+          "entity_type": "party",
+          "political_role": "مهم‌ترین حزب اپوزیسیون؛ ۱۱ کرسی در انتخابات ۲۰۲۳.",
+          "ideological_profile": "اسلام‌گرایی انتخاباتی و دموکراسی‌خواهی محافظه‌کار.",
+          "legal_status": "registered",
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_sawab",
+          "name_fa": "صواب",
+          "name_en": "Sawab Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک هم‌پیمان با جریان RAG در انتخابات.",
+          "ideological_profile": "ملی‌گرایی و اصلاحات اجتماعی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "mrt_rfd",
+          "name_fa": "تجمع نیروهای دموکراتیک",
+          "name_en": "Rally of Democratic Forces (RFD)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون تاریخی با نفوذ انتخاباتی رو به کاهش.",
+          "ideological_profile": "دموکراسی‌خواهی و اصلاحات نهادی.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "mrt_udp",
+          "name_fa": "اتحادیه برای دموکراسی و پیشرفت",
+          "name_en": "Union for Democracy and Progress (UDP)",
+          "entity_type": "party",
+          "political_role": "حزب همسو با ائتلاف حامی رئیس‌جمهور.",
+          "ideological_profile": "میانه‌رو و عمل‌گرا.",
+          "legal_status": "registered",
+          "confidence": "medium"
+        },
+        {
+          "id": "mrt_rag",
+          "name_fa": "بازآفرینی برای اقدام جامع",
+          "name_en": "Refoundation for Comprehensive Action (RAG)",
+          "entity_type": "political_movement",
+          "political_role": "جریان سیاسی-مدنی بیرام الداه اعبید؛ حزب رسمی به رسمیت شناخته نشده و از مسیر نامزد مستقل یا ائتلاف با صواب عمل کرده است.",
+          "ideological_profile": "مبارزه با برده‌داری و تبعیض و اصلاحات حقوق شهروندی.",
+          "legal_status": "unrecognized_movement",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mrt_elite",
+          "name_fa": "ائتلاف نخبگان حاکم و ریاست‌جمهوری",
+          "name_en": "Presidential and governing elite coalition",
+          "entity_type": "governing_elite_network",
+          "political_role": "شبکه سیاسی، اداری، نظامی و اقتصادی نزدیک به ریاست‌جمهوری.",
+          "policy_positions": {
+            "domestic": "حفظ ثبات سیاسی و تداوم ائتلاف حاکم."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_islamist",
+          "name_fa": "جریان اسلام‌گرای اپوزیسیون",
+          "name_en": "Islamist opposition current",
+          "entity_type": "cross_party_current",
+          "political_role": "جریان‌های انتخاباتی نزدیک به Tewassoul.",
+          "policy_positions": {
+            "domestic": "مشارکت انتخاباتی و نقش‌آفرینی ارزش‌های اسلامی در سیاست عمومی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_anti",
+          "name_fa": "جریان ضدبرده‌داری و برابری شهروندی",
+          "name_en": "Anti-slavery and civic equality movement",
+          "entity_type": "civil_society_political_current",
+          "political_role": "جریان مدنی و سیاسی مرتبط با RAG.",
+          "policy_positions": {
+            "domestic": "مقابله با برده‌داری، تبعیض ساختاری و نابرابری حقوقی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mrt_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "محمد ولد غزوانی پس از پیروزی در انتخابات ۲۰۲۴ دوره دوم را آغاز کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_gov",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "نخست‌وزیر و کابینه از سوی رئیس‌جمهور منصوب می‌شوند؛ تکنوکرات‌ها در دولت نقش پررنگ دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_parl",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۱۷۶ نفره؛ El Insaf دارای ۱۰۷ و Tewassoul دارای ۱۱ کرسی در انتخابات ۲۰۲۳ بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "mrt_military",
+          "name_fa": "شبکه‌های نظامی و امنیتی",
+          "name_en": "Military and Security Networks",
+          "role": "نخبگان نظامی در ساختار سیاسی و اقتصادی نفوذ دارند.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "president": "Mohamed Ould Cheikh El Ghazouani",
+        "prime_minister": "Mokhtar Ould Djay",
+        "ruling_party": "El Insaf",
+        "presidential_election_date": "2024-06-29",
+        "parliamentary_election_date": "2023-05-13",
+        "parliamentary_result_2023": {
+          "El_Insaf": 107,
+          "Tewassoul": 11,
+          "other_pro_government_parties": 42
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "presidential_coalition_stability",
+          "religion_and_public_life",
+          "anti_slavery_policy",
+          "ethnic_and_social_equality",
+          "fisheries_and_mining",
+          "sahel_security"
+        ],
+        "rule": "وضعیت آغازین بر اساس snapshot سناریو در ۵ نوامبر ۲۰۲۶ است؛ ساختارهای انتصابی، ائتلاف‌ها و احزاب ثبت‌شده از یکدیگر تفکیک شوند و برای بازیگران فاقد کرسی یا وضعیت رسمی، عدد یا عنوان ساختگی ایجاد نشود."
+      },
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "BTI 2026 — Mauritania Country Report",
+            "url": "https://bti-project.org/en/reports/country-report/MRT",
+            "date": "2026"
+          },
+          {
+            "name": "IPU Parline — Mauritania 2023 election",
+            "url": "https://data.ipu.org/parliament/MR/MR-LC01/election/MR-LC01-E20230513/",
+            "date": "2023-05"
+          },
+          {
+            "name": "Mauritania political framework — Mauritius Trade Easy",
+            "url": "https://www.mauritiustrade.mu/en/market-intelligence/explore-markets/mauritania/economic-and-political-outline",
+            "date": "2026"
+          }
+        ],
+        "notes": "اطلاعات پس از تاریخ snapshot به وضعیت آغازین بازی تعمیم داده نشده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "mrt_insaf_group",
+          "name_en": "El Insaf Parliamentary Group",
+          "party_id": "mrt_insaf"
+        },
+        {
+          "id": "mrt_tewassoul_group",
+          "name_en": "Tewassoul Parliamentary Group",
+          "party_id": "mrt_tewassoul"
+        }
+      ],
+      "research_status": "researched_initial"
     },
     "BFA": {
       "country_name_fa": "بورکینافاسو",
