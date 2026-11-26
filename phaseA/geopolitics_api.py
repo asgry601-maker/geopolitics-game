@@ -209,15 +209,14 @@ def api_country(s, name):
     ars = s.get("arsenal", {}).get(name, {})
     pol = (s.get("politics") or {}).get(name) or {}
     friends, enemies = [], []
-    if name != P:
-        pairs = []
-        for o in W:
-            if o == name:
-                continue
-            pairs.append((o, G.get_rel(s, name, o)))
-        pairs.sort(key=lambda x: -x[1])
-        friends = [(o, r) for o, r in pairs if r > 0][:5]
-        enemies = sorted(((o, r) for o, r in pairs if r < 0), key=lambda x: x[1])[:5]
+    pairs = []
+    for o in W:
+        if o == name:
+            continue
+        pairs.append((o, G.get_rel(s, name, o)))
+    pairs.sort(key=lambda x: -x[1])
+    friends = [(o, r) for o, r in pairs if r > 0][:5]
+    enemies = sorted(((o, r) for o, r in pairs if r < 0), key=lambda x: x[1])[:5]
     prx_mine = [px.get("name") or G.proxy_label(px["sponsor"], px["host"])
                 for px in s.get("proxies", []) if px["host"] == name]
     # اقتصاد: فقط شاخص‌ها و فرمول‌های واقعاً موجود در موتور؛ بدون جعل GDP یا بودجه تفصیلی.
