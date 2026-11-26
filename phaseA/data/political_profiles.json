@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.16.0",
+  "schema_version": "1.17.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 138,
-    "pending_countries": 36,
+    "researched_countries": 145,
+    "pending_countries": 29,
     "last_batch": [
-      "MUS",
-      "LSO",
-      "SWZ",
-      "GMB",
-      "GNB",
-      "GNQ",
-      "CPV"
+      "CHL",
+      "COL",
+      "PER",
+      "VEN",
+      "ECU",
+      "BOL",
+      "PRY"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.",
@@ -25674,133 +25674,1565 @@
     "CHL": {
       "country_name_fa": "شیلی",
       "country_name_en": "Chile",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ خوزه آنتونیو کاست از ۱۱ مارس ۲۰۲۶ رئیس‌جمهور است. ائتلاف‌های راست‌گرا و میانه‌راست از او حمایت می‌کنند، اما در هر دو مجلس به اکثریت مطلق مشترک دست نیافته‌اند.",
+      "parties": [
+        {
+          "id": "chl_pr",
+          "name_fa": "حزب جمهوری‌خواه",
+          "name_en": "Republican Party (Partido Republicano)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و نیروی محوری ائتلاف راست‌گرای Cambio por Chile.",
+          "ideological_profile": "محافظه‌کاری ملی، نظم عمومی و اقتصاد بازار.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_pnl",
+          "name_fa": "حزب ملی آزادی‌خواه",
+          "name_en": "National Libertarian Party (Partido Nacional Libertario)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف Cambio por Chile.",
+          "ideological_profile": "لیبرتارین راست‌گرا و محافظه‌کار.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_psc",
+          "name_fa": "حزب سوسیال‌مسیحی",
+          "name_en": "Social Christian Party (Partido Social Cristiano)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف Cambio por Chile.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و مسیحی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_udi",
+          "name_fa": "اتحادیه دموکرات مستقل",
+          "name_en": "Independent Democratic Union (UDI)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف میانه‌راست Chile Grande y Unido.",
+          "ideological_profile": "محافظه‌کاری و راست میانه.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_rn",
+          "name_fa": "تجدیدنظر ملی",
+          "name_en": "National Renewal (Renovación Nacional, RN)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف Chile Grande y Unido.",
+          "ideological_profile": "محافظه‌کاری میانه‌رو و راست میانه.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_evopoli",
+          "name_fa": "تکامل سیاسی",
+          "name_en": "Political Evolution (Evópoli)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف Chile Grande y Unido.",
+          "ideological_profile": "لیبرالیسم اقتصادی و محافظه‌کاری میانه‌رو.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_dem",
+          "name_fa": "دموکرات‌ها",
+          "name_en": "Democrats (Demócratas)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف Chile Grande y Unido.",
+          "ideological_profile": "میانه‌گرایی و اصلاح‌طلبی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_fa",
+          "name_fa": "جبهه گسترده",
+          "name_en": "Broad Front (Frente Amplio)",
+          "entity_type": "party",
+          "political_role": "بخش مهم اپوزیسیون چپ؛ بخشی از Unidad por Chile.",
+          "ideological_profile": "چپ نو، ترقی‌خواه و اصلاحات اجتماعی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_pc",
+          "name_fa": "حزب کمونیست شیلی",
+          "name_en": "Communist Party of Chile (PCCh)",
+          "entity_type": "party",
+          "political_role": "عضو Unidad por Chile و اپوزیسیون.",
+          "ideological_profile": "کمونیسم دموکراتیک و چپ.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_ps",
+          "name_fa": "حزب سوسیالیست شیلی",
+          "name_en": "Socialist Party of Chile (PS)",
+          "entity_type": "party",
+          "political_role": "عضو Unidad por Chile.",
+          "ideological_profile": "سوسیال‌دموکراسی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_ppd",
+          "name_fa": "حزب برای دموکراسی",
+          "name_en": "Party for Democracy (PPD)",
+          "entity_type": "party",
+          "political_role": "عضو Unidad por Chile.",
+          "ideological_profile": "سوسیال‌دموکراسی و لیبرالیسم اجتماعی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_pdc",
+          "name_fa": "حزب دموکرات مسیحی",
+          "name_en": "Christian Democratic Party (PDC)",
+          "entity_type": "party",
+          "political_role": "عضو Unidad por Chile.",
+          "ideological_profile": "دموکراسی مسیحی و میانه‌گرایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_pdg",
+          "name_fa": "حزب مردم",
+          "name_en": "People's Party (Partido de la Gente, PDG)",
+          "entity_type": "party",
+          "political_role": "نیروی مستقل میانه‌گرا با فراکسیون پارلمانی قابل توجه.",
+          "ideological_profile": "پوپولیسم میانه و ضدنخبگانی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_verdes",
+          "name_fa": "سبزها، منطقه‌گرایان و انسان‌گرایان",
+          "name_en": "Greens, Regionalists and Humanists (FRVS)",
+          "entity_type": "party",
+          "political_role": "ائتلاف/فهرست چپ و منطقه‌گرا با نمایندگی پارلمانی.",
+          "ideological_profile": "محیط زیست، تمرکززدایی و سیاست منطقه‌ای.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "chl_cambio",
+          "name_fa": "ائتلاف تغییر برای شیلی",
+          "name_en": "Cambio por Chile",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "حمایت از دولت کاست؛ سیاست امنیتی و محافظه‌کاری اقتصادی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "chl_grande",
+          "name_fa": "شیلی بزرگ و متحد",
+          "name_en": "Chile Grande y Unido",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ائتلاف میانه‌راست؛ حمایت از دولت با احزاب مستقل و اولویت‌های متفاوت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "chl_unidad",
+          "name_fa": "اتحاد برای شیلی",
+          "name_en": "Unidad por Chile",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "اپوزیسیون چپ و میانه‌چپ؛ دفاع از برنامه‌های اجتماعی دولت پیشین."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "chl_pdg",
+          "name_fa": "فراکسیون حزب مردم",
+          "name_en": "Partido de la Gente parliamentary bloc",
+          "entity_type": "parliamentary_group",
+          "policy_positions": {
+            "domestic": "چانه‌زنی موضوع‌محور و انتقاد از احزاب سنتی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "chl_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "خوزه آنتونیو کاست رئیس دولت و قوه مجریه.",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_congress",
+          "name_fa": "کنگره ملی",
+          "name_en": "National Congress",
+          "role": "مجلس نمایندگان ۱۵۵ کرسی و سنا ۵۰ کرسی؛ چند ائتلاف رقیب.",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_courts",
+          "name_fa": "قوه قضائیه و دادگاه قانون اساسی",
+          "name_en": "Judiciary and Constitutional Court",
+          "role": "نهادهای مستقل قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "chl_municipal",
+          "name_fa": "حکومت‌های منطقه‌ای و شهرداری‌ها",
+          "name_en": "Regional and municipal governments",
+          "role": "بازیگران مهم سیاست منطقه‌ای و خدمات عمومی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "José Antonio Kast",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Partido Republicano",
+        "supporting_coalitions": [
+          "Cambio por Chile",
+          "Chile Grande y Unido"
+        ],
+        "parliamentary_context": "پس از انتخابات 16 نوامبر 2025: مجلس نمایندگان Cambio por Chile 42، Chile Grande y Unido 34؛ Unidad por Chile 61؛ PDG 14؛ سبزها/منطقه‌گرایان/انسان‌گرایان 3 و یک مستقل. سنا: Unidad por Chile 20، Chile Grande y Unido 18، Cambio por Chile 7، سبزها 3 و دو مستقل."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_security",
+          "migration",
+          "pensions",
+          "taxes",
+          "economic_growth",
+          "constitutional_institutions"
+        ],
+        "rule": "ائتلاف‌های انتخاباتی را از احزاب عضو جدا نگه دار؛ حمایت دو ائتلاف راست از رئیس‌جمهور به معنای یک حزب یا اکثریت خودکار نیست."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CRS Chile in Brief",
+            "url": "https://www.everycrsreport.com/reports/R49328.html",
+            "date": "2026-09"
+          },
+          {
+            "name": "Chile Ministry of Finance offering memorandum",
+            "url": "https://cdn.hacienda.cl/asset/hacienda_prod/attachment/bc38ae3eab1ff58675ae1c674e7bb281242842641008965da2654caf10b3c310/1769805458",
+            "date": "2026"
+          },
+          {
+            "name": "CRS report on Chile",
+            "url": "https://www.everycrsreport.com/files/2026-09-01_R49328_db7859ee776e70353d5be1060f7b50f84d363a0f.pdf",
+            "date": "2026-09"
+          }
+        ],
+        "notes": "انتخابات پارلمانی ۲۰۲۵ و آغاز ریاست‌جمهوری کاست در مارس ۲۰۲۶ در وضعیت آغاز بازی لحاظ شده‌اند."
       },
       "parliamentary_groups": []
     },
     "COL": {
       "country_name_fa": "کلمبیا",
       "country_name_en": "Colombia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ در ۵ نوامبر ۲۰۲۶، آبلاردو د لا اسپرییا رئیس‌جمهور است و از ۷ اوت جانشین گوستاوو پترو شده. او به‌عنوان سیاستمدار مستقل/بیرون از احزاب سنتی به قدرت رسید؛ کنگره جدید پس از انتخابات مارس ۲۰۲۶ چندپاره است.",
+      "parties": [
+        {
+          "id": "col_ph",
+          "name_fa": "پیمان تاریخی",
+          "name_en": "Historic Pact (Pacto Histórico)",
+          "entity_type": "party",
+          "political_role": "ائتلاف چپ و حزب/جبهه اصلی دولت پترو؛ در انتخابات کنگره ۲۰۲۶ بزرگ‌ترین نیروی سنا شد و اکنون اپوزیسیون است.",
+          "ideological_profile": "چپ، ترقی‌خواه و اصلاحات اجتماعی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_cd",
+          "name_fa": "مرکز دموکراتیک",
+          "name_en": "Democratic Center (Centro Democrático, CD)",
+          "entity_type": "party",
+          "political_role": "حزب راست‌گرا و اپوزیسیون؛ از احزاب بزرگ کنگره و نیروی مهم انتخاباتی.",
+          "ideological_profile": "محافظه‌کاری، امنیت‌محوری و اقتصاد بازار.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_liberal",
+          "name_fa": "حزب لیبرال کلمبیا",
+          "name_en": "Colombian Liberal Party (Partido Liberal Colombiano)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی میانه‌رو با شبکه پارلمانی و منطقه‌ای.",
+          "ideological_profile": "لیبرالیسم و سوسیال‌لیبرالیسم.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_con",
+          "name_fa": "حزب محافظه‌کار کلمبیا",
+          "name_en": "Colombian Conservative Party (Partido Conservador Colombiano)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی راست میانه و محافظه‌کار.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و مسیحی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_cambio",
+          "name_fa": "تغییر رادیکال",
+          "name_en": "Radical Change (Cambio Radical)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌راست با حضور پارلمانی.",
+          "ideological_profile": "لیبرالیسم اقتصادی و تمرکززدایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_u",
+          "name_fa": "حزب اتحاد ملی",
+          "name_en": "Party of the U (Partido de la U)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو و ائتلاف‌محور؛ مواضع آن در کنگره متغیر است.",
+          "ideological_profile": "عمل‌گرایی میانه‌گرا.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_verde",
+          "name_fa": "اتحاد سبز",
+          "name_en": "Green Alliance (Alianza Verde)",
+          "entity_type": "party",
+          "political_role": "حزب/ائتلاف میانه و سبز با گرایش‌های داخلی متنوع.",
+          "ideological_profile": "محیط زیست، اصلاحات نهادی و میانه‌گرایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_comunes",
+          "name_fa": "کومونس",
+          "name_en": "Common Alternative Revolutionary Force (Comunes)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با منشأ توافق صلح ۲۰۱۶؛ وزن انتخاباتی محدود.",
+          "ideological_profile": "چپ و اجرای توافق صلح.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "col_maiz",
+          "name_fa": "جنبش مستقل و اجتماعی بومی",
+          "name_en": "Indigenous and Social Movements",
+          "entity_type": "party",
+          "political_role": "فهرست‌ها و احزاب بومی/منطقه‌ای؛ متنوع و نه یک حزب واحد.",
+          "ideological_profile": "حقوق بومیان، خودمختاری و مسائل منطقه‌ای.",
+          "legal_status": "registered_regional_movements",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "col_exec",
+          "name_fa": "دولت د لا اسپرییا",
+          "name_en": "De la Espriella administration",
+          "entity_type": "executive_network",
+          "policy_positions": {
+            "domestic": "امنیت، نظم عمومی، مبارزه با فساد و بازتنظیم روابط خارجی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "col_ph",
+          "name_fa": "بلوک تاریخی پیمان",
+          "name_en": "Historic Pact bloc",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "دفاع از اصلاحات اجتماعی دولت پترو و نظارت بر دولت جدید."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "col_right",
+          "name_fa": "احزاب راست و محافظه‌کار",
+          "name_en": "Right and conservative parties",
+          "entity_type": "cross_party_network",
+          "policy_positions": {
+            "domestic": "امنیت، سرمایه‌گذاری و انتقاد از سیاست‌های دولت پترو؛ در مورد دولت جدید هم‌نظر کامل نیستند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "col_regional",
+          "name_fa": "شبکه‌های منطقه‌ای و بومی",
+          "name_en": "Regional and Indigenous networks",
+          "entity_type": "regional_network",
+          "policy_positions": {
+            "domestic": "تمرکززدایی، حقوق سرزمینی و توزیع منابع."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "col_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "آبلاردو د لا اسپرییا از ۷ اوت ۲۰۲۶ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "col_congress",
+          "name_fa": "کنگره",
+          "name_en": "Congress",
+          "role": "سنا ۱۰۳ کرسی و مجلس نمایندگان؛ ائتلاف‌سازی برای تصویب قوانین ضروری است.",
+          "confidence": "high"
+        },
+        {
+          "id": "col_courts",
+          "name_fa": "دادگاه قانون اساسی و قوه قضائیه",
+          "name_en": "Constitutional Court and Judiciary",
+          "role": "نهادهای مستقل و دارای نقش مهم در نظارت قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "col_gov",
+          "name_fa": "فرمانداری‌ها و شهرداری‌ها",
+          "name_en": "Governorships and Mayors",
+          "role": "قدرت محلی و منطقه‌ای قابل توجه.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Abelardo de la Espriella",
+        "government_type": "presidential republic",
+        "president_electoral_status": "elected in June 2026 runoff; inaugurated 2026-08-07",
+        "party_affiliation": "independent political outsider",
+        "previous_president": "Gustavo Petro",
+        "parliamentary_context": "انتخابات کنگره مارس ۲۰۲۶: پیمان تاریخی بزرگ‌ترین نیروی سنا با حدود یک‌چهارم کرسی‌ها؛ مرکز دموکراتیک ۱۷ کرسی سنا و بیشترین رأی مجلس نمایندگان را کسب کرد. اکثریت واحدی وجود ندارد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "peace_accord",
+          "public_security",
+          "rural_development",
+          "taxes",
+          "health_and_pensions",
+          "relations_with_US"
+        ],
+        "rule": "رئیس‌جمهور را به حزب ساختگی منتسب نکن؛ احزاب کنگره را مستقل و ائتلاف‌های رأی‌گیری را موضوع‌محور نگه دار."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CRS Colombia 2026 Elections",
+            "url": "https://www.everycrsreport.com/reports/IN12689.html",
+            "date": "2026-09"
+          },
+          {
+            "name": "Associated Press congressional election report",
+            "url": "https://apnews.com/article/30a88d53cca0a1043f8dc489ccee16cd",
+            "date": "2026-03"
+          }
+        ],
+        "notes": "دولت در snapshot بازی دولت آبلاردو د لا اسپرییا است؛ پترو رئیس‌جمهور سابق است. داده‌های انتخابات کنگره برای ساختار چندپاره استفاده شده‌اند."
       },
       "parliamentary_groups": []
     },
     "PER": {
       "country_name_fa": "پرو",
       "country_name_en": "Peru",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic_with_bicameral_congress",
+      "government_model": "جمهوری ریاستی چندحزبی با کنگره دومجلسی. کیکو فوجیموری در دور دوم ۷ ژوئن ۲۰۲۶ پیروز و در ۲۸ ژوئیه رئیس‌جمهور شد؛ نیروی حزب او بزرگ‌ترین فراکسیون هر دو مجلس است اما اکثریت مطلق ندارد.",
+      "parties": [
+        {
+          "id": "per_fp",
+          "name_fa": "نیروی مردمی",
+          "name_en": "Popular Force (Fuerza Popular, FP)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور کیکو فوجیموری و بزرگ‌ترین حزب هر دو مجلس.",
+          "ideological_profile": "راست‌گرایی محافظه‌کار و فوجیموریسم.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_jp",
+          "name_fa": "با هم برای پرو",
+          "name_en": "Together for Peru (Juntos por el Perú, JP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ؛ دومین حزب بزرگ هر دو مجلس.",
+          "ideological_profile": "چپ، ترقی‌خواه و نمایندگی مناطق محروم.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_alianza",
+          "name_fa": "ائتلاف برای پیشرفت",
+          "name_en": "Alliance for Progress (Alianza para el Progreso, APP)",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی مهم و ائتلاف‌ساز.",
+          "ideological_profile": "میانه‌راست و عمل‌گرایی منطقه‌ای.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_rp",
+          "name_fa": "تجدید مردمی",
+          "name_en": "Popular Renewal (Renovación Popular, RP)",
+          "entity_type": "party",
+          "political_role": "حزب راست‌گرای دارای نمایندگی پارلمانی.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و بازار آزاد.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_accion",
+          "name_fa": "اقدام مردمی",
+          "name_en": "Popular Action (Acción Popular, AP)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی با حضور پارلمانی.",
+          "ideological_profile": "میانه‌گرایی و جمهوری‌خواهی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_avanza",
+          "name_fa": "کشور پیشرو",
+          "name_en": "Advance Country (Avanza País)",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی راست میانه.",
+          "ideological_profile": "لیبرالیسم اقتصادی و محافظه‌کاری.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_podemos",
+          "name_fa": "می‌توانیم پرو",
+          "name_en": "We Can Peru (Podemos Perú)",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی و ائتلاف‌پذیر.",
+          "ideological_profile": "پوپولیسم میانه و سیاست‌های رفاهی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "per_bicent",
+          "name_fa": "کشور دوصدساله",
+          "name_en": "Bicentennial Country (País para Todos / Bicentennial lists)",
+          "entity_type": "party",
+          "political_role": "گروه‌های کوچک و فهرست‌های مستقل؛ در صورت ابهام به‌صورت بلوک مستقل ثبت شود.",
+          "ideological_profile": "میانه‌گرایی و سیاست‌های محلی.",
+          "legal_status": "parliamentary_group_or_minor_party",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "per_fpbloc",
+          "name_fa": "بلوک فوجیموریست",
+          "name_en": "Fujimorist bloc",
+          "entity_type": "party_network",
+          "policy_positions": {
+            "domestic": "امنیت عمومی، کنترل جرم و ثبات دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "per_left",
+          "name_fa": "اپوزیسیون چپ",
+          "name_en": "Left opposition",
+          "entity_type": "cross_party_network",
+          "policy_positions": {
+            "domestic": "اعتراض به سیاست‌های امنیتی و دفاع از حقوق اجتماعی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "per_regional",
+          "name_fa": "احزاب و نمایندگان منطقه‌ای",
+          "name_en": "Regional parties and legislators",
+          "entity_type": "regional_network",
+          "policy_positions": {
+            "domestic": "زیرساخت، خدمات عمومی و توزیع منابع."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "per_business",
+          "name_fa": "شبکه‌های اقتصادی و تجاری",
+          "name_en": "Business and trade associations",
+          "entity_type": "economic_network",
+          "policy_positions": {
+            "domestic": "ثبات مالی، سرمایه‌گذاری و سیاست‌های بازار."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "per_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "کیکو فوجیموری از ۲۸ ژوئیه ۲۰۲۶ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "per_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "۶۰ کرسی؛ نیروی مردمی با ۲۲ کرسی بزرگ‌ترین حزب است.",
+          "confidence": "high"
+        },
+        {
+          "id": "per_chamber",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Deputies",
+          "role": "۱۳۰ کرسی؛ نیروی مردمی ۴۱ و باهم برای پرو ۳۲ کرسی دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "per_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "نخست‌وزیر منصوب رئیس‌جمهور؛ کابینه نیازمند مدیریت رابطه با کنگره است.",
+          "confidence": "high"
+        },
+        {
+          "id": "per_courts",
+          "name_fa": "دادگاه قانون اساسی و قوه قضائیه",
+          "name_en": "Constitutional Court and Judiciary",
+          "role": "نهادهای نظارتی و قضایی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Keiko Fujimori",
+        "prime_minister": "Luis Enrique Arroyo Sánchez",
+        "government_type": "presidential republic with bicameral Congress",
+        "governing_party": "Fuerza Popular",
+        "election_runoff_date": "2026-06-07",
+        "inauguration_date": "2026-07-28",
+        "parliamentary_composition": {
+          "chamber_of_deputies": {
+            "total": 130,
+            "Fuerza_Popular": 41,
+            "Juntos_por_el_Peru": 32
+          },
+          "senate": {
+            "total": 60,
+            "Fuerza_Popular": 22,
+            "Juntos_por_el_Peru": 14
+          }
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "crime_and_security",
+          "anti_corruption",
+          "congressional_confidence",
+          "rural_services",
+          "economic_stability",
+          "protests_and_human_rights"
+        ],
+        "rule": "کنگره دومجلسی جدید را لحاظ کن؛ حزب فوجیموری بزرگ‌ترین حزب است نه اکثریت مطلق. تغییرات کابینه و رأی اعتماد را شبیه‌سازی کن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Peru Chamber of Deputies 2026",
+            "url": "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20260412/",
+            "date": "2026"
+          },
+          {
+            "name": "IPU Peru Senate 2026",
+            "url": "https://data.ipu.org/parliament/PE/PE-UC01/election/PE-UC01-E20260412/",
+            "date": "2026"
+          },
+          {
+            "name": "Associated Press — inauguration",
+            "url": "https://apnews.com/article/84d08998b1629c95f0383d7b5a7a7f6b",
+            "date": "2026-07"
+          }
+        ],
+        "notes": "نتایج دور دوم و دولت جدید تا تاریخ snapshot لحاظ شده‌اند."
       },
       "parliamentary_groups": []
     },
     "VEN": {
       "country_name_fa": "ونزوئلا",
       "country_name_en": "Venezuela",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "authoritarian_dominant_party_presidential_transition",
+      "government_model": "نظام ریاستی اقتدارگرا و حزب مسلط در وضعیت انتقال پس از برکناری نیکلاس مادورو در ۳ ژانویه ۲۰۲۶. دلسی رودریگز رئیس‌جمهور موقت است؛ حزب حاکم PSUV و متحدانش ساختار حکومتی و مجلس را کنترل می‌کنند. مشروعیت انتخابات ۲۰۲۴ و محدودیت رقابت همچنان مناقشه‌برانگیز است.",
+      "parties": [
+        {
+          "id": "ven_psuv",
+          "name_fa": "حزب سوسیالیست متحد ونزوئلا",
+          "name_en": "United Socialist Party of Venezuela (PSUV)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ دلسی رودریگز از رهبران آن و رئیس‌جمهور موقت است.",
+          "ideological_profile": "چاویسمو، سوسیالیسم بولیواری و ملی‌گرایی دولتی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_pud",
+          "name_fa": "سکوی وحدت دموکراتیک",
+          "name_en": "Democratic Unitary Platform (PUD)",
+          "entity_type": "party",
+          "political_role": "ائتلاف اصلی اپوزیسیون؛ پیروزی ادعایی ادموندو گونسالس در انتخابات ۲۰۲۴ را نمایندگی می‌کند.",
+          "ideological_profile": "ائتلاف گسترده دموکراسی‌خواه؛ طیف‌های میانه تا راست.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_ad",
+          "name_fa": "اقدام دموکراتیک",
+          "name_en": "Democratic Action (Acción Democrática, AD)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی؛ بخشی از جناح‌های آن در ساختار اپوزیسیون و برخی رقابت‌های محدود حضور دارند.",
+          "ideological_profile": "سوسیال‌دموکراسی تاریخی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_copei",
+          "name_fa": "کمیته سازمان سیاسی مستقل انتخاباتی",
+          "name_en": "COPEI",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی دموکرات‌مسیحی؛ نفوذ محدودتر از دوره پیشین.",
+          "ideological_profile": "دموکراسی مسیحی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_ppt",
+          "name_fa": "سرزمین پدری برای همه",
+          "name_en": "Patria Para Todos (PPT)",
+          "entity_type": "party",
+          "political_role": "حزب متحد و هم‌پیمان دولت چاویستی.",
+          "ideological_profile": "چپ چاویستی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_pc",
+          "name_fa": "حزب کمونیست ونزوئلا",
+          "name_en": "Communist Party of Venezuela (PCV)",
+          "entity_type": "party",
+          "political_role": "حزب چپ تاریخی که در سال‌های اخیر از دولت مادورو فاصله گرفته و اپوزیسیون چپ محسوب می‌شود.",
+          "ideological_profile": "کمونیسم؛ منتقد دولت مادورو از موضع چپ.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_vp",
+          "name_fa": "اراده مردمی",
+          "name_en": "Popular Will (Voluntad Popular, VP)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون؛ بخشی از رهبری آن در تبعید یا محدودیت سیاسی است.",
+          "ideological_profile": "لیبرال‌دموکراتیک و ضدچاویستی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_primero",
+          "name_fa": "اول عدالت",
+          "name_en": "Justice First (Primero Justicia, PJ)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی اپوزیسیون و عضو PUD.",
+          "ideological_profile": "میانه‌راست و دموکراسی‌خواه.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_unt",
+          "name_fa": "یک زمان نو",
+          "name_en": "A New Era (Un Nuevo Tiempo, UNT)",
+          "entity_type": "party",
+          "political_role": "حزب اپوزیسیون عضو ائتلاف وحدت.",
+          "ideological_profile": "میانه‌رو و منطقه‌گرا.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ven_exec",
+          "name_fa": "دولت موقت رودریگز",
+          "name_en": "Rodríguez interim administration",
+          "entity_type": "executive_network",
+          "policy_positions": {
+            "domestic": "ثبات حکومتی، مدیریت نفت و مذاکره با بازیگران خارجی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ven_psuv",
+          "name_fa": "ساختار حزب حاکم",
+          "name_en": "PSUV ruling-party apparatus",
+          "entity_type": "party_network",
+          "policy_positions": {
+            "domestic": "حفظ تداوم نظام چاویستی و کنترل نهادهای دولتی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ven_security",
+          "name_fa": "نهادهای امنیتی و نظامی",
+          "name_en": "Security and military establishment",
+          "entity_type": "institutional_network",
+          "policy_positions": {
+            "domestic": "نقش نهادی در ثبات سیاسی و موازنه قدرت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ven_pud",
+          "name_fa": "اپوزیسیون سکوی وحدت",
+          "name_en": "PUD opposition",
+          "entity_type": "cross_party_network",
+          "policy_positions": {
+            "domestic": "انتخابات آزاد، بازسازی نهادها و انتقال سیاسی؛ در تبعید و داخل کشور شبکه‌های متفاوت دارد."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ven_leftopp",
+          "name_fa": "اپوزیسیون چپ مستقل",
+          "name_en": "Independent left opposition",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "نقد سیاست‌های اقتصادی و اقتدارگرایی از موضع چپ."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ven_interim",
+          "name_fa": "ریاست‌جمهوری موقت",
+          "name_en": "Interim Presidency",
+          "role": "دلسی رودریگز پس از ژانویه ۲۰۲۶ رئیس‌جمهور موقت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_psuvcenter",
+          "name_fa": "رهبری PSUV",
+          "name_en": "PSUV leadership",
+          "role": "حزب حاکم و شبکه سیاسی دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "ترکیب منتخب مه ۲۰۲۵ تحت سلطه ائتلاف حاکم؛ بیشتر اپوزیسیون اصلی انتخابات را تحریم کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_military",
+          "name_fa": "نیروهای مسلح و ساختار امنیتی",
+          "name_en": "Armed Forces and Security Establishment",
+          "role": "یکی از مراکز کلیدی قدرت سیاسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "ven_oil",
+          "name_fa": "نهادهای نفتی و اقتصادی دولتی",
+          "name_en": "State oil and economic institutions",
+          "role": "نقش محوری در درآمد دولت و روابط خارجی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "interim_president": "Delcy Rodríguez",
+        "previous_president": "Nicolás Maduro (removed 2026-01-03)",
+        "government_type": "dominant-party authoritarian system in political transition",
+        "ruling_party": "PSUV",
+        "opposition_leadership": "Edmundo González Urrutia and María Corina Machado; prominent figures largely outside the country as of 2026-08",
+        "legislative_context": "ائتلاف حامی PSUV در انتخابات مجلس مه ۲۰۲۵ بیش از ۸۰ درصد آرا را طبق اعلام شورای انتخابات کسب کرد؛ اپوزیسیون عمده انتخابات را تحریم کرد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "transition_and_elections",
+          "oil_revenue",
+          "sanctions_and_external_relations",
+          "public_services",
+          "civil_liberties",
+          "elite_and_military_balance"
+        ],
+        "rule": "مادورو را در snapshot نوامبر ۲۰۲۶ رئیس‌جمهور ثبت نکن؛ رودریگز رئیس‌جمهور موقت است. انتخابات ۲۰۲۴ را مناقشه‌برانگیز و انتخابات مجلس ۲۰۲۵ را با تحریم اپوزیسیون اصلی توصیف کن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CRS Venezuela Post-Maduro transition",
+            "url": "https://www.everycrsreport.com/files/2026-08-13_R49186_ea00ffd3c8b895af067dbff6339aeff2e659a1b9.html",
+            "date": "2026-08"
+          },
+          {
+            "name": "Reuters — Delcy Rodríguez interim president",
+            "url": "https://www.reuters.com/world/americas/delcy-rodriguez-formally-sworn-venezuelas-interim-president-2026-01-05/",
+            "date": "2026-01"
+          },
+          {
+            "name": "Freedom House Venezuela 2026",
+            "url": "https://freedomhouse.org/country/venezuela/freedom-world/2026",
+            "date": "2026"
+          }
+        ],
+        "notes": "تحولات ژانویه ۲۰۲۶ در وضعیت شروع بازی اعمال شده‌اند؛ وضعیت دقیق گذار سیاسی تا ۵ نوامبر باید رویدادمحور باقی بماند."
       },
       "parliamentary_groups": []
     },
     "ECU": {
       "country_name_fa": "اکوادور",
       "country_name_en": "Ecuador",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ دانیل نوبوا پس از پیروزی در دور دوم آوریل ۲۰۲۵ دوره کامل ریاست‌جمهوری را آغاز کرده است. مجلس ملی ۱۵۱ کرسی دارد و هیچ حزبی اکثریت مستقل ندارد؛ دولت با حمایت احزاب کوچک‌تر ائتلاف کاری ساخته است.",
+      "parties": [
+        {
+          "id": "ecu_adn",
+          "name_fa": "اقدام دموکراتیک ملی",
+          "name_en": "National Democratic Action (ADN)",
+          "entity_type": "party",
+          "political_role": "جنبش رئیس‌جمهور دانیل نوبوا و هسته دولت.",
+          "ideological_profile": "میانه‌راست، توسعه‌گرا و امنیت‌محور.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_rc",
+          "name_fa": "انقلاب شهروندی",
+          "name_en": "Citizen Revolution Movement (Revolución Ciudadana, RC)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین بلوک منفرد مجلس و اپوزیسیون اصلی؛ نزدیک به رافائل کورئا و لوئیسا گونسالس.",
+          "ideological_profile": "چپ میانه، سوسیال‌دموکراسی و کورئیسم.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_pach",
+          "name_fa": "پاچاکوتیک",
+          "name_en": "Pachakutik",
+          "entity_type": "party",
+          "political_role": "حزب/جنبش سیاسی بومیان و نماینده مسائل سرزمینی.",
+          "ideological_profile": "حقوق بومیان، محیط زیست و چپ منطقه‌ای.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_psc",
+          "name_fa": "حزب سوسیال‌مسیحی",
+          "name_en": "Social Christian Party (PSC)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی راست‌گرا با حضور پارلمانی.",
+          "ideological_profile": "محافظه‌کاری و بازارگرایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_con",
+          "name_fa": "جنبش سازندگی",
+          "name_en": "Construye Movement (Construye)",
+          "entity_type": "party",
+          "political_role": "نیروی کوچک پارلمانی و اصلاح‌طلب.",
+          "ideological_profile": "میانه‌گرایی و اصلاح نهادی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_reto",
+          "name_fa": "جنبش بازسازی و فرصت",
+          "name_en": "Renewal Movement (RETO)",
+          "entity_type": "party",
+          "political_role": "در ائتلاف انتخاباتی با RC در انتخابات ۲۰۲۵؛ ساختار مستقل از RC نگه داشته شود.",
+          "ideological_profile": "چپ میانه و ائتلاف‌محور.",
+          "legal_status": "electoral_alliance_partner",
+          "confidence": "medium"
+        },
+        {
+          "id": "ecu_ind",
+          "name_fa": "نمایندگان مستقل و ائتلاف‌های محلی",
+          "name_en": "Independent legislators and local alliances",
+          "entity_type": "party",
+          "political_role": "گروه پراکنده با مواضع متفاوت؛ حزب واحد نیست.",
+          "ideological_profile": "منطقه‌گرا و موضوع‌محور.",
+          "legal_status": "independent_or_local_group",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ecu_adnbloc",
+          "name_fa": "بلوک دولت ADN",
+          "name_en": "ADN governing bloc",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "امنیت عمومی، سرمایه‌گذاری و سیاست‌های دولت نوبوا."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_rcbloc",
+          "name_fa": "بلوک انقلاب شهروندی",
+          "name_en": "Citizen Revolution bloc",
+          "entity_type": "party_network",
+          "policy_positions": {
+            "domestic": "اپوزیسیون اصلی؛ دفاع از میراث کورئیسم و نقد سیاست‌های دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_indig",
+          "name_fa": "جنبش‌های بومی و اجتماعی",
+          "name_en": "Indigenous and social movements",
+          "entity_type": "civic_network",
+          "policy_positions": {
+            "domestic": "حقوق سرزمینی، محیط زیست و خدمات مناطق محروم."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_security",
+          "name_fa": "شبکه امنیتی و مبارزه با جرم سازمان‌یافته",
+          "name_en": "Security and organized-crime policy network",
+          "entity_type": "institutional_network",
+          "policy_positions": {
+            "domestic": "افزایش ظرفیت دولت برای مقابله با جرم؛ سیاست‌ها محل اختلاف سیاسی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ecu_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "دانیل نوبوا رئیس‌جمهور از ۲۰۲۳ و برنده دوره کامل در آوریل ۲۰۲۵.",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس تک‌مجلسی ۱۵۱ کرسی؛ RC-RETO در آغاز ۶۷ و ADN ۶۶ کرسی به دست آوردند؛ ائتلاف‌ها و جابه‌جایی‌ها می‌توانند ترکیب عملی را تغییر دهند.",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_cne",
+          "name_fa": "شورای ملی انتخابات",
+          "name_en": "National Electoral Council",
+          "role": "مدیریت انتخابات و ثبت احزاب.",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_courts",
+          "name_fa": "دادگاه قانون اساسی و قوه قضائیه",
+          "name_en": "Constitutional Court and Judiciary",
+          "role": "نهادهای نظارتی قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "ecu_security",
+          "name_fa": "نهادهای امنیتی و نیروهای مسلح",
+          "name_en": "Security institutions and Armed Forces",
+          "role": "در سیاست عمومی امنیت و مقابله با جرم سازمان‌یافته نقش پررنگ دارند.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Daniel Noboa",
+        "government_type": "presidential republic",
+        "ruling_movement": "ADN",
+        "presidential_runoff": "2025-04",
+        "national_assembly": {
+          "total": 151,
+          "RC_RETO": 67,
+          "ADN": 66,
+          "Pachakutik": 9,
+          "PSC": 4,
+          "other_small_groups": 5
+        },
+        "note": "ترکیب آغازین رسمی انتخابات با داده‌های بعدی جابه‌جایی نمایندگان یکسان فرض نشود."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "organized_crime_and_security",
+          "electricity_and_energy",
+          "employment",
+          "public_debt",
+          "indigenous_rights",
+          "constitutional_checks"
+        ],
+        "rule": "هیچ اکثریت قطعی برای ADN یا RC نساز؛ حمایت پارلمانی دولت از طریق ائتلاف‌های موردی با احزاب کوچک‌تر شکل می‌گیرد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Ecuador National Assembly 2025",
+            "url": "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20250209/",
+            "date": "2025"
+          },
+          {
+            "name": "CRS Ecuador 2026",
+            "url": "https://www.everycrsreport.com/files/2026-10-29_R49188_60ccc8d23073a7b6820baf3c24fae39fc56a8eac.html",
+            "date": "2026-10"
+          },
+          {
+            "name": "Ecuador Legislative Observatory report",
+            "url": "https://observatoriolegislativo.ec/wp-content/uploads/2026/05/Asamblea-Nacional-2025-2029-Legislacion-fiscalizacion-representacion-y-transparencia-durante-su-primer-ano-de-gestion.pdf",
+            "date": "2026-05"
+          }
+        ],
+        "notes": "آمار رسمی انتخابات ۲۰۲۵ با جابه‌جایی‌های فراکسیونی بعدی متفاوت است؛ ساختار اولیه و وضعیت جاری باید دو فیلد مجزا بمانند."
       },
       "parliamentary_groups": []
     },
     "BOL": {
       "country_name_fa": "بولیوی",
       "country_name_en": "Bolivia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ رودریگو پاز از ۸ نوامبر ۲۰۲۵ رئیس‌جمهور شد و به حکومت بیست‌ساله MAS پایان داد. مجلس چندحزبی است و احزاب راست میانه و محافظه‌کار اکثریت را در اختیار دارند؛ MAS به‌شدت تضعیف شده و به چند جریان تقسیم شده است.",
+      "parties": [
+        {
+          "id": "bol_pdc",
+          "name_fa": "حزب دموکرات مسیحی",
+          "name_en": "Christian Democratic Party (PDC)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور رودریگو پاز و بزرگ‌ترین حزب مجلس نمایندگان.",
+          "ideological_profile": "دموکراسی مسیحی، میانه‌گرایی و اقتصاد بازار.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_libre",
+          "name_fa": "ائتلاف آزاد",
+          "name_en": "Libre Alliance (Alianza Libre)",
+          "entity_type": "party",
+          "political_role": "ائتلاف راست‌گرا به رهبری خورخه توتو کیروگا؛ اپوزیسیون مهم.",
+          "ideological_profile": "محافظه‌کاری، بازارگرایی و اصلاحات اقتصادی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_unidad",
+          "name_fa": "ائتلاف وحدت",
+          "name_en": "Unity Alliance (Alianza Unidad)",
+          "entity_type": "party",
+          "political_role": "نیروی انتخاباتی به رهبری ساموئل دوریا مدینا؛ بازیگر پارلمانی و شریک موردی.",
+          "ideological_profile": "میانه‌راست و اصلاح‌طلب اقتصادی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_ap",
+          "name_fa": "اتحاد مردمی",
+          "name_en": "Popular Alliance (Alianza Popular, AP)",
+          "entity_type": "party",
+          "political_role": "جریان انتخاباتی آندرونیکو رودریگز؛ پایگاه چپ و بخشی از میراث جنبش‌های اجتماعی.",
+          "ideological_profile": "چپ ملی‌گرا و جنبش‌محور.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_mas",
+          "name_fa": "جنبش به سوی سوسیالیسم ـ ابزار سیاسی برای حاکمیت ملت‌ها",
+          "name_en": "Movement Toward Socialism (MAS-IPSP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم پیشین؛ پس از شکاف میان حامیان اوو مورالس و لوئیس آرس بسیار تضعیف شده.",
+          "ideological_profile": "چپ بومی‌گرا و سوسیالیسم دولتی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_mas_ev",
+          "name_fa": "جریان حامی لوئیس آرس در MAS",
+          "name_en": "MAS current aligned with Luis Arce",
+          "entity_type": "party",
+          "political_role": "جریان درون‌حزبی و شبکه سیاسی دولت پیشین؛ حزب مجزا تلقی نشود.",
+          "ideological_profile": "چپ دولتی و عمل‌گرایی حکومتی.",
+          "legal_status": "internal_faction",
+          "confidence": "medium"
+        },
+        {
+          "id": "bol_mas_mor",
+          "name_fa": "جریان حامی اوو مورالس",
+          "name_en": "Evo Morales-aligned MAS current",
+          "entity_type": "party",
+          "political_role": "جریان درون‌حزبی/جنبش اجتماعی با نفوذ سیاسی و اختلافات حقوقی و انتخاباتی.",
+          "ideological_profile": "چپ بومی‌گرا و پوپولیسم جنبشی.",
+          "legal_status": "internal_faction",
+          "confidence": "medium"
+        },
+        {
+          "id": "bol_apb",
+          "name_fa": "اقدام برای بولیوی ـ سوما",
+          "name_en": "Action for Bolivia — Súmate (APB-Súmate)",
+          "entity_type": "party",
+          "political_role": "نیروی راست‌گرای منطقه‌ای با پایگاه سانتا کروز.",
+          "ideological_profile": "محافظه‌کاری و خودمختاری منطقه‌ای.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bol_paz",
+          "name_fa": "ائتلاف دولت رودریگو پاز",
+          "name_en": "Rodrigo Paz governing network",
+          "entity_type": "executive_network",
+          "policy_positions": {
+            "domestic": "اصلاح اقتصادی، تثبیت مالی و بازسازی رابطه دولت با مناطق."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bol_libre",
+          "name_fa": "اپوزیسیون راست به رهبری LIBRE",
+          "name_en": "LIBRE-led right opposition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "نظارت بر دولت و رقابت برای رهبری راست."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bol_mas_split",
+          "name_fa": "جریان‌های منشعب MAS",
+          "name_en": "Competing MAS currents",
+          "entity_type": "intra_party_network",
+          "policy_positions": {
+            "domestic": "اختلاف بر سر رهبری جنبش، میراث دولت پیشین و سیاست اقتصادی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bol_social",
+          "name_fa": "جنبش‌های کارگری و بومی",
+          "name_en": "Labor and Indigenous movements",
+          "entity_type": "civic_network",
+          "policy_positions": {
+            "domestic": "حمایت اجتماعی، قیمت سوخت، حقوق بومیان و یارانه‌ها."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bol_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رودریگو پاز از ۸ نوامبر ۲۰۲۵ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_leg",
+          "name_fa": "مجلس قانون‌گذاری چندملیتی",
+          "name_en": "Plurinational Legislative Assembly",
+          "role": "مجلس نمایندگان ۱۳۰ کرسی و سنا ۳۶ کرسی؛ PDC و LIBRE از نیروهای بزرگ‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_courts",
+          "name_fa": "دادگاه قانون اساسی و قوه قضائیه",
+          "name_en": "Constitutional Court and Judiciary",
+          "role": "نقش مهم در رقابت‌های انتخاباتی و اختلافات رهبری احزاب.",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_regional",
+          "name_fa": "استانداری‌ها و دولت‌های خودمختار",
+          "name_en": "Departmental and autonomous governments",
+          "role": "قدرت منطقه‌ای، به‌ویژه در سانتا کروز و مناطق شرقی.",
+          "confidence": "high"
+        },
+        {
+          "id": "bol_social",
+          "name_fa": "اتحادیه‌ها و سازمان‌های بومی",
+          "name_en": "Trade unions and Indigenous organizations",
+          "role": "توان بسیج اجتماعی و اثرگذاری بر سیاست اقتصادی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Rodrigo Paz Pereira",
+        "government_type": "presidential multiparty republic",
+        "governing_party": "PDC",
+        "inauguration_date": "2025-11-08",
+        "parliamentary_context": "انتخابات اوت ۲۰۲۵: PDC در مجلس نمایندگان ۴۹ کرسی، LIBRE ۳۹، Unity سوم و MAS فقط دو کرسی کسب کرد؛ در سنا نیز احزاب راست و میانه‌راست اکثریت دارند.",
+        "previous_governing_party": "MAS-IPSP"
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "fuel_subsidies",
+          "inflation_and_currency",
+          "fiscal_reform",
+          "regional_autonomy",
+          "indigenous_rights",
+          "labor_protests"
+        ],
+        "rule": "MAS را یکپارچه فرض نکن؛ جریان‌های آرس و مورالس از هم جدا هستند. پاز از PDC است و دولت او با مجلس چندپاره و فشار اجتماعی روبه‌روست."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Bolivia Chamber of Deputies 2025",
+            "url": "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
+            "date": "2025"
+          },
+          {
+            "name": "IPU Bolivia Senate 2025",
+            "url": "https://data.ipu.org/parliament/BO/BO-UC01/election/BO-UC01-E20250817/",
+            "date": "2025"
+          },
+          {
+            "name": "CRS Bolivia 2025 elections",
+            "url": "https://www.everycrsreport.com/files/2025-12-17_R48767_28301cc0fe97cff66264776f7fb0e8d3702ff70a.html",
+            "date": "2025-12"
+          },
+          {
+            "name": "World Factbook Browser Bolivia",
+            "url": "https://factbook.dmcc.io/country/bl",
+            "date": "2026"
+          }
+        ],
+        "notes": "دولت پاز از ۸ نوامبر ۲۰۲۵ در قدرت است. گزارش‌های پس از ۵ نوامبر ۲۰۲۶ درباره شکاف‌های جدید درون مجلس وارد snapshot نشده‌اند."
       },
       "parliamentary_groups": []
     },
     "PRY": {
       "country_name_fa": "پاراگوئه",
       "country_name_en": "Paraguay",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ سانتیاگو پنیا از حزب کلرادو از اوت ۲۰۲۳ رئیس‌جمهور است. حزب کلرادو در انتخابات ۲۰۲۳ اکثریت هر دو مجلس را به دست آورد و در ۵ نوامبر ۲۰۲۶ همچنان نیروی غالب پارلمان است.",
+      "parties": [
+        {
+          "id": "pry_anr",
+          "name_fa": "انجمن ملی جمهوری‌خواه ـ حزب کلرادو",
+          "name_en": "National Republican Association — Colorado Party (ANR-PC)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و نیروی مسلط در هر دو مجلس.",
+          "ideological_profile": "محافظه‌کاری، ملی‌گرایی و شبکه‌های سیاسی سنتی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_plra",
+          "name_fa": "حزب لیبرال رادیکال اصیل",
+          "name_en": "Authentic Radical Liberal Party (PLRA)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب تاریخی اپوزیسیون و هسته ائتلاف‌های مخالف.",
+          "ideological_profile": "لیبرالیسم، میانه‌گرایی و اصلاح‌طلبی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_concert",
+          "name_fa": "همگرایی ملی",
+          "name_en": "National Concertation (Concertación Nacional)",
+          "entity_type": "party",
+          "political_role": "ائتلاف انتخاباتی اپوزیسیون؛ احزاب عضو مستقل‌اند و ائتلاف نباید حزب واحد تلقی شود.",
+          "ideological_profile": "ائتلاف میانه تا چپ میانه.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_cruzada",
+          "name_fa": "حزب جنگ صلیبی ملی",
+          "name_en": "National Crusade Party (Cruzada Nacional)",
+          "entity_type": "party",
+          "political_role": "حزب پوپولیست با حضور پارلمانی محدودتر و نوسان ائتلافی.",
+          "ideological_profile": "پوپولیسم ضدنخبگانی و ملی‌گرایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_hagamos",
+          "name_fa": "حزب بیایید انجام دهیم",
+          "name_en": "Let's Do Party (Partido Hagamos)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک پارلمانی و میانه‌گرا.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات نهادی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_patria",
+          "name_fa": "میهن عزیز",
+          "name_en": "Dear Homeland (Patria Querida)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک راست میانه با حضور در ائتلاف‌ها.",
+          "ideological_profile": "محافظه‌کاری مدنی و بازارگرایی.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_pdp",
+          "name_fa": "حزب دموکراتیک پیشرو",
+          "name_en": "Progressive Democratic Party (PDP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اپوزیسیون با حضور پارلمانی.",
+          "ideological_profile": "سوسیال‌لیبرالیسم و اصلاحات دموکراتیک.",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "pry_colorado",
+          "name_fa": "شبکه حزب کلرادو و دولت پنیا",
+          "name_en": "Colorado Party and Peña government network",
+          "entity_type": "party_network",
+          "policy_positions": {
+            "domestic": "حفظ اکثریت، پروژه‌های توسعه‌ای و تداوم نفوذ حزب در نهادها."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "pry_abdista",
+          "name_fa": "جریان آبدیستا",
+          "name_en": "Abdista faction",
+          "entity_type": "intra_party_faction",
+          "policy_positions": {
+            "domestic": "جریان درون حزب کلرادو نزدیک به رئیس‌جمهور پیشین ماریو آبدو بنیتس؛ رقابت داخلی با جریان‌های دیگر."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "pry_hc",
+          "name_fa": "جریان هوراسیو کارتس",
+          "name_en": "Honor Colorado faction",
+          "entity_type": "intra_party_faction",
+          "policy_positions": {
+            "domestic": "جریان قدرتمند در حزب کلرادو و حامی پنیا؛ نفوذ تشکیلاتی بالا."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "pry_opp",
+          "name_fa": "اپوزیسیون لیبرال و ائتلافی",
+          "name_en": "Liberal and coalition opposition",
+          "entity_type": "cross_party_network",
+          "policy_positions": {
+            "domestic": "نظارت پارلمانی، مبارزه با فساد و رقابت با حزب کلرادو."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "pry_social",
+          "name_fa": "اتحادیه‌ها و جنبش‌های اجتماعی",
+          "name_en": "Trade unions and social movements",
+          "entity_type": "civic_network",
+          "policy_positions": {
+            "domestic": "اشتغال، خدمات عمومی و حقوق اجتماعی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "pry_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "سانتیاگو پنیا رئیس‌جمهور از ۱۵ اوت ۲۰۲۳ است.",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "۴۵ کرسی؛ حزب کلرادو پس از انتخابات ۲۰۲۳ دارای ۲۳ کرسی بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_deputies",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Deputies",
+          "role": "۸۰ کرسی؛ حزب کلرادو پس از انتخابات ۲۰۲۳ دارای ۴۹ کرسی بود.",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_courts",
+          "name_fa": "قوه قضائیه و دادگاه عالی",
+          "name_en": "Judiciary and Supreme Court",
+          "role": "نهادهای قانون اساسی و قضایی.",
+          "confidence": "high"
+        },
+        {
+          "id": "pry_governors",
+          "name_fa": "فرمانداری‌های ایالتی/دپارتمانی",
+          "name_en": "Departmental governors",
+          "role": "شبکه‌های محلی و منطقه‌ای مهم در سیاست ملی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Santiago Peña",
+        "vice_president": "Pedro Alliana",
+        "government_type": "presidential republic",
+        "governing_party": "ANR — Colorado Party",
+        "term": "2023-08-15 to 2028-08-15",
+        "parliamentary_composition_2023": {
+          "senate": {
+            "total": 45,
+            "Colorado": 23,
+            "Concertacion": 12
+          },
+          "chamber_of_deputies": {
+            "total": 80,
+            "Colorado": 49,
+            "Concertacion": 22
+          }
+        }
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "corruption_and_governance",
+          "agriculture_and_exports",
+          "public_debt",
+          "employment",
+          "regional_infrastructure",
+          "intra_colorado_factionalism"
+        ],
+        "rule": "جریان‌های Honor Colorado و Abdismo را جناح‌های درون حزب کلرادو مدل کن، نه احزاب مستقل. ائتلاف Concertación را با PLRA و سایر اعضا یکی نکن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Paraguay Ministry of Finance 2026 Offering Memorandum",
+            "url": "https://www.mef.gov.py/sites/default/files/2026-03/Paraguay%202026%20-%20NM%20-%20Final%20Offering%20Memorandum%20%28PYG%29.pdf",
+            "date": "2026-03"
+          }
+        ],
+        "notes": "اکثریت حزب کلرادو بر اساس انتخابات ۲۰۲۳ است؛ جابه‌جایی‌های بعدی نمایندگان باید جدا از نتیجه رسمی انتخابات ذخیره شوند."
       },
       "parliamentary_groups": []
     },
