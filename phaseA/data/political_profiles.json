@@ -1,23 +1,23 @@
 {
-  "schema_version": "1.17.0",
+  "schema_version": "1.18.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 145,
-    "pending_countries": 29,
+    "researched_countries": 152,
+    "pending_countries": 22,
     "last_batch": [
-      "CHL",
-      "COL",
-      "PER",
-      "VEN",
-      "ECU",
-      "BOL",
-      "PRY"
+      "URY",
+      "GUY",
+      "SUR",
+      "CUB",
+      "HTI",
+      "DOM",
+      "JAM"
     ]
   },
-  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.",
+  "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.\nنسخه 1.18.0: بسته بیست‌ودوم پژوهشی برای اروگوئه، گویان، سورینام، کوبا، هائیتی، جمهوری دومینیکن و جامائیکا اضافه شد. ساختارهای تک‌حزبی و دولت‌های انتقالی به‌صورت واقعی و بدون ساختن احزاب رقابتی یا اکثریت پارلمانی صوری ثبت شده‌اند. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اطلاعاتی که پس از این تاریخ منتشر شده‌اند فقط برای راستی‌آزمایی وضعیت تا snapshot استفاده شده‌اند و در صورت عدم امکان تفکیک زمانی، عدم قطعیت در یادداشت پروفایل ثبت شده است.",
   "countries": {
     "USA": {
       "country_name_fa": "آمریکا",
@@ -27239,133 +27239,1045 @@
     "URY": {
       "country_name_fa": "اوروگوئه",
       "country_name_en": "Uruguay",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ یاماندو اورسی از ۱ مارس ۲۰۲۵ رئیس‌جمهور و ائتلاف جبهه گسترده دارای اکثریت در سنا و بزرگ‌ترین فراکسیون مجلس نمایندگان است.",
+      "parties": [
+        {
+          "id": "ury_fa",
+          "name_fa": "جبهه گسترده",
+          "name_en": "Broad Front (Frente Amplio)",
+          "entity_type": "party",
+          "political_role": "ائتلاف چپ و میانه‌چپ حاکم؛ شامل چندین جریان و حزب عضو.",
+          "ideological_profile": "چپ، سوسیال‌دموکراسی و ترقی‌خواهی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_pn",
+          "name_fa": "حزب ملی",
+          "name_en": "National Party (Partido Nacional)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین نیروی اپوزیسیون راست میانه.",
+          "ideological_profile": "محافظه‌کاری و ملی‌گرایی مدنی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_pc",
+          "name_fa": "حزب کلرادو",
+          "name_en": "Colorado Party",
+          "entity_type": "party",
+          "political_role": "نیروی سنتی لیبرال و میانه‌رو؛ بخشی از اپوزیسیون.",
+          "ideological_profile": "لیبرالیسم و سوسیال‌لیبرالیسم",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_ca",
+          "name_fa": "کابیلدو باز",
+          "name_en": "Open Cabildo (Cabildo Abierto)",
+          "entity_type": "party",
+          "political_role": "حزب راست‌گرای ملی‌محافظه‌کار با نمایندگی پارلمانی.",
+          "ideological_profile": "محافظه‌کاری ملی و مواضع اجتماعی سنتی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_pi",
+          "name_fa": "حزب مستقل",
+          "name_en": "Independent Party (Partido Independiente)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک میانه‌رو با نمایندگی محدود.",
+          "ideological_profile": "میانه‌گرایی و سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_is",
+          "name_fa": "هویت حاکمیتی",
+          "name_en": "Sovereign Identity (Identidad Soberana)",
+          "entity_type": "party",
+          "political_role": "نیروی سیاسی ضدساختار سنتی با نمایندگی پارلمانی.",
+          "ideological_profile": "پوپولیسم و حاکمیت‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ury_fa_mpp",
+          "name_fa": "جنبش مشارکت مردمی",
+          "name_en": "Movement of Popular Participation (MPP)",
+          "entity_type": "party_current",
+          "policy_positions": {
+            "domestic": "جریان مهم درون جبهه گسترده؛ ریشه‌دار در چپ ملی و جنبش تुपامارو."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ury_fa_ps",
+          "name_fa": "جریان سوسیالیست",
+          "name_en": "Socialist currents within FA",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان سوسیالیستی در ائتلاف جبهه گسترده."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "ury_opposition",
+          "name_fa": "ائتلاف احزاب اپوزیسیون",
+          "name_en": "Opposition parties",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "همکاری انتخاباتی و پارلمانی احزاب مخالف دولت؛ فاقد یک حزب واحد."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ury_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "یاماندو اورسی رئیس قوه مجریه و رئیس دولت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_parl",
+          "name_fa": "مجمع عمومی",
+          "name_en": "General Assembly",
+          "role": "دو مجلس؛ جبهه گسترده در سنا اکثریت دارد و در مجلس نمایندگان ۴۸ کرسی از ۹۹ کرسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ury_courts",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "نهاد مستقل قضایی و دادگاه‌ها.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Yamandú Orsi",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Broad Front (Frente Amplio)",
+        "supporting_coalitions": [
+          "Broad Front"
+        ],
+        "parliamentary_context": "نتایج انتخابات ۲۰۲۴: جبهه گسترده ۱۶ کرسی سنا و ۴۸ کرسی مجلس نمایندگان؛ حزب ملی ۲۹، کلرادو ۱۷، هویت حاکمیتی ۲، کابیلدو باز ۲ و حزب مستقل ۱ کرسی مجلس نمایندگان."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economy",
+          "social_policy",
+          "public_security",
+          "labor",
+          "pensions",
+          "education"
+        ],
+        "rule": "جبهه گسترده ائتلافی متکثر است؛ جریان‌های عضو را نباید به‌عنوان احزاب مستقلِ هم‌سطح با کل ائتلاف دوباره‌شماری کرد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – Uruguay 2024 House election",
+            "url": "https://data.ipu.org/parliament/UY/UY-LC01/election/UY-LC01-E20241027/",
+            "date": "2024-10-27"
+          },
+          {
+            "name": "وزارت امور خارجه اسپانیا – برگه کشوری اروگوئه",
+            "url": "https://www.exteriores.gob.es/documents/fichaspais/uruguay_ficha%20pais.pdf",
+            "date": "2025"
+          }
+        ],
+        "notes": "ترکیب پارلمان و پیروزی اورسی بر اساس انتخابات ۲۰۲۴ و آغاز دولت در مارس ۲۰۲۵ ثبت شده است."
       },
       "parliamentary_groups": []
     },
     "GUY": {
       "country_name_fa": "گویان",
       "country_name_en": "Guyana",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری چندحزبی با رئیس‌جمهور اجرایی؛ عرف قانون اساسی پیوند ریاست‌جمهوری با فهرست حزبیِ برنده انتخابات مجلس را برقرار می‌کند. محمد عرفان علی پس از پیروزی PPP/C در انتخابات ۱ سپتامبر ۲۰۲۵ برای دور دوم انتخاب شد.",
+      "parties": [
+        {
+          "id": "guy_pppc",
+          "name_fa": "حزب ترقی‌خواه مردم/مدنی",
+          "name_en": "People's Progressive Party/Civic (PPP/C)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و برنده انتخابات ۲۰۲۵ با ۳۶ کرسی.",
+          "ideological_profile": "سوسیال‌دموکراسی و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_win",
+          "name_fa": "سرمایه‌گذاری در ملت",
+          "name_en": "We Invest in Nationhood (WIN)",
+          "entity_type": "party",
+          "political_role": "نیروی دوم انتخابات ۲۰۲۵ و اپوزیسیون اصلی پارلمانی با ۱۶ کرسی.",
+          "ideological_profile": "پوپولیسم و اصلاح‌طلبی ضدفساد",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_apnu",
+          "name_fa": "مشارکت برای وحدت ملی",
+          "name_en": "A Partnership for National Unity (APNU)",
+          "entity_type": "party",
+          "political_role": "ائتلاف اپوزیسیون؛ ۱۲ کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "ائتلاف محافظه‌کار و ملی‌گرا",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_afc",
+          "name_fa": "اتحاد برای تغییر",
+          "name_en": "Alliance For Change (AFC)",
+          "entity_type": "party",
+          "political_role": "حزب مستقل؛ در انتخابات ۲۰۲۵ کرسی مجلس به دست نیاورد.",
+          "ideological_profile": "میانه‌گرایی و اصلاحات حکمرانی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_fgm",
+          "name_fa": "جنبش گویان پیشرو",
+          "name_en": "Forward Guyana Movement (FGM)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک؛ یک کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "اصلاح‌طلبی و سیاست‌ورزی مدنی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_alp",
+          "name_fa": "مجمع آزادی و رفاه",
+          "name_en": "Assembly for Liberty and Prosperity (ALP)",
+          "entity_type": "party",
+          "political_role": "حزب شرکت‌کننده در انتخابات ۲۰۲۵ بدون کرسی ملی.",
+          "ideological_profile": "لیبرالیسم و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "guy_ppp_civic",
+          "name_fa": "ائتلاف مدنی PPP/C",
+          "name_en": "PPP/C civic alliance",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ائتلاف انتخاباتی حزب ترقی‌خواه مردم با شرکای مدنی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "guy_apnu_bloc",
+          "name_fa": "فراکسیون پارلمانی APNU",
+          "name_en": "APNU parliamentary bloc",
+          "entity_type": "parliamentary_group",
+          "policy_positions": {
+            "domestic": "همکاری احزاب و گروه‌های عضو ائتلاف در اپوزیسیون."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "guy_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "محمد عرفان علی رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۶۵ کرسی؛ PPP/C با ۳۶ کرسی اکثریت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "guy_gecom",
+          "name_fa": "کمیسیون انتخابات گویان",
+          "name_en": "Guyana Elections Commission (GECOM)",
+          "role": "نهاد برگزارکننده و ناظر انتخابات.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Mohamed Irfaan Ali",
+        "government_type": "presidential multiparty republic",
+        "president_party": "PPP/C",
+        "supporting_coalitions": [
+          "PPP/C"
+        ],
+        "parliamentary_context": "انتخابات ۱ سپتامبر ۲۰۲۵: PPP/C برابر ۳۶ کرسی، WIN برابر ۱۶، APNU برابر ۱۲ و FGM یک کرسی؛ AFC و ALP بدون کرسی."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_revenue",
+          "public_services",
+          "anti_corruption",
+          "ethnic_relations",
+          "territorial_integrity",
+          "economic_diversification"
+        ],
+        "rule": "رقابت حزبی در گویان با شکاف‌های قومی و منطقه‌ای هم‌پوشانی دارد؛ هیچ جناح قومی را نباید معادل کل یک حزب فرض کرد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Guyana Department of Public Information – PPP/C wins 2025 elections",
+            "url": "https://dpi.gov.gy/peoples-progressive-party-civic-wins-2025-general-and-regional-elections/",
+            "date": "2025-09-06"
+          },
+          {
+            "name": "IPU Parline – Guyana 2025 election",
+            "url": "https://data.ipu.org/parliament/GY/GY-LC01/election/GY-LC01-E20250901/",
+            "date": "2025-09-01"
+          },
+          {
+            "name": "GECOM-approved parties, Guyana DPI",
+            "url": "https://dpi.gov.gy/gecom-approves-six-6-political-parties-to-contest-in-general-and-regional-elections/",
+            "date": "2025-07-18"
+          }
+        ],
+        "notes": "ترکیب مجلس و دولت مطابق انتخابات ۲۰۲۵ ثبت شده است."
       },
       "parliamentary_groups": []
     },
     "SUR": {
       "country_name_fa": "سورینام",
       "country_name_en": "Suriname",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری چندحزبی با رئیس‌جمهور منتخب مجلس ملی؛ جنیفر گِرلینگز-سیمونز در ۶ ژوئیه ۲۰۲۵ به ریاست‌جمهوری انتخاب شد. دولت بر ائتلاف شش‌حزبی متکی است.",
+      "parties": [
+        {
+          "id": "sur_ndp",
+          "name_fa": "حزب دموکراتیک ملی",
+          "name_en": "National Democratic Party (NDP)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب مجلس و محور ائتلاف حاکم؛ ۱۸ کرسی در نتیجه نهایی.",
+          "ideological_profile": "ملی‌گرایی و سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_vhp",
+          "name_fa": "حزب اصلاح‌طلب مترقی",
+          "name_en": "Progressive Reform Party (VHP)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون با ۱۷ کرسی.",
+          "ideological_profile": "لیبرالیسم اقتصادی و میانه‌راست",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_nps",
+          "name_fa": "حزب ملی سورینام",
+          "name_en": "National Party of Suriname (NPS)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ ۶ کرسی.",
+          "ideological_profile": "سوسیال‌دموکراسی و ملی‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_abop",
+          "name_fa": "حزب آزادی و توسعه عمومی",
+          "name_en": "General Liberation and Development Party (ABOP)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ ۶ کرسی.",
+          "ideological_profile": "توسعه‌گرایی و نمایندگی جوامع مارونی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_pl",
+          "name_fa": "پرتجاجا لوهور",
+          "name_en": "Pertjajah Luhur (PL)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ ۲ کرسی.",
+          "ideological_profile": "محافظه‌کاری اجتماعی و نمایندگی جوامع جاوه‌ای",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_a20",
+          "name_fa": "آلترناتیو ۲۰۲۰",
+          "name_en": "Alternative 2020 (A20)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ یک کرسی.",
+          "ideological_profile": "اصلاح‌طلبی و حکمرانی پاک",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_bep",
+          "name_fa": "برادری و وحدت در سیاست",
+          "name_en": "Brotherhood and Unity in Politics (BEP)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف حاکم؛ یک کرسی.",
+          "ideological_profile": "نمایندگی اجتماعی و توسعه منطقه‌ای",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "sur_ruling",
+          "name_fa": "ائتلاف شش‌حزبی دولت",
+          "name_en": "Six-party governing coalition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "NDP، NPS، ABOP، PL، A20 و BEP؛ ائتلاف دارای ۳۴ کرسی از ۵۱ کرسی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "sur_opposition",
+          "name_fa": "اپوزیسیون VHP",
+          "name_en": "VHP-led opposition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "اپوزیسیون اصلی با محوریت حزب اصلاح‌طلب مترقی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "sur_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "جنیفر گرلینگز-سیمونز رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_dna",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly (De Nationale Assemblée)",
+          "role": "مجلس ۵۱ کرسی؛ ائتلاف حاکم ۳۴ کرسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "sur_courts",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "نهاد قضایی و دادگاه قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Jennifer Geerlings-Simons",
+        "government_type": "parliament-elected presidential republic",
+        "president_party": "National Democratic Party (NDP)",
+        "supporting_coalitions": [
+          "NDP-NPS-ABOP-PL-A20-BEP coalition"
+        ],
+        "parliamentary_context": "نتایج انتخابات ۲۵ مه ۲۰۲۵: NDP ۱۸، VHP ۱۷، NPS ۶، ABOP ۶، PL ۲، A20 یک و BEP یک کرسی؛ ائتلاف دولت ۳۴ کرسی دارد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "oil_and_gas",
+          "public_debt",
+          "ethnic_coalition_bargaining",
+          "employment",
+          "public_finance",
+          "environment"
+        ],
+        "rule": "احزاب عضو ائتلاف را جدا از ائتلاف شش‌حزبی ثبت کن؛ نتیجه انتخابات و تقسیم کرسی‌ها از داده IPU گرفته شده است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – Suriname 2025 election",
+            "url": "https://data.ipu.org/parliament/SR/SR-LC01/election/SR-LC01-E20250525/",
+            "date": "2025-05-25"
+          },
+          {
+            "name": "CARICOM Election Observation Mission – Suriname 2025",
+            "url": "https://caricom.org/wp-content/uploads/Final-Report-CEOM-Suriname-2025-1.pdf",
+            "date": "2025"
+          },
+          {
+            "name": "Suriname Elections Secretariat – registered political organizations",
+            "url": "https://verkiezingen.gov.sr/actualiteit/vijftien-pos-registreren-zich-bij-chs",
+            "date": "2025-02-26"
+          }
+        ],
+        "notes": "نتیجه نهایی کرسی‌ها مطابق داده IPU است؛ ثبت نامزدها و احزاب شرکت‌کننده از نهاد انتخاباتی و گزارش CARICOM بررسی شده است."
       },
       "parliamentary_groups": []
     },
     "CUB": {
       "country_name_fa": "کوبا",
       "country_name_en": "Cuba",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "one_party_socialist_republic",
+      "government_model": "جمهوری سوسیالیستی تک‌حزبی؛ قانون اساسی ۲۰۱۹ حزب کمونیست کوبا را نیروی سیاسی برتر جامعه و دولت تعریف می‌کند. احزاب مخالف به‌عنوان احزاب قانونی رقابتی در ساختار رسمی وجود ندارند.",
+      "parties": [
+        {
+          "id": "cub_pcc",
+          "name_fa": "حزب کمونیست کوبا",
+          "name_en": "Communist Party of Cuba (PCC)",
+          "entity_type": "party",
+          "political_role": "تنها حزب سیاسی قانونی و نیروی هدایت‌کننده رسمی نظام سیاسی.",
+          "ideological_profile": "مارکسیسم-لنینیسم، سوسیالیسم و انقلاب کوبا",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "cub_pcc_reform",
+          "name_fa": "جریان اصلاح‌طلبی اقتصادی درون حزب",
+          "name_en": "Economic reform currents within PCC",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "بحث درباره اصلاحات اقتصادی، نقش بازار و بنگاه‌های خصوصی در چارچوب نظام تک‌حزبی؛ سازمان حزبی مستقل محسوب نمی‌شود."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "cub_pcc_leadership",
+          "name_fa": "رهبری حزب کمونیست",
+          "name_en": "PCC leadership",
+          "role": "مرکز اصلی تعیین جهت‌گیری سیاسی و راهبردی کشور.",
+          "confidence": "high"
+        },
+        {
+          "id": "cub_pres",
+          "name_fa": "ریاست‌جمهوری و شورای وزیران",
+          "name_en": "Presidency and Council of Ministers",
+          "role": "قوه مجریه؛ میگل دیاز-کانل رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "cub_assembly",
+          "name_fa": "مجلس ملی قدرت خلق",
+          "name_en": "National Assembly of People's Power",
+          "role": "نهاد قانون‌گذاری؛ نامزدها از سازوکار نامزدی رسمی عبور می‌کنند.",
+          "confidence": "high"
+        },
+        {
+          "id": "cub_armed",
+          "name_fa": "نیروهای مسلح انقلابی",
+          "name_en": "Revolutionary Armed Forces",
+          "role": "نهاد مهم دولتی و سازمانی در ساختار سیاسی و اقتصادی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Miguel Díaz-Canel",
+        "government_type": "one-party socialist republic",
+        "president_party": "Communist Party of Cuba (PCC)",
+        "supporting_coalitions": [
+          "Communist Party of Cuba"
+        ],
+        "parliamentary_context": "مجلس ملی قدرت خلق در چارچوب نظام تک‌حزبی فعالیت می‌کند؛ احزاب مخالف قانونی و رقابت حزبی چندحزبی وجود ندارد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_reform",
+          "state_enterprises",
+          "food_security",
+          "energy",
+          "public_services",
+          "foreign_relations"
+        ],
+        "rule": "احزاب مخالف ساختگی یا صوری وارد داده نشوند؛ نقدها و جریان‌های درون‌حزبی را با احزاب مستقل اشتباه نگیر."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Inter-American Commission on Human Rights – Cuba, Annual Report 2025",
+            "url": "https://www.oas.org/en/iachr/docs/annual/2025/Chapters/IA2025_4B_CUB_EN.pdf",
+            "date": "2026-04"
+          }
+        ],
+        "notes": "تک‌حزبی بودن بر اساس قانون اساسی ۲۰۱۹ و گزارش کمیسیون بین‌آمریکایی حقوق بشر ثبت شده است."
       },
       "parliamentary_groups": []
     },
     "HTI": {
       "country_name_fa": "هائیتی",
       "country_name_en": "Haiti",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "transitional_executive_no_elected_parliament",
+      "government_model": "دولت انتقالی و فاقد رئیس‌جمهور منتخب؛ مأموریت شورای ریاست‌جمهوری انتقالی در ۷ فوریه ۲۰۲۶ پایان یافت. نخست‌وزیر آلیکس دیدیه فی‌اِمِه در چارچوب ترتیبات انتقالی و توافق سیاسی ملی در رأس دولت باقی ماند؛ نهادهای انتخابی ملی به‌طور کامل بازسازی نشده‌اند.",
+      "parties": [
+        {
+          "id": "hti_fanmi",
+          "name_fa": "فانمی لاوالاس",
+          "name_en": "Fanmi Lavalas",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی چپ‌گرا و بازیگر سیاسی مهم؛ در گفت‌وگوهای انتقالی حضور داشته است.",
+          "ideological_profile": "چپ‌گرایی، عدالت اجتماعی و لاوالاسیسم",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_phtk",
+          "name_fa": "حزب کلاه صورتی هائیتی",
+          "name_en": "Haitian Tèt Kale Party (PHTK)",
+          "entity_type": "party",
+          "political_role": "حزب مهم دوره پس از ۲۰۱۱؛ از بازیگران ساختار سیاسی و ائتلاف‌های گذشته.",
+          "ideological_profile": "میانه‌گرایی راست و توسعه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_opl",
+          "name_fa": "سازمان مردم در مبارزه",
+          "name_en": "Organisation of the People in Struggle (OPL)",
+          "entity_type": "party",
+          "political_role": "حزب سیاسی تاریخی؛ در طیف مخالفان و گفت‌وگوهای ملی.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_pd",
+          "name_fa": "پیتی دسالین",
+          "name_en": "Pitit Dessalines",
+          "entity_type": "party",
+          "political_role": "جنبش/حزب سیاسی ملی‌گرا و منتقد ساختارهای سنتی قدرت.",
+          "ideological_profile": "چپ ملی‌گرا و حاکمیت‌طلب",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_ande",
+          "name_fa": "آنسام نو فو",
+          "name_en": "Ansanm nou fò",
+          "entity_type": "party",
+          "political_role": "ائتلاف سیاسی مشارکت‌کننده در گفت‌وگوهای انتقالی.",
+          "ideological_profile": "ائتلاف‌گرایی سیاسی؛ مواضع متنوع",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "hti_national_pact",
+          "name_fa": "پیمان ملی ثبات و انتخابات",
+          "name_en": "National Pact for Stability and the Organization of Elections",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "چارچوب توافقی میان صدها گروه سیاسی، مدنی و اجتماعی برای ثبات و مسیر بازگشت به حکمرانی انتخابی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "hti_tpc_legacy",
+          "name_fa": "جریان‌های حامی و منتقد شورای انتقالی",
+          "name_en": "Pro- and anti-transition council blocs",
+          "entity_type": "political_current",
+          "policy_positions": {
+            "domestic": "مواضع متفاوت درباره جانشینی شورای ریاست‌جمهوری انتقالی و تمرکز قدرت اجرایی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "hti_pm",
+          "name_fa": "دفتر نخست‌وزیر",
+          "name_en": "Office of the Prime Minister",
+          "role": "نخست‌وزیر آلیکس دیدیه فی‌اِمِه در رأس دولت اجرایی قرار دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_security",
+          "name_fa": "نهادهای امنیتی و پلیس ملی",
+          "name_en": "National Police and security institutions",
+          "role": "امنیت عمومی و کنترل سرزمینی از چالش‌های اصلی دولت انتقالی است.",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_civil",
+          "name_fa": "ائتلاف‌های مدنی و سیاسی",
+          "name_en": "Civil and political stakeholder coalitions",
+          "role": "گروه‌های سیاسی، مدنی و اجتماعی در سازوکارهای توافق و انتخابات نقش دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "hti_electoral",
+          "name_fa": "نهادهای انتخاباتی و روند بازسازی",
+          "name_en": "Electoral institutions and reconstruction process",
+          "role": "ثبت احزاب و آماده‌سازی برای بازگشت به انتخابات از محورهای دوره انتقالی است.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": null,
+        "prime_minister": "Alix Didier Fils-Aimé",
+        "government_type": "transitional executive",
+        "president_party": null,
+        "supporting_coalitions": [
+          "National Pact for Stability and the Organization of Elections"
+        ],
+        "parliamentary_context": "شورای ریاست‌جمهوری انتقالی در ۷ فوریه ۲۰۲۶ پایان مأموریت داد؛ کشور فاقد رئیس‌جمهور منتخب و پارلمان ملیِ فعال با مأموریت انتخاباتی تازه است. توافق سیاسی ۲۱ فوریه ۲۰۲۶ چارچوبی برای ثبات و سازمان‌دهی انتخابات ایجاد کرد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "public_security",
+          "electoral_transition",
+          "humanitarian_relief",
+          "institutional_legitimacy",
+          "displacement",
+          "public_finance"
+        ],
+        "rule": "به علت بحران نهادی، از نسبت دادن اکثریت پارلمانی یا نفوذ عددی به احزاب خودداری کن؛ گروه‌های سیاسی، ائتلاف‌های گفت‌وگو و نهادهای اجرایی را جدا نگه دار."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "United Nations DPPA – Secretary-General report on BINUH, April 2026",
+            "url": "https://dppa.un.org/sites/default/files/2026-04/SG%20report%20on%20BINUH%20%28April%202026%29.pdf",
+            "date": "2026-04"
+          },
+          {
+            "name": "Reuters – Haiti enters political limbo as transition government's mandate ends",
+            "url": "https://www.reuters.com/world/americas/haiti-enters-political-limbo-transition-governments-mandate-ends-2026-02-07/",
+            "date": "2026-02-07"
+          },
+          {
+            "name": "CSIS – Haiti embarks on another rocky political transition",
+            "url": "https://www.csis.org/analysis/haiti-embarks-another-rocky-political-transition",
+            "date": "2026-02"
+          }
+        ],
+        "notes": "وضعیت انتقالی بر اساس گزارش سازمان ملل و گزارش‌های فوریه و آوریل ۲۰۲۶ ثبت شده است؛ ترکیب احزاب ثبت‌شده و وزن انتخاباتی آن‌ها تا برگزاری انتخابات جدید نامطمئن است."
       },
       "parliamentary_groups": []
     },
     "DOM": {
-      "country_name_fa": "دومینیکان",
+      "country_name_fa": "جمهوری دومینیکن",
       "country_name_en": "Dominican Republic",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ لوئیس آبینادر از حزب انقلاب مدرن در انتخابات ۲۰۲۴ دوباره انتخاب شد. حزب حاکم و متحدانش اکثریت بزرگ کنگره را در اختیار دارند.",
+      "parties": [
+        {
+          "id": "dom_prm",
+          "name_fa": "حزب انقلاب مدرن",
+          "name_en": "Modern Revolutionary Party (PRM)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و نیروی مسلط ائتلاف حاکم؛ پیروز انتخابات ۲۰۲۴.",
+          "ideological_profile": "سوسیال‌دموکراسی و میانه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_fp",
+          "name_fa": "نیروی مردم",
+          "name_en": "People's Force (La Fuerza del Pueblo, FP)",
+          "entity_type": "party",
+          "political_role": "یکی از نیروهای اصلی اپوزیسیون به رهبری لئونل فرناندز.",
+          "ideological_profile": "میانه‌چپ و دموکراسی اجتماعی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_pld",
+          "name_fa": "حزب آزادی‌بخش دومینیکن",
+          "name_en": "Dominican Liberation Party (PLD)",
+          "entity_type": "party",
+          "political_role": "حزب تاریخی و نیروی اپوزیسیون با نمایندگی پارلمانی.",
+          "ideological_profile": "سوسیال‌دموکراسی و مرکز-چپ",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_prd",
+          "name_fa": "حزب انقلابی دومینیکن",
+          "name_en": "Dominican Revolutionary Party (PRD)",
+          "entity_type": "party",
+          "political_role": "حزب قدیمی؛ در ائتلاف انتخاباتی با PRM و متحدانش همکاری داشته است.",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_prsc",
+          "name_fa": "حزب اصلاح‌طلب سوسیال‌مسیحی",
+          "name_en": "Social Christian Reformist Party (PRSC)",
+          "entity_type": "party",
+          "political_role": "حزب محافظه‌کار با سابقه طولانی و مشارکت در ائتلاف‌ها.",
+          "ideological_profile": "دموکراسی مسیحی و محافظه‌کاری",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_pcr",
+          "name_fa": "حزب نوسازی مدنی",
+          "name_en": "Civic Renovation Party (PCR)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک دارای نمایندگی از طریق ائتلاف انتخاباتی.",
+          "ideological_profile": "میانه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "dom_prm_allies",
+          "name_fa": "ائتلاف انتخاباتی PRM و متحدان",
+          "name_en": "PRM and allied electoral coalition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "ائتلاف گسترده حامی آبینادر و دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "dom_opposition",
+          "name_fa": "اپوزیسیون چندحزبی",
+          "name_en": "Multiparty opposition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "رقابت میان نیروی مردم، PLD و دیگر احزاب مخالف؛ فاقد رهبری واحد."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "dom_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "لوئیس آبینادر رئیس‌جمهور و رئیس قوه مجریه است.",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_congress",
+          "name_fa": "کنگره ملی",
+          "name_en": "National Congress",
+          "role": "مجلس نمایندگان ۱۹۰ کرسی و سنا ۳۲ کرسی؛ PRM و متحدانش اکثریت دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "dom_courts",
+          "name_fa": "قوه قضائیه و دادگاه قانون اساسی",
+          "name_en": "Judiciary and Constitutional Court",
+          "role": "نهادهای قضایی و نظارتی قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Luis Abinader",
+        "government_type": "presidential multiparty republic",
+        "president_party": "Modern Revolutionary Party (PRM)",
+        "supporting_coalitions": [
+          "PRM and allies"
+        ],
+        "parliamentary_context": "در انتخابات ۲۰۲۴، PRM و متحدان ۱۴۶ کرسی از ۱۹۰ کرسی مجلس نمایندگان و ۲۴ کرسی از ۳۲ کرسی سنا را به دست آوردند؛ نیروی مردم و PLD مهم‌ترین نیروهای اپوزیسیون‌اند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economy",
+          "public_security",
+          "migration",
+          "Haiti_relations",
+          "anti_corruption",
+          "public_services"
+        ],
+        "rule": "ائتلاف PRM و متحدان را از حزب PRM جدا نگه دار؛ کرسی‌های ائتلافی را نباید تماماً به حزب اصلی نسبت داد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – Dominican Republic Chamber of Deputies 2024",
+            "url": "https://data.ipu.org/parliament/DO/DO-LC01/election/DO-LC01-E20240519/",
+            "date": "2024-05-19"
+          },
+          {
+            "name": "Junta Central Electoral – 2024 election results",
+            "url": "https://elecciones2024.jce.gob.do/",
+            "date": "2024-05"
+          },
+          {
+            "name": "Dominican Republic government prospectus – Political Parties",
+            "url": "https://www.creditopublico.gob.do/Content/emisiones_de_titulos/externas/prospectus/25Prospectus%20Bonos%20DOP%20con%20Vencimiento%202036.pdf",
+            "date": "2025"
+          }
+        ],
+        "notes": "نتایج رسمی انتخابات ۲۰۲۴ و داده‌های IPU مبنای ترکیب پارلمان و جایگاه احزاب است."
       },
       "parliamentary_groups": []
     },
     "JAM": {
       "country_name_fa": "جامائیکا",
       "country_name_en": "Jamaica",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_constitutional_monarchy",
+      "government_model": "پادشاهی مشروطه پارلمانی در چارچوب کشورهای مشترک‌المنافع؛ حزب کارگر جامائیکا در انتخابات ۳ سپتامبر ۲۰۲۵ با ۳۵ کرسی از ۶۳ کرسی پیروز شد و اندرو هولنس نخست‌وزیر ماند.",
+      "parties": [
+        {
+          "id": "jam_jlp",
+          "name_fa": "حزب کارگر جامائیکا",
+          "name_en": "Jamaica Labour Party (JLP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم به رهبری اندرو هولنس؛ برنده انتخابات ۲۰۲۵ با ۳۵ کرسی.",
+          "ideological_profile": "محافظه‌کاری و لیبرالیسم اقتصادی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_pnp",
+          "name_fa": "حزب ملی مردم",
+          "name_en": "People's National Party (PNP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی به رهبری مارک گلدینگ؛ ۲۸ کرسی در انتخابات ۲۰۲۵.",
+          "ideological_profile": "سوسیال‌دموکراسی و ترقی‌خواهی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_jpp",
+          "name_fa": "حزب پیشرو جامائیکا",
+          "name_en": "Jamaica Progressive Party (JPP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک شرکت‌کننده در انتخابات ۲۰۲۵؛ بدون کرسی مجلس.",
+          "ideological_profile": "اصلاح‌طلبی و میانه‌گرایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_uic",
+          "name_fa": "اتحاد برای تغییر و استقلال",
+          "name_en": "United Independents' Congress (UIC)",
+          "entity_type": "party",
+          "political_role": "حزب/جنبش کوچک؛ در انتخابات ۲۰۲۵ نمایندگی مجلس به دست نیاورد.",
+          "ideological_profile": "حاکمیت‌گرایی و اصلاحات سیاسی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "jam_government",
+          "name_fa": "دولت حزب کارگر",
+          "name_en": "JLP parliamentary government",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "دولت اکثریت تک‌حزبی حزب کارگر جامائیکا."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "jam_opposition",
+          "name_fa": "اپوزیسیون حزب ملی مردم",
+          "name_en": "PNP parliamentary opposition",
+          "entity_type": "party_coalition",
+          "policy_positions": {
+            "domestic": "اپوزیسیون اصلی با ۲۸ کرسی مجلس نمایندگان."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "jam_pm",
+          "name_fa": "دفتر نخست‌وزیر",
+          "name_en": "Office of the Prime Minister",
+          "role": "اندرو هولنس رئیس دولت و رهبر حزب حاکم است.",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_parl",
+          "name_fa": "پارلمان جامائیکا",
+          "name_en": "Parliament of Jamaica",
+          "role": "مجلس نمایندگان ۶۳ کرسی و سنا با اعضای منصوب؛ JLP در مجلس اکثریت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_governor",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه در جامائیکا و مقام تشریفاتی قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "jam_courts",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "نهاد مستقل قضایی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "King Charles III",
+        "head_of_state_representative": "Governor-General Patrick Allen",
+        "prime_minister": "Andrew Holness",
+        "government_type": "parliamentary constitutional monarchy",
+        "government_party": "Jamaica Labour Party (JLP)",
+        "supporting_coalitions": [
+          "JLP"
+        ],
+        "parliamentary_context": "انتخابات ۳ سپتامبر ۲۰۲۵: JLP برابر ۳۵ کرسی و PNP برابر ۲۸ کرسی از ۶۳ کرسی مجلس نمایندگان."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economy",
+          "crime_prevention",
+          "public_services",
+          "tourism",
+          "employment",
+          "cost_of_living"
+        ],
+        "rule": "جامائیکا پادشاهی مشروطه پارلمانی است؛ رئیس کشور پادشاه و رئیس دولت نخست‌وزیر است. این دو مقام را یکی نکن."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Electoral Commission of Jamaica – General Election 2025",
+            "url": "https://www.ecj.com.jm/elections/other-information/general-election-2025/",
+            "date": "2025-09"
+          },
+          {
+            "name": "IPU Parline – Jamaica 2025 election",
+            "url": "https://data.ipu.org/parliament/JM/JM-LC01/election/JM-LC01-E20250903/",
+            "date": "2025-09-03"
+          },
+          {
+            "name": "Office of the Prime Minister – Year in Review 2025",
+            "url": "https://opm.gov.jm/wp-content/uploads/2026/04/Year-in-Review-2025E-.pdf",
+            "date": "2026-04"
+          }
+        ],
+        "notes": "ترکیب مجلس و نخست‌وزیری بر اساس انتخابات سپتامبر ۲۰۲۵ ثبت شده است."
       },
       "parliamentary_groups": []
     },
