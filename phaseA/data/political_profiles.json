@@ -1,18 +1,20 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 12,
-    "pending_countries": 162,
+    "researched_countries": 19,
+    "pending_countries": 155,
     "last_batch": [
-      "IND",
-      "JPN",
-      "SAU",
-      "PAK",
-      "CAN"
+      "TUR",
+      "UKR",
+      "ISR",
+      "ITA",
+      "BRA",
+      "EGY",
+      "ARE"
     ]
   },
   "notes": [
@@ -22,7 +24,8 @@
     "برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.",
     "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.",
     "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.",
-    "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است."
+    "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.",
+    "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند."
   ],
   "countries": {
     "USA": {
@@ -643,21 +646,204 @@
     "ISR": {
       "country_name_fa": "اسرائیل",
       "country_name_en": "Israel",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_multiparty_democracy_fragmented_knesset",
+      "government_model": "جمهوری پارلمانی با نظام انتخاباتی تناسبی و ائتلاف‌های چندحزبی",
+      "parties": [
+        {
+          "id": "isr_likud",
+          "name_fa": "لیکود",
+          "name_en": "Likud",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب انتخابات ۲۷ اکتبر ۲۰۲۶؛ ۲۷ کرسی و هسته بلوک راست",
+          "ideological_profile": "راست ملی‌گرا و محافظه‌کار",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_yashar",
+          "name_fa": "یاشار",
+          "name_en": "Yashar",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌گرای گادی آیزنکوت؛ ۲۱ کرسی و رهبر بلوک رقیب",
+          "ideological_profile": "میانه‌گرایی صهیونیستی و امنیت‌محور",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_joint",
+          "name_fa": "فهرست مشترک",
+          "name_en": "Joint List",
+          "entity_type": "electoral_alliance",
+          "political_role": "ائتلاف احزاب عربی؛ بخشی از ۱۹ کرسی احزاب عربی",
+          "ideological_profile": "نمایندگی سیاسی شهروندان عرب و چپ/ملی‌گرایی عربی",
+          "confidence": "medium"
+        },
+        {
+          "id": "isr_raam",
+          "name_fa": "رَعَم",
+          "name_en": "United Arab List (Ra'am)",
+          "entity_type": "party",
+          "political_role": "حزب عربی اسلام‌گرای عمل‌گرا؛ بالقوه تعیین‌کننده در مذاکرات ائتلافی",
+          "ideological_profile": "اسلام‌گرایی محافظه‌کار و عمل‌گرایی مدنی",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_democrats",
+          "name_fa": "دموکرات‌ها",
+          "name_en": "The Democrats",
+          "entity_type": "party",
+          "political_role": "حزب چپ‌میانه در بلوک مخالف نتانیاهو",
+          "ideological_profile": "سوسیال‌دموکراسی و لیبرالیسم",
+          "confidence": "medium"
+        },
+        {
+          "id": "isr_shas",
+          "name_fa": "شاس",
+          "name_en": "Shas",
+          "entity_type": "party",
+          "political_role": "حزب مذهبی سفاردی و متحد سنتی بلوک راست",
+          "ideological_profile": "محافظه‌کاری مذهبی و سیاست رفاهی",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_utj",
+          "name_fa": "یهودیت متحد توراتی",
+          "name_en": "United Torah Judaism",
+          "entity_type": "electoral_alliance",
+          "political_role": "ائتلاف احزاب حریدی و متحد سنتی بلوک راست",
+          "ideological_profile": "محافظه‌کاری مذهبی حریدی",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_otzma",
+          "name_fa": "قدرت یهودی",
+          "name_en": "Otzma Yehudit",
+          "entity_type": "party",
+          "political_role": "حزب راست افراطی در بلوک نتانیاهو",
+          "ideological_profile": "ملی‌گرایی مذهبی راست افراطی",
+          "confidence": "medium"
+        },
+        {
+          "id": "isr_yisrael",
+          "name_fa": "اسرائیل خانه ما",
+          "name_en": "Yisrael Beiteinu",
+          "entity_type": "party",
+          "political_role": "حزب راست سکولار و ملی‌گرا؛ موضع ائتلافی مستقل",
+          "ideological_profile": "ملی‌گرایی سکولار و راست‌گرایی",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "isr_security_hawks",
+          "name_fa": "جریان امنیت‌محور سخت‌گیر",
+          "name_en": "Security hawks",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "security": "تأکید بر بازدارندگی و اولویت امنیتی در سیاست منطقه‌ای."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "isr_civil_liberal",
+          "name_fa": "جریان لیبرال مدنی و قضایی",
+          "name_en": "Civil-liberal current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر استقلال دستگاه قضایی و محدودسازی تغییرات قضایی سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "isr_haredi",
+          "name_fa": "جریان مذهبی حریدی",
+          "name_en": "Haredi religious current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر خودمختاری آموزش دینی و معافیت‌ها و ترتیبات خدمت نظامی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "isr_caretaker_gov",
+          "name_fa": "دولت موقت و نخست‌وزیری",
+          "name_en": "Caretaker Government and Prime Minister",
+          "role": "بنیامین نتانیاهو تا تشکیل دولت جدید نخست‌وزیر موقت باقی می‌ماند",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_knesset",
+          "name_fa": "کنست",
+          "name_en": "Knesset",
+          "role": "پارلمان ۱۲۰ کرسی؛ انتخابات اکتبر ۲۰۲۶ بدون اکثریت روشن پایان یافت",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "اسحاق هرتزوگ نقش قانون اساسی در واگذاری مأموریت تشکیل دولت دارد",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_supreme_court",
+          "name_fa": "دیوان عالی",
+          "name_en": "Supreme Court",
+          "role": "نهاد قضایی عالی و کانون مناقشه اصلاحات قضایی",
+          "confidence": "high"
+        },
+        {
+          "id": "isr_security_establishment",
+          "name_fa": "نهادهای امنیتی و دفاعی",
+          "name_en": "Security and Defense Establishment",
+          "role": "نهادهای اثرگذار در سیاست امنیتی و دفاعی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Benjamin Netanyahu",
+        "party": "Likud",
+        "status": "caretaker_government_on_2026-11-05",
+        "election_2026": {
+          "date": "2026-10-27",
+          "likud_seats": 27,
+          "netanyahu_bloc_seats": 53,
+          "opposition_bloc_seats": 48,
+          "arab_parties_seats": 19,
+          "government_formation_mandate_assigned": false
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "security_policy",
+          "judicial_reform",
+          "conscription",
+          "settlements",
+          "religion_state",
+          "arab_citizenship",
+          "coalition_stability"
+        ],
+        "rule": "در ۵ نوامبر ۲۰۲۶ دولت نتانیاهو هنوز دولت موقت است؛ نتیجه انتخابات به انتقال فوری قدرت منجر نشده و هیچ ائتلاف تازه‌ای قطعی نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — Israel: 2026 Elections and Government Formation",
+            "url": "https://www.everycrsreport.com/reports/IN12751.html",
+            "date": "2026-10-30"
+          },
+          {
+            "name": "Associated Press — final Israeli election results and coalition deadlock",
+            "url": "https://apnews.com/article/3a793c0d07fdfe515390524b849d8674",
+            "date": "2026-11-05"
+          }
+        ],
+        "notes": "پروفایل دقیقاً وضعیت ۵ نوامبر را ثبت می‌کند؛ مأموریت تشکیل دولت در ۸ نوامبر به گادی آیزنکوت واگذار شد و عمداً به‌عنوان رویداد آینده نسبت به snapshot وارد نشده است."
+      }
     },
     "PSE": {
       "country_name_fa": "فلسطین",
@@ -795,23 +981,115 @@
       "parliamentary_groups": []
     },
     "ARE": {
-      "country_name_fa": "امارات",
+      "country_name_fa": "امارات متحده عربی",
       "country_name_en": "United Arab Emirates",
-      "system_type": null,
-      "government_model": null,
+      "system_type": "federal_hereditary_monarchy_without_party_system",
+      "government_model": "فدراسیون هفت امارت با نظام سلطنتی موروثی؛ شورای ملی فدرال نیمه‌انتخابی و بدون احزاب سیاسی",
       "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "factions": [
+        {
+          "id": "are_abu_dhabi",
+          "name_fa": "حاکمیت ابوظبی",
+          "name_en": "Abu Dhabi ruling establishment",
+          "entity_type": "ruling_family_current",
+          "policy_positions": {
+            "foreign_policy": "نقش برجسته در سیاست خارجی، امنیتی و انرژی فدراسیون."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "are_dubai",
+          "name_fa": "حاکمیت دبی",
+          "name_en": "Dubai ruling establishment",
+          "entity_type": "ruling_family_current",
+          "policy_positions": {
+            "economy": "تمرکز بر تجارت، خدمات مالی، گردشگری و پیوندهای جهانی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "are_federal",
+          "name_fa": "جریان هماهنگی فدرال",
+          "name_en": "Federal coordination current",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "domestic": "هماهنگی میان امارت‌ها و حفظ توازن نهادی فدراسیون."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "are_federal_supreme_council",
+          "name_fa": "شورای عالی اتحادیه",
+          "name_en": "Federal Supreme Council",
+          "role": "بالاترین نهاد فدرال متشکل از حاکمان هفت امارت؛ انتخاب رئیس کشور",
+          "confidence": "high"
+        },
+        {
+          "id": "are_presidency",
+          "name_fa": "ریاست کشور",
+          "name_en": "Federal Presidency",
+          "role": "رئیس کشور در تاریخ مبنا شیخ محمد بن زاید آل نهیان",
+          "confidence": "high"
+        },
+        {
+          "id": "are_cabinet",
+          "name_fa": "کابینه فدرال",
+          "name_en": "Federal Cabinet",
+          "role": "قوه مجریه فدرال به ریاست نخست‌وزیر محمد بن راشد آل مکتوم",
+          "confidence": "high"
+        },
+        {
+          "id": "are_fnc",
+          "name_fa": "شورای ملی فدرال",
+          "name_en": "Federal National Council",
+          "role": "نهاد مشورتی ۴۰ نفره؛ نیمی منتخب از کالج انتخاباتی و نیمی منصوب؛ بدون فراکسیون حزبی",
+          "confidence": "high"
+        },
+        {
+          "id": "are_emirates",
+          "name_fa": "حاکمان هفت امارت",
+          "name_en": "Rulers of the Seven Emirates",
+          "role": "مراکز قدرت محلی و اعضای شورای عالی اتحادیه",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Mohamed bin Zayed Al Nahyan",
+        "prime_minister": "Mohammed bin Rashid Al Maktoum",
+        "status": "federal hereditary monarchy; no party government"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "federal_emirate_balance",
+          "energy_policy",
+          "trade_and_finance",
+          "foreign_investment",
+          "regional_security",
+          "citizenship_and_labor"
+        ],
+        "rule": "هیچ حزب رسمی یا رقابت حزبی ثبت نشود؛ تصمیم‌ها از تعامل حاکمان امارت‌ها، خاندان‌های حاکم و کابینه فدرال مدل‌سازی شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — UAE Federal National Council 2023 election and absence of political parties",
+            "url": "https://data.ipu.org/parliament/AE/AE-LC01/election/AE-LC01-E20231007/",
+            "date": "2023-10-07"
+          },
+          {
+            "name": "IPU Parline — UAE Federal National Council profile",
+            "url": "https://data.ipu.org/parliament/AE/AE-LC01/",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "در امارات احزاب سیاسی وجود ندارند؛ نامزدهای شورای ملی فدرال مستقل‌اند و نصف اعضا منصوب می‌شوند. خالی بودن آرایه احزاب عمدی و مطابق ساختار سیاسی کشور است."
+      }
     },
     "QAT": {
       "country_name_fa": "قطر",
@@ -910,41 +1188,403 @@
     },
     "TUR": {
       "country_name_fa": "ترکیه",
-      "country_name_en": "Turkey",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "country_name_en": "Türkiye",
+      "system_type": "presidential_multiparty_dominant_executive_system",
+      "government_model": "جمهوری ریاستی؛ دولت تحت ریاست‌جمهوری با پارلمان چندحزبی و ائتلاف‌های متغیر",
+      "parties": [
+        {
+          "id": "tur_akp",
+          "name_fa": "حزب عدالت و توسعه",
+          "name_en": "Justice and Development Party (AKP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و هسته دولت",
+          "ideological_profile": "محافظه‌کاری، اسلام‌گرایی سیاسی و توسعه‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_mhp",
+          "name_fa": "حزب حرکت ملی",
+          "name_en": "Nationalist Movement Party (MHP)",
+          "entity_type": "party",
+          "political_role": "متحد اصلی پارلمانی دولت و شریک ائتلاف جمهور",
+          "ideological_profile": "ملی‌گرایی ترک و راست‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_yeni",
+          "name_fa": "حزب ینی",
+          "name_en": "YENİ Party",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون پارلمانی در ساختار ثبت‌شده سپتامبر ۲۰۲۶؛ حاصل انشعاب گسترده از CHP",
+          "ideological_profile": "میانه‌گرایی و اپوزیسیون جمهوری‌خواه",
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_dem",
+          "name_fa": "حزب برابری و دموکراسی خلق‌ها",
+          "name_en": "Peoples’ Equality and Democracy Party (DEM)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ نماینده اصلی جریان کردی و چپ دموکراتیک",
+          "ideological_profile": "چپ، حقوق اقلیت‌ها و تمرکززدایی",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_chp",
+          "name_fa": "حزب جمهوری‌خواه خلق",
+          "name_en": "Republican People’s Party (CHP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ پس از انشعاب ۲۰۲۶ کوچک‌تر شده",
+          "ideological_profile": "سکولاریسم کمالیستی و سوسیال‌دموکراسی",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_iyi",
+          "name_fa": "حزب خوب",
+          "name_en": "İYİ Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون ملی‌گرا",
+          "ideological_profile": "ملی‌گرایی مدنی و راست میانه",
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_yol",
+          "name_fa": "حزب راه نو",
+          "name_en": "New Path Party (Yeni Yol)",
+          "entity_type": "party",
+          "political_role": "گروه کوچک پارلمانی با ریشه در احزاب محافظه‌کار مخالف دولت",
+          "ideological_profile": "محافظه‌کاری دموکراتیک",
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_tip",
+          "name_fa": "حزب کارگران ترکیه",
+          "name_en": "Workers’ Party of Turkey (TİP)",
+          "entity_type": "party",
+          "political_role": "چپ پارلمانی کوچک",
+          "ideological_profile": "سوسیالیسم و چپ‌گرایی",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tur_akp_pragmatic",
+          "name_fa": "جریان عمل‌گرای حزب عدالت و توسعه",
+          "name_en": "AKP pragmatic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر ثبات اقتصادی و جذب سرمایه در کنار حفظ پایگاه محافظه‌کار."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_akp_conservative",
+          "name_fa": "جریان محافظه‌کار اجتماعی در AKP",
+          "name_en": "AKP social-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر ارزش‌های دینی و محافظه‌کاری اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_mhp_nationalist",
+          "name_fa": "جریان ملی‌گرای ائتلاف دولت",
+          "name_en": "Nationalist governing current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "security": "تأکید بر وحدت ملی، امنیت داخلی و مواضع سخت‌گیرانه در مسائل هویتی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_dem_localist",
+          "name_fa": "جریان دموکراتیک و تمرکززدا",
+          "name_en": "Democratic decentralist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر حقوق فرهنگی، نمایندگی محلی و تمرکززدایی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tur_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قوه مجریه؛ رجب طیب اردوغان رئیس‌جمهور در تاریخ مبنا",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_tbmm",
+          "name_fa": "مجلس ملی کبیر ترکیه",
+          "name_en": "Grand National Assembly",
+          "role": "قوه قانون‌گذاری؛ دولت به اکثریت پایدار پارلمانی متکی نیست و ائتلاف‌ها اهمیت دارند",
+          "confidence": "high"
+        },
+        {
+          "id": "tur_judiciary",
+          "name_fa": "نظام قضایی و شورای قضات و دادستان‌ها",
+          "name_en": "Judiciary and Council of Judges and Prosecutors",
+          "role": "نهادهای قضایی و نظارتی با استقلال و رابطه سیاسی محل مناقشه",
+          "confidence": "medium"
+        },
+        {
+          "id": "tur_military_security",
+          "name_fa": "نهادهای امنیتی و نیروهای مسلح",
+          "name_en": "Security institutions and armed forces",
+          "role": "نهادهای دولتی مهم در سیاست امنیتی و خارجی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Recep Tayyip Erdoğan",
+        "governing_party": "Justice and Development Party (AKP)",
+        "parliamentary_support": [
+          "AKP",
+          "MHP",
+          "HÜDA PAR",
+          "New Welfare Party"
+        ],
+        "status": "AKP leads executive; governing alliance holds a parliamentary majority according to September 2026 composition"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "inflation",
+          "currency",
+          "migration",
+          "Kurdish_question",
+          "secularism",
+          "national_security",
+          "EU_relations",
+          "regional_policy"
+        ],
+        "rule": "واکنش سیاسی بر اساس رقابت ریاست‌جمهوری، ائتلاف پارلمانی، شکاف‌های هویتی و فشار اقتصادی محاسبه شود؛ کرسی‌ها فقط با snapshot تاریخ‌دار استفاده شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Republic of Türkiye — parliamentary composition disclosed in sovereign filing (14 Sep 2026)",
+            "url": "https://www.sec.gov/Archives/edgar/data/869687/000119312526399064/d66322d424b5.htm",
+            "date": "2026-09-14"
+          },
+          {
+            "name": "Grand National Assembly of Türkiye — official parliamentary records",
+            "url": "https://www.tbmm.gov.tr/",
+            "date": "2026-08-31"
+          },
+          {
+            "name": "IPU Parline — Türkiye parliamentary election cycle",
+            "url": "https://data.ipu.org/elections/?region=&structure=any",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "ترکیب کرسی‌ها بر مبنای داده سپتامبر ۲۰۲۶ است؛ تغییرات بعدی نوامبر به تاریخ شروع سناریو تعمیم داده نشده‌اند. انتخابات بعدی طبق چرخه ثبت‌شده در ۲۰۲۸ است."
+      }
     },
     "EGY": {
       "country_name_fa": "مصر",
       "country_name_en": "Egypt",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_authoritarian_multiparty_dominant_coalition",
+      "government_model": "جمهوری ریاستی متمرکز با رقابت حزبی محدود و ائتلاف حامی دولت در پارلمان",
+      "parties": [
+        {
+          "id": "egy_nations_future",
+          "name_fa": "آینده میهن",
+          "name_en": "Nation’s Future Party",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب حامی دولت در مجلس جدید",
+          "ideological_profile": "حامی دولت، محافظه‌کار و توسعه‌گرا",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_homeland_defenders",
+          "name_fa": "مدافعان وطن",
+          "name_en": "Homeland Defenders Party",
+          "entity_type": "party",
+          "political_role": "حزب حامی دولت و شریک ائتلاف پارلمانی",
+          "ideological_profile": "ملی‌گرا و حامی نهادهای دولتی",
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_national_front",
+          "name_fa": "جبهه ملی",
+          "name_en": "National Front Party",
+          "entity_type": "party",
+          "political_role": "حزب حامی دولت با حضور در ائتلاف اکثریت",
+          "ideological_profile": "میانه‌رو و حامی دولت",
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_republican",
+          "name_fa": "حزب جمهوری‌خواه خلق",
+          "name_en": "Republican People’s Party",
+          "entity_type": "party",
+          "political_role": "حزب حامی دولت",
+          "ideological_profile": "محافظه‌کاری و میانه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_wafd",
+          "name_fa": "وفد جدید",
+          "name_en": "New Wafd Party",
+          "entity_type": "party",
+          "political_role": "حزب قدیمی با نمایندگی محدود؛ در ائتلاف غالب یا موضع مستقل بسته به موضوع",
+          "ideological_profile": "لیبرالیسم ملی و مشروطه‌خواهی تاریخی",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_social_dem",
+          "name_fa": "حزب سوسیال دموکرات مصر",
+          "name_en": "Egyptian Social Democratic Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون قانونی و اصلاح‌طلب",
+          "ideological_profile": "سوسیال‌دموکراسی و لیبرالیسم مدنی",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_reform",
+          "name_fa": "اصلاح و توسعه",
+          "name_en": "Reform and Development Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "اصلاح‌طلبی و توسعه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_justice",
+          "name_fa": "حزب عدالت",
+          "name_en": "Justice Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "میانه‌گرایی و اصلاحات نهادی",
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_nour",
+          "name_fa": "النور",
+          "name_en": "Al-Nour Party",
+          "entity_type": "party",
+          "political_role": "حزب سلفی با حضور محدود در پارلمان",
+          "ideological_profile": "اسلام‌گرایی سلفی محافظه‌کار",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "egy_state_development",
+          "name_fa": "جریان توسعه‌گرای حامی دولت",
+          "name_en": "State-developmentalist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "تأکید بر پروژه‌های دولتی، سرمایه‌گذاری زیرساختی و ثبات کلان."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "egy_security_establishment",
+          "name_fa": "جریان امنیت‌محور حکومتی",
+          "name_en": "Security-centered governing current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "security": "اولویت ثبات سیاسی، امنیت داخلی و حفظ ساختار دولت."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "egy_civil_opposition",
+          "name_fa": "جریان مدنی و اصلاح‌طلب",
+          "name_en": "Civil reform opposition",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر اصلاحات سیاسی، حقوق مدنی و پاسخ‌گویی نهادی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "egy_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قدرت اجرایی؛ عبدالفتاح السیسی",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_cabinet",
+          "name_fa": "کابینه و نخست‌وزیری",
+          "name_en": "Cabinet and Prime Minister",
+          "role": "قوه مجریه به ریاست مصطفی مدبولی",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_parliament",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۵۹۶ کرسی با اکثریت حامی دولت و اپوزیسیون محدود",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_armed_forces",
+          "name_fa": "نیروهای مسلح",
+          "name_en": "Egyptian Armed Forces",
+          "role": "نهاد امنیتی و اقتصادی مهم با نفوذ نهادی گسترده",
+          "confidence": "high"
+        },
+        {
+          "id": "egy_judiciary",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "نهاد قضایی و قانون اساسی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Abdel Fattah el-Sisi",
+        "prime_minister": "Mostafa Madbouly",
+        "governing_coalition": [
+          "Nation’s Future",
+          "Homeland Defenders",
+          "National Front",
+          "Republican People’s"
+        ],
+        "status": "incumbent government on 2026-11-05"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_crisis",
+          "subsidies",
+          "public_order",
+          "civil_liberties",
+          "military_economy",
+          "regional_security",
+          "foreign_debt"
+        ],
+        "rule": "رقابت انتخاباتی محدود است؛ قدرت اجرایی و مراکز نهادی باید وزن بیشتری از رقابت حزبی عادی داشته باشند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Egypt State Information Service — National Elections Authority final results for 2025 House election",
+            "url": "https://sis.gov.eg/en/media-center/news/nea-reports-3241-voter-turnout-as-egypt-completes-longest-parliamentary-election/",
+            "date": "2026-01-10"
+          },
+          {
+            "name": "Egypt State Information Service — opposition and party seat indicators",
+            "url": "https://sis.gov.eg/en/media-center/press-releases/sis-key-preliminary-indicators-of-house-of-representatives-election-results/",
+            "date": "2026-01-06"
+          }
+        ],
+        "notes": "ترکیب احزاب از داده رسمی دولت درباره انتخابات مجلس ۲۰۲۵/۲۰۲۶ گرفته شده؛ درصد نفوذ یا سهم دقیق جناحی ثبت نشده است."
+      }
     },
     "LBY": {
       "country_name_fa": "لیبی",
@@ -1959,21 +2599,203 @@
     "ITA": {
       "country_name_fa": "ایتالیا",
       "country_name_en": "Italy",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_multiparty_democracy_coalition_government",
+      "government_model": "جمهوری پارلمانی با دو مجلس و دولت ائتلافی",
+      "parties": [
+        {
+          "id": "ita_fdi",
+          "name_fa": "برادران ایتالیا",
+          "name_en": "Brothers of Italy (FdI)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب ائتلاف حاکم",
+          "ideological_profile": "محافظه‌کاری ملی و راست‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_league",
+          "name_fa": "اتحاد / لیگ",
+          "name_en": "League (Lega)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم",
+          "ideological_profile": "راست پوپولیست، منطقه‌گرایی و ملی‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_fi",
+          "name_fa": "فورتسا ایتالیا",
+          "name_en": "Forza Italia",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حاکم",
+          "ideological_profile": "محافظه‌کاری لیبرال و میانه‌راست",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_noi",
+          "name_fa": "ما میانه‌روها",
+          "name_en": "Us Moderates (Noi Moderati)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک ائتلاف حاکم",
+          "ideological_profile": "میانه‌راست و مسیحی‌دموکرات",
+          "confidence": "medium"
+        },
+        {
+          "id": "ita_pd",
+          "name_fa": "حزب دموکرات",
+          "name_en": "Democratic Party (PD)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین نیروی اپوزیسیون",
+          "ideological_profile": "سوسیال‌دموکراسی و ترقی‌خواهی",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_m5s",
+          "name_fa": "جنبش پنج ستاره",
+          "name_en": "Five Star Movement (M5S)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون",
+          "ideological_profile": "پوپولیسم چندگرایانه و سیاست ضدتشکیلاتی با گرایش‌های متغیر",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_avs",
+          "name_fa": "ائتلاف سبزها و چپ",
+          "name_en": "Greens and Left Alliance (AVS)",
+          "entity_type": "electoral_alliance",
+          "political_role": "اپوزیسیون چپ و سبز",
+          "ideological_profile": "محیط‌زیست‌گرایی و چپ",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_az",
+          "name_fa": "اکسیون",
+          "name_en": "Action (Azione)",
+          "entity_type": "party",
+          "political_role": "نیروی میانه‌رو با موضع مستقل",
+          "ideological_profile": "لیبرالیسم اجتماعی و میانه‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ita_iv",
+          "name_fa": "ایتالیا زنده",
+          "name_en": "Italia Viva",
+          "entity_type": "party",
+          "political_role": "نیروی میانه‌رو و اپوزیسیون/مستقل",
+          "ideological_profile": "لیبرالیسم و اصلاح‌طلبی میانه‌رو",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ita_fdi_national",
+          "name_fa": "جریان ملی‌محافظه‌کار",
+          "name_en": "National-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "حمایت از جایگاه ایتالیا در ناتو و اتحادیه اروپا همراه با تأکید بر حاکمیت ملی.",
+            "domestic": "سیاست‌های محافظه‌کارانه در مسائل اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ita_league_regional",
+          "name_fa": "جریان منطقه‌گرا و شمال‌محور",
+          "name_en": "League regionalist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تمرکز بر خودمختاری منطقه‌ای و منافع اقتصادی شمال ایتالیا."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ita_fi_moderate",
+          "name_fa": "جریان میانه‌رو و اروپایی",
+          "name_en": "Forza Italia moderate current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "حمایت از بازار آزاد و پیوندهای اقتصادی اروپا."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ita_cabinet",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Council of Ministers",
+          "role": "قوه مجریه به ریاست جورجیا ملونی",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_chamber",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Chamber of Deputies",
+          "role": "مجلس منتخب ۴۰۰ کرسی",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_senate",
+          "name_fa": "سنای جمهوری",
+          "name_en": "Senate of the Republic",
+          "role": "مجلس دوم با اختیارات قانون‌گذاری",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency of the Republic",
+          "role": "نهاد رئیس کشور و داور قانون اساسی؛ سرجیو ماتارلا",
+          "confidence": "high"
+        },
+        {
+          "id": "ita_regions",
+          "name_fa": "دولت‌های منطقه‌ای",
+          "name_en": "Regional Governments",
+          "role": "مراکز قدرت منطقه‌ای در نظام غیرمتمرکز",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Giorgia Meloni",
+        "party": "Brothers of Italy",
+        "coalition": [
+          "Brothers of Italy",
+          "League",
+          "Forza Italia",
+          "Us Moderates"
+        ],
+        "status": "incumbent coalition government on 2026-11-05"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "budget_and_debt",
+          "migration",
+          "EU_policy",
+          "energy",
+          "social_policy",
+          "regional_autonomy",
+          "coalition_unity"
+        ],
+        "rule": "ثبات دولت به هماهنگی سه حزب اصلی ائتلاف و چانه‌زنی بر سر بودجه، مهاجرت و سیاست اروپا وابسته است."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Italian Government — Presidency of the Council of Ministers",
+            "url": "https://www.governo.it/en",
+            "date": "2026-11-26"
+          },
+          {
+            "name": "Polling Forecast — Chamber of Deputies party composition, updated Nov 2026",
+            "url": "https://www.pollingforecast.com/it/members?lang=en",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "هویت نخست‌وزیر از وب‌سایت رسمی دولت تأیید شده است. ترکیب مجلس در منبع ثانویه تاریخ‌دار بررسی شده؛ داده کرسی‌ها برای مدل پایه و نه پیش‌بینی انتخابات بعدی است."
+      }
     },
     "ESP": {
       "country_name_fa": "اسپانیا",
@@ -2472,21 +3294,185 @@
     "UKR": {
       "country_name_fa": "اوکراین",
       "country_name_en": "Ukraine",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_multiparty_republic_under_martial_law",
+      "government_model": "جمهوری نیمه‌ریاستی با پارلمان چندحزبی؛ حکومت در شرایط جنگ و حکومت نظامی",
+      "parties": [
+        {
+          "id": "ukr_servant",
+          "name_fa": "خدمتگزار مردم",
+          "name_en": "Servant of the People",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و بزرگ‌ترین نیروی پارلمانی؛ اکثریت مستقل آن در عمل تضعیف شده",
+          "ideological_profile": "میانه‌گرایی و پوپولیسم اصلاح‌طلبانه",
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_eu_solidarity",
+          "name_fa": "همبستگی اروپایی",
+          "name_en": "European Solidarity",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پارلمانی",
+          "ideological_profile": "محافظه‌کاری ملی و ادغام عمیق با اتحادیه اروپا و ناتو",
+          "confidence": "high"
+        },
+        {
+          "id": "ukr_batkivshchyna",
+          "name_fa": "باتکیوشچینا / میهن",
+          "name_en": "Batkivshchyna",
+          "entity_type": "party",
+          "political_role": "نیروی پارلمانی باسابقه با مواضع متغیر و چانه‌زنی مستقل",
+          "ideological_profile": "میانه‌گرایی ملی و حمایت اجتماعی",
+          "confidence": "high"
+        },
+        {
+          "id": "ukr_holos",
+          "name_fa": "صدای مردم",
+          "name_en": "Holos",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلاح‌طلب و pro-European",
+          "ideological_profile": "لیبرالیسم و اصلاحات نهادی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_platform",
+          "name_fa": "سکوی زندگی و صلح",
+          "name_en": "Platform for Life and Peace",
+          "entity_type": "parliamentary_group",
+          "political_role": "گروه پارلمانی جداشده از نیروهای پیشین طرفدار روسیه؛ تحت محدودیت‌های دوران جنگ",
+          "ideological_profile": "گرایش‌های متنوع؛ سابقه سیاسی مرتبط با اپوزیسیون پیشین",
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_dovira",
+          "name_fa": "اعتماد",
+          "name_en": "Dovira",
+          "entity_type": "parliamentary_group",
+          "political_role": "گروه نمایندگان مستقل و منطقه‌ای",
+          "ideological_profile": "عمل‌گرایی محلی",
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_future",
+          "name_fa": "برای آینده",
+          "name_en": "For the Future",
+          "entity_type": "parliamentary_group",
+          "political_role": "گروه پارلمانی با پیوندهای منطقه‌ای",
+          "ideological_profile": "عمل‌گرایی و منافع محلی",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ukr_presidential_reform",
+          "name_fa": "جریان اصلاح‌طلب نزدیک به ریاست‌جمهوری",
+          "name_en": "Presidential reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حمایت از ادغام اروپایی و همکاری امنیتی با شرکای غربی.",
+            "domestic": "اصلاحات اداری و مبارزه با فساد."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_national_conservative",
+          "name_fa": "جریان ملی‌گرا و محافظه‌کار",
+          "name_en": "National-conservative current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر هویت ملی و سیاست‌های امنیتی سخت‌گیرانه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_local_pragmatists",
+          "name_fa": "جریان عمل‌گرایان منطقه‌ای",
+          "name_en": "Regional pragmatic current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "تأکید بر بازسازی، بودجه محلی و منافع حوزه‌های انتخابیه."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ukr_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی رهبری سیاسی و فرماندهی عالی در وضعیت جنگ؛ ولودیمیر زلنسکی",
+          "confidence": "high"
+        },
+        {
+          "id": "ukr_cabinet",
+          "name_fa": "کابینه وزیران",
+          "name_en": "Cabinet of Ministers",
+          "role": "قوه مجریه؛ نخست‌وزیر سرگی کوریتسکی در داده سپتامبر ۲۰۲۶",
+          "confidence": "medium"
+        },
+        {
+          "id": "ukr_rada",
+          "name_fa": "ورخوونا رادا",
+          "name_en": "Verkhovna Rada",
+          "role": "پارلمان تک‌مجلسی؛ فعالیت و تقویم سیاسی متأثر از حکومت نظامی",
+          "confidence": "high"
+        },
+        {
+          "id": "ukr_military",
+          "name_fa": "فرماندهی نیروهای مسلح",
+          "name_en": "Armed Forces Command",
+          "role": "مرکز نهادی کلیدی در تصمیم‌های دفاعی و وضعیت جنگ",
+          "confidence": "high"
+        },
+        {
+          "id": "ukr_security",
+          "name_fa": "نهادهای امنیتی و اطلاعاتی",
+          "name_en": "Security and intelligence institutions",
+          "role": "نهادهای امنیتی و اطلاعاتی دولتی",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Volodymyr Zelenskyy",
+        "prime_minister": "Serhiy Koretskyi",
+        "governing_party": "Servant of the People",
+        "status": "Wartime government; parliamentary support requires issue-by-issue coalition building"
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "war_and_ceasefire",
+          "foreign_aid",
+          "EU_accession",
+          "reconstruction",
+          "anti_corruption",
+          "mobilization_policy",
+          "regional_governance"
+        ],
+        "rule": "در وضعیت حکومت نظامی، تصمیم‌گیری امنیتی و تداوم جنگ بر رقابت عادی انتخاباتی تقدم دارد؛ انتخابات و پارلمان نباید مانند دوره عادی مدل‌سازی شوند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "CIA World Leaders — Ukraine cabinet, updated 4 Sep 2026",
+            "url": "https://www.cia.gov/resources/government/ukraine/",
+            "date": "2026-09-04"
+          },
+          {
+            "name": "IPU Parline — Ukraine parliamentary election record",
+            "url": "https://data.ipu.org/elections/?region=&structure=any",
+            "date": "2026-11-27"
+          },
+          {
+            "name": "Verkhovna Rada — official website",
+            "url": "https://www.rada.gov.ua/en",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "به دلیل جنگ و نبود انتخابات پارلمانی جدید، ترکیب سیاسی بر پایه مجلس منتخب ۲۰۱۹ و گروه‌های پارلمانی بعدی توصیف شده؛ از درج سهم کرسی دقیق و به‌روز بدون منبع تاریخ‌دار خودداری شده است."
+      }
     },
     "BLR": {
       "country_name_fa": "بلاروس",
@@ -4582,21 +5568,221 @@
     "BRA": {
       "country_name_fa": "برزیل",
       "country_name_en": "Brazil",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_presidential_multiparty_democracy",
+      "government_model": "جمهوری فدرال ریاستی با نظام چندحزبی و ائتلاف‌های انتخاباتی و پارلمانی",
+      "parties": [
+        {
+          "id": "bra_pt",
+          "name_fa": "حزب کارگران",
+          "name_en": "Workers’ Party (PT)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور لوئیز ایناسیو لولا دا سیلوا؛ برنده انتخابات ریاست‌جمهوری ۲۰۲۶",
+          "ideological_profile": "چپ میانه و سوسیال‌دموکراسی",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_pl",
+          "name_fa": "حزب لیبرال",
+          "name_en": "Liberal Party (PL)",
+          "entity_type": "party",
+          "political_role": "حزب رقیب اصلی در انتخابات ریاست‌جمهوری ۲۰۲۶؛ فلیپ بولسونارو نامزد آن بود",
+          "ideological_profile": "راست محافظه‌کار و بولسوناریسم",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_uniao",
+          "name_fa": "اتحادیه برزیل",
+          "name_en": "União Brasil",
+          "entity_type": "party",
+          "political_role": "حزب بزرگ میانه‌راست با نفوذ منطقه‌ای",
+          "ideological_profile": "میانه‌راست و عمل‌گرایی انتخاباتی",
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_pp",
+          "name_fa": "حزب پیشرو",
+          "name_en": "Progressistas (PP)",
+          "entity_type": "party",
+          "political_role": "نیروی محافظه‌کار و ائتلاف‌پذیر",
+          "ideological_profile": "محافظه‌کاری و راست میانه",
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_psd",
+          "name_fa": "حزب سوسیال دموکرات",
+          "name_en": "Social Democratic Party (PSD)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو با ائتلاف‌پذیری بالا",
+          "ideological_profile": "میانه‌گرایی و عمل‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_mdb",
+          "name_fa": "جنبش دموکراتیک برزیل",
+          "name_en": "Brazilian Democratic Movement (MDB)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌رو با حضور گسترده در کنگره و سیاست ایالتی",
+          "ideological_profile": "میانه‌گرایی و ائتلاف‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_psb",
+          "name_fa": "حزب سوسیالیست برزیل",
+          "name_en": "Brazilian Socialist Party (PSB)",
+          "entity_type": "party",
+          "political_role": "متحد چپ میانه و شریک ائتلاف انتخاباتی لولا",
+          "ideological_profile": "سوسیالیسم دموکراتیک و چپ میانه",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_republicanos",
+          "name_fa": "جمهوری‌خواهان",
+          "name_en": "Republicanos",
+          "entity_type": "party",
+          "political_role": "حزب محافظه‌کار با پیوندهای مهم اجتماعی و مذهبی",
+          "ideological_profile": "محافظه‌کاری اجتماعی",
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_psol",
+          "name_fa": "سوسیالیسم و آزادی",
+          "name_en": "Socialism and Liberty Party (PSOL)",
+          "entity_type": "party",
+          "political_role": "چپ ترقی‌خواه؛ بخشی از ائتلاف گسترده‌تر حامی لولا",
+          "ideological_profile": "سوسیالیسم دموکراتیک و چپ ترقی‌خواه",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_novo",
+          "name_fa": "نوو",
+          "name_en": "New Party (NOVO)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون لیبرال اقتصادی",
+          "ideological_profile": "لیبرالیسم اقتصادی و دولت کوچک",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bra_pt_developmental",
+          "name_fa": "جریان توسعه‌گرای حزب کارگران",
+          "name_en": "PT developmentalist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "نقش فعال دولت، سیاست صنعتی و حمایت اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_pt_moderate",
+          "name_fa": "جریان میانه‌رو و ائتلاف‌گرا",
+          "name_en": "PT coalition pragmatists",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "انضباط مالی نسبی و سازش با احزاب میانه برای تصویب قوانین."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bra_bolsonarist",
+          "name_fa": "جریان بولسوناریست",
+          "name_en": "Bolsonarist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "محافظه‌کاری اجتماعی، ضدیت با چپ و تأکید بر نظم و ارزش‌های سنتی."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "bra_centrão",
+          "name_fa": "بلوک مرکزگرای کنگره",
+          "name_en": "Centrão",
+          "entity_type": "cross_party_parliamentary_bloc",
+          "policy_positions": {
+            "economy": "عمل‌گرایی ائتلافی و چانه‌زنی بر سر بودجه و منافع ایالتی."
+          },
+          "confidence": "high"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bra_presidency",
+          "name_fa": "ریاست‌جمهوری فدرال",
+          "name_en": "Presidency",
+          "role": "لولا در ۵ نوامبر ۲۰۲۶ رئیس‌جمهور مستقر و رئیس‌جمهور منتخب برای دوره بعدی است؛ آغاز دوره جدید در ژانویه ۲۰۲۷",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_congress",
+          "name_fa": "کنگره ملی",
+          "name_en": "National Congress",
+          "role": "مجلس نمایندگان و سنا؛ ترکیب جدید انتخابات ۲۰۲۶ باید جدا از کرسی‌های دوره پیشین ثبت شود",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_supreme_court",
+          "name_fa": "دیوان عالی فدرال",
+          "name_en": "Supreme Federal Court",
+          "role": "نهاد قضایی عالی و ناظر قانون اساسی",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_governors",
+          "name_fa": "دولت‌های ایالتی",
+          "name_en": "State Governments",
+          "role": "مراکز قدرت فدرال با نفوذ در امنیت عمومی، بودجه و سیاست محلی",
+          "confidence": "high"
+        },
+        {
+          "id": "bra_electoral_court",
+          "name_fa": "دادگاه عالی انتخابات",
+          "name_en": "Superior Electoral Court",
+          "role": "نهاد مدیریت و نظارت بر انتخابات",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Luiz Inácio Lula da Silva",
+        "party": "Workers’ Party (PT)",
+        "president_elect_for_next_term": "Luiz Inácio Lula da Silva",
+        "status": "incumbent on 2026-11-05; reelected on 2026-10-25, next term not yet begun",
+        "election_2026": {
+          "runoff_date": "2026-10-25",
+          "lula_valid_vote_share": 51.79,
+          "flavio_bolsonaro_valid_vote_share": 48.21
+        }
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "social_spending",
+          "fiscal_policy",
+          "environment_and_amazon",
+          "agribusiness",
+          "federalism",
+          "judicial_independence",
+          "foreign_policy"
+        ],
+        "rule": "لولا در تاریخ شروع هنوز رئیس‌جمهور دوره جاری است؛ پیروزی مجدد به معنی آغاز فوری دوره جدید نیست. ائتلاف پارلمانی را نباید با ائتلاف انتخاباتی یکسان فرض کرد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Tribunal Superior Eleitoral — Lula reelected, official result announcement",
+            "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026",
+            "date": "2026-10-26"
+          },
+          {
+            "name": "Congressional Research Service — Brazil: Background and U.S. Relations, 2026 election update",
+            "url": "https://www.everycrsreport.com/files/2026-10-29_R46236_423f4844cafb269256f325c62aa917910f1254d1.html",
+            "date": "2026-10-29"
+          }
+        ],
+        "notes": "نتیجه ریاست‌جمهوری بر پایه مرجع رسمی انتخابات برزیل است. در ۵ نوامبر لولا هنوز رئیس‌جمهور دوره جاری بود؛ از درج ترکیب نهایی کرسی‌های کنگره ۲۰۲۶ بدون داده معتبر تفکیک‌شده خودداری شده است."
+      }
     },
     "ARG": {
       "country_name_fa": "آرژانتین",
