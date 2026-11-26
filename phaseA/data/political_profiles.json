@@ -5,16 +5,16 @@
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 61,
-    "pending_countries": 113,
+    "researched_countries": 68,
+    "pending_countries": 106,
     "last_batch": [
-      "BHR",
-      "OMN",
-      "YEM",
-      "LBY",
-      "TUN",
-      "ISL",
-      "SVK"
+      "HUN",
+      "ROU",
+      "BGR",
+      "HRV",
+      "SVN",
+      "EST",
+      "LVA"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.",
@@ -9341,59 +9341,539 @@
     "HUN": {
       "country_name_fa": "مجارستان",
       "country_name_en": "Hungary",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_competitive_multiparty_elections",
+      "government_model": "جمهوری پارلمانی؛ دولت منتخب مجلس و رقابت حزبی چندگانه",
+      "parties": [
+        {
+          "id": "hun_tisza",
+          "name_fa": "حزب احترام و آزادی (تیسا)",
+          "name_en": "Respect and Freedom Party (TISZA)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم؛ پیتر ماگیار پس از انتخابات آوریل ۲۰۲۶ نخست‌وزیر شد.",
+          "ideological_profile": "میانه‌رو تا میانه‌راست، اصلاح‌طلب نهادی و طرفدار نزدیکی دوباره با اتحادیه اروپا؛ ائتلاف انتخاباتی گسترده.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hun_fidesz_kdnp",
+          "name_fa": "ائتلاف فیدس–حزب دموکرات مسیحی",
+          "name_en": "Fidesz–KDNP",
+          "entity_type": "electoral_alliance",
+          "political_role": "اصلی‌ترین نیروی مخالف پس از شکست انتخاباتی و پایان ۱۶ سال حکومت فیدس.",
+          "ideological_profile": "محافظه‌کار ملی، پوپولیست راست، حاکمیت‌گرا و محافظه‌کار اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hun_mihazank",
+          "name_fa": "جنبش میهن ما",
+          "name_en": "Our Homeland Movement (Mi Hazánk)",
+          "entity_type": "party",
+          "political_role": "نیروی راست رادیکال و ملی‌گرا در پارلمان؛ مستقل از ائتلاف فیدس.",
+          "ideological_profile": "ملی‌گرایی رادیکال، راست افراطی، ضد مهاجرت و بدبین به برخی نهادهای فراملی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "hun_tisza_reform",
+          "name_fa": "جریان اصلاح نهادی تیسا",
+          "name_en": "TISZA institutional reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "مبارزه با فساد، بازسازی نهادهای عمومی و کاهش تمرکز قدرت.",
+            "economy": "بهبود دسترسی به منابع اتحادیه اروپا و اصلاح مدیریت مالی دولت.",
+            "foreign_policy": "بازسازی روابط با اتحادیه اروپا و حفظ عضویت در ناتو."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "hun_fidesz_sovereigntist",
+          "name_fa": "جریان حاکمیت‌گرای فیدس",
+          "name_en": "Fidesz sovereigntist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر دولت متمرکز، ارزش‌های محافظه‌کارانه و کنترل سیاسی ملی.",
+            "foreign_policy": "رویکرد مستقل‌تر از مواضع غالب اتحادیه اروپا و حفظ کانال‌های رابطه با روسیه."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "hun_prime_minister",
+          "name_fa": "دفتر نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "مرکز اصلی قوه مجریه و سیاست‌گذاری دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "hun_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "نهاد قانون‌گذاری؛ اکثریت بزرگ تیسا پس از انتخابات ۲۰۲۶.",
+          "confidence": "high"
+        },
+        {
+          "id": "hun_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام ریاست کشور با اختیارات عمدتاً تشریفاتی و قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "hun_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد نظارت قانون اساسی؛ استقلال و ترکیب آن از موضوعات مهم مناقشه سیاسی است.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_government": "Péter Magyar",
+        "prime_minister": "Péter Magyar",
+        "governing_party": "TISZA",
+        "head_of_state": "Tamás Sulyok",
+        "parliamentary_status": "TISZA won 141 of 199 seats in the 12 April 2026 election; Fidesz-KDNP won 52. Other parliamentary representation and detailed caucus breakdown should be maintained separately if confirmed."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_relations",
+          "rule_of_law",
+          "corruption_reform",
+          "ukraine_policy",
+          "migration",
+          "taxation",
+          "energy_relations"
+        ],
+        "rule": "رفتار دولت جدید را از برنامه اصلاح نهادی و نزدیکی اروپایی تیسا محاسبه کن؛ فیدس را یک بلوک مخالف محافظه‌کار و حاکمیت‌گرا نگه دار و جنبش میهن ما را جداگانه مدل کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Hungary April 2026 election",
+            "url": "https://data.ipu.org/parliament/hu/HU-LC01/election/HU-LC01-E20260412/",
+            "date": "2026-04"
+          },
+          {
+            "name": "UK House of Commons Library — Hungary and 2026 parliamentary election",
+            "url": "https://commonslibrary.parliament.uk/research-briefings/CBP-10612/",
+            "date": "2026-04-29"
+          }
+        ],
+        "notes": "انتخابات ۱۲ آوریل ۲۰۲۶ و تشکیل دولت تیسا در ۹ مه ۲۰۲۶ پیش از تاریخ شروع سناریو رخ داده‌اند. جزئیات کرسی‌ها فقط برای دو بلوک اصلی که در منبع IPU تصریح شده ثبت شده؛ از حدس زدن توزیع سایر کرسی‌ها خودداری شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "hun_tisza_group",
+          "name_en": "TISZA Parliamentary Group",
+          "party_id": "hun_tisza"
+        },
+        {
+          "id": "hun_fidesz_kdnp_group",
+          "name_en": "Fidesz–KDNP Parliamentary Group",
+          "party_id": "hun_fidesz_kdnp"
+        }
+      ]
     },
     "ROU": {
       "country_name_fa": "رومانی",
       "country_name_en": "Romania",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "semi_presidential_republic_with_multiparty_parliament",
+      "government_model": "جمهوری نیمه‌ریاستی؛ رئیس‌جمهور منتخب و دولت مسئول در برابر پارلمان",
+      "parties": [
+        {
+          "id": "rou_psd",
+          "name_fa": "حزب سوسیال‌دموکرات",
+          "name_en": "Social Democratic Party (PSD)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین نیروی پارلمانی؛ ستون اصلی حمایت سیاسی از دولت لوکا نیکولسکو و تأمین‌کننده بخش عمده وزیران حزبی.",
+          "ideological_profile": "چپ میانه تا میانه‌چپ، سوسیال‌دموکرات و عمل‌گرا؛ دارای شبکه سازمانی گسترده.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_pnl",
+          "name_fa": "حزب ملی لیبرال",
+          "name_en": "National Liberal Party (PNL)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌راست و بخشی از اردوگاه حامی دولت؛ در کابینه اکتبر ۲۰۲۶ به‌عنوان حزب، وزارتخانه در اختیار ندارد.",
+          "ideological_profile": "لیبرال محافظه‌کار، میانه‌راست و طرفدار اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_usr",
+          "name_fa": "اتحادیه نجات رومانی",
+          "name_en": "Save Romania Union (USR)",
+          "entity_type": "party",
+          "political_role": "نیروی مخالف دولت جدید؛ اصلاح‌طلب و ضدفساد.",
+          "ideological_profile": "لیبرال، اصلاح‌طلب، ضدفساد و طرفدار همگرایی اروپایی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_udmr",
+          "name_fa": "اتحاد دموکراتیک مجارهای رومانی",
+          "name_en": "Democratic Alliance of Hungarians in Romania (UDMR)",
+          "entity_type": "party",
+          "political_role": "نماینده سیاسی اقلیت مجار؛ از حامیان پارلمانی دولت جدید.",
+          "ideological_profile": "اقلیت‌محور، میانه‌رو و عمل‌گرا؛ تمرکز بر حقوق زبانی و فرهنگی و توسعه مناطق.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_aur",
+          "name_fa": "ائتلاف برای اتحاد رومانیایی‌ها",
+          "name_en": "Alliance for the Union of Romanians (AUR)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون ملی‌گرا و پوپولیست؛ در رأی اعتماد اکتبر ۲۰۲۶ از حمایت دولت خودداری کرد.",
+          "ideological_profile": "ملی‌گرای محافظه‌کار، پوپولیست راست و منتقد برخی سیاست‌های اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_sos",
+          "name_fa": "حزب SOS رومانی",
+          "name_en": "SOS Romania",
+          "entity_type": "party",
+          "political_role": "نیروی مخالف با مواضع ملی‌گرایانه و پوپولیستی.",
+          "ideological_profile": "ملی‌گرایی رادیکال و بدبینی به اتحادیه اروپا؛ مواضع خارجی جنجالی و نزدیک به روایت‌های طرفدار روسیه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "rou_pot",
+          "name_fa": "حزب جوانان",
+          "name_en": "Party of Young People (POT)",
+          "entity_type": "party",
+          "political_role": "نیروی پارلمانی کوچک و نوظهور؛ جایگاه و انسجام آن در حال تحول.",
+          "ideological_profile": "پوپولیست و ملی‌گرا؛ هویت برنامه‌ای کم‌ثبات‌تر از احزاب قدیمی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "rou_technocrats",
+          "name_fa": "جریان تکنوکرات و کارشناسی دولت",
+          "name_en": "Technocratic governing current",
+          "entity_type": "governing_current",
+          "policy_positions": {
+            "economy": "تثبیت مالی، تنظیم بودجه و مدیریت کسری.",
+            "domestic": "مدیریت اجرایی و تخصص‌محور به‌جای سهمیه‌بندی کامل حزبی.",
+            "foreign_policy": "تداوم تعهدات اتحادیه اروپا و ناتو."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "rou_pro_european",
+          "name_fa": "اردوگاه حامی همگرایی اروپایی",
+          "name_en": "Pro-European parliamentary camp",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حفظ پیوند با اتحادیه اروپا و ناتو و جلوگیری از انزوای رومانی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "rou_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس‌جمهور نیکوشور دان در تعیین نخست‌وزیر و جهت‌گیری کلان سیاست خارجی نقش دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست نخست‌وزیر مستقل لوکا نیکولسکو.",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_parliament",
+          "name_fa": "پارلمان رومانی",
+          "name_en": "Parliament",
+          "role": "مجلس نمایندگان و سنا؛ رأی اعتماد و دوام دولت به ائتلاف‌های حمایتی وابسته است.",
+          "confidence": "high"
+        },
+        {
+          "id": "rou_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد داوری قانون اساسی و اختلافات نهادی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Nicușor Dan",
+        "head_of_government": "Luca Niculescu",
+        "prime_minister": "Luca Niculescu",
+        "prime_minister_party": "Independent",
+        "government_type": "minority technocratic cabinet with PSD ministers",
+        "parliamentary_support": [
+          "PSD",
+          "PNL",
+          "UDMR",
+          "National Minorities group and some smaller parliamentary groups"
+        ],
+        "cabinet_note": "کابینه ۲۰ اکتبر ۲۰۲۶ رأی اعتماد گرفت؛ ۱۱ وزارتخانه در اختیار PSD و هفت پست در اختیار افراد مستقل/تکنوکرات گزارش شده است. حمایت پارلمانی PNL و UDMR را نباید با حضور حزبی آن‌ها در کابینه یکی دانست."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "fiscal_consolidation",
+          "eu_funds",
+          "anti_corruption",
+          "minority_rights",
+          "nationalism",
+          "energy",
+          "defence_and_nato"
+        ],
+        "rule": "دولت شکننده و متکی به حمایت پارلمانی چندگانه است؛ میان PSD، تکنوکرات‌ها و احزاب حامی اختلاف منافع وجود دارد. AUR و SOS را به‌عنوان اپوزیسیون جداگانه مدل کن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "AGERPRES — Niculescu government appointment",
+            "url": "https://agerpres.ro/x/2026/10/16/x--1605099",
+            "date": "2026-10"
+          },
+          {
+            "name": "OSW — Romania's new government: crisis over, uncertainty ahead",
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-10-22/romanias-new-government-crisis-over-uncertainty-ahead?page=0",
+            "date": "2026-10-22"
+          },
+          {
+            "name": "Reuters — Romania's nominated prime minister secures support",
+            "url": "https://www.reuters.com/world/romanias-nominated-prime-minister-secures-support-ahead-confidence-vote-2026-10-15/",
+            "date": "2026-10-15"
+          }
+        ],
+        "notes": "در تاریخ شروع سناریو دولت نیکولسکو از ۲۰ اکتبر مستقر بوده است. PSD در کابینه حضور مستقیم دارد؛ PNL و UDMR در رأی اعتماد و حمایت پارلمانی نقش داشته‌اند اما در ترکیب کابینه معرفی‌شده، وزیر حزبی از آن‌ها ثبت نشده است. ارقام کرسی احزاب در این پروفایل وارد نشده تا بدون منبع رسمیِ هم‌زمان، عددسازی نشود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "rou_psd_group",
+          "name_en": "PSD Parliamentary Group",
+          "party_id": "rou_psd"
+        },
+        {
+          "id": "rou_pnl_group",
+          "name_en": "PNL Parliamentary Group",
+          "party_id": "rou_pnl"
+        },
+        {
+          "id": "rou_usr_group",
+          "name_en": "USR Parliamentary Group",
+          "party_id": "rou_usr"
+        },
+        {
+          "id": "rou_udmr_group",
+          "name_en": "UDMR Parliamentary Group",
+          "party_id": "rou_udmr"
+        },
+        {
+          "id": "rou_aur_group",
+          "name_en": "AUR Parliamentary Group",
+          "party_id": "rou_aur"
+        }
+      ]
     },
     "BGR": {
       "country_name_fa": "بلغارستان",
       "country_name_en": "Bulgaria",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_competitive_multiparty_elections",
+      "government_model": "جمهوری پارلمانی؛ دولت تک‌حزبی با اکثریت مطلق مجلس",
+      "parties": [
+        {
+          "id": "bgr_progressive_bulgaria",
+          "name_fa": "بلغارستان مترقی",
+          "name_en": "Progressive Bulgaria",
+          "entity_type": "party",
+          "political_role": "حزب حاکم با اکثریت مطلق ۱۳۱ کرسی از ۲۴۰ کرسی؛ رومن رادف نخست‌وزیر شد.",
+          "ideological_profile": "ائتلاف/حزب محافظه‌کار-اجتماعی و ملی‌گرا با پیام ضدفساد و رویکرد عمل‌گرایانه؛ ترکیب ایدئولوژیک آن هنوز در حال تثبیت.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_gerb_udf",
+          "name_fa": "ائتلاف شهروندان برای توسعه اروپایی بلغارستان–اتحادیه نیروهای دموکراتیک",
+          "name_en": "GERB–Union of Democratic Forces (GERB–UDF)",
+          "entity_type": "electoral_alliance",
+          "political_role": "اپوزیسیون اصلی راست میانه؛ پس از انتخابات آوریل ۲۰۲۶ در جایگاه دوم قرار گرفت.",
+          "ideological_profile": "محافظه‌کار، راست میانه و طرفدار اتحادیه اروپا و ناتو.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_pp_db",
+          "name_fa": "ما به تغییر ادامه می‌دهیم–بلغارستان دموکراتیک",
+          "name_en": "We Continue the Change – Democratic Bulgaria (PP–DB)",
+          "entity_type": "electoral_alliance",
+          "political_role": "اپوزیسیون اصلاح‌طلب و لیبرال؛ منتقد فساد و حامی همگرایی اروپایی.",
+          "ideological_profile": "لیبرال، میانه‌رو تا میانه‌چپ، اصلاح‌طلب و ضدفساد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_dps",
+          "name_fa": "جنبش حقوق و آزادی‌ها",
+          "name_en": "Movement for Rights and Freedoms (DPS)",
+          "entity_type": "party",
+          "political_role": "حزب اقلیت‌محور با شبکه سیاسی و اقتصادی اثرگذار؛ پس از انتخابات در پارلمان حضور دارد.",
+          "ideological_profile": "لیبرال‌محافظه‌کار و عمل‌گرا؛ پایگاه مهم در میان بخشی از اقلیت ترک و مسلمان.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_vazrazhdane",
+          "name_fa": "رستاخیز",
+          "name_en": "Revival (Vazrazhdane)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون ملی‌گرا و یوروسپتیک.",
+          "ideological_profile": "ملی‌گرای راست، ضد مهاجرت و منتقد اتحادیه اروپا؛ مواضع نزدیک‌تر به روسیه در سیاست خارجی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bgr_radev_current",
+          "name_fa": "جریان حامی رادف",
+          "name_en": "Radev-aligned political current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر مبارزه با فساد و بازسازی اعتماد به نهادهای سیاسی.",
+            "foreign_policy": "ترکیبی از تأکید بر منافع ملی و رویکرد محتاطانه‌تر در قبال روسیه و جنگ اوکراین."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bgr_pro_eu_reform",
+          "name_fa": "جریان اصلاح‌طلب طرفدار اروپا",
+          "name_en": "Pro-European reformist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "شفافیت، استقلال قضایی و مهار فساد.",
+            "foreign_policy": "حفظ پیوند با اتحادیه اروپا و ناتو."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bgr_council_ministers",
+          "name_fa": "شورای وزیران",
+          "name_en": "Council of Ministers",
+          "role": "قوه مجریه به ریاست نخست‌وزیر رومن رادف.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "نهاد قانون‌گذاری؛ اکثریت مطلق حزب بلغارستان مترقی.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "ریاست کشور؛ ایلایانا یوتووا پس از استعفای رادف از ریاست‌جمهوری در ژانویه ۲۰۲۶ عهده‌دار این مقام شد.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgr_judicial_council",
+          "name_fa": "نهادهای عالی قضایی",
+          "name_en": "Supreme Judicial Council and judiciary",
+          "role": "نهادهای قضایی و دادستانی؛ اصلاح استقلال قضایی از موضوعات مناقشه سیاسی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Iliana Iotova",
+        "head_of_government": "Rumen Radev",
+        "prime_minister": "Rumen Radev",
+        "governing_party": "Progressive Bulgaria",
+        "parliamentary_status": "Progressive Bulgaria won 131 of 240 seats in the 19 April 2026 election and governs alone."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "anti_corruption",
+          "eu_relations",
+          "eurozone",
+          "russia_policy",
+          "ukraine",
+          "energy_prices",
+          "judicial_reform"
+        ],
+        "rule": "اکثریت پارلمانی بزرگ حزب حاکم را از ائتلاف‌سازی روزمره بی‌نیاز می‌کند، اما اپوزیسیون‌های GERB–UDF و PP–DB و نیز DPS و Revival را با پایگاه‌ها و مواضع متفاوت نگه دار."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Bulgaria April 2026 election",
+            "url": "https://data.ipu.org/parliament/BG/BG-LC01/election/BG-LC01-E20260419/",
+            "date": "2026-04"
+          },
+          {
+            "name": "BTA — Central Election Commission seat distribution",
+            "url": "https://www.bta.bg/en/news/bulgaria/1112617-central-election-commission-announces-seat-distribution-in-52nd-national-assembl",
+            "date": "2026-04-23"
+          },
+          {
+            "name": "International IDEA — Bulgaria April 2026",
+            "url": "https://www.idea.int/democracytracker/report/bulgaria/april-2026",
+            "date": "2026-04"
+          }
+        ],
+        "notes": "رادف در ژانویه ۲۰۲۶ از ریاست‌جمهوری استعفا داد، حزب بلغارستان مترقی را در مارس ایجاد کرد و پس از انتخابات ۱۹ آوریل در مه ۲۰۲۶ نخست‌وزیر شد. رئیس‌جمهور در تاریخ شروع سناریو ایلایانا یوتووا است. این تغییرات پیش از ۵ نوامبر رخ داده‌اند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "bgr_pb_group",
+          "name_en": "Progressive Bulgaria Parliamentary Group",
+          "party_id": "bgr_progressive_bulgaria"
+        },
+        {
+          "id": "bgr_gerb_group",
+          "name_en": "GERB–UDF Parliamentary Group",
+          "party_id": "bgr_gerb_udf"
+        },
+        {
+          "id": "bgr_ppdb_group",
+          "name_en": "PP–DB Parliamentary Group",
+          "party_id": "bgr_pp_db"
+        },
+        {
+          "id": "bgr_dps_group",
+          "name_en": "DPS Parliamentary Group",
+          "party_id": "bgr_dps"
+        },
+        {
+          "id": "bgr_revival_group",
+          "name_en": "Revival Parliamentary Group",
+          "party_id": "bgr_vazrazhdane"
+        }
+      ]
     },
     "GRC": {
       "country_name_fa": "یونان",
@@ -9683,21 +10163,217 @@
     "HRV": {
       "country_name_fa": "کرواسی",
       "country_name_en": "Croatia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_multiparty_coalition_government",
+      "government_model": "جمهوری پارلمانی؛ دولت ائتلافی با محوریت حزب اتحادیه دموکراتیک کرواسی",
+      "parties": [
+        {
+          "id": "hrv_hdz",
+          "name_fa": "اتحادیه دموکراتیک کرواسی",
+          "name_en": "Croatian Democratic Union (HDZ)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی دولت و بزرگ‌ترین نیروی پارلمانی؛ آندری پلنکوویچ نخست‌وزیر.",
+          "ideological_profile": "محافظه‌کار، دموکرات مسیحی و طرفدار اتحادیه اروپا؛ راست میانه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_dp",
+          "name_fa": "جنبش میهن",
+          "name_en": "Homeland Movement (DP)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک‌تر ائتلاف حاکم از مه ۲۰۲۴.",
+          "ideological_profile": "ملی‌محافظه‌کار، راست‌گرا و تأکیدکننده بر هویت ملی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_sdp",
+          "name_fa": "حزب سوسیال‌دموکرات کرواسی",
+          "name_en": "Social Democratic Party of Croatia (SDP)",
+          "entity_type": "party",
+          "political_role": "یکی از دو نیروی اصلی اپوزیسیون و رهبر ائتلاف انتخاباتی عدالت/رودهای عدالت در انتخابات ۲۰۲۴.",
+          "ideological_profile": "سوسیال‌دموکرات، چپ میانه و طرفدار اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_mozemo",
+          "name_fa": "می‌توانیم!",
+          "name_en": "We Can! (Možemo!)",
+          "entity_type": "political_platform",
+          "political_role": "اپوزیسیون سبز-چپ، به‌ویژه اثرگذار در سیاست شهری زاگرب.",
+          "ideological_profile": "سبز، ترقی‌خواه، چپ میانه تا چپ و عدالت اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_most",
+          "name_fa": "پل",
+          "name_en": "The Bridge (Most)",
+          "entity_type": "party",
+          "political_role": "نیروی پارلمانی مستقل از ائتلاف حاکم و اپوزیسیون اصلی.",
+          "ideological_profile": "محافظه‌کار، اصلاح‌طلب ضدفساد و منتقد نخبگان سیاسی مستقر.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_sdss",
+          "name_fa": "حزب مستقل دموکرات صرب",
+          "name_en": "Independent Democratic Serb Party (SDSS)",
+          "entity_type": "party",
+          "political_role": "نماینده مهم بخشی از اقلیت صرب؛ نقش آن در ائتلاف‌ها و مسائل اقلیت اهمیت دارد.",
+          "ideological_profile": "اقلیت‌محور، حقوق مدنی و فرهنگی صرب‌های کرواسی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_hsls",
+          "name_fa": "حزب سوسیال‌لیبرال کرواسی",
+          "name_en": "Croatian Social Liberal Party (HSLS)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک ائتلاف انتخاباتی و پارلمانی HDZ.",
+          "ideological_profile": "لیبرال میانه‌رو و اقتصاد بازار.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "hrv_hns",
+          "name_fa": "حزب خلق کرواسی–لیبرال‌دموکرات‌ها",
+          "name_en": "Croatian People's Party – Liberal Democrats (HNS)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک ائتلافی در بلوک HDZ.",
+          "ideological_profile": "لیبرال میانه‌رو و عمل‌گرا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "hrv_hdz_pragmatic",
+          "name_fa": "جریان محافظه‌کار میانه‌رو و اروپایی در HDZ",
+          "name_en": "Pro-European pragmatic current in HDZ",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "foreign_policy": "تأکید بر اتحادیه اروپا، ناتو و همکاری منطقه‌ای.",
+            "economy": "ترکیب اقتصاد بازار با سیاست‌های حمایتی و توسعه‌ای."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "hrv_national_conservative",
+          "name_fa": "جریان ملی‌محافظه‌کار",
+          "name_en": "National-conservative current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "تأکید بر هویت ملی، ارزش‌های سنتی و سیاست‌های مهاجرتی سخت‌گیرانه‌تر."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "hrv_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست آندری پلنکوویچ.",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_sabor",
+          "name_fa": "مجلس کرواسی",
+          "name_en": "Croatian Parliament (Sabor)",
+          "role": "نهاد قانون‌گذاری ۱۵۱ نفره و محل شکل‌گیری اکثریت ائتلافی.",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام منتخب مستقیم با نقش در سیاست خارجی و دفاع در چارچوب قانون اساسی؛ زoran میلانوویچ رئیس‌جمهور است.",
+          "confidence": "high"
+        },
+        {
+          "id": "hrv_counties_municipalities",
+          "name_fa": "دولت‌های محلی و منطقه‌ای",
+          "name_en": "County and Local Governments",
+          "role": "شبکه مهم قدرت محلی، به‌ویژه در مناطق و شهرهای بزرگ.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Zoran Milanović",
+        "head_of_government": "Andrej Plenković",
+        "prime_minister": "Andrej Plenković",
+        "governing_parties": [
+          "HDZ",
+          "Homeland Movement (DP)"
+        ],
+        "coalition_note": "HDZ شریک مسلط و DP شریک کوچک‌تر کابینه است؛ احزاب کوچک دیگری نیز در ائتلاف/حمایت پارلمانی HDZ حضور دارند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "eu_policy",
+          "migration",
+          "minority_rights",
+          "corruption",
+          "energy",
+          "tourism_and_economy",
+          "regional_relations"
+        ],
+        "rule": "HDZ را محور دولت و DP را شریک ملی‌محافظه‌کار با وزن کوچک‌تر مدل کن؛ SDP، Možemo و Most اپوزیسیون‌های همسان نیستند و باید اختلاف‌های اقتصادی و فرهنگی آن‌ها حفظ شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Government of Croatia — Parliament votes confidence in new government",
+            "url": "https://vlada.gov.hr/croatian-parliament-votes-confidence-in-new-government/42434",
+            "date": "2024-05-17"
+          },
+          {
+            "name": "Croatian Parliament — Parliamentary Parties",
+            "url": "https://www.sabor.hr/en/mps/parliamentary-parties",
+            "date": "accessed 2026-11-27"
+          },
+          {
+            "name": "IPU Parline — Croatia April 2024 election",
+            "url": "https://data.ipu.org/parliament/HR/HR-LC01/election/HR-LC01-E20240417/",
+            "date": "2024-04"
+          }
+        ],
+        "notes": "ساختار دولت در ۵ نوامبر ۲۰۲۶ بر پایه ائتلاف تشکیل‌شده در مه ۲۰۲۴ ثبت شده است. ارقام انتخاباتی ۲۰۲۴ نباید با توزیع فعلی کرسی‌ها یکی فرض شوند؛ صفحه رسمی پارلمان فهرست احزاب پارلمانی جاری را ارائه می‌کند. رئیس‌جمهور و نخست‌وزیر دو مقام جدا هستند."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "hrv_hdz_group",
+          "name_en": "HDZ Parliamentary Group",
+          "party_id": "hrv_hdz"
+        },
+        {
+          "id": "hrv_dp_group",
+          "name_en": "Homeland Movement Parliamentary Group",
+          "party_id": "hrv_dp"
+        },
+        {
+          "id": "hrv_sdp_group",
+          "name_en": "SDP Parliamentary Group",
+          "party_id": "hrv_sdp"
+        },
+        {
+          "id": "hrv_mozemo_group",
+          "name_en": "Možemo! Parliamentary Group",
+          "party_id": "hrv_mozemo"
+        },
+        {
+          "id": "hrv_most_group",
+          "name_en": "Most Parliamentary Group",
+          "party_id": "hrv_most"
+        }
+      ]
     },
     "BIH": {
       "country_name_fa": "بوسنی",
@@ -9759,21 +10435,231 @@
     "SVN": {
       "country_name_fa": "اسلوونی",
       "country_name_en": "Slovenia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_multiparty_coalition_government",
+      "government_model": "جمهوری پارلمانی؛ ائتلاف راست میانه با اکثریت محدود و حمایت بیرونی",
+      "parties": [
+        {
+          "id": "svn_sds",
+          "name_fa": "حزب دموکرات اسلوونی",
+          "name_en": "Slovenian Democratic Party (SDS)",
+          "entity_type": "party",
+          "political_role": "حزب محوری دولت؛ یانش یانشا در مه ۲۰۲۶ دوباره نخست‌وزیر شد.",
+          "ideological_profile": "محافظه‌کار، ملی‌محافظه‌کار و راست میانه؛ منتقد بخشی از سیاست‌های دولت قبلی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_nsi",
+          "name_fa": "اسلوونی نو–دموکرات‌های مسیحی",
+          "name_en": "New Slovenia – Christian Democrats (NSi)",
+          "entity_type": "party",
+          "political_role": "عضو ائتلاف انتخاباتی و دولتی از طریق اتحاد مشترک NSi–SLS–Fokus.",
+          "ideological_profile": "دموکرات مسیحی، محافظه‌کار میانه‌رو و طرفدار اقتصاد بازار.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_sls",
+          "name_fa": "حزب مردم اسلوونی",
+          "name_en": "Slovenian People's Party (SLS)",
+          "entity_type": "party",
+          "political_role": "عضو اتحاد انتخاباتی NSi–SLS–Fokus؛ در کابینه وزیر مستقل حزبی ندارد.",
+          "ideological_profile": "محافظه‌کار کشاورزی و منطقه‌گرا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_fokus",
+          "name_fa": "فوکوس مارکو لوتریچ",
+          "name_en": "Fokus of Marko Lotrič (FOKUS)",
+          "entity_type": "party",
+          "political_role": "عضو اتحاد انتخاباتی NSi–SLS–Fokus و شریک ائتلافی.",
+          "ideological_profile": "میانه‌راست، کارآفرین‌محور و اصلاح‌طلب اقتصادی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_democrats",
+          "name_fa": "دموکرات‌ها",
+          "name_en": "Democrats",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی به رهبری آنژه لوگار؛ حزب تازه‌تأسیس منشعب از فضای راست میانه.",
+          "ideological_profile": "میانه‌راست، محافظه‌کار میانه‌رو و اصلاح‌طلب اداری.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_svoboda",
+          "name_fa": "جنبش آزادی",
+          "name_en": "Freedom Movement (Svoboda)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب اپوزیسیون و حزب نخست‌وزیر پیشین رابرت گولوب.",
+          "ideological_profile": "لیبرال، میانه‌رو و ترقی‌خواه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_sd",
+          "name_fa": "سوسیال‌دموکرات‌ها",
+          "name_en": "Social Democrats (SD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ میانه و حزب باسابقه.",
+          "ideological_profile": "سوسیال‌دموکرات و طرفدار دولت رفاه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_levica",
+          "name_fa": "چپ–وسنا",
+          "name_en": "The Left – Vesna",
+          "entity_type": "electoral_alliance",
+          "political_role": "اپوزیسیون چپ و سبز.",
+          "ideological_profile": "چپ دموکراتیک، سبز، عدالت اجتماعی و مداخله اقتصادی دولت.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_resnica",
+          "name_fa": "حقیقت",
+          "name_en": "Resni.ca",
+          "entity_type": "party",
+          "political_role": "حزب پارلمانی بیرون از کابینه که از دولت حمایت پارلمانی می‌کند؛ رئیس مجلس از این حزب است.",
+          "ideological_profile": "پوپولیست و ضدساختار سیاسی مستقر؛ مواضع آن در حال تحول.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "svn_sds_national",
+          "name_fa": "جریان ملی‌محافظه‌کار در SDS",
+          "name_en": "SDS national-conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "تأکید بر نظم، دولت کارآمد و سیاست‌های محافظه‌کارانه.",
+            "foreign_policy": "حمایت از عضویت در ناتو و اتحادیه اروپا همراه با مواضع سیاسی مستقل‌تر."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "svn_centre_right_reform",
+          "name_fa": "جریان اصلاح‌طلب اقتصادی راست میانه",
+          "name_en": "Centre-right economic reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "کاهش مالیات، ساده‌سازی مقررات و افزایش نقش بخش خصوصی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "svn_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست یانش یانشا.",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "پارلمان ۹۰ نفره؛ دولت ائتلافی ۴۳ کرسی دارد و برای برخی رأی‌ها به حمایت بیرونی نیازمند است.",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام ریاست کشور؛ ناتاشا پیرتس موسار رئیس‌جمهور در تاریخ شروع سناریو است.",
+          "confidence": "high"
+        },
+        {
+          "id": "svn_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد نظارت بر قانون اساسی و حقوق بنیادین.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Nataša Pirc Musar",
+        "head_of_government": "Janez Janša",
+        "prime_minister": "Janez Janša",
+        "governing_parties": [
+          "SDS",
+          "NSi",
+          "SLS",
+          "FOKUS",
+          "Democrats"
+        ],
+        "coalition_seats": 43,
+        "parliamentary_support": "Resni.ca support is required for a working majority; it is not a cabinet party."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "taxation",
+          "healthcare",
+          "housing",
+          "rule_of_law",
+          "eu_policy",
+          "migration",
+          "public_services"
+        ],
+        "rule": "ائتلاف دولت ۴۳ کرسی از ۹۰ کرسی دارد؛ حمایت بیرونی Resni.ca و نمایندگان اقلیت‌ها را از عضویت رسمی در دولت جدا نگه دار. اپوزیسیون آزادی، سوسیال‌دموکرات‌ها و چپ–وسنا مواضع متفاوت دارند."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Slovenia March 2026 election",
+            "url": "https://data.ipu.org/parliament/SI/SI-LC01/election/SI-LC01-E20260322/",
+            "date": "2026-03"
+          },
+          {
+            "name": "Government of Slovenia — 16th Government",
+            "url": "https://www.gov.si/en/state-authorities/government/about-the-government/",
+            "date": "accessed 2026-11-27"
+          },
+          {
+            "name": "Government of Slovenia — Cabinet confirmation",
+            "url": "https://www.gov.si/en/news/2026-06-05-national-assembly-confirms-new-government-cabinet/",
+            "date": "2026-06-05"
+          }
+        ],
+        "notes": "انتخابات ۲۲ مارس ۲۰۲۶ و تشکیل دولت یانشا در ۴ ژوئن پیش از تاریخ شروع سناریو رخ داده‌اند. اتحاد NSi–SLS–Fokus به‌عنوان یک ائتلاف انتخاباتی/پارلمانی ثبت شده، اما سه جزء آن در صورت نیاز می‌توانند جداگانه مدل شوند. Resni.ca حامی بیرونی دولت است، نه عضو کابینه."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "svn_sds_group",
+          "name_en": "SDS Parliamentary Group",
+          "party_id": "svn_sds"
+        },
+        {
+          "id": "svn_nsi_group",
+          "name_en": "NSi–SLS–Fokus Parliamentary Group",
+          "party_id": "svn_nsi"
+        },
+        {
+          "id": "svn_democrats_group",
+          "name_en": "Democrats Parliamentary Group",
+          "party_id": "svn_democrats"
+        },
+        {
+          "id": "svn_svoboda_group",
+          "name_en": "Freedom Movement Parliamentary Group",
+          "party_id": "svn_svoboda"
+        },
+        {
+          "id": "svn_sd_group",
+          "name_en": "Social Democrats Parliamentary Group",
+          "party_id": "svn_sd"
+        }
+      ]
     },
     "MNE": {
       "country_name_fa": "مونته‌نگرو",
@@ -10018,21 +10904,197 @@
     "LVA": {
       "country_name_fa": "لتونی",
       "country_name_en": "Latvia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_multiparty_coalition_formation",
+      "government_model": "جمهوری پارلمانی؛ انتخابات زودهنگام اکتبر ۲۰۲۶ و روند تشکیل دولت جدید در جریان در تاریخ شروع سناریو",
+      "parties": [
+        {
+          "id": "lva_united_list",
+          "name_fa": "فهرست متحد",
+          "name_en": "United List (Apvienotais saraksts)",
+          "entity_type": "electoral_alliance",
+          "political_role": "بزرگ‌ترین نیروی انتخابات ۳ اکتبر ۲۰۲۶؛ رهبر آن آندریس کولبرگس مأمور تشکیل دولت شد.",
+          "ideological_profile": "میانه‌راست، منطقه‌گرا و عمل‌گرا؛ تأکید بر کارآمدی دولت و اقتصاد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_latvia_first",
+          "name_fa": "لتونی در اولویت",
+          "name_en": "Latvia First (Latvija pirmajā vietā)",
+          "entity_type": "party",
+          "political_role": "نیروی پوپولیست پارلمانی؛ در انتخابات ۲۰۲۶ جایگاه مهمی به دست آورد.",
+          "ideological_profile": "پوپولیست، محافظه‌کار و منتقد ساختار سیاسی مستقر.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lva_sovereign_power",
+          "name_fa": "قدرت حاکمیت / اتحادیه نوین لتونیایی‌ها",
+          "name_en": "Sovereign Power / New Latvian Union",
+          "entity_type": "electoral_alliance",
+          "political_role": "بلوک پارلمانی ملی‌گرا و حاکمیت‌گرا پس از انتخابات اکتبر ۲۰۲۶.",
+          "ideological_profile": "ملی‌گرا و حاکمیت‌گرا؛ مواضع داخلی و خارجی ائتلافی و در حال تحول.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        },
+        {
+          "id": "lva_national_alliance",
+          "name_fa": "اتحاد ملی",
+          "name_en": "National Alliance (Nacionālā apvienība)",
+          "entity_type": "party",
+          "political_role": "حزب ملی‌محافظه‌کار؛ در تاریخ ۵ نوامبر ۲۰۲۶ هنوز نتیجه مذاکرات تشکیل دولت با آن قطعی نبود.",
+          "ideological_profile": "ملی‌محافظه‌کار، طرفدار زبان و هویت لتونیایی و مواضع سخت‌گیرانه‌تر مهاجرتی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_progressives",
+          "name_fa": "ترقی‌خواهان",
+          "name_en": "The Progressives (Progresīvie)",
+          "entity_type": "party",
+          "political_role": "نیروی سبز و چپ میانه؛ خارج از محور اصلی تشکیل دولت در نوامبر ۲۰۲۶.",
+          "ideological_profile": "سوسیال‌دموکرات، سبز، ترقی‌خواه و حامی حقوق اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_new_unity",
+          "name_fa": "وحدت نوین",
+          "name_en": "New Unity (Jaunā Vienotība)",
+          "entity_type": "party",
+          "political_role": "حزب میانه‌راست طرفدار اروپا؛ پس از انتخابات اکتبر ۲۰۲۶ در حال مذاکره برای نقش خود در دولت بعدی بود.",
+          "ideological_profile": "لیبرال محافظه‌کار، میانه‌راست و طرفدار اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_union_greens_farmers",
+          "name_fa": "اتحادیه سبزها و کشاورزان",
+          "name_en": "Union of Greens and Farmers (ZZS)",
+          "entity_type": "electoral_alliance",
+          "political_role": "ائتلاف میانه‌رو و کشاورزی با حضور در سیاست پارلمانی و دولت‌های پیشین.",
+          "ideological_profile": "کشاورزی‌محور، منطقه‌گرا و میانه‌رو؛ ترکیب سبز و محافظه‌کارانه.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "lva_security_current",
+          "name_fa": "جریان امنیت ملی و حمایت از اوکراین",
+          "name_en": "National security and pro-Ukraine current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "تقویت دفاع، حمایت از اوکراین و کاهش وابستگی به روسیه و بلاروس."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "lva_regional_pragmatists",
+          "name_fa": "جریان منطقه‌گرا و عمل‌گرا",
+          "name_en": "Regional pragmatist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "توسعه مناطق، کاهش بوروکراسی و جذب سرمایه‌گذاری."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "lva_saeima",
+          "name_fa": "سایما / پارلمان",
+          "name_en": "Saeima",
+          "role": "پارلمان تک‌مجلسی ۱۰۰ نفره؛ انتخابات در ۳ اکتبر ۲۰۲۶ برگزار و پارلمان جدید در ۳ نوامبر تشکیل جلسه داد.",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "رئیس‌جمهور ادگارس رینکویچس در تعیین نخست‌وزیر نقش قانون اساسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "lva_caretaker_government",
+          "name_fa": "دولت مستقر و نخست‌وزیری",
+          "name_en": "Incumbent Government and Prime Minister",
+          "role": "آندریس کولبرگس پس از تشکیل دولت در مه ۲۰۲۶ نخست‌وزیر بود و پس از انتخابات اکتبر مأمور تشکیل دولت بعدی شد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Edgars Rinkēvičs",
+        "head_of_government": "Andris Kulbergs",
+        "prime_minister": "Andris Kulbergs",
+        "government_status_on_scenario_start": "post-election government formation; new coalition not yet approved",
+        "formation_note": "در ۴ نوامبر ۲۰۲۶ رئیس‌جمهور از کولبرگس خواست دولت جدید را تشکیل دهد. ائتلاف نهایی و کابینه جدید پس از تاریخ شروع سناریو، در ۱۷ نوامبر، تأیید شد؛ بنابراین نباید آن را به وضعیت ۵ نوامبر نسبت داد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "national_security",
+          "ukraine_support",
+          "fiscal_discipline",
+          "regional_development",
+          "language_and_identity",
+          "economic_growth",
+          "coalition_bargaining"
+        ],
+        "rule": "در ۵ نوامبر دولت جدید هنوز شکل نگرفته بود؛ از مدل‌کردن ائتلاف نهایی نوامبر به‌عنوان واقعیت آغاز سناریو خودداری کن. وضعیت را به‌صورت مذاکرات ائتلافی و دولت مستقرِ در حال اداره امور نمایش بده."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Latvia Ministry of Finance — Investor Presentation November 2026",
+            "url": "https://www.kase.gov.lv/sites/default/files/2026-11/Investor%20Presentation_Latvia_November.pdf",
+            "date": "2026-11"
+          },
+          {
+            "name": "Government of Latvia — Kulbergs government assumes office",
+            "url": "https://www.mk.gov.lv/en/article/government-led-andris-kulbergs-assumes-office",
+            "date": "2026-05-29"
+          },
+          {
+            "name": "Reuters — Latvia's parliament backs new government",
+            "url": "https://www.reuters.com/world/asia-pacific/latvias-prime-minister-pledges-to-boost-economy-cut-public-sector-2026-11-17/",
+            "date": "2026-11-17"
+          }
+        ],
+        "notes": "داده‌های انتخابات ۳ اکتبر و تشکیل پارلمان جدید در ۳ نوامبر پیش از شروع سناریو رخ داده‌اند. در ۴ نوامبر رئیس‌جمهور از کولبرگس خواست دولت جدید را تشکیل دهد. ائتلاف نهایی United List و National Alliance و رأی اعتماد ۱۷ نوامبر رویداد بعد از تاریخ شروع است و فقط باید در تاریخچه/به‌روزرسانی‌های بعدی ثبت شود."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "lva_united_list_group",
+          "name_en": "United List Parliamentary Group",
+          "party_id": "lva_united_list"
+        },
+        {
+          "id": "lva_latvia_first_group",
+          "name_en": "Latvia First Parliamentary Group",
+          "party_id": "lva_latvia_first"
+        },
+        {
+          "id": "lva_national_alliance_group",
+          "name_en": "National Alliance Parliamentary Group",
+          "party_id": "lva_national_alliance"
+        },
+        {
+          "id": "lva_progressives_group",
+          "name_en": "The Progressives Parliamentary Group",
+          "party_id": "lva_progressives"
+        },
+        {
+          "id": "lva_new_unity_group",
+          "name_en": "New Unity Parliamentary Group",
+          "party_id": "lva_new_unity"
+        }
+      ]
     },
     "LTU": {
       "country_name_fa": "لیتوانی",
@@ -10056,21 +11118,209 @@
     "EST": {
       "country_name_fa": "استونی",
       "country_name_en": "Estonia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_with_multiparty_minor_government",
+      "government_model": "جمهوری پارلمانی؛ دولت اقلیت متشکل از حزب اصلاحات و استونی ۲۰۰",
+      "parties": [
+        {
+          "id": "est_reform",
+          "name_fa": "حزب اصلاحات استونی",
+          "name_en": "Estonian Reform Party",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر کریستن میخال و شریک اصلی دولت اقلیت.",
+          "ideological_profile": "لیبرال، میانه‌راست، بازارگرا و طرفدار اتحادیه اروپا و ناتو.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "est_eesti200",
+          "name_fa": "استونی ۲۰۰",
+          "name_en": "Eesti 200",
+          "entity_type": "party",
+          "political_role": "شریک دوم دولت؛ پس از خروج سوسیال‌دموکرات‌ها در مارس ۲۰۲۵ در ائتلاف باقی ماند.",
+          "ideological_profile": "لیبرال میانه‌رو، اصلاح‌طلب، دیجیتال‌گرا و طرفدار اصلاحات آموزشی و اجتماعی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "est_isamaa",
+          "name_fa": "ایساما / میهن",
+          "name_en": "Isamaa (Fatherland)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی راست میانه و منتقد دولت.",
+          "ideological_profile": "محافظه‌کار ملی، میانه‌راست و طرفدار امنیت ملی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "est_centre",
+          "name_fa": "حزب مرکز استونی",
+          "name_en": "Estonian Centre Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون؛ دارای پایگاه تاریخی در میان بخشی از رأی‌دهندگان روسی‌زبان.",
+          "ideological_profile": "میانه‌گرا، رفاه‌گرا و عمل‌گرا؛ در سیاست زبان و اقلیت‌ها مواضع متمایز دارد.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "est_ekre",
+          "name_fa": "حزب محافظه‌کار خلق استونی",
+          "name_en": "Conservative People's Party of Estonia (EKRE)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون ملی‌گرا و راست پوپولیست.",
+          "ideological_profile": "ملی‌محافظه‌کار، راست پوپولیست و منتقد مهاجرت و برخی سیاست‌های اتحادیه اروپا.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        },
+        {
+          "id": "est_sde",
+          "name_fa": "حزب سوسیال‌دموکرات",
+          "name_en": "Social Democratic Party (SDE)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون پس از اخراج وزیرانش از ائتلاف در مارس ۲۰۲۵.",
+          "ideological_profile": "سوسیال‌دموکرات، چپ میانه و حامی خدمات عمومی.",
+          "legal_status": "registered_or_permitted",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "est_digital_liberal",
+          "name_fa": "جریان لیبرال دیجیتال‌گرا",
+          "name_en": "Digital liberal current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "اقتصاد نوآور، دولت دیجیتال و محیط کسب‌وکار رقابتی.",
+            "domestic": "اصلاح خدمات عمومی و رویکرد لیبرال اجتماعی."
+          },
+          "confidence": "medium",
+          "not_a_formal_party": true
+        },
+        {
+          "id": "est_security_consensus",
+          "name_fa": "اجماع امنیتی و دفاعی",
+          "name_en": "National security consensus",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "foreign_policy": "حمایت گسترده از عضویت در ناتو، دفاع ملی و همکاری نزدیک با متحدان بالتیک و شمال اروپا."
+          },
+          "confidence": "high",
+          "not_a_formal_party": true
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "est_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه مجریه به ریاست کریستن میخال؛ دولت از اوت ۲۰۲۶ اکثریت مطلق ندارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "est_riigikogu",
+          "name_fa": "ریگیکوگو / پارلمان",
+          "name_en": "Riigikogu",
+          "role": "پارلمان تک‌مجلسی ۱۰۱ نفره؛ رأی عدم اعتماد به دولت در اکتبر ۲۰۲۶ ناکام ماند.",
+          "confidence": "high"
+        },
+        {
+          "id": "est_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مقام ریاست کشور؛ اوله مادیسه در سپتامبر ۲۰۲۶ انتخاب و در اکتبر سوگند یاد کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "est_defence_forces",
+          "name_fa": "نیروهای دفاعی و نهادهای امنیتی",
+          "name_en": "Defence Forces and Security Institutions",
+          "role": "نهادهای حرفه‌ای امنیت ملی و دفاع؛ نقش مهم در اجماع سیاست خارجی.",
+          "confidence": "medium"
+        }
+      ],
+      "current_government": {
+        "head_of_state": "Ülle Madise",
+        "head_of_government": "Kristen Michal",
+        "prime_minister": "Kristen Michal",
+        "governing_parties": [
+          "Estonian Reform Party",
+          "Eesti 200"
+        ],
+        "government_type": "minority coalition",
+        "parliamentary_status": "Coalition held 50 of 101 seats by October 2026 after two MPs left their parties; no-confidence motion failed on 19 October 2026."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "defence_spending",
+          "russia_policy",
+          "digital_government",
+          "taxation",
+          "language_policy",
+          "migration",
+          "eu_relations"
+        ],
+        "rule": "دولت اقلیت را با نیاز به مذاکره موردی با نمایندگان و احزاب مدل کن. ایساما، مرکز و EKRE در اکتبر ۲۰۲۶ برای رأی عدم اعتماد همکاری کردند، اما این همکاری به معنی ائتلاف دائمی آن‌ها نیست."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Estonian Government — Coalition Agreement 2024–2027",
+            "url": "https://www.valitsus.ee/en/coalition-agreement-2024-2027",
+            "date": "2024-07-22"
+          },
+          {
+            "name": "ERR — No-confidence motion fails",
+            "url": "https://news.err.ee/1610170891/opposition-s-motion-of-no-confidence-in-government-fails",
+            "date": "2026-10-20"
+          },
+          {
+            "name": "Reuters — Estonia government loses parliamentary majority",
+            "url": "https://www.reuters.com/world/estonia-government-loses-parliament-majority-two-mps-defect-2026-08-10/",
+            "date": "2026-08-10"
+          },
+          {
+            "name": "OECD — Economic Surveys: Estonia 2026",
+            "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/06/oecd-economic-surveys-estonia-2026_0c766603/2514521c-en.pdf",
+            "date": "2026-06"
+          }
+        ],
+        "notes": "در تاریخ ۵ نوامبر ۲۰۲۶ دولت اقلیت Reform–Eesti 200 برقرار است؛ سوسیال‌دموکرات‌ها از مارس ۲۰۲۵ خارج از دولت‌اند. خروج دو نماینده در اوت ۲۰۲۶ اکثریت را از بین برد. انتخابات بعدی برای ۷ مارس ۲۰۲۷ برنامه‌ریزی شده است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "est_reform_group",
+          "name_en": "Reform Party Parliamentary Group",
+          "party_id": "est_reform"
+        },
+        {
+          "id": "est_eesti200_group",
+          "name_en": "Eesti 200 Parliamentary Group",
+          "party_id": "est_eesti200"
+        },
+        {
+          "id": "est_isamaa_group",
+          "name_en": "Isamaa Parliamentary Group",
+          "party_id": "est_isamaa"
+        },
+        {
+          "id": "est_centre_group",
+          "name_en": "Centre Party Parliamentary Group",
+          "party_id": "est_centre"
+        },
+        {
+          "id": "est_ekre_group",
+          "name_en": "EKRE Parliamentary Group",
+          "party_id": "est_ekre"
+        },
+        {
+          "id": "est_sde_group",
+          "name_en": "Social Democratic Parliamentary Group",
+          "party_id": "est_sde"
+        }
+      ]
     },
     "LUX": {
       "country_name_fa": "لوکزامبورگ",
