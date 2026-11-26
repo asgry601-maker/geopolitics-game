@@ -80,10 +80,18 @@ function geoColor(fa) {
   return REGION_COLORS[reg] || '#6b7280';
 }
 
+/* شناسهٔ کشور از دادهٔ ثابت نقشه می‌آید؛ ترتیب مش‌ها/استان‌ها در آن دخالت ندارد. */
+function featureCountryId(f) {
+  if (!f) return null;
+  return (f._countryId != null) ? f._countryId : f._fa;
+}
+
 function capColor(f) {
-  if (f._fa == null) return C_ORPHAN;
-  if (SELECTED && f._fa === SELECTED) return C_SEL;
-  return (MODE === 'pol') ? polColor(f._fa) : geoColor(f._fa);
+  var fa = featureCountryId(f);
+  if (fa == null) return C_ORPHAN;
+  if (SELECTED && fa === SELECTED) return C_SEL;
+  var color = (MODE === 'pol') ? polColor(fa) : geoColor(fa);
+  return (typeof color === 'string' && color.charAt(0) === '#') ? color : C_ORPHAN;
 }
 
 /* ---------- راه‌اندازی کره ---------- */
@@ -100,12 +108,13 @@ function initGlobe() {
     .polygonSideColor(function () { return 'rgba(20,28,45,0.85)'; })
     .polygonStrokeColor(function () { return '#0a0f1a'; })
     .polygonAltitude(function (f) {
-      return (SELECTED && f._fa === SELECTED) ? 0.055 : 0.012;
+      return (SELECTED && featureCountryId(f) === SELECTED) ? 0.055 : 0.012;
     })
     .onPolygonClick(function (f) {
       if (PROV.taken && (Date.now() - PROV.taken) < 350) return;   /* کلیک متعلق به استان بود */
-      if (f._fa == null) { flash('این سرزمین در بازی حضور ندارد.'); return; }
-      selectCountry(f._fa);
+      var countryId = featureCountryId(f);
+      if (countryId == null) { flash('این سرزمین در بازی حضور ندارد.'); return; }
+      selectCountry(countryId);
     })
     .labelsData([])
     .labelLat(function (d) { return d.lat; })
@@ -138,9 +147,25 @@ function initGlobe() {
   });
 }
 
+/* هر بار یک آرایهٔ تازه از ویژگی‌های کشور ساخته می‌شود.
+   هندسه و مرزهای اصلی GeoJSON حفظ می‌شوند؛ فقط شناسهٔ ثابت کشور به رندر تحویل داده می‌شود. */
+function buildCountryColorLayer() {
+  var out = [];
+  if (!FEATS) return out;
+  for (var i = 0; i < FEATS.length; i++) {
+    var src = FEATS[i], f = {};
+    for (var k in src) if (Object.prototype.hasOwnProperty.call(src, k)) f[k] = src[k];
+    f._countryId = (src._fa != null) ? src._fa : null;
+    out.push(f);
+  }
+  return out;
+}
+
 function refreshPolygons() {
   if (!globe || !FEATS) return;
-  globe.polygonsData(FEATS.slice());
+  /* بازاعمال accessor + دادهٔ تازه، برای جلوگیری از باقی‌ماندن رنگ‌های رندر قبلی */
+  globe.polygonCapColor(capColor);
+  globe.polygonsData(buildCountryColorLayer());
   refreshLabels();
 }
 var LBL_COUNTRY = null, LBL_ALL = [], LBL_ACTIVE_ISO = null, LBL_ACTIVE_PROV = null, LBL_CACHE = {};
