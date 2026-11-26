@@ -498,11 +498,19 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += '<h3>وضعیت جنگ</h3>';
       h += opponents.length ? '<div class="dashCard">در جنگ با: '+opponents.map(dashEsc).join('، ')+'</div>' : '<div class="dashNote">کشور شما در حال حاضر در جنگ ثبت‌شده‌ای نیست.</div>';
     } else {
+      var relTags = r.tags || [];
+      var isPlayerAlly = relTags.indexOf('🤝 متحد') !== -1;
+      var hasPlayerPact = relTags.indexOf('📜 عدم تجاوز') !== -1;
       if (r.rel != null && ST) h += '<h3>رابطه با کشور بازیکن ('+dashEsc(ST.player)+')</h3>'+barHtml('شاخص رابطه',r.rel,r.rel<0?'bad':'');
-      if (r.tags && r.tags.length) h += '<div class="dashCard">وضعیت فعلی: '+r.tags.map(dashEsc).join(' · ')+'</div>';
+      h += '<h3>وضعیت اتحاد با کشور بازیکن</h3>';
+      h += isPlayerAlly ? '<div class="dashCard">🤝 این کشور در فهرست متحدان کشور بازیکن ثبت شده است.</div>' : '<div class="dashNote">اتحاد ثبت‌شده‌ای با کشور بازیکن وجود ندارد.</div>';
+      h += '<h3>پیمان عدم تجاوز با کشور بازیکن</h3>';
+      h += hasPlayerPact ? '<div class="dashCard">📜 پیمان عدم تجاوز با کشور بازیکن ثبت شده است.</div>' : '<div class="dashNote">پیمان عدم تجاوزی با کشور بازیکن ثبت نشده است.</div>';
+      h += '<h3>وضعیت جنگ</h3>';
+      h += r.war_with && r.war_with.length ? '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>' : '<div class="dashNote">در حال حاضر جنگ ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
       if (r.friends && r.friends.length) { h += '<h3>کشورهای نزدیک</h3>'; for(i=0;i<r.friends.length;i++) h += '<div class="row"><span>'+dashEsc(r.friends[i][0])+'</span><span class="muted">'+dashEsc(r.friends[i][1])+'</span></div>'; }
       if (r.enemies && r.enemies.length) { h += '<h3>روابط پرتنش</h3>'; for(i=0;i<r.enemies.length;i++) h += '<div class="row"><span>'+dashEsc(r.enemies[i][0])+'</span><span class="muted">'+dashEsc(r.enemies[i][1])+'</span></div>'; }
-      if (r.war_with && r.war_with.length) h += '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>';
+      h += '<div class="dashNote">اتحادها و پیمان‌های این کشور با سایر کشورهای جهان هنوز در موتور به‌صورت شبکهٔ مستقل ثبت نشده‌اند؛ اینجا فقط وضعیت آن در برابر کشور بازیکن نمایش داده می‌شود.</div>';
     }
     h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
   } else if (tab === 'pacts') {
