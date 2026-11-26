@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 26,
-    "pending_countries": 148,
+    "researched_countries": 33,
+    "pending_countries": 141,
     "last_batch": [
-      "KOR",
-      "IDN",
-      "MEX",
-      "ARG",
-      "ZAF",
-      "NGA",
-      "AUS"
+      "BGD",
+      "THA",
+      "MYS",
+      "PHL",
+      "VNM",
+      "DZA",
+      "MAR"
     ]
   },
   "notes": [
@@ -26,7 +26,8 @@
     "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.",
     "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.",
     "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.",
-    "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است."
+    "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.",
+    "نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است."
   ],
   "countries": {
     "USA": {
@@ -1776,38 +1777,333 @@
     "DZA": {
       "country_name_fa": "الجزایر",
       "country_name_en": "Algeria",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "semi_presidential_multiparty_republic_with_dominant_executive",
+      "government_model": "جمهوری نیمه‌ریاستی؛ ریاست‌جمهوری قدرتمند و اکثریت پارلمانی احزاب حامی دولت",
+      "parties": [
+        {
+          "id": "dza_fln",
+          "name_fa": "جبهه آزادی‌بخش ملی",
+          "name_en": "National Liberation Front (FLN)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان و حامی دولت",
+          "ideological_profile": "ملی‌گرایی و میراث استقلال",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_rnd",
+          "name_fa": "مجمع ملی دموکراتیک",
+          "name_en": "National Democratic Rally (RND)",
+          "entity_type": "party",
+          "political_role": "حزب حامی دولت و شریک اکثریت",
+          "ideological_profile": "میانه‌گرایی و ملی‌گرایی عمل‌گرا",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_fm",
+          "name_fa": "جبهه آینده",
+          "name_en": "El-Moustakbel Front (FM)",
+          "entity_type": "party",
+          "political_role": "حزب حامی دولت",
+          "ideological_profile": "میانه‌گرایی و توسعه‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_msp",
+          "name_fa": "جنبش جامعه برای صلح",
+          "name_en": "Movement of Society for Peace (MSP)",
+          "entity_type": "party",
+          "political_role": "حزب اسلام‌گرای اپوزیسیون",
+          "ideological_profile": "اسلام‌گرایی میانه‌رو",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_ffs",
+          "name_fa": "جبهه نیروهای سوسیالیست",
+          "name_en": "Socialist Forces Front (FFS)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سکولار و منطقه‌گرا",
+          "ideological_profile": "سوسیال‌دموکراسی و تمرکززدایی",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "dza_fln",
+          "name_fa": "جریان تشکیلاتی FLN",
+          "name_en": "FLN establishment current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "governance": "حفظ نقش تاریخی حزب در ساختار دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "dza_reform",
+          "name_fa": "جریان اصلاحات نهادی",
+          "name_en": "Institutional reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اصلاح خدمات عمومی و پاسخ‌گویی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "dza_security",
+          "name_fa": "جریان امنیتی و ثبات‌گرا",
+          "name_en": "Security and stability current",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "security": "تأکید بر ثبات سیاسی و امنیت مرزی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "dza_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قوه مجریه به ریاست عبدالمجید تبون.",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_government",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "اجرای سیاست‌های دولت.",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_assembly",
+          "name_fa": "مجلس ملی مردمی",
+          "name_en": "People's National Assembly",
+          "role": "مجلس ۴۰۷ کرسی؛ سه حزب حامی دولت ۲۲۱ کرسی دارند.",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_military",
+          "name_fa": "ارتش ملی خلق",
+          "name_en": "People's National Army",
+          "role": "نهاد امنیتی و دفاعی با نفوذ تاریخی.",
+          "confidence": "high"
+        },
+        {
+          "id": "dza_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد نظارت قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Abdelmadjid Tebboune",
+        "governing_parties": [
+          "FLN",
+          "RND",
+          "El-Moustakbel Front"
+        ],
+        "status": "سه حزب حامی دولت در انتخابات ژوئیه ۲۰۲۶ مجموعاً ۲۲۱ کرسی از ۴۰۷ کرسی را کسب کردند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "purchasing_power",
+          "public_services",
+          "youth_employment",
+          "energy_exports",
+          "regional_security",
+          "political_participation"
+        ],
+        "rule": "رقابت حزبی در کنار قدرت بالای ریاست‌جمهوری و مراکز امنیتی مدل شود؛ مشارکت پایین انتخابات عامل مشروعیت سیاسی است."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Algeria July 2026 election",
+            "url": "https://data.ipu.org/parliament/DZ/DZ-LC01/election/DZ-LC01-E20260702/",
+            "date": "2026-08-02"
+          },
+          {
+            "name": "International IDEA — Algeria July 2026 election",
+            "url": "https://www.idea.int/democracytracker/report/algeria/july-2026",
+            "date": "2026-07-18"
+          }
+        ],
+        "notes": "نتایج انتخابات ۲ ژوئیه ۲۰۲۶ و نشست نخست مجلس در اوت ۲۰۲۶ لحاظ شده است."
       },
       "parliamentary_groups": []
     },
     "MAR": {
       "country_name_fa": "مراکش",
       "country_name_en": "Morocco",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "constitutional_monarchy_parliamentary_multiparty",
+      "government_model": "پادشاهی مشروطه با دولت پارلمانی؛ ائتلاف جدید به رهبری حزب اصالت و مدرنیته",
+      "parties": [
+        {
+          "id": "mar_pam",
+          "name_fa": "حزب اصالت و مدرنیته",
+          "name_en": "Authenticity and Modernity Party (PAM)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب پارلمان و هسته دولت",
+          "ideological_profile": "میانه‌گرایی و نوسازی",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_rni",
+          "name_fa": "مجمع ملی مستقل‌ها",
+          "name_en": "National Rally of Independents (RNI)",
+          "entity_type": "party",
+          "political_role": "حزب مهم پارلمانی؛ بیرون از دولت جدید",
+          "ideological_profile": "لیبرالیسم اقتصادی و تکنوکراسی",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_pi",
+          "name_fa": "حزب استقلال",
+          "name_en": "Istiqlal Party (PI)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی",
+          "ideological_profile": "ملی‌گرایی و محافظه‌کاری",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_pjd",
+          "name_fa": "حزب عدالت و توسعه",
+          "name_en": "Justice and Development Party (PJD)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی اسلام‌گرا",
+          "ideological_profile": "اسلام‌گرایی انتخاباتی",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_usfp",
+          "name_fa": "اتحاد سوسیالیستی نیروهای مردمی",
+          "name_en": "Socialist Union of Popular Forces (USFP)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی",
+          "ideological_profile": "سوسیال‌دموکراسی",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_pps",
+          "name_fa": "حزب پیشرفت و سوسیالیسم",
+          "name_en": "Party of Progress and Socialism (PPS)",
+          "entity_type": "party",
+          "political_role": "شریک دولت ائتلافی",
+          "ideological_profile": "چپ دموکراتیک",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mar_palace",
+          "name_fa": "مرکز سلطنتی و دربار",
+          "name_en": "Royal palace current",
+          "entity_type": "institutional_current",
+          "policy_positions": {
+            "governance": "نقش راهبردی پادشاه در سیاست‌های کلان و امنیت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mar_pam",
+          "name_fa": "جریان مدیریتی PAM",
+          "name_en": "PAM governance current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تمرکز بر سرمایه‌گذاری و برنامه‌های توسعه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mar_islamist",
+          "name_fa": "جریان اسلام‌گرای اپوزیسیون",
+          "name_en": "Islamist opposition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "society": "نقد عملکرد دولت و تأکید بر سیاست اجتماعی اسلامی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mar_monarchy",
+          "name_fa": "پادشاهی و دربار",
+          "name_en": "Monarchy and Royal Court",
+          "role": "مرکز اصلی قدرت راهبردی؛ محمد ششم پادشاه.",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Head of Government and Cabinet",
+          "role": "قوه مجریه به ریاست فاطمه الزهرا المنصوری از ۱۶ اکتبر ۲۰۲۶.",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۳۹۵ کرسی؛ ائتلاف دولت ۲۰۷ کرسی دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mar_security",
+          "name_fa": "نهادهای امنیتی و وزارتخانه‌های حاکمیتی",
+          "name_en": "Security and Sovereign Ministries",
+          "role": "مراکز مهم سیاست امنیتی و خارجی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "king": "Mohammed VI",
+        "prime_minister": "Fatima Ezzahra El Mansouri",
+        "governing_coalition": [
+          "PAM",
+          "Istiqlal Party",
+          "USFP",
+          "PPS"
+        ],
+        "status": "ائتلاف چهارحزبی پس از انتخابات ۲۳ سپتامبر ۲۰۲۶ تشکیل شد و ۲۰۷ کرسی دارد؛ RNI در دولت جدید نیست."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "employment",
+          "healthcare",
+          "education",
+          "cost_of_living",
+          "royal_authority",
+          "regional_development"
+        ],
+        "rule": "نقش سلطنت از رقابت حزبی تفکیک شود؛ پادشاه در حوزه‌های راهبردی نفوذ محوری دارد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Morocco September 2026 election",
+            "url": "https://data.ipu.org/parliament/MA/MA-LC01/election/MA-LC01-E20260923/",
+            "date": "2026-10-16"
+          },
+          {
+            "name": "Associated Press — Morocco election results",
+            "url": "https://apnews.com/article/ca3df681dcdc865b11432248ebad4248",
+            "date": "2026-09-25"
+          },
+          {
+            "name": "Le Monde — Morocco new government formed",
+            "url": "https://www.lemonde.fr/en/international/article/2026/10/17/morocco-forms-new-government-but-except-for-women-very-little-changes_6758713_4.html",
+            "date": "2026-10-17"
+          }
+        ],
+        "notes": "انتخابات ۲۳ سپتامبر و دولت تشکیل‌شده در ۱۶ اکتبر ۲۰۲۶ پیش از snapshot سناریو بوده‌اند."
       },
       "parliamentary_groups": []
     },
@@ -4695,19 +4991,133 @@
     "BGD": {
       "country_name_fa": "بنگلادش",
       "country_name_en": "Bangladesh",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "parliamentary_multiparty_republic",
+      "government_model": "جمهوری پارلمانی؛ دولت BNP پس از انتخابات فوریه ۲۰۲۶ و پایان دوره دولت موقت",
+      "parties": [
+        {
+          "id": "bgd_bnp",
+          "name_fa": "حزب ملی‌گرای بنگلادش",
+          "name_en": "Bangladesh Nationalist Party (BNP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و دارای اکثریت پارلمانی",
+          "ideological_profile": "ملی‌گرایی بنگلادشی، محافظه‌کاری و میانه‌راست",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_jamaat",
+          "name_fa": "جماعت اسلامی بنگلادش",
+          "name_en": "Bangladesh Jamaat-e-Islami",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین نیروی اپوزیسیون پارلمانی",
+          "ideological_profile": "اسلام‌گرایی سیاسی و محافظه‌کاری",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_ncp",
+          "name_fa": "حزب شهروندان ملی",
+          "name_en": "National Citizen Party (NCP)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک پارلمانی برخاسته از جنبش دانشجویی ۲۰۲۴",
+          "ideological_profile": "اصلاح‌طلبی نهادی و سیاست ضدفساد",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_jatiya",
+          "name_fa": "حزب جاتیه",
+          "name_en": "Jatiya Party",
+          "entity_type": "party",
+          "political_role": "حزب قدیمی با حضور محدودتر در پارلمان",
+          "ideological_profile": "ملی‌گرایی و محافظه‌کاری میانه‌رو",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "bgd_bnp_pragmatic",
+          "name_fa": "جریان عمل‌گرای BNP",
+          "name_en": "BNP pragmatic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "ثبات اقتصادی و جذب سرمایه."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "bgd_student",
+          "name_fa": "جریان اصلاح‌طلبان جنبش دانشجویی",
+          "name_en": "Student-led reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "اصلاح نهادها و پاسخ‌گویی پس از خیزش ۲۰۲۴."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "bgd_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه به ریاست طارق رحمان.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_parliament",
+          "name_fa": "پارلمان ملی",
+          "name_en": "Jatiya Sangsad",
+          "role": "پارلمان ۳۵۰ عضوی؛ BNP دارای اکثریت است.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "ریاست کشور با نقش عمدتاً تشریفاتی؛ محمد شهاب‌الدین.",
+          "confidence": "high"
+        },
+        {
+          "id": "bgd_courts",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "نهاد قضایی در دستورکار اصلاحات پس از دولت موقت.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Tarique Rahman",
+        "president": "Mohammed Shahabuddin",
+        "governing_party": "Bangladesh Nationalist Party",
+        "status": "BNP پس از انتخابات ۱۲ فوریه ۲۰۲۶ دولت را تشکیل داد و ۲۱۰ کرسی مستقیم از ۳۰۰ کرسی را کسب کرد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_reform",
+          "inflation",
+          "employment",
+          "relations_with_india",
+          "religious_pluralism",
+          "judicial_independence"
+        ],
+        "rule": "رقابت BNP و جماعت اسلامی و نیروهای نوظهور پس از خیزش ۲۰۲۴ مدل شود؛ Awami League در انتخابات ۲۰۲۶ شرکت نکرد."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Bangladesh February 2026 election results",
+            "url": "https://data.ipu.org/parliament/BD/BD-LC01/election/BD-LC01-E20260212/",
+            "date": "2026-06-17"
+          },
+          {
+            "name": "Financial Times — Bangladesh post-uprising election results",
+            "url": "https://www.ft.com/content/3b3ca149-4f17-44e9-a3f1-c1285f577876",
+            "date": "2026-02-13"
+          }
+        ],
+        "notes": "نتایج انتخابات و دولت مطابق داده IPU تا تاریخ مبنا؛ Awami League در انتخابات ۲۰۲۶ شرکت نکرده و نباید به‌عنوان حزب پارلمانی فعال ثبت شود."
       },
       "parliamentary_groups": []
     },
@@ -4992,19 +5402,185 @@
     "MYS": {
       "country_name_fa": "مالزی",
       "country_name_en": "Malaysia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "federal_parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه فدرال با نظام پارلمانی؛ دولت وحدت ملی به رهبری پاکاتان هاراپان و مشارکت باریسان ناسیونال و احزاب شرق مالزی",
+      "parties": [
+        {
+          "id": "mys_pkr",
+          "name_fa": "حزب عدالت مردم",
+          "name_en": "People’s Justice Party (PKR)",
+          "entity_type": "party",
+          "political_role": "حزب نخست‌وزیر و هسته پاکاتان هاراپان",
+          "ideological_profile": "اصلاح‌طلبی و چندقومیتی",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_dap",
+          "name_fa": "حزب اقدام دموکراتیک",
+          "name_en": "Democratic Action Party (DAP)",
+          "entity_type": "party",
+          "political_role": "شریک اصلی دولت",
+          "ideological_profile": "سوسیال‌دموکراسی و چندقومیتی",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_amanah",
+          "name_fa": "حزب اعتماد ملی",
+          "name_en": "National Trust Party (AMANAH)",
+          "entity_type": "party",
+          "political_role": "شریک دولت",
+          "ideological_profile": "اسلام‌گرایی میانه‌رو و اصلاح‌طلبی",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_umno",
+          "name_fa": "سازمان ملی متحد مالایی‌ها",
+          "name_en": "United Malays National Organisation (UMNO)",
+          "entity_type": "party",
+          "political_role": "هسته باریسان ناسیونال و شریک دولت",
+          "ideological_profile": "ملی‌گرایی مالایی",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_pas",
+          "name_fa": "حزب اسلامی مالزی",
+          "name_en": "Malaysian Islamic Party (PAS)",
+          "entity_type": "party",
+          "political_role": "حزب اصلی ائتلاف مخالف پریکتان ناسیونال",
+          "ideological_profile": "اسلام‌گرایی محافظه‌کار",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_bersatu",
+          "name_fa": "حزب بومیان متحد مالزی",
+          "name_en": "Malaysian United Indigenous Party (BERSATU)",
+          "entity_type": "party",
+          "political_role": "شریک اصلی PAS در اپوزیسیون",
+          "ideological_profile": "ملی‌گرایی مالایی و محافظه‌کاری",
+          "confidence": "medium"
+        },
+        {
+          "id": "mys_pbb",
+          "name_fa": "حزب میراث بومیان متحد",
+          "name_en": "Parti Pesaka Bumiputera Bersatu (PBB)",
+          "entity_type": "party",
+          "political_role": "حزب محوری ائتلاف GPS و شریک دولت",
+          "ideological_profile": "فدرالیسم ساراواک",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mys_ph_reform",
+          "name_fa": "جریان اصلاح‌طلب پاکاتان هاراپان",
+          "name_en": "PH reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "اصلاح نهادی و حفظ ائتلاف چندحزبی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mys_bn_malay",
+          "name_fa": "جریان ملی‌گرای مالایی در UMNO",
+          "name_en": "UMNO Malay nationalist current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "identity": "حفظ جایگاه سیاسی مالایی‌ها."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mys_east_federal",
+          "name_fa": "جریان فدرالیست شرق مالزی",
+          "name_en": "East Malaysian federalist current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "federalism": "افزایش اختیارات و سهم منابع برای صباح و ساراواک."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mys_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه به ریاست انور ابراهیم.",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_dpr",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "Dewan Rakyat",
+          "role": "مجلس منتخب ۲۲۲ کرسی؛ دولت متکی بر ائتلاف چندحزبی.",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_senate",
+          "name_fa": "مجلس سنا",
+          "name_en": "Dewan Negara",
+          "role": "مجلس علیا با اعضای منتخب ایالتی و منصوب.",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_monarchy",
+          "name_fa": "یانگ دی‌پرتوان آگونگ و کنفرانس حکام",
+          "name_en": "Yang di-Pertuan Agong and Conference of Rulers",
+          "role": "نهاد سلطنت انتخابی فدرال و حکام ایالت‌ها.",
+          "confidence": "high"
+        },
+        {
+          "id": "mys_states",
+          "name_fa": "دولت‌های ایالتی",
+          "name_en": "State Governments",
+          "role": "مراکز قدرت ایالتی، به‌ویژه در صباح و ساراواک.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Anwar Ibrahim",
+        "governing_coalition": [
+          "Pakatan Harapan",
+          "Barisan Nasional",
+          "Gabungan Parti Sarawak",
+          "Gabungan Rakyat Sabah",
+          "supporting independents"
+        ],
+        "opposition_coalition": [
+          "Perikatan Nasional"
+        ],
+        "status": "دولت وحدت ملی اکثریت مجلس را حفظ می‌کند؛ احزاب شرق مالزی در توازن قدرت مهم‌اند."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "ethnic_policy",
+          "cost_of_living",
+          "religious_policy",
+          "anti_corruption",
+          "federalism",
+          "state_elections"
+        ],
+        "rule": "ائتلاف فدرال و ائتلاف‌های ایالتی جداگانه مدل شوند؛ همکاری فدرال لزوماً هم‌پیمانی ایالتی نیست."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Channel News Asia — Malaysia government coalitions",
+            "url": "https://www.channelnewsasia.com/asia/malaysia-next-general-election-national-day-anwar-6583951",
+            "date": "2026-11-26"
+          },
+          {
+            "name": "Parliament of Malaysia — official portal",
+            "url": "https://www.parlimen.gov.my/",
+            "date": "2026-11-27"
+          }
+        ],
+        "notes": "ساختار ائتلافی بر اساس وضعیت پارلمان در نوامبر ۲۰۲۶؛ تعداد کرسی‌ها به دلیل جابه‌جایی نمایندگان ثابت نشده است."
       },
       "parliamentary_groups": []
     },
@@ -5030,57 +5606,457 @@
     "THA": {
       "country_name_fa": "تایلند",
       "country_name_en": "Thailand",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "constitutional_monarchy_parliamentary_multiparty",
+      "government_model": "پادشاهی مشروطه با دولت پارلمانی؛ ائتلاف بومجای‌تای و پوئا تای پس از انتخابات زودهنگام ۲۰۲۶",
+      "parties": [
+        {
+          "id": "tha_bjt",
+          "name_fa": "حزب بومجای‌تای",
+          "name_en": "Bhumjaithai Party",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب ائتلاف دولت",
+          "ideological_profile": "محافظه‌کاری عمل‌گرا و سیاست منطقه‌ای",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_pp",
+          "name_fa": "حزب مردم",
+          "name_en": "People’s Party",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین نیروی اپوزیسیون",
+          "ideological_profile": "اصلاح‌طلبی و لیبرالیسم سیاسی",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_pt",
+          "name_fa": "حزب پوئا تای",
+          "name_en": "Pheu Thai Party",
+          "entity_type": "party",
+          "political_role": "شریک اصلی ائتلاف دولت",
+          "ideological_profile": "پوپولیسم انتخاباتی و سیاست‌های رفاهی",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_kla",
+          "name_fa": "حزب کلا تام",
+          "name_en": "Kla Tham Party",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی دولت",
+          "ideological_profile": "محافظه‌کاری و شبکه‌های سیاسی محلی",
+          "confidence": "medium"
+        },
+        {
+          "id": "tha_dem",
+          "name_fa": "حزب دموکرات",
+          "name_en": "Democrat Party",
+          "entity_type": "party",
+          "political_role": "حزب قدیمی با حضور پارلمانی",
+          "ideological_profile": "محافظه‌کاری لیبرال و میانه‌راست",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "tha_bjt_local",
+          "name_fa": "شبکه‌های محلی بومجای‌تای",
+          "name_en": "Bhumjaithai local networks",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اتکا به شبکه‌های استانی و توافق‌های ائتلافی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tha_pp_reform",
+          "name_fa": "جریان اصلاح‌طلب حزب مردم",
+          "name_en": "People’s Party reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاح قانون اساسی و پاسخ‌گویی دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "tha_pt_thaksin",
+          "name_fa": "جریان میراث تاکسین در پوئا تای",
+          "name_en": "Pheu Thai Thaksin-aligned current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "سیاست‌های رفاهی و پایگاه انتخاباتی روستایی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "tha_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه به ریاست آنوتین چارن‌ویراکول.",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۵۰۰ کرسی؛ بومجای‌تای ۱۹۲ و حزب مردم ۱۲۰ کرسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس علیا با نقش نهادی در قانون‌گذاری.",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_monarchy",
+          "name_fa": "سلطنت و شورای خصوصی",
+          "name_en": "Monarchy and Privy Council",
+          "role": "نهاد سلطنتی در ساختار قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "tha_military",
+          "name_fa": "نیروهای مسلح",
+          "name_en": "Royal Thai Armed Forces",
+          "role": "نهاد دفاعی با سابقه نفوذ سیاسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Anutin Charnvirakul",
+        "governing_coalition": [
+          "Bhumjaithai Party",
+          "Pheu Thai Party",
+          "Kla Tham Party",
+          "smaller parties"
+        ],
+        "opposition_leader": "People’s Party",
+        "status": "ائتلاف بومجای‌تای و پوئا تای پس از انتخابات فوریه ۲۰۲۶ اکثریت مجلس را تشکیل داد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "constitutional_reform",
+          "military_role",
+          "royal_institutions",
+          "economic_growth",
+          "tourism",
+          "border_security"
+        ],
+        "rule": "رقابت اصلاح‌طلبان، محافظه‌کاران و نیروهای پوپولیست در چارچوب سلطنت مشروطه مدل شود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Thailand February 2026 election results",
+            "url": "https://data.ipu.org/parliament/TH/TH-LC01/election/TH-LC01-E20260208/",
+            "date": "2026-05-01"
+          },
+          {
+            "name": "Reuters — Thailand political background",
+            "url": "https://www.reuters.com/world/asia-pacific/tumultuous-two-decades-thailands-politics-2026-02-05/",
+            "date": "2026-02-05"
+          }
+        ],
+        "notes": "ترکیب مجلس بر اساس انتخابات ۸ فوریه ۲۰۲۶؛ آنوتین در ۱۹ مارس دوباره نخست‌وزیر شد."
       },
       "parliamentary_groups": []
     },
     "VNM": {
       "country_name_fa": "ویتنام",
       "country_name_en": "Vietnam",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "one_party_socialist_republic",
+      "government_model": "جمهوری سوسیالیستی تک‌حزبی؛ حزب کمونیست تنها حزب قانونی",
+      "parties": [
+        {
+          "id": "vnm_cpv",
+          "name_fa": "حزب کمونیست ویتنام",
+          "name_en": "Communist Party of Viet Nam (CPV)",
+          "entity_type": "party",
+          "political_role": "تنها حزب سیاسی قانونی و نیروی حاکم",
+          "ideological_profile": "مارکسیسم–لنینیسم و اندیشه هوشی‌مین",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "vnm_reform",
+          "name_fa": "جریان اصلاحات اقتصادی و نوسازی",
+          "name_en": "Economic reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "توسعه فناوری، سرمایه‌گذاری خصوصی و اصلاح بوروکراسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "vnm_security",
+          "name_fa": "جریان امنیتی و نظم سیاسی",
+          "name_en": "Security and political order current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حفظ ثبات سیاسی و امنیت داخلی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "vnm_collective",
+          "name_fa": "جریان نهادی و جمعی حزب",
+          "name_en": "Collective institutional current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "governance": "حفظ نقش کمیته مرکزی و دفتر سیاسی در کنار تمرکز رهبری."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "vnm_general",
+          "name_fa": "دبیرکل حزب کمونیست",
+          "name_en": "CPV General Secretary",
+          "role": "بالاترین جایگاه حزبی؛ تو لام.",
+          "confidence": "high"
+        },
+        {
+          "id": "vnm_politburo",
+          "name_fa": "دفتر سیاسی حزب",
+          "name_en": "Politburo",
+          "role": "مرکز تصمیم‌گیری راهبردی حزب.",
+          "confidence": "high"
+        },
+        {
+          "id": "vnm_na",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۵۰۰ کرسی؛ حزب کمونیست ۴۸۲ کرسی و ۱۸ نماینده غیرحزبی تأییدشده.",
+          "confidence": "high"
+        },
+        {
+          "id": "vnm_president",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "تو لام از آوریل ۲۰۲۶ هم‌زمان رئیس‌جمهور و دبیرکل است.",
+          "confidence": "high"
+        },
+        {
+          "id": "vnm_pm",
+          "name_fa": "دولت و نخست‌وزیری",
+          "name_en": "Government and Prime Minister",
+          "role": "قوه اجرایی به ریاست له مین هونگ.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "general_secretary": "To Lam",
+        "president": "To Lam",
+        "prime_minister": "Le Minh Hung",
+        "governing_party": "Communist Party of Viet Nam",
+        "status": "حزب کمونیست تنها حزب قانونی است؛ در انتخابات مجلس مارس ۲۰۲۶ تعداد ۴۸۲ کرسی از ۵۰۰ کرسی را کسب کرد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "economic_growth",
+          "state_owned_enterprises",
+          "private_sector",
+          "anti_corruption",
+          "public_security",
+          "foreign_policy_balance"
+        ],
+        "rule": "اپوزیسیون حزبی ساختگی تعریف نشود؛ تغییر سیاست از جناح‌ها و مراکز قدرت درون حزب و دولت مدل شود."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Viet Nam March 2026 election",
+            "url": "https://data.ipu.org/parliament/VN/VN-LC01/election/VN-LC01-E20260315/",
+            "date": "2026-04-06"
+          },
+          {
+            "name": "Congressional Research Service — Vietnam political structure",
+            "url": "https://www.everycrsreport.com/files/2026-04-27_IF10209_39610ba772326dd3c2a41f126ac4138058875f9f.html",
+            "date": "2026-04-27"
+          },
+          {
+            "name": "ISEAS — Vietnam’s Reconfigured Leadership",
+            "url": "https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2026-29-vietnams-reconfigured-leadership-personnel-and-power-in-the-new-era/",
+            "date": "2026-04-27"
+          }
+        ],
+        "notes": "۱۸ نماینده غیرحزبی نامزدهای تأییدشده‌اند و حزب یا اپوزیسیون محسوب نمی‌شوند."
       },
       "parliamentary_groups": []
     },
     "PHL": {
       "country_name_fa": "فیلیپین",
       "country_name_en": "Philippines",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
+      "system_type": "presidential_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ احزاب شخص‌محور و ائتلاف‌های انتخاباتی متغیر",
+      "parties": [
+        {
+          "id": "ph_pfp",
+          "name_fa": "حزب فدرال فیلیپین",
+          "name_en": "Partido Federal ng Pilipinas (PFP)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و بخشی از ائتلاف حاکم",
+          "ideological_profile": "فدرالیسم و محافظه‌کاری",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_lakas",
+          "name_fa": "لاکس–CMD",
+          "name_en": "Lakas–CMD",
+          "entity_type": "party",
+          "political_role": "شریک اصلی ائتلاف حامی رئیس‌جمهور",
+          "ideological_profile": "محافظه‌کاری و مسیحیت دموکراتیک",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_nup",
+          "name_fa": "حزب وحدت ملی",
+          "name_en": "National Unity Party (NUP)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی دولت",
+          "ideological_profile": "میانه‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_npc",
+          "name_fa": "ائتلاف ملی‌گرایان خلق",
+          "name_en": "Nationalist People's Coalition (NPC)",
+          "entity_type": "party",
+          "political_role": "حزب مهم پارلمانی",
+          "ideological_profile": "محافظه‌کاری و عمل‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_pdp",
+          "name_fa": "حزب دموکراتیک فیلیپین–قدرت مردم",
+          "name_en": "PDP–Laban",
+          "entity_type": "party",
+          "political_role": "حزب مرتبط با رودریگو دوترته و بخشی از اپوزیسیون",
+          "ideological_profile": "پوپولیسم و فدرالیسم",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_akbayan",
+          "name_fa": "آکبایان",
+          "name_en": "Akbayan",
+          "entity_type": "party",
+          "political_role": "نیروی کوچک اصلاح‌طلب و مدنی",
+          "ideological_profile": "سوسیال‌دموکراسی و حقوق مدنی",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "ph_marcos",
+          "name_fa": "ائتلاف حامی مارکوس",
+          "name_en": "Marcos-aligned coalition",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "governance": "حفظ اکثریت مجلس و اجرای دستورکار دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "ph_duterte",
+          "name_fa": "شبکه سیاسی دوترته",
+          "name_en": "Duterte political network",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "رقابت با خاندان مارکوس و حفظ نفوذ منطقه‌ای."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "ph_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست فردیناند مارکوس جونیور.",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "مجلس ۳۱۷ کرسی؛ ائتلاف حامی مارکوس اکثریت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس ۲۴ عضوی با ائتلاف‌های متغیر.",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_court",
+          "name_fa": "دیوان عالی",
+          "name_en": "Supreme Court",
+          "role": "نهاد قضایی و قانون اساسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "ph_dynasties",
+          "name_fa": "شبکه‌های سیاسی محلی و خاندان‌ها",
+          "name_en": "Local political dynasties",
+          "role": "شبکه‌های منطقه‌ای و خانوادگی اثرگذار.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Ferdinand 'Bongbong' Marcos Jr.",
+        "governing_coalition": "Alyansa para sa Bagong Pilipinas",
+        "coalition_parties": [
+          "PFP",
+          "Lakas–CMD",
+          "NUP",
+          "NPC",
+          "Nacionalista Party"
+        ],
+        "status": "ائتلاف حامی مارکوس در انتخابات میان‌دوره‌ای ۲۰۲۵ اکثریت مجلس نمایندگان را به دست آورد."
+      },
+      "political_behavior": {
+        "response_dimensions": [
+          "territorial_integrity",
+          "china_relations",
+          "poverty",
+          "employment",
+          "dynastic_politics",
+          "federalism"
+        ],
+        "rule": "احزاب را سازمان‌های ائتلافی و شخص‌محور مدل کن؛ وفاداری نمایندگان می‌تواند سریع تغییر کند."
+      },
+      "research_status": "researched_initial",
       "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Philippines House May 2025 election",
+            "url": "https://data.ipu.org/parliament/PH/PH-LC01/election/PH-LC01-E20250512/",
+            "date": "2025-05-12"
+          },
+          {
+            "name": "IPU Parline — Philippines Senate May 2025 election",
+            "url": "https://data.ipu.org/parliament/PH/PH-UC01/election/PH-UC01-E20250512/",
+            "date": "2025-05-12"
+          }
+        ],
+        "notes": "نتایج انتخابات میان‌دوره‌ای ۲۰۲۵ ثبت شده؛ ائتلاف‌ها یکپارچگی کامل ندارند."
       },
       "parliamentary_groups": []
     },
