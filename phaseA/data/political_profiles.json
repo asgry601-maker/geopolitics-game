@@ -5,16 +5,10 @@
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 173,
-    "pending_countries": 1,
+    "researched_countries": 174,
+    "pending_countries": 0,
     "last_batch": [
-      "TON",
-      "VUT",
-      "SLB",
-      "UZB",
-      "TKM",
-      "TJK",
-      "KGZ"
+      "ARM"
     ]
   },
   "notes": "این فایل فقط رجیستری و قالب داده است؛ هیچ کشورِ pending نباید به‌عنوان ساختار سیاسی تکمیل‌شده در بازی نمایش داده شود.,احزاب رسمی، جریان‌ها/فراکسیون‌ها و مراکز قدرت از هم جدا نگهداری می‌شوند.,درصد نفوذ یا سهم سیاسی تا وقتی منبع معتبر ندارد، مقداردهی نمی‌شود.,برای حکومت‌های غیررقابتی، نبود رقابت حزبی باید صریح ثبت شود و احزاب صوری ساخته نشوند.,گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.,نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.,نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.,نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.,نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است.,نسخه 1.5.0: بسته پنجم پژوهشی برای بنگلادش، تایلند، مالزی، فیلیپین، ویتنام، الجزایر و مراکش اضافه شد. snapshot مطابق ۵ نوامبر ۲۰۲۶ است؛ در نظام تک‌حزبی و ساختارهای سلطنتی، حزب یا اپوزیسیون ساختگی تعریف نشده است.,نسخه 1.6.0: بسته ششم پژوهشی برای اسپانیا، پرتغال، هلند، بلژیک، سوئد، نروژ و دانمارک اضافه شد. وضعیت سیاسی مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ ثبت شده؛ در اسپانیا انتخابات زودهنگام هنوز برگزار نشده بود و در سوئد دولت موقت برقرار بود.,نسخه 1.7.0: بسته هفتم پژوهشی برای یونان، لهستان، چک، اتریش، سوئیس، ایرلند و فنلاند اضافه شد. کرسی‌های انتخاباتی با تاریخ انتخابات برچسب‌گذاری شده‌اند؛ در کشورهایی با تغییرات پارلمانی، داده‌های اولیه از وضعیت جاری تفکیک شده‌اند.\nبسته هشتم در ۲۷ نوامبر ۲۰۲۶: عراق، سوریه، لبنان، اردن، فلسطین، قطر و کویت. برای نظام‌های فاقد احزاب رقابتی، parties خالی نگه داشته شده و جریان‌های سیاسی/شبکه‌های قدرت در factions و power_centers آمده‌اند. داده‌های سیاسی بر snapshot سناریو در ۵ نوامبر ۲۰۲۶ منطبق‌اند.\nبسته نهم در ۲۷ نوامبر ۲۰۲۶: بحرین، عمان، یمن، لیبی، تونس، ایسلند و اسلواکی. در نظام‌های بدون احزاب رقابتی، parties خالی مانده و انجمن‌ها/جریان‌ها/مراکز قدرت به‌صورت جدا ثبت شده‌اند. رخدادهای پس از snapshot سناریو در ۵ نوامبر ۲۰۲۶ به‌عنوان وضعیت آغازین بازی وارد نشده‌اند.\nBatch 12 added LTU, LUX, CYP, MLT, KAZ, AZE, GEO. Scenario baseline remains 2026-11-05; subsequent source updates are used only to establish the state as of that baseline where applicable.\nBatch 13 added PRK, TWN, MNG, LKA, NPL, BTN, MDV. Snapshot baseline remains 2026-11-05; post-snapshot political developments are recorded separately and not applied retroactively.\nBatch 14 added AFG, SGP, MMR, KHM, LAO, BRN, TLS. Scenario baseline remains 2026-11-05; post-snapshot updates are not applied retroactively.\nBatch 15 added ETH, KEN, GHA, SEN, CIV, CMR, UGA. Political baseline remains 2026-11-05; post-snapshot developments are not retroactively applied.\nنسخه 1.12.0: بسته شانزدهم پژوهشی برای تانزانیا، رواندا، زیمبابوه، زامبیا، موزامبیک، آنگولا و نامیبیا اضافه شد. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اصلاحات قانون اساسی زیمبابوه و نتایج انتخابات ۲۰۲۶ زامبیا مطابق وضعیت تا تاریخ snapshot ثبت شده‌اند.\nنسخه 1.13.0: بسته هفدهم پژوهشی برای بوتسوانا، سودان، سودان جنوبی، چاد، نیجر، مالی و موریتانی اضافه شد. snapshot سیاسی بازی ۵ نوامبر ۲۰۲۶ حفظ شده؛ در سودان ساختار چندپاره، در نیجر و مالی انحلال احزاب و در سودان جنوبی تفکیک حزب ثبت‌شده I.O از جنبش SPLM/A-IO رعایت شده است.\nنسخه 1.18.0: بسته بیست‌ودوم پژوهشی برای اروگوئه، گویان، سورینام، کوبا، هائیتی، جمهوری دومینیکن و جامائیکا اضافه شد. ساختارهای تک‌حزبی و دولت‌های انتقالی به‌صورت واقعی و بدون ساختن احزاب رقابتی یا اکثریت پارلمانی صوری ثبت شده‌اند. snapshot سناریو همچنان ۵ نوامبر ۲۰۲۶ است؛ اطلاعاتی که پس از این تاریخ منتشر شده‌اند فقط برای راستی‌آزمایی وضعیت تا snapshot استفاده شده‌اند و در صورت عدم امکان تفکیک زمانی، عدم قطعیت در یادداشت پروفایل ثبت شده است.",
@@ -32527,21 +32521,250 @@
     "ARM": {
       "country_name_fa": "ارمنستان",
       "country_name_en": "Armenia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_republic_multiparty",
+      "government_model": "جمهوری پارلمانی چندحزبی؛ نیکول پاشینیان پس از انتخابات پارلمانی ۷ ژوئن ۲۰۲۶ و پیروزی حزب قرارداد مدنی، نخست‌وزیر باقی ماند. رئیس‌جمهور واهاگن خاچاطوریان رئیس کشور با اختیارات عمدتاً تشریفاتی و قانون اساسی است.",
+      "parties": [
+        {
+          "id": "arm_cc",
+          "name_fa": "قرارداد مدنی",
+          "name_en": "Civil Contract Party",
+          "entity_type": "party",
+          "political_role": "حزب حاکم به رهبری نیکول پاشینیان؛ ۶۴ کرسی از ۱۰۵ کرسی مجلس ملی پس از انتخابات ۲۰۲۶.",
+          "ideological_profile": "میانه‌گرایی، اصلاح‌طلبی، لیبرالیسم مدنی و رویکرد طرفدار ادغام اروپایی",
+          "legal_status": "active_party",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_sa",
+          "name_fa": "ائتلاف ارمنستان قدرتمند",
+          "name_en": "Strong Armenia Alliance",
+          "entity_type": "party_coalition",
+          "political_role": "ائتلاف اپوزیسیون به رهبری سامول کاراپتیان؛ ۲۹ کرسی مجلس ملی.",
+          "ideological_profile": "محافظه‌کاری ملی، سیاست اقتصادی راست‌گرا و انتقاد از سیاست خارجی دولت",
+          "legal_status": "active_electoral_alliance",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_aa",
+          "name_fa": "ائتلاف ارمنستان",
+          "name_en": "Armenia Alliance",
+          "entity_type": "party_coalition",
+          "political_role": "ائتلاف اپوزیسیون به رهبری رابرت کوچاریان؛ ۱۲ کرسی مجلس ملی. ائتلاف متشکل از فدراسیون انقلابی ارمنی (داشناک) و حزب آراج است.",
+          "ideological_profile": "محافظه‌کاری ملی، ملی‌گرایی ارمنی و مواضع سخت‌گیرانه‌تر در مسائل امنیتی",
+          "legal_status": "active_electoral_alliance",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_prosperous",
+          "name_fa": "ارمنستان شکوفا",
+          "name_en": "Prosperous Armenia Party",
+          "entity_type": "party",
+          "political_role": "حزب مهم سابق به رهبری گاگیک تساروکیان؛ در انتخابات ۲۰۲۶ با ۳٫۹۹ درصد از آستانه ورود به پارلمان عبور نکرد و کرسی نگرفت.",
+          "ideological_profile": "محافظه‌کاری اجتماعی، عمل‌گرایی اقتصادی و سیاست‌ورزی پوپولیستی",
+          "legal_status": "active_party_no_parliamentary_seats",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_wings",
+          "name_fa": "بال‌های وحدت",
+          "name_en": "Wings of Unity",
+          "entity_type": "party",
+          "political_role": "نیروی سیاسی شرکت‌کننده در انتخابات ۲۰۲۶؛ ۲٫۳۰ درصد آرا و بدون کرسی.",
+          "ideological_profile": "اصلاح‌طلبی و سیاست‌ورزی ضدساختار سنتی",
+          "legal_status": "active_party_no_parliamentary_seats",
+          "confidence": "medium"
+        },
+        {
+          "id": "arm_meritocratic",
+          "name_fa": "حزب شایسته‌سالار ارمنستان",
+          "name_en": "Meritocratic Party of Armenia",
+          "entity_type": "party",
+          "political_role": "حزب شرکت‌کننده در انتخابات ۲۰۲۶؛ ۲٫۱۰ درصد آرا و بدون کرسی.",
+          "ideological_profile": "شایسته‌سالاری و اصلاحات نهادی",
+          "legal_status": "active_party_no_parliamentary_seats",
+          "confidence": "medium"
+        },
+        {
+          "id": "arm_republic",
+          "name_fa": "حزب جمهوری",
+          "name_en": "Republic Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اصلاح‌طلب؛ در انتخابات پارلمانی ۲۰۲۶ حدود ۱٫۰۸ درصد آرا گرفت و کرسی کسب نکرد.",
+          "ideological_profile": "لیبرالیسم، اصلاح‌طلبی و میانه‌گرایی",
+          "legal_status": "active_party_no_parliamentary_seats",
+          "confidence": "medium"
+        },
+        {
+          "id": "arm_bright",
+          "name_fa": "ارمنستان روشن",
+          "name_en": "Bright Armenia Party",
+          "entity_type": "party",
+          "political_role": "حزب لیبرال و اپوزیسیون سابق پارلمانی؛ در انتخابات ۲۰۲۶ حدود ۰٫۵۱ درصد آرا گرفت و کرسی نگرفت.",
+          "ideological_profile": "لیبرالیسم، اصلاح‌طلبی و گرایش اروپایی",
+          "legal_status": "active_party_no_parliamentary_seats",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "arm_cc_pashinyan",
+          "name_fa": "جریان رهبری پاشینیان در قرارداد مدنی",
+          "name_en": "Pashinyan leadership current within Civil Contract",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان غالب حزب حاکم حول نیکول پاشینیان؛ اولویت‌ها شامل اصلاحات حکمرانی، توسعه اقتصادی و پیگیری مسیر صلح با جمهوری آذربایجان است."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "arm_sa_karapetyan",
+          "name_fa": "جریان سامول کاراپتیان در ارمنستان قدرتمند",
+          "name_en": "Samvel Karapetyan current within Strong Armenia",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان رهبری ائتلاف اپوزیسیون پیرامون سامول کاراپتیان؛ نتیجه انتخابات را به چالش کشید اما نهادهای انتخاباتی و دادگاه قانون اساسی نتیجه را تأیید کردند."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "arm_aa_kocharyan",
+          "name_fa": "جریان رابرت کوچاریان در ائتلاف ارمنستان",
+          "name_en": "Robert Kocharyan current within Armenia Alliance",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "جریان محافظه‌کار ملی و اپوزیسیون به رهبری رئیس‌جمهور پیشین رابرت کوچاریان؛ با حضور داشناک و حزب آراج در ائتلاف."
+          },
+          "confidence": "high"
+        },
+        {
+          "id": "arm_diaspora",
+          "name_fa": "شبکه‌ها و سازمان‌های ارمنی خارج از کشور",
+          "name_en": "Armenian diaspora networks",
+          "entity_type": "political_influence_network",
+          "policy_positions": {
+            "domestic": "شبکه‌های اجتماعی، اقتصادی و سیاسی دیاسپورا می‌توانند بر سیاست خارجی، امنیت و روابط ارمنستان با جوامع ارمنی خارج از کشور اثر بگذارند؛ این شبکه‌ها حزب پارلمانی محسوب نمی‌شوند."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "arm_pm",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "نیکول پاشینیان رئیس دولت و محور قوه مجریه است؛ دولت از اکثریت حزب قرارداد مدنی در مجلس برخوردار است.",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_na",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس تک‌مجلسی با ۱۰۵ کرسی: قرارداد مدنی ۶۴، ائتلاف ارمنستان قدرتمند ۲۹ و ائتلاف ارمنستان ۱۲ کرسی.",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_pres",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "واهاگن خاچاطوریان رئیس‌جمهور و رئیس کشور است؛ طبق قانون اساسی نقش او عمدتاً تشریفاتی و محدود است.",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_ccourt",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد قضایی عالی در رسیدگی به دعاوی قانون اساسی؛ در ۴ ژوئیه ۲۰۲۶ اعتراض‌های انتخاباتی را رد و نتیجه انتخابات را تأیید کرد.",
+          "confidence": "high"
+        },
+        {
+          "id": "arm_cec",
+          "name_fa": "کمیسیون مرکزی انتخابات",
+          "name_en": "Central Electoral Commission",
+          "role": "نهاد اداره انتخابات و تأیید نتایج رسمی؛ نتایج انتخابات ۱۴ ژوئن ۲۰۲۶ را نهایی کرد.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Vahagn Khachaturyan",
+        "prime_minister": "Nikol Pashinyan",
+        "government_type": "parliamentary multiparty republic",
+        "prime_minister_party": "Civil Contract Party",
+        "supporting_coalitions": [
+          "Civil Contract Party"
+        ],
+        "parliamentary_context": "انتخابات ۷ ژوئن ۲۰۲۶ و نتایج نهایی تأییدشده در ۱۴ ژوئن: قرارداد مدنی ۶۴، ائتلاف ارمنستان قدرتمند ۲۹ و ائتلاف ارمنستان ۱۲ کرسی از ۱۰۵ کرسی. دادگاه قانون اساسی در ۴ ژوئیه اعتراض‌های انتخاباتی را رد کرد. اکثریت حزب حاکم به سه‌پنجم می‌رسد اما کمتر از دوسوم است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "peace_process_with_azerbaijan",
+          "border_security",
+          "relations_with_russia",
+          "relations_with_eu",
+          "economic_reform",
+          "judicial_independence",
+          "diaspora_relations",
+          "constitutional_reform"
+        ],
+        "rule": "سه نیروی پارلمانی پس از انتخابات ۲۰۲۶ را از احزاب شرکت‌کننده فاقد کرسی جدا نگه دار. قرارداد مدنی ۶۴ کرسی و اکثریت دارد؛ ائتلاف‌های Strong Armenia و Armenia دو بلوک اپوزیسیون جداگانه‌اند. نتیجه انتخابات پس از رسیدگی دادگاه قانون اساسی تثبیت شد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline – Armenia National Assembly election 2026",
+            "url": "https://data.ipu.org/parliament/AM/AM-LC01/election/AM-LC01-E20260607/",
+            "date": "2026-06-07"
+          },
+          {
+            "name": "PACE – Election observation report, Armenia 2026 parliamentary elections",
+            "url": "https://pace.coe.int/en/files/36276/html",
+            "date": "2026-09"
+          },
+          {
+            "name": "Central Electoral Commission of Armenia – official election results",
+            "url": "https://elections.am/News/Item/2024",
+            "date": "2026-06-14"
+          },
+          {
+            "name": "Constitutional Court ruling upholding parliamentary election results",
+            "url": "https://armenpress.am/en/article/1254759",
+            "date": "2026-07-04"
+          }
+        ],
+        "notes": "انتخابات پارلمانی در ۷ ژوئن ۲۰۲۶ برگزار و نتایج نهایی در ۱۴ ژوئن تأیید شد. سه نیروی سیاسی وارد مجلس ۱۰۵ عضوی شدند. دادگاه قانون اساسی در ۴ ژوئیه ۲۰۲۶ اعتراض‌های انتخاباتی را رد کرد. ارقام کرسی‌ها بر پایه IPU و نتایج رسمی CEC است."
+      },
+      "parliamentary_groups": [
+        {
+          "id": "arm_pg_cc",
+          "name_fa": "فراکسیون قرارداد مدنی",
+          "name_en": "Civil Contract parliamentary faction",
+          "party_ids": [
+            "arm_cc"
+          ],
+          "seats": 64
+        },
+        {
+          "id": "arm_pg_sa",
+          "name_fa": "فراکسیون ائتلاف ارمنستان قدرتمند",
+          "name_en": "Strong Armenia Alliance parliamentary faction",
+          "party_ids": [
+            "arm_sa"
+          ],
+          "seats": 29
+        },
+        {
+          "id": "arm_pg_aa",
+          "name_fa": "فراکسیون ائتلاف ارمنستان",
+          "name_en": "Armenia Alliance parliamentary faction",
+          "party_ids": [
+            "arm_aa"
+          ],
+          "seats": 12
+        }
+      ]
     },
     "GEO": {
       "country_name_fa": "گرجستان",
