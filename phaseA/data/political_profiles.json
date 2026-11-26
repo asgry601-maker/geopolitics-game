@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "scenario_reference_date": "2026-11-05",
   "generated_at": "2026-11-27",
   "coverage": {
     "expected_countries": 174,
     "registered_countries": 174,
-    "researched_countries": 19,
-    "pending_countries": 155,
+    "researched_countries": 26,
+    "pending_countries": 148,
     "last_batch": [
-      "TUR",
-      "UKR",
-      "ISR",
-      "ITA",
-      "BRA",
-      "EGY",
-      "ARE"
+      "KOR",
+      "IDN",
+      "MEX",
+      "ARG",
+      "ZAF",
+      "NGA",
+      "AUS"
     ]
   },
   "notes": [
@@ -25,7 +25,8 @@
     "گروه‌های پارلمانی از خودِ احزاب و از جناح‌های درون‌حزبی جدا ثبت می‌شوند؛ یک حزب می‌تواند در پارلمان چند نماینده یا گروه وابسته داشته باشد.",
     "نسخه 1.1.0: نخستین بسته پژوهشی برای هفت کشور تکمیل شد. این پروفایل‌ها اولیه‌اند؛ نفوذ سیاسی عددی نشده و داده‌های متغیر باید با تاریخ snapshot نگهداری شوند.",
     "نسخه 1.2.0: بسته دوم پژوهشی برای هند، ژاپن، عربستان سعودی، پاکستان و کانادا اضافه شد. در عربستان احزاب عمداً خالی‌اند؛ در پاکستان ارتش به‌عنوان مرکز قدرت نهادی جدا شده است.",
-    "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند."
+    "نسخه 1.3.0: بسته سوم پژوهشی برای ترکیه، اوکراین، اسرائیل، ایتالیا، برزیل، مصر و امارات متحده عربی اضافه شد. وضعیت کشورها مطابق snapshot سناریو در ۵ نوامبر ۲۰۲۶ نگهداری شده؛ تغییرات بعد از این تاریخ نباید به گذشته تعمیم داده شوند.",
+    "نسخه 1.4.0: بسته چهارم پژوهشی برای کره جنوبی، اندونزی، مکزیک، آرژانتین، آفریقای جنوبی، نیجریه و استرالیا اضافه شد. در کشورهایی با ائتلاف‌های متغیر یا جابه‌جایی نمایندگان، از عددگذاری بی‌پشتوانه خودداری شده است."
   ],
   "countries": {
     "USA": {
@@ -389,21 +390,169 @@
     "MEX": {
       "country_name_fa": "مکزیک",
       "country_name_en": "Mexico",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_presidential_multiparty_republic",
+      "government_model": "جمهوری فدرال ریاستی چندحزبی؛ ائتلاف انتخاباتی حاکم در کنگره از اکثریت برخوردار است",
+      "parties": [
+        {
+          "id": "mex_morena",
+          "name_fa": "جنبش باززایی ملی",
+          "name_en": "National Regeneration Movement (MORENA)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و نیروی اصلی ائتلاف حاکم",
+          "ideological_profile": "چپ میانه تا چپ، ملی‌گرایی و سیاست‌های رفاهی",
+          "confidence": "high"
+        },
+        {
+          "id": "mex_pan",
+          "name_fa": "حزب اقدام ملی",
+          "name_en": "National Action Party (PAN)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی",
+          "ideological_profile": "محافظه‌کاری، دموکراسی مسیحی و بازار آزاد",
+          "confidence": "high"
+        },
+        {
+          "id": "mex_pri",
+          "name_fa": "حزب انقلابی نهادی",
+          "name_en": "Institutional Revolutionary Party (PRI)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون سنتی",
+          "ideological_profile": "میانه‌گرایی، ملی‌گرایی نهادی و عمل‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "mex_pvem",
+          "name_fa": "حزب سبز اکولوژیست مکزیک",
+          "name_en": "Ecologist Green Party of Mexico (PVEM)",
+          "entity_type": "party",
+          "political_role": "متحد ائتلاف حاکم",
+          "ideological_profile": "محیط‌زیست‌گرایی با مواضع ائتلافی متغیر",
+          "confidence": "medium"
+        },
+        {
+          "id": "mex_pt",
+          "name_fa": "حزب کار",
+          "name_en": "Labor Party (PT)",
+          "entity_type": "party",
+          "political_role": "متحد ائتلاف حاکم",
+          "ideological_profile": "چپ‌گرایی و کارگرگرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "mex_mc",
+          "name_fa": "جنبش شهروندی",
+          "name_en": "Citizens' Movement (MC)",
+          "entity_type": "party",
+          "political_role": "نیروی مستقل و اپوزیسیون میانه‌گرا",
+          "ideological_profile": "لیبرالیسم اجتماعی و میانه‌گرایی",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "mex_morena_moderates",
+          "name_fa": "جریان میانه‌رو و تکنوکرات در مورنا",
+          "name_en": "MORENA moderate current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر ثبات مالی و اجرای تدریجی برنامه‌های دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mex_morena_left",
+          "name_fa": "جریان چپ اجتماعی در مورنا",
+          "name_en": "MORENA social-left current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "society": "تأکید بر برنامه‌های رفاهی، دستمزد و نقش دولت."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "mex_federalist_governors",
+          "name_fa": "جریان دولت‌داران ایالتی",
+          "name_en": "State governors' current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "مذاکره با دولت فدرال بر سر بودجه، امنیت و اختیارات ایالتی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "mex_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست کلودیا شینباوم.",
+          "confidence": "high"
+        },
+        {
+          "id": "mex_congress",
+          "name_fa": "کنگره اتحادیه",
+          "name_en": "Congress of the Union",
+          "role": "دو مجلسی؛ ائتلاف مورنا، حزب سبز و حزب کار اکثریت مؤثر دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "mex_governors",
+          "name_fa": "فرمانداران ایالت‌ها",
+          "name_en": "State Governors",
+          "role": "مراکز قدرت منطقه‌ای در نظام فدرال.",
+          "confidence": "high"
+        },
+        {
+          "id": "mex_judiciary",
+          "name_fa": "قوه قضائیه فدرال",
+          "name_en": "Federal Judiciary",
+          "role": "نهاد قضایی فدرال و دادگاه عالی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Claudia Sheinbaum Pardo",
+        "governing_party": "MORENA",
+        "parliamentary_support": [
+          "MORENA",
+          "PVEM",
+          "PT"
+        ],
+        "status": "ائتلاف حاکم در هر دو مجلس از اکثریت برخوردار است؛ احزاب PAN و PRI و MC در سوی مخالف یا مستقل قرار دارند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "security_and_cartels",
+          "social_programs",
+          "energy_sovereignty",
+          "us_trade_relations",
+          "federalism",
+          "judicial_reform",
+          "migration"
+        ],
+        "rule": "رقابت حزبی با محوریت دولت فدرال، امنیت عمومی، برنامه‌های اجتماعی و روابط اقتصادی با آمریکا مدل شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "U.S. SEC — Mexico congressional party representation, 2026 filing",
+            "url": "https://www.sec.gov/Archives/edgar/data/101368/000119312526276609/d114536dex99d.htm",
+            "date": "2026-10-03",
+            "notes": ""
+          },
+          {
+            "name": "RBC Global Connect — Political outline of Mexico",
+            "url": "https://rbcglobalconnect.rbc.com/en/resources/explore-new-markets/country-profiles/mexico/political-outline",
+            "date": "2026-11-24",
+            "notes": ""
+          }
+        ],
+        "notes": "ترکیب کرسی‌ها بر اساس داده‌های رسمی گزارش‌شده در ۲۰۲۶ و ساختار ائتلاف منتخب ۲۰۲4 ثبت شده؛ از تحولات انتخاباتی ۲۰۲۷ استفاده نشود."
+      }
     },
     "IRN": {
       "country_name_fa": "ایران",
@@ -3977,21 +4126,158 @@
     "KOR": {
       "country_name_fa": "کره جنوبی",
       "country_name_en": "South Korea",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_democratic_multiparty_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ رئیس‌جمهور با دوره ثابت و مجلس ملی تک‌مجلسی",
+      "parties": [
+        {
+          "id": "kor_dp",
+          "name_fa": "حزب دموکرات کره",
+          "name_en": "Democratic Party of Korea",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و بزرگ‌ترین نیروی پارلمانی در تاریخ مبنا",
+          "ideological_profile": "میانه‌چپ، لیبرالیسم اجتماعی و اصلاحات نهادی",
+          "confidence": "high"
+        },
+        {
+          "id": "kor_ppp",
+          "name_fa": "حزب قدرت مردم",
+          "name_en": "People Power Party",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی و حزب محافظه‌کار",
+          "ideological_profile": "محافظه‌کاری، بازارمحوری و اتحاد امنیتی با آمریکا",
+          "confidence": "high"
+        },
+        {
+          "id": "kor_rkp",
+          "name_fa": "حزب بازسازی کره",
+          "name_en": "Rebuilding Korea Party",
+          "entity_type": "party",
+          "political_role": "نیروی کوچک پارلمانی همسو با بخشی از اصلاح‌طلبان",
+          "ideological_profile": "اصلاحات قضایی و ضدتمرکز قدرت",
+          "confidence": "medium"
+        },
+        {
+          "id": "kor_reform",
+          "name_fa": "حزب اصلاحات جدید",
+          "name_en": "New Reform Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک میانه‌گرا و اصلاح‌طلب",
+          "ideological_profile": "میانه‌گرایی و اصلاحات سیاسی",
+          "confidence": "medium"
+        },
+        {
+          "id": "kor_progressive",
+          "name_fa": "حزب پیشرو",
+          "name_en": "Progressive Party",
+          "entity_type": "party",
+          "political_role": "نیروی کوچک چپ و کارگری",
+          "ideological_profile": "چپ‌گرایی و عدالت اجتماعی",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "kor_dp_pragmatic",
+          "name_fa": "جریان عمل‌گرای حزب دموکرات",
+          "name_en": "DP pragmatic current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر رشد اقتصادی و سیاست‌های حمایتی همراه با انضباط مالی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "kor_dp_reform",
+          "name_fa": "جریان اصلاح نهادی",
+          "name_en": "Institutional reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "اصلاح نهادهای قضایی و افزایش پاسخ‌گویی سیاسی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "kor_ppp_conservative",
+          "name_fa": "جریان محافظه‌کار حزب قدرت مردم",
+          "name_en": "PPP conservative current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "security": "تأکید بر بازدارندگی در برابر کره شمالی و همکاری نزدیک با آمریکا."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "kor_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست لی جه‌میونگ در تاریخ مبنا.",
+          "confidence": "high"
+        },
+        {
+          "id": "kor_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "نهاد قانون‌گذاری ۳۰۰ کرسی با اکثریت حزب دموکرات.",
+          "confidence": "high"
+        },
+        {
+          "id": "kor_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد کلیدی نظارت قانون اساسی و حل اختلافات نهادی.",
+          "confidence": "high"
+        },
+        {
+          "id": "kor_military",
+          "name_fa": "نیروهای مسلح و فرماندهی مشترک",
+          "name_en": "Armed Forces and Joint Chiefs",
+          "role": "نهادهای دفاعی؛ سیاست دفاعی در پیوند با اتحاد آمریکا.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Lee Jae-myung",
+        "governing_party": "Democratic Party of Korea",
+        "parliamentary_support": [
+          "Democratic Party of Korea"
+        ],
+        "status": "دولت حزب دموکرات؛ حزب قدرت مردم اپوزیسیون اصلی در تاریخ مبنا."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "north_korea_policy",
+          "cost_of_living",
+          "housing",
+          "labor_policy",
+          "constitutional_reform",
+          "us_alliance",
+          "china_relations"
+        ],
+        "rule": "رفتار سیاسی با رقابت دو اردوگاه پیشرو و محافظه‌کار، حساسیت امنیتی شبه‌جزیره و قدرت مجلس سنجیده شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Konrad-Adenauer-Stiftung — South Korean party system and 22nd National Assembly",
+            "url": "https://www.kas.de/en/web/auslandsinformationen/artikel/detail/-/content/the-challenges-of-polarisation-facing-the-conservative-side-of-south-korean-politics",
+            "date": "2026-04-27",
+            "notes": ""
+          },
+          {
+            "name": "IPU Parline — Republic of Korea parliament",
+            "url": "https://data.ipu.org/parliament/KR/KR-LC01/",
+            "date": "2026-11-05",
+            "notes": ""
+          }
+        ],
+        "notes": "تعداد کرسی‌ها بر اساس انتخابات مجلس ۲۰۲۴ و منابع تحلیلی تا پیش از snapshot؛ از تغییرات پس از ۵ نوامبر در سناریو استفاده نشود."
+      }
     },
     "PRK": {
       "country_name_fa": "کره شمالی",
@@ -4523,21 +4809,185 @@
     "IDN": {
       "country_name_fa": "اندونزی",
       "country_name_en": "Indonesia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "presidential_multiparty_coalition_republic",
+      "government_model": "جمهوری ریاستی چندحزبی؛ ائتلاف حامی دولت در مجلس بسیار گسترده است اما نقش اپوزیسیون رسمی محدود است",
+      "parties": [
+        {
+          "id": "idn_gerindra",
+          "name_fa": "جنبش بزرگ اندونزی",
+          "name_en": "Great Indonesia Movement Party (Gerindra)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و هسته ائتلاف دولت",
+          "ideological_profile": "ملی‌گرایی، محافظه‌کاری و توسعه‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_golkar",
+          "name_fa": "گولکار",
+          "name_en": "Golkar Party",
+          "entity_type": "party",
+          "political_role": "شریک اصلی ائتلاف دولت",
+          "ideological_profile": "ملی‌گرایی عمل‌گرا و توسعه‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_nasdem",
+          "name_fa": "حزب دموکراتیک ملی",
+          "name_en": "NasDem",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حامی دولت",
+          "ideological_profile": "ملی‌گرایی و دموکراسی میانه‌گرا",
+          "confidence": "medium"
+        },
+        {
+          "id": "idn_pkb",
+          "name_fa": "حزب بیداری ملی",
+          "name_en": "National Awakening Party (PKB)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حامی دولت",
+          "ideological_profile": "اسلام‌گرایی میانه‌رو و ملی‌گرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_pks",
+          "name_fa": "حزب عدالت رفاه",
+          "name_en": "Prosperous Justice Party (PKS)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حامی دولت",
+          "ideological_profile": "اسلام‌گرایی محافظه‌کار و عدالت اجتماعی",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_pan",
+          "name_fa": "حزب مأموریت ملی",
+          "name_en": "National Mandate Party (PAN)",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حامی دولت",
+          "ideological_profile": "ملی‌گرایی و اسلام‌گرایی میانه‌رو",
+          "confidence": "medium"
+        },
+        {
+          "id": "idn_demokrat",
+          "name_fa": "حزب دموکرات",
+          "name_en": "Democratic Party",
+          "entity_type": "party",
+          "political_role": "شریک ائتلاف حامی دولت",
+          "ideological_profile": "میانه‌گرایی و ملی‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "idn_pdi",
+          "name_fa": "حزب دموکراتیک مبارزه اندونزی",
+          "name_en": "Indonesian Democratic Party of Struggle (PDI-P)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب خارج از ائتلاف کابینه؛ خود را نیروی موازنه‌گر معرفی می‌کند",
+          "ideological_profile": "ملی‌گرایی سکولار و پانچاسیلا",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "idn_government_big_tent",
+          "name_fa": "ائتلاف گسترده اندونزی پیشرو پلاس",
+          "name_en": "Advanced Indonesia Coalition Plus",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "حفظ اکثریت گسترده پارلمانی و همکاری میان احزاب ناهمگون."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "idn_pdip_balance",
+          "name_fa": "جریان موازنه‌گر حزب PDI-P",
+          "name_en": "PDI-P balancing current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "domestic": "حفظ استقلال پارلمانی و نظارت بر دولت بدون اعلام جایگاه اپوزیسیون رسمی."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "idn_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "مرکز اصلی قوه مجریه به ریاست پرابوو سوبیانتو.",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_dpr",
+          "name_fa": "مجلس نمایندگان مردم",
+          "name_en": "People's Representative Council (DPR)",
+          "role": "مجلس ۵۸۰ کرسی؛ هفت حزب از هشت حزب پارلمانی از دولت حمایت می‌کنند.",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_mpr",
+          "name_fa": "مجمع مشورتی خلق",
+          "name_en": "People's Consultative Assembly (MPR)",
+          "role": "نهاد قانون اساسی متشکل از اعضای مجلس نمایندگان و شورای نمایندگان مناطق.",
+          "confidence": "high"
+        },
+        {
+          "id": "idn_military",
+          "name_fa": "نیروهای مسلح اندونزی",
+          "name_en": "Indonesian National Armed Forces",
+          "role": "نهاد دفاعی مهم با نقش تاریخی در سیاست و امنیت.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Prabowo Subianto",
+        "vice_president": "Gibran Rakabuming Raka",
+        "governing_coalition": "Koalisi Indonesia Maju Plus (KIM Plus)",
+        "parliamentary_support": [
+          "Gerindra",
+          "Golkar",
+          "NasDem",
+          "PKB",
+          "PKS",
+          "PAN",
+          "Demokrat"
+        ],
+        "outside_cabinet": [
+          "PDI-P"
+        ],
+        "status": "ائتلاف حامی دولت ۴۷۰ کرسی از ۵۸۰ کرسی مجلس را در snapshot در اختیار دارد؛ PDI-P بیرون از کابینه است اما خود را اپوزیسیون رسمی نمی‌نامد."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "food_prices",
+          "subsidies",
+          "infrastructure",
+          "resource_nationalism",
+          "religious_pluralism",
+          "regional_autonomy",
+          "military_role"
+        ],
+        "rule": "به دلیل نبود سازوکار رأی عدم اعتماد، وزن ائتلاف‌ها بیشتر در بودجه و قانون‌گذاری ظاهر می‌شود؛ حزب خارج از کابینه را خودکار اپوزیسیون رسمی فرض نکن."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Hak Pilih — Indonesia coalition and DPR seat composition, as of 5 November 2026",
+            "url": "https://elect.us.org/id/coalition/",
+            "date": "2026-11-05",
+            "notes": ""
+          },
+          {
+            "name": "Indonesia Ministry of Finance — official 2024–2029 DPR faction composition",
+            "url": "https://api-djppr.kemenkeu.go.id/web/api/v1/media/C271EF5C-71EC-42E3-B6C8-B4331BF11CD0",
+            "date": "2024-10-20",
+            "notes": ""
+          }
+        ],
+        "notes": "ترکیب ائتلاف و کرسی‌ها در تاریخ ۵ نوامبر ۲۰۲۶ ثبت شده؛ سمت معاون رئیس‌جمهور در snapshot همان گبران راکابومینگ راکا است."
+      }
     },
     "MYS": {
       "country_name_fa": "مالزی",
@@ -4732,40 +5182,355 @@
     "NGA": {
       "country_name_fa": "نیجریه",
       "country_name_en": "Nigeria",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_presidential_multiparty_republic",
+      "government_model": "جمهوری فدرال ریاستی چندحزبی؛ رقابت حزبی با جابه‌جایی نمایندگان و ائتلاف‌های انتخاباتی پویا",
+      "parties": [
+        {
+          "id": "nga_apc",
+          "name_fa": "کنگره همه ترقی‌خواهان",
+          "name_en": "All Progressives Congress (APC)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم و رئیس‌جمهور",
+          "ideological_profile": "محافظه‌کاری، ملی‌گرایی و ائتلاف گسترده منطقه‌ای",
+          "confidence": "high"
+        },
+        {
+          "id": "nga_pdp",
+          "name_fa": "حزب دموکراتیک خلق",
+          "name_en": "People's Democratic Party (PDP)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون تاریخی؛ تضعیف‌شده بر اثر انشعاب و تغییر وفاداری‌ها",
+          "ideological_profile": "میانه‌گرایی و شبکه‌های سیاسی منطقه‌ای",
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_adc",
+          "name_fa": "کنگره دموکراتیک آفریقا",
+          "name_en": "African Democratic Congress (ADC)",
+          "entity_type": "party",
+          "political_role": "ائتلاف/پایگاه مهم مخالفان دولت در آستانه انتخابات ۲۰۲۷",
+          "ideological_profile": "میانه‌گرایی و ائتلاف ضدحاکمیت",
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_lp",
+          "name_fa": "حزب کارگر",
+          "name_en": "Labour Party (LP)",
+          "entity_type": "party",
+          "political_role": "نیروی اپوزیسیون با پایگاه شهری و اصلاح‌طلب",
+          "ideological_profile": "سوسیال‌دموکراسی و اصلاحات حکمرانی",
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_nnpp",
+          "name_fa": "حزب مردم جدید نیجریه",
+          "name_en": "New Nigeria Peoples Party (NNPP)",
+          "entity_type": "party",
+          "political_role": "نیروی منطقه‌ای مهم به‌ویژه در شمال غرب",
+          "ideological_profile": "پوپولیسم منطقه‌ای و محافظه‌کاری",
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_apm",
+          "name_fa": "جنبش متحد مردم",
+          "name_en": "Allied Peoples Movement (APM)",
+          "entity_type": "party",
+          "political_role": "حزب کوچک پارلمانی و منطقه‌ای",
+          "ideological_profile": "عمل‌گرایی و سیاست محلی",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "nga_apc_governors",
+          "name_fa": "شبکه فرمانداران و رهبران ایالتی APC",
+          "name_en": "APC governors' network",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "federal": "نفوذ بر منابع فدرال، نامزدی‌ها و سیاست‌های ایالتی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_opposition_coalition",
+          "name_fa": "جریان ائتلافی مخالفان",
+          "name_en": "Opposition coalition current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "electoral": "تلاش برای هماهنگی نامزدها و ائتلاف پیش از انتخابات ۲۰۲۷."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "nga_regional_brokers",
+          "name_fa": "شبکه‌های سیاسی منطقه‌ای",
+          "name_en": "Regional political networks",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "domestic": "چانه‌زنی بر پایه توازن منطقه‌ای، قومی و توزیع منابع."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "nga_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست بولا تینوبو.",
+          "confidence": "high"
+        },
+        {
+          "id": "nga_national_assembly",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس دوگانه؛ ترکیب نمایندگان در دوره جاری با تغییر وفاداری حزبی همراه بوده است.",
+          "confidence": "high"
+        },
+        {
+          "id": "nga_governors",
+          "name_fa": "فرمانداران ۳۶ ایالت",
+          "name_en": "Governors of 36 States",
+          "role": "مراکز قدرت منطقه‌ای و بازیگران کلیدی شبکه‌های حزبی.",
+          "confidence": "high"
+        },
+        {
+          "id": "nga_electoral_commission",
+          "name_fa": "کمیسیون مستقل ملی انتخابات",
+          "name_en": "Independent National Electoral Commission (INEC)",
+          "role": "نهاد برگزارکننده انتخابات و ثبت احزاب.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Bola Ahmed Tinubu",
+        "governing_party": "All Progressives Congress (APC)",
+        "status": "APC دولت فدرال را در اختیار دارد؛ انتخابات ریاست‌جمهوری و پارلمانی بعدی در ژانویه ۲۰۲۷ برنامه‌ریزی شده است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "fuel_prices",
+          "inflation",
+          "currency",
+          "security",
+          "federal_balance",
+          "regional_representation",
+          "election_coalitions"
+        ],
+        "rule": "تغییر وفاداری نمایندگان و ائتلاف‌های انتخاباتی باید در مدل سیاسی ممکن باشد؛ آمار کرسی‌های متغیر و تأییدنشده نباید به‌عنوان مقدار قطعی ذخیره شود."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Congressional Research Service — Nigeria: Overview and U.S. Policy",
+            "url": "https://www.everycrsreport.com/files/2026-07-10_R47052_ed8b0461ac23906eafe8d4cbbec2f02a82553d25.pdf",
+            "date": "2026-07-10",
+            "notes": ""
+          },
+          {
+            "name": "Reuters — Tinubu launches re-election campaign",
+            "url": "https://www.reuters.com/world/africa/nigerias-tinubu-launches-re-election-campaign-economic-pain-tests-support-2026-10-24/",
+            "date": "2026-10-24",
+            "notes": ""
+          }
+        ],
+        "notes": "پروفایل به‌صورت snapshot پیش از انتخابات ۲۰۲۷ تنظیم شده؛ به‌دلیل تغییرات مکرر وابستگی نمایندگان، تعداد کرسی‌های حزبی عمداً عددگذاری نشده است."
+      }
     },
     "ZAF": {
       "country_name_fa": "آفریقای جنوبی",
       "country_name_en": "South Africa",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "parliamentary_constitutional_republic_multiparty",
+      "government_model": "جمهوری پارلمانی؛ دولت وحدت ملی پس از انتخابات ۲۰۲۴ و از دست رفتن اکثریت مطلق کنگره ملی آفریقا",
+      "parties": [
+        {
+          "id": "zaf_anc",
+          "name_fa": "کنگره ملی آفریقا",
+          "name_en": "African National Congress (ANC)",
+          "entity_type": "party",
+          "political_role": "بزرگ‌ترین حزب و محور دولت وحدت ملی",
+          "ideological_profile": "ملی‌گرایی آفریقایی، سوسیال‌دموکراسی و میراث ضدآپارتاید",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_da",
+          "name_fa": "ائتلاف دموکراتیک",
+          "name_en": "Democratic Alliance (DA)",
+          "entity_type": "party",
+          "political_role": "شریک اصلی دولت وحدت ملی",
+          "ideological_profile": "لیبرالیسم، بازارمحوری و حکمرانی نهادی",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_mk",
+          "name_fa": "حزب اومخونتو وسیزوه",
+          "name_en": "uMkhonto weSizwe Party (MK)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون اصلی",
+          "ideological_profile": "ملی‌گرایی پوپولیستی و جریان نزدیک به جیکوب زوما",
+          "confidence": "medium"
+        },
+        {
+          "id": "zaf_eff",
+          "name_fa": "مبارزان آزادی اقتصادی",
+          "name_en": "Economic Freedom Fighters (EFF)",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ رادیکال",
+          "ideological_profile": "سوسیالیسم، پان‌آفریقایی‌گرایی و ملی‌سازی",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_ifp",
+          "name_fa": "حزب آزادی اینکاتا",
+          "name_en": "Inkatha Freedom Party (IFP)",
+          "entity_type": "party",
+          "political_role": "شریک دولت وحدت ملی",
+          "ideological_profile": "محافظه‌کاری و فدرالیسم منطقه‌ای",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_pa",
+          "name_fa": "اتحاد میهن‌پرستانه",
+          "name_en": "Patriotic Alliance (PA)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک دولت وحدت ملی",
+          "ideological_profile": "پوپولیسم محلی و سیاست هویتی",
+          "confidence": "medium"
+        },
+        {
+          "id": "zaf_ff",
+          "name_fa": "جبهه آزادی پلاس",
+          "name_en": "Freedom Front Plus (FF Plus)",
+          "entity_type": "party",
+          "political_role": "شریک کوچک دولت وحدت ملی",
+          "ideological_profile": "محافظه‌کاری و حقوق اقلیت آفریکانر",
+          "confidence": "medium"
+        }
+      ],
+      "factions": [
+        {
+          "id": "zaf_anc_governance",
+          "name_fa": "جریان حکمرانی و میانه‌رو در ANC",
+          "name_en": "ANC governance current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "حفظ ائتلاف و اصلاحات تدریجی برای رشد و اشتغال."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zaf_anc_left",
+          "name_fa": "جریان چپ و اتحادیه‌ای",
+          "name_en": "ANC labour-left current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "labor": "حمایت از نقش دولت و سیاست‌های بازتوزیعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "zaf_gnu_reform",
+          "name_fa": "جریان اصلاح‌طلب دولت وحدت ملی",
+          "name_en": "GNU reform current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "economy": "اصلاح خدمات عمومی، برق، زیرساخت و محیط کسب‌وکار."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "zaf_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست سیریل رامافوسا.",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_parliament",
+          "name_fa": "مجلس ملی",
+          "name_en": "National Assembly",
+          "role": "مجلس ۴۰۰ کرسی؛ ANC با ۱۵۹ کرسی بزرگ‌ترین حزب است.",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_gnu",
+          "name_fa": "دولت وحدت ملی",
+          "name_en": "Government of National Unity",
+          "role": "ائتلاف چندحزبی برای تشکیل دولت و تقسیم مسئولیت‌های اجرایی.",
+          "confidence": "high"
+        },
+        {
+          "id": "zaf_constitutional_court",
+          "name_fa": "دادگاه قانون اساسی",
+          "name_en": "Constitutional Court",
+          "role": "نهاد عالی تفسیر قانون اساسی و حل اختلافات.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Cyril Ramaphosa",
+        "governing_party": "African National Congress",
+        "governing_coalition": "Government of National Unity",
+        "parliamentary_support": [
+          "ANC",
+          "DA",
+          "IFP",
+          "PA",
+          "GOOD",
+          "PAC",
+          "FF Plus",
+          "UDM",
+          "Al Jama-ah",
+          "RISE Mzansi",
+          "UAT"
+        ],
+        "status": "دولت وحدت ملی متشکل از احزاب متعدد؛ MK و EFF در اپوزیسیون قرار دارند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "unemployment",
+          "electricity_supply",
+          "inequality",
+          "land_reform",
+          "coalition_stability",
+          "corruption",
+          "public_services"
+        ],
+        "rule": "ثبات دولت به توافق میان احزاب ائتلافی و توانایی حل بحران خدمات عمومی و اشتغال وابسته است."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Parliament of South Africa — National Assembly and state of parties",
+            "url": "https://www.parliament.gov.za/national-assembly",
+            "date": "2026-11-27",
+            "notes": ""
+          },
+          {
+            "name": "South African Government — formation of Government of National Unity",
+            "url": "https://www.gov.za/news/speeches/president-cyril-ramaphosa-appointment-members-national-executive-30-jun-2024",
+            "date": "2024-06-30",
+            "notes": ""
+          },
+          {
+            "name": "BTI 2026 — South Africa country report",
+            "url": "https://bti-project.org/en/reports/country-report/ZAF",
+            "date": "2026-02-01",
+            "notes": ""
+          }
+        ],
+        "notes": "توزیع کرسی‌ها بر اساس انتخابات ملی ۲۰۲۴ و فهرست احزاب پارلمان؛ ترکیب دولت وحدت ملی باید در طول بازی پویا و قابل تغییر بماند."
+      }
     },
     "ETH": {
       "country_name_fa": "اتیوپی",
@@ -5787,21 +6552,160 @@
     "ARG": {
       "country_name_fa": "آرژانتین",
       "country_name_en": "Argentina",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_presidential_multiparty_republic",
+      "government_model": "جمهوری فدرال ریاستی چندحزبی؛ رئیس‌جمهور برای پیشبرد قوانین به ائتلاف‌ها و حمایت احزاب استانی نیاز دارد",
+      "parties": [
+        {
+          "id": "arg_lla",
+          "name_fa": "پیشرفت آزادی",
+          "name_en": "La Libertad Avanza (LLA)",
+          "entity_type": "party",
+          "political_role": "حزب رئیس‌جمهور و نیروی اصلی دولت",
+          "ideological_profile": "لیبرتارینیسم، راست‌گرایی بازارمحور و کوچک‌سازی دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_fp",
+          "name_fa": "نیروی میهن",
+          "name_en": "Fuerza Patria",
+          "entity_type": "party",
+          "political_role": "ائتلاف اصلی اپوزیسیون با ریشه پرونیستی",
+          "ideological_profile": "پرونیسم، عدالت اجتماعی و نقش فعال دولت",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_pro",
+          "name_fa": "پیشنهاد جمهوری‌خواه",
+          "name_en": "Republican Proposal (PRO)",
+          "entity_type": "party",
+          "political_role": "متحد یا حامی موردی دولت در کنگره",
+          "ideological_profile": "راست میانه، بازارمحوری و محافظه‌کاری",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_provinces",
+          "name_fa": "استان‌های متحد",
+          "name_en": "United Provinces",
+          "entity_type": "party",
+          "political_role": "ائتلاف منطقه‌ای و نیروی میانه‌رو مستقل",
+          "ideological_profile": "فدرالیسم، توسعه منطقه‌ای و عمل‌گرایی",
+          "confidence": "medium"
+        },
+        {
+          "id": "arg_left",
+          "name_fa": "جبهه چپ و کارگران ـ وحدت",
+          "name_en": "Workers' Left Front – Unity",
+          "entity_type": "party",
+          "political_role": "اپوزیسیون چپ",
+          "ideological_profile": "سوسیالیسم و چپ کارگری",
+          "confidence": "high"
+        }
+      ],
+      "factions": [
+        {
+          "id": "arg_lla_reformists",
+          "name_fa": "جریان اصلاح‌طلبان اقتصادی در LLA",
+          "name_en": "LLA economic reform current",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "کاهش کسری بودجه، مقررات‌زدایی و خصوصی‌سازی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "arg_peronist_governors",
+          "name_fa": "جریان فرمانداران پرونیست",
+          "name_en": "Peronist governors' current",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "federal": "چانه‌زنی بر سر انتقال بودجه و اختیارات استان‌ها."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "arg_moderate_provincial",
+          "name_fa": "جریان میانه‌روهای استانی",
+          "name_en": "Provincial moderates",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "legislative": "حمایت موردی از لوایح در برابر امتیازهای بودجه‌ای و منطقه‌ای."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "arg_presidency",
+          "name_fa": "ریاست‌جمهوری",
+          "name_en": "Presidency",
+          "role": "قوه مجریه به ریاست خاویر میلی.",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_congress",
+          "name_fa": "کنگره ملی",
+          "name_en": "National Congress",
+          "role": "دو مجلسی؛ هیچ حزب منفردی اکثریت ندارد و ائتلاف‌های قانون‌گذاری تعیین‌کننده‌اند.",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_governors",
+          "name_fa": "فرمانداران استان‌ها",
+          "name_en": "Provincial Governors",
+          "role": "مراکز قدرت منطقه‌ای و بازیگران کلیدی چانه‌زنی بودجه‌ای.",
+          "confidence": "high"
+        },
+        {
+          "id": "arg_courts",
+          "name_fa": "قوه قضائیه",
+          "name_en": "Judiciary",
+          "role": "دادگاه‌ها و دیوان عالی در نظارت بر قوانین و اختلافات فدرال.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "president": "Javier Milei",
+        "governing_party": "La Libertad Avanza",
+        "parliamentary_support": [
+          "La Libertad Avanza",
+          "PRO",
+          "provincial allies"
+        ],
+        "status": "پس از انتخابات میان‌دوره‌ای اکتبر ۲۰۲۵، LLA کرسی‌های خود را افزایش داده اما برای تصویب قوانین همچنان به متحدان نیاز دارد؛ نمایندگان جدید از ۱۰ دسامبر ۲۰۲۵ مستقر شده‌اند."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "inflation",
+          "fiscal_balance",
+          "currency",
+          "subsidies",
+          "labor_reform",
+          "provincial_transfers",
+          "social_protests"
+        ],
+        "rule": "سیاست داخلی حول اصلاحات بازارمحور دولت، مقاومت پرونیستی، و قدرت چانه‌زنی فرمانداران استان‌ها شکل می‌گیرد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "IPU Parline — Argentina Chamber of Deputies October 2025 election results",
+            "url": "https://data.ipu.org/parliament/AR/AR-LC01/election/AR-LC01-E20251026/",
+            "date": "2025-10-26",
+            "notes": ""
+          },
+          {
+            "name": "International IDEA — Argentina October 2025 legislative elections",
+            "url": "https://www.idea.int/democracytracker/report/argentina/october-2025?pid=8438",
+            "date": "2025-10-31",
+            "notes": ""
+          }
+        ],
+        "notes": "نتایج انتخابات اکتبر ۲۰۲۵ و تاریخ آغاز به کار نمایندگان جدید لحاظ شده؛ داده‌های پس از ۵ نوامبر ۲۰۲۶ به وضعیت سناریو تعمیم داده نشده‌اند."
+      }
     },
     "CHL": {
       "country_name_fa": "شیلی",
@@ -6262,21 +7166,188 @@
     "AUS": {
       "country_name_fa": "استرالیا",
       "country_name_en": "Australia",
-      "system_type": null,
-      "government_model": null,
-      "parties": [],
-      "factions": [],
-      "power_centers": [],
-      "current_government": null,
-      "political_behavior": {},
-      "research_status": "pending",
-      "data_quality": {
-        "confidence": "unverified",
-        "last_verified": null,
-        "sources": [],
-        "notes": "پروفایل هنوز بررسی و تکمیل نشده؛ این وضعیت به معنی نبود احزاب یا جریان سیاسی نیست."
+      "system_type": "federal_parliamentary_constitutional_monarchy_multiparty",
+      "government_model": "پادشاهی مشروطه فدرال با نظام پارلمانی؛ دولت حزب کارگر و ائتلاف لیبرال-ملی در اپوزیسیون",
+      "parties": [
+        {
+          "id": "aus_labor",
+          "name_fa": "حزب کارگر استرالیا",
+          "name_en": "Australian Labor Party (ALP)",
+          "entity_type": "party",
+          "political_role": "حزب حاکم به رهبری نخست‌وزیر",
+          "ideological_profile": "سوسیال‌دموکراسی و کارگرگرایی",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_liberal",
+          "name_fa": "حزب لیبرال استرالیا",
+          "name_en": "Liberal Party of Australia",
+          "entity_type": "party",
+          "political_role": "حزب اصلی اپوزیسیون و رهبر ائتلاف مخالف",
+          "ideological_profile": "لیبرالیسم اقتصادی و محافظه‌کاری میانه‌رو",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_national",
+          "name_fa": "حزب ملی استرالیا",
+          "name_en": "National Party of Australia",
+          "entity_type": "party",
+          "political_role": "شریک ائتلافی حزب لیبرال",
+          "ideological_profile": "محافظه‌کاری روستایی و منافع منطقه‌ای",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_greens",
+          "name_fa": "سبزهای استرالیا",
+          "name_en": "Australian Greens",
+          "entity_type": "party",
+          "political_role": "حزب کوچک اثرگذار به‌ویژه در سنا",
+          "ideological_profile": "سبزگرایی، عدالت اجتماعی و سیاست اقلیمی",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_one_nation",
+          "name_fa": "یک ملت",
+          "name_en": "Pauline Hanson's One Nation",
+          "entity_type": "party",
+          "political_role": "حزب کوچک راست پوپولیست",
+          "ideological_profile": "ملی‌گرایی پوپولیستی و سیاست‌های محدودکننده مهاجرت",
+          "confidence": "medium"
+        },
+        {
+          "id": "aus_jacqui",
+          "name_fa": "شبکه جکی لمبی",
+          "name_en": "Jacqui Lambie Network",
+          "entity_type": "party",
+          "political_role": "حزب کوچک و مستقل‌محور در سنا",
+          "ideological_profile": "پوپولیسم مستقل و تمرکز بر تاسمانی",
+          "confidence": "medium"
+        },
+        {
+          "id": "aus_uap",
+          "name_fa": "حزب استرالیای متحد",
+          "name_en": "United Australia Party",
+          "entity_type": "party",
+          "political_role": "حزب کوچک با نمایندگی محدود",
+          "ideological_profile": "پوپولیسم و سیاست‌های ضدنخبگانی",
+          "confidence": "low"
+        }
+      ],
+      "factions": [
+        {
+          "id": "aus_labor_left",
+          "name_fa": "جریان چپ حزب کارگر",
+          "name_en": "Labor Left",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "labor": "حمایت از اتحادیه‌ها، خدمات عمومی و سیاست‌های اجتماعی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aus_labor_right",
+          "name_fa": "جریان راست حزب کارگر",
+          "name_en": "Labor Right",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "تأکید بر عمل‌گرایی اقتصادی و مدیریت ائتلافی."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aus_liberal_moderates",
+          "name_fa": "جریان میانه‌روهای لیبرال",
+          "name_en": "Liberal moderates",
+          "entity_type": "intraparty_current",
+          "policy_positions": {
+            "economy": "بازارمحوری همراه با رویکرد نهادی و میانه‌رو."
+          },
+          "confidence": "medium"
+        },
+        {
+          "id": "aus_national_conservatives",
+          "name_fa": "جریان محافظه‌کاران ملی",
+          "name_en": "National conservatives",
+          "entity_type": "cross_party_current",
+          "policy_positions": {
+            "regional": "تمرکز بر کشاورزی، منابع طبیعی و مناطق غیرشهری."
+          },
+          "confidence": "medium"
+        }
+      ],
+      "power_centers": [
+        {
+          "id": "aus_prime_minister",
+          "name_fa": "نخست‌وزیری و کابینه",
+          "name_en": "Prime Minister and Cabinet",
+          "role": "قوه مجریه به ریاست آنتونی آلبانیزی.",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_house",
+          "name_fa": "مجلس نمایندگان",
+          "name_en": "House of Representatives",
+          "role": "دولت حزب کارگر در آن اکثریت دارد.",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_senate",
+          "name_fa": "سنا",
+          "name_en": "Senate",
+          "role": "مجلس بازنگری با حضور سبزها، احزاب کوچک و مستقل‌ها.",
+          "confidence": "high"
+        },
+        {
+          "id": "aus_governor_general",
+          "name_fa": "فرماندار کل",
+          "name_en": "Governor-General",
+          "role": "نماینده پادشاه در ساختار پادشاهی مشروطه و دارای نقش تشریفاتی و قانون اساسی.",
+          "confidence": "high"
+        }
+      ],
+      "current_government": {
+        "prime_minister": "Anthony Albanese",
+        "governing_party": "Australian Labor Party",
+        "opposition_leader": "Angus Taylor",
+        "opposition_coalition": [
+          "Liberal Party of Australia",
+          "National Party of Australia"
+        ],
+        "status": "حزب کارگر پس از انتخابات ۲۰۲۵ دولت را تشکیل داده و در مجلس نمایندگان اکثریت دارد؛ آنگوس تیلور رهبر اپوزیسیون در تاریخ مبنا است."
       },
-      "parliamentary_groups": []
+      "political_behavior": {
+        "response_dimensions": [
+          "cost_of_living",
+          "housing",
+          "climate_and_energy",
+          "immigration",
+          "indigenous_policy",
+          "china_relations",
+          "rural_economy"
+        ],
+        "rule": "دولت به اکثریت مجلس نمایندگان متکی است؛ سنا می‌تواند با رأی احزاب کوچک و مستقل‌ها روند تصویب قوانین را تغییر دهد."
+      },
+      "research_status": "researched_initial",
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "sources": [
+          {
+            "name": "Parliamentary Education Office — Who's who in the current Parliament",
+            "url": "https://peo.gov.au/understand-our-parliament/parliament-and-its-people/people-in-parliament/whos-who-in-the-current-parliament",
+            "date": "2026-05-28",
+            "notes": ""
+          },
+          {
+            "name": "Parliamentary Education Office — Parliamentary statistics",
+            "url": "https://peo.gov.au/understand-our-parliament/how-parliament-works/parliament-at-work/parliamentary-statistics",
+            "date": "2026-07-03",
+            "notes": ""
+          }
+        ],
+        "notes": "توزیع کرسی‌ها بر اساس داده‌های رسمی پارلمان در میانه ۲۰۲۶؛ رهبری اپوزیسیون بر اساس اطلاعات پارلمانی موجود در ۲۰۲۶ ثبت شده است."
+      }
     },
     "NZL": {
       "country_name_fa": "نیوزیلند",
