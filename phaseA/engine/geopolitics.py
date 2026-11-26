@@ -2506,7 +2506,7 @@ def dash_economy(s):
     print(" 💰 داشبورد اقتصاد — " + P)
     print("═" * 56)
     inc_d = me["eco"] * INCOME_K * (0.5 if me["stab"] < 30 else 1.0)
-    print(f"  خزانه {me['money']:.0f} میلیارد   |   درآمد روزانه +{inc_d:.1f} (ماهانه ~{inc_d * DAYS_PER_YEAR:.0f})")
+    print(f"  خزانه {me['money']:.0f} میلیارد   |   درآمد روزانه +{inc_d:.1f} (ماهانه ~{inc_d * 30:.0f})")
     print(f"  اقتصاد [{bar(me['eco'])}] {me['eco']:.0f}")
     others = [n for n in W if n != P and n not in s["eliminated"]]
     hostiles = sum(1 for n in others if get_rel(s, P, n) < -40)
