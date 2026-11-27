@@ -340,7 +340,7 @@ def api_chat(s, body):
 
 # تصاویر رهبران کشورها؛ نام فایل بر اساس ISO3 و بدون مسیر دلخواه کاربر.
 LEADER_DIR = os.path.join(HERE, "assets", "leaders")
-_LEADER_RE = re.compile(r"^assets/leaders/([A-Z]{3})\\.(jpg|jpeg|png|webp)$")
+_LEADER_RE = re.compile(r"^assets/leaders/([A-Z]{3})\.(jpg|jpeg|png|webp)$")
 
 # ---------------------------------------------------------------- HTTP Handler
 STATIC = {}  # بسته آفلاین: مسیر نسبی -> فایل فیزیکی
