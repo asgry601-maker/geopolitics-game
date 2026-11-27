@@ -62,3 +62,47 @@
 - گالری رسمی ناتو، اجلاس آنکارا ۲۰۲۶ و حق نشر انحصاری ناتو: https://www.nato.int/en/multimedia/multimedia/photos/2026/07/08/meeting-of-the-north-atlantic-council-at-the-level-of-heads-of-state-and-government
 
 هیچ‌یک از موارد این جدول به‌عنوان فایل محلی/آفلاین ثبت نشده است. افزودن تصویر تنها پس از دریافت خود فایل، بازبینی هویت، بررسی مجوز و ثبت اعتبارنامه انجام می‌شود.
+
+
+
+## اتصال پرتره‌ها به Wikimedia Commons (۲۷ نوامبر ۲۰۲۶)
+
+در رابط داشبورد، برای کشورهای فهرست زیر تصویر از صفحهٔ فایل Wikimedia Commons بارگذاری می‌شود. این روش به اینترنت نیاز دارد؛ فایل‌ها در این مرحله داخل مخزن کپی نشده‌اند. تصویر ایران نیز مانند قبل از Commons دریافت می‌شود.
+
+| ISO3 | کشور / شخص | نام فایل در Commons | مجوز اعلام‌شده | اعتباردهی |
+|---|---|---|---|---|
+| IRN | ایران — سید مجتبی خامنه‌ای | Portrait of Mojtaba Khamenei.jpg | CC BY 4.0 | Khamenei.ir |
+| USA | آمریکا — دونالد ترامپ | January 2025 Official Presidential Portrait of Donald J. Trump.jpg | انتشار در مالکیت عمومی به اعلام عکاس | Daniel Torok |
+| RUS | روسیه — ولادیمیر پوتین | Vladimir Putin (2026 02 23).jpg | CC BY 4.0 | kremlin.ru |
+| CHN | چین — شی جین‌پینگ | Xi Jinping - 2026 (55063342986) (cropped).jpg | OGL v3.0 | Finnish Government |
+| GBR | بریتانیا — کی‌یر استارمر | Official portrait of Keir Starmer.jpg | CC BY 3.0 | Chris McAndrew |
+| DEU | آلمان — فریدریش مرتس | Merz portrait.jpg | CC BY-SA 4.0 | ElTristoMietitor |
+| FRA | فرانسه — امانوئل مکرون | Emmanuel Macron portrait.jpg | Public Domain Mark اعلام‌شده از سوی صاحب اثر | Nebojša Tejić / gov.si |
+| TUR | ترکیه — رجب طیب اردوغان | President of Turkey Recep Tayyip Erdogan.jpg | CC BY 4.0 | kremlin.ru |
+| SAU | عربستان — ملک سلمان | الصورة الرسمية لخادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود.jpg | CC BY-SA 4.0 | Saudi Press Agency |
+| ARE | امارات — محمد بن زاید | Mohammed bin Zayed portrait.jpg | CC BY 2.0 | Brigitte N. Brantley / U.S. Department of Defense |
+| IRQ | عراق — محمد شیاع السودانی | Mohammed Shia' Al Sudani in 2025 (cropped).jpg | CC BY 4.0 | Khamenei.ir |
+| SYR | سوریه — احمد الشرع | Ahmed al-Sharaa in March 2026.jpg | CC BY 4.0 | Lauren Hurley / No 10 Downing Street |
+
+### صفحه‌های منبع
+- ایران: https://commons.wikimedia.org/wiki/File:Portrait_of_Mojtaba_Khamenei.jpg
+- آمریکا: https://commons.wikimedia.org/wiki/File:January_2025_Official_Presidential_Portrait_of_Donald_J._Trump.jpg
+- روسیه: https://commons.wikimedia.org/wiki/File:Vladimir_Putin_(2026_02_23).jpg
+- چین: https://commons.wikimedia.org/wiki/File:Xi_Jinping_-_2026_(55063342986)_(cropped).jpg
+- بریتانیا: https://commons.wikimedia.org/wiki/File:Official_portrait_of_Keir_Starmer.jpg
+- آلمان: https://commons.wikimedia.org/wiki/File:Merz_portrait.jpg
+- فرانسه: https://commons.wikimedia.org/wiki/File:Emmanuel_Macron_portrait.jpg
+- ترکیه: https://commons.wikimedia.org/wiki/File:President_of_Turkey_Recep_Tayyip_Erdogan.jpg
+- عربستان: https://commons.wikimedia.org/wiki/File:الصورة_الرسمية_لخادم_الحرمين_الشريفين_الملك_سلمان_بن_عبدالعزيز_آل_سعود.jpg
+- امارات: https://commons.wikimedia.org/wiki/File:Mohammed_bin_Zayed_portrait.jpg
+- عراق: https://commons.wikimedia.org/wiki/File:Mohammed_Shia%27_Al_Sudani_in_2025_(cropped).jpg
+- سوریه: https://commons.wikimedia.org/wiki/File:Ahmed_al-Sharaa_in_March_2026.jpg
+
+### ملاحظات فنی و حقوقی
+- فایل‌های تصویری با `Special:FilePath` از Commons بارگذاری می‌شوند؛ برای هر تصویر، صفحهٔ فایل مرجع نهایی مجوز و اعتباردهی است.
+- تصویر مرتس وضوح پایینی دارد و در بازبینی ظاهری بعدی باید در صورت یافتن گزینهٔ بهتر جایگزین شود.
+- پرتره استارمر مربوط به ۲۰۱۷ است؛ مجوز روشن است، اما تصویر قدیمی‌تر از زمان سناریوست.
+- تصویر ملک سلمان رسمی اما مربوط به ۲۰۱۵ است؛ در صورت یافتن پرتره جدیدتر با مجوز روشن، جایگزین می‌شود.
+- برای پوتین از فایل «Vladimir Putin 2026.jpg» که نامزد حذف و مشکوک به بزرگ‌نمایی هوش مصنوعی بود استفاده نشد؛ فایل دیگری با منبع کرملین و CC BY 4.0 انتخاب شد.
+- تصاویر از اینترنت دریافت می‌شوند و این به معنی آفلاین بودن بازی نیست. بعداً اگر لازم شد می‌توان همین فایل‌های دارای مجوز را در پوشهٔ بازی cache/بسته‌بندی کرد تا وابستگی بارگذاری پرتره‌ها به دسترس‌پذیری Commons کمتر شود؛ ارتباط هوش مصنوعی بازی مسیر جداگانه‌ای خواهد داشت.
+- قبل از انتشار عمومی بازی، متن مجوز هر فایل و الزامات ShareAlike/OGL باید در بخش اعتبارنامه‌های بازی نیز نمایش داده شود.
