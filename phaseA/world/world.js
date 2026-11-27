@@ -494,7 +494,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         JOR: 'Abdullah II portrait at 10 Downing Street February 2026 (cropped).jpg',
         ISR: 'Israeli Prime Minister Benjamin Netanyahu 20260225.jpg',
         PSE: 'Mahmoud Abbas 2025-05-10 (cropped).jpg',
-        QAT: 'Tamim bin Hamad Al Thani in October 2026.jpg'
+        QAT: 'Tamim bin Hamad Al Thani in October 2026.jpg',
+        KWT: 'Emir of Kuwait Sheikh Mishal Al-Ahmad Al-Jaber Al-Sabah.jpg',
+        BHR: 'Hamad-Bin-Isa-Al-Khalifa.jpg',
+        OMN: 'Official portrait of Sultan Haitham bin Tariq (2021) (cropped).jpg',
+        YEM: 'Rashad al-Alimi 2022 (cropped).jpg',
+        EGY: 'Abdel Fattah el-Sisi - 2023.jpg',
+        LBY: 'Mohamed al-Menfi Moscow 2026.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
