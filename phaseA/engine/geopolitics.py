@@ -1463,7 +1463,8 @@ def _refresh_calendar(s):
         if linked:
             linked["meeting_status"] = "due" if due <= current else "confirmed"
             linked["chat_enabled"] = bool(s.get("live_ai_active") and due <= current)
-            linked["live_ai_status"] = "ready" if linked["chat_enabled"] else "locked_until_phase_f"
+            linked["live_ai_status"] = ("ready" if linked["chat_enabled"] else
+                ("locked_until_meeting_date" if s.get("live_ai_active") and due > current else "locked_until_phase_f"))
 
 
 def decide_conversation_meeting(s, conversation_id, decision, actor_country=None):
