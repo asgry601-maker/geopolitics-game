@@ -334,3 +334,23 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - GMB: https://commons.wikimedia.org/wiki/File:President_Adama_Barrow_Republic_of_The_Gambia.jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Madagascar's leader display name was corrected to Michael Randrianirina. Please inspect the Gambia and Lesotho portraits at dashboard size; the Gambia file's license metadata should also be reviewed before any broader redistribution.
+
+
+## Package 22 — Central Asia, Equatorial Guinea and the Pacific (6 countries)
+
+- **GNQ — Equatorial Guinea:** Teodoro Obiang Nguema Mbasogo — `Teodoro Obiang Nguema Mbasogo on September 26, 2024 (cropped).jpg`. Photograph dated 26 September 2024, State Duma of the Russian Federation; CC BY 4.0. Image: 850 × 1,083 pixels. Attribution: Duma.gov.ru.
+- **KAZ — Kazakhstan:** Kassym-Jomart Tokayev — `Kassym-Jomart Tokayev 카슴조마르트 토카예프 20260916.jpg`. Photograph dated 16 September 2026 in Seoul, source and author: National Assembly of the Republic of Korea; Korea Open Government License Type 1 (KOGL Type 1). Image: 803 × 1,072 pixels. Attribution: 대한민국 국회.
+- **UZB — Uzbekistan:** Shavkat Mirziyoyev — `Shavkat Mirziyoyev official portrait.jpg`. Official portrait dated 24 July 2018, Press Service of the President of the Republic of Uzbekistan; CC BY-SA 4.0. Image: 1,028 × 1,200 pixels. Attribution: Press Service of the President of the Republic of Uzbekistan / president.uz. This is an older but formal official portrait.
+- **TKM — Turkmenistan:** Serdar Berdimuhamedow — `Serdar Berdimuhamedow.jpg`. Photograph dated 6 July 2025, author Kanesue; CC BY 4.0, reviewed on Commons by FlickreviewR 2 on 21 January 2026. Image: 3,024 × 4,032 pixels.
+- **FJI — Fiji:** Sitiveni Rabuka — `2025 Sitiveni Rabuka (cropped).jpg`. Photograph dated 25 August 2025, Prime Minister's Office, Government of India; Government Open Data License – India (GODL-India). Extracted portrait: 431 × 577 pixels. Attribution: Prime Minister's Office (GODL-India). This is the prime minister, matching the existing game leader entry.
+- **PNG — Papua New Guinea:** James Marape — `Papua New Guinea Prime Minister James Marape in Port Moresby, Papua New Guinea on July 27, 2023 - 230727-D-TT977-0140 (cropped).jpg`. Photograph dated 27 July 2023, DoD photo by Chad J. McNeeley / U.S. Secretary of Defense; CC BY 2.0. Crop: 1,181 × 1,576 pixels.
+
+### File pages
+- GNQ: https://commons.wikimedia.org/wiki/File:Teodoro_Obiang_Nguema_Mbasogo_on_September_26,_2024_(cropped).jpg
+- KAZ: https://commons.wikimedia.org/wiki/File:Kassym-Jomart_Tokayev_카슴조마르트_토카예프_20260916.jpg
+- UZB: https://commons.wikimedia.org/wiki/File:Shavkat_Mirziyoyev_official_portrait.jpg
+- TKM: https://commons.wikimedia.org/wiki/File:Serdar_Berdymukhamedow.jpg
+- FJI: https://commons.wikimedia.org/wiki/File:2025_Sitiveni_Rabuka_(cropped).jpg
+- PNG: https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Prime_Minister_James_Marape_in_Port_Moresby,_Papua_New_Guinea_on_July_27,_2023_-_230727-D-TT977-0140_(cropped).jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The existing engine leader-name entries for these six countries were retained. Fiji's portrait intentionally matches Prime Minister Sitiveni Rabuka, the existing in-game leader entry, rather than President Ratu Naiqama Lalabalavu.
