@@ -798,7 +798,7 @@ function politicalChangeFormHtml(pc, isPlayer) {
   if (!isPlayer) return '<div class="dashNote">تغییر ساختار سایر کشورها از این پنل ممکن نیست. تصمیم‌گیری خودکار کشورها فقط پس از فعال‌شدن هوش مصنوعی زنده در آینده اضافه خواهد شد.</div>';
   pc = pc || {};
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>🛠 تغییر ساختار سیاسی کشور شما</h3>';
-  h += '<div class="dashNote">این ابزار فعلاً فقط برای کشور تحت کنترل بازیکن فعال است. تغییرات روی وضعیت جاری بازی ثبت می‌شوند و اطلاعات baseline آغاز سناریو دست‌نخورده می‌ماند. هوش مصنوعی کشورها در این مرحله غیرفعال است.</div>';
+  h += '<div class="dashNote">این ابزار فعلاً فقط برای کشور تحت کنترل بازیکن فعال است. این بسته ثبت فنی تغییرات را فراهم می‌کند؛ هزینه، زمان اصلاحات و پیامدهای سیاسی در بسته بعدی اضافه می‌شوند. اطلاعات baseline آغاز سناریو محفوظ می‌ماند و هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده تصمیم‌گیری نمی‌کند.</div>';
   h += '<div class="dashGrid">';
   h += politicalEditSelect('government_form','نوع حکومت',pc.government_form);
   h += politicalEditSelect('government_subform','زیرنوع حکومت',pc.government_subform);
