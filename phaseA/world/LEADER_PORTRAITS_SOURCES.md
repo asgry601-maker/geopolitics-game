@@ -446,3 +446,31 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - U.S. Congressional Research Service, *Latin America and the Caribbean: Fact Sheet on Leaders and Elections*, updated 9 September 2026, lists Laura Fernández Delgado as Costa Rica's head of government, Bernardo Arévalo as Guatemala's, and José Raúl Mulino as Panama's. Trinidad and Tobago's Ministry of Foreign and CARICOM Affairs lists Kamla Persad-Bissessar as prime minister; CARICOM lists Andrew Holness as Jamaica's prime minister. Luis Abinader remains president of the Dominican Republic.
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the portrait crops at dashboard size, particularly the relatively small Jamaica and Trinidad and Tobago files.
+
+
+## Package 27 — Central America and the Caribbean (6 countries)
+
+- **HND — Honduras:** Nasry Asfura — `Nasry Asfura in January 2026.jpg`. Official U.S. Department of State photograph by Freddie Everett, dated 12 January 2026, showing Asfura as president-elect; U.S. federal government work, public domain. Crop: 720 × 960 pixels.
+- **SLV — El Salvador:** Nayib Bukele — `Presidente Bukele.jpg`. Official-use portrait dated 3 June 2019, photographer AndreX; the author has released the work under CC0 1.0 (public-domain dedication). Original: 1,422 × 2,132 pixels.
+- **NIC — Nicaragua:** Daniel Ortega — `Daniel Ortega on July 20, 2024 (cropped).jpg`. Photograph by the State Duma of the Russian Federation, dated 20 July 2024, licensed CC BY 4.0; attribution: Duma.gov.ru. Crop: 536 × 715 pixels. Nicaragua is governed by co-presidents Daniel Ortega and Rosario Murillo; the dashboard uses Ortega's portrait while the leader label names both co-presidents.
+- **BLZ — Belize:** Johnny Briceño — `Johnny Briceño (52135383761) (cropped).jpg`. Photograph by Alan Santos / Palácio do Planalto, dated 9 June 2022, licensed CC BY 2.0. Crop: 1,040 × 1,449 pixels.
+- **BHS — The Bahamas:** Philip Davis — `Philip "Brave" Davis (profile).jpg`. Photograph by Alan Santos / Palácio do Planalto, dated 10 June 2022, licensed CC BY 2.0. Crop: 756 × 982 pixels.
+- **BRB — Barbados:** Mia Mottley — `Foreign Secretary Yvette Cooper meets with Barbados Prime Minister - 5535661749 (cropped).jpg`. Photograph by Elliot Vick / Foreign, Commonwealth & Development Office, dated 24 June 2026, licensed CC BY 4.0. Crop: 962 × 1,284 pixels.
+
+### File pages
+- HND: https://commons.wikimedia.org/wiki/File:Nasry_Asfura_in_January_2026.jpg
+- SLV: https://commons.wikimedia.org/wiki/File:Presidente_Bukele.jpg
+- NIC: https://commons.wikimedia.org/wiki/File:Daniel_Ortega_on_July_20,_2024_(cropped).jpg
+- BLZ: https://commons.wikimedia.org/wiki/File:Johnny_Briceño_(52135383761)_(cropped).jpg
+- BHS: https://commons.wikimedia.org/wiki/File:Philip_%22Brave%22_Davis_(profile).jpg
+- BRB: https://commons.wikimedia.org/wiki/File:Foreign_Secretary_Yvette_Cooper_meets_with_Barbados_Prime_Minister_-_5535661749_(cropped).jpg
+
+### Current-leader reference
+- Honduras: Nasry Asfura was sworn in for the 2026–2030 presidential term in January 2026.
+- El Salvador: Nayib Bukele is president.
+- Nicaragua: Daniel Ortega and Rosario Murillo are co-presidents.
+- Belize: John Briceño is prime minister.
+- The Bahamas: Philip Davis is prime minister.
+- Barbados: Mia Amor Mottley is prime minister.
+
+All six entries use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the crops at dashboard size, especially the older Nicaragua, Belize, and Bahamas portraits.
