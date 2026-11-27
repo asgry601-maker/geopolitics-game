@@ -505,10 +505,13 @@ function bindSanctionsUI() {
   if(apply) apply.onclick=function(){
     var active={};
     for(var i=0;i<SANCTION_CATEGORIES.length;i++){ var key=SANCTION_CATEGORIES[i][0]; if(SANCTION_CATEGORY_STATE[key]) active[key]=true; }
-    if(!Object.keys(active).length){ var st=el('sanctionActionStatus'); if(st) st.textContent='حداقل یک زمینه تحریم را روشن کن.'; return; }
     if(!SANCTION_TARGET_COUNTRIES.length){ var st2=el('sanctionActionStatus'); if(st2) st2.textContent='ابتدا کشورهای هدف را انتخاب کن.'; return; }
-    for(var n=0;n<SANCTION_TARGET_COUNTRIES.length;n++) SANCTION_APPLIED[SANCTION_TARGET_COUNTRIES[n]]=JSON.parse(JSON.stringify(active));
-    var status=el('sanctionActionStatus'); if(status) status.textContent='تنظیمات تحریم در نمونه رابط کاربری ثبت شد؛ اثر اقتصادی هنوز به موتور اقتصاد متصل نیست.';
+    for(var n=0;n<SANCTION_TARGET_COUNTRIES.length;n++) {
+      var target=SANCTION_TARGET_COUNTRIES[n];
+      if(Object.keys(active).length) SANCTION_APPLIED[target]=JSON.parse(JSON.stringify(active));
+      else delete SANCTION_APPLIED[target];
+    }
+    var status=el('sanctionActionStatus'); if(status) status.textContent='وضعیت زمینه‌های انتخاب‌شده برای کشورهای هدف به‌روزرسانی شد؛ اثر اقتصادی هنوز به موتور اقتصاد متصل نیست.';
     renderAppliedSanctions();
   };
   if(cancelAll) cancelAll.onclick=function(){
