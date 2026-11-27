@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 46,
-    "pending_countries": 128,
+    "classified_countries": 51,
+    "pending_countries": 123,
     "last_batch": [
-      "ROU",
-      "BGR",
-      "HRV",
-      "SVN",
-      "SRB"
+      "LTU",
+      "LVA",
+      "EST",
+      "CYP",
+      "MLT"
     ]
   },
   "countries": {
@@ -3217,6 +3217,408 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "برای جلوگیری از نشت اطلاعات آینده به snapshot، نتیجه نهایی تخصیص کرسی‌های ۶ نوامبر و تشکیل مجلس در ۱۷ نوامبر وارد baseline نشده است. دولت جدید در تاریخ مبنا هنوز تشکیل نشده بود؛ نتیجه انتخابات و دولت مستقر جداگانه ثبت شده‌اند."
+      }
+    },
+    "LTU": {
+      "country_name_fa": "لیتوانی",
+      "country_name_en": "Lithuania",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "christian_democracy",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در تاریخ مبنا، دولت بیست‌ویکم به نخست‌وزیری Mindaugas Sinkevičius از ۱۴ ژوئیه ۲۰۲۶ کار خود را آغاز کرده بود. ائتلاف ۷۵ کرسی از حزب سوسیال‌دموکرات لیتوانی (LSDP)، اتحادیه دموکرات‌ها «برای لیتوانی» و اتحادیه کشاورزان و خانواده‌های مسیحی لیتوانی تشکیل شده است. گرایش حزب نخست‌وزیر سوسیال‌دموکراتیک است؛ گرایش ائتلاف ترکیبی از سوسیال‌دموکراسی، جریان‌های میانه‌چپ و محافظه‌کاری/دموکراسی‌مسیحیِ شریک کشاورز است. اختلاف شرکای ائتلاف در برخی موضوعات اجتماعی و اخلاقی در توافق ائتلاف تصریح شده؛ بنابراین ائتلاف را نباید دارای یک ایدئولوژی یکدست دانست. جمهوری پارلمانی با رئیس‌جمهور منتخب مستقیم و اختیارات مهم در برخی حوزه‌ها، در این طرح در طبقه نظام نیمه‌ریاستی قرار می‌گیرد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The 21st Government of the Republic of Lithuania was sworn in",
+          "publisher": "Government of the Republic of Lithuania",
+          "url": "https://lrv.lt/en/news/the-21st-government-of-the-republic-of-lithuania-was-sworn-in-wDGt/",
+          "date": "2026-07-14",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تشکیل دولت بیست‌ویکم و نخست‌وزیری Mindaugas Sinkevičius در ۱۴ ژوئیه ۲۰۲۶."
+        },
+        {
+          "name": "Three Lithuanian parties sign coalition deal, form 75-seat majority in Seimas",
+          "publisher": "LRT / BNS",
+          "url": "https://www.lrt.lt/en/news-in-english/19/2964048/three-lithuanian-parties-sign-coalition-deal-form-75-seat-majority-in-seimas",
+          "date": "2026-06-18",
+          "supports": [
+            "ruling_coalition_ideology",
+            "party_system"
+          ],
+          "note": "ترکیب سه‌حزبی ائتلاف، اکثریت ۷۵ کرسی و اختلاف‌های ایدئولوژیک شرکا."
+        },
+        {
+          "name": "Lithuania – EU country",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/lithuania_en",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "معرفی ساختار جمهوری پارلمانی و نقش رئیس‌جمهور و نخست‌وزیر؛ اطلاعات ساختاری، نه تعیین ایدئولوژی دولت."
+        },
+        {
+          "name": "Government activities",
+          "publisher": "Government of the Republic of Lithuania",
+          "url": "https://lrv.lt/en/about-government/government/",
+          "date": "2026-11-27",
+          "supports": [
+            "executive_legislative_system"
+          ],
+          "note": "شرح رسمی جایگاه دولت و رابطه آن با رئیس‌جمهور و Seimas."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار و دولت مطابق وضعیت ۵ نوامبر ۲۰۲۶ ثبت شده‌اند؛ ائتلاف جدید از ژوئیه ۲۰۲۶ مستقر بود. منابع ساختاری که در تاریخ دیگری به‌روزرسانی شده‌اند فقط برای توصیف قواعد پایدار قانون اساسی استفاده شده‌اند."
+      }
+    },
+    "LVA": {
+      "country_name_fa": "لتونی",
+      "country_name_en": "Latvia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberal_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "liberalism",
+        "conservatism",
+        "green_politics",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، انتخابات ۳ اکتبر برگزار شده و پانزدهمین Saeima در ۳ نوامبر نخستین نشست خود را برگزار کرده بود. فهرست United List با ۴۱ کرسی بزرگ‌ترین نیروی پارلمان جدید بود و رئیس‌جمهور در ۴ نوامبر از نخست‌وزیر مستقر Andris Kulbergs، رهبر United List، دعوت کرده بود دولت جدید را تشکیل دهد؛ اما تا تاریخ مبنا کابینه جدید هنوز رأی اعتماد نگرفته و دولت قبلی در وضعیت اداره امور/سرپرستی قرار داشت. ازاین‌رو ائتلاف انتخاباتیِ پیروز را نباید به‌عنوان کابینه جدیدِ تشکیل‌شده ثبت کرد. گرایش United List به‌صورت محتاطانه میانه‌رو/میانه‌راست و عمل‌گرایانه ثبت شده؛ ایدئولوژی ائتلاف کابینه جدید هنوز قطعی نبود. داده ائتلاف دولت پیشین به‌عنوان ائتلاف جدید کپی نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "The Parliament of Latvia",
+          "publisher": "Saeima of the Republic of Latvia",
+          "url": "https://www.saeima.lv/en/about-saeima/the-parliament-of-latvia",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "شرح رسمی جمهوری دموکراتیک، پارلمان ۱۰۰ نفره و اختیارات Saeima."
+        },
+        {
+          "name": "Latvia – EU country",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/latvia_en",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تأیید ساختار جمهوری پارلمانی و نقش تشریفاتی عمده رئیس‌جمهور."
+        },
+        {
+          "name": "Recent Political Developments – Investor Presentation Latvia November 2026",
+          "publisher": "Latvian Investment and Development Agency / KASE",
+          "url": "https://www.kase.gov.lv/sites/default/files/2026-11/Investor%20Presentation_Latvia_November.pdf",
+          "date": "2026-11-2026",
+          "supports": [
+            "ruling_party_ideology",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "وضعیت دقیق انتخابات، ۴۱ کرسی United List، نشست پارلمان جدید در ۳ نوامبر و دعوت رئیس‌جمهور در ۴ نوامبر؛ نشان می‌دهد دولت جدید در ۵ نوامبر هنوز رأی اعتماد نگرفته بود."
+        },
+        {
+          "name": "Government led by Andris Kulbergs assumes office",
+          "publisher": "Cabinet of Ministers of Latvia",
+          "url": "https://www.mk.gov.lv/en/article/government-led-andris-kulbergs-assumes-office",
+          "date": "2026-05-29",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب دولت قبلی و احزاب ائتلاف پیش از انتخابات اکتبر؛ صرفاً برای شناخت دولت مستقرِ پیش از انتخابات و نه نسبت‌دادن آن به کابینه آینده."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "snapshot در فاصله میان تشکیل پارلمان جدید و رأی اعتماد به کابینه جدید است. ائتلاف جدید و گرایش نهایی آن در تاریخ مبنا هنوز قطعی نبود؛ این عدم قطعیت عمداً حفظ شده است."
+      }
+    },
+    "EST": {
+      "country_name_fa": "استونی",
+      "country_name_en": "Estonia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberalism",
+        "social_liberalism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberalism",
+        "social_liberalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، دولت اقلیت Kristen Michal متشکل از حزب اصلاحات استونی و Eesti 200 در قدرت بود. حزب سوسیال‌دموکرات در مارس ۲۰۲۵ از ائتلاف خارج شده بود؛ دولت دوحزبی پس از آن ۴۸ کرسی از ۱۰۱ کرسی را در اختیار داشت و برای ادامه کار به حمایت موردی یا عدم مخالفت اکثریت نیازمند بود. حزب اصلاحات گرایش لیبرال راست‌میانه و اقتصاد بازارمحور دارد؛ Eesti 200 نیز حزبی لیبرال و اصلاح‌گرا با گرایش‌های اجتماعی میانه‌رو است. به‌دلیل تفاوت‌های درونی و نبود یک مانیفست ایدئولوژیک واحد، گرایش ائتلاف به‌صورت ترکیبی ثبت شده است. رئیس‌جمهور Ülle Madise از اکتبر ۲۰۲۶ در مقام ریاست‌جمهوری بود؛ این جایگاه عمدتاً تشریفاتی است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Introduction – Riigikogu",
+          "publisher": "Riigikogu of Estonia",
+          "url": "https://www.riigikogu.ee/en/introduction-and-history/introduction/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ساختار جمهوری پارلمانی، ۱۰۱ نماینده و سازوکار تشکیل دولت ائتلافی."
+        },
+        {
+          "name": "Constitution of the Republic of Estonia",
+          "publisher": "Office of the President of the Republic of Estonia",
+          "url": "https://president.ee/en/republic-of-estonia/the-constitution/index.html",
+          "date": "1992-06-28",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "اصول جمهوری دموکراتیک، دولت واحد و تفکیک قوا در قانون اساسی."
+        },
+        {
+          "name": "Coalition agreement between the Estonian Reform Party and Eesti 200",
+          "publisher": "Government of the Republic of Estonia",
+          "url": "https://valitsus.ee/en/coalition-agreement-between-estonian-reform-party-and-eesti-200",
+          "date": "2025-03-24",
+          "supports": [
+            "ruling_coalition_ideology",
+            "ruling_party_ideology"
+          ],
+          "note": "توافق تشکیل ائتلاف دوحزبی پس از خروج سوسیال‌دموکرات‌ها."
+        },
+        {
+          "name": "Estonian Reform Party Parliamentary Group",
+          "publisher": "Riigikogu of Estonia",
+          "url": "https://www.riigikogu.ee/en/riigikogu/factions/estonian-reform-party-parliamentary-group/tutvustus/",
+          "date": "2026-11-27",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "توصیف رسمی حزب اصلاحات به‌عنوان راست‌لیبرال و حامی آزادی‌های فردی و بازار."
+        },
+        {
+          "name": "Government of the Republic of Estonia",
+          "publisher": "Government of the Republic of Estonia",
+          "url": "https://www.valitsus.ee/en?id=7366",
+          "date": "2026-11-27",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید نخست‌وزیری Kristen Michal و عضویت او در حزب اصلاحات؛ فهرست دولت."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب دولت و وضعیت اقلیت بر اساس وضعیت پس از خروج حزب سوسیال‌دموکرات در مارس ۲۰۲۵ ثبت شده است؛ تغییرات ریاست‌جمهوری اکتبر ۲۰۲۶ نیز در یادداشت وضعیت لحاظ شده‌اند."
+      }
+    },
+    "CYP": {
+      "country_name_fa": "قبرس",
+      "country_name_en": "Cyprus",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قبرس جمهوری ریاستی است و رئیس‌جمهور هم‌زمان رئیس کشور و رئیس دولت است؛ نخست‌وزیر ندارد. نیکوس خریستودولیدس در تاریخ مبنا رئیس‌جمهور مستقل بود، نه رهبر یک حزب حاکم. او در دوره پیشین از حمایت DIKO، EDEK و DIPA برخوردار بود، اما پس از انتخابات پارلمانی ۲۴ مه ۲۰۲۶ فقط DIKO از احزاب حامی پیشین در پارلمان جدید کرسی داشت؛ EDEK و DIPA از پارلمان خارج شدند. با توجه به استقلال رئیس‌جمهور و تغییر ترکیب پارلمان، انتساب یک ایدئولوژی حزبی یا ائتلافی قطعی به دولت اجرایی مناسب نیست؛ هر دو فیلد عمداً null هستند. جزیره در عمل تقسیم‌شده است و دولت جمهوری قبرس کنترل مؤثر بر بخش شمالی را اعمال نمی‌کند؛ بااین‌حال ساختار قانون اساسی دولت، جمهوری واحد است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government of Cyprus",
+          "publisher": "Government of the Republic of Cyprus",
+          "url": "https://www.gov.cy/en/government/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "شرح رسمی نظام ریاستی، جایگاه رئیس‌جمهور و شورای وزیران."
+        },
+        {
+          "name": "Cyprus – EU country",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/cyprus_en",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تأیید جمهوری ریاستی و وضعیت تقسیم عملی جزیره و تعلیق اجرای acquis در مناطق خارج از کنترل دولت."
+        },
+        {
+          "name": "Cyprus House of Representatives May 2026 Election",
+          "publisher": "Inter-Parliamentary Union – IPU Parline",
+          "url": "https://data.ipu.org/parliament/CY/CY-LC01/election/CY-LC01-E20260524/",
+          "date": "2026-05-27",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات ۲۴ مه ۲۰۲۶ و ترکیب جدید پارلمان؛ ۵۶ کرسی از جامعه یونانی‌قبرسی و خالی‌ماندن ۲۴ کرسی جامعه ترک‌قبرسی."
+        },
+        {
+          "name": "Priority dossiers under the Cyprus EU Council Presidency",
+          "publisher": "European Parliamentary Research Service",
+          "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2026/782590/EPRS_BRI%282026%29782590_EN.pdf",
+          "date": "2026-01-01",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "توضیح نظام ریاستی و رئیس‌جمهور مستقل و احزاب حامی در دوره پیش از انتخابات پارلمانی ۲۰۲۶؛ ترکیب حمایت پس از انتخابات با منبع انتخاباتی به‌روزرسانی شده است."
+        },
+        {
+          "name": "Cyprus sees fragmented parliament after elections",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/report/cyprus/may-2026",
+          "date": "2026-05-2026",
+          "supports": [
+            "party_system"
+          ],
+          "note": "تحلیل پراکندگی پارلمان پس از انتخابات و ورود نیروهای سیاسی جدید."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ایدئولوژی حزب حاکم و ائتلاف حاکم null باقی مانده، زیرا رئیس‌جمهور مستقل است و پس از انتخابات ۲۰۲۶ ترکیب حمایت پارلمانی پیشین تغییر کرد. وضعیت تقسیم جزیره در یادداشت ساختاری توضیح داده شده است."
+      }
+    },
+    "MLT": {
+      "country_name_fa": "مالت",
+      "country_name_en": "Malta",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_two_party_dominant",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "progressivism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "پس از انتخابات زودهنگام ۳۰ مه ۲۰۲۶، حزب کارگر (Labour Party) به رهبری Robert Abela با ۴۲ کرسی از ۷۹ کرسی مجلس، اکثریت پارلمانی را به دست آورد و برای چهارمین دوره متوالی دولت را تشکیل داد. نخست‌وزیر در ۱ ژوئن ۲۰۲۶ منصوب شد. حزب کارگر مالت ریشه سوسیال‌دموکراتیک دارد و در عمل ترکیبی از سیاست‌های اجتماعی و رویکردهای عمل‌گرایانه اقتصادی را دنبال می‌کند. حزب ملی‌گرا (Nationalist Party) رقیب اصلی و تنها حزب دیگر با کرسی‌های پارلمانی است؛ بنابراین نظام حزبی به‌صورت رقابت چندحزبی با سلطه دو حزب اصلی ثبت شده است، نه نظام تک‌حزبی. دولت دارای اکثریت تک‌حزبی است و ائتلاف حاکم وجود ندارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government Synopsis",
+          "publisher": "Government of Malta",
+          "url": "https://www.gov.mt/en/Government/Government%20of%20Malta/Synopsis/pages/governance-synopsis.aspx",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "شرح رسمی جمهوری، جدایی قوا، نقش نخست‌وزیر و مجلس تک‌مجلسی."
+        },
+        {
+          "name": "The Maltese Government – Protocol Manual 2025",
+          "publisher": "Ministry for Foreign Affairs and Tourism of Malta",
+          "url": "https://foreign.gov.mt/wp-content/uploads/2025/04/Protocol-Manual-2025.pdf",
+          "date": "2025-04-01",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "تعریف رسمی نظام جمهوری پارلمانی و جایگاه رئیس‌جمهور و نخست‌وزیر."
+        },
+        {
+          "name": "Malta House of Representatives May 2026 Election",
+          "publisher": "Inter-Parliamentary Union – IPU Parline",
+          "url": "https://data.ipu.org/parliament/MT/MT-LC01/election/MT-LC01-E20260530/",
+          "date": "2026-06-2026",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات ۳۰ مه ۲۰۲۶؛ حزب کارگر ۴۲ کرسی و حزب ملی‌گرا ۳۷ کرسی."
+        },
+        {
+          "name": "General Election 2026 – result of the first count votes",
+          "publisher": "Electoral Commission of Malta",
+          "url": "https://electoral.gov.mt/pr-31-05-26-en",
+          "date": "2026-05-31",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتیجه رسمی شمارش نخست انتخابات و سهم رأی حزب کارگر و حزب ملی‌گرا."
+        },
+        {
+          "name": "Hon. Robert Abela MP – Fifteenth Legislature",
+          "publisher": "Parliament of Malta",
+          "url": "https://www.parlament.mt/en/15th-leg/political-groups/labour-party/abela-robert/",
+          "date": "2026-06-20",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "تأیید نخست‌وزیری Robert Abela در مجلس پانزدهم از ۱ ژوئن ۲۰۲۶."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر اساس انتخابات زودهنگام ۳۰ مه ۲۰۲۶ و ترکیب مجلس جدید است. ۷۹ کرسی شامل سازوکار اصلاح تناسب جنسیتی و اصلاح تناسب آرا است؛ عدد ۴۲ کرسی حزب کارگر از جدول IPU استفاده شده است."
       }
     }
   }
