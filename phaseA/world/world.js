@@ -798,10 +798,21 @@ function politicalChangeFormHtml(pc, isPlayer) {
   if (!isPlayer) return '<div class="dashNote">تغییر ساختار سایر کشورها از این پنل ممکن نیست. تصمیم‌گیری خودکار کشورها فقط پس از فعال‌شدن هوش مصنوعی زنده در آینده اضافه خواهد شد.</div>';
   pc = pc || {};
   var proposalList = (ST && ST.political_reform_proposals) || [];
-  var activeProposal = null, pi;
-  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && ['pending','reviewed','approved','executing','paused_funds','paused_crisis'].indexOf(proposalList[pi].status) >= 0) { activeProposal=proposalList[pi]; break; }
+  var activeProposal = null, terminalProposal = null, pi;
+  for (pi=proposalList.length-1;pi>=0;pi--) {
+    if (proposalList[pi].country !== (ST && ST.player)) continue;
+    if (!terminalProposal && (proposalList[pi].status === 'completed' || proposalList[pi].status === 'failed')) terminalProposal = proposalList[pi];
+    if (!activeProposal && ['pending','reviewed','approved','executing','paused_funds','paused_crisis'].indexOf(proposalList[pi].status) >= 0) activeProposal = proposalList[pi];
+    if (activeProposal && terminalProposal) break;
+  }
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">تغییرات ابتدا به‌صورت طرح ثبت و ارزیابی می‌شوند. پس از تصویب، اجرای مرحله‌ای از روز بعد آغاز می‌شود؛ هزینه در اقساط روزانه پرداخت خواهد شد و تغییر نهایی فقط پس از تکمیل موفق طرح اعمال می‌شود. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
+  if (!activeProposal && terminalProposal) {
+    var terminalOk = terminalProposal.status === 'completed';
+    h += '<div class="reformOutcome '+(terminalOk ? 'success' : 'failure')+'"><b>'+(terminalOk ? '✅ طرح اصلاحات پذیرفته و اجرا شد' : '⚠️ طرح اصلاحات پذیرفته نشد')+'</b>';
+    h += '<div>طرح شماره '+dashEsc(terminalProposal.id)+' · '+dashEsc(terminalProposal.completed_date || terminalProposal.last_update_date || '')+'</div>';
+    h += '<div>'+(terminalOk ? 'تغییرات ثبت‌شده در ساختار سیاسی فعلی اعمال شده‌اند.' : 'تغییرات نهایی اعمال نشدند و ساختار قبلی حفظ شده است.')+'</div></div>';
+  }
   if (activeProposal) {
     var statusLabel = {pending:'در انتظار بررسی',reviewed:'ارزیابی شده؛ منتظر تصمیم بازیکن',approved:'تصویب شده؛ آماده آغاز اجرا',executing:'در حال اجرا',paused_funds:'توقف موقت؛ بودجه کافی نیست',paused_crisis:'توقف موقت؛ بحران سیاسی'};
     h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>'+dashEsc(statusLabel[activeProposal.status] || activeProposal.status)+'</b></div>';
@@ -973,6 +984,8 @@ function politicalCurrentStatusHtml(pc, baseline) {
     h += '<div class="row"><span class="muted">'+dashEsc(fields[i][1])+'</span><b>'+dashEsc(classificationValueLabel(key,value))+'</b></div>';
   }
   h += '</div>';
+  var ideologyNames = {communism:'کمونیسم',marxism_leninism:'مارکسیسم–لنینیسم',socialism:'سوسیالیسم',democratic_socialism:'سوسیالیسم دموکراتیک',social_democracy:'سوسیال‌دموکراسی',liberalism:'لیبرالیسم',classical_liberalism:'لیبرالیسم کلاسیک',conservatism:'محافظه‌کاری',liberal_conservatism:'محافظه‌کاری لیبرال',national_conservatism:'محافظه‌کاری ملی',christian_democracy:'دموکراسی مسیحی',nationalism:'ملی‌گرایی',civic_nationalism:'ملی‌گرایی مدنی',ethnic_nationalism:'ملی‌گرایی قومی',islamism:'اسلام‌گرایی',islamic_democracy:'دموکراسی اسلامی',political_islam_conservatism:'محافظه‌کاری اسلام‌گرا',secularism:'سکولاریسم',green_politics:'سیاست سبز',libertarianism:'لیبرتارینیسم',populism:'پوپولیسم',progressivism:'ترقی‌خواهی',fascism:'فاشیسم',far_right:'راست افراطی',anarchism:'آنارشیسم',monarchism:'سلطنت‌طلبی',baathism:'بعث‌گرایی',juche:'جوچه',military_nationalism:'ملی‌گرایی نظامی',mixed_pragmatic:'ترکیبی / عمل‌گرایانه',other:'سایر',not_officially_declared:'اعلام‌نشده',unknown:'نامشخص',social_liberalism:'لیبرالیسم اجتماعی'};
+  h += classificationIdeologyHtml('ایدئولوژی رسمی فعلی حکومت',pc.official_ideology,'ایدئولوژی رسمی فعلی ثبت نشده است.',ideologyNames);
   if (changed) h += '<div class="dashNote">برخی محورهای ساختار سیاسی نسبت به baseline آغاز سناریو تغییر کرده‌اند؛ مرجع اولیه در بخش بعدی محفوظ است.</div>';
   else h += '<div class="dashNote">ساختار فعلی هنوز با طبقه‌بندی پایه آغاز سناریو یکسان است.</div>';
   return h;
