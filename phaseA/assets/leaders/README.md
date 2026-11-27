@@ -137,6 +137,13 @@
 | BRA | برزیل — لوئیز ایناسیو لولا دا سیلوا | 09.07.2026 - Presidente Lula.jpg | Lula Oficial؛ عکس Ricardo Stuckert، ۹ ژوئیهٔ ۲۰۲۶؛ CC BY-SA 4.0 |
 | AUS | استرالیا — آنتونی آلبانیزی | Anthony Albanese Official Portrait.jpg | David Foote (AUSPIC / Department of Parliamentary Service)؛ CC BY 4.0 طبق شرایط DFAT |
 | UKR | اوکراین — ولودیمیر زلنسکی | Volodymyr Zelensky Official portrait.jpg | President.gov.ua؛ CC BY 4.0 (طبق صفحهٔ فایل برای عکس‌های منتشرشده پیش از ۴ اکتبر ۲۰۲۲) |
+| CAN | کانادا — مارک کارنی | Mark Carney portrait May 2025.jpg | Daniel Torok / کاخ سفید؛ Public Domain (اثر کارمند دولت فدرال آمریکا) |
+| ITA | ایتالیا — جورجیا ملونی | Giorgia Meloni Official 2024 (cropped).jpg | Governo Italiano؛ CC BY 3.0 Italy |
+| POL | لهستان — دونالد توسک | Donald Tusk 2025.jpg | Gov.pl / دفتر نخست‌وزیر لهستان؛ CC BY 3.0 Poland |
+| ARG | آرژانتین — خاویر میلی | Retrato oficial del Presidente Javier Milei.png | Gobierno argentino؛ CC BY 4.0 |
+| ZAF | آفریقای جنوبی — سیریل رامافوسا | Cyril Ramaphosa in 2026.jpg | Lula Oficial / Ricardo Stuckert؛ CC BY-SA 4.0 |
+| MYS | مالزی — انور ابراهیم | Anwar Ibrahim June 2025.jpg | Laily Rachev / دولت اندونزی؛ Public Domain طبق قانون اندونزی |
+| PAK | پاکستان — شهباز شریف | Shehbaz Sharif - 2025 (cropped).jpg | Press Service of the President of Azerbaijan؛ CC BY 4.0 |
 
 ### صفحات منبع بسته دوم
 - ژاپن: https://commons.wikimedia.org/wiki/File:Official_portrait_of_Sanae_Takaichi,_Prime_Minister_of_Japan_(HD).jpg
@@ -146,6 +153,13 @@
 - برزیل: https://commons.wikimedia.org/wiki/File:09.07.2026_-_Presidente_Lula.jpg
 - استرالیا: https://commons.wikimedia.org/wiki/File:Anthony_Albanese_Official_Portrait.jpg
 - اوکراین: https://commons.wikimedia.org/wiki/File:Volodymyr_Zelensky_Official_portrait.jpg
+- کانادا: https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg
+- ایتالیا: https://commons.wikimedia.org/wiki/File:Giorgia_Meloni_Official_2024_(cropped).jpg
+- لهستان: https://commons.wikimedia.org/wiki/File:Donald_Tusk_2025.jpg
+- آرژانتین: https://commons.wikimedia.org/wiki/File:Retrato_oficial_del_Presidente_Javier_Milei.png
+- آفریقای جنوبی: https://commons.wikimedia.org/wiki/File:Cyril_Ramaphosa_in_2026.jpg
+- مالزی: https://commons.wikimedia.org/wiki/File:Anwar_Ibrahim_June_2025.jpg
+- پاکستان: https://commons.wikimedia.org/wiki/File:Shehbaz_Sharif_-_2025_(cropped).jpg
 
 ### نکات بازبینی بسته دوم
 - پرتره‌های ژاپن، اندونزی، برزیل، استرالیا و اوکراین عمودی و با چهرهٔ واضح در قاب پرتره هستند.
