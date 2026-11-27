@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 76,
-    "pending_countries": 98,
+    "classified_countries": 81,
+    "pending_countries": 93,
     "last_batch": [
-      "ARE",
-      "QAT",
-      "KWT",
-      "BHR",
-      "OMN"
+      "AFG",
+      "BGD",
+      "NPL",
+      "LKA",
+      "MMR"
     ]
   },
   "countries": {
@@ -5478,6 +5478,388 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "منابع رسمی و ارزیابی‌های ۲۰۲۶ با ساختار پایدار پیش از تاریخ مبنا تطبیق داده شده‌اند؛ هیچ تغییر پس از ۵ نوامبر در baseline وارد نشده است."
+      }
+    },
+    "AFG": {
+      "country_name_fa": "افغانستان",
+      "country_name_en": "Afghanistan",
+      "government_form": "emirate",
+      "government_subform": "islamic_emirate",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "no_legal_party_system",
+      "official_ideology": [
+        "islamism",
+        "political_islam_conservatism"
+      ],
+      "ruling_party_ideology": [
+        "islamism",
+        "political_islam_conservatism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، افغانستان عملاً تحت حاکمیت امارت اسلامی طالبان بود. هبت‌الله آخندزاده رهبر عالی طالبان و مرجع نهایی قدرت بود و محمدحسن آخند نخست‌وزیر دولت سرپرست به‌شمار می‌رفت. قانون اساسی جمهوری پیشین عملاً کنار گذاشته شده و قانون اساسی جدیدی جایگزین آن نشده بود؛ حکومت از طریق فرمان‌ها و تفسیر سخت‌گیرانه خود از شریعت اداره می‌شد. احزاب سیاسی و نهادهای نمایندگی انتخابی فعالیت قانونی نداشتند. ایدئولوژی طالبان اسلام‌گرایی محافظه‌کارانه است؛ این طبقه‌بندی توصیف جریان حاکم است، نه ادعای وجود یک سند قانون اساسی جدید.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Afghanistan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/afghanistan/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "حاکمیت طالبان به شکل امارت، قدرت نامحدود رهبر، نبود قانون اساسی و نهادهای نمایندگی و ممنوعیت حقوق سیاسی."
+        },
+        {
+          "name": "Afghanistan | Global State of Democracy",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/afghanistan",
+          "date": "2025-01-01",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "نوع نظام حکومت را دولت بنیادگرای اسلامی و رهبر عالی را هبت‌الله آخندزاده معرفی می‌کند؛ انتخابات ملی قابل رقابت وجود ندارد."
+        },
+        {
+          "name": "Afghanistan - World Leaders",
+          "publisher": "Central Intelligence Agency",
+          "url": "https://www.cia.gov/resources/world-leaders/foreign-governments/afghanistan/",
+          "date": "2026-09-03",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "رهبر عالی هبت‌الله آخندزاده و نخست‌وزیر محمدحسن آخند را در سپتامبر ۲۰۲۶ ثبت کرده است."
+        },
+        {
+          "name": "Country policy and information note: fear of the Taliban, Afghanistan, February 2026",
+          "publisher": "UK Home Office",
+          "url": "https://www.gov.uk/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026",
+          "date": "2026-02-01",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "شرح دولت سرپرست، ساختار رهبری طالبان، تمرکز قدرت در امیر و اداره کشور با فرمان‌ها و احکام مبتنی بر شریعت."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "منابع تا پیش از تاریخ مبنا وضعیت امارت طالبان و رهبران آن را تأیید می‌کنند؛ عنوان «امارت اسلامی» به‌عنوان ساختار بالفعل ثبت شده و از ادعای شناسایی بین‌المللی دولت خودداری شده است."
+      }
+    },
+    "BGD": {
+      "country_name_fa": "بنگلادش",
+      "country_name_en": "Bangladesh",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "nationalism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، بنگلادش جمهوری پارلمانی با دولت حزب ملی‌گرای بنگلادش (BNP) به رهبری طارق رحمان بود؛ او در ۱۷ فوریه ۲۰۲۶ نخست‌وزیر شد. BNP در انتخابات ۱۲ فوریه اکثریت قاطع مجلس را به دست آورد و جماعت اسلامی نیروی اصلی اپوزیسیون شد. فعالیت‌های عوامی لیگ از ۲۰۲۵ ممنوع و ثبت آن لغو شده بود؛ بنابراین با وجود رقابت انتخاباتی واقعی و انتقال مسالمت‌آمیز قدرت، محدودیت بر یکی از احزاب بزرگ تاریخی در ارزیابی کیفیت رقابت لحاظ شده است. ایدئولوژی رسمی کشور جداگانه اعلام نشده؛ گرایش BNP به‌طور کلی ملی‌گرا و میانه‌راست/محافظه‌کار طبقه‌بندی شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Country policy and information note: political situation, Bangladesh, October 2026",
+          "publisher": "UK Home Office",
+          "url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-october-2026-accessible",
+          "date": "2026-10-22",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات فوریه ۲۰۲۶، نخست‌وزیری طارق رحمان، پیروزی BNP، اپوزیسیون جماعت اسلامی و ادامه ممنوعیت عوامی لیگ."
+        },
+        {
+          "name": "Bangladesh Parliament February 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/BD/BD-LC01/election/BD-LC01-E20260212/",
+          "date": "2026-02-12",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "نتایج انتخابات، ۲۱۰ کرسی مستقیم BNP، جایگاه جماعت اسلامی به‌عنوان اپوزیسیون و تشکیل دولت در فوریه ۲۰۲۶."
+        },
+        {
+          "name": "Recent Political Developments in Bangladesh: Background and Issues for Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R48975.html",
+          "date": "2026-06-05",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "دولت اکثریت BNP، نخست‌وزیری طارق رحمان و روند اجرای منشور ملی ژوئیه."
+        },
+        {
+          "name": "Report of a fact-finding mission Bangladesh: political situation, October 2026",
+          "publisher": "UK Home Office",
+          "url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes/report-of-a-fact-finding-mission-bangladesh-political-situation-october-2026-accessible",
+          "date": "2026-10-22",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی فضای سیاسی پس از انتخابات، آزادی بیشتر احزاب و جامعه مدنی و تداوم محدودیت قانونی عوامی لیگ."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت سیاسی تا اکتبر ۲۰۲۶ مبنای طبقه‌بندی است؛ ممنوعیت عوامی لیگ و دولت BNP هر دو پیش از تاریخ شروع بازی برقرار بوده‌اند."
+      }
+    },
+    "NPL": {
+      "country_name_fa": "نپال",
+      "country_name_en": "Nepal",
+      "government_form": "republic",
+      "government_subform": "federal_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "federal",
+      "regime_character": "electoral_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، نپال جمهوری دموکراتیک فدرال با نظام پارلمانی بود. پس از اعتراضات جوانان و فروپاشی دولت پیشین در سپتامبر ۲۰۲۵، انتخابات زودهنگام ۵ مارس ۲۰۲۶ برگزار شد و حزب رشتریا سواتانترا (RSP) با ۱۸۲ کرسی از ۲۷۵ کرسی اکثریت قاطع مجلس نمایندگان را به دست آورد. بالندرا شاه در ۲۷ مارس ۲۰۲۶ نخست‌وزیر شد. احزاب قدیمی از جمله کنگره نپال و حزب کمونیست نپال (UML) همچنان در پارلمان حضور دارند. RSP یک جریان اصلاح‌طلب و میانه‌گرا با هویت ایدئولوژیک ترکیبی/عمل‌گرایانه ثبت شده است؛ ایدئولوژی رسمی کشور از آن استنتاج نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Constitution of Nepal",
+          "publisher": "Government of Nepal, Law Commission",
+          "url": "https://lawcommission.gov.np/content/13437/nepal-s-constitution/",
+          "date": "2015-09-20",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "party_system"
+          ],
+          "note": "اصل ۷۴ نظام چندحزبی، رقابتی، فدرال، دموکراتیک، جمهوری و پارلمانی را تصریح می‌کند."
+        },
+        {
+          "name": "Nepal: 2026 legislative election and future prospects",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10622/",
+          "date": "2026-06-02",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "پیروزی RSP با ۱۸۲ کرسی و نخست‌وزیری بالندرا شاه پس از انتخابات مارس ۲۰۲۶."
+        },
+        {
+          "name": "Nepal House of Representatives March 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/NP/NP-LC01/election/NP-LC01-E20260305/",
+          "date": "2026-03-05",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ترکیب مجلس، احزاب برنده، اکثریت RSP و تشکیل دولت تک‌حزبی."
+        },
+        {
+          "name": "Office of Prime Minister and Council of Ministers: Minister Detail",
+          "publisher": "Government of Nepal",
+          "url": "https://www.opmcm.gov.np/minister-detail/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "وبگاه رسمی نخست‌وزیری، بالندرا شاه را نخست‌وزیر از ۲۷ مارس ۲۰۲۶ معرفی می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی مبتنی بر قانون اساسی ۲۰۱۵ و نتایج انتخابات مارس ۲۰۲۶ است؛ وضعیت دولت و نخست‌وزیر پیش از تاریخ مبنای سناریو تثبیت شده بود."
+      }
+    },
+    "LKA": {
+      "country_name_fa": "سری‌لانکا",
+      "country_name_en": "Sri Lanka",
+      "government_form": "republic",
+      "government_subform": "democratic_socialist_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "social_democracy",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "socialism",
+        "social_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، سری‌لانکا جمهوری با نظام ریاستی اجرایی بود؛ رئیس‌جمهور آنورا کومارا دیسانایاکه از سپتامبر ۲۰۲۴ رئیس کشور و رئیس قوه مجریه و هارینی آماراسوریا نخست‌وزیر بود. ائتلاف قدرت ملی مردم (NPP) در انتخابات پارلمانی نوامبر ۲۰۲۴ اکثریت بسیار بزرگ مجلس را به دست آورد و دولت را تشکیل داد. نظام چندحزبی و رقابت انتخاباتی برقرار است، هرچند ائتلاف حاکم در مجلس برتری چشمگیری دارد. عبارت «جمهوری سوسیالیستی دموکراتیک» در نام رسمی کشور به‌تنهایی به‌عنوان ایدئولوژی رسمی ثبت نشده؛ گرایش ائتلاف NPP با توجه به پیوند آن با JVP و برنامه اجتماعی‌اقتصادی‌اش به‌صورت سوسیالیستی/سوسیال‌دموکراتیک و ترکیبی ثبت شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government of Sri Lanka: Government",
+          "publisher": "Government Information Center, Sri Lanka",
+          "url": "https://www.gov.lk/sri-lanka/government",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "شرح رسمی نظام ریاستی، رئیس‌جمهور به‌عنوان رئیس کشور و دولت، مجلس ۲۲۵ نفره و شوراهای استانی."
+        },
+        {
+          "name": "Heads of State",
+          "publisher": "Parliament of Sri Lanka",
+          "url": "https://www.parliament.lk/en/learn/handbook-of-parliament/heads-of-state",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ثبت آنورا کومارا دیسانایاکه به‌عنوان رئیس‌جمهور اجرایی از ۲۲ سپتامبر ۲۰۲۴."
+        },
+        {
+          "name": "Prime Minister Dr. Harini Amarasuriya",
+          "publisher": "Prime Minister's Office, Sri Lanka",
+          "url": "https://pmoffice.gov.lk/PMprofile.php?para=QlI4Q3B2NnhtaWgzZXNlYTUweWgxK0N1bTlHbGpZSi9oZUdYREhYM1UzRT0%3D",
+          "date": "2026-11-27",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "زندگی‌نامه رسمی نخست‌وزیر و انتخاب او در فهرست NPP در انتخابات نوامبر ۲۰۲۴."
+        },
+        {
+          "name": "Sri Lanka: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/sri-lanka/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت انتخاباتی و حقوق سیاسی پس از انتقال قدرت انتخاباتی ۲۰۲۴."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار ریاستی و ترکیب دولت بر اساس منابع رسمی و ارزیابی ۲۰۲۶ ثبت شده است؛ عنوان رسمی کشور با ایدئولوژی رسمی خلط نشده است."
+      }
+    },
+    "MMR": {
+      "country_name_fa": "میانمار",
+      "country_name_en": "Myanmar",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "mixed",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "military_rule",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "military_nationalism"
+      ],
+      "ruling_coalition_ideology": [
+        "military_nationalism",
+        "nationalism"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، میانمار از نظر حقوقی جمهوری با رئیس‌جمهور مین آنگ هلائینگ بود؛ او در ۳ آوریل ۲۰۲۶ توسط پارلمانی که ترکیب آن تحت سلطه نمایندگان نظامی و متحدان ارتش بود به ریاست‌جمهوری رسید. انتخابات ژانویه ۲۰۲۶ به‌طور گسترده غیرآزاد و غیررقابتی ارزیابی شد؛ احزاب اصلی مخالف از جمله NLD امکان مشارکت نداشتند. دولت ظاهراً غیرنظامی جدید همچنان زیر سلطه ارتش و حزب حامی آن، USDP، قرار داشت. کنترل سرزمینی کشور چندپاره بود و دولت مرکزی بر بخش‌هایی از کشور تسلط کامل نداشت؛ دولت وحدت ملی (NUG) و سازمان‌های مسلح قومی/مقاومت در مناطق مختلف نفوذ یا کنترل داشتند. «ملی‌گرایی نظامی» برای جریان حاکم به‌عنوان توصیف تحلیلی ثبت شده، نه ایدئولوژی رسمی اعلام‌شده دولت.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Burma: Background and Issues for Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/IF12331.html",
+          "date": "2026-05-04",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "territorial_structure"
+          ],
+          "note": "تبدیل حکومت مستقیم نظامی به دولت اسماً غیرنظامی اما تحت رهبری ارتش در آوریل ۲۰۲۶ و تداوم جنگ و کنترل سرزمینی چندپاره."
+        },
+        {
+          "name": "Myanmar: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/myanmar/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure"
+          ],
+          "note": "سرکوب سیاسی، ممنوعیت احزاب مخالف و کنترل/نفوذ مقاومت در مناطق گسترده."
+        },
+        {
+          "name": "Presidential Election: Senior General Min Aung Hlaing elected as President",
+          "publisher": "Ministry of the President's Office, Myanmar",
+          "url": "https://presoffministry.gov.mm/en/news/30241",
+          "date": "2026-04-03",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "اعلام رسمی انتخاب مین آنگ هلائینگ به ریاست‌جمهوری توسط پارلمان در ۳ آوریل ۲۰۲۶."
+        },
+        {
+          "name": "Myanmar’s New Administration: Military Consolidation, Not Transition",
+          "publisher": "International Crisis Group",
+          "url": "https://www.crisisgroup.org/asia-pacific/myanmar-china/b188-myanmars-new-administration-military-consolidation-not-transition",
+          "date": "2026-06-03",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure"
+          ],
+          "note": "تحلیل دولت جدید به‌عنوان تثبیت سلطه نظامی پشت نمای مدنی و تداوم بحران مشروعیت و جنگ."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "snapshot بازی پس از انتخابات ژانویه و انتقال رسمی ریاست‌جمهوری در آوریل ۲۰۲۶ است؛ وضعیت چندپارگی سرزمینی و تداوم سلطه ارتش در baseline لحاظ شده است."
       }
     }
   }
