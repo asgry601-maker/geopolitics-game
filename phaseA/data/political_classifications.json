@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 100,
-    "pending_countries": 74,
+    "classified_countries": 105,
+    "pending_countries": 69,
     "last_batch": [
-      "LBY",
-      "TUN",
-      "DZA",
-      "MAR",
-      "ETH"
+      "KEN",
+      "GHA",
+      "SEN",
+      "CIV",
+      "CMR"
     ]
   },
   "countries": {
@@ -7248,6 +7248,361 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "طبقه‌بندی نهادی بر پایه قانون اساسی و وضعیت سیاسی تا ۵ نوامبر ۲۰۲۶ است؛ فدرالیسم قومی و رقابت محدود به‌طور مستقل از مدل پارلمانی ثبت شده‌اند."
+      }
+    },
+    "KEN": {
+      "country_name_fa": "کنیا",
+      "country_name_en": "Kenya",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "devolved_unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در تاریخ مبنای بازی، کنیا جمهوری ریاستی با نظام چندحزبی و ساختار واحدِ واگذارشده بود؛ قانون اساسی ۲۰۱۰ اختیارات و مسئولیت‌های مهمی را به ۴۷ دولت شهرستانی واگذار کرده است، اما کشور فدرال نیست. ویلیام روتو رئیس‌جمهور و رهبر سیاسی ائتلاف حاکم بود. در اوت ۲۰۲۶، اتحاد دموکراتیک متحد (UDA) و جنبش دموکراتیک نارنجی (ODM) رسماً برای رقابت مشترک در انتخابات ۲۰۲۷ توافق کردند و همکاری گسترده پیشین را به ائتلاف رسمی تبدیل کردند. با وجود انتخابات رقابتی و رسانه و جامعه مدنی فعال، مشکلات فساد، خشونت نیروهای امنیتی و محدود شدن فضای مخالفان مانع ارزیابی آن به‌عنوان دموکراسی لیبرال کامل است. گرایش UDA به‌طور محتاطانه محافظه‌کارانه ثبت شده و ائتلاف وسیع دولت به دلیل تنوع اعضا عمل‌گرایانه طبقه‌بندی شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Kenya: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/kenya/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کنیا را دارای انتخابات رقابتی چندحزبی می‌داند، اما درباره فساد، خشونت نیروهای امنیتی و کاهش فضای فعالیت مخالفان هشدار می‌دهد."
+        },
+        {
+          "name": "BTI 2026 Country Report: Kenya",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/KEN",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "قدرت نهادهای منتخب، نقش ریاست‌جمهوری و مشکلات نهادی و انتخاباتی را بررسی می‌کند."
+        },
+        {
+          "name": "Remarks during the Broad-Based Government Parliamentary Group Retreat",
+          "publisher": "Office of the President of Kenya",
+          "url": "https://www.president.go.ke/wp-content/uploads/2026/08/during-the-broad-based-government-parliamentary-group-retreat.pdf",
+          "date": "2026-08",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "توافق رسمی UDA و ODM برای تشکیل ائتلاف و رقابت مشترک در انتخابات ۲۰۲۷ را اعلام می‌کند."
+        },
+        {
+          "name": "The Constitution of Kenya",
+          "publisher": "Kenya Law Reform Commission",
+          "url": "https://www.klrc.go.ke/index.php/constitution-of-kenya/",
+          "date": "2010-08-27",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نظام ریاستی و تفویض اختیارات به دولت‌های شهرستانی را در چارچوب جمهوری واحد تعریف می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ائتلاف UDA و ODM بر اساس توافق رسمی اوت ۲۰۲۶ ثبت شده است؛ واگذاری اختیارات به شهرستان‌ها به‌معنای فدرالیسم تلقی نشده است."
+      }
+    },
+    "GHA": {
+      "country_name_fa": "غنا",
+      "country_name_en": "Ghana",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "غنا جمهوری ریاستی و دولت واحد است؛ رئیس‌جمهور هم رئیس کشور و هم رئیس دولت است و کابینه را تشکیل می‌دهد. جان درامانی ماهاما از کنگره ملی دموکراتیک (NDC) در انتخابات دسامبر ۲۰۲۴ پیروز شد و در ۷ ژانویه ۲۰۲۵ قدرت را از حزب حاکم پیشین تحویل گرفت. NDC در مجلس ۲۷۶ کرسی، ۱۸۳ کرسی به دست آورد و دولت تک‌حزبی تشکیل داد. غنا از ۱۹۹۲ انتخابات رقابتی و انتقال مسالمت‌آمیز قدرت میان دو حزب عمده را تجربه کرده است؛ بنابراین در این طبقه‌بندی دموکراسی لیبرال با نظام چندحزبی رقابتی در نظر گرفته شده، هرچند ضعف‌هایی در استقلال قضایی، فساد و حقوق برخی گروه‌ها باقی است. گرایش ایدئولوژیک NDC در خانواده سوسیال‌دموکراسی قرار می‌گیرد؛ این برچسب به‌عنوان گرایش حزب حاکم ثبت شده، نه ایدئولوژی رسمی کشور.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Ghana: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/ghana/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "غنا را دموکراسی آزاد با انتخابات چندحزبی رقابتی و انتقال مسالمت‌آمیز قدرت از ۱۹۹۲ توصیف می‌کند."
+        },
+        {
+          "name": "BTI 2026 Country Report: Ghana",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/GHA",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی NDC در انتخابات ۲۰۲۴، انتقال مسالمت‌آمیز قدرت و جایگاه دموکراتیک غنا را بررسی می‌کند."
+        },
+        {
+          "name": "Ghana Parliament December 2024 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/gh/GH-LC01/election/GH-LC01-E20241207/",
+          "date": "2024-12-07",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج مجلس را ثبت می‌کند: NDC با ۱۸۳ کرسی، NPP با ۸۸ کرسی و چهار نماینده مستقل."
+        },
+        {
+          "name": "Ghana General Election: 7 December 2024 — Final Report",
+          "publisher": "Commonwealth Observer Group",
+          "url": "https://comsec-web-static.s3.eu-west-1.amazonaws.com/s3fs-public/2025-03/final-ghana-general-election-december-2024-final.pdf",
+          "date": "2025-03",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "گزارش نهایی انتخابات ریاست‌جمهوری و پارلمانی و نتیجه انتقال قدرت به جان ماهاما را مستند می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج رسمی انتخابات ۲۰۲۴ و انتقال قدرت در ژانویه ۲۰۲۵ مبنای ثبت دولت و اکثریت پارلمانی است."
+      }
+    },
+    "SEN": {
+      "country_name_fa": "سنگال",
+      "country_name_en": "Senegal",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "سنگال جمهوری واحد با رئیس‌جمهور منتخب مستقیم و نخست‌وزیر منصوب از سوی رئیس‌جمهور است؛ با توجه به نقش رئیس‌جمهور در تعیین جهت اجرایی و وجود نخست‌وزیر و مسئولیت دولت در برابر نهادهای منتخب، ساختار در این طبقه‌بندی نیمه‌ریاستی ثبت شده است. باسيرو دیومای فای رئیس‌جمهور بود. پس از اختلاف سیاسی میان فای و عثمان سونکو، سونکو در مه ۲۰۲۶ از نخست‌وزیری کنار رفت و احمدو الامین لو نخست‌وزیر شد؛ سونکو سپس رئیس مجلس ملی شد. حزب PASTEF در انتخابات پارلمانی نوامبر ۲۰۲۴، ۱۳۰ کرسی از ۱۶۵ کرسی را به دست آورد، اما شکاف میان ریاست‌جمهوری و رهبری پارلمانی حزب باعث می‌شود نسبت دادن یک حزب یا ائتلاف واحد به دولت در تاریخ مبنا گمراه‌کننده باشد؛ از این رو فیلدهای گرایش حزب حاکم و ائتلاف حاکم null باقی مانده‌اند. رقابت چندحزبی و انتقال مسالمت‌آمیز قدرت، در کنار مشکلات حقوقی و محدودیت‌های موردی برای مخالفان، با دموکراسی انتخاباتی آزاد سازگار است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Senegal: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/senegal/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سنگال را یکی از دموکراسی‌های انتخاباتی باثبات آفریقا معرفی می‌کند و هم‌زمان به موانع رقابت مخالفان اشاره دارد."
+        },
+        {
+          "name": "BTI 2026 Country Report: Senegal",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/SEN",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تحول دولت فای، جایگاه سونکو و تقویت نیروهای دموکراتیک پس از انتخابات ۲۰۲۴ را بررسی می‌کند."
+        },
+        {
+          "name": "Senegal National Assembly November 2024 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/SN/SN-LC01/election/SN-LC01-E20241117/",
+          "date": "2024-11-17",
+          "supports": [
+            "party_system"
+          ],
+          "note": "نتایج رسمی پارلمانی و کسب ۱۳۰ کرسی از ۱۶۵ کرسی توسط PASTEF را ثبت می‌کند."
+        },
+        {
+          "name": "Report of the Secretary-General on the activities of UNOWAS",
+          "publisher": "United Nations Office for West Africa and the Sahel",
+          "url": "https://dppa.un.org/sites/default/files/2026-07/SG%20Report%20on%20the%20activities%20of%20UNOWAS_June%202026.pdf",
+          "date": "2026-07",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "برکناری سونکو در مه ۲۰۲۶، انتصاب احمدو الامین لو به نخست‌وزیری و انتخاب سونکو به ریاست مجلس را ثبت می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت شکاف میان رئیس‌جمهور و اکثریت پارلمانی PASTEF تا ۵ نوامبر ۲۰۲۶ لحاظ شده است؛ رخدادهای پس از این تاریخ وارد baseline نشده‌اند."
+      }
+    },
+    "CIV": {
+      "country_name_fa": "ساحل عاج",
+      "country_name_en": "Côte d’Ivoire",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "ساحل عاج جمهوری ریاستی و دولت واحد است. آلاسان واتارا در انتخابات ۲۵ اکتبر ۲۰۲۵ برای دوره چهارم انتخاب شد؛ شورای قانون اساسی در ۴ نوامبر ۲۰۲۵ نتیجه نهایی ۸۹٫۷۷ درصد آرا را اعلام کرد. حزب اجتماع هوفوتیست‌ها برای دموکراسی و صلح (RHDP) بر نهادهای انتخابی تسلط دارد و در انتخابات ریاست‌جمهوری ۲۰۲۵ نامزدهای اصلی مخالف از رقابت کنار گذاشته شدند. با وجود فعالیت احزاب قانونی و رسانه‌ها، محدودیت رقابت و تمرکز قدرت در ریاست‌جمهوری سبب می‌شود وضعیت رژیم به‌عنوان اقتدارگرایی انتخاباتی و نظام حزبی به‌عنوان حزب مسلط غیررقابتی طبقه‌بندی شود. RHDP یک ائتلاف سیاسی گسترده با گرایش توسعه‌گرایانه و عمل‌گرایانه است؛ ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Côte d’Ivoire: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/cote-divoire/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "به حذف نامزدهای اصلی مخالف در انتخابات ۲۰۲۵، پیروزی دوره چهارم واتارا و افت حقوق سیاسی اشاره می‌کند."
+        },
+        {
+          "name": "BTI 2026 Country Report: Côte d’Ivoire",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/CIV",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، سلطه RHDP و ویژگی‌های توسعه‌گرایانه و اقتدارگرایانه دولت را بررسی می‌کند."
+        },
+        {
+          "name": "Decision n° 2025-EP-007 du 04 novembre 2025 — Résultats définitifs de l’élection présidentielle",
+          "publisher": "Conseil constitutionnel de Côte d’Ivoire",
+          "url": "https://www.conseil-constitutionnel.ci/sites/default/files/decision_2025-ep-007_du_04.11.2025.pdf",
+          "date": "2025-11-04",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "نتیجه قطعی انتخابات ۲۵ اکتبر ۲۰۲۵ و انتخاب مجدد آلاسان واتارا با ۸۹٫۷۷ درصد آرا را اعلام می‌کند."
+        },
+        {
+          "name": "Présidentielle 2025 : le Conseil constitutionnel confirme la réélection du président Alassane Ouattara",
+          "publisher": "Portail officiel du Gouvernement de Côte d’Ivoire",
+          "url": "https://gouv.ci/index.php/actualite/presidentielle-2025-le-conseil-constitutionnel-confirme-la-reelection-du-president-alassane-ouattara-avec-8977-des-suffrages-exprimes-1858",
+          "date": "2025-11-04",
+          "supports": [
+            "government_form",
+            "regime_character"
+          ],
+          "note": "خلاصه رسمی دولت از اعلام نتیجه قطعی انتخابات و میزان مشارکت را ارائه می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "انتخابات ریاست‌جمهوری ۲۰۲۵ و نتیجه قطعی اعلام‌شده در ۴ نوامبر ۲۰۲۵ پیش از تاریخ مبنا قرار دارد؛ هیچ تحول بعد از ۵ نوامبر وارد baseline نشده است."
+      }
+    },
+    "CMR": {
+      "country_name_fa": "کامرون",
+      "country_name_en": "Cameroon",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "کامرون جمهوری ریاستی و دولت واحد است؛ رئیس‌جمهور اختیارات گسترده‌ای در انتصاب دولت و مقام‌های عالی دارد و نخست‌وزیر در ساختار اجرایی تابع ریاست‌جمهوری است. پل بیا در انتخابات ۱۲ اکتبر ۲۰۲۵ برای دوره جدید انتخاب شد؛ شورای قانون اساسی در ۲۷ اکتبر نتیجه ۵۳٫۶۶ درصدی او را اعلام کرد. حزب جنبش دموکراتیک خلق کامرون (CPDM) از ۱۹۸۲ در قدرت است و با استفاده از منابع دولتی و محدودیت فعالیت مخالفان بر ساختار سیاسی مسلط مانده است. انتخابات چندحزبی برگزار می‌شود، اما رقابت نابرابر و محدودیت آزادی‌های سیاسی، رژیم را در طبقه اقتدارگرایی انتخاباتی و نظام حزبی را در گروه حزب مسلط غیررقابتی قرار می‌دهد. ایدئولوژی رسمی یا گرایش ایدئولوژیک مشخصی که بتوان با اطمینان به دولت یا ائتلاف حاکم نسبت داد در این baseline ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Cameroon: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/cameroon/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "حکومت طولانی پل بیا، تسلط CPDM، محدودیت فعالیت مخالفان و ضعف آزادی‌های سیاسی را مستند می‌کند."
+        },
+        {
+          "name": "BTI 2026 Country Report: Cameroon",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/CMR",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، نقش CPDM، ضعف رقابت انتخاباتی و محدودیت نهادهای مستقل را بررسی می‌کند."
+        },
+        {
+          "name": "Presidential election: H.E. Biya Paul re-elected with 53.66% of the vote",
+          "publisher": "Direction Générale du Trésor et de la Comptabilité Ministérielle — Cameroon",
+          "url": "https://dgtcfm.cm/en/election-presidentielle-camerounaise-2025-biya-paul-reelu-avec-5366-des-voix/",
+          "date": "2025-10-27",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "اعلام نتیجه رسمی شورای قانون اساسی و انتخاب مجدد پل بیا با ۵۳٫۶۶ درصد آرا را گزارش می‌کند."
+        },
+        {
+          "name": "The Constitution of the Republic of Cameroon",
+          "publisher": "Constitute Project — Constitution text repository",
+          "url": "https://www.constituteproject.org/constitution/Cameroon_2008",
+          "date": "2008",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "ساختار جمهوری، اختیارات ریاست‌جمهوری، نخست‌وزیری و تقسیمات اداری کشور را در متن قانون اساسی نشان می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتیجه انتخابات ریاست‌جمهوری ۲۰۲۵ و ساختار نهادی پیش از تاریخ مبنای ۵ نوامبر ۲۰۲۶ ثبت شده است."
       }
     }
   }
