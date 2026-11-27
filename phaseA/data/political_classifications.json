@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_reference_date": "2026-11-05",
+  "generated_at": "2026-11-27",
+  "taxonomy_file": "political_taxonomy.json",
+  "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
+  "coverage": {
+    "expected_countries": 174,
+    "classified_countries": 1,
+    "pending_countries": 173,
+    "last_batch": [
+      "IRN"
+    ]
+  },
+  "countries": {
+    "IRN": {
+      "country_name_fa": "ایران",
+      "country_name_en": "Iran",
+      "government_form": "republic",
+      "government_subform": "islamic_republic",
+      "executive_legislative_system": "mixed",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": [
+        "islamism",
+        "political_islam_conservatism"
+      ],
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "ایدئولوژی رسمی جمهوری اسلامی بر مبانی اسلامی و نظریه ولایت فقیه استوار است. در ساختار سیاسی، چند جریان و شبکه درون حاکمیت حضور دارند اما یک حزب حاکم واحد یا ائتلاف حزبی رسمیِ قابل طبقه‌بندی به‌عنوان دولت ائتلافی وجود ندارد؛ بنابراین گرایش حزب حاکم و ائتلاف حاکم عمداً null گذاشته شده است. انتخابات ریاست‌جمهوری و مجلس برگزار می‌شوند، اما نظارت استصوابی و اختیارات نهادهای انتصابی و رهبری، رقابت و پاسخگویی انتخاباتی را به‌شدت محدود می‌کند. مدل اجرایی-تقنینی «مختلط» در این طبقه‌بندی به معنای نظام نیمه‌ریاستی کلاسیک نیست؛ اختیارات قانون اساسی میان رئیس‌جمهور، مجلس و مقام رهبری/نهادهای وابسته توزیع نامتقارن دارد.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Constitution of the Islamic Republic of Iran — Articles 57–60",
+          "publisher": "Iran Human Rights Documentation Center",
+          "url": "https://iranhrdc.org/wp-content/uploads/reports_en/TheConstitution_716023541.pdf",
+          "date": "1989-07-28",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "official_ideology"
+          ],
+          "note": "مواد ۵۷ تا ۶۰ درباره جایگاه رهبری و قوای سه‌گانه و اختیارات اجرایی؛ متن قانون اساسی به‌عنوان منبع اولیه."
+        },
+        {
+          "name": "Iran: Introductory country profile",
+          "publisher": "UK House of Commons Library",
+          "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10588/CBP-10588.pdf",
+          "date": "2026-03-20",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نقشه نهادی مراکز قدرت و تفکیک نهادهای انتخابی و انتصابی."
+        },
+        {
+          "name": "Iran: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/iran/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت رقابت انتخاباتی، رد صلاحیت نامزدها و تمرکز قدرت در نهادهای غیرانتخابی."
+        },
+        {
+          "name": "Iran: Background and U.S. Policy",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2025-05-22_R47321_78886ef22e8ac264c34c001b2915590f48893507.html",
+          "date": "2025-05-22",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "official_ideology"
+          ],
+          "note": "توصیف نظام ترکیبی با نهادهای انتخابی و اقتدار نهایی رهبری."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد طبقه‌بندی نهادها و ایدئولوژی رسمی است، نه تعیین اشخاص حاکم. نام رهبر و رئیس‌جمهور و نقش PLAYER_CONTROLLED همچنان از پرونده سیاسی و تنظیمات سناریو خوانده می‌شود. برای جلوگیری از نسبت‌دادن نادرست، ایدئولوژی حزب یا ائتلاف حاکم بدون وجود حزب/ائتلاف رسمی ثبت نشده است."
+      }
+    }
+  }
+}
