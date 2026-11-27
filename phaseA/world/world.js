@@ -803,7 +803,7 @@ function politicalChangeFormHtml(pc, isPlayer) {
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">در این مرحله تغییرات ابتدا به‌صورت طرح ثبت می‌شوند و وضعیت فعلی کشور دست‌نخورده می‌ماند. برآورد هزینه و زمان نمایش داده می‌شود؛ کسر خزانه و اجرای مرحله‌ای در بسته‌های بعدی فعال خواهد شد. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
   if (activeProposal) {
-    h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>در انتظار بررسی</b></div>';
+    h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>'+(activeProposal.status === 'reviewed' ? 'ارزیابی شده؛ منتظر تصمیم بازیکن' : 'در انتظار بررسی')+'</b></div>';
     h += '<div class="row"><span>هزینه برآوردی</span><b>'+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
     h += '<div class="row"><span>زمان برآوردی</span><b>'+dashEsc(activeProposal.estimated_days)+' روز</b></div>';
     h += '<div class="dashNote">هنوز هیچ‌یک از تغییرات پیشنهادی اعمال نشده است.</div>';
