@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0.0",
+  "scenario_reference_date": "2026-11-05",
+  "purpose": "واژگان معیار برای ثبت جداگانه نوع حکومت، ساختار نهادی، شکل دولت، الگوی رقابت سیاسی و ایدئولوژی در پروفایل ۱۷۴ کشور.",
+  "principles": [
+    "نوع حکومت، ساختار نهادی، شکل دولت، وضعیت رقابت سیاسی و ایدئولوژی مفاهیم جداگانه‌اند و نباید در یک برچسب ادغام شوند.",
+    "جمهوری یا پادشاهی نوع حکومت است؛ ریاستی یا پارلمانی مدل رابطه قوه مجریه و مقننه است؛ فدرال یا واحد شکل توزیع سرزمینی قدرت است؛ کمونیسم یا لیبرالیسم خانواده ایدئولوژیک است.",
+    "دموکراتیک یا اقتدارگرا بودن، محور مستقل کیفیت رقابت و محدودیت قدرت است و از نام رسمی حکومت استنتاج نمی‌شود.",
+    "برای هر کشور فقط طبقه‌بندی مستند و منطبق با snapshot سناریو ثبت شود؛ در نبود اطمینان از unknown یا null استفاده شود و حدس زده نشود.",
+    "ایدئولوژی رسمی حکومت، گرایش ایدئولوژیک حزب حاکم و گرایش ائتلاف حاکم باید در فیلدهای جدا ثبت شوند."
+  ],
+  "country_profile_fields": {
+    "government_form": {
+      "description": "نوع حقوقی/سیاسی حکومت",
+      "allowed": [
+        "republic",
+        "monarchy",
+        "emirate",
+        "sultanate",
+        "theocracy",
+        "military_government",
+        "transitional_government",
+        "other",
+        "unknown"
+      ]
+    },
+    "government_subform": {
+      "description": "زیرنوع دقیق‌تر نوع حکومت",
+      "examples": [
+        "constitutional_monarchy",
+        "absolute_monarchy",
+        "parliamentary_monarchy",
+        "presidential_republic",
+        "islamic_republic",
+        "federal_republic",
+        "elective_monarchy",
+        "hereditary_emirate",
+        "military_junta",
+        "transitional_authority"
+      ]
+    },
+    "executive_legislative_system": {
+      "description": "مدل رابطه قوه مجریه و مقننه",
+      "allowed": [
+        "presidential",
+        "semi_presidential",
+        "parliamentary",
+        "directorial",
+        "monarchical_executive",
+        "one_party",
+        "military_council",
+        "transitional",
+        "mixed",
+        "no_functioning_national_legislature",
+        "unknown"
+      ]
+    },
+    "territorial_structure": {
+      "description": "نحوه توزیع سرزمینی قدرت",
+      "allowed": [
+        "unitary",
+        "federal",
+        "confederal",
+        "devolved_unitary",
+        "asymmetric_devolution",
+        "occupied_or_fragmented",
+        "transitional_or_disputed",
+        "unknown"
+      ]
+    },
+    "regime_character": {
+      "description": "ویژگی غالب رقابت سیاسی و پاسخگویی",
+      "allowed": [
+        "liberal_democracy",
+        "electoral_democracy",
+        "flawed_or_limited_democracy",
+        "hybrid_regime",
+        "electoral_authoritarian",
+        "closed_authoritarian",
+        "one_party_authoritarian",
+        "military_rule",
+        "transitional_or_uncertain",
+        "fragmented_authority",
+        "unknown"
+      ]
+    },
+    "party_system": {
+      "description": "وضعیت نظام حزبی",
+      "allowed": [
+        "competitive_multi_party",
+        "two_party_dominant",
+        "dominant_party_competitive",
+        "dominant_party_noncompetitive",
+        "one_party_legal",
+        "no_legal_party_system",
+        "restricted_party_system",
+        "nonpartisan",
+        "fragmented_or_uncertain",
+        "unknown"
+      ]
+    },
+    "official_ideology": {
+      "description": "ایدئولوژی رسمی تصریح‌شده در قانون یا اسناد بنیادین حکومت؛ صرفاً بر اساس شواهد",
+      "values_ref": "ideology_families"
+    },
+    "ruling_party_ideology": {
+      "description": "گرایش ایدئولوژیک حزب یا جریان اصلی حاکم؛ می‌تواند چندگانه باشد",
+      "values_ref": "ideology_families"
+    },
+    "ruling_coalition_ideology": {
+      "description": "گرایش‌های اصلی ائتلاف حاکم؛ برای ائتلاف‌های چندجریانی",
+      "values_ref": "ideology_families"
+    },
+    "ideology_notes": {
+      "description": "توضیح کوتاه درباره اختلاف میان ایدئولوژی رسمی، عمل حکومتی و گرایش حزب حاکم"
+    },
+    "classification_confidence": {
+      "allowed": [
+        "high",
+        "medium",
+        "low",
+        "unknown"
+      ]
+    },
+    "classification_sources": {
+      "description": "منابع و تاریخ بررسی هر طبقه‌بندی؛ بدون منبع قابل ارزیابی، طبقه‌بندی نهایی نشود"
+    }
+  },
+  "ideology_families": [
+    {
+      "id": "communism",
+      "name_fa": "کمونیسم",
+      "name_en": "Communism"
+    },
+    {
+      "id": "marxism_leninism",
+      "name_fa": "مارکسیسم–لنینیسم",
+      "name_en": "Marxism–Leninism"
+    },
+    {
+      "id": "socialism",
+      "name_fa": "سوسیالیسم",
+      "name_en": "Socialism"
+    },
+    {
+      "id": "democratic_socialism",
+      "name_fa": "سوسیالیسم دموکراتیک",
+      "name_en": "Democratic Socialism"
+    },
+    {
+      "id": "social_democracy",
+      "name_fa": "سوسیال‌دموکراسی",
+      "name_en": "Social Democracy"
+    },
+    {
+      "id": "liberalism",
+      "name_fa": "لیبرالیسم",
+      "name_en": "Liberalism"
+    },
+    {
+      "id": "classical_liberalism",
+      "name_fa": "لیبرالیسم کلاسیک",
+      "name_en": "Classical Liberalism"
+    },
+    {
+      "id": "conservatism",
+      "name_fa": "محافظه‌کاری",
+      "name_en": "Conservatism"
+    },
+    {
+      "id": "liberal_conservatism",
+      "name_fa": "محافظه‌کاری لیبرال",
+      "name_en": "Liberal Conservatism"
+    },
+    {
+      "id": "national_conservatism",
+      "name_fa": "محافظه‌کاری ملی",
+      "name_en": "National Conservatism"
+    },
+    {
+      "id": "christian_democracy",
+      "name_fa": "دموکراسی مسیحی",
+      "name_en": "Christian Democracy"
+    },
+    {
+      "id": "nationalism",
+      "name_fa": "ملی‌گرایی",
+      "name_en": "Nationalism"
+    },
+    {
+      "id": "civic_nationalism",
+      "name_fa": "ملی‌گرایی مدنی",
+      "name_en": "Civic Nationalism"
+    },
+    {
+      "id": "ethnic_nationalism",
+      "name_fa": "ملی‌گرایی قومی",
+      "name_en": "Ethnic Nationalism"
+    },
+    {
+      "id": "islamism",
+      "name_fa": "اسلام‌گرایی",
+      "name_en": "Islamism"
+    },
+    {
+      "id": "islamic_democracy",
+      "name_fa": "دموکراسی اسلامی",
+      "name_en": "Islamic Democracy"
+    },
+    {
+      "id": "political_islam_conservatism",
+      "name_fa": "محافظه‌کاری اسلام‌گرا",
+      "name_en": "Islamic Conservatism"
+    },
+    {
+      "id": "secularism",
+      "name_fa": "سکولاریسم",
+      "name_en": "Secularism"
+    },
+    {
+      "id": "green_politics",
+      "name_fa": "سیاست سبز / محیط‌زیست‌گرایی",
+      "name_en": "Green Politics"
+    },
+    {
+      "id": "libertarianism",
+      "name_fa": "لیبرتارینیسم",
+      "name_en": "Libertarianism"
+    },
+    {
+      "id": "populism",
+      "name_fa": "پوپولیسم",
+      "name_en": "Populism"
+    },
+    {
+      "id": "progressivism",
+      "name_fa": "ترقی‌خواهی",
+      "name_en": "Progressivism"
+    },
+    {
+      "id": "fascism",
+      "name_fa": "فاشیسم",
+      "name_en": "Fascism"
+    },
+    {
+      "id": "far_right",
+      "name_fa": "راست افراطی",
+      "name_en": "Far-right Politics"
+    },
+    {
+      "id": "anarchism",
+      "name_fa": "آنارشیسم",
+      "name_en": "Anarchism"
+    },
+    {
+      "id": "monarchism",
+      "name_fa": "سلطنت‌طلبی",
+      "name_en": "Monarchism"
+    },
+    {
+      "id": "baathism",
+      "name_fa": "بعث‌گرایی",
+      "name_en": "Ba'athism"
+    },
+    {
+      "id": "juche",
+      "name_fa": "جوچه",
+      "name_en": "Juche"
+    },
+    {
+      "id": "military_nationalism",
+      "name_fa": "ملی‌گرایی نظامی",
+      "name_en": "Military Nationalism"
+    },
+    {
+      "id": "mixed_pragmatic",
+      "name_fa": "ترکیبی / عمل‌گرایانه",
+      "name_en": "Mixed / Pragmatic"
+    },
+    {
+      "id": "other",
+      "name_fa": "سایر",
+      "name_en": "Other"
+    },
+    {
+      "id": "not_officially_declared",
+      "name_fa": "ایدئولوژی رسمی اعلام‌نشده",
+      "name_en": "Not Officially Declared"
+    },
+    {
+      "id": "unknown",
+      "name_fa": "نامشخص",
+      "name_en": "Unknown"
+    }
+  ],
+  "migration_notes": [
+    "فیلدهای قدیمی system_type و government_model در نسخه نخست حفظ می‌شوند تا سازگاری عقب‌رو نشکند.",
+    "در مرحله داده‌گذاری، فیلدهای جدید به‌تدریج به هر پروفایل کشور افزوده می‌شوند؛ هیچ مقدار قدیمی به‌صورت خودکار و بدون بررسی به فیلد جدید تبدیل نمی‌شود.",
+    "برای کشورهایی با اقتدار چندپاره یا وضعیت انتقالی، مقادیر چندمحوری ثبت و توضیح داده شود؛ از تحمیل یک مدل ساده خودداری شود.",
+    "ایدئولوژی حزب حاکم نباید با ایدئولوژی رسمی کشور یکی فرض شود؛ کشورهایی مانند پادشاهی‌های فاقد ایدئولوژی رسمی نیز باید به‌درستی قابل نمایش باشند."
+  ]
+}
