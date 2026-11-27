@@ -112,3 +112,14 @@ All images are referenced by their exact Wikimedia Commons filenames through the
 - **ROU — Romania:** Nicușor Dan — `Nicusor Dan in 2026.jpg`. U.S. Embassy Romania photograph, dated 3 March 2026; public domain as a work of a U.S. Department of State employee made in official duties.
 
 All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
+
+## Package 10 — Europe and Oceania (6 countries)
+
+- **NZL — New Zealand:** Christopher Luxon — `Christopher Luxon 2025 (mid cropped).jpg`. Photograph dated 23 January 2025; source: Office of the Governor-General of New Zealand; made available under CC0 1.0. File resolution: 1,524 × 2,034.
+- **HUN — Hungary:** Viktor Orbán — `Viktor Orbán, 2025.06.26 (04).jpg`. European Union photograph from the European Council meeting on 26 June 2025; attribution-only reuse notice on Commons, credit © European Union, 1998–2026.
+- **BGR — Bulgaria:** Rosen Zhelyazkov — `Rosen Zhelyazkov 2025 (cropped).jpg`. Photograph by Daina Le Lardic / European Parliament, 21 January 2025; European Parliament multimedia legal notice permits reuse with attribution, credit © European Union and link to the source. **Commons still displays a license-review-needed notice**, so retain this caveat and verify the original Parliament source terms before any wider redistribution.
+- **CYP — Cyprus:** Nikos Christodoulides — `Nikos Christodoulides in 26 June 2025 (Cropped).png`. Photograph by European People's Party, 26 June 2025; CC BY 4.0.
+- **SRB — Serbia:** Aleksandar Vučić — `Aleksandar Vučić 2025 (cropped).jpg`. Photograph by Oliver Bunic / European Commission Audiovisual Service, 29 April 2025; CC BY 4.0. Credit: © European Union, 2025.
+- **ALB — Albania:** Edi Rama — `Albaania peaminister Edi Rama, 15.05.2026 (55271492269)(cropped).jpg`. Photograph by Stenbocki maja, 15 May 2026; CC BY 4.0, reviewed on Wikimedia Commons on 4 July 2026.
+
+All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
