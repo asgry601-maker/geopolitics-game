@@ -6,14 +6,19 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 164,
-    "pending_countries": 10,
+    "classified_countries": 174,
+    "pending_countries": 0,
     "last_batch": [
-      "SLV",
-      "NIC",
-      "BLZ",
-      "BHS",
-      "BRB"
+      "NZL",
+      "PNG",
+      "FJI",
+      "WSM",
+      "TON",
+      "VUT",
+      "SLB",
+      "TKM",
+      "TJK",
+      "KGZ"
     ]
   },
   "countries": {
@@ -12127,6 +12132,745 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "انتخابات ۱۱ فوریه ۲۰۲۶ و انتصاب مجدد ماتلی در snapshot لحاظ شده‌اند؛ ساختار جمهوری پارلمانی از ۳۰ نوامبر ۲۰۲۱ برقرار است."
+      }
+    },
+    "NZL": {
+      "country_name_fa": "نیوزیلند",
+      "country_name_en": "New Zealand",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberal_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberal_conservatism",
+        "conservatism",
+        "nationalism"
+      ],
+      "ideology_notes": "نیوزیلند پادشاهی مشروطه با نظام پارلمانی و پارلمان تک‌مجلسی است. در تاریخ snapshot یعنی ۵ نوامبر ۲۰۲۶، دولت ائتلافی به رهبری کریستوفر لاکسون (حزب ملی) با مشارکت ACT و نیوزیلند فرست در قدرت بود و انتخابات عمومی ۷ نوامبر هنوز برگزار نشده بود. بنابراین نتایج انتخابات و تحولات تشکیل دولت پس از ۵ نوامبر عمداً وارد baseline نشده‌اند. نظام انتخاباتی تناسبی مختلط (MMP)، رقابت حزبی واقعی و آزادی‌های سیاسی و مدنی قوی است. حزب ملی گرایش راست میانه و محافظه‌کارانه دارد؛ شرکای ائتلافی نیز ترکیبی از لیبرال‌محافظه‌کاری، محافظه‌کاری و ملی‌گرایی را نمایندگی می‌کنند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "New Zealand: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/new-zealand/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نیوزیلند را دموکراسی پارلمانی با انتخابات آزاد و منصفانه و حقوق سیاسی و مدنی قوی ارزیابی می‌کند."
+        },
+        {
+          "name": "What is New Zealand's system of government?",
+          "publisher": "New Zealand Electoral Commission",
+          "url": "https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "پادشاهی مشروطه، مجلس نمایندگان و نظام تناسبی مختلط و تشکیل دولت از سوی حزب یا ائتلاف دارای بیشترین کرسی را توضیح می‌دهد."
+        },
+        {
+          "name": "New Zealand Parliament: How Parliament works",
+          "publisher": "New Zealand Parliament",
+          "url": "https://www.parliament.nz/en/visit-and-learn/how-parliament-works/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ساختار پارلمان، دولت و پاسخگویی کابینه در برابر مجلس را شرح می‌دهد."
+        },
+        {
+          "name": "New Zealand Government: The Cabinet",
+          "publisher": "Department of the Prime Minister and Cabinet, New Zealand",
+          "url": "https://www.dpmc.govt.nz/our-business-units/cabinet-office/supporting-work-cabinet/cabinet-manual",
+          "date": "2023",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "قواعد تشکیل و عملکرد کابینه و دولت ائتلافی در نظام پارلمانی را مستند می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "snapshot پیش از انتخابات عمومی ۷ نوامبر ۲۰۲۶ است؛ نتایج نهایی و مذاکرات ائتلافی پس از تاریخ مبنا عمداً نادیده گرفته شده‌اند."
+      }
+    },
+    "PNG": {
+      "country_name_fa": "پاپوا گینه نو",
+      "country_name_en": "Papua New Guinea",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "devolved_unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ideology_notes": "پاپوا گینه نو پادشاهی مشروطه در قلمرو مشترک‌المنافع با نظام پارلمانی وست‌مینستر و پارلمان ملی تک‌مجلسی است. پادشاه بریتانیا رئیس کشور و فرماندار کل نماینده اوست؛ نخست‌وزیر رئیس دولت است. جیمز ماراپه از سال ۲۰۱۹ نخست‌وزیر بوده و پس از انتخابات ۲۰۲۲ بار دیگر با رأی اکثریت پارلمان انتخاب شد. نظام حزبی سیال است، وفاداری نمایندگان و ائتلاف‌ها به‌سرعت تغییر می‌کند و دولت‌ها اغلب بر پایه ائتلاف‌های بزرگ و متغیر شکل می‌گیرند. انتخابات منظم و رقابت سیاسی وجود دارد، اما بی‌نظمی انتخاباتی، خشونت، فساد و ضعف پاسخگویی کیفیت دموکراسی را محدود می‌کند. ایدئولوژی رسمی دولت مشخص نشده و ائتلاف حاکم عمدتاً عمل‌گرایانه و ملی‌گراست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Papua New Guinea: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/papua-new-guinea/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نظام پارلمانی، انتخابات منظم اما دارای بی‌نظمی و خشونت، سیالیت احزاب و مشکلات فساد را ارزیابی می‌کند."
+        },
+        {
+          "name": "Papua New Guinea National Parliament: The Parliamentary System",
+          "publisher": "National Parliament of Papua New Guinea",
+          "url": "https://www.parliament.gov.pg/constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "قانون اساسی و ساختار پارلمانی و اجرایی کشور را ارائه می‌کند."
+        },
+        {
+          "name": "Papua New Guinea House of Assembly July 2022 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/PG/PG-LC01/election/PG-LC01-E20220722/",
+          "date": "2022-07-22",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات ۲۰۲۲ و ترکیب پارلمان را ثبت می‌کند."
+        },
+        {
+          "name": "Papua New Guinea: Prime Minister James Marape",
+          "publisher": "Office of the Prime Minister of Papua New Guinea",
+          "url": "https://pmnec.gov.pg/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "منبع رسمی دفتر نخست‌وزیر برای دولت و رهبری اجرایی کشور است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار و دولت ماراپه بر پایه وضعیت تثبیت‌شده پس از انتخابات ۲۰۲۲ تا تاریخ snapshot ثبت شده است."
+      }
+    },
+    "FJI": {
+      "country_name_fa": "فیجی",
+      "country_name_en": "Fiji",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "social_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "فیجی جمهوری پارلمانی با مجلس تک‌مجلسی است. رئیس‌جمهور رئیس کشور و نخست‌وزیر رئیس دولت است؛ نخست‌وزیر از سوی اکثریت پارلمان برگزیده می‌شود. سیتیوینی رابوکا رهبر حزب اتحاد مردمی از دسامبر ۲۰۲۲ نخست‌وزیر است و دولت ائتلافی او با حمایت حزب فدراسیون ملی و حزب لیبرال دموکرات سوسیال تشکیل شده است. انتخابات رقابتی و انتقال مسالمت‌آمیز قدرت در ۲۰۲۲ به بهبود وضعیت دموکراتیک کمک کرد؛ با این حال میراث کودتاها و برخی مسائل مربوط به پاسخگویی و فساد همچنان مهم‌اند. ایدئولوژی رسمی دولتی وجود ندارد و ائتلاف از جریان‌های محافظه‌کار، سوسیال‌دموکرات و عمل‌گرا تشکیل شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Fiji: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/fiji/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "بهبود وضعیت فیجی به سطح آزاد، انتخابات رقابتی و انتقال مسالمت‌آمیز قدرت پس از انتخابات ۲۰۲۲ را مستند می‌کند."
+        },
+        {
+          "name": "Fiji's System of Government",
+          "publisher": "Parliament of the Republic of Fiji",
+          "url": "https://www.parliament.gov.fj/fijis-system-of-government/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "جایگاه رئیس‌جمهور، نخست‌وزیر، کابینه و رابطه دولت با پارلمان را توضیح می‌دهد."
+        },
+        {
+          "name": "Fiji Country Brief",
+          "publisher": "Australian Department of Foreign Affairs and Trade",
+          "url": "https://www.dfat.gov.au/geo/fiji/fiji-country-brief",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology",
+            "executive_legislative_system"
+          ],
+          "note": "رابوکا، حزب اتحاد مردمی و احزاب پشتیبان ائتلاف دولت را معرفی می‌کند."
+        },
+        {
+          "name": "Fiji Parliament September 2022 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/FJ/FJ-LC01/election/FJ-LC01-E20221214/",
+          "date": "2022-12-14",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات پارلمانی ۲۰۲۲ و ترکیب نیروهای سیاسی را ثبت می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت ائتلافی رابوکا و وضعیت سیاسی پس از انتخابات ۲۰۲۲ مبناست."
+      }
+    },
+    "WSM": {
+      "country_name_fa": "ساموآ",
+      "country_name_en": "Samoa",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "ساموآ جمهوری پارلمانی با مجلس قانون‌گذاری تک‌مجلسی و رئیس کشور منتخب پارلمان است. ساختار سیاسی آن با سنت‌های محلی و عنوان‌های سنتی matai پیوند دارد و نامزدی برای کرسی‌های پارلمان به‌طور عمده به دارندگان عنوان matai محدود است. لائائولی‌اِمالیِتوا لئواتئا اشمیت پس از بحران سیاسی و تغییرات دولت در سال ۲۰۲۵ به نخست‌وزیری رسید. انتخابات منظم، دستگاه قضایی مستقل و آزادی‌های مدنی عموماً محترم شمرده می‌شوند، هرچند قواعد سنتی نامزدی، رقابت را محدود می‌کنند. حزب حاکم و دولت آن ایدئولوژی رسمی دولتی ندارند و رویکردشان عمدتاً محافظه‌کارانه و عمل‌گرایانه است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Samoa: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/samoa/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ساموآ را نظامی دموکراتیک با انتخابات منظم، قوه قضاییه مستقل و محدودیت سنتی در واجدان شرایط نامزدی توصیف می‌کند."
+        },
+        {
+          "name": "The Government",
+          "publisher": "Government of Samoa",
+          "url": "https://www.samoagovt.ws/about-government/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "سه قوه، جایگاه رئیس کشور و نخست‌وزیر و ساختار مجلس قانون‌گذاری را شرح می‌دهد."
+        },
+        {
+          "name": "Samoa Country Brief",
+          "publisher": "Australian Department of Foreign Affairs and Trade",
+          "url": "https://www.dfat.gov.au/geo/samoa/samoa-country-brief",
+          "date": "2026",
+          "supports": [
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "ساموآ را دموکراسی پارلمانی معرفی و محدودیت سنتی نامزدی و دولت پس از انتخابات ۲۰۲۵ را توضیح می‌دهد."
+        },
+        {
+          "name": "Samoa: BTI 2026 Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/WSM",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تحلیل ساختار رقابت سیاسی، نهادهای دموکراتیک و تحول سیاسی ساموآ را ارائه می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "تغییر دولت در سپتامبر ۲۰۲۵ پیش از snapshot بوده است؛ جزئیات ترکیب کابینه بر مبنای منابع رسمی دولت بررسی می‌شود."
+      }
+    },
+    "TON": {
+      "country_name_fa": "تونگا",
+      "country_name_en": "Tonga",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "nonpartisan",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "تونگا پادشاهی مشروطه است که در آن پادشاه رئیس کشور و کابینه مسئول اداره اجرایی است. مجلس قانون‌گذاری ۲۶ عضو دارد: ۱۷ نماینده مردم و ۹ نماینده اشراف؛ مجلس نخست‌وزیر را از میان اعضای خود انتخاب می‌کند و کابینه در برابر مجلس پاسخگوست. نظام حزبی رسمی و منسجم وجود ندارد و رقابت عمدتاً میان نامزدهای مستقل و گروه‌های غیررسمی جریان دارد. ساختار سیاسی در دهه‌های اخیر اصلاحاتی به‌سوی مشارکت انتخاباتی بیشتر داشته، اما جایگاه نهادی اشراف و محدودیت‌های رقابت سیاسی مانع از آن است که آن را دموکراسی لیبرال کامل بدانیم. دولت ایدئولوژی رسمی اعلام‌شده ندارد و گرایش غالب محافظه‌کارانه و عمل‌گرایانه است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "How Parliament Works",
+          "publisher": "Legislative Assembly of Tonga",
+          "url": "https://parliament.gov.to/en/about-parliament/how-parliament-works",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ترکیب مجلس، انتخاب نخست‌وزیر و پاسخگویی کابینه در برابر مجلس را توضیح می‌دهد."
+        },
+        {
+          "name": "Tonga: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/tonga/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی، آزادی‌های مدنی و کیفیت رقابت سیاسی در تونگا."
+        },
+        {
+          "name": "Tonga: Constitution of Tonga",
+          "publisher": "Government of Tonga",
+          "url": "https://ago.gov.to/cms/images/LEGISLATION/PRINCIPAL/1875/1875-0001/ConstitutionofTonga.pdf",
+          "date": "1875, amended",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "متن قانون اساسی و جایگاه پادشاه، کابینه و مجلس قانون‌گذاری را ارائه می‌کند."
+        },
+        {
+          "name": "Tonga: Country Profile",
+          "publisher": "Commonwealth Secretariat",
+          "url": "https://thecommonwealth.org/our-member-countries/tonga",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "ساختار پادشاهی مشروطه و جایگاه تونگا در کشورهای مشترک‌المنافع را معرفی می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار قانون اساسی و نظام انتخاب نخست‌وزیر توسط مجلس مبناست؛ انتصاب‌های سیاسی پس از تاریخ snapshot لحاظ نشده‌اند."
+      }
+    },
+    "VUT": {
+      "country_name_fa": "وانواتو",
+      "country_name_en": "Vanuatu",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ideology_notes": "وانواتو جمهوری پارلمانی با پارلمان تک‌مجلسی است. رئیس‌جمهور رئیس کشور با اختیارات عمدتاً تشریفاتی است و نخست‌وزیر از میان نمایندگان پارلمان و با رأی آن انتخاب می‌شود. پس از انتخابات زودهنگام ژانویه ۲۰۲5، جوتام ناپات در فوریه ۲۰۲۵ نخست‌وزیر شد. نظام حزبی چندپاره و ائتلاف‌ها ناپایدارند و تغییر دولت و رأی عدم اعتماد در سیاست این کشور سابقه قابل‌توجهی دارد. انتخابات رقابتی برگزار می‌شود، اما شکنندگی ائتلاف‌ها و ضعف ظرفیت نهادی بر کیفیت حکمرانی اثر می‌گذارد. ایدئولوژی رسمی وجود ندارد و ائتلاف حاکم بیشتر عمل‌گرایانه و ملی‌گراست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Vanuatu: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/vanuatu/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کیفیت انتخابات، رقابت حزبی، شکنندگی نهادی و آزادی‌های مدنی وانواتو را ارزیابی می‌کند."
+        },
+        {
+          "name": "Vanuatu Parliament: Parliamentary System",
+          "publisher": "Parliament of Vanuatu",
+          "url": "https://parliament.gov.vu/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "منبع رسمی پارلمان برای ساختار قانون‌گذاری و انتخاب نخست‌وزیر از میان نمایندگان است."
+        },
+        {
+          "name": "Vanuatu Snap Election 2025",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/ VU/VU-LC01/election/VU-LC01-E20250116/",
+          "date": "2025-01-16",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات زودهنگام ژانویه ۲۰۲۵ و ترکیب پارلمان را ثبت می‌کند."
+        },
+        {
+          "name": "Prime Minister's Office",
+          "publisher": "Government of the Republic of Vanuatu",
+          "url": "https://pmo.gov.vu/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "منبع رسمی دولت برای نخست‌وزیر و ساختار اجرایی مستقر است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت تشکیل‌شده پس از انتخابات ژانویه ۲۰۲۵ و نخست‌وزیری ناپات مبناست."
+      }
+    },
+    "SLB": {
+      "country_name_fa": "جزایر سلیمان",
+      "country_name_en": "Solomon Islands",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ideology_notes": "جزایر سلیمان پادشاهی مشروطه در قلمرو مشترک‌المنافع و دارای نظام پارلمانی وست‌مینستر است. پادشاه رئیس کشور و فرماندار کل نماینده اوست؛ نخست‌وزیر از سوی پارلمان ملی انتخاب می‌شود. جرمایا مانه‌له در مه ۲۰۲۴ پس از انتخابات عمومی و توافق ائتلافی به نخست‌وزیری رسید. نظام حزبی پراکنده است و ائتلاف‌های پارلمانی غالباً بر اساس پیوندهای محلی و توافق‌های موردی شکل می‌گیرند. انتخابات رقابتی برگزار می‌شود، اما خرید رأی، فساد، نفوذ مالی و فشارهای نهادی از مشکلات ساختاری‌اند. ایدئولوژی رسمی اعلام نشده و ائتلاف حاکم عمدتاً عمل‌گرایانه و ملی‌گراست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Solomon Islands: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/solomon-islands/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "رقابت انتخاباتی، آزادی‌های مدنی و چالش‌های فساد و نفوذ سیاسی را ارزیابی می‌کند."
+        },
+        {
+          "name": "Solomon Islands National Parliament: About Parliament",
+          "publisher": "National Parliament of Solomon Islands",
+          "url": "https://www.parliament.gov.sb/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار پارلمان ملی و نقش آن در انتخاب نخست‌وزیر را معرفی می‌کند."
+        },
+        {
+          "name": "Solomon Islands National Parliament April 2024 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/SB/SB-LC01/election/SB-LC01-E20240417/",
+          "date": "2024-04-17",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات عمومی آوریل ۲۰۲۴ و ترکیب پارلمان را ثبت می‌کند."
+        },
+        {
+          "name": "Solomon Islands: Prime Minister's Office",
+          "publisher": "Government of Solomon Islands",
+          "url": "https://solomons.gov.sb/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "اطلاعات رسمی دولت و نخست‌وزیر جرمایا مانه‌له را ارائه می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت ائتلافی مانه‌له پس از انتخابات آوریل ۲۰۲۴ مبناست."
+      }
+    },
+    "TKM": {
+      "country_name_fa": "ترکمنستان",
+      "country_name_en": "Turkmenistan",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "ترکمنستان جمهوری ریاستی بسیار متمرکز و اقتدارگرای بسته است. رئیس‌جمهور هم رئیس کشور و هم رئیس دولت است و کابینه را منصوب می‌کند. سردار بردی‌محمداف از مارس ۲۰۲۲ رئیس‌جمهور است؛ پدرش قربانقلی بردی‌محمداف همچنان از طریق شورای خلق (Halk Maslahaty) نفوذ سیاسی بسیار بالایی دارد. حزب دموکرات ترکمنستان حزب حاکم است و احزاب مجاز دیگر نیز رقابت واقعی برای انتقال قدرت ایجاد نمی‌کنند. انتخابات به‌شدت کنترل‌شده، رسانه‌ها تحت کنترل دولت و مخالفت سیاسی مستقل عملاً تحمل نمی‌شود. ایدئولوژی رسمی واحدی به شکل یک مکتب حزبی روشن اعلام نشده؛ ملی‌گرایی دولتی، محافظه‌کاری و عمل‌گرایی اقتدارگرایانه ویژگی‌های جریان حاکم‌اند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Turkmenistan: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/turkmenistan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ترکمنستان را دولت اقتدارگرای سرکوبگر با انتخابات کنترل‌شده و فقدان آزادی سیاسی ارزیابی می‌کند."
+        },
+        {
+          "name": "Turkmenistan: Executive Branch",
+          "publisher": "The World Factbook",
+          "url": "https://www.cia.gov/the-world-factbook/countries/turkmenistan/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "جایگاه رئیس‌جمهور به‌عنوان رئیس کشور و دولت و انتصاب کابینه را توضیح می‌دهد."
+        },
+        {
+          "name": "Turkmenistan: Constitution",
+          "publisher": "Government of Turkmenistan",
+          "url": "https://minjust.gov.tm/en/constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "متن و چارچوب قانون اساسی جمهوری و نهادهای حکومتی را ارائه می‌کند."
+        },
+        {
+          "name": "Turkmenistan: OSCE/ODIHR Election Assessment",
+          "publisher": "Organization for Security and Co-operation in Europe",
+          "url": "https://www.osce.org/odihr/elections/turkmenistan",
+          "date": "2022",
+          "supports": [
+            "party_system",
+            "regime_character"
+          ],
+          "note": "ارزیابی‌های انتخاباتی و محدودیت‌های رقابت واقعی سیاسی در ترکمنستان را در بر دارد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار ریاستی و نقش دوگانه سردار و قربانقلی بردی‌محمداف تا تاریخ snapshot لحاظ شده است."
+      }
+    },
+    "TJK": {
+      "country_name_fa": "تاجیکستان",
+      "country_name_en": "Tajikistan",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "تاجیکستان جمهوری ریاستی است و رئیس‌جمهور عملاً محور اصلی قدرت اجرایی و سیاسی کشور محسوب می‌شود. امامعلی رحمان از سال ۱۹۹۲ در قدرت است. حزب دموکراتیک خلق تاجیکستان (PDPT) حزب مسلط است؛ در انتخابات پارلمانی مارس ۲۰۲۵ این حزب ۴۹ کرسی از ۶۳ کرسی مجلس نمایندگان را کسب کرد و سایر کرسی‌ها نیز به احزاب طرفدار دولت رسید. اپوزیسیون واقعی و رسانه‌های مستقل با محدودیت شدید مواجه‌اند و انتخابات رقابت مؤثر برای انتقال قدرت ایجاد نمی‌کند. بنابراین رژیم در دسته اقتدارگرایی بسته و نظام حزبی مسلط غیررقابتی قرار می‌گیرد. قانون اساسی ایدئولوژی رسمی حزبی مشخصی را تثبیت نمی‌کند؛ گرایش حزب حاکم عمدتاً ملی‌گرایانه، محافظه‌کار و عمل‌گرایانه است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Tajikistan: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/tajikistan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری رحمان، سرکوب اپوزیسیون و محدودیت شدید آزادی‌های سیاسی را مستند می‌کند."
+        },
+        {
+          "name": "Tajikistan House of Representatives March 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TJ/TJ-LC01/election/TJ-LC01-E20250302/",
+          "date": "2025-03-02",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "کسب ۴۹ کرسی از ۶۳ کرسی توسط PDPT و نبود رقابت مؤثر را ثبت می‌کند."
+        },
+        {
+          "name": "Tajikistan: BTI 2026 Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/TJK",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "سلطه ریاست‌جمهوری، کنترل حزب حاکم بر پارلمان و نمایشی بودن رقابت چندحزبی را تحلیل می‌کند."
+        },
+        {
+          "name": "Constitution of the Republic of Tajikistan",
+          "publisher": "Government of the Republic of Tajikistan",
+          "url": "https://www.president.tj/en/constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "چارچوب حقوقی جمهوری و اختیارات ریاست‌جمهوری را ارائه می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات پارلمانی مارس ۲۰۲۵ و تداوم ریاست‌جمهوری رحمان در snapshot لحاظ شده است."
+      }
+    },
+    "KGZ": {
+      "country_name_fa": "قرقیزستان",
+      "country_name_en": "Kyrgyzstan",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "populism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قرقیزستان پس از اصلاحات قانون اساسی ۲۰۲۱ از نظام پارلمانی پیشین به جمهوری ریاستی متمرکز بازگشت. رئیس‌جمهور صدر جباروف رئیس کشور و محور اصلی قوه مجریه است و کابینه تحت ریاست او فعالیت می‌کند. انتخابات پارلمانی زودهنگام در نوامبر ۲۰۲۵ برگزار شد، اما محدودیت رسانه‌ها، فشار بر مخالفان و کاهش فضای فعالیت جامعه مدنی کیفیت رقابت را تضعیف کرده است. احزاب و نامزدها همچنان در انتخابات حضور دارند، اما محدودیت‌های قانونی و سیاسی، نظام حزبی را محدود و رقابت را نامتوازن کرده است. رژیم در این baseline اقتدارگرایی انتخاباتی طبقه‌بندی می‌شود. ایدئولوژی رسمی دولتی اعلام نشده و گرایش جریان حاکم ترکیبی از ملی‌گرایی، پوپولیسم و عمل‌گرایی سیاسی است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Kyrgyzstan: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/kyrgyzstan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، محدودیت رسانه‌ها و سرکوب مخالفان را ارزیابی می‌کند."
+        },
+        {
+          "name": "Kyrgyzstan: Executive Branch",
+          "publisher": "The World Factbook",
+          "url": "https://www.cia.gov/the-world-factbook/countries/kyrgyzstan/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "جایگاه رئیس‌جمهور و کابینه و نظام ریاستی را معرفی می‌کند."
+        },
+        {
+          "name": "Kyrgyz Republic: Constitution",
+          "publisher": "President of the Kyrgyz Republic",
+          "url": "https://president.kg/en/constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "متن قانون اساسی و ساختار ریاست‌جمهوری و قوه مجریه را ارائه می‌کند."
+        },
+        {
+          "name": "Kyrgyzstan: BTI 2026 Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/KGZ",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تمرکز قدرت، وضعیت احزاب، رسانه‌ها و رقابت سیاسی را تحلیل می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار ریاستی ۲۰۲۱ و تحولات سیاسی تا ۵ نوامبر ۲۰۲۶ مبناست؛ نتیجه رویدادهای بعد از snapshot وارد نشده است."
       }
     }
   }
