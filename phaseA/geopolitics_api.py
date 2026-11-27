@@ -508,7 +508,18 @@ class Handler(BaseHTTPRequestHandler):
                     result = G.apply_player_political_change(current, changes)
                 self._json(dict(result, state=api_state(get_state(True))))
             except Exception as e:
-                self._json(dict(ok=False, error="خطا در ثبت تغییر سیاسی: %s" % e), 500)
+                self._json(dict(ok=False, error="خطا در ثبت طرح اصلاحات: %s" % e), 500)
+        elif path == "api/political/cancel":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."))
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.cancel_player_political_reform(current, body.get("proposal_id"))
+                self._json(dict(result, state=api_state(get_state(True))))
+            except Exception as e:
+                self._json(dict(ok=False, error="خطا در لغو طرح اصلاحات: %s" % e), 500)
         elif path == "api/time":
             if s is None:
                 self._json(dict(ok=False, error="بازی‌ای در جریان نیست."))
