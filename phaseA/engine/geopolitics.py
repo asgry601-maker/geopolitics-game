@@ -720,9 +720,105 @@ def load():
         s["political_history"] = []
     if not isinstance(s.get("turn_events"), dict):
         s["turn_events"] = {}
-    if not isinstance(s.get("game_events"), list):
-        s["game_events"] = []
-    s.setdefault("event_sequence", 0)
+    # مهاجرت سازگار رویدادها برای ذخیره‌های قدیمی و نسخه‌های میانی سیستم مرکزی
+    raw_events = s.get("game_events")
+    if not isinstance(raw_events, list):
+        raw_events = []
+        s["game_events"] = raw_events
+        needs_event_save = True
+    else:
+        needs_event_save = False
+
+    normalized_events = []
+    max_event_number = 0
+    for event in raw_events:
+        if not isinstance(event, dict):
+            needs_event_save = True
+            continue
+        if not isinstance(event.get("metadata"), dict):
+            event["metadata"] = {}
+            needs_event_save = True
+        if not isinstance(event.get("impact_targets"), list):
+            event["impact_targets"] = list(EVENT_IMPACT_ROUTES.get(event.get("category"), []))
+            needs_event_save = True
+        if not isinstance(event.get("impact_plan"), list):
+            event["impact_plan"] = []
+            needs_event_save = True
+        defaults = {
+            "status": "recorded",
+            "effects_applied": False,
+            "impact_status": "pending_design",
+            "parent_event_id": None,
+            "child_event_ids": [],
+            "chain_depth": 0
+        }
+        for key, value in defaults.items():
+            if key not in event:
+                event[key] = value
+                needs_event_save = True
+        if not isinstance(event.get("child_event_ids"), list):
+            event["child_event_ids"] = []
+            needs_event_save = True
+        if not isinstance(event.get("status_history"), list):
+            event["status_history"] = [{
+                "date": event.get("date") or s.get("game_date", ""),
+                "from": None,
+                "to": event.get("status", "recorded"),
+                "actor": "migration",
+                "note": "سوابق وضعیت در مهاجرت ذخیره تکمیل شد."
+            }]
+            needs_event_save = True
+        if not isinstance(event.get("source_info"), dict):
+            event["source_info"] = _normalize_event_source(event.get("source", "system"))
+            needs_event_save = True
+        else:
+            source_info = event["source_info"]
+            source_defaults = {
+                "source_system": str(event.get("source") or "system"),
+                "source_record_id": "",
+                "signal": "",
+                "recorded_by": "system",
+                "evidence_refs": [],
+                "review_status": "pending",
+                "reviewed_by": "",
+                "review_note": ""
+            }
+            for key, value in source_defaults.items():
+                if key not in source_info:
+                    source_info[key] = value
+                    needs_event_save = True
+            if not isinstance(source_info.get("evidence_refs"), list):
+                source_info["evidence_refs"] = []
+                needs_event_save = True
+        event_id = str(event.get("id") or "")
+        if not event_id:
+            event["id"] = "EV-LEGACY-%06d" % (len(normalized_events) + 1)
+            event_id = event["id"]
+            needs_event_save = True
+        if not event.get("chain_id"):
+            event["chain_id"] = event_id
+            needs_event_save = True
+        if event_id.startswith("EV-"):
+            try:
+                max_event_number = max(max_event_number, int(event_id[3:]))
+            except (TypeError, ValueError):
+                pass
+        normalized_events.append(event)
+
+    if normalized_events != raw_events:
+        s["game_events"] = normalized_events
+        needs_event_save = True
+    try:
+        saved_event_sequence = max(0, int(s.get("event_sequence", 0)))
+    except (TypeError, ValueError):
+        saved_event_sequence = 0
+        needs_event_save = True
+    safe_event_sequence = max(saved_event_sequence, max_event_number)
+    if s.get("event_sequence") != safe_event_sequence:
+        s["event_sequence"] = safe_event_sequence
+        needs_event_save = True
+    if needs_event_save:
+        save(s)
     s.setdefault("proxies", [])
     s.setdefault("day", 1)
     s.setdefault("iaea_heat", 0)
