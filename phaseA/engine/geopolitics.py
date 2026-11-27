@@ -1416,6 +1416,7 @@ def register_calendar_item(s, title, due_date, category="general", source="syste
             "category":category, "source":str(source or "system")[:40],
             "due_date":due.isoformat(), "created_date":current.isoformat(),
             "status":"due" if due == current else "scheduled",
+            "days_remaining":max(0, (due - current).days),
             "linked_session_id":linked_session_id, "participants":list(participants or []),
             "details":safe_details}
     events.append(item)
