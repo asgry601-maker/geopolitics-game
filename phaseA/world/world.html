@@ -77,6 +77,15 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 #eventPanelToggle.open { left:var(--eventw); }
 .eventPanelHead { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:2px 0 10px; }
 .eventPanelHead h2 { margin:0; color:#ffd479; font-size:16px; }
+.eventPanelTabs { display:flex; gap:6px; margin:8px 0 12px; }
+.eventPanelTab { flex:1; padding:9px 5px; font-size:12px; }
+.eventPanelTab.active { background:#2456a8; border-color:#5a91e8; color:#fff; }
+.eventPanelView[hidden] { display:none !important; }
+.eventMilitaryPlaceholder { border:1px solid #385779; background:#101d32; border-radius:9px; padding:13px;
+  color:#c4d2e6; font-size:12px; line-height:1.9; }
+.eventMilitaryPlaceholder strong { color:#ffd479; }
+.eventMilitaryFuture { margin-top:10px; border:1px dashed #52617a; border-radius:8px; padding:9px;
+  color:#aebbd0; font-size:11px; line-height:1.8; }
 .eventStatementsArea { height:58%; min-height:300px; display:flex; flex-direction:column; gap:8px; }
 .eventSectionLabel { color:#7fb6ff; font-size:12px; font-weight:bold; padding-bottom:5px; border-bottom:1px solid #294263; }
 .eventStatementFeed { flex:1 1 auto; min-height:95px; overflow-y:auto; background:#0e1626;
@@ -165,7 +174,12 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
       </div>
     </div>
     <div id="eventPanel" aria-hidden="true">
-      <div class="eventPanelHead"><h2>📢 مرکز بیانیه‌ها</h2><span class="badge">فاز B</span></div>
+      <div class="eventPanelHead"><h2>مرکز رویدادها</h2><span class="badge">فاز B</span></div>
+      <div class="eventPanelTabs" role="tablist" aria-label="بخش‌های پنل">
+        <button type="button" class="eventPanelTab active" id="eventTabStatements" role="tab" aria-selected="true">📢 بیانیه‌ها</button>
+        <button type="button" class="eventPanelTab" id="eventTabMilitary" role="tab" aria-selected="false">🛡 نظامی</button>
+      </div>
+      <div id="eventStatementView" class="eventPanelView">
       <section class="eventStatementsArea">
         <div class="eventSectionLabel" id="eventStatementTitle">پنجره بیانیه‌ها · حالت عمومی</div>
         <div class="eventStatementFeed" id="eventStatementFeed" aria-live="polite">
@@ -187,6 +201,14 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         </button>
         <div class="eventContextNote" id="eventContextNote">حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.</div>
       </section>
+      </div>
+      <div id="eventMilitaryView" class="eventPanelView" hidden>
+        <div class="eventMilitaryPlaceholder">
+          <strong>🛡 بخش نظامی</strong><br>
+          این بخش رابط کاربری مستقل خودش را خواهد داشت و برای صدور یا مشاهده بیانیه استفاده نمی‌شود.
+          <div class="eventMilitaryFuture">ابزارها، گزینه‌ها و پنجره‌های اختصاصی فرماندهی نظامی در مرحله توسعه نظامی طراحی خواهند شد. این بخش از سیستم بیانیه‌ها و مذاکرات جداست.</div>
+        </div>
+      </div>
     </div>
     <button id="eventPanelToggle" type="button" title="باز و بسته کردن پنل بیانیه‌ها" aria-expanded="false">❯</button>
     <div id="globe"></div>
