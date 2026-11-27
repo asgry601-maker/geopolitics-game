@@ -1464,7 +1464,10 @@ def decide_conversation_meeting(s, conversation_id, decision, actor_country=None
         accepted.append(actor)
     required_parties = set(session.get("participants") or [])
     if set(accepted) != required_parties:
-        session["meeting_status"] = "pending_ai_acceptance" if player not in accepted else "pending_player_acceptance"
+        if session.get("meeting_proposed_by") == player:
+            session["meeting_status"] = "pending_ai_acceptance"
+        else:
+            session["meeting_status"] = "pending_player_acceptance" if player not in accepted else "pending_ai_acceptance"
         session["updated_date"] = s.get("game_date", "")
         return dict(ok=True, confirmed=False, session=session, calendar_event=None,
                     note="پاسخ ثبت شد؛ تا تأیید همه کشورهای شرکت‌کننده، موعد به تقویم قطعی اضافه نمی‌شود.")
