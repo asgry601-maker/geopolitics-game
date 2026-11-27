@@ -379,6 +379,23 @@ function renderEventTalkState() {
     if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'هنوز بیانیه‌ای در زمینه ' + context.join(' و ') + ' وجود ندارد. پس از اتصال هوش مصنوعی زنده، محتوای مرتبط در این قسمت نمایش داده می‌شود.';
   }
 }
+var EVENT_PANEL_VIEW = 'statements';
+function setEventPanelView(view) {
+  EVENT_PANEL_VIEW = view === 'military' ? 'military' : 'statements';
+  var sv = el('eventStatementView'), mv = el('eventMilitaryView');
+  var sb = el('eventTabStatements'), mb = el('eventTabMilitary');
+  var isMilitary = EVENT_PANEL_VIEW === 'military';
+  if (sv) sv.hidden = isMilitary;
+  if (mv) mv.hidden = !isMilitary;
+  if (sb) { sb.className = 'eventPanelTab' + (isMilitary ? '' : ' active'); sb.setAttribute('aria-selected', isMilitary ? 'false' : 'true'); }
+  if (mb) { mb.className = 'eventPanelTab' + (isMilitary ? ' active' : ''); mb.setAttribute('aria-selected', isMilitary ? 'true' : 'false'); }
+}
+function bindEventPanelTabs() {
+  var sb = el('eventTabStatements'), mb = el('eventTabMilitary');
+  if (sb) sb.onclick = function () { setEventPanelView('statements'); };
+  if (mb) mb.onclick = function () { setEventPanelView('military'); };
+  setEventPanelView('statements');
+}
 function bindEventTalkControls() {
   var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
   if (cb) cb.onclick = function () { EVENT_TALK_STATE.confidential = !EVENT_TALK_STATE.confidential; renderEventTalkState(); };
@@ -1362,6 +1379,7 @@ function bindToolbar() {
   var eb = el('eventPanelToggle');
   if (eb) eb.onclick = toggleEventPanel;
   bindEventTalkControls();
+  bindEventPanelTabs();
   el('btnStart').onclick = function () { startGame(false); };
 }
 
