@@ -274,6 +274,7 @@ def api_country(s, name):
     war_with = sorted({a if b == name else b for a, b in wars if name in (a, b) and a != b})
     ars = s.get("arsenal", {}).get(name, {})
     pol = (s.get("politics") or {}).get(name) or {}
+    political_classification = (s.get("political_state") or {}).get(name)
     friends, enemies = [], []
     pairs = []
     for o in W:
@@ -304,6 +305,7 @@ def api_country(s, name):
         arsenal=[("%s× %d" % (k, v)) for k, v in sorted(ars.items(), key=lambda x: -x[1])][:4],
         parties=dict((p, round(v, 1)) for p, v in (pol.get("parties") or {}).items()),
         political_profile=political_profile(meta.get("iso3")),
+        political_classification=political_classification,
         country_profile=country_profile(meta.get("iso3")),
         press=(pol.get("press") or [])[-4:],
         proxies=prx_mine,
