@@ -2130,7 +2130,11 @@ def cancel_pact_record(s, pact_id):
             record["status"] = "cancelled"
             record["updated_date"] = s.get("game_date", "")
             player = s.get("player")
-            s["pacts"] = [n for n in s.get("pacts", []) if n not in record.get("members", []) or n == player]
+            active_partners = set()
+            for other_record in s.get("pact_records") or []:
+                if other_record.get("status") == "active" and player in (other_record.get("members") or []):
+                    active_partners.update(n for n in other_record.get("members", []) if n != player)
+            s["pacts"] = sorted(active_partners)
             s["agreement_history"].append({"date": s.get("game_date", ""), "action": "pact_cancelled",
                                            "agreement_id": pact_id, "actor": player})
             s["agreement_history"] = s["agreement_history"][-500:]
@@ -2148,7 +2152,11 @@ def leave_alliance(s, alliance_id):
             record["updated_date"] = s.get("game_date", "")
             if len(record["members"]) < 2:
                 record["status"] = "dissolved"
-            s["allies"] = [n for n in s.get("allies", []) if n not in record["members"]]
+            active_partners = set()
+            for other_record in s.get("alliance_records") or []:
+                if other_record.get("status") == "active" and player in (other_record.get("members") or []):
+                    active_partners.update(n for n in other_record.get("members", []) if n != player)
+            s["allies"] = sorted(active_partners)
             s["agreement_history"].append({"date": s.get("game_date", ""), "action": "alliance_left",
                                            "agreement_id": alliance_id, "actor": player})
             s["agreement_history"] = s["agreement_history"][-500:]
