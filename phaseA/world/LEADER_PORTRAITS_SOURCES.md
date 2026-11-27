@@ -123,3 +123,14 @@ All six images are referenced by their exact Wikimedia Commons filenames through
 - **ALB — Albania:** Edi Rama — `Albaania peaminister Edi Rama, 15.05.2026 (55271492269)(cropped).jpg`. Photograph by Stenbocki maja, 15 May 2026; CC BY 4.0, reviewed on Wikimedia Commons on 4 July 2026.
 
 All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
+
+## Package 11 — Western Balkans and Caucasus (6 countries)
+
+- **SVN — Slovenia:** Robert Golob — `Robert Golob v Dražgošah.jpg`. Photograph dated 11 January 2026; own work by Hladnikm; CC BY-SA 4.0. Original image 1,600 × 1,067 pixels; attribution and share-alike terms apply.
+- **BIH — Bosnia and Herzegovina:** Denis Bećirović — `Denis Bećirović (cropped).jpg`. Extracted crop of a European Commission Audiovisual Service photograph dated 15 February 2023; CC BY 4.0; credit © European Union, 2026.
+- **MNE — Montenegro:** Milojko Spajić — `Milojko Spajić (2023-12-20).jpg`. Photograph dated 20 December 2023 by Lukasz Kobus / European Commission; CC BY 4.0; credit © European Union, 2026.
+- **MDA — Moldova:** Maia Sandu — `Maia Sandu, September 2025 (cropped).jpg`. Photograph by European Parliament / Laia Ros, dated 9 September 2025; CC BY 4.0; credit © European Union 2025 – EP/Laia Ros.
+- **GEO — Georgia:** Irakli Kobakhidze — `Georgian Prime Minister Irakli Kobakhidze in 2025.jpg`. Photograph dated 11 October 2025; source and author: Administration of the President of Georgia; CC BY 4.0; attribution president.ge.
+- **ARM — Armenia:** Nikol Pashinyan — `Nikol Pashinyan 2026-04-01.png`. Photograph dated 1 April 2026; source and author: kremlin.ru; CC BY 4.0; attribution Kremlin.ru. Original file is 506 × 703 pixels, so verify face clarity in the game.
+
+All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
