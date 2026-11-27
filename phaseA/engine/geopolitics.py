@@ -1574,7 +1574,10 @@ def apply_player_sanctions(s, targets, categories):
     player = s.get("player")
     world = s.get("world") or {}
     clean_targets = []
+    target_aliases = {"دومینیکان": "دومینیکن"}
     for target in targets:
+        if isinstance(target, str):
+            target = target_aliases.get(target, target)
         if not isinstance(target, str) or target not in world:
             raise ValueError("کشور هدف نامعتبر است: %s" % target)
         if target == player:
