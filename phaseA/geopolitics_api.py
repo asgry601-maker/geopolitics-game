@@ -132,6 +132,24 @@ def political_profile(iso3):
     except (OSError, ValueError, TypeError):
         return None
 
+# اطلاعات پایه کشورها؛ کش مستقل از شاخص‌های شبیه‌سازی
+COUNTRY_PROFILES_PATH = os.path.join(HERE, "data", "country_profiles.json")
+_COUNTRY_PROFILE_CACHE = {"mtime": -1.0, "countries": {}}
+
+def country_profile(iso3):
+    if not iso3:
+        return None
+    try:
+        mt = os.path.getmtime(COUNTRY_PROFILES_PATH)
+        if mt != _COUNTRY_PROFILE_CACHE['mtime']:
+            with open(COUNTRY_PROFILES_PATH, encoding='utf-8') as f:
+                payload = json.load(f)
+            _COUNTRY_PROFILE_CACHE['countries'] = payload.get('countries') or {}
+            _COUNTRY_PROFILE_CACHE['mtime'] = mt
+        value = _COUNTRY_PROFILE_CACHE['countries'].get(iso3)
+        return dict(value) if isinstance(value, dict) else None
+    except (OSError, ValueError, TypeError):
+        return None
 
 def fa_meta(fa_name):
     m = CMAP.get(fa_name) or {}
