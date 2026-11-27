@@ -2449,7 +2449,7 @@ def advance_player_political_reforms(s, daily_log):
 
 
 def check_player_regime_crisis(s, daily_log):
-    """ثبت نخستین بحران تغییر حکومت بازیکن؛ تریبون زنده در فاز AI فعال می‌شود."""
+    """ثبت بحران داخلی؛ بحران کودتا با وقوع کودتا تفاوت دارد و تریبون زنده در فاز AI فعال می‌شود."""
     if s.get("over") or s.get("regime_crisis"):
         return
     player = s.get("player")
@@ -2457,27 +2457,36 @@ def check_player_regime_crisis(s, daily_log):
     if not isinstance(country, dict):
         return
     stability = max(0.0, min(100.0, float(country.get("stab", 0))))
-    if stability >= 10.0:
-        return
     groups = (s.get("social_groups") or {}).get(player) or {}
     values = [max(0.0, min(100.0, float(v))) for v in groups.values()]
     social_average = sum(values) / float(len(values)) if values else 50.0
     military = max(0.0, min(100.0, float(country.get("mil", 0))))
-    crisis_kind = "revolution" if social_average < 35.0 or military < 70.0 else "coup"
-    legitimacy = 5.0 if crisis_kind == "revolution" else 8.0
+
+    # افت شدید توان نظامی یا حمایت اجتماعی فقط «بحران کودتا» ایجاد می‌کند؛
+    # به معنی وقوع کودتا یا سقوط حکومت نیست.
+    if military < 20.0 or social_average < 30.0:
+        crisis_kind = "coup_crisis"
+        legitimacy = float(s.get("legitimacy", 50.0))
+        label = "بحران کودتا"
+    elif stability < 10.0:
+        crisis_kind = "revolution_crisis"
+        legitimacy = 5.0
+        label = "بحران انقلاب"
+    else:
+        return
+
     political = (s.get("political_state") or {}).get(player) or {}
     s["regime_crisis"] = {
         "kind": crisis_kind, "date": s.get("game_date", ""),
         "stability_at_event": round(stability, 1),
         "social_support_average": round(social_average, 1),
         "military_strength_at_event": round(military, 1),
-        "legitimacy": legitimacy, "status": "awaiting_live_tribune",
+        "legitimacy": round(legitimacy, 1), "status": "awaiting_live_tribune",
         "government_form": political.get("government_form"),
         "executive_legislative_system": political.get("executive_legislative_system")
     }
     s["legitimacy"] = legitimacy
-    label = "انقلاب" if crisis_kind == "revolution" else "کودتا"
-    line = "⚠️ %s سیاسی در %s رخ داد؛ مشروعیت حکومت کاهش یافت." % (label, player)
+    line = "⚠️ %s در %s شکل گرفت؛ این وضعیت به‌تنهایی به معنی وقوع کودتا یا سقوط حکومت نیست." % (label, player)
     daily_log.append(line)
     press = s.setdefault("politics", {}).setdefault(player, {}).setdefault("press", [])
     press.append(line)
