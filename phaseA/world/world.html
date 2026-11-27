@@ -74,8 +74,15 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .dashGrid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
 .dashMetric { background:#101a2e; border:1px solid #223252; border-radius:7px; padding:7px; min-width:0; }
 .dashMetric b { display:block; color:#ffd479; font-size:14px; margin-top:3px; }
+.countryHeader { display:flex; align-items:center; justify-content:space-between; gap:10px; margin:4px 0 2px; }
+.countryHeader h2 { margin:0; }
+.countryMiniBadge { display:inline-flex; align-items:center; gap:6px; padding:4px 7px; border:1px solid #385779; border-radius:8px; background:#14243d; flex:0 0 auto; font-size:12px; }
+.countryMiniBadge img { width:30px; height:21px; object-fit:contain; background:#fff; border-radius:3px; border:1px solid #526782; }
 .countryIdentity { display:flex; align-items:center; gap:12px; }
-.countryFlag { width:76px; height:50px; object-fit:contain; background:#fff; border-radius:5px; border:1px solid #354563; padding:2px; flex:0 0 auto; }
+.leaderPortraitWrap { width:76px; height:76px; flex:0 0 76px; overflow:hidden; border-radius:8px; border:1px solid #526782; background:#182943; }
+.leaderPortrait { width:100%; height:100%; object-fit:cover; display:block; }
+.leaderPortraitFallback { width:100%; height:100%; align-items:center; justify-content:center; flex-direction:column; gap:3px; color:#9fb8d8; font-size:25px; }
+.leaderPortraitFallback small { font-size:9px; }
 @media (max-width:520px) { .dashTabs { grid-template-columns:repeat(2,minmax(0,1fr)); } .dashGrid { grid-template-columns:1fr 1fr; } }
 
 </style>
