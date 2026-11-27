@@ -960,6 +960,80 @@ def load():
         inbox_save_needed = True
     if inbox_save_needed:
         save(s)
+
+    # نشست‌های مشترک مذاکره؛ بدون تولید پیام یا فعال‌سازی AI تا فاز F
+    conversation_save_needed = False
+    raw_sessions = s.get("conversation_sessions")
+    if not isinstance(raw_sessions, list):
+        raw_sessions = []
+        s["conversation_sessions"] = raw_sessions
+        conversation_save_needed = True
+    clean_sessions = []
+    max_conversation_number = 0
+    valid_modes = ("public", "normal", "confidential")
+    valid_types = ("standard", "alliance", "pact", "diplomacy", "ceasefire", "trade", "other")
+    valid_sources = ("statement", "diplomacy", "pacts", "inbox", "system")
+    valid_statuses = ("prepared", "active", "completed", "cancelled")
+    for session in raw_sessions:
+        if not isinstance(session, dict) or not session.get("id"):
+            conversation_save_needed = True
+            continue
+        participants = session.get("participants")
+        if not isinstance(participants, list):
+            participants = []
+            conversation_save_needed = True
+        participants = [n for n in participants if isinstance(n, str) and n in s.get("world", {})]
+        if s.get("player") in s.get("world", {}) and s.get("player") not in participants:
+            participants.insert(0, s.get("player"))
+            conversation_save_needed = True
+        session["participants"] = list(dict.fromkeys(participants))
+        if session.get("visibility_mode") not in valid_modes:
+            session["visibility_mode"] = "public"
+            conversation_save_needed = True
+        if session.get("negotiation_type") not in valid_types:
+            session["negotiation_type"] = "standard"
+            conversation_save_needed = True
+        if session.get("source") not in valid_sources:
+            session["source"] = "system"
+            conversation_save_needed = True
+        if session.get("status") not in valid_statuses:
+            session["status"] = "prepared"
+            conversation_save_needed = True
+        if not isinstance(session.get("context"), dict):
+            session["context"] = {}
+            conversation_save_needed = True
+        if not isinstance(session.get("messages"), list):
+            session["messages"] = []
+            conversation_save_needed = True
+        session.setdefault("topic", "گفت‌وگوی دیپلماتیک")
+        session.setdefault("initiator", s.get("player", ""))
+        session.setdefault("created_date", s.get("game_date", ""))
+        session.setdefault("updated_date", session.get("created_date", ""))
+        session["live_ai_required"] = True
+        session["live_ai_status"] = "locked_until_phase_f"
+        session["chat_enabled"] = False
+        try:
+            number = int(str(session.get("id", "")).split("-")[-1])
+            max_conversation_number = max(max_conversation_number, number)
+        except (TypeError, ValueError):
+            pass
+        clean_sessions.append(session)
+    if clean_sessions != raw_sessions:
+        s["conversation_sessions"] = clean_sessions[-200:]
+        conversation_save_needed = True
+    try:
+        conversation_seq = max(0, int(s.get("conversation_sequence", 0)))
+    except (TypeError, ValueError):
+        conversation_seq = 0
+        conversation_save_needed = True
+    if conversation_seq < max_conversation_number:
+        conversation_seq = max_conversation_number
+        conversation_save_needed = True
+    if s.get("conversation_sequence") != conversation_seq:
+        s["conversation_sequence"] = conversation_seq
+        conversation_save_needed = True
+    if conversation_save_needed:
+        save(s)
     return s
 
 
@@ -995,6 +1069,94 @@ def mark_inbox_message_read(s, message_id):
                 item["status"] = "read"
             return item
     raise ValueError("پیام موردنظر پیدا نشد.")
+
+def prepare_conversation_session(s, participants, topic="گفت‌وگوی دیپلماتیک",
+                                  visibility_mode="public", negotiation_type="standard",
+                                  source="system", context=None, conversation_id=None):
+    """نشست مشترک و پایدار برای ورودی‌های دیپلماسی؛ گفت‌وگوی واقعی فقط در فاز F."""
+    if not isinstance(participants, list):
+        raise ValueError("فهرست کشورهای گفت‌وگو نامعتبر است.")
+    player = s.get("player")
+    if player not in (s.get("world") or {}):
+        raise ValueError("کشور بازیکن در وضعیت بازی معتبر نیست.")
+    selected = []
+    for name in participants:
+        if not isinstance(name, str) or name not in s.get("world", {}):
+            raise ValueError("یکی از کشورهای انتخاب‌شده در جهان بازی وجود ندارد.")
+        if name in (s.get("eliminated") or []):
+            raise ValueError("کشور حذف‌شده نمی‌تواند در نشست جدید شرکت کند.")
+        if name not in selected:
+            selected.append(name)
+    if player not in selected:
+        selected.insert(0, player)
+    if len(selected) < 2:
+        raise ValueError("برای تشکیل نشست، دست‌کم یک کشور دیگر را انتخاب کن.")
+    if len(selected) > 20:
+        raise ValueError("حداکثر ۲۰ کشور می‌توانند در یک نشست شرکت کنند.")
+    if visibility_mode not in ("public", "normal", "confidential"):
+        raise ValueError("حالت انتشار نشست نامعتبر است.")
+    if negotiation_type not in ("standard", "alliance", "pact", "diplomacy", "ceasefire", "trade", "other"):
+        raise ValueError("نوع مذاکره نامعتبر است.")
+    if source not in ("statement", "diplomacy", "pacts", "inbox", "system"):
+        raise ValueError("مبدأ نشست نامعتبر است.")
+    topic = str(topic or "گفت‌وگوی دیپلماتیک").strip()[:120]
+    if not topic:
+        topic = "گفت‌وگوی دیپلماتیک"
+    if not isinstance(context, dict):
+        context = {}
+    try:
+        safe_context = json.loads(json.dumps(context, ensure_ascii=False))
+    except (TypeError, ValueError):
+        raise ValueError("زمینه نشست باید داده قابل ذخیره باشد.")
+    if len(json.dumps(safe_context, ensure_ascii=False)) > 12000:
+        raise ValueError("اطلاعات زمینه نشست بیش از حد مجاز است.")
+
+    sessions = s.setdefault("conversation_sessions", [])
+    if conversation_id:
+        for existing in sessions:
+            if isinstance(existing, dict) and existing.get("id") == conversation_id:
+                if set(existing.get("participants") or []) != set(selected):
+                    raise ValueError("اعضای نشست موجود با کشورهای انتخاب‌شده مطابقت ندارند.")
+                existing["updated_date"] = s.get("game_date", "")
+                return dict(ok=True, created=False, session=existing,
+                            note="نشست قبلی بازیابی شد؛ تاریخچه مشترک حفظ شده است.")
+        raise ValueError("نشست گفت‌وگوی درخواستی پیدا نشد.")
+
+    sequence = int(s.get("conversation_sequence", 0)) + 1
+    s["conversation_sequence"] = sequence
+    session = {
+        "id": "CONV-%06d" % sequence,
+        "participants": selected,
+        "initiator": player,
+        "topic": topic,
+        "visibility_mode": visibility_mode,
+        "negotiation_type": negotiation_type,
+        "source": source,
+        "context": safe_context,
+        "status": "prepared",
+        "created_date": s.get("game_date", ""),
+        "updated_date": s.get("game_date", ""),
+        "messages": [],
+        "linked_records": [],
+        "live_ai_required": True,
+        "live_ai_status": "locked_until_phase_f",
+        "chat_enabled": False
+    }
+    sessions.append(session)
+    if len(sessions) > 200:
+        del sessions[:-200]
+    msg(s, "نشست دیپلماتیک %s برای %s آماده شد؛ گفت‌وگوی زنده تا فاز F غیرفعال است." %
+        (session["id"], "، ".join(selected[1:])))
+    return dict(ok=True, created=True, session=session,
+                note="نشست ذخیره شد؛ هیچ پیام، مذاکره یا تصمیم هوش مصنوعی تولید نشده است.")
+
+
+def get_conversation_session(s, conversation_id):
+    for session in s.get("conversation_sessions") or []:
+        if isinstance(session, dict) and session.get("id") == conversation_id:
+            return session
+    return None
+
 
 def save(s):
     tmp = STATE + ".tmp"
@@ -1791,6 +1953,7 @@ def init_game(player):
         allies=allies0, pacts=pacts0,
         player_sanctions={}, player_sanction_history=[],
         inbox_messages=[], inbox_sequence=0,
+        conversation_sessions=[], conversation_sequence=0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
