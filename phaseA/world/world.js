@@ -682,6 +682,8 @@ function bindEventPanelTabs() {
 }
 function bindStatementConversationPrepare() {
   var button=el('statementPrepareConversation');
+  var dateInput=el('statementMeetingDate');
+  if(dateInput){dateInput.min=calendarNextDate();if(!dateInput.value)dateInput.value=calendarNextDate();}
   if(!button) return;
   button.onclick=function() {
     if(!ST || !ST.player) { flash('ابتدا یک بازی را آغاز کن.'); return; }
@@ -2030,11 +2032,14 @@ function dashSectionHtml(r, isPlayer, tab) {
         var session = preparedSessions[si] || {};
         var visibilityLabels = {public:'عمومی',normal:'غیرعمومی با پوشش رسانه‌ای',confidential:'محرمانه'};
         var typeLabels = {standard:'عادی',alliance:'اتحاد',pact:'پیمان',diplomacy:'دیپلماسی',ceasefire:'آتش‌بس',trade:'تجارت',other:'سایر'};
-        h += '<div class="dashCard"><div class="row"><b>'+dashEsc(session.id || 'نشست')+'</b><span class="badge">آماده · چت قفل</span></div>';
+        var meetingLeft=session.meeting_date?calendarDaysRemaining(session.meeting_date):null;
+        var meetingStatus=session.meeting_status==='pending_ai_acceptance'?'در انتظار پذیرش کشور مقابل':(session.meeting_status==='pending_player_acceptance'?'در انتظار پاسخ بازیکن':(session.meeting_status==='rejected'?'رد شده':(session.meeting_status==='due'?'موعد فرارسیده':(session.meeting_status==='confirmed'?'تأیید شده':'بدون زمان‌بندی'))));
+        h += '<div class="dashCard"><div class="row"><b>'+dashEsc(session.id || 'نشست')+'</b><span class="badge">'+dashEsc(meetingStatus)+' · چت قفل</span></div>';
         h += '<div>موضوع: '+dashEsc(session.topic || 'گفت‌وگوی دیپلماتیک')+'</div>';
         h += '<div>کشورها: '+dashEsc((session.participants || []).join('، '))+'</div>';
-        h += '<div class="muted small">نوع: '+dashEsc(typeLabels[session.negotiation_type] || session.negotiation_type || '—')+' · انتشار: '+dashEsc(visibilityLabels[session.visibility_mode] || session.visibility_mode || '—')+' · تاریخ: '+dashEsc(session.created_date || '—')+'</div>';
-        h += '<div class="muted small">وضعیت هوش مصنوعی: فقط پس از فعال‌سازی فاز F</div></div>';
+        h += '<div class="muted small">نوع: '+dashEsc(typeLabels[session.negotiation_type] || session.negotiation_type || '—')+' · انتشار: '+dashEsc(visibilityLabels[session.visibility_mode] || session.visibility_mode || '—')+' · تاریخ پیشنهادی: '+dashEsc(session.meeting_date || '—')+'</div>';
+        if(session.meeting_date && meetingLeft!==null) h += '<div class="muted small">'+(meetingLeft===0?'موعد فرا رسیده':'باقی‌مانده تا نشست: '+meetingLeft+' روز')+'</div>';
+        h += '<div class="muted small">گفت‌وگو تا رسیدن موعد و فعال‌شدن رسمی هوش مصنوعی زنده قفل می‌ماند.</div></div>';
       }
     }
     if (isPlayer && ST && ST.regime_crisis) {
@@ -2450,7 +2455,8 @@ function renderInbox() {
     return;
   }
   for (var j=messages.length-1;j>=0;j--) {
-    var m=messages[j] || {}, id=String(m.id || ""), safeId=id.replace(/&/g,"&amp;").replace(/"/g,"&quot;");
+    var m=messages[j] || {}, id=String(m.id || ""), safeId=id.replace(/&/g,"&amp;").replace(/"/g,"&quot;"), linkedSessionDate='';
+    if(m.conversation_id) { var ss=(ST&&ST.conversation_sessions)||[]; for(var si=0;si<ss.length;si++) if(ss[si]&&ss[si].id===m.conversation_id){linkedSessionDate=ss[si].meeting_date||'';break;} }
     html += '<div class="inboxCard"><div class="inboxCardHead"><b>'+dashEsc(m.sender_country || "کشور نامشخص")+'</b><span>'+(m.status==="unread"?"● خوانده‌نشده":"خوانده‌شده")+'</span></div>';
     html += '<div class="inboxCardTitle">'+dashEsc(m.title || "پیام جدید")+'</div><button type="button" class="inboxShowBtn" data-message-id="'+safeId+'">نمایش</button>';
     html += '<div class="inboxMessageBody" id="inboxBody_'+dashEsc(id)+'" hidden><div>'+dashEsc(m.body || "جزئیات پیام ثبت نشده است.")+'</div><small>'+dashEsc(m.date || "")+' · نوع: '+dashEsc(m.message_type || "message")+'</small>';
@@ -2458,7 +2464,7 @@ function renderInbox() {
     if (m.message_type === 'meeting_request' && m.conversation_id) {
       html += '<div class="inboxFutureNote">تاریخ پیشنهادی نشست: '+dashEsc(m.metadata && m.metadata.meeting_date ? m.metadata.meeting_date : 'ثبت‌شده در نشست')+'</div>';
       html += '<button type="button" class="inboxMeetingDecision" data-message-id="'+safeId+'" data-meeting-decision="accept">پذیرش تاریخ نشست</button> <button type="button" class="inboxMeetingDecision" data-message-id="'+safeId+'" data-meeting-decision="reject">رد درخواست</button>';
-    } else if (m.response_allowed || m.conversation_id) html += '<label>تاریخ پیشنهادی پاسخ <input type="date" class="inboxMeetingDate" data-message-date="'+safeId+'" min="'+dashEsc(calendarNextDate())+'" value="'+dashEsc(calendarNextDate())+'"></label><button type="button" class="inboxReplyBtn" data-message-id="' + safeId + '">پیشنهاد نشست و رفتن به تریبون</button><div class="inboxFutureNote">تاریخ ابتدا به طرف مقابل پیشنهاد می‌شود؛ تا پذیرش آن، نشست در تقویم قطعی و قابل گفت‌وگو نیست.</div>';
+    } else if (m.response_allowed || m.conversation_id) html += '<label>تاریخ پیشنهادی پاسخ <input type="date" class="inboxMeetingDate" data-message-date="'+safeId+'" min="'+dashEsc(calendarNextDate())+'" value="'+dashEsc(linkedSessionDate||calendarNextDate())+'"></label><button type="button" class="inboxReplyBtn" data-message-id="' + safeId + '">پیشنهاد نشست و رفتن به تریبون</button><div class="inboxFutureNote">تاریخ ابتدا به طرف مقابل پیشنهاد می‌شود؛ تا پذیرش آن، نشست در تقویم قطعی و قابل گفت‌وگو نیست.</div>';
     html += '</div></div>';
   }
   list.innerHTML = html;
