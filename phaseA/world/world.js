@@ -627,6 +627,10 @@ function dashSectionHtml(r, isPlayer, tab) {
         CRI: 'Laura Fernandez Delgado presidential inauguration 20260508 0515 (cropped).jpg',
         PAN: 'José Raúl Mulino 2025.jpg',
         GTM: 'Retrato oficial de Presidente Bernardo Arévalo (cropped).jpg',
+        WSM: 'Laʻauli Leuatea Schmidt in 2023.jpg',
+        TON: 'Fatafehi Fakafānua January 2026.jpg',
+        VUT: 'https://pmo.gov.vu/images/Hon.%20Jotham%20Napat.png',
+        SLB: 'Matthew Wale in 2026 (cropped).jpg',
         HND: 'Nasry Asfura in January 2026.jpg',
         SLV: 'Presidente Bukele.jpg',
         NIC: 'Daniel Ortega on July 20, 2024 (cropped).jpg',
@@ -635,7 +639,9 @@ function dashSectionHtml(r, isPlayer, tab) {
         BRB: 'Foreign Secretary Yvette Cooper meets with Barbados Prime Minister - 5535661749 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
-        ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
+        ? (/^https?:\\/\\//i.test(leaderCommonsFiles[r.iso3])
+          ? leaderCommonsFiles[r.iso3]
+          : 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3]))
         : (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
       h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
