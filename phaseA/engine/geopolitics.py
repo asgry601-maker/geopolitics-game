@@ -1815,8 +1815,8 @@ def prepare_event_trigger_signal(trigger_id, payload):
 
 
 def register_game_event(s, category, country=None, title="", description="",
-                        severity=1, source="system", metadata=None):
-    """ثبت یک رویداد ساختاریافته؛ این تابع به‌تنهایی هیچ پیامد بازی اعمال نمی‌کند."""
+                        severity=1, source="system", metadata=None, source_details=None):
+    """ثبت رویداد همراه با منشأ قابل‌ردیابی؛ بدون اعمال پیامد بازی."""
     if category not in EVENT_CATEGORIES:
         raise ValueError("دسته‌بندی رویداد نامعتبر است: %s" % category)
     if country is not None and country not in (s.get("world") or {}):
@@ -1849,6 +1849,7 @@ def register_game_event(s, category, country=None, title="", description="",
             "note": "رویداد ثبت شد."
         }],
         "source": str(source or "system"),
+        "source_info": _normalize_event_source(source, source_details),
         "impact_targets": list(EVENT_IMPACT_ROUTES.get(category, [])),
         "impact_plan": [],
         "impact_status": "pending_design",
@@ -1864,6 +1865,66 @@ def register_game_event(s, category, country=None, title="", description="",
     if len(events) > 500:
         del events[:-500]
     return event
+
+
+def _normalize_event_source(source, source_details=None):
+    """یکسان‌سازی اطلاعات منشأ؛ ارجاعات شواهد صرفاً ثبت می‌شوند و خودکار راستی‌آزمایی نمی‌شوند."""
+    details = source_details if isinstance(source_details, dict) else {}
+    refs = details.get("evidence_refs") or []
+    if not isinstance(refs, (list, tuple)):
+        refs = [str(refs)]
+    return {
+        "source_system": str(details.get("source_system") or source or "system"),
+        "source_record_id": str(details.get("source_record_id") or ""),
+        "signal": str(details.get("signal") or ""),
+        "recorded_by": str(details.get("recorded_by") or "system"),
+        "evidence_refs": [str(item) for item in refs if item is not None and str(item).strip()],
+        "review_status": "pending",
+        "reviewed_by": "",
+        "review_note": ""
+    }
+
+
+def find_duplicate_game_events(s, event):
+    """یافتن موارد هم‌منشأ احتمالی؛ فقط هشدار می‌دهد و ثبت رویداد را مسدود نمی‌کند."""
+    if not isinstance(event, dict):
+        return []
+    info = event.get("source_info") or {}
+    source_system = str(info.get("source_system") or event.get("source") or "")
+    source_record_id = str(info.get("source_record_id") or "")
+    signal = str(info.get("signal") or "")
+    if not source_record_id:
+        return []
+    matches = []
+    for candidate in s.get("game_events") or []:
+        if not isinstance(candidate, dict) or candidate.get("id") == event.get("id"):
+            continue
+        other = candidate.get("source_info") or {}
+        if (candidate.get("category") == event.get("category")
+                and candidate.get("country") == event.get("country")
+                and candidate.get("date") == event.get("date")
+                and str(other.get("source_system") or candidate.get("source") or "") == source_system
+                and str(other.get("source_record_id") or "") == source_record_id
+                and str(other.get("signal") or "") == signal):
+            matches.append(candidate)
+    return matches
+
+
+def review_game_event_source(s, event_id, reviewer="system", status="reviewed", note=""):
+    """ثبت نتیجه بازبینی منشأ؛ این تابع صحت بیرونی شواهد را مستقلاً تأیید نمی‌کند."""
+    allowed = ("pending", "reviewed", "disputed")
+    if status not in allowed:
+        raise ValueError("وضعیت بازبینی منشأ نامعتبر است.")
+    event = next((item for item in (s.get("game_events") or [])
+                  if isinstance(item, dict) and item.get("id") == event_id), None)
+    if event is None:
+        raise ValueError("رویداد موردنظر پیدا نشد.")
+    info = event.setdefault("source_info", _normalize_event_source(event.get("source")))
+    info["review_status"] = status
+    info["reviewed_by"] = str(reviewer or "system")
+    info["review_note"] = str(note or "")
+    info["reviewed_date"] = s.get("game_date", "")
+    return info
 
 
 def get_prioritized_game_events(s, limit=50, include_closed=False):
