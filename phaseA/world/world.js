@@ -639,7 +639,7 @@ function dashSectionHtml(r, isPlayer, tab) {
         BRB: 'Foreign Secretary Yvette Cooper meets with Barbados Prime Minister - 5535661749 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
-        ? (/^https?:\\/\\//i.test(leaderCommonsFiles[r.iso3])
+        ? (leaderCommonsFiles[r.iso3].indexOf('https://') === 0
           ? leaderCommonsFiles[r.iso3]
           : 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3]))
         : (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
