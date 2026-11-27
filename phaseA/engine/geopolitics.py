@@ -553,7 +553,9 @@ def review_player_political_reform(s, proposal_id):
             delta -= 2 if fields.intersection(set(["government_form", "official_ideology", "regime_character"])) else 0
             delta += 1 if "ruling_party_ideology" in fields else 0
         elif party == "ملی‌گرایان":
-            delta -= 2 if changes.get("territorial_structure", {}).get("new") in ("federal", "federal_state", "confederation") else 0
+            territory_change = changes.get("territorial_structure")
+            territory_value = territory_change.get("new") if isinstance(territory_change, dict) else territory_change
+            delta -= 2 if territory_value in ("federal", "federal_state", "confederation") else 0
             delta += 1 if "official_ideology" in fields else 0
         elif party == "تکنوکرات‌ها":
             delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system"])) else 0
@@ -2171,6 +2173,70 @@ def end_of_action_checks(s):
 
 # ---------- turn resolution ----------
 
+def advance_player_political_reforms(s, daily_log):
+    """اجرای روزانه طرح مصوب؛ فقط برای کشور بازیکن و بدون دخالت AI."""
+    player = s.get("player")
+    country = (s.get("world") or {}).get(player)
+    if not isinstance(country, dict):
+        return
+    for proposal in (s.get("political_reform_proposals") or []):
+        if proposal.get("country") != player or proposal.get("status") not in ("approved", "executing", "paused_funds"):
+            continue
+        total_days = max(1, int(proposal.get("estimated_days", 1)))
+        total_cost = max(0.0, float(proposal.get("estimated_cost", 0)))
+        installment = total_cost / float(total_days)
+        treasury = max(0.0, float(country.get("money", 0)))
+        if treasury + 0.000001 < installment:
+            proposal["status"] = "paused_funds"
+            proposal["last_update_date"] = s.get("game_date", "")
+            daily_log.append("⏸ اجرای طرح اصلاحات سیاسی شماره %s به‌دلیل کمبود بودجه متوقف شد." % proposal.get("id"))
+            continue
+        country["money"] = max(0.0, treasury - installment)
+        proposal["status"] = "executing"
+        proposal["elapsed_days"] = min(total_days, int(proposal.get("elapsed_days", 0)) + 1)
+        proposal["progress"] = round(100.0 * proposal["elapsed_days"] / total_days, 1)
+        proposal["spent_cost"] = round(float(proposal.get("spent_cost", 0)) + installment, 2)
+        proposal["last_update_date"] = s.get("game_date", "")
+        if proposal["elapsed_days"] < total_days:
+            if proposal["elapsed_days"] == 1 or proposal["elapsed_days"] % 5 == 0:
+                daily_log.append("🏛 اجرای طرح اصلاحات سیاسی شماره %s: پیشرفت %s٪." %
+                                 (proposal.get("id"), proposal["progress"]))
+            continue
+        review = proposal.get("review") or {}
+        if float(review.get("feasibility", 0)) < 25:
+            proposal["status"] = "failed"
+            proposal["progress"] = 100
+            country["stab"] = max(0.0, float(country.get("stab", 0)) - 4.0)
+            proposal["completed_date"] = s.get("game_date", "")
+            daily_log.append("⚠ طرح اصلاحات سیاسی شماره %s با شکست روبه‌رو شد؛ ثبات سیاسی ۴ واحد کاهش یافت." %
+                             proposal.get("id"))
+            continue
+        state = s.setdefault("political_state", {})
+        current = state.setdefault(player, {})
+        for field, value in (proposal.get("changes") or {}).items():
+            current[field] = value
+        reactions = review.get("party_reactions") or {}
+        parties = (s.get("politics") or {}).get(player, {}).get("parties") or {}
+        for party, reaction in reactions.items():
+            if party in parties:
+                parties[party] = max(0.0, min(100.0, float(reaction.get("projected", parties[party]))))
+        scope = len(proposal.get("changes") or {})
+        stability_cost = min(8.0, 1.0 + scope * 1.2)
+        country["stab"] = max(0.0, min(100.0, float(country.get("stab", 0)) - stability_cost))
+        proposal["status"] = "completed"
+        proposal["progress"] = 100
+        proposal["completed_date"] = s.get("game_date", "")
+        proposal["spent_cost"] = round(total_cost, 2)
+        s.setdefault("political_history", []).append({
+            "date": s.get("game_date", ""), "country": player,
+            "proposal_id": proposal.get("id"), "changes": proposal.get("changes", {}),
+            "status": "completed"
+        })
+        daily_log.append("✅ اصلاحات سیاسی طرح شماره %s با موفقیت اجرا شد؛ تغییرات در وضعیت سیاسی کشور اعمال شد." %
+                         proposal.get("id"))
+        break
+
+
 def end_turn(s):
     if s["over"]:
         print("بازی تمام شده. با `reset` بازی جدید بساز.")
@@ -2433,6 +2499,7 @@ def end_turn(s):
     s["year"] = next_date.year
     s["day"] = next_date.day
     s["elapsed_days"] = day
+    advance_player_political_reforms(s, log)
     year_report = next_date.year != previous_year
     if year_report:
         s["turn"] += 1
