@@ -401,6 +401,96 @@ def load_political_baseline():
     return runtime, meta
 
 
+
+def apply_player_political_change(s, changes):
+    """اعمال تغییرات ساختار سیاسی فقط برای کشور تحت کنترل بازیکن؛ AI عمداً در این مسیر نیست."""
+    if s.get("over"):
+        return dict(ok=False, error="بازی پایان یافته است.")
+    player = s.get("player")
+    if not player or player not in (s.get("political_state") or {}):
+        return dict(ok=False, error="وضعیت سیاسی کشور بازیکن در دسترس نیست.")
+    if not isinstance(changes, dict) or not changes:
+        return dict(ok=False, error="حداقل یک تغییر معتبر انتخاب کن.")
+
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+    taxonomy_path = os.path.join(data_dir, "political_taxonomy.json")
+    with open(taxonomy_path, encoding="utf-8") as f:
+        taxonomy = json.load(f)
+    fields = taxonomy.get("runtime_change_policy", {}).get("mutable_fields", [])
+    allowed = {}
+    profile_fields = taxonomy.get("country_profile_fields", {})
+    for field in fields:
+        spec = profile_fields.get(field) or {}
+        if isinstance(spec.get("allowed"), list):
+            allowed[field] = set(spec["allowed"])
+    subforms = set((profile_fields.get("government_subform") or {}).get("examples", []))
+    for record in (s.get("political_state") or {}).values():
+        value = record.get("government_subform") if isinstance(record, dict) else None
+        if value:
+            subforms.add(value)
+    allowed["government_subform"] = subforms
+    ideology_ids = set(x.get("id") for x in taxonomy.get("ideology_families", []) if x.get("id"))
+    ideology_fields = set(["official_ideology", "ruling_party_ideology", "ruling_coalition_ideology"])
+    current = s["political_state"][player]
+    updated = {}
+    for field, value in changes.items():
+        if field not in fields:
+            return dict(ok=False, error="فیلد غیرمجاز برای تغییر: " + str(field))
+        if field in ideology_fields:
+            if not isinstance(value, list):
+                return dict(ok=False, error="ایدئولوژی باید به‌صورت فهرست انتخاب شود: " + field)
+            clean = []
+            for item in value:
+                item = str(item)
+                if item not in ideology_ids:
+                    return dict(ok=False, error="شناسه ایدئولوژی نامعتبر است: " + item)
+                if item not in clean:
+                    clean.append(item)
+            if not clean:
+                continue
+            normalized = clean
+        else:
+            normalized = str(value)
+            if normalized not in allowed.get(field, set()):
+                return dict(ok=False, error="مقدار انتخاب‌شده برای «%s» معتبر نیست." % field)
+        if current.get(field) != normalized:
+            updated[field] = dict(old=current.get(field), new=normalized)
+    if not updated:
+        return dict(ok=False, error="هیچ تغییری نسبت به ساختار فعلی انتخاب نشده است.")
+
+    for field, item in updated.items():
+        current[field] = item["new"]
+    history = s.setdefault("political_history", [])
+    history.append(dict(
+        game_date=s.get("game_date", ""),
+        actor="player",
+        country=player,
+        changes=updated,
+        event_type="player_political_reform",
+    ))
+    if len(history) > 200:
+        del history[:-200]
+    log = s.setdefault("log", [])
+    changed_labels = {
+        "government_form": "نوع حکومت",
+        "government_subform": "زیرنوع حکومت",
+        "executive_legislative_system": "مدل اجرایی-تقنینی",
+        "territorial_structure": "ساختار سرزمینی",
+        "regime_character": "ویژگی نظام سیاسی",
+        "party_system": "نظام حزبی",
+        "official_ideology": "ایدئولوژی رسمی",
+        "ruling_party_ideology": "ایدئولوژی حزب حاکم",
+        "ruling_coalition_ideology": "ایدئولوژی ائتلاف حاکم",
+    }
+    log.append("🏛 بازیکن ساختار سیاسی %s را تغییر داد: %s." %
+               (player, "، ".join(changed_labels.get(k, k) for k in updated)))
+    if len(log) > 500:
+        del log[:-500]
+    save(s)
+    return dict(ok=True, out="تغییرات سیاسی کشور شما ثبت شد.", changed=list(updated.keys()),
+                history_count=len(history))
+
+
 def load():
     with open(STATE, encoding="utf-8") as f:
         s = json.load(f)
