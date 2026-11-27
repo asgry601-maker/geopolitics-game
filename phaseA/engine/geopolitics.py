@@ -1750,6 +1750,32 @@ def validate_event_trigger_payload(trigger_id, payload):
     }
 
 
+def prepare_event_trigger_signal(trigger_id, payload):
+    """ساخت بسته استاندارد سیگنال؛ بدون ارسال، ثبت رویداد یا اعمال پیامد."""
+    validation = validate_event_trigger_payload(trigger_id, payload)
+    if not validation.get("valid"):
+        return {
+            "prepared": False,
+            "dispatched": False,
+            "errors": list(validation.get("errors") or [])
+        }
+
+    return {
+        "prepared": True,
+        "dispatched": False,
+        "dispatch_enabled": False,
+        "activation": EVENT_TRIGGER_ACTIVATION,
+        "trigger_id": validation.get("trigger_id"),
+        "category": validation.get("category"),
+        "source_system": validation.get("source_system"),
+        "signal": validation.get("signal"),
+        "payload": dict(payload),
+        "status": "validated_not_dispatched",
+        "errors": []
+    }
+
+
+
 def register_game_event(s, category, country=None, title="", description="",
                         severity=1, source="system", metadata=None):
     """ثبت یک رویداد ساختاریافته؛ این تابع به‌تنهایی هیچ پیامد بازی اعمال نمی‌کند."""
