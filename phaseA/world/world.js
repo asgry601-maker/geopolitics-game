@@ -479,7 +479,7 @@ function dashSectionHtml(r, isPlayer, tab) {
         IND: 'Official Photograph of Prime Minister Narendra Modi Portrait.png',
         KOR: 'President Lee Jae Myung.jpg',
         IDN: 'Prabowo Subianto 2024 official portrait.jpg',
-        BRA: 'Foto oficial de Luiz Inácio Lula da Silva (faixa presidencial).jpg',
+        BRA: '09.07.2026 - Presidente Lula.jpg',
         AUS: 'Anthony Albanese Official Portrait.jpg',
         UKR: 'Volodymyr Zelensky Official portrait.jpg'
       };
