@@ -253,3 +253,24 @@ All six image references use the existing Wikimedia Commons Special:FilePath loa
 - GAB: https://commons.wikimedia.org/wiki/File:Brice_Oligui_Nguema_on_November_26,_2024_(cropped).jpg
 
 The six portrait mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Sudan and South Sudan also received missing leader-name entries in the engine's LEADERS dictionary. All other five leader-name entries were already present.
+
+
+
+## Package 18 — Southeast Asia and West Africa (6 countries)
+
+- **SGP — Singapore:** Lawrence Wong — `Lawrence Wong, August 2026 (cropped).jpg`. Photograph dated 24 August 2026, source/author: Presidency of the Republic of Ecuador / Isaac Castillo; the Flickr author marked the work with the Public Domain Mark. Crop: 1,743 × 2,323 pixels. The Commons page identifies it as a public-domain-mark release; retain the source credit.
+- **PHL — Philippines:** Ferdinand "Bongbong" Marcos Jr. — `Ferdinand "Bongbong" Marcos Jr. 2025 SONA Portrait (cropped).jpg`. Official 2025 State of the Nation Address portrait, source/author: Congress of the Philippines; marked public domain. Crop: 3,583 × 4,813 pixels.
+- **LAO — Laos:** Thongloun Sisoulith — `Portrait of Thongloun Sisoulith.jpg`. Photograph dated 25 May 2023, source: Prime Minister's Office of Japan (首相官邸ホームページ); Government of Japan Standard Terms of Use v2.0, compatible with CC BY 4.0. Original: 597 × 798 pixels. Thongloun is listed as head of state; the prime-ministership changed in October 2026, so this portrait intentionally matches the game's existing president/head-of-state label.
+- **BRN — Brunei:** Hassanal Bolkiah — `Sultan Hassanal Bolkiah - 53857993945(cropped).jpg`. Crop from a photograph taken on 15 July 2024 at the Sultan's 78th birthday celebration; author: Chin Yu Chu / Pangalau; CC BY-SA 2.0. Crop: 1,474 × 2,211 pixels.
+- **TLS — Timor-Leste:** José Ramos-Horta — `Portrait of Jose Ramos-Horta.jpg`. Government portrait sourced from timor-leste.gov.tl; file page dated 1 January 2023; 1,770 × 2,213 pixels. Commons marks it public domain in Timor-Leste under the legal provisions in force before 27 May 2023; preserve this jurisdiction/date caveat in any later redistribution review.
+- **NER — Niger:** Abdourahamane Tiani — `Tiani (cropped).jpg`. Photograph dated 26 March 2025; own work by Ibrahimassoumane; dedicated to CC0 1.0. Crop: 2,000 × 1,679 pixels.
+
+### File pages
+- SGP: https://commons.wikimedia.org/wiki/File:Lawrence_Wong,_August_2026_(cropped).jpg
+- PHL: https://commons.wikimedia.org/wiki/File:Ferdinand_%22Bongbong%22_Marcos_Jr._2025_SONA_Portrait_(cropped).jpg
+- LAO: https://commons.wikimedia.org/wiki/File:Portrait_of_Thongloun_Sisoulith.jpg
+- BRN: https://commons.wikimedia.org/wiki/File:Sultan_Hassanal_Bolkiah_-_53857993945(cropped).jpg
+- TLS: https://commons.wikimedia.org/wiki/File:Portrait_of_Jose_Ramos-Horta.jpg
+- NER: https://commons.wikimedia.org/wiki/File:Tiani_(cropped).jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The corresponding leader names were already present in the engine dictionary. Please inspect the portraits in the game at dashboard size, especially Laos and Niger, and request a replacement if either face is not sufficiently clear.
