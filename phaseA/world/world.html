@@ -77,15 +77,27 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 #eventPanelToggle.open { left:var(--eventw); }
 .eventPanelHead { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:2px 0 10px; }
 .eventPanelHead h2 { margin:0; color:#ffd479; font-size:16px; }
-.eventPanelTabs { display:flex; gap:5px; margin:8px 0 12px; }
-.eventPanelTab { flex:1; padding:8px 4px; font-size:11px; }
-.eventPanelTab.active { background:#2456a8; border-color:#5a91e8; }
-.eventPanelTab:disabled { opacity:.48; cursor:not-allowed; }
-.eventPanelStatus { border:1px solid #385779; background:#101d32; border-radius:9px; padding:12px;
-  line-height:1.9; font-size:12px; color:#c4d2e6; }
-.eventPanelStatus strong { color:#ffd479; }
-.eventPanelFuture { margin-top:10px; border:1px dashed #52617a; border-radius:8px; padding:9px;
-  color:#8fa2bd; font-size:11px; line-height:1.8; }
+.eventStatementsArea { height:58%; min-height:300px; display:flex; flex-direction:column; gap:8px; }
+.eventSectionLabel { color:#7fb6ff; font-size:12px; font-weight:bold; padding-bottom:5px; border-bottom:1px solid #294263; }
+.eventStatementFeed { flex:1 1 auto; min-height:95px; overflow-y:auto; background:#0e1626;
+  border:1px solid #294263; border-radius:9px; padding:9px; color:#b9c8dc; font-size:12px; line-height:1.9; }
+.eventStatementEmpty { text-align:center; padding:14px 5px; color:#91a4c0; }
+.eventComposer { flex:0 0 116px; display:flex; flex-direction:column; gap:6px; }
+.eventComposer textarea { width:100%; height:72px; resize:none; background:#101a2e; color:#dce4f2;
+  border:1px solid #2c3f66; border-radius:8px; padding:8px; font-family:Tahoma; font-size:12px; }
+.eventComposer textarea:disabled { opacity:.65; cursor:not-allowed; }
+.eventComposer button:disabled { opacity:.45; cursor:not-allowed; }
+.eventDivider { border:0; border-top:1px solid #45617f; margin:13px 0 11px; }
+.eventNegotiationArea { display:flex; flex-direction:column; gap:8px; }
+.eventNegotiationArea h3 { margin:0; color:#ffd479; font-size:13px; }
+.eventNegotiationToggle { width:100%; display:flex; align-items:center; justify-content:space-between; gap:8px;
+  text-align:right; padding:10px; background:#101a2e; border-color:#354b6d; }
+.eventNegotiationToggle .eventToggleState { color:#91a4c0; font-size:11px; }
+.eventNegotiationToggle.active { background:#173b35; border-color:#319b78; }
+.eventNegotiationToggle.active .eventToggleState { color:#8de0b8; }
+.eventContextNote { margin-top:3px; border:1px dashed #52617a; border-radius:8px; padding:8px;
+  color:#aebbd0; font-size:11px; line-height:1.8; }
+@media (max-height:650px) { .eventStatementsArea { height:auto; min-height:260px; } }
 @media (max-width:900px) { :root { --eventw: min(340px, 78vw); } }
 
 
@@ -154,18 +166,27 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
     </div>
     <div id="eventPanel" aria-hidden="true">
       <div class="eventPanelHead"><h2>📢 مرکز بیانیه‌ها</h2><span class="badge">فاز B</span></div>
-      <div class="eventPanelTabs">
-        <button type="button" class="eventPanelTab active" id="eventTabStatements">📢 بیانیه‌ها</button>
-        <button type="button" class="eventPanelTab" id="eventTabMilitary" disabled title="در مرحله نظامی فعال می‌شود">🛡 نظامی · آینده</button>
-      </div>
-      <div id="eventPanelContent">
-        <div class="eventPanelStatus">
-          <strong>پنل بیانیه‌ها طراحی شده است.</strong><br>
-          این بخش در حال حاضر غیرفعال است و پس از اضافه‌شدن هوش مصنوعی زنده در فاز F فعال خواهد شد.
-          <div class="eventPanelFuture">در زمان فعال‌سازی، بیانیه‌ها با نام رهبر، کد سه‌حرفی کشور، پرچم استاندارد و متن بیانیه نمایش داده می‌شوند.</div>
+      <section class="eventStatementsArea">
+        <div class="eventSectionLabel" id="eventStatementTitle">پنجره بیانیه‌ها · حالت عمومی</div>
+        <div class="eventStatementFeed" id="eventStatementFeed" aria-live="polite">
+          <div class="eventStatementEmpty">بیانیه‌ای برای نمایش وجود ندارد.<br>پس از اتصال هوش مصنوعی زنده، بیانیه‌های کشورها در این قسمت نمایش داده می‌شوند.</div>
         </div>
-      </div>
-      <div class="eventPanelFuture">جایگاه پنل برای بخش فرماندهی نظامی نیز از همین ساختار مشترک رزرو شده است؛ تب نظامی در مرحله مربوطه فعال می‌شود.</div>
+        <div class="eventComposer">
+          <textarea id="eventStatementInput" disabled placeholder="بخش نگارش بیانیه پس از فعال‌سازی هوش مصنوعی زنده در دسترس قرار می‌گیرد."></textarea>
+          <button id="eventStatementSend" class="primary" type="button" disabled>ارسال بیانیه · در آینده</button>
+        </div>
+      </section>
+      <hr class="eventDivider">
+      <section class="eventNegotiationArea">
+        <h3>حالت مذاکرات</h3>
+        <button type="button" class="eventNegotiationToggle" id="btnConfidentialTalk" aria-pressed="false">
+          <span>🔒 مذاکره محرمانه</span><span class="eventToggleState" id="confidentialTalkState">خاموش</span>
+        </button>
+        <button type="button" class="eventNegotiationToggle" id="btnAllianceTalk" aria-pressed="false">
+          <span>🤝 مذاکره با اتحاد</span><span class="eventToggleState" id="allianceTalkState">خاموش</span>
+        </button>
+        <div class="eventContextNote" id="eventContextNote">حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.</div>
+      </section>
     </div>
     <button id="eventPanelToggle" type="button" title="باز و بسته کردن پنل بیانیه‌ها" aria-expanded="false">❯</button>
     <div id="globe"></div>
