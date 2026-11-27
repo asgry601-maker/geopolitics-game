@@ -134,7 +134,7 @@
 | IND | هند — نارندرا مودی | Official Photograph of Prime Minister Narendra Modi Portrait.png | دفتر نخست‌وزیر هند؛ Government Open Data License — India |
 | KOR | کره جنوبی — لی جه‌میونگ | President Lee Jae Myung.jpg | دفتر رئیس‌جمهور کره جنوبی؛ منتشرشده توسط Press Information Bureau هند؛ Government Open Data License — India |
 | IDN | اندونزی — پرابوو سوبیانتو | Prabowo Subianto 2024 official portrait.jpg | Darwis Triadi و وزارت دبیرخانه دولت اندونزی؛ Public Domain در اندونزی بر اساس قانون 28/2014 |
-| BRA | برزیل — لوئیز ایناسیو لولا دا سیلوا | Foto oficial de Luiz Inácio Lula da Silva (faixa presidencial).jpg | Ricardo Stuckert / Palácio do Planalto؛ CC BY 2.0 |
+| BRA | برزیل — لوئیز ایناسیو لولا دا سیلوا | 09.07.2026 - Presidente Lula.jpg | Lula Oficial؛ عکس Ricardo Stuckert، ۹ ژوئیهٔ ۲۰۲۶؛ CC BY-SA 4.0 |
 | AUS | استرالیا — آنتونی آلبانیزی | Anthony Albanese Official Portrait.jpg | David Foote (AUSPIC / Department of Parliamentary Service)؛ CC BY 4.0 طبق شرایط DFAT |
 | UKR | اوکراین — ولودیمیر زلنسکی | Volodymyr Zelensky Official portrait.jpg | President.gov.ua؛ CC BY 4.0 (طبق صفحهٔ فایل برای عکس‌های منتشرشده پیش از ۴ اکتبر ۲۰۲۲) |
 
@@ -143,7 +143,7 @@
 - هند: https://commons.wikimedia.org/wiki/File:Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png
 - کره جنوبی: https://commons.wikimedia.org/wiki/File:President_Lee_Jae_Myung.jpg
 - اندونزی: https://commons.wikimedia.org/wiki/File:Prabowo_Subianto_2024_official_portrait.jpg
-- برزیل: https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(faixa_presidencial).jpg
+- برزیل: https://commons.wikimedia.org/wiki/File:09.07.2026_-_Presidente_Lula.jpg
 - استرالیا: https://commons.wikimedia.org/wiki/File:Anthony_Albanese_Official_Portrait.jpg
 - اوکراین: https://commons.wikimedia.org/wiki/File:Volodymyr_Zelensky_Official_portrait.jpg
 
