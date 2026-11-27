@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 21,
-    "pending_countries": 153,
+    "classified_countries": 26,
+    "pending_countries": 148,
     "last_batch": [
-      "MEX",
-      "IDN",
-      "KOR",
-      "AUS",
-      "ZAF"
+      "ARG",
+      "EGY",
+      "ISR",
+      "UKR",
+      "NGA"
     ]
   },
   "countries": {
@@ -1388,6 +1388,318 @@
       ],
       "data_quality": {
         "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "ARG": {
+      "country_name_fa": "آرژانتین",
+      "country_name_en": "Argentina",
+      "government_form": "republic",
+      "government_subform": "federal_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "federal",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "libertarianism",
+        "conservatism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی کشور را جمهوری فدرال با نظام ریاستی و کنگره دو مجلسی تعریف می‌کند. در تاریخ مبنا خاویر میلی رئیس‌جمهور و حزب La Libertad Avanza نیروی اصلی دولت است. این حزب پس از انتخابات میان‌دوره‌ای ۲۰۲۵ کرسی‌های خود را به‌طور چشمگیری افزایش داد، اما برای پیشبرد برنامه در کنگره همچنان به همکاری با متحدان و احزاب دیگر نیاز دارد؛ ازاین‌رو ائتلاف رسمی کابینه‌ای جداگانه ثبت نشده است. ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Argentina: Country Overview and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R48303.html",
+          "date": "2024-12-11",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "جمهوری فدرال، نظام ریاستی و ساختار دو مجلسی."
+        },
+        {
+          "name": "Argentina: Country Overview",
+          "publisher": "Ministry of Foreign Affairs, European Union and Cooperation of Spain",
+          "url": "https://exteriores.gob.es/Documents/FichasPais/ARGENTINA_FICHA%20PAIS.pdf",
+          "date": "2025",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "توصیف نظام ریاستی و فدرال و ریاست‌جمهوری خاویر میلی."
+        },
+        {
+          "name": "Argentina Chamber of Deputies October 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/AR/AR-LC01/election/AR-LC01-E20251026/",
+          "date": "2025-10-26",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات میان‌دوره‌ای ۲۰۲۵ و افزایش کرسی‌های LLA؛ منبع پارلمانی تطبیقی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "EGY": {
+      "country_name_fa": "مصر",
+      "country_name_en": "Egypt",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "مصر از نظر قانون اساسی جمهوری با رئیس‌جمهور به‌عنوان رئیس کشور و قوه مجریه است؛ رئیس‌جمهور نخست‌وزیر را مأمور تشکیل دولت می‌کند و مجلس در روند رأی اعتماد نقش دارد. بااین‌حال، منابع حقوقی و ارزیابی‌های مستقل از تمرکز شدید قدرت در ریاست‌جمهوری و دستگاه امنیتی، محدودیت جدی رقابت و نبود اپوزیسیون مؤثر خبر می‌دهند. احزاب قانونی وجود دارند، اما رقابت واقعی برای کسب قدرت بسیار محدود است. برای پرهیز از نسبت‌دادن ایدئولوژی حزبی یا رسمیِ اثبات‌نشده، فیلدهای ایدئولوژی null باقی مانده‌اند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "President of the Republic — Egyptian Constitution, Articles 139–149",
+          "publisher": "State Information Service, Egypt",
+          "url": "https://sis.gov.eg/en/egypt/system-of-government/executive-authority/president-of-the-republic",
+          "date": "2025-09-24",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "اختیارات رئیس‌جمهور، انتصاب نخست‌وزیر و رابطه دولت با مجلس."
+        },
+        {
+          "name": "Country policy and information note: opposition to the state, Egypt",
+          "publisher": "UK Home Office",
+          "url": "https://www.gov.uk/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-state-egypt-march-2026-accessible",
+          "date": "2026-08-14",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "تمرکز قدرت زیر نظر رئیس‌جمهور و دستگاه امنیتی و محدودیت فعالیت مخالفان."
+        },
+        {
+          "name": "Egypt: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/egypt/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "وضعیت Not Free و محدودیت شدید اپوزیسیون و آزادی‌های سیاسی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "ISR": {
+      "country_name_fa": "اسرائیل",
+      "country_name_en": "Israel",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "conservatism",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "اسرائیل جمهوری پارلمانی با نظام انتخاباتی تناسبی و رقابت چندحزبی است. در انتخابات ۲۷ اکتبر ۲۰۲۶ هیچ بلوکی به اکثریت ۶۱ کرسی از ۱۲۰ کرسی کنست نرسید. در تاریخ snapshot، بنیامین نتانیاهو و دولت پیشین در وضعیت سرپرست/موقت باقی بودند؛ رئیس‌جمهور در ۵ نوامبر اعلام کرد که پس از مشورت با فراکسیون‌ها قصد دارد گادی آیزنکوت را مأمور تشکیل دولت کند. بنابراین در این تاریخ هنوز ائتلاف جدیدی تشکیل نشده و گرایش ائتلاف حاکم جدید عمداً null است. گرایش ثبت‌شده برای حزب لیکود به‌عنوان حزب اصلی دولت مستعفی/سرپرست است، نه توصیف کل جامعه اسرائیل.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "President Herzog concludes round of consultations with Knesset factions",
+          "publisher": "Office of the President of Israel",
+          "url": "https://www.gov.il/en/pages/president-herzog-concludes-round-of-consultations-with-knesset-factions--5-nov-2026",
+          "date": "2026-11-05",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "بیانیه رسمی همان روز: ۶۷ نماینده آیزنکوت و ۴۶ نماینده نتانیاهو را توصیه کردند؛ تشکیل دولت هنوز قطعی نبود."
+        },
+        {
+          "name": "Israel: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/israel/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت انتخاباتی، حقوق سیاسی و نهادهای دموکراتیک."
+        },
+        {
+          "name": "Israel election leaves no bloc with a majority",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/3a793c0d07fdfe515390524b849d8674",
+          "date": "2026-11",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج نهایی انتخابات و وضعیت دولت موقت تا تشکیل ائتلاف."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "UKR": {
+      "country_name_fa": "اوکراین",
+      "country_name_en": "Ukraine",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "اوکراین جمهوری با نظام نیمه‌ریاستی و توزیع اختیارات میان رئیس‌جمهور، نخست‌وزیر و پارلمان است. در ۱۶ ژوئیه ۲۰۲۶ سرگیی کورِتسکی با رأی پارلمان نخست‌وزیر شد و دولت جدید تا اوت تکمیل شد؛ او مدیر اجرایی و اقتصاددان معرفی شده و وابستگی حزبی ندارد، بنابراین ایدئولوژی حزبی برای نخست‌وزیر یا ائتلاف دولت ثبت نشده است. حکومت نظامی و اشغال بخشی از قلمرو ادامه دارد؛ بر اساس گزارش کمیسیون اروپا، انتخابات در دوره حکومت نظامی برگزار نمی‌شود، اما پارلمان و نهادهای دولتی به کار خود ادامه می‌دهند. به همین دلیل وضعیت رقابت و نظام حزبی با احتیاط و به‌صورت نامطمئن طبقه‌بندی شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Ukraine Report 2026",
+          "publisher": "European Commission",
+          "url": "https://enlargement.ec.europa.eu/document/download/c817ca8c-4ddf-405d-896a-40becd42924a_en?filename=ukraine-report-2026.pdf",
+          "date": "2026-11-04",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure",
+            "executive_legislative_system"
+          ],
+          "note": "گزارش کمیسیون اروپا درباره نهادهای دموکراتیک، حکومت نظامی، تعلیق انتخابات و تغییر دولت در ژوئیه ۲۰۲۶."
+        },
+        {
+          "name": "Verkhovna Rada appoints Sergii Koretskyi Prime Minister of Ukraine",
+          "publisher": "Cabinet of Ministers of Ukraine",
+          "url": "https://www.kmu.gov.ua/en/news/verkhovna-rada-pryznachyla-serhiia-koretskoho-premier-ministrom-ukrainy",
+          "date": "2026-07-16",
+          "supports": [
+            "executive_legislative_system"
+          ],
+          "note": "انتصاب رسمی نخست‌وزیر با ۲۸۹ رأی پارلمان."
+        },
+        {
+          "name": "Sergii Koretskyi — official profile",
+          "publisher": "Cabinet of Ministers of Ukraine",
+          "url": "https://www.kmu.gov.ua/en/profile/sergii-koretskyi",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "سوابق حرفه‌ای نخست‌وزیر و تاریخ انتصاب؛ فاقد معرفی به‌عنوان رهبر حزبی."
+        },
+        {
+          "name": "Ukraine: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/ukraine/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت‌های سیاسی و شرایط جنگی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "NGA": {
+      "country_name_fa": "نیجریه",
+      "country_name_en": "Nigeria",
+      "government_form": "republic",
+      "government_subform": "federal_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "federal",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "conservatism",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "نیجریه جمهوری فدرال با نظام ریاستی و دو مجلس ملی است. در تاریخ مبنا، بولا تینوبو رئیس‌جمهور و حزب کنگره همه ترقی‌خواهان (APC) حزب حاکم بود. نظام چندحزبی و امکان رقابت اپوزیسیون برقرار است، اما کیفیت انتخابات، فساد، ناامنی و محدودیت‌های حقوق مدنی چالش‌های جدی محسوب می‌شوند؛ Freedom House در ۲۰۲۶ نیجریه را Partly Free ارزیابی کرده است. APC حزبی فراگیر با گرایش‌های متنوع و عمل‌گرایانه است؛ ائتلاف رسمی کابینه‌ای جداگانه ثبت نشده است. تحولات ائتلافی و صف‌بندی‌های انتخاباتی ۲۰۲۷ در تاریخ مبنا هنوز در حال شکل‌گیری بود.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Nigeria: Overview and U.S. Policy",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R47052.html",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "party_system"
+          ],
+          "note": "جمهوری فدرال، ساختار ریاستی، احزاب اصلی و دولت تینوبو؛ تحولات سیاسی و انتخاباتی."
+        },
+        {
+          "name": "Nigeria: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/nigeria/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "امتیاز ۴۴ از ۱۰۰ و وضعیت Partly Free؛ رقابت حزبی همراه با بی‌نظمی‌های انتخاباتی و چالش‌های حقوقی."
+        },
+        {
+          "name": "Nigeria country assessment, H1 2026",
+          "publisher": "Centre for Geopolitics & Economic Intelligence",
+          "url": "https://geoeconcentre.org/analysis.php?slug=nigeria-country-assessment-h1-2026",
+          "date": "2026-07",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "ساختار فدرال، ریاستی و وضعیت سیاسی/نهادی در نیمه نخست ۲۰۲۶."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
