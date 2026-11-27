@@ -1027,7 +1027,10 @@ def load():
             if key not in session:
                 session[key] = value
                 conversation_save_needed = True
-        for key, value in (("live_ai_required", True),
+        for key, value in (("meeting_status", "unscheduled"),
+                           ("meeting_date", None),
+                           ("meeting_request_id", None),
+                           ("live_ai_required", True),
                            ("live_ai_status", "locked_until_phase_f"),
                            ("chat_enabled", False)):
             if session.get(key) != value:
@@ -1054,6 +1057,30 @@ def load():
         s["conversation_sequence"] = conversation_seq
         conversation_save_needed = True
     if conversation_save_needed:
+        save(s)
+
+    calendar_save_needed = False
+    if not isinstance(s.get("calendar_events"), list):
+        s["calendar_events"] = []
+        calendar_save_needed = True
+    try:
+        calendar_seq = max(0, int(s.get("calendar_sequence", 0)))
+    except (TypeError, ValueError):
+        calendar_seq = 0
+        calendar_save_needed = True
+    for item in s["calendar_events"]:
+        if isinstance(item, dict):
+            try:
+                calendar_seq = max(calendar_seq, int(str(item.get("id", "")).split("-")[-1]))
+            except (TypeError, ValueError):
+                pass
+    if s.get("calendar_sequence") != calendar_seq:
+        s["calendar_sequence"] = calendar_seq
+        calendar_save_needed = True
+    if not isinstance(s.get("live_ai_active"), bool):
+        s["live_ai_active"] = False
+        calendar_save_needed = True
+    if calendar_save_needed:
         save(s)
 
     # قرارداد پایدار پیمان‌ها و اتحادها؛ مهاجرت داده‌های قدیمی بدون پذیرش ساختگی
@@ -1244,7 +1271,8 @@ def mark_inbox_message_read(s, message_id):
 
 def prepare_conversation_session(s, participants, topic="گفت‌وگوی دیپلماتیک",
                                   visibility_mode="public", negotiation_type="standard",
-                                  source="system", context=None, conversation_id=None):
+                                  source="system", context=None, conversation_id=None,
+                                  meeting_date=None):
     """نشست مشترک و پایدار برای ورودی‌های دیپلماسی؛ گفت‌وگوی واقعی فقط در فاز F."""
     if not isinstance(participants, list):
         raise ValueError("فهرست کشورهای گفت‌وگو نامعتبر است.")
@@ -1284,14 +1312,34 @@ def prepare_conversation_session(s, participants, topic="گفت‌وگوی دی�
         raise ValueError("اطلاعات زمینه نشست بیش از حد مجاز است.")
 
     sessions = s.setdefault("conversation_sessions", [])
+    if not meeting_date:
+        raise ValueError("برای نشست باید تاریخ پیشنهادی مشخص شود.")
+    try:
+        requested_date = datetime.date.fromisoformat(str(meeting_date))
+        current_date = datetime.date.fromisoformat(str(s.get("game_date", "")))
+    except (TypeError, ValueError):
+        raise ValueError("تاریخ نشست معتبر نیست.")
+    if requested_date <= current_date:
+        raise ValueError("تاریخ نشست باید بعد از تاریخ فعلی بازی باشد.")
+
     if conversation_id:
         for existing in sessions:
             if isinstance(existing, dict) and existing.get("id") == conversation_id:
                 if set(existing.get("participants") or []) != set(selected):
                     raise ValueError("اعضای نشست موجود با کشورهای انتخاب‌شده مطابقت ندارند.")
+                old_date = existing.get("meeting_date")
+                if old_date and old_date != requested_date.isoformat():
+                    raise ValueError("این نشست از قبل تاریخ مشخصی دارد؛ برای تغییر تاریخ باید درخواست جداگانه ثبت شود.")
+                if not old_date:
+                    existing["meeting_date"] = requested_date.isoformat()
+                    existing["meeting_status"] = "pending_ai_acceptance"
+                    existing["meeting_initiator"] = player
+                    existing["meeting_proposed_by"] = player
+                    existing["meeting_accepted_by"] = [player]
+                    existing["meeting_request_id"] = "MR-" + existing["id"]
                 existing["updated_date"] = s.get("game_date", "")
                 return dict(ok=True, created=False, session=existing,
-                            note="نشست قبلی بازیابی شد؛ تاریخچه مشترک حفظ شده است.")
+                            note="نشست قبلی بازیابی شد؛ تاریخ پیشنهادی ثبت شد و تا پذیرش طرف مقابل قفل می‌ماند.")
         raise ValueError("نشست گفت‌وگوی درخواستی پیدا نشد.")
 
     sequence = int(s.get("conversation_sequence", 0)) + 1
@@ -1308,6 +1356,13 @@ def prepare_conversation_session(s, participants, topic="گفت‌وگوی دی�
         "status": "prepared",
         "created_date": s.get("game_date", ""),
         "updated_date": s.get("game_date", ""),
+        "meeting_date": requested_date.isoformat(),
+        "meeting_status": "pending_ai_acceptance",
+        "meeting_initiator": player,
+        "meeting_proposed_by": player,
+        "meeting_accepted_by": [player],
+        "meeting_request_id": "MR-CONV-%06d" % sequence,
+        "calendar_event_id": None,
         "messages": [],
         "linked_records": [],
         "live_ai_required": True,
@@ -1317,10 +1372,134 @@ def prepare_conversation_session(s, participants, topic="گفت‌وگوی دی�
     sessions.append(session)
     if len(sessions) > 200:
         del sessions[:-200]
-    msg(s, "نشست دیپلماتیک %s برای %s آماده شد؛ گفت‌وگوی زنده تا فاز F غیرفعال است." %
-        (session["id"], "، ".join(selected[1:])))
+    msg(s, "پیشنهاد نشست %s برای %s در تاریخ %s ثبت شد؛ تا پذیرش کشور مقابل در تقویم قطعی نمی‌شود." %
+        (session["id"], "، ".join(selected[1:]), session["meeting_date"]))
     return dict(ok=True, created=True, session=session,
-                note="نشست ذخیره شد؛ هیچ پیام، مذاکره یا تصمیم هوش مصنوعی تولید نشده است.")
+                note="تاریخ به طرف مقابل پیشنهاد شد؛ پذیرش و ثبت قطعی در تقویم فقط با هوش مصنوعی زنده در فاز F انجام می‌شود.")
+
+
+def _calendar_parse_date(value):
+    try:
+        return datetime.date.fromisoformat(str(value))
+    except (TypeError, ValueError):
+        raise ValueError("تاریخ تقویم معتبر نیست.")
+
+
+def register_calendar_item(s, title, due_date, category="general", source="system",
+                           linked_session_id=None, participants=None, details=None):
+    """ثبت موعد قطعی برای نشست‌ها و فرایندهای زمان‌دار آینده."""
+    current = _calendar_parse_date(s.get("game_date", ""))
+    due = _calendar_parse_date(due_date)
+    if due < current:
+        raise ValueError("موعد نمی‌تواند قبل از تاریخ فعلی بازی باشد.")
+    if category not in ("meeting", "political", "economic", "trade", "diplomatic",
+                        "military", "social", "project", "other", "general"):
+        raise ValueError("دسته‌بندی موعد معتبر نیست.")
+    safe_details = json.loads(json.dumps(details if isinstance(details, dict) else {}, ensure_ascii=False))
+    if len(json.dumps(safe_details, ensure_ascii=False)) > 8000:
+        raise ValueError("جزئیات رویداد تقویم بیش از حد مجاز است.")
+    events = s.setdefault("calendar_events", [])
+    if linked_session_id:
+        for event in events:
+            if isinstance(event, dict) and event.get("linked_session_id") == linked_session_id and event.get("status") != "cancelled":
+                return event
+    seq = int(s.get("calendar_sequence", 0)) + 1
+    s["calendar_sequence"] = seq
+    item = {"id":"CAL-%06d" % seq, "title":str(title or "رویداد زمان‌بندی‌شده")[:140],
+            "category":category, "source":str(source or "system")[:40],
+            "due_date":due.isoformat(), "created_date":current.isoformat(),
+            "status":"due" if due == current else "scheduled",
+            "linked_session_id":linked_session_id, "participants":list(participants or []),
+            "details":safe_details}
+    events.append(item)
+    if len(events) > 500:
+        del events[:-500]
+    return item
+
+
+def _refresh_calendar(s):
+    current = _calendar_parse_date(s.get("game_date", ""))
+    for event in s.get("calendar_events") or []:
+        if not isinstance(event, dict) or event.get("status") == "cancelled":
+            continue
+        try:
+            due = _calendar_parse_date(event.get("due_date"))
+        except ValueError:
+            event["status"] = "invalid"
+            continue
+        event["status"] = "due" if due <= current else "scheduled"
+        event["days_remaining"] = max(0, (due - current).days)
+        linked = get_conversation_session(s, event.get("linked_session_id")) if event.get("linked_session_id") else None
+        if linked:
+            linked["meeting_status"] = "due" if due <= current else "confirmed"
+            linked["chat_enabled"] = bool(s.get("live_ai_active") and due <= current)
+            linked["live_ai_status"] = "ready" if linked["chat_enabled"] else "locked_until_phase_f"
+
+
+def decide_conversation_meeting(s, conversation_id, decision, actor_country=None):
+    """تصمیم طرف مقابل روی پیشنهاد نشست؛ تصمیم AI فقط از فاز F فراخوانی می‌شود."""
+    if decision not in ("accept", "reject"):
+        raise ValueError("تصمیم نشست نامعتبر است.")
+    session = get_conversation_session(s, conversation_id)
+    if not session:
+        raise ValueError("نشست موردنظر پیدا نشد.")
+    player = s.get("player")
+    actor = actor_country or player
+    status = session.get("meeting_status")
+    if status == "pending_ai_acceptance":
+        if not s.get("live_ai_active") or actor == player or actor not in (session.get("participants") or []):
+            raise ValueError("پاسخ کشور مقابل فقط از مسیر هوش مصنوعی زنده در فاز F مجاز است.")
+    elif status == "pending_player_acceptance":
+        if actor != player:
+            raise ValueError("فقط بازیکن می‌تواند دعوت نشست دریافتی را پاسخ دهد.")
+    else:
+        raise ValueError("این پیشنهاد نشست دیگر در انتظار پاسخ نیست.")
+    if decision == "reject":
+        session["meeting_status"] = "rejected"
+        session["updated_date"] = s.get("game_date", "")
+        msg(s, "پیشنهاد نشست %s رد شد." % session.get("id"))
+        return dict(ok=True, session=session, calendar_event=None)
+    accepted = session.setdefault("meeting_accepted_by", [])
+    if actor not in accepted:
+        accepted.append(actor)
+    session["meeting_status"] = "confirmed"
+    event = register_calendar_item(
+        s, "نشست: " + str(session.get("topic") or "گفت‌وگوی دیپلماتیک"),
+        session.get("meeting_date"), category="meeting", source="conversation",
+        linked_session_id=session.get("id"), participants=session.get("participants"),
+        details={"visibility_mode":session.get("visibility_mode"),"negotiation_type":session.get("negotiation_type")})
+    session["calendar_event_id"] = event.get("id")
+    session["updated_date"] = s.get("game_date", "")
+    session["chat_enabled"] = False
+    session["live_ai_status"] = "locked_until_phase_f"
+    msg(s, "نشست %s برای تاریخ %s در تقویم قطعی شد." % (session.get("id"), session.get("meeting_date")))
+    return dict(ok=True, session=session, calendar_event=event)
+
+
+def register_ai_meeting_proposal(s, initiator_country, participants, meeting_date,
+                                 topic="نشست دیپلماتیک", visibility_mode="public",
+                                 negotiation_type="standard", source="inbox", context=None):
+    """قرارداد درخواست نشست از سوی کشور AI؛ فقط در فاز F مجاز است."""
+    if not s.get("live_ai_active"):
+        raise ValueError("کشورهای هوش مصنوعی تا فعال‌سازی فاز F نمی‌توانند نشست پیشنهاد دهند.")
+    if initiator_country == s.get("player") or initiator_country not in (s.get("world") or {}):
+        raise ValueError("کشور آغازگر نشست معتبر نیست.")
+    if not isinstance(participants, list) or s.get("player") not in participants or initiator_country not in participants:
+        raise ValueError("درخواست نشست باید شامل بازیکن و کشور آغازگر باشد.")
+    prepared = prepare_conversation_session(s, participants, topic=topic, visibility_mode=visibility_mode,
+        negotiation_type=negotiation_type, source=source, context=context, meeting_date=meeting_date)
+    session = prepared["session"]
+    session["meeting_status"] = "pending_player_acceptance"
+    session["meeting_initiator"] = initiator_country
+    session["meeting_proposed_by"] = initiator_country
+    session["meeting_accepted_by"] = [initiator_country]
+    session["meeting_request_id"] = "MR-" + session["id"]
+    register_inbox_message(s, initiator_country, message_type="meeting_request",
+        title="پیشنهاد نشست دیپلماتیک",
+        body="کشور %s درخواست نشست در تاریخ %s را دارد." % (initiator_country, session["meeting_date"]),
+        conversation_id=session["id"], response_allowed=True,
+        metadata={"meeting_date":session["meeting_date"],"meeting_request":True})
+    return dict(ok=True, session=session, note="درخواست نشست کشور هوش مصنوعی برای تصمیم بازیکن ثبت شد.")
 
 
 def get_conversation_session(s, conversation_id):
@@ -2463,6 +2642,7 @@ def init_game(player):
         player_sanctions={}, player_sanction_history=[],
         inbox_messages=[], inbox_sequence=0,
         conversation_sessions=[], conversation_sequence=0,
+        calendar_events=[], calendar_sequence=0, live_ai_active=False,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
@@ -4320,6 +4500,7 @@ def end_turn(s):
     s["year"] = next_date.year
     s["day"] = next_date.day
     s["elapsed_days"] = day
+    _refresh_calendar(s)
     advance_player_political_reforms(s, log)
     check_player_regime_crisis(s, log)
     year_report = next_date.year != previous_year
