@@ -177,6 +177,17 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .leaderPortraitFallback small { font-size:9px; }
 @media (max-width:520px) { .dashTabs { grid-template-columns:repeat(2,minmax(0,1fr)); } .dashGrid { grid-template-columns:1fr 1fr; } }
 
+
+/* اصلاح رنگ پنل طبق بازخورد: تمام سطوح از زمینه اصلی متمایزند؛ هیچ سطح روشنی که متن سفید را ناخوانا کند وجود ندارد. */
+#countryInfo .dashCard { background:#19334b !important; border:1px solid #315b78 !important; border-radius:9px !important; padding:9px 10px !important; margin:8px 0 !important; }
+#countryInfo .dashCard .dashCard { background:#24445d !important; border-color:#3c6d88 !important; }
+#countryInfo .dashMetric { background:#24445d !important; border:1px solid #477995 !important; color:#f4f8ff; }
+#countryInfo .dashNote { background:#293d58 !important; border-right:3px solid #79a9d0 !important; color:#f1f6ff !important; }
+#countryInfo .countryMiniBadge { background:#304b68 !important; border-color:#6387a9 !important; }
+#countryInfo .badge { background:#304b68; border:1px solid #6387a9; color:#f4f8ff; }
+#countryInfo .dashTab { color:#fff !important; }
+#countryInfo .dashTab.active { filter:brightness(1.28); }
+#countryInfo .tribuneLocked { background:#3b3155; border:1px solid #8069a5; border-right:4px solid #b59add; border-radius:9px; padding:13px; color:#f5efff; line-height:2; }
 </style>
 </head>
 <body>
