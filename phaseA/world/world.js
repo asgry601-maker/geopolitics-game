@@ -1798,8 +1798,10 @@ function dashSectionHtml(r, isPlayer, tab) {
       if (ps.meeting_status==='pending_ai_acceptance' || ps.meeting_status==='pending_player_acceptance') {
         waiting++;
         h += '<div class="dashCard"><div class="row"><b>پیشنهاد نشست · '+dashEsc(ps.id||'')+'</b><span class="badge">در انتظار پاسخ</span></div>';
+        var pendingLeft=ps.meeting_date?calendarDaysRemaining(ps.meeting_date):null;
         h += '<div>'+dashEsc(ps.topic||'نشست دیپلماتیک')+' · تاریخ پیشنهادی: '+dashEsc(ps.meeting_date||'—')+'</div>';
-        h += '<div class="muted small">'+dashEsc((ps.participants||[]).join('، '))+' · تا پذیرش طرف مقابل در تقویم قطعی نمی‌شود.</div></div>';
+        if(pendingLeft!==null) h += '<div class="muted small">'+(pendingLeft===0?'تاریخ پیشنهادی فرا رسیده است':'تا تاریخ پیشنهادی: '+pendingLeft+' روز')+'</div>';
+        h += '<div class="muted small">'+dashEsc((ps.participants||[]).join('، '))+' · تا پذیرش همه طرف‌ها در تقویم قطعی نمی‌شود.</div></div>';
       }
     }
     if (!waiting) h += '<div class="muted small">پیشنهاد نشستِ در انتظار پاسخ وجود ندارد.</div>';
