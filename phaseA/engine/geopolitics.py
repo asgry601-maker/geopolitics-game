@@ -597,9 +597,7 @@ def review_player_political_reform(s, proposal_id):
             projected=round(max(0.0, min(100.0, float(support) + delta)), 1))
     social_score = 50.0
     if social_reactions:
-        social_total = sum(max(0.0, float(v.get("current", 0))) for v in social_reactions.values())
-        if social_total > 0:
-            social_score = sum(v["projected"] * v["current"] for v in social_reactions.values()) / social_total
+        social_score = sum(v["projected"] for v in social_reactions.values()) / float(len(social_reactions))
 
     scope = sum(1 for _ in changes)
     complexity_penalty = min(20.0, scope * 2.5)
@@ -715,11 +713,9 @@ def load():
         else:
             for group_name, default_value in SOCIAL_GROUP_BASE.items():
                 groups.setdefault(group_name, default_value)
-            total_groups = sum(max(0.0, float(v)) for v in groups.values())
-            if total_groups > 0:
-                s["social_groups"][player_name] = dict(
-                    (k, round(max(0.0, float(v)) * 100.0 / total_groups, 1))
-                    for k, v in groups.items())
+            s["social_groups"][player_name] = dict(
+                (k, round(max(0.0, min(100.0, float(v))), 1))
+                for k, v in groups.items())
     if not isinstance(s.get("political_history"), list):
         s["political_history"] = []
     if not isinstance(s.get("turn_events"), dict):
@@ -1454,14 +1450,14 @@ EAST = {"روسیه", "چین"}
 
 AI_PARTY_BASE = {"حاکمیت": 38, "اپوزیسیون": 24, "ارتش‌گرایان": 20, "تجار": 18}
 
-# شاخص اجتماعی پایه؛ درصدها صرفاً مدل شبیه‌سازی‌اند و جمع آن‌ها ۱۰۰ است.
+# درصد مقبولیت اولیه هر گروه؛ شاخص‌ها مستقل‌اند و مجموعشان الزاماً ۱۰۰ نیست.
 SOCIAL_GROUP_BASE = {
-    "کارگران و مزدبگیران": 22.0,
-    "کسب‌وکار و بازرگانان": 18.0,
-    "کارمندان و خدمات عمومی": 16.0,
-    "دانشجویان و جوانان": 15.0,
-    "کشاورزان و مناطق روستایی": 14.0,
-    "متخصصان و طبقه متوسط": 15.0,
+    "کارگران و مزدبگیران": 52.0,
+    "کسب‌وکار و بازرگانان": 48.0,
+    "کارمندان و خدمات عمومی": 50.0,
+    "دانشجویان و جوانان": 54.0,
+    "کشاورزان و مناطق روستایی": 51.0,
+    "متخصصان و طبقه متوسط": 53.0,
 }
 
 AI_OUTLETS = [
@@ -2270,10 +2266,8 @@ def _reform_social_impact(s, proposal, fraction, reverse=False):
             continue
         delta = float(reaction.get("projected_change", 0)) * float(fraction) * direction
         groups[group_name] = max(0.0, min(100.0, float(groups.get(group_name, 0)) + delta))
-    total = sum(max(0.0, float(v)) for v in groups.values())
-    if total > 0:
-        for group_name in list(groups):
-            groups[group_name] = round(max(0.0, float(groups[group_name])) * 100.0 / total, 1)
+    for group_name in list(groups):
+        groups[group_name] = round(max(0.0, min(100.0, float(groups[group_name]))), 1)
 
 
 def _reform_press_line(s, proposal, stage, detail):
