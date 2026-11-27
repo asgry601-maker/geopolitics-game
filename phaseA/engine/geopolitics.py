@@ -2214,7 +2214,7 @@ def advance_player_political_reforms(s, daily_log):
         state = s.setdefault("political_state", {})
         current = state.setdefault(player, {})
         for field, value in (proposal.get("changes") or {}).items():
-            current[field] = value
+            current[field] = value.get("new") if isinstance(value, dict) and "new" in value else value
         reactions = review.get("party_reactions") or {}
         parties = (s.get("politics") or {}).get(player, {}).get("parties") or {}
         for party, reaction in reactions.items():
