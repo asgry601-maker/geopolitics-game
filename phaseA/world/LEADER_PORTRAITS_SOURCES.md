@@ -274,3 +274,23 @@ The six portrait mappings use the existing Wikimedia Commons Special:FilePath lo
 - NER: https://commons.wikimedia.org/wiki/File:Tiani_(cropped).jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The corresponding leader names were already present in the engine dictionary. Please inspect the portraits in the game at dashboard size, especially Laos and Niger, and request a replacement if either face is not sufficiently clear.
+
+
+## Package 19 — West Africa (6 countries)
+
+- **BFA — Burkina Faso:** Ibrahim Traoré — `Ibrahim Traoré portrait.jpg`. Photograph dated 22 January 2026, extracted from a photograph by Bamjo226; dedicated to CC0 1.0. Original portrait crop: 2,243 × 2,824 pixels.
+- **GIN — Guinea:** Mamadi Doumbouya — `Mamady Doumbouya.png`. Screenshot dated 5 September 2021, source: Guineematin; CC BY 3.0. Image: 500 × 668 pixels. This is an older, lower-resolution image; inspect face clarity in the dashboard and replace if needed.
+- **SLE — Sierra Leone:** Julius Maada Bio — `Julius Maada Bio - 2020 (cropped).jpg`. Photograph dated 20 January 2020, DFID / UK Department for International Development; CC BY 2.0. Crop: 2,115 × 3,046 pixels.
+- **LBR — Liberia:** Joseph Boakai — `Joseph Boakai in Yokohama (cropped).jpg`. Photograph dated 20 August 2025, Cabinet Public Relations Office of the Cabinet Secretariat of Japan; Government of Japan Standard Terms of Use v2.0, compatible with CC BY 4.0. Crop: 556 × 746 pixels. Attribution: 首相官邸ホームページ.
+- **TGO — Togo:** Faure Essozimna Gnassingbé — `President of Togo Faure Gnassingbé on November 13, 2024 (cropped).jpg`. Photograph dated 13 November 2024, Press Service of the President of the Republic of Azerbaijan; CC BY 4.0. Crop: 751 × 1,000 pixels. Faure is listed as President of the Council of Ministers (head of government) since May 2025; Togo's head of state is Jean-Lucien Savi de Tové.
+- **BEN — Benin:** Romuald Wadagni — `Romuald Wadagni in June 2026.jpg`. Photograph dated 24 June 2026, Aurore Martignoni / European Union, EC Audiovisual Service; CC BY 4.0. Crop: 781 × 1,042 pixels. Attribution: © European Union, 2026.
+
+### File pages
+- BFA: https://commons.wikimedia.org/wiki/File:Ibrahim_Traor%C3%A9_portrait.jpg
+- GIN: https://commons.wikimedia.org/wiki/File:Mamady_Doumbouya.png
+- SLE: https://commons.wikimedia.org/wiki/File:Julius_Maada_Bio_-_2020_(cropped).jpg
+- LBR: https://commons.wikimedia.org/wiki/File:Joseph_Boakai_in_Yokohama_(cropped).jpg
+- TGO: https://commons.wikimedia.org/wiki/File:President_of_Togo_Faure_Gnassingb%C3%A9_on_November_13,_2024_(cropped).jpg
+- BEN: https://commons.wikimedia.org/wiki/File:Romuald_Wadagni_in_June_2026.jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Benin's engine leader display name was updated from Patrice Talon to Romuald Wadagni. The Togo display remains Faure Gnassingbé as head of government, not head of state. Please visually inspect all six portraits in the game, especially Guinea's older, lower-resolution image.
