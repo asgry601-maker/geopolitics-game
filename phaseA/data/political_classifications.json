@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 154,
-    "pending_countries": 20,
+    "classified_countries": 159,
+    "pending_countries": 15,
     "last_batch": [
-      "SUR",
-      "CUB",
-      "HTI",
-      "DOM",
-      "JAM"
+      "TTO",
+      "CRI",
+      "PAN",
+      "GTM",
+      "HND"
     ]
   },
   "countries": {
@@ -11394,6 +11394,371 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "ساختار مشروطه و پارلمانی از گرایش حزب حاکم جدا شده و اکثریت JLP در تاریخ snapshot ثبت شده است."
+      }
+    },
+    "TTO": {
+      "country_name_fa": "ترینیداد و توباگو",
+      "country_name_en": "Trinidad and Tobago",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "socialism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "ترینیداد و توباگو جمهوری واحد با نظام پارلمانی است. رئیس‌جمهور رئیس کشور و به‌وسیله مجمع انتخاباتی متشکل از اعضای دو مجلس انتخاب می‌شود؛ نخست‌وزیر رهبر حزبی است که اکثریت مجلس نمایندگان را در اختیار دارد و کابینه در برابر پارلمان پاسخگوست. در انتخابات ۲۸ آوریل ۲۰۲۵، کنگره ملی متحد (UNC) به رهبری کاملا پرساد-بیسسار ۲۶ کرسی از ۴۱ کرسی مجلس نمایندگان را کسب کرد و دولت تشکیل داد؛ جنبش ملی خلق ۱۳ کرسی گرفت. انتخابات رقابتی و نظام چندحزبی برقرار است. UNC معمولاً در سنت سوسیال‌دموکراتیک و میانه‌چپ قرار می‌گیرد؛ ایدئولوژی رسمی دولتی وجود ندارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Trinidad and Tobago: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/trinidad-and-tobago/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "این کشور را دموکراسی پارلمانی با رقابت انتخاباتی و جامعه مدنی فعال ارزیابی می‌کند."
+        },
+        {
+          "name": "Trinidad and Tobago House of Representatives April 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TT/TT-LC01/election/TT-LC01-E20250428/",
+          "date": "2025-04-28",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی UNC با ۲۶ کرسی از ۴۱ کرسی و بازگشت کاملا پرساد-بیسسار به نخست‌وزیری را ثبت می‌کند."
+        },
+        {
+          "name": "Central Government",
+          "publisher": "National Library and Information System Authority of Trinidad and Tobago",
+          "url": "https://www.nalis.gov.tt/portfolio-item/central-government/",
+          "date": "2025",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "جایگاه رئیس‌جمهور، شیوه انتخاب غیرمستقیم، نقش نخست‌وزیر و کابینه و مسئولیت پارلمانی را توضیح می‌دهد."
+        },
+        {
+          "name": "The Parliament of Trinidad and Tobago: General Information Booklet",
+          "publisher": "Parliament of Trinidad and Tobago",
+          "url": "https://www.ttparliament.org/wp-content/uploads/2025/03/General-Information-Booklet_Rev1.pdf",
+          "date": "2025-03",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار دومجلسی پارلمان و ترکیب مجلس نمایندگان و سنای انتصابی را شرح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت دولت UNC پس از انتخابات ۲۸ آوریل ۲۰۲۵ و نظام پارلمانی در snapshot نوامبر ۲۰۲۶ لحاظ شده است."
+      }
+    },
+    "CRI": {
+      "country_name_fa": "کاستاریکا",
+      "country_name_en": "Costa Rica",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "populism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "کاستاریکا جمهوری واحد با نظام ریاستی و مجلس قانون‌گذاری تک‌مجلسی است. لورا فرناندز دلگادو در انتخابات ۱ فوریه ۲۰۲۶ با ۴۸٫۳ درصد آرا در دور نخست پیروز شد و از ۸ مه ۲۰۲۶ برای دوره ۲۰۲۶ تا ۲۰۳۰ ریاست‌جمهوری را بر عهده گرفت. حزب مردم حاکمیت‌خواه (PPSO) با ۳۱ کرسی از ۵۷ کرسی مجلس اکثریت را به دست آورد؛ حزب آزادی‌بخش ملی با ۱۷ کرسی بزرگ‌ترین حزب مخالف است. نظام رقابتی چندحزبی و گردش قدرت پابرجاست، هرچند مسائل امنیتی و تنش‌های نهادی برجسته‌اند. PPSO جریان سیاسی جدید و نزدیک به رودریگو چاوز و فرناندز است؛ برچسب عمل‌گرایانه/پوپولیستی و محافظه‌کارانه با احتیاط به کار می‌رود و ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Costa Rica: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/costa-rica/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سنت دموکراتیک باثبات، نظام چندحزبی و انتقال منظم قدرت از راه انتخابات معتبر را ارزیابی می‌کند."
+        },
+        {
+          "name": "Costa Rica Legislative Assembly February 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/CR/CR-LC01/election/CR-LC01-E20260201/",
+          "date": "2026-02-01",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "اکثریت PPSO با ۳۱ کرسی و پیروزی لورا فرناندز در انتخابات هم‌زمان ریاست‌جمهوری را ثبت می‌کند."
+        },
+        {
+          "name": "TSE declares Laura Fernández Delgado elected President",
+          "publisher": "Supreme Electoral Tribunal of Costa Rica",
+          "url": "https://tse.go.cr/comunicado1168.html",
+          "date": "2026-03-03",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "مرجع رسمی انتخابات، انتخاب فرناندز برای دوره ۸ مه ۲۰۲۶ تا ۸ مه ۲۰۳۰ را اعلام می‌کند."
+        },
+        {
+          "name": "Final Report: Costa Rica Presidential and Legislative Elections",
+          "publisher": "European Union Election Expert Mission",
+          "url": "https://www.tse.go.cr/pdf/elecciones/EU-EEM-CR-2026-final-report-SPANISH-VF4mayo.pdf",
+          "date": "2026-05",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گزارش ناظران اتحادیه اروپا نتیجه انتخابات و زمینه رقابت سیاسی و انتخاباتی ۲۰۲۶ را بررسی می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "در تاریخ مبنای سناریو، فرناندز رئیس‌جمهور مستقر است؛ داده‌های انتخاباتی فوریه و تحلیف مه ۲۰۲۶ لحاظ شده‌اند."
+      }
+    },
+    "PAN": {
+      "country_name_fa": "پاناما",
+      "country_name_en": "Panama",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "پاناما جمهوری واحد با نظام ریاستی و مجلس ملی تک‌مجلسی است. خوزه رائول مولینو در انتخابات ۵ مه ۲۰۲۴ با حمایت ائتلاف Realizando Metas و Alianza پیروز شد و از ۱ ژوئیه ۲۰۲۴ رئیس‌جمهور است. ائتلاف او در مجلس ملی ۷۱ کرسی‌ای یکی از بلوک‌های بزرگ است، اما اپوزیسیون متشکل از نمایندگان مستقل و گروه Vamos و احزاب دیگر نیز وزن قابل توجهی دارد؛ بنابراین اکثریت اجرایی را نباید با کنترل یکپارچه مجلس یکی دانست. رقابت انتخاباتی و گردش قدرت برقرار است، در کنار چالش‌های فساد و مصونیت از مجازات. گرایش مولینو و ائتلاف انتخاباتی او محافظه‌کار و میانه‌راست است؛ ایدئولوژی رسمی وجود ندارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Panama: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/panama",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نهادهای دموکراتیک، انتخابات رقابتی و انتقال منظم قدرت را در کنار فساد و مصونیت ارزیابی می‌کند."
+        },
+        {
+          "name": "Panama National Assembly May 2024 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/PA/PA-LC01/election/PA-LC01-E20240505/",
+          "date": "2024-05-05",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب پراکنده مجلس ملی و پیروزی خوزه رائول مولینو با حمایت RM و Alianza را شرح می‌دهد."
+        },
+        {
+          "name": "President of the Republic of Panama",
+          "publisher": "Presidency of the Republic of Panama",
+          "url": "https://www.presidencia.gob.pa/pagina/presidente-de-la-republica-de-panama",
+          "date": "2024",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "زندگی‌نامه رسمی و انتخاب مولینو در انتخابات عمومی ۵ مه ۲۰۲۴ را ثبت می‌کند."
+        },
+        {
+          "name": "U.S.-Panama Relations: Overview and Issues for Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-06-16_R48997_a6e03690c1a727db91fc93fe0ed46c47107ed84e.pdf",
+          "date": "2026-06-16",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ائتلاف محافظه‌کار مولینو و ترکیب بلوک‌های مجلس ملی را تحلیل می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب مجلس پراکنده است؛ دولت و بلوک‌های پارلمانی به‌صورت جداگانه توصیف شده‌اند."
+      }
+    },
+    "GTM": {
+      "country_name_fa": "گواتمالا",
+      "country_name_en": "Guatemala",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "progressivism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "گواتمالا جمهوری واحد با نظام ریاستی و کنگره تک‌مجلسی است. برناردو آروالو در دور دوم انتخابات ۲۰ اوت ۲۰۲۳ با حدود ۶۰٫۹ درصد آرای معتبر پیروز شد و ۱۵ ژانویه ۲۰۲۴ سوگند خورد. جنبش Semilla در انتخابات ۲۰۲۳ تعداد ۲۳ کرسی از ۱۶۰ کرسی کنگره را کسب کرد و دولت فاقد اکثریت مستقل است؛ رقابت حزبی متکثر است اما پراکندگی مجلس، نفوذ شبکه‌های فساد و فشارهای قضایی علیه دولت و نیروهای سیاسی محدودیت جدی ایجاد کرده‌اند. Semilla به‌طور کلی جنبشی اصلاح‌طلب، ضدفساد و نزدیک به سوسیال‌دموکراسی و ترقی‌خواهی است؛ ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Guatemala: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/guatemala/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات منظم و عموماً آزاد را در کنار اثر فساد و جرایم سازمان‌یافته بر عملکرد حکومت ثبت می‌کند."
+        },
+        {
+          "name": "Guatemala: The Global State of Democracy Tracker",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/guatemala",
+          "date": "2025-2026",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نظام ریاستی، ریاست‌جمهوری آروالو، حزب Semilla و نظام انتخاباتی تناسبی را ثبت می‌کند."
+        },
+        {
+          "name": "World Report 2026: Guatemala",
+          "publisher": "Human Rights Watch",
+          "url": "https://www.hrw.org/world-report/2026/country-chapters/guatemala",
+          "date": "2026-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "فشارهای قضایی و سیاسی علیه دولت آروالو، روزنامه‌نگاران و مدافعان حقوق بشر را شرح می‌دهد."
+        },
+        {
+          "name": "Guatemala: 2023 Presidential Election Results",
+          "publisher": "Supreme Electoral Tribunal of Guatemala",
+          "url": "https://www.tse.org.gt/",
+          "date": "2023",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "مرجع رسمی انتخابات کشور؛ نتایج دور دوم ریاست‌جمهوری و ترکیب کنگره در انتخابات ۲۰۲۳ مبنای توصیف انتقال قدرت است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Semilla در انتخابات ۲۰۲۳ اقلیت پارلمانی به دست آورد؛ فشارهای قضایی و مناقشات نهادی در ارزیابی رژیم لحاظ شده‌اند."
+      }
+    },
+    "HND": {
+      "country_name_fa": "هندوراس",
+      "country_name_en": "Honduras",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "هندوراس جمهوری واحد با نظام ریاستی و کنگره ملی تک‌مجلسی است. نصری خوان آسفورا زبلاه از حزب ملی در انتخابات ۳۰ نوامبر ۲۰۲۵ با حدود ۴۰٫۲۷ درصد آرا پیروز شد و در ۲۷ ژانویه ۲۰۲۶ برای دوره ۲۰۲۶ تا ۲۰۳۰ سوگند خورد. حزب ملی ۴۴ کرسی از ۱۲۸ کرسی کنگره را کسب کرد؛ حزب LIBRE با ۵۰ کرسی بزرگ‌ترین فراکسیون و حزب لیبرال با ۲۲ کرسی سومین بلوک است؛ بنابراین دولت آسفورا اقلیت پارلمانی دارد و برای تصویب قوانین نیازمند ائتلاف‌سازی است. انتخابات رقابتی است اما بی‌نظمی‌های اداری، ضعف نهادی، فساد و خشونت بر کیفیت دموکراسی اثر می‌گذارند. حزب ملی عموماً محافظه‌کار و میانه‌راست طبقه‌بندی می‌شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Honduras: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/honduras/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات رقابتی را در کنار بی‌نظمی‌های انتخاباتی، ضعف نهادی، فساد و خشونت ارزیابی می‌کند."
+        },
+        {
+          "name": "Honduras Country Fact Sheet",
+          "publisher": "Ministry of Foreign Affairs, European Union and Cooperation of Spain",
+          "url": "https://www.exteriores.gob.es/Documents/FichasPais/HONDURAS_FICHA%20PAIS.pdf",
+          "date": "2026-02",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "نتایج انتخابات نوامبر ۲۰۲۵، سهم ۴۰٫۲۷ درصدی آسفورا و ترکیب کرسی‌های کنگره را ارائه می‌کند."
+        },
+        {
+          "name": "Presidential Inauguration 2026: Nasry Asfura",
+          "publisher": "Secretariat of National Defense of Honduras",
+          "url": "https://www.sedena.gob.hn/noticias/toma-de-posesion-presidencial-2026",
+          "date": "2026-01",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "تحلیف آسفورا به‌عنوان رئیس‌جمهور دوره ۲۰۲۶ تا ۲۰۳۰ را تأیید می‌کند."
+        },
+        {
+          "name": "Honduras: World Leaders",
+          "publisher": "Central Intelligence Agency",
+          "url": "https://www.cia.gov/resources/world-leaders/foreign-governments/honduras/",
+          "date": "2026-09-17",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "فهرست رسمی رهبران خارجی، ریاست‌جمهوری آسفورا را در سپتامبر ۲۰۲۶ تأیید می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات ۲۰۲۵ و تحلیف ژانویه ۲۰۲۶ لحاظ شده‌اند؛ حزب حاکم در کنگره اکثریت ندارد."
       }
     }
   }
