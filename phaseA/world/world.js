@@ -690,8 +690,11 @@ function bindStatementConversationPrepare() {
     if(!participants.length) { flash('ابتدا کشورهای شرکت‌کننده را انتخاب و تأیید کن.'); return; }
     if(participants.length>19) { flash('حداکثر ۱۹ کشور دیگر می‌توانند در نشست باشند.'); return; }
     var visibility=confidential?'confidential':(normal?'normal':'public');
+    var meetingDate=el('statementMeetingDate');
+    if(!meetingDate || !meetingDate.value) { flash('تاریخ پیشنهادی نشست را انتخاب کن.'); return; }
     var payload={
       participants:participants,
+      meeting_date:meetingDate.value,
       topic:EVENT_TALK_STATE.alliance?'مذاکره با اتحاد':(confidential?'مذاکره محرمانه':(normal?'مذاکره عادی':'گفت‌وگوی عمومی')),
       visibility_mode:visibility,
       negotiation_type:EVENT_TALK_STATE.alliance?'alliance':'standard',
@@ -833,9 +836,23 @@ var DASH_TABS = [
   ['general','اطلاعات عمومی'],['politics','سیاست داخلی'],['society','جمعیت و جامعه'],
   ['economy','اقتصاد و بودجه'],['resources','منابع طبیعی'],['industry','صنعت و زیرساخت'],
   ['military','وضعیت نظامی'],['relations','روابط خارجی'],['pacts','پیمان‌ها'],
-  ['diplomacy','دیپلماسی'],['news','اخبار'],['tribune','تریبون']
+  ['diplomacy','دیپلماسی'],['news','اخبار'],['calendar','تقویم'],['tribune','تریبون']
 ];
 
+function calendarDaysRemaining(dateText) {
+  if (!dateText || !ST || !ST.game_date) return null;
+  var a=String(ST.game_date).split('-'), b=String(dateText).split('-');
+  if (a.length!==3 || b.length!==3) return null;
+  var current=Date.UTC(Number(a[0]),Number(a[1])-1,Number(a[2]));
+  var due=Date.UTC(Number(b[0]),Number(b[1])-1,Number(b[2]));
+  if (!isFinite(current) || !isFinite(due)) return null;
+  return Math.max(0,Math.round((due-current)/86400000));
+}
+function calendarNextDate() {
+  var base=(ST && ST.game_date) ? ST.game_date : '2026-11-05';
+  var p=base.split('-'), d=new Date(Date.UTC(Number(p[0]),Number(p[1])-1,Number(p[2])+1));
+  return d.getUTCFullYear()+'-'+('0'+(d.getUTCMonth()+1)).slice(-2)+'-'+('0'+d.getUTCDate()).slice(-2);
+}
 function dashEsc(v) {
   return String(v == null ? '—' : v).replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
@@ -1400,7 +1417,8 @@ function conversationShortcutHtml(source, canManage) {
   h += '<option value="'+(source === 'pacts' ? 'pact' : 'diplomacy')+'">'+(source === 'pacts' ? 'پیمان / اتحاد' : 'دیپلماسی عمومی')+'</option>';
   h += '<option value="alliance">اتحاد</option><option value="pact">پیمان</option><option value="trade">تجارت</option><option value="ceasefire">آتش‌بس</option><option value="diplomacy">دیپلماسی</option><option value="standard">گفت‌وگوی عادی</option><option value="other">سایر</option></select></label>';
   h += '<label>حالت انتشار <select id="convVisibility_'+suffix+'" style="width:100%"><option value="public">عمومی و قابل پوشش رسانه‌ای</option><option value="normal">غیرعمومی، اما قابل پوشش رسانه‌ای</option><option value="confidential">محرمانه و بدون پوشش رسانه‌ای</option></select></label>';
-  h += '<button type="button" data-conversation-prepare="'+suffix+'">آماده‌سازی نشست و رفتن به تریبون</button>';
+  h += '<label>تاریخ پیشنهادی نشست <input type="date" id="convMeetingDate_'+suffix+'" min="'+dashEsc(calendarNextDate())+'" value="'+dashEsc(calendarNextDate())+'" style="width:100%"></label>';
+  h += '<button type="button" data-conversation-prepare="'+suffix+'">پیشنهاد تاریخ نشست و رفتن به تریبون</button>';
   h += '<div class="muted small" id="convStatus_'+suffix+'">نشست پس از ثبت، در تریبون نمایش داده می‌شود؛ چت همچنان قفل خواهد بود.</div></div>';
   return h;
 }
@@ -1416,12 +1434,14 @@ function bindConversationShortcuts() {
     var status = el('convStatus_'+suffix);
     if (!participants.length) { if(status) status.textContent='حداقل یک کشور را انتخاب کن.'; return; }
     if (participants.length > 19) { if(status) status.textContent='حداکثر ۱۹ کشور دیگر را می‌توان انتخاب کرد.'; return; }
-    var topic = el('convTopic_'+suffix), type = el('convType_'+suffix), visibility = el('convVisibility_'+suffix);
+    var topic = el('convTopic_'+suffix), type = el('convType_'+suffix), visibility = el('convVisibility_'+suffix), meetingDate=el('convMeetingDate_'+suffix);
+    if (!meetingDate || !meetingDate.value) { if(status) status.textContent='تاریخ پیشنهادی نشست را انتخاب کن.'; return; }
     var payload = {
       participants: participants,
       topic: topic ? topic.value : 'گفت‌وگوی دیپلماتیک',
       negotiation_type: type ? type.value : (source === 'pacts' ? 'pact' : 'diplomacy'),
       visibility_mode: visibility ? visibility.value : 'public',
+      meeting_date: meetingDate.value,
       source: source,
       context: {origin_tab:source, selected_country:ST ? ST.player : null, requested_by_player:true}
     };
@@ -1758,7 +1778,31 @@ function bindDiplomacyActions() {
 
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
-  if (tab === 'general') {
+  if (tab === 'calendar') {
+    var events=(ST && ST.calendar_events)||[], pending=(ST && ST.conversation_sessions)||[];
+    h += '<h3>📅 تقویم و روزشمار</h3><div class="dashNote">موعدهای قطعی پس از پذیرش طرف‌ها در اینجا ثبت می‌شوند. شمارش روزها با گذر زمان بازی به‌روزرسانی می‌شود؛ نشست‌ها پیش از موعد و پیش از فعال‌شدن هوش مصنوعی زنده قابل گفت‌وگو نیستند.</div>';
+    if (!events.length) h += '<div class="dashCard">هنوز موعد قطعی در تقویم ثبت نشده است.</div>';
+    for (var ci=events.length-1;ci>=0;ci--) {
+      var ce=events[ci]||{}, dueText=ce.due_date||'—', left=calendarDaysRemaining(dueText), status=left===0?'موعد فرارسیده':('باقی‌مانده: '+left+' روز');
+      h += '<div class="dashCard"><div class="row"><b>'+dashEsc(ce.title||'رویداد زمان‌بندی‌شده')+'</b><span class="badge">'+dashEsc(status)+'</span></div>';
+      h += '<div>تاریخ: '+dashEsc(dueText)+' · دسته: '+dashEsc(ce.category||'عمومی')+'</div>';
+      if (ce.participants && ce.participants.length) h += '<div class="muted small">طرف‌ها: '+dashEsc(ce.participants.join('، '))+'</div>';
+      if (ce.linked_session_id) h += '<div class="muted small">نشست مرتبط: '+dashEsc(ce.linked_session_id)+'</div>';
+      h += '</div>';
+    }
+    var waiting=0;
+    for (var pi=pending.length-1;pi>=0;pi--) {
+      var ps=pending[pi]||{};
+      if (ps.meeting_status==='pending_ai_acceptance' || ps.meeting_status==='pending_player_acceptance') {
+        waiting++;
+        h += '<div class="dashCard"><div class="row"><b>پیشنهاد نشست · '+dashEsc(ps.id||'')+'</b><span class="badge">در انتظار پاسخ</span></div>';
+        h += '<div>'+dashEsc(ps.topic||'نشست دیپلماتیک')+' · تاریخ پیشنهادی: '+dashEsc(ps.meeting_date||'—')+'</div>';
+        h += '<div class="muted small">'+dashEsc((ps.participants||[]).join('، '))+' · تا پذیرش طرف مقابل در تقویم قطعی نمی‌شود.</div></div>';
+      }
+    }
+    if (!waiting) h += '<div class="muted small">پیشنهاد نشستِ در انتظار پاسخ وجود ندارد.</div>';
+    h += '<div class="dashNote">زیرساخت تقویم برای موعدهای سیاسی، اقتصادی، تجاری، دیپلماتیک، نظامی و پروژه‌ها آماده است؛ با اضافه‌شدن هر فرایند زمان‌دار، موعد آن از طریق موتور بازی به همین فهرست متصل می‌شود.</div>';
+  } else if (tab === 'general') {
     h += '<h3>🌐 مشخصات کشور</h3><div class="dashGrid">';
     h += dashMetric('نام کشور',r.name) + dashMetric('نام انگلیسی',r.en || 'ثبت نشده');
     h += dashMetric('قاره / منطقه',r.region) + dashMetric('کد کشور',r.iso3 || 'ثبت نشده');
@@ -2411,7 +2455,10 @@ function renderInbox() {
     html += '<div class="inboxCardTitle">'+dashEsc(m.title || "پیام جدید")+'</div><button type="button" class="inboxShowBtn" data-message-id="'+safeId+'">نمایش</button>';
     html += '<div class="inboxMessageBody" id="inboxBody_'+dashEsc(id)+'" hidden><div>'+dashEsc(m.body || "جزئیات پیام ثبت نشده است.")+'</div><small>'+dashEsc(m.date || "")+' · نوع: '+dashEsc(m.message_type || "message")+'</small>';
     if (m.conversation_id) html += '<div class="inboxFutureNote">این پیام به یک زمینه گفت‌وگو متصل است؛ پاسخ زنده پس از فعال‌شدن فاز F در دسترس قرار می‌گیرد.</div>';
-    if (m.response_allowed || m.conversation_id) html += '<button type="button" class="inboxReplyBtn" data-message-id="' + safeId + '">آماده‌سازی پاسخ در تریبون</button><div class="inboxFutureNote">این گزینه فقط نشست و زمینه پاسخ را آماده می‌کند؛ ارسال پیام و پاسخ هوش مصنوعی تا فاز F غیرفعال است.</div>';
+    if (m.message_type === 'meeting_request' && m.conversation_id) {
+      html += '<div class="inboxFutureNote">تاریخ پیشنهادی نشست: '+dashEsc(m.metadata && m.metadata.meeting_date ? m.metadata.meeting_date : 'ثبت‌شده در نشست')+'</div>';
+      html += '<button type="button" class="inboxMeetingDecision" data-message-id="'+safeId+'" data-meeting-decision="accept">پذیرش تاریخ نشست</button> <button type="button" class="inboxMeetingDecision" data-message-id="'+safeId+'" data-meeting-decision="reject">رد درخواست</button>';
+    } else if (m.response_allowed || m.conversation_id) html += '<label>تاریخ پیشنهادی پاسخ <input type="date" class="inboxMeetingDate" data-message-date="'+safeId+'" min="'+dashEsc(calendarNextDate())+'" value="'+dashEsc(calendarNextDate())+'"></label><button type="button" class="inboxReplyBtn" data-message-id="' + safeId + '">پیشنهاد نشست و رفتن به تریبون</button><div class="inboxFutureNote">تاریخ ابتدا به طرف مقابل پیشنهاد می‌شود؛ تا پذیرش آن، نشست در تقویم قطعی و قابل گفت‌وگو نیست.</div>';
     html += '</div></div>';
   }
   list.innerHTML = html;
@@ -2421,6 +2468,18 @@ function renderInbox() {
     if (body) body.hidden=!body.hidden;
     this.textContent=(body && !body.hidden)?"بستن":"نمایش";
     if (ST) postJSON("api/inbox/read",{message_id:mid},function(r){if(r.ok){loadState();}},function(){});
+  };
+  var decisionButtons=list.querySelectorAll('.inboxMeetingDecision');
+  for (var z=0;z<decisionButtons.length;z++) decisionButtons[z].onclick=function(){
+    var mid=this.getAttribute('data-message-id'), decision=this.getAttribute('data-meeting-decision'), message=null, msgs=(ST&&ST.inbox_messages)||[];
+    for(var mi=0;mi<msgs.length;mi++) if(String(msgs[mi].id||'')===mid){message=msgs[mi];break;}
+    var linkedId=message && message.conversation_id;
+    if(!linkedId){flash('نشست مرتبط با درخواست پیدا نشد.');return;}
+    var btn=this;btn.disabled=true;
+    postJSON('api/conversations/meeting/decision',{conversation_id:linkedId,decision:decision},function(res){
+      if(!res||!res.ok){btn.disabled=false;flash((res&&res.error)||'تصمیم نشست ثبت نشد.');return;}
+      loadState(function(){setInboxOpen(true);flash(decision==='accept'?'تاریخ نشست پذیرفته و به تقویم اضافه شد.':'درخواست نشست رد شد.');});
+    },function(code,response){btn.disabled=false;flash(netErrMsg(code,response)+' — تصمیم نشست ثبت نشد.');});
   };
   var replyButtons=list.querySelectorAll(".inboxReplyBtn");
   for (var q=0;q<replyButtons.length;q++) replyButtons[q].onclick=function(){
@@ -2437,7 +2496,8 @@ function renderInbox() {
       negotiation_type: linked ? (linked.negotiation_type||"standard") : (message.message_type==="treaty_offer"?"pact":(message.message_type==="alliance_invite"?"alliance":"standard")),
       source:"inbox",
       context:{inbox_message_id:mid,sender_country:message.sender_country,message_type:message.message_type||"message",response_to_incoming:true},
-      conversation_id:message.conversation_id||null
+      conversation_id:message.conversation_id||null,
+      meeting_date:(function(){var d=list.querySelector('[data-message-date="'+mid+'"]');return d?d.value:null;})()
     };
     var btn=this; btn.disabled=true;
     postJSON("api/conversations/prepare",payload,function(res){
