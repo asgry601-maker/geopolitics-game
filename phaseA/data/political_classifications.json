@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 61,
-    "pending_countries": 113,
+    "classified_countries": 66,
+    "pending_countries": 108,
     "last_batch": [
-      "MKD",
-      "XKX",
-      "MDA",
-      "BLR",
-      "GEO"
+      "ARM",
+      "AZE",
+      "MNG",
+      "KAZ",
+      "UZB"
     ]
   },
   "countries": {
@@ -4356,6 +4356,419 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "طبقه‌بندی مبتنی بر وضعیت پس از انتخابات ۲۰۲۴ و ارزیابی‌های نهادی پیش از ۵ نوامبر ۲۰۲۶ است؛ تغییرات احتمالی پس از تاریخ مبنا اعمال نشده‌اند."
+      }
+    },
+    "ARM": {
+      "country_name_fa": "ارمنستان",
+      "country_name_en": "Armenia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "civic_nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، ارمنستان جمهوری پارلمانی با رئیس‌جمهور واهاگن خاچاتوریان و نخست‌وزیر نیکول پاشینیان بود. در انتخابات ۷ ژوئن ۲۰۲۶، حزب قرارداد مدنی ۴۹٫۷۵ درصد آرا و ۶۴ کرسی از ۱۰۵ کرسی را به دست آورد؛ ائتلاف ارمنستان قوی ۲۹ و ائتلاف ارمنستان ۱۲ کرسی داشتند. دولت اکثریت تک‌حزبی تشکیل داد. حزب قرارداد مدنی خود را در قالب ایدئولوژی «ارمنستان واقعی» و محوریت دولت، شهروندی و هویت مدنی تعریف می‌کند و از برچسب‌های ایدئولوژیک سنتی فاصله می‌گیرد؛ بنابراین گرایش آن در این طبقه‌بندی مدنی-ملی و عمل‌گرایانه ثبت شده، نه به‌عنوان یک ایدئولوژی رسمی کشور. رقابت حزبی واقعی وجود دارد، اما محدودیت‌های نهادی، مشکلات حاکمیت قانون و مناقشات سیاسی باعث شده وضعیت به‌عنوان دموکراسی محدود ثبت شود.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Election observation report – Armenia 2026",
+          "publisher": "Parliamentary Assembly of the Council of Europe",
+          "url": "https://pace.coe.int/en/files/36276/html",
+          "date": "2026-06-14",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "regime_character"
+          ],
+          "note": "نتایج نهایی انتخابات ۷ ژوئن ۲۰۲۶، ۶۴ کرسی حزب قرارداد مدنی و ترکیب مجلس؛ همچنین اعتراض به نتایج."
+        },
+        {
+          "name": "Armenian National Assembly 2026 General Election",
+          "publisher": "IFES Election Guide",
+          "url": "https://www.electionguide.org/elections/id/5074/",
+          "date": "2026-06-07",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ساختار مجلس، رئیس‌جمهور، نخست‌وزیر و نظام انتخاب نخست‌وزیر از اکثریت پارلمانی."
+        },
+        {
+          "name": "Armenia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/armenia/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی، رقابت انتخاباتی، آزادی‌های مدنی و ضعف‌های نهادی."
+        },
+        {
+          "name": "Concept of the Nation: Armenian Political Forces",
+          "publisher": "Friedrich Naumann Foundation",
+          "url": "https://www.freiheit.org/sites/default/files/2026-01/zolyan_vardanyan_concept_of_nation_arm_political_forces_fnf_2025.pdf",
+          "date": "2026-01-01",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "تحلیل ایده «ارمنستان واقعی»، دولت‌محوری، هویت مدنی و گرایش اصلاح‌طلبانه حزب قرارداد مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت دولت و اکثریت بر پایه انتخابات ژوئن و تشکیل مجلس در اوت ۲۰۲۶ ثبت شده است. ایدئولوژی حزب قرارداد مدنی خودتعریف‌شده و غیرکلاسیک است؛ برچسب ایدئولوژیک با احتیاط و اطمینان متوسط ثبت شده."
+      }
+    },
+    "AZE": {
+      "country_name_fa": "جمهوری آذربایجان",
+      "country_name_en": "Azerbaijan",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "asymmetric_devolution",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، الهام علی‌اف رئیس‌جمهور و حزب آذربایجان نوین (YAP) نیروی مسلط سیاسی کشور بودند. در انتخابات پارلمانی ۱ سپتامبر ۲۰۲۴، YAP تعداد ۶۸ کرسی از ۱۲۵ کرسی را به دست آورد و ۴۴ کرسی نیز به نامزدهای مستقل رسید که بسیاری از آنان نزدیک به رئیس‌جمهور توصیف شده‌اند. ناظران OSCE انتخابات را فاقد رقابت واقعی و در محیطی محدودکننده برای آزادی‌های سیاسی و رسانه‌ای ارزیابی کردند. قانون اساسی جمهوری واحد و ریاستی را تعریف می‌کند، اما نخجوان دارای وضعیت خودمختاری ویژه است؛ به همین دلیل ساختار سرزمینی به‌صورت واگذاری نامتقارن ثبت شده است. ایدئولوژی رسمی مستقل و صریحی برای دولت ثبت نشده؛ YAP خود را حزب میانه‌راست معرفی می‌کند و بر آذربایجان‌گرایی، استقلال ملی، ارزش‌های سنتی و دولت نیرومند تأکید دارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Constitution of the Republic of Azerbaijan",
+          "publisher": "Office of the President of Azerbaijan",
+          "url": "https://president.az/en/pages/view/azerbaijan/constitution",
+          "date": "1995-11-12",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد قانون اساسی درباره جمهوری واحد، تفکیک قوا و واگذاری قوه مجریه به رئیس‌جمهور."
+        },
+        {
+          "name": "Political system",
+          "publisher": "Office of the Prosecutor General of Azerbaijan",
+          "url": "https://www.genprosecutor.gov.az/en/page/azerbaycan/siyasi-sistem",
+          "date": "2020-01-01",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "توصیف رسمی ساختار ریاستی، نهادهای سه‌گانه و وضعیت خودمختار نخجوان."
+        },
+        {
+          "name": "Azerbaijan National Assembly September 2024 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/AZ/AZ-LC01/election/AZ-LC01-E20240901/",
+          "date": "2024-09-01",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات: ۶۸ کرسی YAP، ۴۴ مستقل و حضور محدود احزاب دیگر."
+        },
+        {
+          "name": "Azerbaijan’s elections devoid of real competition",
+          "publisher": "OSCE/ODIHR",
+          "url": "https://odihr.osce.org/odihr/elections/575509",
+          "date": "2024-09-02",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی ناظران از نبود بدیل سیاسی واقعی، محدودیت آزادی‌های بنیادین و چارچوب انتخاباتی."
+        },
+        {
+          "name": "Azerbaijan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/azerbaijan/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، تضعیف مخالفان و وضعیت اقتدارگرای بسته."
+        },
+        {
+          "name": "Program of the New Azerbaijan Party",
+          "publisher": "New Azerbaijan Party",
+          "url": "https://yap.org.az/en/view/pages/9",
+          "date": "2026-01-01",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "اصول اعلامی حزب شامل آذربایجان‌گرایی، میهن‌دوستی، استقلال ملی و ارزش‌های سنتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی مبتنی بر قانون اساسی، نتایج انتخابات ۲۰۲۴ و ارزیابی‌های ۲۰۲۶ است؛ وضعیت سیاسی پس از ۵ نوامبر در baseline وارد نشده است."
+      }
+    },
+    "MNG": {
+      "country_name_fa": "مغولستان",
+      "country_name_en": "Mongolia",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در تاریخ مبنا، رئیس‌جمهور اوخناگین خورلسوخ و نخست‌وزیر نیام-اوسورین اوچرال بودند. مغولستان نظام نیمه‌ریاستی دارد: رئیس‌جمهور رئیس کشور و فرمانده کل قواست و نخست‌وزیر ریاست دولت و کابینه را برعهده دارد. انتخابات ۲۰۲۴ مجلس ۱۲۶ نفره، ۶۸ کرسی برای حزب مردم مغولستان (MPP)، ۴۲ کرسی برای حزب دموکرات، ۸ کرسی برای HUN و ۸ کرسی برای دو نیروی کوچک‌تر به همراه داشت. ائتلاف اولیه MPP-DP-HUN در ۲۰۲۵ فروپاشید؛ پس از استعفای نخست‌وزیر در مارس ۲۰۲۶، اوچرال از MPP به نخست‌وزیری رسید و کابینه‌اش شامل اعضایی از HUN و ائتلاف ملی نیز بود. MPP، حزب جانشین حزب حاکم دوران سوسیالیستی، در دوره معاصر خود را سوسیال‌دموکرات معرفی می‌کند. ترکیب ائتلاف جاری در تاریخ مبنا چندجریانی است، اما برای احزاب کوچک‌تر برچسب دقیق‌تری از عمل‌گرایی ترکیبی با اطمینان بالا قابل دفاع نیست. مغولستان همچنان انتخابات چندحزبی رقابتی و امکان واقعی جابه‌جایی قدرت دارد.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Mongolia: In Brief",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R49352.html",
+          "date": "2026-09-16",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "شرح نظام نیمه‌ریاستی، تغییر نخست‌وزیر در مارس ۲۰۲۶ و ترکیب کابینه اوچرال با HUN و ائتلاف ملی."
+        },
+        {
+          "name": "The Constitution of Mongolia",
+          "publisher": "Constitutional Court of Mongolia",
+          "url": "https://en.constitutionalcourt.mn/the-constitution-of-mongolia/",
+          "date": "2024-01-01",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "اختیارات پارلمان، نخست‌وزیر و ساختار نهادهای مرکزی در قانون اساسی اصلاح‌شده."
+        },
+        {
+          "name": "Mongolia State Great Hural June 2024 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/MN/MN-LC01/election/MN-LC01-E20240628/",
+          "date": "2024-06-28",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "توزیع ۱۲۶ کرسی، سهم MPP و احزاب و ائتلاف اولیه پس از انتخابات."
+        },
+        {
+          "name": "Mongolia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/mongolia/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی مغولستان به‌عنوان دموکراسی انتخاباتی و وجود رقابت چندحزبی و حقوق سیاسی."
+        },
+        {
+          "name": "EU-Mongolia relations",
+          "publisher": "European Parliamentary Research Service",
+          "url": "https://www.europarl.europa.eu/thinktank/en/academic/EPRS_BRI%282024%29762379",
+          "date": "2024-01-01",
+          "supports": [
+            "government_subform",
+            "ruling_party_ideology"
+          ],
+          "note": "توصیف نظام نیمه‌ریاستی و معرفی MPP به‌عنوان حزبی با گرایش سوسیال‌دموکرات."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب کابینه پس از تحولات ۲۰۲۵ و مارس ۲۰۲۶ بر اساس گزارش CRS تا سپتامبر ۲۰۲۶ ثبت شده است. ایدئولوژی ائتلاف به‌صورت محتاطانه و ترکیبی درج شده است."
+      }
+    },
+    "KAZ": {
+      "country_name_fa": "قزاقستان",
+      "country_name_en": "Kazakhstan",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، قاسم‌ژومارت توقایف رئیس‌جمهور و اولژاس بکتنوف نخست‌وزیر قزاقستان بودند. قانون اساسی جدید که در همه‌پرسی ۱۵ مارس ۲۰۲۶ تصویب و از اول ژوئیه لازم‌الاجرا شد، مجلس دو‌مجلسی را با مجلس واحد کورولتای جایگزین کرد و مقام معاون رئیس‌جمهور را بازگرداند؛ با این حال، ساختار ریاستی و دوره هفت‌ساله غیرقابل تمدید در متن جدید باقی ماند. در انتخابات ۲۳ اوت ۲۰۲۶، حزب تازه‌تأسیس Ädilet با ۱۱۰ کرسی از ۱۴۵ کرسی اکثریت بسیار بزرگی گرفت. Ädilet در ژوئن ۲۰۲۶ با پیوستن/ادغام حزب پیشین حاکم Amanat گسترش یافت. رئیس‌جمهور طبق چارچوب جدید از عضویت حزبی منع شده است؛ بنابراین Ädilet به‌عنوان نیروی پارلمانی مسلط و حامی دولت ثبت می‌شود، نه حزب عضویت شخصی رئیس‌جمهور. برنامه حزب بر عدالت، نظم قانونی، میهن‌دوستی، مسئولیت و توسعه عمل‌گرایانه تأکید دارد و ایدئولوژی رسمی کشور اعلام نشده است. محدودیت شدید رقابت و نبود امکان واقعی گردش قدرت، نظام را اقتدارگرای بسته و نظام حزبی را غیررقابتیِ مسلط ثبت می‌کند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Kazakhstan: New Constitution Adopted Following Nationwide Referendum",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/global-legal-monitor/2026-05-27/kazakhstan-new-constitution-adopted-following-nationwide-referendum/",
+          "date": "2026-05-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "شرح قانون اساسی جدید، دوره ریاست‌جمهوری هفت‌ساله، ایجاد معاونت ریاست‌جمهوری و جایگزینی مجلس دو‌مجلسی."
+        },
+        {
+          "name": "Kazakhstan Kurultai August 2026 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/KZ/KZ-LC01/election/KZ-LC01-E20260823/",
+          "date": "2026-08-23",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات ۲۳ اوت: ۱۱۰ کرسی Ädilet از ۱۴۵ کرسی و ترکیب احزاب دیگر؛ گزارش محدودیت تکثر سیاسی."
+        },
+        {
+          "name": "Factsheet on Kazakhstan’s 2026 Kurultai Election",
+          "publisher": "Ministry of Foreign Affairs of Kazakhstan",
+          "url": "https://www.gov.kz/org/mfa-strasbourg/press/news/details/1282841?lang=en",
+          "date": "2026-08-31",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تأیید رسمی نتیجه انتخابات، ادغام Amanat در Ädilet و اطلاعات انتقال به ساختار جدید."
+        },
+        {
+          "name": "Kazakhstan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/kazakhstan/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی انتخابات غیرآزاد، حاشیه‌رانی مخالفان واقعی و تمرکز قدرت."
+        },
+        {
+          "name": "About the Adilet Party",
+          "publisher": "Adilet Party",
+          "url": "https://adilet-partiyasy.kz/en",
+          "date": "2026-01-01",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "ارزش‌های اعلامی حزب: عدالت، میهن‌دوستی، مسئولیت، پیشرفت و نهادهای کارآمد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی ساختاری بر پایه قانون اساسی ۲۰۲۶ و انتخابات اوت ۲۰۲۶ است. به دلیل ادغام تازه Amanat در Ädilet و ساختار سیاسی در حال گذار، گرایش ایدئولوژیک حزب با اطمینان متوسط و به‌صورت عمل‌گرایانه ثبت شده است."
+      }
+    },
+    "UZB": {
+      "country_name_fa": "ازبکستان",
+      "country_name_en": "Uzbekistan",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، شوکت میرضیایف رئیس‌جمهور و عبدالله عارف‌اف نخست‌وزیر بودند. قانون اساسی ۲۰۲۳ جمهوری را تعریف می‌کند و در تقسیم اختیارات، مدلی نیمه‌ریاستی برقرار کرده است؛ با این حال، رئیس‌جمهور چارچوب اصلی قوه مجریه را تعیین می‌کند و در عمل قدرت به‌شدت ریاست‌محور است. در انتخابات پارلمانی اکتبر ۲۰۲۴، حزب لیبرال‌دموکرات ازبکستان (UzLiDeP) با ۶۴ کرسی از ۱۵۰ کرسی بزرگ‌ترین فراکسیون شد؛ چهار حزب دیگر نیز کرسی گرفتند، اما هیچ حزب مخالفی اجازه فعالیت قانونی نداشت و همه احزاب حاضر از دولت حمایت می‌کردند. برنامه رسمی UzLiDeP بر اقتصاد بازار، کارآفرینی، آزادسازی اقتصادی، خدمات اجتماعی و دولت مدرن تأکید دارد؛ ازاین‌رو گرایش حزب حاکم لیبرال و عمل‌گرایانه ثبت شده است. ایدئولوژی رسمی کشور جداگانه اعلام نشده و نباید با عنوان «لیبرال‌دموکرات» حزب حاکم یکی گرفته شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Constitution of the Republic of Uzbekistan",
+          "publisher": "Government of Uzbekistan",
+          "url": "https://gov.uz/en/mfa/sections/view/14475",
+          "date": "2023-04-30",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد ۱، ۱۱، ۱۰۹، ۱۱۴ و ۱۱۹ درباره جمهوری، تفکیک قوا و اختیارات رئیس‌جمهور و دولت."
+        },
+        {
+          "name": "Assessment of the National Integrity System of Uzbekistan",
+          "publisher": "United Nations Development Programme",
+          "url": "https://www.undp.org/sites/g/files/zskgke326/files/2026-04/nisa-uzbekistan_eng_04.03.2026.pdf",
+          "date": "2026-04-03",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "تحلیل مدل نیمه‌ریاستی قانون اساسی و غلبه عملی ریاست‌جمهوری بر دولت و پارلمان."
+        },
+        {
+          "name": "Uzbekistan Legislative Chamber October 2024 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/UZ/UZ-LC01/election/UZ-LC01-E20241027/",
+          "date": "2024-10-27",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات: ۶۴ کرسی UzLiDeP، ۲۹ کرسی Milliy Tiklanish و عدم حضور اپوزیسیون ثبت‌شده."
+        },
+        {
+          "name": "Uzbekistan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/uzbekistan/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی کشور به‌عنوان نظام اقتدارگرای بسته، نبود احزاب مخالف قانونی و کنترل نهادهای منتخب."
+        },
+        {
+          "name": "Election Programme of UzLiDeP 2025–2029",
+          "publisher": "UzLiDeP",
+          "url": "https://www.uzlidep.uz/en/menu/the-partys-election-prog",
+          "date": "2024-09-07",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "برنامه رسمی حزب درباره کارآفرینی، آزادسازی اقتصادی، رشد بازارمحور، خدمات اجتماعی و دولت مدرن."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت دولت بر پایه قانون اساسی ۲۰۲۳، انتخابات اکتبر ۲۰۲۴ و ارزیابی‌های ۲۰۲۶ ثبت شده است؛ هیچ تحول پس از ۵ نوامبر در baseline وارد نشده است."
       }
     }
   }
