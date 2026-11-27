@@ -626,7 +626,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         TTO: '2025 Kamla Persad-Bissessar (cropped).jpg',
         CRI: 'Laura Fernandez Delgado presidential inauguration 20260508 0515 (cropped).jpg',
         PAN: 'José Raúl Mulino 2025.jpg',
-        GTM: 'Retrato oficial de Presidente Bernardo Arévalo (cropped).jpg'
+        GTM: 'Retrato oficial de Presidente Bernardo Arévalo (cropped).jpg',
+        HND: 'Nasry Asfura in January 2026.jpg',
+        SLV: 'Presidente Bukele.jpg',
+        NIC: 'Daniel Ortega on July 20, 2024 (cropped).jpg',
+        BLZ: 'Johnny Briceño (52135383761) (cropped).jpg',
+        BHS: 'Philip "Brave" Davis (profile).jpg',
+        BRB: 'Foreign Secretary Yvette Cooper meets with Barbados Prime Minister - 5535661749 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
