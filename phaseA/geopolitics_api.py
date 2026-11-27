@@ -248,6 +248,8 @@ def api_state(s):
         social_groups=(s.get("social_groups") or {}).get(P, {}),
         legitimacy=s.get("legitimacy", 50.0),
         regime_crisis=s.get("regime_crisis"),
+        game_events=(s.get("game_events") or [])[-50:],
+        event_sequence=s.get("event_sequence", 0),
         political_history=(s.get("political_history") or [])[-10:],
         hidden=True,
     )
