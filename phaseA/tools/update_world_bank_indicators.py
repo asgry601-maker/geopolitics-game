@@ -107,10 +107,7 @@ def main():
     )
 
     backup = DATA_PATH + ".bak"
-    with open(backup, "w", encoding="utf-8") as handle:
-        json.dump(json.load(open(DATA_PATH, "r", encoding="utf-8")), handle,
-                  ensure_ascii=False, indent=2)
-        handle.write("\n")
+    shutil.copy2(DATA_PATH, backup)
 
     temp_path = DATA_PATH + ".tmp"
     with open(temp_path, "w", encoding="utf-8") as handle:
