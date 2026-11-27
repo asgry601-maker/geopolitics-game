@@ -244,6 +244,8 @@ def api_state(s):
         player_sanction_history=(s.get("player_sanction_history") or [])[-50:],
         inbox_messages=(s.get("inbox_messages") or [])[-100:],
         inbox_unread_count=sum(1 for item in (s.get("inbox_messages") or []) if isinstance(item, dict) and item.get("status") == "unread"),
+        conversation_sessions=(s.get("conversation_sessions") or [])[-50:],
+        conversation_sequence=s.get("conversation_sequence", 0),
         eliminated=list(s.get("eliminated", [])),
         iaea_heat=s.get("iaea_heat", 0), un_censures=s.get("un_censures", 0),
         iaea_out=bool(s.get("iaea_out", False)),
@@ -546,6 +548,28 @@ class Handler(BaseHTTPRequestHandler):
                 res = run_engine(["init", country])
             self._json(dict(res, state=api_state(get_state(True))))
             return
+        elif path == "api/conversations/prepare":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.prepare_conversation_session(
+                        current,
+                        body.get("participants"),
+                        topic=body.get("topic", "گفت‌وگوی دیپلماتیک"),
+                        visibility_mode=body.get("visibility_mode", "public"),
+                        negotiation_type=body.get("negotiation_type", "standard"),
+                        source=body.get("source", "system"),
+                        context=body.get("context"),
+                        conversation_id=body.get("conversation_id"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در آماده‌سازی نشست گفت‌وگو: %s" % exc), 500)
         elif path == "api/inbox/read":
             if s is None:
                 self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
