@@ -1049,6 +1049,157 @@ def load():
         conversation_save_needed = True
     if conversation_save_needed:
         save(s)
+
+    # قرارداد پایدار پیمان‌ها و اتحادها؛ مهاجرت داده‌های قدیمی بدون پذیرش ساختگی
+    agreement_save_needed = False
+    for key in ("pact_records", "alliance_records", "agreement_proposals", "agreement_history"):
+        if not isinstance(s.get(key), list):
+            s[key] = []
+            agreement_save_needed = True
+    pact_types = ("non_aggression", "trade", "defense", "cooperation", "transit", "economic", "other")
+    clean_pacts = []
+    seen_pact_ids = set()
+    max_agreement_number = 0
+    for record in s.get("pact_records", []):
+        if not isinstance(record, dict):
+            agreement_save_needed = True
+            continue
+        rid = str(record.get("id") or "")
+        parties = record.get("members")
+        if not isinstance(parties, list):
+            parties = record.get("parties") if isinstance(record.get("parties"), list) else []
+        parties = list(dict.fromkeys([n for n in parties if isinstance(n, str) and n in s.get("world", {})]))
+        if len(parties) < 2 or record.get("type") not in pact_types or record.get("status") not in ("active", "cancelled", "expired"):
+            agreement_save_needed = True
+            continue
+        if not rid:
+            max_agreement_number += 1
+            rid = "PACT-LEGACY-%06d" % max_agreement_number
+            agreement_save_needed = True
+        if rid in seen_pact_ids:
+            agreement_save_needed = True
+            continue
+        seen_pact_ids.add(rid)
+        record.update({
+            "id": rid, "type": record.get("type", "non_aggression"),
+            "members": parties, "status": record.get("status", "active"),
+            "created_date": str(record.get("created_date") or s.get("game_date", "")),
+            "updated_date": str(record.get("updated_date") or record.get("created_date") or s.get("game_date", "")),
+            "legacy": bool(record.get("legacy", False))
+        })
+        clean_pacts.append(record)
+    s["pact_records"] = clean_pacts[-500:]
+
+    clean_alliances = []
+    seen_alliance_ids = set()
+    for record in s.get("alliance_records", []):
+        if not isinstance(record, dict):
+            agreement_save_needed = True
+            continue
+        rid = str(record.get("id") or "")
+        members = record.get("members")
+        if not isinstance(members, list):
+            members = []
+        members = list(dict.fromkeys([n for n in members if isinstance(n, str) and n in s.get("world", {})]))
+        if len(members) < 2 or record.get("status") not in ("active", "dissolved"):
+            agreement_save_needed = True
+            continue
+        if not rid:
+            max_agreement_number += 1
+            rid = "ALLY-LEGACY-%06d" % max_agreement_number
+            agreement_save_needed = True
+        if rid in seen_alliance_ids:
+            agreement_save_needed = True
+            continue
+        seen_alliance_ids.add(rid)
+        record.update({
+            "id": rid, "name": str(record.get("name") or "اتحاد ثبت‌شده"),
+            "type": str(record.get("type") or "military"),
+            "members": members, "status": record.get("status", "active"),
+            "created_date": str(record.get("created_date") or s.get("game_date", "")),
+            "updated_date": str(record.get("updated_date") or record.get("created_date") or s.get("game_date", "")),
+            "legacy": bool(record.get("legacy", False))
+        })
+        clean_alliances.append(record)
+    s["alliance_records"] = clean_alliances[-300:]
+
+    # تبدیل فهرست‌های قدیمی به پرونده‌های دوجانبه؛ شبکه جهانیِ حدس‌زده ساخته نمی‌شود
+    player_name = s.get("player")
+    known_pact_pairs = set(tuple(sorted(x.get("members", []))) for x in s["pact_records"] if x.get("status") == "active")
+    for partner in s.get("pacts", []):
+        if isinstance(partner, str) and partner in s.get("world", {}) and partner != player_name:
+            pair = tuple(sorted([player_name, partner]))
+            if pair not in known_pact_pairs:
+                max_agreement_number += 1
+                s["pact_records"].append({
+                    "id": "PACT-LEGACY-%06d" % max_agreement_number,
+                    "type": "non_aggression", "name": "پیمان عدم تجاوز (داده قدیمی)",
+                    "members": [player_name, partner], "status": "active",
+                    "created_date": str(s.get("game_date", "")),
+                    "updated_date": str(s.get("game_date", "")),
+                    "terms": {}, "legacy": True
+                })
+                known_pact_pairs.add(pair)
+                agreement_save_needed = True
+    known_alliance_pairs = set(tuple(sorted(x.get("members", []))) for x in s["alliance_records"] if x.get("status") == "active" and x.get("legacy"))
+    for partner in s.get("allies", []):
+        if isinstance(partner, str) and partner in s.get("world", {}) and partner != player_name:
+            pair = tuple(sorted([player_name, partner]))
+            if pair not in known_alliance_pairs:
+                max_agreement_number += 1
+                s["alliance_records"].append({
+                    "id": "ALLY-LEGACY-%06d" % max_agreement_number,
+                    "name": "اتحاد دوجانبه ثبت‌شده (داده قدیمی)",
+                    "type": "military", "members": [player_name, partner],
+                    "status": "active", "created_date": str(s.get("game_date", "")),
+                    "updated_date": str(s.get("game_date", "")),
+                    "terms": {}, "legacy": True
+                })
+                known_alliance_pairs.add(pair)
+                agreement_save_needed = True
+
+    clean_proposals = []
+    valid_proposal_statuses = ("pending", "accepted", "rejected", "cancelled", "completed")
+    for proposal in s.get("agreement_proposals", []):
+        if not isinstance(proposal, dict) or not proposal.get("id"):
+            agreement_save_needed = True
+            continue
+        parties = proposal.get("parties")
+        if not isinstance(parties, list):
+            parties = []
+        parties = list(dict.fromkeys([n for n in parties if isinstance(n, str) and n in s.get("world", {})]))
+        if len(parties) < 2 or proposal.get("kind") not in ("pact", "alliance") or proposal.get("status") not in valid_proposal_statuses:
+            agreement_save_needed = True
+            continue
+        proposal["parties"] = parties
+        proposal.setdefault("accepted_by", [])
+        proposal.setdefault("rejected_by", [])
+        proposal.setdefault("created_date", s.get("game_date", ""))
+        proposal.setdefault("updated_date", proposal.get("created_date", ""))
+        proposal.setdefault("terms", {})
+        proposal.setdefault("conversation_id", None)
+        clean_proposals.append(proposal)
+        try:
+            max_agreement_number = max(max_agreement_number, int(str(proposal.get("id", "")).split("-")[-1]))
+        except (TypeError, ValueError):
+            pass
+    if clean_proposals != s.get("agreement_proposals"):
+        agreement_save_needed = True
+    s["agreement_proposals"] = clean_proposals[-300:]
+    try:
+        agreement_seq = max(0, int(s.get("agreement_sequence", 0)))
+    except (TypeError, ValueError):
+        agreement_seq = 0
+        agreement_save_needed = True
+    if agreement_seq < max_agreement_number:
+        agreement_seq = max_agreement_number
+        agreement_save_needed = True
+    if s.get("agreement_sequence") != agreement_seq:
+        s["agreement_sequence"] = agreement_seq
+        agreement_save_needed = True
+    s["agreement_history"] = [x for x in s.get("agreement_history", []) if isinstance(x, dict)][-500:]
+    if agreement_save_needed:
+        save(s)
     return s
 
 
@@ -1824,6 +1975,185 @@ def announce(s, kind):
     ai_react(s, kind)
     save(s)
 
+
+
+# ---------- قراردادهای پیمان و اتحاد؛ پذیرش کشورها فقط از مسیر تصمیم معتبر ----------
+AGREEMENT_PACT_TYPES = {
+    "non_aggression": "عدم تجاوز",
+    "trade": "تجاری",
+    "defense": "دفاعی",
+    "cooperation": "همکاری",
+    "transit": "ترانزیت",
+    "economic": "اقتصادی",
+    "other": "سایر"
+}
+
+
+def _agreement_validate_parties(s, parties):
+    if not isinstance(parties, list):
+        raise ValueError("فهرست کشورهای توافق نامعتبر است.")
+    world = s.get("world") or {}
+    clean = []
+    for name in parties:
+        if not isinstance(name, str) or name not in world:
+            raise ValueError("کشور نامعتبر در فهرست توافق: %s" % name)
+        if name in (s.get("eliminated") or []):
+            raise ValueError("کشور حذف‌شده نمی‌تواند عضو توافق باشد: %s" % name)
+        if name not in clean:
+            clean.append(name)
+    player = s.get("player")
+    if player not in clean:
+        clean.insert(0, player)
+    if len(clean) < 2 or len(clean) > 20:
+        raise ValueError("توافق باید بین ۲ تا ۲۰ کشور باشد.")
+    return clean
+
+
+def submit_agreement_proposal(s, kind, parties, pact_type="non_aggression",
+                              alliance_name="", terms=None, conversation_id=None):
+    """ثبت پیشنهاد در انتظار پاسخ؛ هیچ عضویت یا اثر دیپلماتیکی فوراً اعمال نمی‌شود."""
+    if kind not in ("pact", "alliance"):
+        raise ValueError("نوع توافق باید پیمان یا اتحاد باشد.")
+    clean = _agreement_validate_parties(s, parties)
+    if kind == "pact" and pact_type not in AGREEMENT_PACT_TYPES:
+        raise ValueError("نوع پیمان انتخاب‌شده معتبر نیست.")
+    if not isinstance(terms, dict):
+        terms = {}
+    try:
+        safe_terms = json.loads(json.dumps(terms, ensure_ascii=False))
+    except (TypeError, ValueError):
+        raise ValueError("شرایط توافق قابل ذخیره نیست.")
+    if len(json.dumps(safe_terms, ensure_ascii=False)) > 8000:
+        raise ValueError("متن شرایط توافق بیش از حد مجاز است.")
+    if conversation_id and not get_conversation_session(s, conversation_id):
+        raise ValueError("نشست گفت‌وگوی مرتبط پیدا نشد.")
+    for old in s.get("agreement_proposals") or []:
+        if old.get("status") == "pending" and old.get("kind") == kind and set(old.get("parties") or []) == set(clean):
+            if kind != "pact" or old.get("pact_type") == pact_type:
+                raise ValueError("پیشنهاد مشابهی برای این کشورها هنوز در انتظار پاسخ است.")
+    seq = int(s.get("agreement_sequence", 0)) + 1
+    s["agreement_sequence"] = seq
+    today = s.get("game_date", "")
+    proposal = {
+        "id": "AGR-%06d" % seq, "kind": kind, "pact_type": pact_type if kind == "pact" else None,
+        "name": str(alliance_name or "").strip()[:100] if kind == "alliance" else AGREEMENT_PACT_TYPES.get(pact_type, ""),
+        "parties": clean, "initiator": s.get("player"), "status": "pending",
+        "accepted_by": [s.get("player")], "rejected_by": [],
+        "created_date": today, "updated_date": today,
+        "terms": safe_terms, "conversation_id": conversation_id,
+        "live_ai_required": True, "live_ai_status": "locked_until_phase_f"
+    }
+    s.setdefault("agreement_proposals", []).append(proposal)
+    s.setdefault("agreement_history", []).append({
+        "date": today, "action": "proposal_created", "proposal_id": proposal["id"],
+        "kind": kind, "parties": list(clean), "actor": s.get("player")
+    })
+    s["agreement_proposals"] = s["agreement_proposals"][-300:]
+    s["agreement_history"] = s["agreement_history"][-500:]
+    msg(s, "پیشنهاد %s %s ثبت شد؛ تا دریافت پذیرش معتبر از همه طرف‌ها توافق فعال نمی‌شود." %
+        ("پیمان" if kind == "pact" else "اتحاد", proposal["id"]))
+    return {"ok": True, "proposal": proposal,
+            "note": "پیشنهاد ذخیره شد؛ عضویت و اثر توافق تا پذیرش همه طرف‌ها غیرفعال است."}
+
+
+def decide_agreement_proposal(s, proposal_id, decision):
+    """بازیکن فقط می‌تواند دعوت/پیشنهاد دریافتی را بپذیرد یا رد کند."""
+    if decision not in ("accept", "reject"):
+        raise ValueError("تصمیم نامعتبر است.")
+    proposal = None
+    for item in s.get("agreement_proposals") or []:
+        if isinstance(item, dict) and item.get("id") == proposal_id:
+            proposal = item
+            break
+    if proposal is None or proposal.get("status") != "pending":
+        raise ValueError("پیشنهاد فعال و در انتظار پاسخ پیدا نشد.")
+    player = s.get("player")
+    if proposal.get("initiator") == player or player not in (proposal.get("parties") or []):
+        raise ValueError("این پیشنهاد، دعوت دریافتی از کشور دیگر نیست.")
+    today = s.get("game_date", "")
+    if decision == "reject":
+        proposal["status"] = "rejected"
+        proposal.setdefault("rejected_by", []).append(player)
+        action = "proposal_rejected"
+    else:
+        accepted = proposal.setdefault("accepted_by", [])
+        if player not in accepted:
+            accepted.append(player)
+        if set(accepted) == set(proposal.get("parties") or []):
+            proposal["status"] = "accepted"
+            if proposal.get("kind") == "pact":
+                seq = int(s.get("agreement_sequence", 0)) + 1
+                s["agreement_sequence"] = seq
+                record = {
+                    "id": "PACT-%06d" % seq, "type": proposal.get("pact_type", "non_aggression"),
+                    "name": proposal.get("name") or AGREEMENT_PACT_TYPES.get(proposal.get("pact_type"), ""),
+                    "members": list(proposal.get("parties") or []), "status": "active",
+                    "created_date": today, "updated_date": today, "terms": proposal.get("terms") or {},
+                    "legacy": False, "proposal_id": proposal_id
+                }
+                s.setdefault("pact_records", []).append(record)
+                if player == s.get("player"):
+                    for other in record["members"]:
+                        if other != player and other not in s.setdefault("pacts", []):
+                            s["pacts"].append(other)
+            else:
+                seq = int(s.get("agreement_sequence", 0)) + 1
+                s["agreement_sequence"] = seq
+                record = {
+                    "id": "ALLY-%06d" % seq, "name": proposal.get("name") or "اتحاد جدید",
+                    "type": "military", "members": list(proposal.get("parties") or []),
+                    "status": "active", "created_date": today, "updated_date": today,
+                    "terms": proposal.get("terms") or {}, "legacy": False,
+                    "proposal_id": proposal_id
+                }
+                s.setdefault("alliance_records", []).append(record)
+                if player == s.get("player"):
+                    for other in record["members"]:
+                        if other != player and other not in s.setdefault("allies", []):
+                            s["allies"].append(other)
+        action = "proposal_accepted"
+    proposal["updated_date"] = today
+    s.setdefault("agreement_history", []).append({
+        "date": today, "action": action, "proposal_id": proposal_id, "actor": player,
+        "status": proposal.get("status")
+    })
+    s["agreement_history"] = s["agreement_history"][-500:]
+    return {"ok": True, "proposal": proposal,
+            "note": "تصمیم ثبت شد؛ هیچ پاسخ یا پذیرشی از طرف کشورهای دیگر جعل نشده است."}
+
+
+def cancel_pact_record(s, pact_id):
+    for record in s.get("pact_records") or []:
+        if isinstance(record, dict) and record.get("id") == pact_id and record.get("status") == "active":
+            if s.get("player") not in (record.get("members") or []):
+                raise ValueError("بازیکن عضو این پیمان نیست.")
+            record["status"] = "cancelled"
+            record["updated_date"] = s.get("game_date", "")
+            player = s.get("player")
+            s["pacts"] = [n for n in s.get("pacts", []) if n not in record.get("members", []) or n == player]
+            s["agreement_history"].append({"date": s.get("game_date", ""), "action": "pact_cancelled",
+                                           "agreement_id": pact_id, "actor": player})
+            s["agreement_history"] = s["agreement_history"][-500:]
+            return {"ok": True, "record": record}
+    raise ValueError("پیمان فعال موردنظر پیدا نشد.")
+
+
+def leave_alliance(s, alliance_id):
+    for record in s.get("alliance_records") or []:
+        if isinstance(record, dict) and record.get("id") == alliance_id and record.get("status") == "active":
+            player = s.get("player")
+            if player not in (record.get("members") or []):
+                raise ValueError("کشور بازیکن عضو این اتحاد نیست.")
+            record["members"] = [n for n in record.get("members", []) if n != player]
+            record["updated_date"] = s.get("game_date", "")
+            if len(record["members"]) < 2:
+                record["status"] = "dissolved"
+            s["allies"] = [n for n in s.get("allies", []) if n not in record["members"]]
+            s["agreement_history"].append({"date": s.get("game_date", ""), "action": "alliance_left",
+                                           "agreement_id": alliance_id, "actor": player})
+            s["agreement_history"] = s["agreement_history"][-500:]
+            return {"ok": True, "record": record}
+    raise ValueError("اتحاد فعال موردنظر پیدا نشد.")
 
 
 # ---------- تحریم‌های یک‌جانبه بازیکن ----------
