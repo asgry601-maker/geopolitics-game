@@ -525,6 +525,95 @@ def cancel_player_political_reform(s, proposal_id):
             return dict(ok=True, out="طرح اصلاحات لغو شد؛ ساختار فعلی کشور تغییری نکرد.")
     return dict(ok=False, error="طرح در انتظار معتبری با این شناسه پیدا نشد.")
 
+def review_player_political_reform(s, proposal_id):
+    """ارزیابی شفاف و شبیه‌سازی‌شده؛ بدون کسر پول یا اعمال تغییر سیاسی."""
+    player = s.get("player")
+    proposals = s.setdefault("political_reform_proposals", [])
+    proposal = next((p for p in reversed(proposals)
+                     if int(p.get("id", -1)) == int(proposal_id) and p.get("country") == player), None)
+    if not proposal or proposal.get("status") != "pending":
+        return dict(ok=False, error="طرحِ در انتظار معتبری برای ارزیابی پیدا نشد.")
+    country = (s.get("world") or {}).get(player) or {}
+    politics = (s.get("politics") or {}).get(player) or {}
+    parties = politics.get("parties") or {}
+    changes = proposal.get("changes") or {}
+    fields = set(changes)
+    stability = max(0.0, min(100.0, float(country.get("stab", 0))))
+    money = max(0.0, float(country.get("money", 0)))
+    cost = max(0.1, float(proposal.get("estimated_cost", 0)))
+    affordability = max(0.0, min(100.0, (money / cost) * 50.0))
+    # واکنش‌ها فرض‌های شبیه‌سازی بازی‌اند، نه ادعایی درباره مواضع واقعی احزاب.
+    reactions = {}
+    for party, support in parties.items():
+        delta = 0
+        if party == "اصلاح‌طلبان":
+            delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system", "regime_character"])) else 0
+            delta -= 2 if "government_form" in fields else 0
+        elif party == "جبهه انقلاب":
+            delta -= 2 if fields.intersection(set(["government_form", "official_ideology", "regime_character"])) else 0
+            delta += 1 if "ruling_party_ideology" in fields else 0
+        elif party == "ملی‌گرایان":
+            delta -= 2 if changes.get("territorial_structure", {}).get("new") in ("federal", "federal_state", "confederation") else 0
+            delta += 1 if "official_ideology" in fields else 0
+        elif party == "تکنوکرات‌ها":
+            delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system"])) else 0
+            delta -= 1 if "territorial_structure" in fields else 0
+        reactions[party] = dict(current=round(float(support), 1), projected_change=delta,
+                                projected=round(max(0.0, min(100.0, float(support) + delta)), 1))
+    party_score = 50.0
+    if reactions:
+        total = sum(max(0.0, float(v.get("current", 0))) for v in reactions.values())
+        if total > 0:
+            party_score = sum(v["projected"] * v["current"] for v in reactions.values()) / total
+    scope = sum(1 for _ in changes)
+    complexity_penalty = min(20.0, scope * 2.5)
+    feasibility = max(0.0, min(100.0,
+        stability * 0.35 + affordability * 0.25 + party_score * 0.40 - complexity_penalty))
+    if stability < 20:
+        outlook = "پرریسک؛ ثبات داخلی پایین است"
+    elif affordability < 25:
+        outlook = "پرریسک؛ توان مالی برای برآورد طرح محدود است"
+    elif feasibility >= 65:
+        outlook = "مساعد؛ امکان پیشبرد طرح در شبیه‌سازی بیشتر است"
+    elif feasibility >= 45:
+        outlook = "میانه؛ نیازمند توافق و مدیریت پیامدها"
+    else:
+        outlook = "دشوار؛ احتمال مخالفت و ناکامی بالاتر است"
+    proposal["review"] = dict(
+        reviewed_date=s.get("game_date", ""), stability=round(stability, 1),
+        affordability=round(affordability, 1), party_score=round(party_score, 1),
+        complexity_penalty=round(complexity_penalty, 1),
+        feasibility=round(feasibility, 1), outlook=outlook, party_reactions=reactions,
+        note="ارزیابی تقریبیِ مدل بازی؛ نتیجه قطعی نیست و هیچ هزینه یا تغییری اعمال نشده است."
+    )
+    proposal["status"] = "reviewed"
+    save(s)
+    return dict(ok=True, out="ارزیابی طرح انجام شد؛ هنوز باید درباره تصویب یا رد آن تصمیم بگیری.", proposal=proposal)
+
+
+def decide_player_political_reform(s, proposal_id, decision):
+    """ثبت تصمیم بازیکن پس از ارزیابی؛ اجرا در بسته بعدی انجام می‌شود."""
+    player = s.get("player")
+    proposals = s.setdefault("political_reform_proposals", [])
+    proposal = next((p for p in reversed(proposals)
+                     if int(p.get("id", -1)) == int(proposal_id) and p.get("country") == player), None)
+    if not proposal or proposal.get("status") != "reviewed" or not proposal.get("review"):
+        return dict(ok=False, error="ابتدا باید طرح را ارزیابی کنی.")
+    if decision == "approve":
+        proposal["status"] = "approved"
+        proposal["decision_date"] = s.get("game_date", "")
+        out = "طرح تصویب شد و برای اجرای مرحله‌ای در بسته بعدی آماده است؛ هنوز تغییری اعمال نشده."
+    elif decision == "reject":
+        proposal["status"] = "rejected"
+        proposal["decision_date"] = s.get("game_date", "")
+        out = "طرح رد شد؛ هیچ هزینه‌ای کسر و هیچ تغییری اعمال نشد."
+    else:
+        return dict(ok=False, error="تصمیم نامعتبر است.")
+    s.setdefault("log", []).append("📜 طرح اصلاحات سیاسی شماره %s: %s." %
+                                   (proposal.get("id"), "تصویب شد" if decision == "approve" else "رد شد"))
+    save(s)
+    return dict(ok=True, out=out, proposal=proposal)
+
 
 def load():
     with open(STATE, encoding="utf-8") as f:
