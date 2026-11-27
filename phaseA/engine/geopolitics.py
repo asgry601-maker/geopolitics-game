@@ -1869,8 +1869,13 @@ def transition_game_event(s, event_id, new_status, actor="player", note=""):
     return event
 
 
-def link_game_events(s, parent_event_id, child_event_id):
-    """پیوند دو رویداد در زنجیره؛ بدون ساخت رویداد یا اعمال پیامد بازی."""
+def link_game_events(s, parent_event_id, child_event_id,
+                     relation="caused_by", note=""):
+    """پیوند دو رویداد و ثبت نوع ارتباط؛ بدون تولید رویداد یا اعمال پیامد."""
+    allowed_relations = ("caused_by", "consequence_of", "related_to", "response_to")
+    if relation not in allowed_relations:
+        raise ValueError("نوع ارتباط رویدادها نامعتبر است.")
+
     events = s.setdefault("game_events", [])
     by_id = dict((item.get("id"), item) for item in events if isinstance(item, dict))
     parent = by_id.get(parent_event_id)
@@ -1880,7 +1885,7 @@ def link_game_events(s, parent_event_id, child_event_id):
     if parent_event_id == child_event_id:
         raise ValueError("یک رویداد نمی‌تواند والد خودش باشد.")
 
-    # اگر والد در زیرشاخه فرزند باشد، پیوند چرخه ایجاد می‌کند.
+    # جلوگیری از ایجاد چرخه در زنجیره.
     stack = [child_event_id]
     visited = set()
     while stack:
@@ -1900,6 +1905,24 @@ def link_game_events(s, parent_event_id, child_event_id):
     if child_event_id not in (parent.get("child_event_ids") or []):
         parent.setdefault("child_event_ids", []).append(child_event_id)
     child["parent_event_id"] = parent_event_id
+    child["parent_relation"] = relation
+    child["parent_relation_note"] = str(note or "")
+    child["relationship_updated_date"] = s.get("game_date", "")
+
+    relations = parent.setdefault("child_relationships", [])
+    relation_record = None
+    for item in relations:
+        if item.get("child_event_id") == child_event_id:
+            relation_record = item
+            break
+    if relation_record is None:
+        relation_record = {"child_event_id": child_event_id}
+        relations.append(relation_record)
+    relation_record.update({
+        "relation": relation,
+        "note": str(note or ""),
+        "date": s.get("game_date", "")
+    })
 
     root_id = parent.get("chain_id") or parent_event_id
     base_depth = int(parent.get("chain_depth", 0)) + 1
@@ -1917,8 +1940,41 @@ def link_game_events(s, parent_event_id, child_event_id):
             descendant = by_id.get(descendant_id)
             if descendant is not None:
                 pending.append((descendant, depth + 1))
-    return {"parent_event_id": parent_event_id, "child_event_id": child_event_id,
-            "chain_id": root_id, "chain_depth": base_depth}
+    return {
+        "parent_event_id": parent_event_id,
+        "child_event_id": child_event_id,
+        "chain_id": root_id,
+        "chain_depth": base_depth,
+        "relation": relation
+    }
+
+
+def get_event_chain(s, event_id):
+    """بازیابی تمام اعضای زنجیره یک رویداد، از ریشه تا پیامدهای ثبت‌شده."""
+    events = s.get("game_events") or []
+    by_id = dict((item.get("id"), item) for item in events if isinstance(item, dict))
+    target = by_id.get(event_id)
+    if target is None:
+        raise ValueError("رویداد موردنظر پیدا نشد.")
+
+    chain_id = target.get("chain_id") or event_id
+    chain = []
+    for item in events:
+        if not isinstance(item, dict):
+            continue
+        item_chain_id = item.get("chain_id") or item.get("id")
+        if item_chain_id == chain_id:
+            chain.append(item)
+    chain.sort(key=lambda item: (
+        int(item.get("chain_depth", 0)),
+        str(item.get("date", "")),
+        str(item.get("id", ""))
+    ))
+    return {
+        "chain_id": chain_id,
+        "event_count": len(chain),
+        "events": chain
+    }
 
 
 def ev(s, who, *args):
