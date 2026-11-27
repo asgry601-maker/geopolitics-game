@@ -287,6 +287,7 @@ function boot() {
 function loadState(after) {
   getJSON('api/state', function (s) {
     ST = (s && s.exists) ? s : null;
+    syncSanctionState();
     renderGameClock();
     renderWorldChips();
     renderStartWidget();
@@ -486,6 +487,25 @@ function bindConfidentialTargetPicker() {
   if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderConfidentialTargets(); renderEventTalkState(); };
   if(edit) edit.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; var box=el('confidentialTargetBox'); var actions=box ? box.querySelector('.eventActionRow') : null; if(actions) actions.hidden=false; edit.hidden=true; };
 }
+function syncSanctionState() {
+  SANCTION_APPLIED = {};
+  var records = ST && ST.player_sanctions ? ST.player_sanctions : {};
+  var names = Object.keys(records);
+  for (var i=0;i<names.length;i++) {
+    var categories = (records[names[i]] || {}).categories || [], flags = {};
+    for (var k=0;k<categories.length;k++) flags[categories[k]] = true;
+    SANCTION_APPLIED[names[i]] = flags;
+  }
+}
+function loadSanctionCategorySelection() {
+  SANCTION_CATEGORY_STATE = {};
+  var records = ST && ST.player_sanctions ? ST.player_sanctions : {};
+  for (var i=0;i<SANCTION_TARGET_COUNTRIES.length;i++) {
+    var record = records[SANCTION_TARGET_COUNTRIES[i]] || {};
+    var cats = record.categories || [];
+    for (var k=0;k<cats.length;k++) SANCTION_CATEGORY_STATE[cats[k]] = true;
+  }
+}
 function renderSanctionTargets() {
   var summary=el('sanctionTargetSummary'), card=el('sanctionCategoryCard');
   if(summary) summary.textContent=SANCTION_TARGET_COUNTRIES.length ? 'کشورهای انتخاب‌شده: '+SANCTION_TARGET_COUNTRIES.join('، ') : 'هنوز کشوری انتخاب نشده است.';
@@ -514,38 +534,84 @@ function renderAppliedSanctions() {
   if(!names.length) { box.textContent='هنوز تحریم یک‌جانبه‌ای از طرف بازیکن اعمال نشده است.'; return; }
   var out='';
   for(var i=0;i<names.length;i++) {
-    var cats=SANCTION_APPLIED[names[i]], labels=[];
+    var cats=SANCTION_APPLIED[names[i]], labels=[], record=(ST.player_sanctions || {})[names[i]] || {};
     for(var k=0;k<SANCTION_CATEGORIES.length;k++) if(cats[SANCTION_CATEGORIES[k][0]]) labels.push(SANCTION_CATEGORIES[k][1]);
-    out+='<div class="sanctionCard"><strong>'+names[i]+'</strong><div class="sanctionInfo">محدودیت‌هایی که فقط از طرف کشور بازیکن اعمال شده: '+(labels.join('، ')||'بدون تحریم فعال')+'</div></div>';
+    out+='<div class="sanctionCard"><strong>'+dashEsc(names[i])+'</strong><div class="sanctionInfo">زمینه‌ها: '+(labels.join('، ')||'ثبت نشده')+'</div><div class="sanctionInfo">تاریخ ثبت: '+dashEsc(record.imposed_date || 'نامشخص')+' · آخرین به‌روزرسانی: '+dashEsc(record.updated_date || 'نامشخص')+'</div></div>';
   }
   box.innerHTML=out;
 }
+function setSanctionActionStatus(message) {
+  var status=el('sanctionActionStatus');
+  if(status) status.textContent=message;
+}
 function bindSanctionsUI() {
   var choose=el('sanctionChooseCountries'), confirm=el('sanctionConfirmCountries'), cancel=el('sanctionCancelCountries');
-  if(choose) choose.onclick=function(){ SANCTION_DRAFT_COUNTRIES=SANCTION_TARGET_COUNTRIES.slice(0); renderCountryPicker('sanctionCountryList',SANCTION_DRAFT_COUNTRIES,'san'); el('sanctionCountryPicker').hidden=false; };
-  if(confirm) confirm.onclick=function(){ SANCTION_DRAFT_COUNTRIES=readCountryPicker('sanctionCountryList'); SANCTION_TARGET_COUNTRIES=SANCTION_DRAFT_COUNTRIES.slice(0); el('sanctionCountryPicker').hidden=true; renderSanctionTargets(); };
-  if(cancel) cancel.onclick=function(){ SANCTION_DRAFT_COUNTRIES=[]; SANCTION_TARGET_COUNTRIES=[]; el('sanctionCountryPicker').hidden=true; renderSanctionTargets(); };
+  if(choose) choose.onclick=function(){
+    SANCTION_DRAFT_COUNTRIES=SANCTION_TARGET_COUNTRIES.slice(0);
+    renderCountryPicker('sanctionCountryList',SANCTION_DRAFT_COUNTRIES,'san');
+    el('sanctionCountryPicker').hidden=false;
+  };
+  if(confirm) confirm.onclick=function(){
+    SANCTION_DRAFT_COUNTRIES=readCountryPicker('sanctionCountryList');
+    SANCTION_TARGET_COUNTRIES=SANCTION_DRAFT_COUNTRIES.slice(0);
+    el('sanctionCountryPicker').hidden=true;
+    loadSanctionCategorySelection();
+    renderSanctionCategories();
+    renderSanctionTargets();
+  };
+  if(cancel) cancel.onclick=function(){
+    SANCTION_DRAFT_COUNTRIES=[];
+    SANCTION_TARGET_COUNTRIES=[];
+    el('sanctionCountryPicker').hidden=true;
+    renderSanctionTargets();
+  };
   var apply=el('sanctionApply'), cancelAll=el('sanctionCancelAll');
   if(apply) apply.onclick=function(){
-    var active={};
-    for(var i=0;i<SANCTION_CATEGORIES.length;i++){ var key=SANCTION_CATEGORIES[i][0]; if(SANCTION_CATEGORY_STATE[key]) active[key]=true; }
-    if(!SANCTION_TARGET_COUNTRIES.length){ var st2=el('sanctionActionStatus'); if(st2) st2.textContent='ابتدا کشورهای هدف را انتخاب کن.'; return; }
-    for(var n=0;n<SANCTION_TARGET_COUNTRIES.length;n++) {
-      var target=SANCTION_TARGET_COUNTRIES[n];
-      if(Object.keys(active).length) SANCTION_APPLIED[target]=JSON.parse(JSON.stringify(active));
-      else delete SANCTION_APPLIED[target];
+    var active=[];
+    for(var i=0;i<SANCTION_CATEGORIES.length;i++) {
+      var key=SANCTION_CATEGORIES[i][0];
+      if(SANCTION_CATEGORY_STATE[key]) active.push(key);
     }
-    var status=el('sanctionActionStatus'); if(status) status.textContent='وضعیت زمینه‌های انتخاب‌شده برای کشورهای هدف به‌روزرسانی شد؛ اثر اقتصادی هنوز به موتور اقتصاد متصل نیست.';
-    renderAppliedSanctions();
+    if(!SANCTION_TARGET_COUNTRIES.length) { setSanctionActionStatus('ابتدا کشورهای هدف را انتخاب کن.'); return; }
+    if(!active.length) { setSanctionActionStatus('حداقل یک زمینه تحریم را روشن کن.'); return; }
+    apply.disabled=true;
+    postJSON('api/sanctions/apply',{targets:SANCTION_TARGET_COUNTRIES,categories:active},function(r){
+      apply.disabled=false;
+      if(!r || !r.ok) { setSanctionActionStatus((r && r.error) || 'ثبت تحریم انجام نشد.'); return; }
+      loadState(function(){
+        setSanctionActionStatus('تحریم‌ها در ذخیره بازی ثبت شدند. اثر اقتصادی دسته‌بندی‌شده پس از تکمیل موتور اقتصاد در فاز C فعال می‌شود.');
+        renderAppliedSanctions();
+      });
+    },function(st,tx){
+      apply.disabled=false;
+      setSanctionActionStatus(netErrMsg(st,tx)+' — تحریم ثبت نشد.');
+    });
   };
   if(cancelAll) cancelAll.onclick=function(){
-    SANCTION_APPLIED={}; SANCTION_CATEGORY_STATE={}; renderSanctionCategories(); renderAppliedSanctions();
-    var status=el('sanctionActionStatus'); if(status) status.textContent='تمام تحریم‌های ثبت‌شده در نمونه رابط کاربری لغو شدند.';
+    cancelAll.disabled=true;
+    postJSON('api/sanctions/cancel',{},function(r){
+      cancelAll.disabled=false;
+      if(!r || !r.ok) { setSanctionActionStatus((r && r.error) || 'لغو تحریم‌ها انجام نشد.'); return; }
+      SANCTION_CATEGORY_STATE={};
+      SANCTION_TARGET_COUNTRIES=[];
+      loadState(function(){
+        renderSanctionCategories();
+        renderSanctionTargets();
+        renderAppliedSanctions();
+        setSanctionActionStatus('تمام تحریم‌های یک‌جانبه ثبت‌شده از طرف کشور بازیکن لغو شدند.');
+      });
+    },function(st,tx){
+      cancelAll.disabled=false;
+      setSanctionActionStatus(netErrMsg(st,tx)+' — تحریم‌ها لغو نشدند.');
+    });
   };
   var imposed=el('sanctionTabImposed'), target=el('sanctionTabTarget');
   if(imposed) imposed.onclick=function(){ setSanctionInnerView('imposed'); };
   if(target) target.onclick=function(){ setSanctionInnerView('target'); };
-  renderSanctionCategories(); renderAppliedSanctions(); renderSanctionTargets();
+  syncSanctionState();
+  renderSanctionCategories();
+  renderAppliedSanctions();
+  renderSanctionTargets();
 }
 function setSanctionInnerView(view) {
   var imp=view!=='target', iv=el('sanctionImposedView'), tv=el('sanctionTargetView');
