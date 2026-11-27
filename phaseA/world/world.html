@@ -86,6 +86,32 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .eventMilitaryPlaceholder strong { color:#ffd479; }
 .eventMilitaryFuture { margin-top:10px; border:1px dashed #52617a; border-radius:8px; padding:9px;
   color:#aebbd0; font-size:11px; line-height:1.8; }
+.eventPanelTabs { flex-wrap:wrap; }
+.eventPanelTab { min-width:0; }
+.eventPanelView[hidden], .eventInnerView[hidden], .eventTargetBox[hidden] { display:none !important; }
+.eventTargetBox { background:#0e1626; border:1px solid #294263; border-radius:9px; padding:9px; margin:8px 0; }
+.eventTargetList { max-height:220px; overflow-y:auto; display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:8px 0; }
+.eventCountryChoice { display:flex; align-items:center; gap:6px; padding:6px; border:1px solid #263b5b; border-radius:6px; background:#121f35; color:#d7e2f2; font-size:11px; }
+.eventCountryChoice input { margin:0; }
+.eventActionRow { display:flex; gap:7px; margin-top:8px; }
+.eventActionRow button { flex:1; padding:8px 5px; font-size:11px; }
+.eventBtnConfirm { background:#176c4b !important; border-color:#36b982 !important; color:#fff !important; }
+.eventBtnCancel { background:#273449 !important; border-color:#536782 !important; }
+.eventSelectionSummary { color:#a9d9c2; font-size:11px; line-height:1.8; margin-top:7px; }
+.eventPrivacyNote { background:#172b31; border:1px solid #2f7963; border-radius:8px; padding:8px; color:#a9e5ce; font-size:11px; line-height:1.8; }
+.sanctionInnerTabs { display:flex; gap:6px; margin:8px 0; }
+.sanctionInnerTabs button { flex:1; padding:8px 4px; font-size:11px; }
+.sanctionInnerTabs button.active { background:#2456a8; border-color:#5a91e8; }
+.sanctionCard { background:#0e1626; border:1px solid #294263; border-radius:9px; padding:10px; margin:8px 0; }
+.sanctionCard h3 { margin:0 0 8px; color:#ffd479; font-size:13px; }
+.sanctionCategoryList { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:9px 0; }
+.sanctionCategoryToggle { display:flex; align-items:center; justify-content:space-between; gap:5px; padding:8px 6px; border:1px solid #354b6d; border-radius:7px; background:#101a2e; color:#d5dfed; font-size:10px; }
+.sanctionCategoryToggle.active { background:#173b35; border-color:#319b78; }
+.sanctionCategoryToggle .eventToggleState { color:#91a4c0; white-space:nowrap; }
+.sanctionCategoryToggle.active .eventToggleState { color:#8de0b8; }
+.sanctionAllCancel { width:100%; margin-top:7px; padding:8px; background:#6b2931 !important; border-color:#a74d58 !important; color:#fff !important; }
+.sanctionInfo { color:#aebbd0; font-size:11px; line-height:1.8; }
+@media(max-width:380px) { .eventTargetList,.sanctionCategoryList { grid-template-columns:1fr; } }
 .eventStatementsArea { height:58%; min-height:300px; display:flex; flex-direction:column; gap:8px; }
 .eventSectionLabel { color:#7fb6ff; font-size:12px; font-weight:bold; padding-bottom:5px; border-bottom:1px solid #294263; }
 .eventStatementFeed { flex:1 1 auto; min-height:95px; overflow-y:auto; background:#0e1626;
@@ -178,6 +204,7 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
       <div class="eventPanelTabs" role="tablist" aria-label="بخش‌های پنل">
         <button type="button" class="eventPanelTab active" id="eventTabStatements" role="tab" aria-selected="true">📢 بیانیه‌ها</button>
         <button type="button" class="eventPanelTab" id="eventTabMilitary" role="tab" aria-selected="false">🛡 نظامی</button>
+        <button type="button" class="eventPanelTab" id="eventTabSanctions" role="tab" aria-selected="false">🚫 تحریم</button>
       </div>
       <div id="eventStatementView" class="eventPanelView">
       <section class="eventStatementsArea">
@@ -207,6 +234,43 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
           <strong>🛡 بخش نظامی</strong><br>
           این بخش رابط کاربری مستقل خودش را خواهد داشت و برای صدور یا مشاهده بیانیه استفاده نمی‌شود.
           <div class="eventMilitaryFuture">ابزارها، گزینه‌ها و پنجره‌های اختصاصی فرماندهی نظامی در مرحله توسعه نظامی طراحی خواهند شد. این بخش از سیستم بیانیه‌ها و مذاکرات جداست.</div>
+        </div>
+      </div>
+      <div id="eventSanctionsView" class="eventPanelView" hidden>
+        <div class="eventSectionLabel">مرکز مدیریت تحریم‌ها</div>
+        <div class="sanctionInnerTabs" role="tablist" aria-label="بخش‌های تحریم">
+          <button type="button" class="eventPanelTab active" id="sanctionTabImposed" role="tab" aria-selected="true">کشورهای تحریم‌کننده</button>
+          <button type="button" class="eventPanelTab" id="sanctionTabTarget" role="tab" aria-selected="false">کشورهای تحریم‌شونده</button>
+        </div>
+        <div id="sanctionImposedView" class="eventInnerView">
+          <div class="sanctionCard">
+            <h3>کشورهایی که ما را تحریم کرده‌اند</h3>
+            <div id="sanctionImposedList" class="sanctionInfo">هنوز داده تحریمی برای نمایش ثبت نشده است. پس از اتصال هوش مصنوعی زنده، کشور تحریم‌کننده و زمینه‌های تحریم در این قسمت نمایش داده می‌شوند.</div>
+          </div>
+        </div>
+        <div id="sanctionTargetView" class="eventInnerView" hidden>
+          <div class="sanctionCard">
+            <h3>انتخاب کشورهای هدف</h3>
+            <div id="sanctionTargetSummary" class="sanctionInfo">هنوز کشوری انتخاب نشده است.</div>
+            <button type="button" id="sanctionChooseCountries">＋ انتخاب کشورها</button>
+            <div id="sanctionCountryPicker" class="eventTargetBox" hidden>
+              <div class="sanctionInfo">می‌توانی چند کشور را هم‌زمان انتخاب کنی.</div>
+              <div id="sanctionCountryList" class="eventTargetList"></div>
+              <div class="eventActionRow">
+                <button type="button" class="eventBtnConfirm" id="sanctionConfirmCountries">تأیید انتخاب</button>
+                <button type="button" class="eventBtnCancel" id="sanctionCancelCountries">لغو و پاک‌کردن</button>
+              </div>
+            </div>
+          </div>
+          <div class="sanctionCard" id="sanctionCategoryCard" hidden>
+            <h3>زمینه‌های تحریم برای کشورهای انتخاب‌شده</h3>
+            <div class="sanctionInfo">هر زمینه را جداگانه روشن یا خاموش کن؛ سپس «اعمال تحریم‌ها» را بزن.</div>
+            <div id="sanctionCategoryList" class="sanctionCategoryList"></div>
+            <button type="button" id="sanctionApply" class="eventBtnConfirm" style="width:100%;padding:10px">✓ اعمال تحریم‌ها</button>
+            <button type="button" id="sanctionCancelAll" class="sanctionAllCancel">لغو همه تحریم‌های اعمال‌شده</button>
+            <div id="sanctionActionStatus" class="sanctionInfo" aria-live="polite"></div>
+          </div>
+          <div class="eventMilitaryFuture">اعمال و لغو در این مرحله به‌صورت نمونه رابط کاربری ثبت می‌شود. اثر واقعی تحریم‌ها بر تجارت، بانک، انرژی و سایر شاخص‌های اقتصادی در مرحله اتصال موتور اقتصاد و هوش مصنوعی زنده پیاده‌سازی خواهد شد.</div>
         </div>
       </div>
     </div>
