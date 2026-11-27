@@ -45,3 +45,25 @@ Note: The game uses the Commons Special:FilePath resolver. The user should visua
 - LBY: https://commons.wikimedia.org/wiki/File:Mohamed_al-Menfi_Moscow_2026.jpg
 
 Note: Portraits are loaded through the Commons Special:FilePath resolver. The user should visually review each portrait in the game, especially older/less recent source photographs, and request replacement if the face is not sufficiently clear at dashboard size.
+
+
+## Package 6
+
+| ISO3 | Person shown | Commons file | Author / source | License |
+|---|---|---|---|---|
+| MAR | Mohammed VI | `King Mohammed VI (cropped).jpg` | UN Climate Change / Flickr | CC BY 2.0 |
+| DZA | Abdelmadjid Tebboune | `Abdelmadjid Tebboune (2023).jpg` | State Duma of the Russian Federation | CC BY 4.0 |
+| TUN | Kais Saïed | `President Kais Saïed.jpg` | Houcemmzoughi badoo | CC BY-SA 4.0 |
+| ETH | Abiy Ahmed | `Prime Minister of Ethiopia Abiy Ahmed Ali (cropped).jpg` | Ethiopia Prime Minister's Office | Public domain in Ethiopia |
+| KEN | William Samoei Ruto | `William Saomei Ruto official portrait.jpg` | Government of Kenya / Ministry of Defense | Public domain (Government of Kenya work) |
+| NGA | Bola Ahmed Tinubu | `Bola Tinubu portrait (cropped).jpg` | Nosa Asemota | CC BY-SA 4.0 |
+
+### File pages
+- MAR: https://commons.wikimedia.org/wiki/File:King_Mohammed_VI_(cropped).jpg
+- DZA: https://commons.wikimedia.org/wiki/File:Abdelmadjid_Tebboune_(2023).jpg
+- TUN: https://commons.wikimedia.org/wiki/File:President_Kais_Sa%C3%AFed.jpg
+- ETH: https://commons.wikimedia.org/wiki/File:Prime_Minister_of_Ethiopia_Abiy_Ahmed_Ali_(cropped).jpg
+- KEN: https://commons.wikimedia.org/wiki/File:William_Saomei_Ruto_official_portrait.jpg
+- NGA: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait_(cropped).jpg
+
+Note: The dashboard should display the same name as the selected portrait. Review all six images at the actual dashboard size before considering the package final.
