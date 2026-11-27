@@ -861,6 +861,48 @@ def load():
                 fresh = _default_arsenal(rel)
             s["arsenal"][name] = dict(fresh.get(name, {}))
         s["world"][name].setdefault("_arsenal", s["arsenal"][name])
+
+    # مهاجرت و اعتبارسنجی تحریم‌های بازیکن برای ذخیره‌های قدیمی
+    sanction_save_needed = False
+    raw_sanctions = s.get("player_sanctions")
+    if not isinstance(raw_sanctions, dict):
+        raw_sanctions = {}
+        sanction_save_needed = True
+    normalized_sanctions = {}
+    for target, record in raw_sanctions.items():
+        if target not in s.get("world", {}) or target == s.get("player") or not isinstance(record, dict):
+            sanction_save_needed = True
+            continue
+        cats = record.get("categories")
+        if not isinstance(cats, list):
+            cats = []
+            sanction_save_needed = True
+        cats = [x for x in cats if x in PLAYER_SANCTION_CATEGORIES]
+        if not cats:
+            sanction_save_needed = True
+            continue
+        normalized_sanctions[target] = {
+            "country": target, "actor": "player", "categories": sorted(set(cats)),
+            "status": "active",
+            "imposed_date": str(record.get("imposed_date") or s.get("game_date", "")),
+            "updated_date": str(record.get("updated_date") or record.get("imposed_date") or s.get("game_date", ""))
+        }
+        if normalized_sanctions[target] != record:
+            sanction_save_needed = True
+    if normalized_sanctions != raw_sanctions:
+        s["player_sanctions"] = normalized_sanctions
+        sanction_save_needed = True
+    raw_sanction_history = s.get("player_sanction_history")
+    if not isinstance(raw_sanction_history, list):
+        s["player_sanction_history"] = []
+        sanction_save_needed = True
+    else:
+        clean_history = [x for x in raw_sanction_history[-200:] if isinstance(x, dict)]
+        if clean_history != raw_sanction_history:
+            s["player_sanction_history"] = clean_history
+            sanction_save_needed = True
+    if sanction_save_needed:
+        save(s)
     return s
 
 def save(s):
@@ -1515,6 +1557,107 @@ def announce(s, kind):
     save(s)
 
 
+
+# ---------- تحریم‌های یک‌جانبه بازیکن ----------
+PLAYER_SANCTION_CATEGORIES = {
+    "goods", "air", "transit", "land",
+    "bank", "energy", "technology", "sea"
+}
+
+
+def apply_player_sanctions(s, targets, categories):
+    """ثبت پایدار تحریم‌های بازیکن؛ اثر اقتصادی تفصیلی تا تکمیل موتور اقتصاد اعمال نمی‌شود."""
+    if not isinstance(targets, list) or not targets:
+        raise ValueError("حداقل یک کشور هدف را انتخاب کن.")
+    if not isinstance(categories, list) or not categories:
+        raise ValueError("حداقل یک زمینه تحریم را انتخاب کن.")
+    player = s.get("player")
+    world = s.get("world") or {}
+    clean_targets = []
+    for target in targets:
+        if not isinstance(target, str) or target not in world:
+            raise ValueError("کشور هدف نامعتبر است: %s" % target)
+        if target == player:
+            raise ValueError("کشور بازیکن نمی‌تواند هدف تحریم خودش باشد.")
+        if target in s.get("eliminated", []):
+            raise ValueError("کشور حذف‌شده را نمی‌توان تحریم کرد: %s" % target)
+        if target not in clean_targets:
+            clean_targets.append(target)
+    clean_categories = []
+    for category in categories:
+        if not isinstance(category, str) or category not in PLAYER_SANCTION_CATEGORIES:
+            raise ValueError("زمینه تحریم نامعتبر است: %s" % category)
+        if category not in clean_categories:
+            clean_categories.append(category)
+
+    records = s.setdefault("player_sanctions", {})
+    if not isinstance(records, dict):
+        records = {}
+        s["player_sanctions"] = records
+    history = s.setdefault("player_sanction_history", [])
+    if not isinstance(history, list):
+        history = []
+        s["player_sanction_history"] = history
+    today = s.get("game_date", "")
+    changed = []
+    for target in clean_targets:
+        old = records.get(target) if isinstance(records.get(target), dict) else {}
+        record = {
+            "country": target, "actor": "player",
+            "categories": list(clean_categories), "status": "active",
+            "imposed_date": old.get("imposed_date") or today,
+            "updated_date": today
+        }
+        records[target] = record
+        history.append({
+            "date": today, "action": "applied" if not old else "updated",
+            "country": target, "categories": list(clean_categories), "actor": "player"
+        })
+        changed.append(dict(record))
+    del history[:-200]
+    msg(s, "تحریم‌های یک‌جانبه کشور بازیکن برای %s کشور ثبت/به‌روزرسانی شد؛ اثر اقتصادی تفصیلی هنوز فعال نیست." % len(changed))
+    return {"ok": True, "count": len(changed), "sanctions": changed,
+            "note": "ثبت و ذخیره تحریم انجام شد؛ اثر اقتصادی دسته‌بندی‌شده پس از تکمیل موتور اقتصاد در فاز C اضافه می‌شود."}
+
+
+def cancel_player_sanctions(s, targets=None):
+    """لغو تحریم‌های بازیکن؛ آثار تاریخی اقتصادی (در صورت وجود) بازگردانده نمی‌شوند."""
+    records = s.setdefault("player_sanctions", {})
+    if not isinstance(records, dict):
+        records = {}
+        s["player_sanctions"] = records
+    if targets is None:
+        selected = list(records.keys())
+    elif not isinstance(targets, list):
+        raise ValueError("فهرست کشورهای لغو تحریم نامعتبر است.")
+    else:
+        selected = []
+        for target in targets:
+            if not isinstance(target, str) or target not in (s.get("world") or {}):
+                raise ValueError("کشور برای لغو تحریم نامعتبر است: %s" % target)
+            if target not in selected:
+                selected.append(target)
+    history = s.setdefault("player_sanction_history", [])
+    if not isinstance(history, list):
+        history = []
+        s["player_sanction_history"] = history
+    today = s.get("game_date", "")
+    removed = []
+    for target in selected:
+        old = records.pop(target, None)
+        if old is not None:
+            removed.append(target)
+            history.append({
+                "date": today, "action": "cancelled", "country": target,
+                "categories": list(old.get("categories") or []), "actor": "player"
+            })
+    del history[:-200]
+    if removed:
+        msg(s, "تحریم‌های یک‌جانبه کشور بازیکن برای %s کشور لغو شد." % len(removed))
+    return {"ok": True, "count": len(removed), "cancelled": removed}
+
+
+
 def init_game(player):
     rng = random.Random()
     world = {}
@@ -1552,6 +1695,7 @@ def init_game(player):
         player=player, year=START_YEAR, turn=1, ap="\u221e", over=False,
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
+        player_sanctions={}, player_sanction_history=[],
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
