@@ -122,3 +122,34 @@
 - عکس گروهی، دور، تار، پشت‌به‌دوربین، پوشیده‌شده با میکروفن/اشیا، یا با چهرهٔ خیلی کوچک انتخاب نشود.
 - برای قاب داشبورد، عکس عمودی یا کراپ عمودی با وضوح کافی ترجیح دارد؛ صورت و بالای سر نباید از قاب بریده شود.
 - قبل از اتصال هر عکس، هویت شخص، تاریخ عکس، منبع اصلی و مجوز آن بررسی و در همین README ثبت شود. اگر عکس مناسب و مجوز روشن پیدا نشد، به‌جای انتخاب عکس نامناسب از جای‌نگهدار استفاده شود.
+
+
+## بسته دوم تصاویر رهبران (۲۷ نوامبر ۲۰۲۶)
+
+این بسته ۷ پرتره دیگر را به نگاشت داشبورد اضافه می‌کند. همه فایل‌ها از صفحهٔ فایل Commons با `Special:FilePath` بارگذاری می‌شوند؛ عکس‌ها هنوز به‌صورت فایل باینری داخل مخزن ذخیره نشده‌اند.
+
+| ISO3 | کشور / رهبر | فایل Commons | منبع و مجوز |
+|---|---|---|---|
+| JPN | ژاپن — سانائه تاکائیچی | Official portrait of Sanae Takaichi, Prime Minister of Japan (HD).jpg | وزارت امور خارجه ژاپن / دفتر امور عمومی کابینه؛ CC BY 4.0 |
+| IND | هند — نارندرا مودی | Official Photograph of Prime Minister Narendra Modi Portrait.png | دفتر نخست‌وزیر هند؛ Government Open Data License — India |
+| KOR | کره جنوبی — لی جه‌میونگ | President Lee Jae Myung.jpg | دفتر رئیس‌جمهور کره جنوبی؛ منتشرشده توسط Press Information Bureau هند؛ Government Open Data License — India |
+| IDN | اندونزی — پرابوو سوبیانتو | Prabowo Subianto 2024 official portrait.jpg | Darwis Triadi و وزارت دبیرخانه دولت اندونزی؛ Public Domain در اندونزی بر اساس قانون 28/2014 |
+| BRA | برزیل — لوئیز ایناسیو لولا دا سیلوا | Foto oficial de Luiz Inácio Lula da Silva (faixa presidencial).jpg | Ricardo Stuckert / Palácio do Planalto؛ CC BY 2.0 |
+| AUS | استرالیا — آنتونی آلبانیزی | Anthony Albanese Official Portrait.jpg | David Foote (AUSPIC / Department of Parliamentary Service)؛ CC BY 4.0 طبق شرایط DFAT |
+| UKR | اوکراین — ولودیمیر زلنسکی | Volodymyr Zelensky Official portrait.jpg | President.gov.ua؛ CC BY 4.0 (طبق صفحهٔ فایل برای عکس‌های منتشرشده پیش از ۴ اکتبر ۲۰۲۲) |
+
+### صفحات منبع بسته دوم
+- ژاپن: https://commons.wikimedia.org/wiki/File:Official_portrait_of_Sanae_Takaichi,_Prime_Minister_of_Japan_(HD).jpg
+- هند: https://commons.wikimedia.org/wiki/File:Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png
+- کره جنوبی: https://commons.wikimedia.org/wiki/File:President_Lee_Jae_Myung.jpg
+- اندونزی: https://commons.wikimedia.org/wiki/File:Prabowo_Subianto_2024_official_portrait.jpg
+- برزیل: https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(faixa_presidencial).jpg
+- استرالیا: https://commons.wikimedia.org/wiki/File:Anthony_Albanese_Official_Portrait.jpg
+- اوکراین: https://commons.wikimedia.org/wiki/File:Volodymyr_Zelensky_Official_portrait.jpg
+
+### نکات بازبینی بسته دوم
+- پرتره‌های ژاپن، اندونزی، برزیل، استرالیا و اوکراین عمودی و با چهرهٔ واضح در قاب پرتره هستند.
+- تصویر هند 337×398 پیکسل است؛ برای اندازهٔ فعلی کارت داشبورد قابل استفاده است، اما در صورت یافتن نسخهٔ بزرگ‌تر با همان مجوز جایگزین می‌شود.
+- تصویر کره جنوبی 977×1334 پیکسل است؛ صفحهٔ منبع، آن را پرترهٔ ۲۰۲۶ معرفی می‌کند و مجوز GODL هند را ثبت کرده است.
+- تصویر زلنسکی پرترهٔ رسمی قدیمی‌تر است؛ منبع و مجوز روشن‌اند، اما در صورت یافتن پرترهٔ جدیدتر با مجوز قابل‌استفاده، به‌روزرسانی می‌شود.
+- تاریخ و سمت رهبران باید با تاریخ شروع سناریو تطبیق داده شود؛ در کشورهای دارای نظام پارلمانی، نخست‌وزیر/رئیس دولت با رئیس کشور اشتباه نشود.
