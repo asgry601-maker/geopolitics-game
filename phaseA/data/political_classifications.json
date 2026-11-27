@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 129,
-    "pending_countries": 45,
+    "classified_countries": 134,
+    "pending_countries": 40,
     "last_batch": [
-      "BEN",
-      "GAB",
-      "COG",
-      "COD",
-      "CAF"
+      "ERI",
+      "DJI",
+      "SOM",
+      "MDG",
+      "MUS"
     ]
   },
   "countries": {
@@ -9466,6 +9466,388 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "ERI": {
+      "country_name_fa": "اریتره",
+      "country_name_en": "Eritrea",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "no_functioning_national_legislature",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "one_party_legal",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "جبهه خلق برای دموکراسی و عدالت (PFDJ) تنها حزب مجاز است و اسایاس افورقی از زمان استقلال در رأس قدرت قرار دارد. انتخابات ملی از ۱۹۹۳ برگزار نشده، قانون اساسی ۱۹۹۷ اجرا نشده و مجلس ملی عملاً فعالیت نمی‌کند؛ رئیس‌جمهور و حلقه کوچکی از مشاوران با نفوذ گسترده نظامی کشور را اداره می‌کنند. با وجود نام حزب و ادعای رسمی سکولار بودن، شواهد کافی برای نسبت‌دادن یک ایدئولوژی حزبی مشخص و منسجم وجود ندارد؛ بنابراین فیلدهای ایدئولوژی عمداً خالی مانده‌اند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Eritrea: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/eritrea/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "نبود انتخابات ملی از ۱۹۹۳، انحصار PFDJ و وضعیت اقتدارگرای نظامی."
+        },
+        {
+          "name": "Eritrea Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/ERI",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "حکمرانی با فرمان رئیس‌جمهور، تعطیلی عملی مجلس، اجرا نشدن قانون اساسی و نقش ارتش."
+        },
+        {
+          "name": "World Report 2026: Eritrea",
+          "publisher": "Human Rights Watch",
+          "url": "https://www.hrw.org/world-report/2026/country-chapters/eritrea",
+          "date": "2026-01-14",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "نبود انتخابات، ممنوعیت احزاب دیگر و کنترل سیاسی و رسانه‌ای."
+        },
+        {
+          "name": "Guidance Note on Eritrea",
+          "publisher": "UNHCR",
+          "url": "https://www.refworld.org/libraries/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.refworld.org%2Fsites%2Fdefault%2Ffiles%2F2026-04%2Fert_guidance_note_-_final_april_2026.pdf",
+          "date": "2026-04",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "رئیس‌جمهور رئیس کشور و دولت است؛ PFDJ از ۱۹۹۳ حاکم بوده و انتخابات برگزار نشده است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر مبنای وضعیت مستند تا ۵ نوامبر ۲۰۲۶ است؛ ایدئولوژی حزب به دلیل نبود شواهد روشن حدس زده نشده است."
+      }
+    },
+    "DJI": {
+      "country_name_fa": "جیبوتی",
+      "country_name_en": "Djibouti",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "جیبوتی جمهوری ریاستی متمرکز است. اسماعیل عمر گیله در انتخابات ۱۰ آوریل ۲۰۲۶ با ۹۷٫۸ درصد آرا برای دوره ششم انتخاب شد؛ انتخابات با حضور تنها یک نامزد مخالف برگزار شد و دو ائتلاف عمده مخالف از مدت‌ها پیش انتخابات را تحریم کرده بودند. ائتلاف اتحاد برای اکثریت ریاست‌جمهوری (UMP) با محوریت حزب تجمع خلق برای پیشرفت (RPP) بر ساختار سیاسی مسلط است. به دلیل ماهیت شخص‌محور و عمل‌گرای ائتلاف، ایدئولوژی رسمی یا دکترین حزبی دقیق‌تری ثبت نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Djibouti Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/DJI",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، تسلط UMP و ضعف رقابت حزبی."
+        },
+        {
+          "name": "Djibouti: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/djibouti/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "قدرت گسترده رئیس‌جمهور و محدودیت فعالیت مخالفان."
+        },
+        {
+          "name": "IGAD Election Observation Mission for the 10 April 2026 Presidential Election in Djibouti: Preliminary Report",
+          "publisher": "Intergovernmental Authority on Development",
+          "url": "https://igad.int/igad-election-observation-mission-for-the-10-april-2026-presidential-election-in-the-republic-of-djibouti-preliminary-report/",
+          "date": "2026-04-13",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتیجه اولیه انتخابات ۲۰۲۶ و محدودیت فضای مشارکت مخالفان."
+        },
+        {
+          "name": "Djibouti president wins election with 97.8% of vote, state media says",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/africa/djibouti-president-wins-election-with-978-vote-state-media-says-2026-04-11/",
+          "date": "2026-04-11",
+          "supports": [
+            "government_form",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "پیروزی گیله با ۹۷٫۸ درصد و تحریم انتخابات از سوی دو حزب بزرگ مخالف."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر مبنای انتخابات ریاست‌جمهوری آوریل ۲۰۲۶ و وضعیت رقابت سیاسی تا تاریخ snapshot."
+      }
+    },
+    "SOM": {
+      "country_name_fa": "سومالی",
+      "country_name_en": "Somalia",
+      "government_form": "republic",
+      "government_subform": "federal_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "fragmented_authority",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "قانون اساسی فدرال ۲۰۲۶ اختیارات ریاست‌جمهوری را تقویت کرده و چارچوبی نزدیک به نظام ریاستی ایجاد می‌کند؛ بااین‌حال، اصلاحات قانون اساسی و نحوه تمدید دوره نهادهای فدرال محل مناقشه جدی بوده است. در ۵ نوامبر ۲۰۲۶ دیوان عالی اعلام کرد دوره پارلمان و رئیس‌جمهور به‌ترتیب در آوریل و مه پایان یافته و خواستار توافق بر چارچوب انتخاباتی شد؛ در نتیجه وضعیت حقوقی و سیاسی در تاریخ snapshot بحرانی و مورد اختلاف است. ساختار فدرال با اختلاف میان دولت فدرال و برخی ایالت‌های عضو، کنترل محدود دولت بر بخش‌هایی از کشور و حضور بازیگران مسلح غیردولتی همراه است. احزاب هنوز نهادینه نشده‌اند و ائتلاف‌ها تا حد زیادی شخص‌محور و مبتنی بر پیوندهای محلی و قبیله‌ای هستند.",
+      "classification_confidence": "low",
+      "classification_sources": [
+        {
+          "name": "The Federal Constitution",
+          "publisher": "Somalia Ministry of Interior, Federal Affairs & Reconciliation",
+          "url": "https://moifar.gov.so/en/page/federal-constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نسخه قانون اساسی فدرال ۲۰۲۶ و تغییر چارچوب از دوره موقت به ساختار دائمی."
+        },
+        {
+          "name": "History & Background of the Assembly — The Upper House and the Constitution of the Federal Republic of Somalia 2026",
+          "publisher": "Federal Parliament of Somalia, Upper House",
+          "url": "https://senate.gov.so/history-background-of-the-assembly/?lang=en",
+          "date": "2026-03",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تصویب، امضای ریاست‌جمهوری و انتشار قانون اساسی ۲۰۲۶ و ساختار نمایندگی ایالت‌ها در مجلس سنا."
+        },
+        {
+          "name": "Somalia Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/SOM",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ضعف نهادینه‌شدن احزاب، نقش شبکه‌های قبیله‌ای در انتخاب غیرمستقیم و چالش‌های فدرالیسم."
+        },
+        {
+          "name": "Somalia Supreme Court rules president's term expired, orders elections within 90 days",
+          "publisher": "Horn Diplomat via allAfrica",
+          "url": "https://allafrica.com/stories/202611060101.html",
+          "date": "2026-11-05",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "territorial_structure"
+          ],
+          "note": "گزارش رأی ۵ نوامبر دیوان عالی درباره پایان دوره رئیس‌جمهور و پارلمان و ضرورت توافق انتخاباتی؛ وضعیت را در تاریخ snapshot مورد اختلاف می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "low",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این طبقه‌بندی به‌دلیل اختلاف بر سر قانون اساسی و پایان دوره نهادهای فدرال با اطمینان پایین ثبت شده است؛ تحولات منتشرشده پس از ۵ نوامبر وارد baseline نشده‌اند."
+      }
+    },
+    "MDG": {
+      "country_name_fa": "ماداگاسکار",
+      "country_name_en": "Madagascar",
+      "government_form": "transitional_government",
+      "government_subform": "transitional_authority",
+      "executive_legislative_system": "transitional",
+      "territorial_structure": "unitary",
+      "regime_character": "military_rule",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "پس از اعتراضات گسترده سپتامبر و اکتبر ۲۰۲۵ و کناررفتن آندری راجولینا، سرهنگ میکائل راندریانیرینا در ۱۷ اکتبر ۲۰۲۵ به‌عنوان رئیس دوره بازسازی جمهوری سوگند خورد و دولت انتقالی با محوریت ارتش تشکیل شد. نهادهای سیاسی و قانون اساسی در دوره بازسازی دستخوش تغییر شده‌اند و انتخابات ریاست‌جمهوری برای ۲۰۲۷ وعده داده شده است. تا ۵ نوامبر ۲۰۲۶ مسیر انتقال هنوز تثبیت نشده بود؛ دادگاه عالی قانون اساسی در ۴ نوامبر امکان برگزاری همه‌پرسی قانون اساسی پیش از انتخابات ریاست‌جمهوری را تأیید کرد. دولت انتقالی حزب حاکم مشخصی ندارد و بنابراین ایدئولوژی حزبی یا ائتلافی برای آن ثبت نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Madagascar: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/uk/node/8135",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کودتای ۲۰۲۵ و انتقال قدرت به ارتش پس از خروج رئیس‌جمهور پیشین."
+        },
+        {
+          "name": "Madagascar Country Focus Report",
+          "publisher": "European Commission, Capacity4dev",
+          "url": "https://capacity4dev.europa.eu/library/madagascar-country-focus-report_en",
+          "date": "2026-02-24",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "تشکیل دولت انتقالی تحت رهبری ارتش و انتصاب رئیس دولت و نخست‌وزیر در اکتبر ۲۰۲۵."
+        },
+        {
+          "name": "A year after the military coup: authoritarian practices dash Gen Z aspirations for a new Madagascar",
+          "publisher": "Amnesty International",
+          "url": "https://www.amnesty.org/en/latest/campaigns/2026/11/a-year-after-the-military-coup-authoritarian-practices-dash-gen-z-aspirations-for-a-new-madagascar/",
+          "date": "2026-11-02",
+          "supports": [
+            "regime_character",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "گزارش یک‌ساله از تمرکز قدرت نظامی و محدودیت پاسخگویی؛ منتشرشده پیش از تاریخ snapshot."
+        },
+        {
+          "name": "Madagascar's top court rules that constitutional referendum may be held before presidential election",
+          "publisher": "ConstitutionNet",
+          "url": "https://constitutionnet.org/news/madagascars-top-court-rules-constitutional-referendum-may-be-held-presidential-election",
+          "date": "2026-11-05",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "رأی ۴ نوامبر دادگاه درباره امکان همه‌پرسی قانون اساسی پیش از انتخابات ریاست‌جمهوری."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت انتقالی و نظامی تا ۵ نوامبر ۲۰۲۶ ثبت شده است؛ رأی دادگاه در ۴ نوامبر لحاظ شده، اما رویدادهای بعد از تاریخ snapshot وارد baseline نشده‌اند."
+      }
+    },
+    "MUS": {
+      "country_name_fa": "موریس",
+      "country_name_en": "Mauritius",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "democratic_socialism",
+        "green_politics",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "موریس جمهوری پارلمانی بر پایه الگوی وست‌مینستر است؛ رئیس‌جمهور رئیس کشور و نخست‌وزیر رئیس دولت و دارنده اختیار اجرایی است. ائتلاف Alliance du Changement در انتخابات نوامبر ۲۰۲۴ پیروزی قاطع به دست آورد و ناوین رامگولام از حزب کارگر نخست‌وزیر شد. ائتلاف شامل حزب کارگر، جنبش مبارز موریس، جنبش دموکرات و Resistans ek Alternativ است؛ گرایش ائتلاف چندجریانی است و نباید به یک ایدئولوژی واحد تقلیل یابد. موریس از رقابت چندحزبی و انتقال مسالمت‌آمیز قدرت برخوردار است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Mauritius: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/mauritius/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نظام چندحزبی باز، انتخابات رقابتی و امکان جابه‌جایی قدرت."
+        },
+        {
+          "name": "Mauritius Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/MUS",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتیجه انتخابات ۲۰۲۴، ترکیب ائتلاف Alliance du Changement و ساختار پارلمانی."
+        },
+        {
+          "name": "Mauritius — Country Political Context",
+          "publisher": "World Bank",
+          "url": "https://www.worldbank.org/ext/en/country/mauritius",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "جمهوری پارلمانی، پیروزی ائتلاف در انتخابات ۲۰۲۴ و تشکیل دولت به رهبری رامگولام."
+        },
+        {
+          "name": "Frequently Asked Questions — National Assembly of Mauritius",
+          "publisher": "National Assembly of Mauritius",
+          "url": "https://mauritiusassembly.govmu.org/mauritiusassembly/index.php/faqs/",
+          "date": "2026",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "party_system"
+          ],
+          "note": "مدل وست‌مینستر، نقش اکثریت پارلمانی در تشکیل دولت و سازوکار مجلس."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر اساس ساختار قانون اساسی و نتیجه انتخابات ۲۰۲۴، با لحاظ دولت ائتلافی مستقر در تاریخ snapshot."
       }
     }
   }
