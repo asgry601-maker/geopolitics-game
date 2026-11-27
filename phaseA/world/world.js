@@ -461,7 +461,10 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '</div>';
     var cp = r.country_profile || null;
     if (cp) {
-      var leaderPortrait = (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
+      /* تصویر ایران از Wikimedia Commons؛ برای سایر کشورها فایل محلی assets/leaders/ISO3.jpg استفاده می‌شود. */
+      var leaderPortrait = r.iso3 === 'IRN'
+        ? 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Portrait_of_Mojtaba_Khamenei.jpg'
+        : (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
       h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
       h += dashMetric('پایتخت',cp.capital || 'ثبت نشده');
