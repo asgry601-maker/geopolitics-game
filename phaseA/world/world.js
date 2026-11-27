@@ -530,7 +530,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         BGR: 'Rosen Zhelyazkov 2025 (cropped).jpg',
         CYP: 'Nikos Christodoulides in 26 June 2025 (Cropped).png',
         SRB: 'Aleksandar Vučić 2025 (cropped).jpg',
-        ALB: 'Albaania peaminister Edi Rama, 15.05.2026 (55271492269)(cropped).jpg'
+        ALB: 'Albaania peaminister Edi Rama, 15.05.2026 (55271492269)(cropped).jpg',
+        SVN: 'Robert Golob v Dražgošah.jpg',
+        BIH: 'Denis Bećirović (cropped).jpg',
+        MNE: 'Milojko Spajić (2023-12-20).jpg',
+        MDA: 'Maia Sandu, September 2025 (cropped).jpg',
+        GEO: 'Georgian Prime Minister Irakli Kobakhidze in 2025.jpg',
+        ARM: 'Nikol Pashinyan 2026-04-01.png'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
