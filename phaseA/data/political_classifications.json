@@ -12552,7 +12552,7 @@
         {
           "name": "Vanuatu Snap Election 2025",
           "publisher": "Inter-Parliamentary Union",
-          "url": "https://data.ipu.org/parliament/ VU/VU-LC01/election/VU-LC01-E20250116/",
+          "url": "https://data.ipu.org/parliament/VU/VU-LC01/election/VU-LC01-E20250116/",
           "date": "2025-01-16",
           "supports": [
             "party_system",
