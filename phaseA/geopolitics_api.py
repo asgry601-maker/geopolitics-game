@@ -423,7 +423,7 @@ class Handler(BaseHTTPRequestHandler):
             self._json(dict(ok=True, phase="A", engine=ENGINE_DIR, state=STATE))
         elif _PROV_RE.match(path):
             self._serve_province(_PROV_RE.match(path).group(1))
-        elif re.match(r"^assets/flags/[A-Z]{3}\\.svg$", path):
+        elif re.match(r"^assets/flags/[A-Z]{3}\.svg$", path):
             iso3 = path.rsplit("/", 1)[-1][:3]
             svg = get_flag_svg(iso3)
             if svg:
