@@ -242,6 +242,8 @@ def api_state(s):
         wars=wars, allies=list(s.get("allies", [])), pacts=list(s.get("pacts", [])),
         player_sanctions=s.get("player_sanctions", {}),
         player_sanction_history=(s.get("player_sanction_history") or [])[-50:],
+        inbox_messages=(s.get("inbox_messages") or [])[-100:],
+        inbox_unread_count=sum(1 for item in (s.get("inbox_messages") or []) if isinstance(item, dict) and item.get("status") == "unread"),
         eliminated=list(s.get("eliminated", [])),
         iaea_heat=s.get("iaea_heat", 0), un_censures=s.get("un_censures", 0),
         iaea_out=bool(s.get("iaea_out", False)),
@@ -544,6 +546,20 @@ class Handler(BaseHTTPRequestHandler):
                 res = run_engine(["init", country])
             self._json(dict(res, state=api_state(get_state(True))))
             return
+        elif path == "api/inbox/read":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    item = G.mark_inbox_message_read(current, body.get("message_id"))
+                    G.save(current)
+                self._json(dict(ok=True, message=item, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 404)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در به‌روزرسانی پیام: %s" % exc), 500)
         elif path == "api/events/source-review":
             if s is None:
                 self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
