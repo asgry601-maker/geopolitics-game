@@ -797,9 +797,9 @@ function politicalEditSelect(field, label, current) {
 function politicalChangeFormHtml(pc, isPlayer) {
   if (!isPlayer) return '<div class="dashNote">تغییر ساختار سایر کشورها از این پنل ممکن نیست. تصمیم‌گیری خودکار کشورها فقط پس از فعال‌شدن هوش مصنوعی زنده در آینده اضافه خواهد شد.</div>';
   pc = pc || {};
-  var proposalList = (window.GAME_STATE && window.GAME_STATE.political_reform_proposals) || [];
+  var proposalList = (ST && ST.political_reform_proposals) || [];
   var activeProposal = null, pi;
-  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (window.GAME_STATE && window.GAME_STATE.player) && proposalList[pi].status === 'pending') { activeProposal=proposalList[pi]; break; }
+  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && proposalList[pi].status === 'pending') { activeProposal=proposalList[pi]; break; }
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">در این مرحله تغییرات ابتدا به‌صورت طرح ثبت می‌شوند و وضعیت فعلی کشور دست‌نخورده می‌ماند. برآورد هزینه و زمان نمایش داده می‌شود؛ کسر خزانه و اجرای مرحله‌ای در بسته‌های بعدی فعال خواهد شد. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
   if (activeProposal) {
