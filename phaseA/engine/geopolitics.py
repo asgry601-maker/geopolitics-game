@@ -759,6 +759,28 @@ def load():
         if not isinstance(event.get("child_event_ids"), list):
             event["child_event_ids"] = []
             needs_event_save = True
+        try:
+            severity = max(1, min(5, int(event.get("severity", 1))))
+        except (TypeError, ValueError):
+            severity = 1
+        if event.get("severity") != severity:
+            event["severity"] = severity
+            needs_event_save = True
+        priority = get_event_priority(severity)
+        for key, value in (("priority", priority["key"]),
+                           ("priority_rank", priority["rank"]),
+                           ("priority_label", priority["label"])):
+            if event.get(key) != value:
+                event[key] = value
+                needs_event_save = True
+        if "status_updated_date" not in event:
+            event["status_updated_date"] = event.get("date") or s.get("game_date", "")
+            needs_event_save = True
+        try:
+            event["chain_depth"] = max(0, int(event.get("chain_depth", 0)))
+        except (TypeError, ValueError):
+            event["chain_depth"] = 0
+            needs_event_save = True
         if not isinstance(event.get("status_history"), list):
             event["status_history"] = [{
                 "date": event.get("date") or s.get("game_date", ""),
