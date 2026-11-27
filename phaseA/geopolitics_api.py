@@ -240,6 +240,8 @@ def api_state(s):
         ap=s.get("ap"), over=s.get("over", False),
         countries=countries, regions=regions,
         wars=wars, allies=list(s.get("allies", [])), pacts=list(s.get("pacts", [])),
+        player_sanctions=s.get("player_sanctions", {}),
+        player_sanction_history=(s.get("player_sanction_history") or [])[-50:],
         eliminated=list(s.get("eliminated", [])),
         iaea_heat=s.get("iaea_heat", 0), un_censures=s.get("un_censures", 0),
         iaea_out=bool(s.get("iaea_out", False)),
@@ -623,6 +625,35 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(dict(ok=True, out="زمان بازی جلو رفت.", state=api_state(state_now)))
             except Exception as e:
                 self._json(dict(ok=False, error="خطا در جلو بردن زمان: %s" % e), 500)
+        elif path == "api/sanctions/apply":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.apply_player_sanctions(
+                        current, body.get("targets"), body.get("categories"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در ثبت تحریم‌ها: %s" % exc), 500)
+        elif path == "api/sanctions/cancel":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.cancel_player_sanctions(current, body.get("targets"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در لغو تحریم‌ها: %s" % exc), 500)
         elif path == "api/act":
             if s is None:
                 self._json(dict(ok=False, error="بازی\u200cای ساخته نشده."))
