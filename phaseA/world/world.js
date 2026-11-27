@@ -1522,7 +1522,25 @@ function pactPanelHtml(countryName, canManage) {
     h += '<button type="button" id="pactProposalSubmit">ثبت پیشنهاد پیمان</button><div id="pactProposalStatus" class="dashNote">پیمان تا پذیرش همه طرف‌ها فعال نمی‌شود. نشست مرتبط باید دقیقاً همین اعضا را داشته باشد.</div></div>';
   }
   var pactProposals=ST && ST.agreement_proposals ? ST.agreement_proposals : [], pendingPacts=0;
-  for(i=0;i<pactProposals.length;i++) { rec=pactProposals[i] || {}; if(rec.kind==='pact' && rec.status==='pending' && (rec.parties || []).indexOf(ST ? ST.player : '')>=0) { pendingPacts++; h += '<div class="dashCard"><b>پیشنهاد پیمان در انتظار · ' + dashEsc(pactTypeLabel(rec.pact_type)) + '</b><div>طرف‌ها: ' + dashEsc((rec.parties || []).join('، ')) + '</div><div>وضعیت: در انتظار پذیرش همه طرف‌ها</div>'; if(rec.conversation_id) h += '<div class="muted small">نشست مرتبط: ' + dashEsc(rec.conversation_id) + '</div>'; h += '<div class="muted small">پاسخ کشورهای هوش مصنوعی تا فاز F دریافت نمی‌شود.</div></div>'; } }
+  for(i=0;i<pactProposals.length;i++) {
+    rec=pactProposals[i] || {};
+    if(rec.kind!=='pact' || rec.status!=='pending' || (rec.parties || []).indexOf(ST ? ST.player : '')<0) continue;
+    pendingPacts++;
+    var incomingPact = rec.initiator !== (ST ? ST.player : '');
+    var acceptedPact = rec.accepted_by || [];
+    h += '<div class="dashCard"><b>'+(incomingPact?'پیشنهاد پیمان دریافتی':'پیشنهاد پیمان ارسالی')+' · '+dashEsc(pactTypeLabel(rec.pact_type))+'</b>';
+    h += '<div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div>';
+    h += '<div>پذیرفته‌اند: '+dashEsc(acceptedPact.join('، ') || 'هنوز مشخص نیست')+'</div>';
+    if(rec.conversation_id) h += '<div class="muted small">نشست مرتبط: '+dashEsc(rec.conversation_id)+'</div>';
+    if(incomingPact && acceptedPact.indexOf(ST.player)<0) {
+      h += '<div class="row" style="gap:8px;margin-top:8px"><button type="button" data-agreement-decision="accept" data-proposal-id="'+dashEsc(rec.id)+'">پذیرش پیشنهاد پیمان</button><button type="button" class="warn" data-agreement-decision="reject" data-proposal-id="'+dashEsc(rec.id)+'">رد پیشنهاد</button></div>';
+    } else if(incomingPact) {
+      h += '<div class="muted small">پیشنهاد را پذیرفته‌ای؛ پیمان تا پذیرش همه طرف‌ها فعال نمی‌شود.</div>';
+    } else {
+      h += '<div class="muted small">پیشنهاد ارسالی شما در انتظار پاسخ طرف‌های دیگر است؛ پاسخ خودکار از طرف هوش مصنوعی ساخته نمی‌شود.</div>';
+    }
+    h += '</div>';
+  }
   if (!active.length && !pendingPacts) h += '<div class="dashCard">در حال حاضر پیمان فعال یا پیشنهاد در انتظار ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
   for (i=0;i<active.length;i++) {
     rec = active[i];
@@ -1542,9 +1560,38 @@ function pactPanelHtml(countryName, canManage) {
   if (!canManage) h += '<div class="dashNote">این کشور در حالت مشاهده است؛ مدیریت پیمان‌ها فقط از کشور تحت کنترل بازیکن انجام می‌شود.</div>';
   return h;
 }
+function bindAgreementDecisionActions() {
+  var box = el('dashSection');
+  if (!box) return;
+  var buttons = box.querySelectorAll('[data-agreement-decision]');
+  for (var i=0;i<buttons.length;i++) buttons[i].onclick=function() {
+    var button=this;
+    var proposalId=button.getAttribute('data-proposal-id');
+    var decision=button.getAttribute('data-agreement-decision');
+    if(!proposalId || (decision!=='accept' && decision!=='reject')) return;
+    if(window.confirm && !window.confirm(decision==='accept'?'این پیشنهاد را می‌پذیری؟':'این پیشنهاد را رد می‌کنی؟')) return;
+    button.disabled=true;
+    postJSON('api/agreements/decision',{proposal_id:proposalId,decision:decision},function(res) {
+      if(!res || !res.ok) {
+        button.disabled=false;
+        flash((res&&res.error)||'ثبت تصمیم درباره پیشنهاد ناموفق بود.');
+        return;
+      }
+      loadState(function() {
+        if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        flash(decision==='accept'?'پذیرش شما ثبت شد؛ توافق فقط پس از پذیرش همه طرف‌ها فعال می‌شود.':'رد پیشنهاد ثبت شد.');
+      });
+    },function(st,tx) {
+      button.disabled=false;
+      flash(netErrMsg(st,tx)+' — تصمیم ثبت نشد.');
+    });
+  };
+}
+
 function bindPactActions() {
   var box = el('dashSection');
   if (!box) return;
+  bindAgreementDecisionActions();
   var create=el('pactProposalSubmit');
   if(create) create.onclick=function(){
     var select=el('pactProposalCountries'), parties=[], j;
@@ -1641,12 +1688,23 @@ function alliancePanelHtml(countryName, canManage) {
     var pending = 0;
     for (i=0;i<proposals.length;i++) {
       rec=proposals[i] || {};
-      if (rec.kind === 'alliance' && rec.status === 'pending' && (rec.initiator === ST.player || (rec.parties || []).indexOf(ST.player)>=0)) {
-        pending++;
-        h += '<div class="dashCard"><b>پیشنهاد تشکیل اتحاد</b><div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div><div>وضعیت: در انتظار پاسخ اعضا</div>';
-        if(rec.conversation_id) h += '<div class="muted small">نشست مذاکره مرتبط: '+dashEsc(rec.conversation_id)+'</div>';
-        h += '<div class="muted small">پاسخ هوش مصنوعی تا فعال‌سازی فاز F دریافت نمی‌شود.</div></div>';
+      if (rec.kind !== 'alliance' || rec.status !== 'pending' ||
+          (rec.initiator !== ST.player && (rec.parties || []).indexOf(ST.player)<0)) continue;
+      pending++;
+      var incomingAlliance = rec.initiator !== ST.player;
+      var acceptedAlliance = rec.accepted_by || [];
+      h += '<div class="dashCard"><b>'+(incomingAlliance?'دعوت دریافتی برای عضویت در اتحاد':'پیشنهاد تشکیل اتحاد')+'</b>';
+      h += '<div>نام اتحاد: '+dashEsc(rec.name || 'اتحاد جدید')+'</div><div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div>';
+      h += '<div>پذیرفته‌اند: '+dashEsc(acceptedAlliance.join('، ') || 'هنوز مشخص نیست')+'</div>';
+      if(rec.conversation_id) h += '<div class="muted small">نشست مذاکره مرتبط: '+dashEsc(rec.conversation_id)+'</div>';
+      if (incomingAlliance && acceptedAlliance.indexOf(ST.player)<0) {
+        h += '<div class="row" style="gap:8px;margin-top:8px"><button type="button" data-agreement-decision="accept" data-proposal-id="'+dashEsc(rec.id)+'">پذیرش دعوت</button><button type="button" class="warn" data-agreement-decision="reject" data-proposal-id="'+dashEsc(rec.id)+'">رد دعوت</button></div>';
+      } else if (incomingAlliance) {
+        h += '<div class="muted small">دعوت را پذیرفته‌ای؛ تشکیل اتحاد تا پذیرش همه طرف‌ها معلق می‌ماند.</div>';
+      } else {
+        h += '<div class="muted small">پیشنهاد ارسالی شما در انتظار پاسخ طرف‌های دیگر است؛ پاسخ خودکار از طرف هوش مصنوعی ساخته نمی‌شود.</div>';
       }
+      h += '</div>';
     }
     for (i=0;i<joinRequests.length;i++) {
       rec=joinRequests[i] || {};
@@ -1662,6 +1720,7 @@ function alliancePanelHtml(countryName, canManage) {
 function bindAllianceActions() {
   var box=el('dashSection');
   if (!box || !ST) return;
+  bindAgreementDecisionActions();
   var leave=box.querySelectorAll('[data-alliance-leave]');
   for (var i=0;i<leave.length;i++) leave[i].onclick=function(){
     var id=this.getAttribute('data-alliance-leave');
