@@ -413,9 +413,9 @@ function renderEventTalkState() {
   if(nb) { nb.className='eventNegotiationToggle'+(normal?' active':''); nb.setAttribute('aria-pressed',normal?'true':'false'); }
   if(cs) cs.textContent=confidential?'روشن':'خاموش'; if(as) as.textContent=alliance?'روشن':'خاموش'; if(ns) ns.textContent=normal?'روشن':'خاموش';
   if(publicMode) {
-    if(title) title.textContent='پنجره بیانیه‌ها · حالت عمومی';
-    if(note) note.textContent='حالت عمومی: محتوا برای انتشار در بیانیه عمومی و پوشش رسانه‌ای در نظر گرفته می‌شود.';
-    if(feed&&feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent='بیانیه‌ای برای نمایش وجود ندارد. پس از اتصال هوش مصنوعی زنده، بیانیه‌های عمومی کشورها در این قسمت نمایش داده می‌شوند.';
+    if(title) title.textContent=alliance?'پنجره مذاکرات با اتحاد':'پنجره بیانیه‌ها · حالت عمومی';
+    if(note) note.textContent=alliance?'مذاکره با اتحاد در حالت عمومی است؛ محتوا می‌تواند در بیانیه عمومی و رسانه‌ها بازتاب پیدا کند.':'حالت عمومی: محتوا برای انتشار در بیانیه عمومی و پوشش رسانه‌ای در نظر گرفته می‌شود.';
+    if(feed&&feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent=alliance?'فضای مذاکره عمومی با اتحاد آماده است؛ اتصال هوش مصنوعی زنده در فاز F فعال می‌شود.':'بیانیه‌ای برای نمایش وجود ندارد. پس از اتصال هوش مصنوعی زنده، بیانیه‌های عمومی کشورها در این قسمت نمایش داده می‌شوند.';
   } else if(confidential) {
     if(title) title.textContent=alliance?'مذاکره محرمانه با اتحاد':(CONFIDENTIAL_TARGETS.length?'مذاکره محرمانه · با '+CONFIDENTIAL_TARGETS.join('، '):'مذاکره محرمانه · انتخاب کشورها');
     if(note) note.textContent=CONFIDENTIAL_TARGETS.length?'محتوا فقط میان شرکت‌کنندگان می‌ماند؛ نه در بیانیه عمومی منتشر می‌شود و نه رسانه‌ها به آن دسترسی دارند.':'کشورهای مذاکره را انتخاب کن. این حالت از بیانیه عمومی و پوشش رسانه‌ای محرمانه است.';
