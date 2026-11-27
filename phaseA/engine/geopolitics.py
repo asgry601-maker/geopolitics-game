@@ -1626,6 +1626,34 @@ EVENT_CATEGORIES = (
     "social", "diplomatic", "natural", "environmental", "nuclear"
 )
 
+EVENT_PRIORITY_LEVELS = {
+    "ordinary": {"rank": 1, "label": "عادی"},
+    "important": {"rank": 2, "label": "مهم"},
+    "critical": {"rank": 3, "label": "بحرانی"},
+    "very_critical": {"rank": 4, "label": "بسیار بحرانی"}
+}
+
+
+def get_event_priority(severity):
+    """تبدیل شدت عددی رویداد به سطح اولویت نمایشی."""
+    try:
+        value = int(severity)
+    except (TypeError, ValueError):
+        value = 1
+    value = max(1, min(5, value))
+    if value <= 1:
+        key = "ordinary"
+    elif value <= 3:
+        key = "important"
+    elif value == 4:
+        key = "critical"
+    else:
+        key = "very_critical"
+    result = dict(EVENT_PRIORITY_LEVELS[key])
+    result["key"] = key
+    return result
+
+
 EVENT_STATUS_TRANSITIONS = {
     "recorded": ("acknowledged", "investigating", "dismissed"),
     "acknowledged": ("investigating", "resolved", "dismissed"),
@@ -1808,6 +1836,9 @@ def register_game_event(s, category, country=None, title="", description="",
         "title": str(title or ""),
         "description": str(description or ""),
         "severity": severity,
+        "priority": get_event_priority(severity)["key"],
+        "priority_rank": get_event_priority(severity)["rank"],
+        "priority_label": get_event_priority(severity)["label"],
         "status": "recorded",
         "status_updated_date": s.get("game_date", ""),
         "status_history": [{
@@ -1833,6 +1864,34 @@ def register_game_event(s, category, country=None, title="", description="",
     if len(events) > 500:
         del events[:-500]
     return event
+
+
+def get_prioritized_game_events(s, limit=50, include_closed=False):
+    """دریافت رویدادها بر اساس اولویت، بدون تغییر وضعیت یا اعمال پیامد."""
+    events = s.get("game_events") or []
+    selected = []
+    for event in events:
+        if not isinstance(event, dict):
+            continue
+        if not include_closed and event.get("status") in ("closed", "dismissed"):
+            continue
+        priority = get_event_priority(event.get("severity", 1))
+        item = dict(event)
+        item["priority"] = item.get("priority") or priority["key"]
+        item["priority_rank"] = priority["rank"]
+        item["priority_label"] = priority["label"]
+        selected.append(item)
+
+    selected.sort(key=lambda item: (
+        -int(item.get("priority_rank", 1)),
+        str(item.get("date", "")),
+        str(item.get("id", ""))
+    ))
+    try:
+        limit = max(1, min(500, int(limit)))
+    except (TypeError, ValueError):
+        limit = 50
+    return selected[:limit]
 
 
 def transition_game_event(s, event_id, new_status, actor="player", note=""):
