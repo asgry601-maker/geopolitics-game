@@ -244,6 +244,7 @@ def api_state(s):
         iaea_heat=s.get("iaea_heat", 0), un_censures=s.get("un_censures", 0),
         iaea_out=bool(s.get("iaea_out", False)),
         log=(s.get("log") or [])[-6:],
+        political_reform_proposals=(s.get("political_reform_proposals") or [])[-20:],
         hidden=True,
     )
 
