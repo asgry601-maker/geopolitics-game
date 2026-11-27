@@ -86,6 +86,19 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .eventMilitaryPlaceholder strong { color:#ffd479; }
 .eventMilitaryFuture { margin-top:10px; border:1px dashed #52617a; border-radius:8px; padding:9px;
   color:#aebbd0; font-size:11px; line-height:1.8; }
+.inboxPanel { position:absolute; z-index:24; top:58px; right:12px; width:min(420px,calc(100vw - 24px)); max-height:72vh; overflow:auto; background:#101b2d; border:1px solid #6689b5; border-radius:12px; padding:12px; box-shadow:0 10px 32px rgba(0,0,0,.45); direction:rtl; color:#e8eef8; }
+.inboxPanel[hidden] { display:none !important; }
+.inboxPanelHead { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.inboxPanelHead h3 { margin:0; color:#ffd479; }
+.inboxPanelNote,.inboxEmpty,.inboxFutureNote { font-size:11px; line-height:1.9; color:#b9c8dc; padding:8px; background:#17263c; border-radius:8px; margin:8px 0; }
+.inboxCard { border:1px solid #354e70; background:#142238; border-radius:9px; padding:9px; margin:8px 0; }
+.inboxCardHead { display:flex; justify-content:space-between; color:#ffd479; font-size:12px; }
+.inboxCardHead span { color:#9db1ca; font-size:10px; }
+.inboxCardTitle { margin:7px 0; font-size:12px; }
+.inboxShowBtn { width:100%; }
+.inboxMessageBody { margin-top:8px; padding:8px; border-top:1px solid #354e70; font-size:12px; line-height:1.9; white-space:pre-wrap; }
+.inboxMessageBody small { display:block; color:#9db1ca; margin-top:7px; }
+.inboxUnreadCount { display:inline-block; background:#c33b47; color:#fff; border-radius:10px; padding:1px 5px; font-size:10px; }
 .eventPanelTabs { flex-wrap:wrap; }
 .eventPanelTab { min-width:0; }
 .eventPanelView[hidden], .eventInnerView[hidden], .eventTargetBox[hidden] { display:none !important; }
@@ -311,7 +324,13 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         <span id="gameClockText" class="clockDate">📅 — | 🕒 —</span>
         <button id="btn5h" class="primary" title="جلو رفتن دقیقاً پنج ساعت">⏩ ۵ ساعت</button>
         <button id="btnEnd" class="warn" title="جلو رفتن دقیقاً ۲۴ ساعت">☀️ یک روز کامل</button>
+        <button id="btnInbox" type="button" title="صندوق پیام‌ها" aria-expanded="false">✉️ پیام‌ها <span id="inboxUnreadCount" class="inboxUnreadCount" style="display:none"></span></button>
       </div>
+    </div>
+    <div id="inboxPanel" class="inboxPanel" hidden>
+      <div class="inboxPanelHead"><h3>✉️ صندوق پیام‌ها</h3><button type="button" id="btnInboxClose">بستن</button></div>
+      <div class="inboxPanelNote">درخواست‌ها، پیشنهادها و پیام‌های کشورهای دیگر در اینجا جمع‌آوری می‌شوند تا اعلان‌های دیپلماتیک باعث شلوغی صفحه اصلی نشوند.</div>
+      <div id="inboxList" class="inboxList"><div class="inboxEmpty">در حال بارگذاری پیام‌ها…</div></div>
     </div>
     <div id="eventPanel" aria-hidden="true">
       <div class="eventPanelHead"><h2>مرکز رویدادها</h2><span class="badge">فاز B</span></div>
