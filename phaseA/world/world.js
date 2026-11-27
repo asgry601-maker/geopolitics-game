@@ -1378,6 +1378,114 @@ function bindPactActions() {
   }
 }
 
+
+/* ---------- مدیریت اتحادها و درخواست عضویت ---------- */
+function alliancePanelHtml(countryName, canManage) {
+  var records = ST && ST.alliance_records ? ST.alliance_records : [];
+  var proposals = ST && ST.agreement_proposals ? ST.agreement_proposals : [];
+  var joinRequests = ST && ST.alliance_join_requests ? ST.alliance_join_requests : [];
+  var current = [], world = [], i, rec, members, h = '<h3>🤝 مدیریت اتحادها</h3>';
+  for (i=0;i<records.length;i++) {
+    rec = records[i] || {};
+    if (rec.status !== 'active') continue;
+    members = rec.members || [];
+    if (members.indexOf(countryName) >= 0) current.push(rec);
+    if (members.indexOf(ST ? ST.player : '') < 0) world.push(rec);
+  }
+  h += '<h4>اتحادهای کشور انتخاب‌شده</h4>';
+  if (!current.length) h += '<div class="dashCard">این کشور در حال حاضر عضو هیچ اتحاد فعالی نیست.</div>';
+  for (i=0;i<current.length;i++) {
+    rec=current[i]; members=rec.members || [];
+    h += '<div class="dashCard"><div class="row"><b>'+dashEsc(rec.name || 'اتحاد ثبت‌شده')+'</b><span class="badge">فعال</span></div>';
+    h += '<div class="row"><span class="muted">نوع اتحاد</span><b>'+dashEsc(rec.type || 'ثبت‌نشده')+'</b></div>';
+    h += '<div class="row"><span class="muted">اعضا</span><span>'+dashEsc(members.join('، '))+'</span></div>';
+    h += '<div class="row"><span class="muted">تاریخ تشکیل</span><span>'+dashEsc(rec.created_date || '—')+'</span></div>';
+    if (rec.legacy) h += '<div class="muted small">این سابقه از اطلاعات نسخه قبلی منتقل شده است.</div>';
+    if (canManage) h += '<button type="button" class="warn" data-alliance-leave="'+dashEsc(rec.id)+'">خروج یک‌جانبه از اتحاد</button>';
+    h += '</div>';
+  }
+  if (!canManage) h += '<div class="dashNote">مدیریت اتحادها فقط برای کشور تحت کنترل بازیکن فعال است.</div>';
+  if (canManage) {
+    h += '<h4>ایجاد اتحاد جدید</h4><div class="dashCard">';
+    h += '<label>نام اتحاد <input id="allianceNewName" type="text" maxlength="100" placeholder="مثلاً اتحاد همکاری منطقه‌ای"></label>';
+    h += '<label>کشورهای دعوت‌شونده <select id="allianceNewCountries" multiple size="8" style="width:100%;min-height:150px">';
+    var names = ST && ST.countries ? Object.keys(ST.countries) : [];
+    names.sort();
+    for (i=0;i<names.length;i++) if (names[i] !== ST.player && (!ST.eliminated || ST.eliminated.indexOf(names[i]) < 0)) {
+      h += '<option value="'+dashEsc(names[i])+'">'+dashEsc(names[i])+'</option>';
+    }
+    h += '</select></label><div class="muted small">برای انتخاب چند کشور، کلید Ctrl را نگه دار. اتحاد فقط پس از پذیرش همه اعضای دعوت‌شده تشکیل می‌شود.</div>';
+    h += '<button type="button" id="allianceCreateSubmit">ارسال پیشنهاد تشکیل اتحاد</button><div id="allianceActionStatus" class="dashNote">هیچ دعوتی بدون تأیید کشورهای دعوت‌شده به عضویت فعال تبدیل نمی‌شود.</div></div>';
+  }
+  h += '<h4>اتحادهای دیگر کشورهای جهان</h4>';
+  if (!world.length) h += '<div class="dashCard">در داده فعلی، اتحاد فعال مستقلی برای نمایش ثبت نشده است. اتحادهای فرضی یا تأییدنشده نمایش داده نمی‌شوند.</div>';
+  for (i=0;i<world.length;i++) {
+    rec=world[i]; members=rec.members || [];
+    h += '<div class="dashCard"><div class="row"><b>'+dashEsc(rec.name || 'اتحاد ثبت‌شده')+'</b><span class="badge">فعال</span></div>';
+    h += '<div class="row"><span class="muted">نوع</span><span>'+dashEsc(rec.type || 'ثبت‌نشده')+'</span></div>';
+    h += '<div class="row"><span class="muted">اعضا</span><span>'+dashEsc(members.join('، '))+'</span></div>';
+    if (canManage) h += '<button type="button" data-alliance-join="'+dashEsc(rec.id)+'">درخواست عضویت در این اتحاد</button>';
+    h += '</div>';
+  }
+  if (canManage) {
+    h += '<h4>پیشنهادها و درخواست‌های در انتظار</h4>';
+    var pending = 0;
+    for (i=0;i<proposals.length;i++) {
+      rec=proposals[i] || {};
+      if (rec.kind === 'alliance' && rec.status === 'pending' && (rec.initiator === ST.player || (rec.parties || []).indexOf(ST.player)>=0)) {
+        pending++;
+        h += '<div class="dashCard"><b>پیشنهاد تشکیل اتحاد</b><div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div><div>وضعیت: در انتظار پاسخ اعضا</div><div class="muted small">پاسخ هوش مصنوعی تا فعال‌سازی فاز F دریافت نمی‌شود.</div></div>';
+      }
+    }
+    for (i=0;i<joinRequests.length;i++) {
+      rec=joinRequests[i] || {};
+      if (rec.requester === ST.player && rec.status === 'pending') {
+        pending++;
+        h += '<div class="dashCard"><b>درخواست عضویت در '+dashEsc(rec.alliance_name || 'اتحاد')+'</b><div>وضعیت: در انتظار بررسی اعضا</div><div class="muted small">درخواست ثبت شده، اما عضویت هنوز فعال نیست؛ بررسی زنده در فاز F انجام می‌شود.</div></div>';
+      }
+    }
+    if (!pending) h += '<div class="dashCard">پیشنهاد یا درخواست در انتظاری وجود ندارد.</div>';
+  }
+  return h;
+}
+function bindAllianceActions() {
+  var box=el('dashSection');
+  if (!box || !ST) return;
+  var leave=box.querySelectorAll('[data-alliance-leave]');
+  for (var i=0;i<leave.length;i++) leave[i].onclick=function(){
+    var id=this.getAttribute('data-alliance-leave');
+    if (!id || (window.confirm && !window.confirm('از خروج یک‌جانبه از این اتحاد مطمئنی؟'))) return;
+    this.disabled=true;
+    postJSON('api/agreements/alliance/leave',{agreement_id:id},function(res){
+      if(!res || !res.ok){flash((res&&res.error)||'خروج از اتحاد انجام نشد.');return;}
+      loadState(function(){if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);flash('خروج از اتحاد ثبت شد.');});
+    },function(st,tx){flash(netErrMsg(st,tx)+' — خروج از اتحاد انجام نشد.');});
+  };
+  var join=box.querySelectorAll('[data-alliance-join]');
+  for (i=0;i<join.length;i++) join[i].onclick=function(){
+    var id=this.getAttribute('data-alliance-join');
+    if(!id)return;
+    this.disabled=true;
+    postJSON('api/agreements/alliance/join-request',{alliance_id:id},function(res){
+      if(!res||!res.ok){flash((res&&res.error)||'درخواست عضویت ثبت نشد.');if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);return;}
+      loadState(function(){if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);flash('درخواست عضویت ثبت شد؛ تا پذیرش اعضا عضو اتحاد محسوب نمی‌شوی.');});
+    },function(st,tx){flash(netErrMsg(st,tx)+' — درخواست عضویت ثبت نشد.');});
+  };
+  var create=el('allianceCreateSubmit');
+  if(create)create.onclick=function(){
+    var select=el('allianceNewCountries'), name=el('allianceNewName'), parties=[], j;
+    if(select)for(j=0;j<select.options.length;j++)if(select.options[j].selected)parties.push(select.options[j].value);
+    if(!parties.length){var status=el('allianceActionStatus');if(status)status.textContent='حداقل یک کشور برای دعوت انتخاب کن.';return;}
+    parties.unshift(ST.player);
+    create.disabled=true;
+    postJSON('api/agreements/propose',{kind:'alliance',parties:parties,alliance_name:name?name.value:''},function(res){
+      create.disabled=false;
+      if(!res||!res.ok){var status=el('allianceActionStatus');if(status)status.textContent=(res&&res.error)||'پیشنهاد ثبت نشد.';return;}
+      loadState(function(){if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);flash('پیشنهاد تشکیل اتحاد ثبت شد؛ تا پذیرش همه کشورها اتحاد فعال نمی‌شود.');});
+    },function(st,tx){create.disabled=false;var status=el('allianceActionStatus');if(status)status.textContent=netErrMsg(st,tx)+' — پیشنهاد ثبت نشد.';});
+  };
+}
+
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
   if (tab === 'general') {
@@ -1585,6 +1693,7 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
   } else if (tab === 'pacts') {
     h += pactPanelHtml(r.name, isPlayer);
+    h += alliancePanelHtml(r.name, isPlayer);
   } else if (tab === 'sanctions') {
     h += '<h3>⛔ تحریم‌ها</h3>';
     h += dashMissing('وضعیت تحریم‌ها','کشورهای تحریم‌کننده، نوع و محدودیت تحریم، اثر اقتصادی و روند مذاکره برای رفع تحریم هنوز به شکل پنل تفصیلی پیاده‌سازی نشده‌اند.');
@@ -1655,6 +1764,7 @@ function renderCountryPanel(r) {
   provAfterPanel();
   bindPoliticalChangeForm(r);
   if (DASH_TAB === 'pacts') bindPactActions();
+  if (DASH_TAB === 'pacts') bindAllianceActions();
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
