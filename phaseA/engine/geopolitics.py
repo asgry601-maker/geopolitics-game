@@ -846,6 +846,12 @@ def load():
         needs_event_save = True
     if needs_event_save:
         save(s)
+    if not isinstance(s.get("diplomatic_history"), list):
+        s["diplomatic_history"] = []
+        save(s)
+    else:
+        s["diplomatic_history"] = [x for x in s["diplomatic_history"][-300:] if isinstance(x, dict)]
+
     s.setdefault("proxies", [])
     s.setdefault("day", 1)
     s.setdefault("iaea_heat", 0)
@@ -1371,6 +1377,108 @@ def set_rel(s, a, b, val):
 
 def add_rel(s, a, b, delta):
     set_rel(s, a, b, get_rel(s, a, b) + delta)
+
+
+# ---------- اقدامات مستقیم دیپلماتیک بازیکن ----------
+DIPLOMACY_ACTIONS = ("improve_relations", "reduce_relations",
+                     "declare_war", "unilateral_ceasefire")
+
+
+def apply_diplomacy_action(s, action, targets):
+    """اجرای اقدام دیپلماتیک بازیکن؛ بدون پاسخ ساختگی از سوی AI."""
+    if action not in DIPLOMACY_ACTIONS:
+        raise ValueError("نوع اقدام دیپلماتیک نامعتبر است.")
+    if s.get("over"):
+        raise ValueError("بازی پایان یافته است.")
+    if not isinstance(targets, list):
+        raise ValueError("فهرست کشورها نامعتبر است.")
+    player = s.get("player")
+    world = s.get("world") or {}
+    cleaned = []
+    for raw in targets:
+        name = str(raw).strip()
+        if name not in world:
+            raise ValueError("کشور نامعتبر است: " + name)
+        if name == player:
+            raise ValueError("کشور بازیکن را نمی‌توان هدف اقدام دیپلماتیک قرار داد.")
+        if name in s.get("eliminated", []):
+            raise ValueError("کشور حذف‌شده قابل انتخاب نیست: " + name)
+        if name not in cleaned:
+            cleaned.append(name)
+    if not cleaned or len(cleaned) > 20:
+        raise ValueError("باید بین ۱ تا ۲۰ کشور یکتا انتخاب شود.")
+
+    wars = s.setdefault("at_war", [])
+    history = s.setdefault("diplomatic_history", [])
+    today = str(s.get("game_date") or "")
+    results = []
+    for target in cleaned:
+        pair_exists = any(
+            wars[i] == player and wars[i + 1] == target or
+            wars[i] == target and wars[i + 1] == player
+            for i in range(0, len(wars) - 1, 2)
+        )
+        before = round(float(get_rel(s, player, target)), 1)
+        if action == "improve_relations":
+            if pair_exists:
+                results.append({"country": target, "ok": False,
+                                "reason": "در وضعیت جنگ، بهبود مستقیم روابط مجاز نیست.",
+                                "relation_before": before, "relation_after": before})
+                continue
+            add_rel(s, player, target, 10)
+            after = round(float(get_rel(s, player, target)), 1)
+            detail = "روابط دو کشور بهبود یافت."
+        elif action == "reduce_relations":
+            add_rel(s, player, target, -10)
+            after = round(float(get_rel(s, player, target)), 1)
+            detail = "روابط دو کشور کاهش یافت."
+        elif action == "declare_war":
+            if pair_exists:
+                results.append({"country": target, "ok": False,
+                                "reason": "جنگ با این کشور از قبل برقرار است.",
+                                "relation_before": before, "relation_after": before})
+                continue
+            if target in s.get("allies", []):
+                results.append({"country": target, "ok": False,
+                                "reason": "ابتدا باید وضعیت اتحاد با این کشور تعیین تکلیف شود.",
+                                "relation_before": before, "relation_after": before})
+                continue
+            wars.extend([player, target])
+            add_rel(s, player, target, -30)
+            after = round(float(get_rel(s, player, target)), 1)
+            detail = "اعلام جنگ ثبت شد؛ این اقدام به‌تنهایی نبرد یا نتیجه نظامی را شبیه‌سازی نمی‌کند."
+        else:
+            if not pair_exists:
+                results.append({"country": target, "ok": False,
+                                "reason": "با این کشور جنگ فعالی وجود ندارد.",
+                                "relation_before": before, "relation_after": before})
+                continue
+            remaining = []
+            for i in range(0, len(wars) - 1, 2):
+                x, y = wars[i], wars[i + 1]
+                if not ((x == player and y == target) or
+                        (x == target and y == player)):
+                    remaining.extend([x, y])
+            wars[:] = remaining
+            add_rel(s, player, target, 10)
+            after = round(float(get_rel(s, player, target)), 1)
+            detail = "آتش‌بس یک‌جانبه ثبت شد؛ وضعیت جنگ با این کشور پایان یافت."
+
+        record = {
+            "date": today, "action": action, "actor": player,
+            "country": target, "status": "applied",
+            "relation_before": before, "relation_after": after,
+            "detail": detail
+        }
+        history.append(record)
+        msg(s, "دیپلماسی: %s — %s" % (target, detail))
+        results.append({"country": target, "ok": True,
+                        "relation_before": before, "relation_after": after,
+                        "detail": detail})
+    del history[:-300]
+    return {"ok": True, "action": action, "results": results,
+            "success_count": sum(1 for x in results if x.get("ok")),
+            "failed_count": sum(1 for x in results if not x.get("ok"))}
 
 # ---------- بیانیه‌های هوش مصنوعی کشورها ----------
 STMTS = {
@@ -2343,6 +2451,7 @@ def init_game(player):
         allies=allies0, pacts=pacts0,
         pact_records=[], alliance_records=[], agreement_proposals=[], agreement_history=[], agreement_sequence=0,
         alliance_join_requests=[],
+        diplomatic_history=[],
         player_sanctions={}, player_sanction_history=[],
         inbox_messages=[], inbox_sequence=0,
         conversation_sessions=[], conversation_sequence=0,
