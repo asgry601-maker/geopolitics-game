@@ -101,3 +101,14 @@ Note: The Belgium portrait is older (2014/2015) than the other five portraits, b
 - **LUX — Luxembourg:** Luc Frieden — `Luc Frieden 2025 (cropped).jpg`. Author: FinnishGovernment; source: Finnish Government Flickr; dated 6 May 2025; license: CC BY 2.0.
 
 All images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
+
+## Package 9 — Central and Western Europe (6 countries)
+
+- **CHE — Switzerland:** Karin Keller-Sutter — `Karin Keller-Sutter (2025) (cropped).jpg`. Official Swiss Federal Council portrait, 23 December 2024; photographer Béatrice Devènes / Federal Chancellery. The Swiss Federal Chancellery has granted general reuse permission with attribution; permission is recorded in Wikimedia VRTS. Credit: Béatrice Devènes / Bundeskanzlei.
+- **AUT — Austria:** Christian Stocker — `Christian Stocker, 2025.06.26 (01) (cropped).jpg`. European Union photograph, 26 June 2025; reuse permitted with attribution under the European Commission reuse policy. Credit: © European Union, 1998–2026.
+- **IRL — Ireland:** Micheál Martin — `Taoiseach Micheál Martin.jpg`. Own work by Killianginnity, 25 February 2026; CC BY-SA 4.0.
+- **CZE — Czechia:** Petr Fiala — `Czechia PM Petr Fiala 2025 portrait.jpg`. Cropped from a Number 10 Downing Street photograph by Lauren Hurley, 14 July 2025; Open Government Licence v3.0. Attribution: Contains public sector information licensed under the Open Government Licence v3.0.
+- **SVK — Slovakia:** Robert Fico — `Robert Fico portrait, 2025.jpg`. European Commission Audiovisual Service photograph by Christophe Licoppe, 3 February 2025; CC BY 4.0. Credit: © European Union, 2026.
+- **ROU — Romania:** Nicușor Dan — `Nicusor Dan in 2026.jpg`. U.S. Embassy Romania photograph, dated 3 March 2026; public domain as a work of a U.S. Department of State employee made in official duties.
+
+All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
