@@ -246,6 +246,8 @@ def api_state(s):
         log=(s.get("log") or [])[-6:],
         political_reform_proposals=(s.get("political_reform_proposals") or [])[-20:],
         social_groups=(s.get("social_groups") or {}).get(P, {}),
+        legitimacy=s.get("legitimacy", 50.0),
+        regime_crisis=s.get("regime_crisis"),
         political_history=(s.get("political_history") or [])[-10:],
         hidden=True,
     )
