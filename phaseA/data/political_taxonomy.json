@@ -291,6 +291,11 @@
       "id": "unknown",
       "name_fa": "نامشخص",
       "name_en": "Unknown"
+    },
+    {
+      "id": "social_liberalism",
+      "name_fa": "لیبرالیسم اجتماعی",
+      "name_en": "Social Liberalism"
     }
   ],
   "migration_notes": [
