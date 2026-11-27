@@ -1708,6 +1708,48 @@ def get_event_trigger_catalog():
             for item in EVENT_TRIGGER_SPECS]
 
 
+def validate_event_trigger_payload(trigger_id, payload):
+    """اعتبارسنجی قرارداد داده محرک؛ بدون فعال‌سازی محرک یا ثبت رویداد."""
+    spec = None
+    for item in EVENT_TRIGGER_SPECS:
+        if item.get("id") == trigger_id:
+            spec = item
+            break
+    if spec is None:
+        return {
+            "valid": False,
+            "trigger_id": trigger_id,
+            "errors": ["شناسه محرک در کاتالوگ وجود ندارد."]
+        }
+    if not isinstance(payload, dict):
+        return {
+            "valid": False,
+            "trigger_id": trigger_id,
+            "errors": ["داده محرک باید از نوع شیء/دیکشنری باشد."]
+        }
+
+    errors = []
+    for field in spec.get("required_fields") or []:
+        if field not in payload:
+            errors.append("فیلد الزامی موجود نیست: %s" % field)
+            continue
+        value = payload.get(field)
+        if value is None or (isinstance(value, str) and not value.strip()):
+            errors.append("فیلد الزامی خالی است: %s" % field)
+        elif isinstance(value, (list, tuple, dict)) and not value:
+            errors.append("فیلد الزامی خالی است: %s" % field)
+
+    return {
+        "valid": not errors,
+        "trigger_id": spec.get("id"),
+        "category": spec.get("category"),
+        "source_system": spec.get("source_system"),
+        "signal": spec.get("signal"),
+        "activation": EVENT_TRIGGER_ACTIVATION,
+        "errors": errors
+    }
+
+
 def register_game_event(s, category, country=None, title="", description="",
                         severity=1, source="system", metadata=None):
     """ثبت یک رویداد ساختاریافته؛ این تابع به‌تنهایی هیچ پیامد بازی اعمال نمی‌کند."""
