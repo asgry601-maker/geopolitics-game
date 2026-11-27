@@ -342,6 +342,16 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
       <div id="eventStatementView" class="eventPanelView">
       <section class="eventStatementsArea">
         <div class="eventSectionLabel" id="eventStatementTitle">پنجره بیانیه‌ها · حالت عمومی</div>
+        <div class="eventTargetBox" id="publicTargetBox">
+          <strong style="color:#ffd479;font-size:12px">انتخاب کشورهای شرکت‌کننده در حالت عمومی</strong>
+          <div id="publicTargetSummary" class="eventSelectionSummary">کشورهای شرکت‌کننده را انتخاب و تأیید کن.</div>
+          <button type="button" id="publicEditCountries" hidden>تغییر فهرست کشورها</button>
+          <div id="publicCountryList" class="eventTargetList"></div>
+          <div class="eventActionRow">
+            <button type="button" class="eventBtnConfirm" id="publicConfirmCountries">تأیید</button>
+            <button type="button" class="eventBtnCancel" id="publicCancelCountries">لغو و پاک‌کردن انتخاب‌ها</button>
+          </div>
+        </div>
         <div id="confidentialTargetBox" class="eventTargetBox" hidden>
           <strong style="color:#ffd479;font-size:12px">انتخاب کشورهای مذاکره محرمانه</strong>
           <div id="confidentialTargetSummary" class="eventSelectionSummary">هنوز کشوری انتخاب و تأیید نشده است.</div>
@@ -383,6 +393,8 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
           <span>📰 مذاکره عادی</span><span class="eventToggleState" id="normalTalkState">خاموش</span>
         </button>
         <div class="eventContextNote" id="eventContextNote">حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.</div>
+        <button type="button" class="primary" id="statementPrepareConversation">آماده‌سازی نشست و رفتن به تریبون</button>
+        <div class="muted small" id="statementPrepareStatus">ثبت نشست هیچ پیامی ارسال نمی‌کند؛ گفت‌وگوی زنده در فاز F فعال می‌شود.</div>
       </section>
       </div>
       <div id="eventMilitaryView" class="eventPanelView" hidden>
