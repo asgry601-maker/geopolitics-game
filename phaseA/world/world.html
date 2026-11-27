@@ -255,12 +255,14 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         <div id="sanctionImposedView" class="eventInnerView">
           <div class="sanctionCard">
             <h3>کشورهایی که ما را تحریم کرده‌اند</h3>
-            <div id="sanctionImposedList" class="sanctionInfo">هنوز داده تحریمی برای نمایش ثبت نشده است. پس از اتصال هوش مصنوعی زنده، کشور تحریم‌کننده و زمینه‌های تحریم در این قسمت نمایش داده می‌شوند.</div>
+            <div class="sanctionInfo">هر مورد، تصمیم مستقل همان کشور است؛ این فهرست به معنی تحریم جهانی یا اجماع خودکار کشورها نیست. اگر چند کشور همراه شوند، نام و زمینه‌های تحریم هرکدام جداگانه نمایش داده می‌شود.</div>
+            <div id="sanctionImposedList" class="sanctionInfo">هنوز داده‌ای ثبت نشده است. پس از اتصال هوش مصنوعی زنده، تصمیم‌های مستقل کشورهای دیگر و زمینه‌های تحریم هرکدام نمایش داده می‌شود.</div>
           </div>
         </div>
         <div id="sanctionTargetView" class="eventInnerView" hidden>
           <div class="sanctionCard">
-            <h3>انتخاب کشورهای هدف</h3>
+            <h3>تحریم‌های یک‌جانبه بازیکن</h3>
+            <div class="sanctionInfo">تحریم فقط از طرف کشور تحت کنترل بازیکن اعمال می‌شود و فقط امکانات و دسترسی‌های خود آن کشور را برای اهداف انتخاب‌شده محدود می‌کند؛ این اقدام به‌تنهایی سایر کشورها را متعهد نمی‌کند.</div>
             <div id="sanctionTargetSummary" class="sanctionInfo">هنوز کشوری انتخاب نشده است.</div>
             <button type="button" id="sanctionChooseCountries">＋ انتخاب کشورها</button>
             <div id="sanctionCountryPicker" class="eventTargetBox" hidden>
@@ -280,7 +282,11 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
             <button type="button" id="sanctionCancelAll" class="sanctionAllCancel">لغو همه تحریم‌های اعمال‌شده</button>
             <div id="sanctionActionStatus" class="sanctionInfo" aria-live="polite"></div>
           </div>
-          <div class="eventMilitaryFuture">اعمال و لغو در این مرحله به‌صورت نمونه رابط کاربری ثبت می‌شود. اثر واقعی تحریم‌ها بر تجارت، بانک، انرژی و سایر شاخص‌های اقتصادی در مرحله اتصال موتور اقتصاد و هوش مصنوعی زنده پیاده‌سازی خواهد شد.</div>
+          <div class="sanctionCard">
+            <h3>تحریم‌هایی که از طرف ما اعمال شده‌اند</h3>
+            <div id="sanctionPlayerAppliedList" class="sanctionInfo">هنوز تحریم یک‌جانبه‌ای از طرف بازیکن اعمال نشده است.</div>
+          </div>
+          <div class="eventMilitaryFuture">کشورهای دیگر می‌توانند مستقلاً تصمیم بگیرند به تحریم بپیوندند یا تحریم مشابهی اعمال کنند. بازیکن نیز می‌تواند از راه دیپلماسی، مذاکرات و بیانیه‌ها آن‌ها را متقاعد کند؛ پذیرش یا رد این درخواست‌ها به تصمیم هوش مصنوعی زنده بستگی دارد. اثر واقعی اقتصادی در مرحله اتصال موتور اقتصاد و هوش مصنوعی پیاده‌سازی می‌شود.</div>
         </div>
       </div>
     </div>
