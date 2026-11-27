@@ -289,6 +289,7 @@ function loadState(after) {
     ST = (s && s.exists) ? s : null;
     syncSanctionState();
     renderAppliedSanctions();
+    renderInbox();
     renderGameClock();
     renderWorldChips();
     renderStartWidget();
@@ -1911,6 +1912,42 @@ function advanceGameTime(minutes) {
 }
 
 function endDay() { advanceGameTime(1440); }
+
+/* صندوق پیام‌ها؛ محتوای واقعی AI زنده فقط در فاز F وارد این فهرست می‌شود. */
+function renderInbox() {
+  var list = el("inboxList"), count = el("inboxUnreadCount");
+  var messages = (ST && ST.inbox_messages) || [], unread = 0, html = "";
+  for (var i=0;i<messages.length;i++) if (messages[i] && messages[i].status === "unread") unread++;
+  if (count) { count.textContent = unread ? String(unread) : ""; count.style.display = unread ? "inline-block" : "none"; }
+  if (!list) return;
+  if (!messages.length) {
+    list.innerHTML = '<div class="inboxEmpty">📭 هنوز پیام یا درخواستی از کشورهای تحت کنترل هوش مصنوعی زنده دریافت نشده است.<br>پس از فعال‌شدن هوش مصنوعی زنده در فاز F، درخواست‌ها، پیشنهاد پیمان‌ها و پیام‌های گفت‌وگو در این قسمت نمایش داده می‌شوند.</div>';
+    return;
+  }
+  for (var j=messages.length-1;j>=0;j--) {
+    var m=messages[j] || {}, id=String(m.id || ""), safeId=id.replace(/&/g,"&amp;").replace(/"/g,"&quot;");
+    html += '<div class="inboxCard"><div class="inboxCardHead"><b>'+dashEsc(m.sender_country || "کشور نامشخص")+'</b><span>'+(m.status==="unread"?"● خوانده‌نشده":"خوانده‌شده")+'</span></div>';
+    html += '<div class="inboxCardTitle">'+dashEsc(m.title || "پیام جدید")+'</div><button type="button" class="inboxShowBtn" data-message-id="'+safeId+'">نمایش</button>';
+    html += '<div class="inboxMessageBody" id="inboxBody_'+dashEsc(id)+'" hidden><div>'+dashEsc(m.body || "جزئیات پیام ثبت نشده است.")+'</div><small>'+dashEsc(m.date || "")+' · نوع: '+dashEsc(m.message_type || "message")+'</small>';
+    if (m.conversation_id) html += '<div class="inboxFutureNote">این پیام به یک زمینه گفت‌وگو متصل است؛ پاسخ زنده پس از فعال‌شدن فاز F در دسترس قرار می‌گیرد.</div>';
+    html += '</div></div>';
+  }
+  list.innerHTML = html;
+  var buttons=list.querySelectorAll(".inboxShowBtn");
+  for (var k=0;k<buttons.length;k++) buttons[k].onclick=function(){
+    var mid=this.getAttribute("data-message-id"), body=el("inboxBody_"+mid);
+    if (body) body.hidden=!body.hidden;
+    this.textContent=(body && !body.hidden)?"بستن":"نمایش";
+    if (ST) postJSON("api/inbox/read",{message_id:mid},function(r){if(r.ok){loadState();}},function(){});
+  };
+}
+function setInboxOpen(open) {
+  var box=el("inboxPanel"), btn=el("btnInbox");
+  if (!box || !btn) return;
+  box.hidden=!open;
+  btn.setAttribute("aria-expanded",open?"true":"false");
+  if (open) renderInbox();
+}
 function advanceFiveHours() { advanceGameTime(300); }
 
 /* پنجره تأیید شروع بازی جدید — دو دکمه: «🆕 شروع بازی جدید» / «انصراف» */
@@ -2001,6 +2038,9 @@ function bindToolbar() {
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
   var eb = el('eventPanelToggle');
   if (eb) eb.onclick = toggleEventPanel;
+  var inboxBtn=el("btnInbox"), inboxClose=el("btnInboxClose");
+  if (inboxBtn) inboxBtn.onclick=function(){setInboxOpen(true);};
+  if (inboxClose) inboxClose.onclick=function(){setInboxOpen(false);};
   bindEventTalkControls();
   bindEventPanelTabs();
   bindSanctionsUI();
