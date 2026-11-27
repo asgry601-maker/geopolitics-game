@@ -716,6 +716,140 @@ function classificationIdeologyHtml(title, values, missingText, ideologyNames) {
   }
   return out + '</div>';
 }
+
+var POLITICAL_EDIT_OPTIONS = {
+  government_form: [
+    ["republic","جمهوری"],["monarchy","پادشاهی"],["emirate","امارت"],
+    ["sultanate","سلطنت"],["theocracy","حکومت دینی"],["military_government","حکومت نظامی"],
+    ["transitional_government","حکومت انتقالی"],["other","سایر"],["unknown","نامشخص"]
+  ],
+  government_subform: [
+    ["absolute_monarchy","پادشاهی مطلقه"],["constitutional_monarchy","پادشاهی مشروطه"],
+    ["parliamentary_monarchy","پادشاهی پارلمانی"],["federal_constitutional_monarchy","پادشاهی مشروطه فدرال"],
+    ["hereditary_emirate","امارت موروثی"],["islamic_emirate","امارت اسلامی"],
+    ["islamic_republic","جمهوری اسلامی"],["presidential_republic","جمهوری ریاستی"],
+    ["parliamentary_republic","جمهوری پارلمانی"],["semi_presidential_republic","جمهوری نیمه‌ریاستی"],
+    ["federal_republic","جمهوری فدرال"],["federal_parliamentary_republic","جمهوری پارلمانی فدرال"],
+    ["federal_semi_presidential_republic","جمهوری نیمه‌ریاستی فدرال"],["socialist_republic","جمهوری سوسیالیستی"],
+    ["democratic_socialist_republic","جمهوری سوسیالیستی دموکراتیک"],["federal_directorial_republic","جمهوری شورایی فدرال"],
+    ["military_junta","شورای نظامی"],["military_led_transitional_authority","حکومت انتقالی با رهبری نظامی"],
+    ["transitional_authority","حاکمیت انتقالی"],["transitional_presidential_authority","حاکمیت انتقالی ریاستی"],
+    ["fragmented_transitional_republic","جمهوری انتقالی چندپاره"],["interim_self_governing_authority","حاکمیت خودگردان موقت"]
+  ],
+  executive_legislative_system: [
+    ["presidential","ریاستی"],["semi_presidential","نیمه‌ریاستی"],["parliamentary","پارلمانی"],
+    ["directorial","شورایی / هیئتی"],["monarchical_executive","اجرایی سلطنتی"],
+    ["one_party","تک‌حزبی"],["military_council","شورای نظامی"],["transitional","انتقالی"],
+    ["mixed","مختلط"],["no_functioning_national_legislature","بدون مجلس ملی فعال"],["unknown","نامشخص"]
+  ],
+  territorial_structure: [
+    ["unitary","یکپارچه"],["federal","فدرال"],["confederal","کنفدرال"],
+    ["devolved_unitary","یکپارچه با واگذاری اختیارات"],["asymmetric_devolution","واگذاری نامتقارن اختیارات"],
+    ["occupied_or_fragmented","اشغالی یا چندپاره"],["transitional_or_disputed","انتقالی یا مورد اختلاف"],["unknown","نامشخص"]
+  ],
+  regime_character: [
+    ["liberal_democracy","دموکراسی لیبرال"],["electoral_democracy","دموکراسی انتخاباتی"],
+    ["flawed_or_limited_democracy","دموکراسی ناقص یا محدود"],["hybrid_regime","نظام ترکیبی"],
+    ["electoral_authoritarian","اقتدارگرایی انتخاباتی"],["closed_authoritarian","اقتدارگرایی بسته"],
+    ["one_party_authoritarian","اقتدارگرایی تک‌حزبی"],["military_rule","حکومت نظامی"],
+    ["transitional_or_uncertain","انتقالی یا نامطمئن"],["fragmented_authority","حاکمیت چندپاره"],["unknown","نامشخص"]
+  ],
+  party_system: [
+    ["competitive_multi_party","چندحزبی رقابتی"],["two_party_dominant","غلبه دو حزب"],
+    ["dominant_party_competitive","حزب مسلط با رقابت"],["dominant_party_noncompetitive","حزب مسلط بدون رقابت مؤثر"],
+    ["one_party_legal","تک‌حزبی قانونی"],["no_legal_party_system","بدون نظام حزبی قانونی"],
+    ["restricted_party_system","نظام حزبی محدود"],["nonpartisan","غیرحزبی"],
+    ["fragmented_or_uncertain","چندپاره یا نامطمئن"],["unknown","نامشخص"]
+  ],
+  official_ideology: [
+    ["communism","کمونیسم"],["marxism_leninism","مارکسیسم–لنینیسم"],["socialism","سوسیالیسم"],
+    ["democratic_socialism","سوسیالیسم دموکراتیک"],["social_democracy","سوسیال‌دموکراسی"],
+    ["liberalism","لیبرالیسم"],["classical_liberalism","لیبرالیسم کلاسیک"],["conservatism","محافظه‌کاری"],
+    ["liberal_conservatism","محافظه‌کاری لیبرال"],["national_conservatism","محافظه‌کاری ملی"],
+    ["christian_democracy","دموکراسی مسیحی"],["nationalism","ملی‌گرایی"],["civic_nationalism","ملی‌گرایی مدنی"],
+    ["ethnic_nationalism","ملی‌گرایی قومی"],["islamism","اسلام‌گرایی"],["islamic_democracy","دموکراسی اسلامی"],
+    ["political_islam_conservatism","محافظه‌کاری اسلام‌گرا"],["secularism","سکولاریسم"],
+    ["green_politics","سیاست سبز"],["libertarianism","لیبرتارینیسم"],["populism","پوپولیسم"],
+    ["progressivism","ترقی‌خواهی"],["fascism","فاشیسم"],["far_right","راست افراطی"],
+    ["anarchism","آنارشیسم"],["monarchism","سلطنت‌طلبی"],["baathism","بعث‌گرایی"],["juche","جوچه"],
+    ["military_nationalism","ملی‌گرایی نظامی"],["mixed_pragmatic","ترکیبی / عمل‌گرایانه"],
+    ["other","سایر"],["not_officially_declared","اعلام‌نشده"],["unknown","نامشخص"],
+    ["social_liberalism","لیبرالیسم اجتماعی"]
+  ]
+};
+POLITICAL_EDIT_OPTIONS.ruling_party_ideology = POLITICAL_EDIT_OPTIONS.official_ideology;
+POLITICAL_EDIT_OPTIONS.ruling_coalition_ideology = POLITICAL_EDIT_OPTIONS.official_ideology;
+
+function politicalEditSelect(field, label, current) {
+  var opts = POLITICAL_EDIT_OPTIONS[field] || [], multi = field.indexOf("ideology") >= 0;
+  var h = '<label style="display:block;margin:7px 0;color:#c8d6e8;font-size:11px">' + label;
+  h += '<select id="politicalEdit_' + field + '"' + (multi ? ' multiple size="4"' : '') +
+    ' style="display:block;width:100%;margin-top:4px;background:#101a2e;color:#e4edf8;border:1px solid #354b6d;border-radius:6px;padding:7px;font-family:Tahoma;font-size:11px">';
+  if (!multi) h += '<option value="">بدون تغییر</option>';
+  for (var i=0;i<opts.length;i++) {
+    var selected = multi ? (current && current.indexOf(opts[i][0]) >= 0) : current === opts[i][0];
+    h += '<option value="' + opts[i][0] + '"' + (selected ? ' selected' : '') + '>' + opts[i][1] + '</option>';
+  }
+  h += '</select></label>';
+  return h;
+}
+
+function politicalChangeFormHtml(pc, isPlayer) {
+  if (!isPlayer) return '<div class="dashNote">تغییر ساختار سایر کشورها از این پنل ممکن نیست. تصمیم‌گیری خودکار کشورها فقط پس از فعال‌شدن هوش مصنوعی زنده در آینده اضافه خواهد شد.</div>';
+  pc = pc || {};
+  var h = '<div class="dashCard" id="politicalChangeCard"><h3>🛠 تغییر ساختار سیاسی کشور شما</h3>';
+  h += '<div class="dashNote">این ابزار فعلاً فقط برای کشور تحت کنترل بازیکن فعال است. تغییرات روی وضعیت جاری بازی ثبت می‌شوند و اطلاعات baseline آغاز سناریو دست‌نخورده می‌ماند. هوش مصنوعی کشورها در این مرحله غیرفعال است.</div>';
+  h += '<div class="dashGrid">';
+  h += politicalEditSelect('government_form','نوع حکومت',pc.government_form);
+  h += politicalEditSelect('government_subform','زیرنوع حکومت',pc.government_subform);
+  h += politicalEditSelect('executive_legislative_system','مدل اجرایی و تقنینی',pc.executive_legislative_system);
+  h += politicalEditSelect('territorial_structure','ساختار سرزمینی',pc.territorial_structure);
+  h += politicalEditSelect('regime_character','ویژگی نظام سیاسی',pc.regime_character);
+  h += politicalEditSelect('party_system','نظام حزبی',pc.party_system);
+  h += '</div><h4 style="color:#ffd479;margin:10px 0 4px">ایدئولوژی‌ها · برای انتخاب چند مورد، Ctrl را نگه دار</h4>';
+  h += politicalEditSelect('official_ideology','ایدئولوژی رسمی',pc.official_ideology);
+  h += politicalEditSelect('ruling_party_ideology','گرایش حزب حاکم',pc.ruling_party_ideology);
+  h += politicalEditSelect('ruling_coalition_ideology','گرایش ائتلاف حاکم',pc.ruling_coalition_ideology);
+  h += '<button type="button" id="btnApplyPoliticalChange" class="primary" style="width:100%;margin-top:8px">ثبت تغییرات سیاسی</button>';
+  h += '<div id="politicalChangeStatus" class="small muted" style="margin-top:7px" aria-live="polite"></div></div>';
+  return h;
+}
+
+function bindPoliticalChangeForm(r) {
+  var btn = el('btnApplyPoliticalChange');
+  if (!btn) return;
+  btn.onclick = function () {
+    var fields = ['government_form','government_subform','executive_legislative_system',
+      'territorial_structure','regime_character','party_system'];
+    var changes = {}, i, node;
+    for (i=0;i<fields.length;i++) {
+      node = el('politicalEdit_' + fields[i]);
+      if (node && node.value) changes[fields[i]] = node.value;
+    }
+    var ideologies = ['official_ideology','ruling_party_ideology','ruling_coalition_ideology'];
+    for (i=0;i<ideologies.length;i++) {
+      node = el('politicalEdit_' + ideologies[i]);
+      if (!node) continue;
+      var selected = [], j;
+      for (j=0;j<node.options.length;j++) if (node.options[j].selected) selected.push(node.options[j].value);
+      if (selected.length) changes[ideologies[i]] = selected;
+    }
+    if (!Object.keys(changes).length) { flash('حداقل یک مورد را برای تغییر انتخاب کن.'); return; }
+    btn.disabled = true;
+    postJSON('api/political/change', {changes:changes}, function (res) {
+      btn.disabled = false;
+      var status = el('politicalChangeStatus');
+      if (status) status.textContent = res.out || res.error || (res.ok ? 'ثبت شد.' : 'خطا');
+      if (!res.ok) { flash(res.error || 'تغییر سیاسی ثبت نشد.'); return; }
+      flash(res.out || 'تغییرات سیاسی ثبت شد.');
+      loadState(function () { if (SELECTED) selectCountry(SELECTED, true); });
+    }, function (st, tx) {
+      btn.disabled = false;
+      flash(netErrMsg(st, tx) + ' — تغییر سیاسی ثبت نشد.');
+    });
+  };
+}
+
 function politicalClassificationHtml(pc) {
   if (!pc) return dashMissing('طبقه‌بندی سیاسی پایه','اطلاعات طبقه‌بندی ساختاریافته برای این کشور در ذخیره بازی موجود نیست.');
   var names = {"communism":"کمونیسم","marxism_leninism":"مارکسیسم–لنینیسم","socialism":"سوسیالیسم","democratic_socialism":"سوسیالیسم دموکراتیک","social_democracy":"سوسیال‌دموکراسی","liberalism":"لیبرالیسم","classical_liberalism":"لیبرالیسم کلاسیک","conservatism":"محافظه‌کاری","liberal_conservatism":"محافظه‌کاری لیبرال","national_conservatism":"محافظه‌کاری ملی","christian_democracy":"دموکراسی مسیحی","nationalism":"ملی‌گرایی","civic_nationalism":"ملی‌گرایی مدنی","ethnic_nationalism":"ملی‌گرایی قومی","islamism":"اسلام‌گرایی","islamic_democracy":"دموکراسی اسلامی","political_islam_conservatism":"محافظه‌کاری اسلام‌گرا","secularism":"سکولاریسم","green_politics":"سیاست سبز / محیط‌زیست‌گرایی","libertarianism":"لیبرتارینیسم","populism":"پوپولیسم","progressivism":"ترقی‌خواهی","fascism":"فاشیسم","far_right":"راست افراطی","anarchism":"آنارشیسم","monarchism":"سلطنت‌طلبی","baathism":"بعث‌گرایی","juche":"جوچه","military_nationalism":"ملی‌گرایی نظامی","mixed_pragmatic":"ترکیبی / عمل‌گرایانه","other":"سایر","not_officially_declared":"ایدئولوژی رسمی اعلام‌نشده","unknown":"نامشخص","social_liberalism":"لیبرالیسم اجتماعی"}, fields = [
@@ -946,6 +1080,7 @@ function dashSectionHtml(r, isPlayer, tab) {
     var pp = r.political_profile || null, pc = r.political_classification || null, cur, keys2, item, fields, j, k, val;
     h += '<h3>🏛 ساختار سیاسی</h3>';
     h += politicalClassificationHtml(pc);
+    h += politicalChangeFormHtml(pc, isPlayer);
     h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت در موتور بازی</span><b>'+dashEsc(r.leader)+'</b></div>';
     h += '<div class="row"><span class="muted">ثبات سیاسی شبیه‌سازی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
     if (pp) {
@@ -1174,6 +1309,7 @@ function renderCountryPanel(r) {
   var btns = box.querySelectorAll('[data-dash-tab]');
   for (var b=0;b<btns.length;b++) btns[b].onclick = (function(id){return function(){dashSelectTab(id);};})(btns[b].getAttribute('data-dash-tab'));
   provAfterPanel();
+  bindPoliticalChangeForm(r);
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
