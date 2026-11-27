@@ -461,9 +461,23 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '</div>';
     var cp = r.country_profile || null;
     if (cp) {
-      /* تصویر ایران از Wikimedia Commons؛ برای سایر کشورها فایل محلی assets/leaders/ISO3.jpg استفاده می‌شود. */
-      var leaderPortrait = r.iso3 === 'IRN'
-        ? 'https://upload.wikimedia.org/wikipedia/commons/c/c6/Portrait_of_Mojtaba_Khamenei.jpg'
+      /* پرتره‌های تأییدشده از Wikimedia Commons؛ برای بقیه کشورها فایل محلی در صورت وجود استفاده می‌شود. */
+      var leaderCommonsFiles = {
+        IRN: 'Portrait of Mojtaba Khamenei.jpg',
+        USA: 'January 2025 Official Presidential Portrait of Donald J. Trump.jpg',
+        RUS: 'Vladimir Putin (2026 02 23).jpg',
+        CHN: 'Xi Jinping - 2026 (55063342986) (cropped).jpg',
+        GBR: 'Official portrait of Keir Starmer.jpg',
+        DEU: 'Merz portrait.jpg',
+        FRA: 'Emmanuel Macron portrait.jpg',
+        TUR: 'President of Turkey Recep Tayyip Erdogan.jpg',
+        SAU: 'الصورة الرسمية لخادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود.jpg',
+        ARE: 'Mohammed bin Zayed portrait.jpg',
+        IRQ: "Mohammed Shia' Al Sudani in 2025 (cropped).jpg",
+        SYR: 'Ahmed al-Sharaa in March 2026.jpg'
+      };
+      var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
+        ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
         : (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
       h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
