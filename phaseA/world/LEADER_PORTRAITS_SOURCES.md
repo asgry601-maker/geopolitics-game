@@ -233,3 +233,23 @@ The existing country-leader dictionary already contained the leaders for all six
 - NAM: https://commons.wikimedia.org/wiki/File:Netumbo_Nandi-Ndaitwah_2025.jpg
 
 All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The engine already contained the six corresponding leader display names, so no engine change was required. Review the portraits at dashboard size; the Zimbabwe image is notably older and lower-resolution than the other five.
+
+
+## Package 17 — Sahel and Central Africa (6 countries)
+
+- **SDN — Sudan:** Abdel Fattah al-Burhan — `Abdel Fattah al-Burhan in April 2025 (cropped).jpg`. Photograph dated 11 April 2025, Press Service of the President of the Republic of Azerbaijan; CC BY 4.0, attribution: President.az. Crop: 423 × 564 pixels.
+- **SSD — South Sudan:** Salva Kiir Mayardit — `Salva Kiir at the Kremlin (2026-10-30) (cropped).jpg`. Photograph dated 30 October 2026, Presidential Press and Information Office of Russia; CC BY 4.0, attribution: Kremlin.ru. Crop: 1,050 × 1,357 pixels.
+- **TCD — Chad:** Mahamat Idriss Déby — `Mahamat Idriss Déby in 2022.jpg`. Photograph dated 17 February 2022, Christophe Licoppe / European Commission Audiovisual Service; CC BY 4.0, attribution: © European Union, 2026. Crop: 907 × 1,209 pixels.
+- **MLI — Mali:** Assimi Goïta — `Assimi Goita at the Kremlin (2026-10-30) (cropped).jpg`. Photograph dated 30 October 2026, Presidential Press and Information Office of Russia; CC BY 4.0, attribution: Kremlin.ru. Crop: 700 × 905 pixels.
+- **MRT — Mauritania:** Mohamed Ould Cheikh El Ghazouani — `Mohamed Ould Ghazouani 2025.png`. Photograph dated 9 July 2025, official White House photograph by Daniel Torok; public domain in the United States as a U.S. federal-government work. Extracted single-person crop: 1,644 × 2,046 pixels.
+- **GAB — Gabon:** Brice Clotaire Oligui Nguema — `Brice Oligui Nguema on November 26, 2024 (cropped).jpg`. Photograph dated 26 November 2024, Lukasz Kobus / European Commission Audiovisual Service; CC BY 4.0, attribution: © European Union, 2026. Crop: 1,252 × 1,611 pixels.
+
+### File pages
+- SDN: https://commons.wikimedia.org/wiki/File:Abdel_Fattah_al-Burhan_in_April_2025_(cropped).jpg
+- SSD: https://commons.wikimedia.org/wiki/File:Salva_Kiir_at_the_Kremlin_(2026-10-30)_(cropped).jpg
+- TCD: https://commons.wikimedia.org/wiki/File:Mahamat_Idriss_Déby_in_2022.jpg
+- MLI: https://commons.wikimedia.org/wiki/File:Assimi_Goita_at_the_Kremlin_(2026-10-30)_(cropped).jpg
+- MRT: https://commons.wikimedia.org/wiki/File:Mohamed_Ould_Ghazouani_2025.png
+- GAB: https://commons.wikimedia.org/wiki/File:Brice_Oligui_Nguema_on_November_26,_2024_(cropped).jpg
+
+The six portrait mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Sudan and South Sudan also received missing leader-name entries in the engine's LEADERS dictionary. All other five leader-name entries were already present.
