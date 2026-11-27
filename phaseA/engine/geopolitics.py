@@ -1641,6 +1641,72 @@ EVENT_IMPACT_ROUTES = {
                 "diplomacy", "economy", "environment", "press"]
 }
 
+# کاتالوگ محرک‌ها: فقط قرارداد داده‌ای برای اتصال آینده سیستم‌هاست.
+# هیچ شرطی در این مرحله ارزیابی و هیچ رویدادی خودکار فعال نمی‌شود.
+EVENT_TRIGGER_SPECS = [
+    {"id": "political_reform_outcome", "category": "political",
+     "source_system": "political_reforms", "signal": "reform_status_changed",
+     "required_fields": ["proposal_id", "status", "country"],
+     "description": "ثبت تصویب، توقف، شکست یا تکمیل یک اصلاح سیاسی."},
+    {"id": "domestic_crisis_threshold", "category": "political",
+     "source_system": "regime_crisis", "signal": "crisis_state_created",
+     "required_fields": ["crisis_kind", "country", "date"],
+     "description": "ثبت ایجاد وضعیت بحران داخلی؛ نه وقوع خودکار کودتا یا انقلاب."},
+    {"id": "economic_indicator_shift", "category": "economic",
+     "source_system": "economy", "signal": "economic_indicator_changed",
+     "required_fields": ["country", "indicator", "old_value", "new_value"],
+     "description": "ثبت تغییر مهم در شاخص‌های اقتصادی پس از تکمیل سیستم اقتصاد."},
+    {"id": "budget_pressure", "category": "economic",
+     "source_system": "budget", "signal": "budget_status_changed",
+     "required_fields": ["country", "balance", "cause"],
+     "description": "ثبت کسری، فشار بودجه‌ای یا تغییر مهم در منابع مالی."},
+    {"id": "trade_disruption", "category": "trade",
+     "source_system": "trade", "signal": "trade_route_or_deal_disrupted",
+     "required_fields": ["country", "counterparty", "trade_id", "cause"],
+     "description": "ثبت اختلال در مسیر یا توافق تجاری پس از تکمیل تجارت."},
+    {"id": "trade_agreement_milestone", "category": "trade",
+     "source_system": "trade", "signal": "trade_agreement_status_changed",
+     "required_fields": ["country", "counterparty", "agreement_id", "status"],
+     "description": "ثبت امضا، تعلیق، تمدید یا پایان توافق تجاری."},
+    {"id": "military_status_change", "category": "military",
+     "source_system": "military", "signal": "military_status_changed",
+     "required_fields": ["country", "change_type", "date"],
+     "description": "ثبت تغییر کلان وضعیت نظامی یا امنیتی، بدون جزئیات عملیاتی."},
+    {"id": "war_status_change", "category": "military",
+     "source_system": "conflict", "signal": "conflict_status_changed",
+     "required_fields": ["participants", "status", "date"],
+     "description": "ثبت آغاز، گسترش، آتش‌بس یا پایان درگیری در سطح کلان بازی."},
+    {"id": "social_support_shift", "category": "social",
+     "source_system": "social_groups", "signal": "support_level_changed",
+     "required_fields": ["country", "group_id", "old_value", "new_value"],
+     "description": "ثبت تغییر معنادار حمایت گروه‌های اجتماعی."},
+    {"id": "diplomatic_agreement_change", "category": "diplomatic",
+     "source_system": "diplomacy", "signal": "agreement_status_changed",
+     "required_fields": ["country", "counterparty", "agreement_id", "status"],
+     "description": "ثبت توافق، اختلاف، تعلیق یا گسست دیپلماتیک."},
+    {"id": "natural_disaster", "category": "natural",
+     "source_system": "disaster", "signal": "natural_disaster_confirmed",
+     "required_fields": ["country", "disaster_type", "severity", "date"],
+     "description": "ثبت بلای طبیعی تأییدشده و پیوند آن با پیامدهای غیرنظامی."},
+    {"id": "environmental_incident", "category": "environmental",
+     "source_system": "environment", "signal": "environmental_incident_confirmed",
+     "required_fields": ["country", "incident_type", "severity", "date"],
+     "description": "ثبت رخداد محیط‌زیستی و آثار عمومی آن."},
+    {"id": "nuclear_safeguards_or_diplomacy", "category": "nuclear",
+     "source_system": "nuclear_governance", "signal": "safeguards_or_diplomatic_status_changed",
+     "required_fields": ["country", "status", "institution", "date"],
+     "description": "ثبت تحولات سیاست هسته‌ای، نظارت، پادمان یا دیپلماسی در سطح حکمرانی."}
+]
+
+EVENT_TRIGGER_ACTIVATION = "design_only"
+
+
+def get_event_trigger_catalog():
+    """نمایش کاتالوگ محرک‌ها؛ این تابع هیچ محرکی را اجرا یا ارزیابی نمی‌کند."""
+    return [dict(item, required_fields=list(item.get("required_fields") or []),
+                 activation=EVENT_TRIGGER_ACTIVATION)
+            for item in EVENT_TRIGGER_SPECS]
+
 
 def register_game_event(s, category, country=None, title="", description="",
                         severity=1, source="system", metadata=None):
