@@ -89,3 +89,15 @@ Note: The dashboard should display the same name as the selected portrait. Revie
 - BEL: https://commons.wikimedia.org/wiki/File:BartDeWever.jpg
 
 Note: The Belgium portrait is older (2014/2015) than the other five portraits, but is a clear high-resolution head-and-shoulders image. The user should review it in the game. Attribution and share-alike conditions must be preserved for the relevant files.
+
+
+## Package 8 — Northern and Southern Europe (6 countries)
+
+- **NOR — Norway:** Jonas Gahr Støre — `Jonas Gahr Støre under åpningen av det nye regjeringskvartalet 130426 (cropped).jpg`. Author: Torbjørn Kjosvold/SMK; source: Statsministerens kontor Flickr; license: CC BY 4.0. Cropped head-and-shoulders version of the 13 April 2026 photograph.
+- **FIN — Finland:** Petteri Orpo — `Petteri Orpo 5.jpg`. Author: Katja Säilä, Finnish Government; source: Finnish Government image bank; dated 23 September 2026; license: CC BY 4.0.
+- **ISL — Iceland:** Kristrún Mjöll Frostadóttir — `NYCW 2026 - Kristrún Frostadóttir 01.jpg`. Author: Xuthoria; own work, dated 23 September 2026; license: CC BY-SA 4.0.
+- **GRC — Greece:** Kyriakos Mitsotakis — `Kyriakos Mitsotakis 2026.jpg`. Author: Yorgos Karahalis; source: European Commission Audiovisual Service, 12 March 2026; license stated on Commons: CC BY 4.0, attribution © European Union, 2026. Commons page currently carries a license-review-needed notice; verify the underlying EC source terms before redistribution beyond this project.
+- **HRV — Croatia:** Andrej Plenković — `Andrej Plenković (cropped).jpg`. Source/author: European Commission / © European Union 2024; official portrait dated 27 March 2024; reuse permitted with attribution under the Commission's reuse policy.
+- **LUX — Luxembourg:** Luc Frieden — `Luc Frieden 2025 (cropped).jpg`. Author: FinnishGovernment; source: Finnish Government Flickr; dated 6 May 2025; license: CC BY 2.0.
+
+All images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
