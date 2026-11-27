@@ -698,6 +698,50 @@ function politicalValueLabel(value) {
   return Object.prototype.hasOwnProperty.call(values,value) ? values[value] : value;
 }
 
+
+function classificationValueLabel(field, value) {
+  var maps = {"government_form":{"emirate":"امارت","military_government":"حکومت نظامی","monarchy":"پادشاهی","republic":"جمهوری","sultanate":"سلطنت","transitional_government":"حکومت انتقالی"},"government_subform":{"absolute_monarchy":"پادشاهی مطلقه","constitutional_monarchy":"پادشاهی مشروطه","democratic_socialist_republic":"جمهوری سوسیالیست دموکراتیک","federal_constitutional_monarchy":"پادشاهی مشروطه فدرال","federal_directorial_republic":"جمهوری شورایی فدرال","federal_parliamentary_republic":"جمهوری پارلمانی فدرال","federal_republic":"جمهوری فدرال","federal_semi_presidential_republic":"جمهوری نیمه‌ریاستی فدرال","fragmented_transitional_republic":"جمهوری انتقالی با حاکمیت چندپاره","hereditary_emirate":"امارت موروثی","interim_self_governing_authority":"حاکمیت خودگردان موقت","islamic_emirate":"امارت اسلامی","islamic_republic":"جمهوری اسلامی","military_junta":"حکومت شورای نظامی","military_led_transitional_authority":"حاکمیت انتقالی با رهبری نظامی","parliamentary_republic":"جمهوری پارلمانی","presidential_republic":"جمهوری ریاستی","semi_presidential_republic":"جمهوری نیمه‌ریاستی","socialist_republic":"جمهوری سوسیالیستی","transitional_authority":"حاکمیت انتقالی","transitional_presidential_authority":"حاکمیت ریاستی انتقالی"},"executive_legislative_system":{"directorial":"شورایی / هیئتی","military_council":"شورای نظامی","mixed":"ترکیبی / ویژه","monarchical_executive":"قوه مجریه سلطنتی","no_functioning_national_legislature":"بدون مجلس ملی فعال","one_party":"نظام تک‌حزبی","parliamentary":"پارلمانی","presidential":"ریاستی","semi_presidential":"نیمه‌ریاستی","transitional":"انتقالی"},"territorial_structure":{"asymmetric_devolution":"واگذاری نامتقارن اختیارات","devolved_unitary":"دولت واحد با اختیارات واگذارشده","federal":"فدرال","occupied_or_fragmented":"اشغال‌شده یا چندپاره","transitional_or_disputed":"انتقالی یا مورد اختلاف","unitary":"دولت واحد"},"regime_character":{"closed_authoritarian":"اقتدارگرایی بسته","electoral_authoritarian":"اقتدارگرایی انتخاباتی","electoral_democracy":"دموکراسی انتخاباتی","flawed_or_limited_democracy":"دموکراسی محدود / ناقص","fragmented_authority":"حاکمیت چندپاره","hybrid_regime":"رژیم ترکیبی","liberal_democracy":"دموکراسی لیبرال","military_rule":"حکومت نظامی","one_party_authoritarian":"اقتدارگرایی تک‌حزبی","transitional_or_uncertain":"گذار سیاسی یا وضعیت نامطمئن"},"party_system":{"competitive_multi_party":"چندحزبی رقابتی","dominant_party_competitive":"حزب مسلط با رقابت","dominant_party_noncompetitive":"حزب مسلط بدون رقابت مؤثر","fragmented_or_uncertain":"چندپاره یا نامشخص","no_legal_party_system":"بدون نظام حزبی قانونی","nonpartisan":"غیرحزبی","one_party_legal":"تک‌حزبی قانونی","restricted_party_system":"نظام حزبی محدود","two_party_dominant":"دوحزبی غالب"}};
+  if (value == null || value === '') return 'ثبت نشده';
+  return maps[field] && maps[field][value] ? maps[field][value] : String(value).replace(/_/g,' ');
+}
+function classificationIdeologyHtml(title, values, missingText, ideologyNames) {
+  var out = '<div class="dashCard"><div class="muted small">'+dashEsc(title)+'</div>';
+  if (values && values.length) {
+    for (var i=0;i<values.length;i++) {
+      var id=values[i], label=ideologyNames[id] || String(id).replace(/_/g,' ');
+      out += '<span class="badge">'+dashEsc(label)+'</span>';
+    }
+  } else {
+    out += '<div class="muted">'+dashEsc(missingText)+'</div>';
+  }
+  return out + '</div>';
+}
+function politicalClassificationHtml(pc) {
+  if (!pc) return dashMissing('طبقه‌بندی سیاسی پایه','اطلاعات طبقه‌بندی ساختاریافته برای این کشور در ذخیره بازی موجود نیست.');
+  var names = {"communism":"کمونیسم","marxism_leninism":"مارکسیسم–لنینیسم","socialism":"سوسیالیسم","democratic_socialism":"سوسیالیسم دموکراتیک","social_democracy":"سوسیال‌دموکراسی","liberalism":"لیبرالیسم","classical_liberalism":"لیبرالیسم کلاسیک","conservatism":"محافظه‌کاری","liberal_conservatism":"محافظه‌کاری لیبرال","national_conservatism":"محافظه‌کاری ملی","christian_democracy":"دموکراسی مسیحی","nationalism":"ملی‌گرایی","civic_nationalism":"ملی‌گرایی مدنی","ethnic_nationalism":"ملی‌گرایی قومی","islamism":"اسلام‌گرایی","islamic_democracy":"دموکراسی اسلامی","political_islam_conservatism":"محافظه‌کاری اسلام‌گرا","secularism":"سکولاریسم","green_politics":"سیاست سبز / محیط‌زیست‌گرایی","libertarianism":"لیبرتارینیسم","populism":"پوپولیسم","progressivism":"ترقی‌خواهی","fascism":"فاشیسم","far_right":"راست افراطی","anarchism":"آنارشیسم","monarchism":"سلطنت‌طلبی","baathism":"بعث‌گرایی","juche":"جوچه","military_nationalism":"ملی‌گرایی نظامی","mixed_pragmatic":"ترکیبی / عمل‌گرایانه","other":"سایر","not_officially_declared":"ایدئولوژی رسمی اعلام‌نشده","unknown":"نامشخص","social_liberalism":"لیبرالیسم اجتماعی"}, fields = [
+    ['government_form','نوع حکومت'],['government_subform','زیرنوع حکومت'],
+    ['executive_legislative_system','مدل رابطه قوه مجریه و مقننه'],
+    ['territorial_structure','ساختار سرزمینی'],['regime_character','ویژگی رژیم سیاسی'],
+    ['party_system','نظام حزبی']
+  ];
+  var out='<h3>🧭 طبقه‌بندی سیاسی پایه · آغاز سناریو</h3><div class="dashCard">';
+  for(var i=0;i<fields.length;i++) {
+    var key=fields[i][0], value=pc[key];
+    out+='<div class="row"><span class="muted">'+dashEsc(fields[i][1])+'</span><b>'+dashEsc(classificationValueLabel(key,value))+'</b></div>';
+  }
+  out+='</div><h3>گرایش‌های ایدئولوژیک</h3>';
+  out+=classificationIdeologyHtml('ایدئولوژی رسمی حکومت',pc.official_ideology,'ایدئولوژی رسمی جداگانه‌ای ثبت نشده است.',names);
+  out+=classificationIdeologyHtml('گرایش حزب / جریان حاکم',pc.ruling_party_ideology,'حزب یا جریان حاکمِ قابل انتساب ثبت نشده است.',names);
+  out+=classificationIdeologyHtml('گرایش ائتلاف حاکم',pc.ruling_coalition_ideology,'ائتلاف حاکمِ قابل طبقه‌بندی ثبت نشده است.',names);
+  if(pc.ideology_notes) out+='<div class="dashNote">'+dashEsc(pc.ideology_notes)+'</div>';
+  var quality=pc.data_quality || {};
+  out+='<div class="dashNote">تاریخ مرجع سناریو: '+dashEsc(quality.scenario_snapshot_date || 'ثبت نشده')+
+    ' · اطمینان طبقه‌بندی: '+dashEsc(pc.classification_confidence || 'نامشخص')+
+    ' · منابع ثبت‌شده: '+dashEsc((pc.classification_sources || []).length)+'</div>';
+  out+='<div class="dashNote">این بخش، baseline ثابت آغاز سناریو را نشان می‌دهد؛ با تغییرات آینده در سیاست داخلی بازی، مقدار پویا جداگانه به‌روزرسانی خواهد شد و این داده مرجع بازنویسی نمی‌شود.</div>';
+  return out;
+}
+
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
   if (tab === 'general') {
@@ -899,8 +943,9 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += '</div><div class="dashNote">زبان‌ها و واحدهای پول از داده مرجع کشورها خوانده می‌شوند؛ در کشورهایی با چند زبان، همه موارد ثبت‌شده نمایش داده می‌شوند.</div>';
     } else h += dashMissing('اطلاعات پایه کشور','پرونده اطلاعات مرجع برای این کشور در دسترس نیست.');
   } else if (tab === 'politics') {
-    var pp = r.political_profile || null, cur, keys2, item, fields, j, k, val;
+    var pp = r.political_profile || null, pc = r.political_classification || null, cur, keys2, item, fields, j, k, val;
     h += '<h3>🏛 ساختار سیاسی</h3>';
+    h += politicalClassificationHtml(pc);
     h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت در موتور بازی</span><b>'+dashEsc(r.leader)+'</b></div>';
     h += '<div class="row"><span class="muted">ثبات سیاسی شبیه‌سازی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
     if (pp) {
