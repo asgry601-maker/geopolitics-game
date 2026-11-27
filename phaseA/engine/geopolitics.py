@@ -903,7 +903,98 @@ def load():
             sanction_save_needed = True
     if sanction_save_needed:
         save(s)
+
+    # صندوق پیام‌ها؛ آماده دریافت درخواست‌ها و پیام‌های آینده هوش مصنوعی زنده
+    inbox_save_needed = False
+    raw_inbox = s.get("inbox_messages")
+    if not isinstance(raw_inbox, list):
+        raw_inbox = []
+        s["inbox_messages"] = raw_inbox
+        inbox_save_needed = True
+    clean_inbox = []
+    max_inbox_number = 0
+    for item in raw_inbox:
+        if not isinstance(item, dict):
+            inbox_save_needed = True
+            continue
+        if not item.get("id"):
+            inbox_save_needed = True
+            continue
+        item.setdefault("sender_country", "")
+        item.setdefault("message_type", "message")
+        item.setdefault("title", "پیام جدید")
+        item.setdefault("body", "")
+        item.setdefault("date", s.get("game_date", ""))
+        item.setdefault("status", "unread")
+        item.setdefault("conversation_id", None)
+        item.setdefault("response_allowed", False)
+        item.setdefault("metadata", {})
+        if not isinstance(item.get("metadata"), dict):
+            item["metadata"] = {}
+            inbox_save_needed = True
+        if item.get("status") not in ("unread", "read", "answered", "archived"):
+            item["status"] = "unread"
+            inbox_save_needed = True
+        if not isinstance(item.get("response_allowed"), bool):
+            item["response_allowed"] = False
+            inbox_save_needed = True
+        try:
+            number = int(str(item.get("id", "")).split("-")[-1])
+            max_inbox_number = max(max_inbox_number, number)
+        except (TypeError, ValueError):
+            pass
+        clean_inbox.append(item)
+    if clean_inbox != raw_inbox:
+        s["inbox_messages"] = clean_inbox[-300:]
+        inbox_save_needed = True
+    try:
+        seq = max(0, int(s.get("inbox_sequence", 0)))
+    except (TypeError, ValueError):
+        seq = 0
+        inbox_save_needed = True
+    if seq < max_inbox_number:
+        seq = max_inbox_number
+        inbox_save_needed = True
+    if s.get("inbox_sequence") != seq:
+        s["inbox_sequence"] = seq
+        inbox_save_needed = True
+    if inbox_save_needed:
+        save(s)
     return s
+
+
+def register_inbox_message(s, sender_country, message_type="message", title="", body="",
+                           conversation_id=None, response_allowed=False, metadata=None):
+    """ثبت پیام ورودی؛ تولیدکننده AI زنده در فاز F به این قرارداد متصل می‌شود."""
+    if sender_country not in (s.get("world") or {}) or sender_country == s.get("player"):
+        raise ValueError("فرستنده پیام باید یک کشور دیگر در جهان بازی باشد.")
+    allowed_types = ("request", "treaty_offer", "alliance_invite", "conversation", "message")
+    if message_type not in allowed_types:
+        raise ValueError("نوع پیام ورودی نامعتبر است.")
+    sequence = int(s.get("inbox_sequence", 0)) + 1
+    s["inbox_sequence"] = sequence
+    item = {
+        "id": "MSG-%06d" % sequence, "sender_country": sender_country,
+        "message_type": message_type, "title": str(title or "پیام جدید"),
+        "body": str(body or ""), "date": s.get("game_date", ""),
+        "status": "unread", "conversation_id": conversation_id,
+        "response_allowed": bool(response_allowed),
+        "metadata": metadata if isinstance(metadata, dict) else {}
+    }
+    messages = s.setdefault("inbox_messages", [])
+    messages.append(item)
+    if len(messages) > 300:
+        del messages[:-300]
+    return item
+
+
+def mark_inbox_message_read(s, message_id):
+    for item in s.get("inbox_messages") or []:
+        if isinstance(item, dict) and item.get("id") == message_id:
+            if item.get("status") == "unread":
+                item["status"] = "read"
+            return item
+    raise ValueError("پیام موردنظر پیدا نشد.")
 
 def save(s):
     tmp = STATE + ".tmp"
@@ -1699,6 +1790,7 @@ def init_game(player):
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
         player_sanctions={}, player_sanction_history=[],
+        inbox_messages=[], inbox_sequence=0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
