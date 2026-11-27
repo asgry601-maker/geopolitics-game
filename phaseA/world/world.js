@@ -364,6 +364,7 @@ function renderEventTalkState() {
   var targetBox = el('confidentialTargetBox');
   var confidentialOnly = confidential && !alliance;
   if (targetBox) targetBox.hidden = !confidentialOnly;
+  if (confidentialOnly) renderConfidentialTargets();
   var feedBox = el('eventStatementFeed');
   var composerBox = el('eventStatementInput');
   var sendBox = el('eventStatementSend');
@@ -385,6 +386,7 @@ function renderEventTalkState() {
   } else if (confidential && alliance) {
     if (title) title.textContent = 'مذاکره محرمانه با اتحاد';
     if (note) note.textContent = 'این گفت‌وگو فقط میان بازیکن و هم‌پیمانان انجام می‌شود و کاملاً محرمانه است؛ هیچ محتوایی به مطبوعات یا بیانیه عمومی راه پیدا نمی‌کند، مگر اینکه بازیکن خودش آن را منتشر کند.';
+    if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'فضای گفت‌وگوی محرمانه با اتحاد آماده است. محتوای این مذاکره خصوصی باقی می‌ماند و به رسانه‌ها منتقل نمی‌شود.';
   } else if (confidential) {
     if (title) title.textContent = 'مذاکره محرمانه · انتخاب کشورها';
     if (note) note.textContent = 'کشورهای موردنظر را انتخاب و تأیید کن. این مذاکره خصوصی می‌ماند و به رسانه‌ها یا بیانیه عمومی منتقل نمی‌شود.';
@@ -453,12 +455,12 @@ function renderConfidentialTargets() {
     if(summary) summary.textContent='مذاکره محرمانه با '+CONFIDENTIAL_TARGETS.join('، ');
   } else {
     list.hidden=false;
-    if(summary) summary.textContent='هنوز کشوری انتخاب و تأیید نشده است.';
+    if(!list.firstChild) renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf');
+    if(summary) summary.textContent='کشورهای موردنظر را انتخاب کن و تأیید را بزن. انتخاب چند کشور هم‌زمان امکان‌پذیر است.';
   }
 }
 function bindConfidentialTargetPicker() {
-  var choose=el('confidentialChooseCountries'), confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries');
-  if(choose) choose.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; };
+  var confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries');
   if(confirm) confirm.onclick=function(){ CONFIDENTIAL_DRAFT=readCountryPicker('confidentialCountryList'); CONFIDENTIAL_TARGETS=CONFIDENTIAL_DRAFT.slice(0); renderConfidentialTargets(); };
   if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderCountryPicker('confidentialCountryList',[],'conf'); renderConfidentialTargets(); };
 }
