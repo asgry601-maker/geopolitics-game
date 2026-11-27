@@ -1626,6 +1626,16 @@ EVENT_CATEGORIES = (
     "social", "diplomatic", "natural", "environmental", "nuclear"
 )
 
+EVENT_STATUS_TRANSITIONS = {
+    "recorded": ("acknowledged", "investigating", "dismissed"),
+    "acknowledged": ("investigating", "resolved", "dismissed"),
+    "investigating": ("acknowledged", "resolved", "dismissed"),
+    "resolved": ("closed",),
+    "closed": (),
+    "dismissed": ()
+}
+
+
 # مسیرهای اثرگذاری فقط مقصدهای بالقوه را مشخص می‌کنند؛
 # تا زمان تکمیل سیستم پیامدها هیچ شاخصی از این طریق تغییر نمی‌کند.
 EVENT_IMPACT_ROUTES = {
@@ -1799,6 +1809,14 @@ def register_game_event(s, category, country=None, title="", description="",
         "description": str(description or ""),
         "severity": severity,
         "status": "recorded",
+        "status_updated_date": s.get("game_date", ""),
+        "status_history": [{
+            "date": s.get("game_date", ""),
+            "from": None,
+            "to": "recorded",
+            "actor": "system",
+            "note": "رویداد ثبت شد."
+        }],
         "source": str(source or "system"),
         "impact_targets": list(EVENT_IMPACT_ROUTES.get(category, [])),
         "impact_plan": [],
@@ -1814,6 +1832,40 @@ def register_game_event(s, category, country=None, title="", description="",
     events.append(event)
     if len(events) > 500:
         del events[:-500]
+    return event
+
+
+def transition_game_event(s, event_id, new_status, actor="player", note=""):
+    """تغییر وضعیت یک رویداد طبق چرخه مجاز؛ بدون اعمال پیامدهای بازی."""
+    events = s.setdefault("game_events", [])
+    event = None
+    for item in events:
+        if isinstance(item, dict) and item.get("id") == event_id:
+            event = item
+            break
+    if event is None:
+        raise ValueError("رویداد موردنظر پیدا نشد.")
+
+    current_status = event.get("status", "recorded")
+    allowed = EVENT_STATUS_TRANSITIONS.get(current_status)
+    if allowed is None:
+        raise ValueError("وضعیت فعلی رویداد ناشناخته است: %s" % current_status)
+    if new_status not in allowed:
+        raise ValueError("تغییر وضعیت از %s به %s مجاز نیست." %
+                         (current_status, new_status))
+
+    event["status"] = new_status
+    event["status_updated_date"] = s.get("game_date", "")
+    history = event.setdefault("status_history", [])
+    history.append({
+        "date": s.get("game_date", ""),
+        "from": current_status,
+        "to": new_status,
+        "actor": str(actor or "system"),
+        "note": str(note or "")
+    })
+    if len(history) > 50:
+        del history[:-50]
     return event
 
 
