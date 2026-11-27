@@ -111,6 +111,28 @@ except OSError:
     pass
 
 
+# ---------------------------------------------------------------- پرونده‌های پژوهش سیاسی (مرجع مستقل از شاخص‌های شبیه‌سازی موتور)
+POLITICAL_PROFILES_PATH = os.path.join(HERE, "data", "political_profiles.json")
+_POL_PROFILE_CACHE = {"mtime": -1.0, "countries": {}}
+
+
+def political_profile(iso3):
+    """پرونده پژوهش‌شده کشور را با کش mtime برمی‌گرداند؛ فقط خواندنی."""
+    if not iso3:
+        return None
+    try:
+        mt = os.path.getmtime(POLITICAL_PROFILES_PATH)
+        if mt != _POL_PROFILE_CACHE["mtime"]:
+            with open(POLITICAL_PROFILES_PATH, encoding="utf-8") as f:
+                payload = json.load(f)
+            _POL_PROFILE_CACHE["countries"] = payload.get("countries") or {}
+            _POL_PROFILE_CACHE["mtime"] = mt
+        profile = _POL_PROFILE_CACHE["countries"].get(iso3)
+        return dict(profile) if isinstance(profile, dict) else None
+    except (OSError, ValueError, TypeError):
+        return None
+
+
 def fa_meta(fa_name):
     m = CMAP.get(fa_name) or {}
     return dict(
@@ -237,6 +259,7 @@ def api_country(s, name):
         economic_rank=eco_rank, economy_top=economy_top,
         arsenal=[("%s× %d" % (k, v)) for k, v in sorted(ars.items(), key=lambda x: -x[1])][:4],
         parties=dict((p, round(v, 1)) for p, v in (pol.get("parties") or {}).items()),
+        political_profile=political_profile(meta.get("iso3")),
         press=(pol.get("press") or [])[-4:],
         proxies=prx_mine,
         friends=friends, enemies=enemies,

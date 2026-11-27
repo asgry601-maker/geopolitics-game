@@ -437,26 +437,81 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += dashMetric('رئیس کشور / دولت',r.leader) + dashMetric('رتبه جهانی',r.rank ? '#'+r.rank : '—');
     h += '</div>' + dashMissing('اطلاعات تکمیلی جغرافیایی','پرچم، پایتخت، مساحت، زبان رسمی، واحد پول و جمعیت هنوز به داده کشورها متصل نشده‌اند.');
   } else if (tab === 'politics') {
+    var pp = r.political_profile || null, cur, keys2, item, fields, j, k, val;
     h += '<h3>🏛 ساختار سیاسی</h3>';
-    h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت</span><b>'+dashEsc(r.leader)+'</b></div>';
-    h += '<div class="row"><span class="muted">ثبات سیاسی فعلی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
-    if (r.parties && Object.keys(r.parties).length) {
-      h += '<h3>جناح‌ها و سهم سیاسی</h3>';
-      ks=Object.keys(r.parties).sort(function(a,b){return r.parties[b]-r.parties[a];});
-      for(i=0;i<ks.length;i++) h += barHtml(dashEsc(ks[i]),Math.min(100,r.parties[ks[i]]));
-      var rulingA = (ST && r.name === ST.player) ? 'جبهه انقلاب' : 'حاکمیت';
-      var rulingB = (ST && r.name === ST.player) ? 'ملی‌گرایان' : 'ارتش‌گرایان';
-      var rulingShare = (r.parties[rulingA] || 0) + (r.parties[rulingB] || 0);
-      var rulingState = rulingShare >= 55 ? 'پایگاه حاکمیتی قدرتمند' : (rulingShare <= 35 ? 'پایگاه حاکمیتی ضعیف' : 'پایگاه حاکمیتی متوسط');
-      h += '<h3>پایگاه جناح‌های حاکم</h3><div class="dashCard">';
-      h += '<div class="row"><span class="muted">'+dashEsc(rulingA)+' + '+dashEsc(rulingB)+'</span><b>'+rulingShare.toFixed(1)+'٪</b></div>';
-      h += '<div class="muted">'+rulingState+' · این شاخص از سهم دو جناح حاکم در مدل فعلی موتور محاسبه شده و معادل محبوبیت عمومی دولت نیست.</div></div>';
+    h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت در موتور بازی</span><b>'+dashEsc(r.leader)+'</b></div>';
+    h += '<div class="row"><span class="muted">ثبات سیاسی شبیه‌سازی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
+    if (pp) {
+      h += '<h3>نوع نظام و مدل حکومت</h3><div class="dashCard">';
+      h += '<div class="row"><span class="muted">شناسه نوع نظام</span><b>'+dashEsc(pp.system_type || 'ثبت نشده')+'</b></div>';
+      h += '<div class="muted">'+dashEsc(pp.government_model || 'توضیح مدل حکومت ثبت نشده')+'</div></div>';
+      if (pp.current_government) {
+        h += '<h3>ساختار دولت در تاریخ شروع سناریو</h3><div class="dashCard">';
+        cur = pp.current_government;
+        keys2 = Object.keys(cur);
+        for (j=0;j<keys2.length;j++) {
+          k=keys2[j]; val=cur[k];
+          if (val == null || typeof val === 'object') continue;
+          if (k === 'scenario_note' || k === 'note') {
+            h += '<div class="muted">'+dashEsc(val)+'</div>';
+          } else {
+            h += '<div class="row"><span class="muted">'+dashEsc(k)+'</span><b>'+dashEsc(val === 'PLAYER_CONTROLLED' ? 'کنترل بازیکن در سناریو' : val)+'</b></div>';
+          }
+        }
+        h += '</div>';
+      }
+      if (pp.parties && pp.parties.length) {
+        h += '<h3>احزاب واقعی ثبت‌شده</h3>';
+        for (j=0;j<pp.parties.length;j++) {
+          item=pp.parties[j] || {};
+          h += '<div class="dashCard"><b>'+dashEsc(item.name_fa || item.name_en || 'حزب بدون نام')+'</b>';
+          if (item.name_en) h += '<div class="muted small">'+dashEsc(item.name_en)+'</div>';
+          if (item.political_role) h += '<div>'+dashEsc(item.political_role)+'</div>';
+          if (item.ideological_profile) h += '<div class="muted">'+dashEsc(item.ideological_profile)+'</div>';
+          h += '<div class="muted small">نوع: '+dashEsc(item.entity_type || 'party')+' · وضعیت: '+dashEsc(item.legal_status || 'ثبت نشده')+' · اطمینان: '+dashEsc(item.confidence || 'نامشخص')+'</div></div>';
+        }
+      } else {
+        h += '<div class="dashNote">در پرونده پژوهشی، حزب رقابتی رسمی ثبت نشده است؛ ساختار سیاسی این کشور از طریق جریان‌ها یا نهادهای قدرت توصیف می‌شود.</div>';
+      }
+      if (pp.factions && pp.factions.length) {
+        h += '<h3>جریان‌ها و جناح‌های سیاسی واقعی</h3>';
+        for (j=0;j<pp.factions.length;j++) {
+          item=pp.factions[j] || {};
+          h += '<div class="dashCard"><b>'+dashEsc(item.name_fa || item.name_en || 'جریان بدون نام')+'</b>';
+          if (item.name_en) h += '<div class="muted small">'+dashEsc(item.name_en)+'</div>';
+          if (item.entity_type) h += '<div class="muted small">ماهیت: '+dashEsc(item.entity_type)+'</div>';
+          fields=item.policy_positions || {};
+          keys2=Object.keys(fields);
+          for(k=0;k<keys2.length;k++) h += '<div class="muted">'+dashEsc(keys2[k])+': '+dashEsc(fields[keys2[k]])+'</div>';
+          h += '<div class="muted small">اطمینان پژوهش: '+dashEsc(item.confidence || 'نامشخص')+'</div></div>';
+        }
+      }
+      if (pp.power_centers && pp.power_centers.length) {
+        h += '<h3>مراکز واقعی قدرت</h3>';
+        for (j=0;j<pp.power_centers.length;j++) {
+          item=pp.power_centers[j] || {};
+          h += '<div class="dashCard"><b>'+dashEsc(item.name_fa || item.name_en || 'مرکز قدرت')+'</b>';
+          if (item.role) h += '<div class="muted">'+dashEsc(item.role)+'</div>';
+          h += '<div class="muted small">اطمینان: '+dashEsc(item.confidence || 'نامشخص')+'</div></div>';
+        }
+      }
+      if (pp.parliamentary_groups && pp.parliamentary_groups.length) {
+        h += '<h3>فراکسیون‌ها و گروه‌های پارلمانی</h3>';
+        for (j=0;j<pp.parliamentary_groups.length;j++) {
+          item=pp.parliamentary_groups[j] || {};
+          h += '<div class="dashCard small">'+dashEsc(item.name_fa || item.name_en || item.id || 'گروه پارلمانی')+'</div>';
+        }
+      }
+      h += '<div class="dashNote">منبع داده: پرونده پژوهشی سیاسی کشور · وضعیت پژوهش: '+dashEsc(pp.research_status || 'نامشخص')+' · میزان اطمینان کلی: '+dashEsc((pp.data_quality || {}).confidence || 'نامشخص')+' · تاریخ بررسی: '+dashEsc((pp.data_quality || {}).last_verified || 'نامشخص')+'</div>';
+      if (pp.data_quality && pp.data_quality.notes) h += '<div class="dashNote">'+dashEsc(pp.data_quality.notes)+'</div>';
+    } else {
+      h += dashMissing('پرونده سیاسی پژوهش‌شده','برای این کشور پرونده ساختاریافته در داده مرجع پیدا نشد؛ هیچ حزب یا جناحی به‌صورت حدسی نمایش داده نمی‌شود.');
     }
     if (r.press && r.press.length) {
-      h += '<h3>آخرین اخبار و مطبوعات داخلی</h3>';
+      h += '<h3>آخرین اخبار و مطبوعات داخل شبیه‌سازی</h3>';
       for(i=0;i<r.press.length;i++) h += '<div class="dashCard small">'+dashEsc(r.press[i])+'</div>';
     }
-    h += dashMissing('سایر سازوکارهای سیاسی','نوع حکومت، محبوبیت عمومی دولت، انتخابات، مجلس و اعتراضات هنوز داده و مکانیک مستقل ندارند. احزاب/جناح‌ها، واکنش روزانه آن‌ها به رویدادها، اثر ائتلاف حاکم بر ثبات و تیترهای مطبوعاتی در موتور فعلی فعال‌اند.');
+    h += '<div class="dashNote">احزاب، جریان‌ها و مراکز قدرت بالا از پرونده پژوهشی کشور خوانده می‌شوند و با شاخص‌های عددی شبیه‌سازی موتور یکی نیستند. انتخابات، محبوبیت دولت و اعتراضات فقط پس از طراحی مکانیک مستقل به‌عنوان داده پویا نمایش داده خواهند شد.</div>';
     if (!isPlayer) h += '<div class="dashNote">این کشور در حالت مشاهده است؛ کنترل سیاسی فقط برای کشور تحت مدیریت بازیکن فعال خواهد بود.</div>';
   } else if (tab === 'society') {
     h += '<h3>👥 جمعیت و جامعه</h3>';
