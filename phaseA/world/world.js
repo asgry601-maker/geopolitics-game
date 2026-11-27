@@ -531,6 +531,7 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += dashMetric('جمعیت کل',sp.population == null ? 'ثبت نشده' : Number(sp.population).toLocaleString('en-US'));
       h += dashMetric('سال آمار جمعیت',sp.population_year || '—');
       h += dashMetric('تراکم جمعیت',sp.population_density == null ? 'ثبت نشده' : sp.population_density+' نفر در کیلومتر مربع');
+      h += dashMetric('رشد سالانه جمعیت',sp.population_growth_percent == null ? 'ثبت نشده' : Number(sp.population_growth_percent).toLocaleString('en-US')+'٪ · '+(sp.population_growth_year || 'سال نامشخص'));
       h += dashMetric('مساحت خشکی',sp.land_area_km2 == null ? 'ثبت نشده' : Number(sp.land_area_km2).toLocaleString('en-US')+' کیلومتر مربع');
       h += '</div>';
       h += '<div class="dashNote">جمعیت از شاخص World Bank SP.POP.TOTL گرفته شده است. سال هر مقدار کنار همان شاخص نمایش داده می‌شود. آمار مهاجرت، رشد طبیعی، ساختار سنی و نیروی کار هنوز به داده‌های مستقل نیاز دارند.</div>';
