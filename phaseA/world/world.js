@@ -542,7 +542,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         LVA: 'Andris Kulbergs 2026 (cropped).png',
         LTU: 'Mindaugas Sinkevičius in August 2026.jpg',
         EST: 'Euroopa päev Narvas 9. mai 2026. (12) Kristen Michal, Eesti poliitik.jpg',
-        MLT: 'Robert Abela, 2025.06.26 (03) (cropped).jpg'
+        MLT: 'Robert Abela, 2025.06.26 (03) (cropped).jpg',
+        PRK: 'Kim Jong-un (2025) (cropped).jpg',
+        TWN: 'President Lai Ching-te 2024-10-01.jpg',
+        MNG: 'Sandagiin Byambatsogt, official portrait as Chairman of the State Great Khural.jpg',
+        BGD: 'Prime minister Tarique Rahman1.jpg',
+        LKA: 'Anura Kumara Dissanayake in 2025.jpg',
+        NPL: 'Prime Minister of Nepal Balen Shah.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
