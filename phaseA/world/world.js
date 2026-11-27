@@ -518,7 +518,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         ISL: 'NYCW 2026 - Kristrún Frostadóttir 01.jpg',
         GRC: 'Kyriakos Mitsotakis 2026.jpg',
         HRV: 'Andrej Plenković (cropped).jpg',
-        LUX: 'Luc Frieden 2025 (cropped).jpg'
+        LUX: 'Luc Frieden 2025 (cropped).jpg',
+        CHE: 'Karin Keller-Sutter (2025) (cropped).jpg',
+        AUT: 'Christian Stocker, 2025.06.26 (01) (cropped).jpg',
+        IRL: 'Taoiseach Micheál Martin.jpg',
+        CZE: 'Czechia PM Petr Fiala 2025 portrait.jpg',
+        SVK: 'Robert Fico portrait, 2025.jpg',
+        ROU: 'Nicusor Dan in 2026.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
