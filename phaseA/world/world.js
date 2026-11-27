@@ -620,7 +620,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         GNB: 'Le Tchad célèbre ce mardi 11 août 2026 le 66ᵉ anniversaire 101 (cropped).jpg',
         PRY: 'Santiago Peña mayo 2026 (cropped).jpg',
         CUB: 'Miguel Díaz-Canel 2025.jpg',
-        HTI: '2026 Alix Didier Fils-Aimé (cropped).jpg'
+        HTI: '2026 Alix Didier Fils-Aimé (cropped).jpg',
+        DOM: 'Luis Abinader en 2025.jpg',
+        JAM: 'Holness March 2025 (cropped).jpg',
+        TTO: '2025 Kamla Persad-Bissessar (cropped).jpg',
+        CRI: 'Laura Fernandez Delgado presidential inauguration 20260508 0515 (cropped).jpg',
+        PAN: 'José Raúl Mulino 2025.jpg',
+        GTM: 'Retrato oficial de Presidente Bernardo Arévalo (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
