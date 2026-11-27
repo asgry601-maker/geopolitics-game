@@ -506,7 +506,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         TUN: 'President Kais Saïed.jpg',
         ETH: 'Prime Minister of Ethiopia Abiy Ahmed Ali (cropped).jpg',
         KEN: 'William Saomei Ruto official portrait.jpg',
-        NGA: 'Bola Tinubu portrait (cropped).jpg'
+        NGA: 'Bola Tinubu portrait (cropped).jpg',
+        ESP: '100226-sanchez-biografia4.jpg',
+        PRT: 'Luís Montenegro, 2025.06.26 (04) (cropped).jpg',
+        NLD: 'Dick Schoof in 2025.jpg',
+        SWE: 'Ulf Kristersson (cropped).jpg',
+        DNK: 'Mette Frederiksen, 2025.06.26 (04) (cropped1).jpg',
+        BEL: 'BartDeWever.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
