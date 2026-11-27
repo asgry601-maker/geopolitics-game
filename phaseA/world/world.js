@@ -537,7 +537,7 @@ function setSanctionInnerView(view) {
   if(tb){tb.className='eventPanelTab'+(!imp?' active':'');tb.setAttribute('aria-selected',!imp?'true':'false');}
 }
 function bindEventPanelTabs() {
-  var sb = el('eventTabStatements'), mb = el('eventTabMilitary');
+  var sb = el('eventTabStatements'), mb = el('eventTabMilitary'), xb = el('eventTabSanctions');
   if (sb) sb.onclick = function () { setEventPanelView('statements'); };
   if (mb) mb.onclick = function () { setEventPanelView('military'); };
   if (xb) xb.onclick = function () { setEventPanelView('sanctions'); };
