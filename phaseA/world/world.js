@@ -584,7 +584,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         SLE: 'Julius Maada Bio - 2020 (cropped).jpg',
         LBR: 'Joseph Boakai in Yokohama (cropped).jpg',
         TGO: 'President of Togo Faure Gnassingbé on November 13, 2024 (cropped).jpg',
-        BEN: 'Romuald Wadagni in June 2026.jpg'
+        BEN: 'Romuald Wadagni in June 2026.jpg',
+        COG: 'Denis Sassou Nguesso on April 29, 2026 (cropped).jpg',
+        COD: 'Felix Tshisekedi, President of the Democratic Republic of the Congo (55078564106) (cropped).jpg',
+        CAF: 'Faustin Archange Touadera.jpg',
+        ERI: 'Isaias Afewerki (2026-10-30).jpg',
+        DJI: 'Ismail Omar Guelleh, the President of Djibouti meets with Shinzō Abe, the Prime Minister of Japan.jpg',
+        SOM: 'His Excellency President Hassan Sheikh Mohamud (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
