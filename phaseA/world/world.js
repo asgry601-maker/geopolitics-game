@@ -500,7 +500,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         OMN: 'Official portrait of Sultan Haitham bin Tariq (2021) (cropped).jpg',
         YEM: 'Rashad al-Alimi 2022 (cropped).jpg',
         EGY: 'Abdel Fattah el-Sisi - 2023.jpg',
-        LBY: 'Mohamed al-Menfi Moscow 2026.jpg'
+        LBY: 'Mohamed al-Menfi Moscow 2026.jpg',
+        MAR: 'King Mohammed VI (cropped).jpg',
+        DZA: 'Abdelmadjid Tebboune (2023).jpg',
+        TUN: 'President Kais Saïed.jpg',
+        ETH: 'Prime Minister of Ethiopia Abiy Ahmed Ali (cropped).jpg',
+        KEN: 'William Saomei Ruto official portrait.jpg',
+        NGA: 'Bola Tinubu portrait (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
