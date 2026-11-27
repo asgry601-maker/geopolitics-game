@@ -426,6 +426,44 @@ class Handler(BaseHTTPRequestHandler):
         path = u.path.lstrip("/")
         if path == "api/state":
             self._json(api_state(get_state()))
+        elif path == "api/events/catalog":
+            self._json(dict(ok=True, activation=G.EVENT_TRIGGER_ACTIVATION,
+                            categories=list(G.EVENT_CATEGORIES),
+                            triggers=G.get_event_trigger_catalog()))
+        elif path == "api/events":
+            state = get_state()
+            if state is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            query = parse_qs(u.query)
+            try:
+                limit = int((query.get("limit") or ["50"])[0])
+            except (TypeError, ValueError):
+                limit = 50
+            limit = max(1, min(200, limit))
+            include_closed = (query.get("include_closed") or ["0"])[0] in ("1", "true", "yes")
+            events = G.get_prioritized_game_events(state, limit=200, include_closed=include_closed)
+            category = (query.get("category") or [""])[0].strip()
+            status = (query.get("status") or [""])[0].strip()
+            country = (query.get("country") or [""])[0].strip()
+            if category:
+                events = [item for item in events if item.get("category") == category]
+            if status:
+                events = [item for item in events if item.get("status") == status]
+            if country:
+                events = [item for item in events if item.get("country") == country]
+            self._json(dict(ok=True, count=len(events[:limit]), events=events[:limit],
+                            event_sequence=state.get("event_sequence", 0)))
+        elif path.startswith("api/events/chain/"):
+            state = get_state()
+            event_id = path[len("api/events/chain/"):]
+            if state is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+            else:
+                try:
+                    self._json(dict(ok=True, chain=G.get_event_chain(state, event_id)))
+                except ValueError as exc:
+                    self._json(dict(ok=False, error=str(exc)), 404)
         elif path == "api/country":
             q = parse_qs(u.query)
             s = get_state()
@@ -504,6 +542,25 @@ class Handler(BaseHTTPRequestHandler):
                 res = run_engine(["init", country])
             self._json(dict(res, state=api_state(get_state(True))))
             return
+        elif path == "api/events/source-review":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.review_game_event_source(
+                        current, body.get("event_id"),
+                        reviewer=body.get("reviewer", "player"),
+                        status=body.get("status", "reviewed"),
+                        note=body.get("note", ""))
+                    G.save(current)
+                self._json(dict(ok=True, source_info=result,
+                                state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در بازبینی منشأ رویداد: %s" % exc), 500)
         elif path == "api/political/change":
             if s is None:
                 self._json(dict(ok=False, error="بازی‌ای ساخته نشده."))
