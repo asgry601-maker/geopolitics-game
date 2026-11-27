@@ -397,3 +397,29 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - U.S. Congressional Research Service, *Latin America and the Caribbean: Fact Sheet on Leaders and Elections*, updated 30 October 2026. The report records the 2026 transitions in Chile, Colombia, Peru and Venezuela and the current leaders in Ecuador and Bolivia. The in-game leader-name fields were updated accordingly.
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the Colombia and Bolivia portraits at dashboard size. The Colombia file has a territorial copyright caveat recorded above; the Venezuela file is a 2024 portrait, but has a clearer face and a documented CC BY-SA 4.0 license.
+
+
+## Package 25 — Africa, South America and the Caribbean (6 countries)
+
+- **AFG — Afghanistan:** Mohammad Hasan Akhund — `Hasan Akhund 2026.jpg`. Photograph dated 21 June 2026, source: Office of the Prime Minister of Kazakhstan / primeminister.kz; CC BY 4.0. Crop: 363 × 471 pixels. Attribution: primeminister.kz. The portrait and engine display identify the prime minister/head of government; Hibatullah Akhundzada remains the supreme leader and the country's highest authority. A public, reusable portrait of Akhundzada was not identified, so the displayed person is explicitly the prime minister rather than a mismatched image.
+- **BWA — Botswana:** Duma Boko — `Duma Boko 2025 (cropped).jpg`. Photograph dated 7 March 2025, official U.S. Department of State photograph by Freddie Everett; U.S. federal government work, public domain. Crop: 602 × 806 pixels.
+- **GNB — Guinea-Bissau:** Horta Inta-A Na Man — `Le Tchad célèbre ce mardi 11 août 2026 le 66ᵉ anniversaire 101 (cropped).jpg`. Photograph by Abakar B, dated 3 April 2017; CC0 1.0. Crop: 1,757 × 2,344 pixels. Although the filename refers to a Chad event, the visible uniform nameplate reads “General Horta” and the image is used in Commons leader records for Horta Inta-A Na Man. The file's face is clear; retain this identity/context note.
+- **PRY — Paraguay:** Santiago Peña — `Santiago Peña mayo 2026 (cropped).jpg`. Official photograph dated 8 May 2026, photographer Wang Yu Ching / Taiwan Presidential Office; CC BY 4.0. Crop: 987 × 1,260 pixels. Scenario-date note: the game begins on 5 November 2026, when Peña was still president; Pedro Alliana took office on 6 November 2026, after the scenario start, so the initial leader entry correctly remains Santiago Peña.
+- **CUB — Cuba:** Miguel Díaz-Canel — `Miguel Díaz-Canel 2025.jpg`. Photograph dated 7 May 2025, Kremlin.ru; CC BY 4.0. Image: 442 × 608 pixels. Attribution: Kremlin.ru.
+- **HTI — Haiti:** Alix Didier Fils-Aimé — `2026 Alix Didier Fils-Aimé (cropped).jpg`. Official U.S. Department of State photograph by Freddie Everett, dated 21 April 2026; U.S. federal government work, public domain. Crop: 409 × 546 pixels. Since the Transitional Presidential Council's mandate ended on 7 February 2026, Fils-Aimé exercises executive power as prime minister; the engine entry is updated from the obsolete council label.
+
+### File pages
+- AFG: https://commons.wikimedia.org/wiki/File:Hasan_Akhund_2026.jpg
+- BWA: https://commons.wikimedia.org/wiki/File:Duma_Boko_2025_(cropped).jpg
+- GNB: https://commons.wikimedia.org/wiki/File:Le_Tchad_célèbre_ce_mardi_11_août_2026_le_66ᵉ_anniversaire_101_(cropped).jpg
+- PRY: https://commons.wikimedia.org/wiki/File:Santiago_Peña_mayo_2026_(cropped).jpg
+- CUB: https://commons.wikimedia.org/wiki/File:Miguel_Díaz-Canel_2025.jpg
+- HTI: https://commons.wikimedia.org/wiki/File:2026_Alix_Didier_Fils-Aimé_(cropped).jpg
+
+### Leader and scenario references
+- Afghanistan: CIA World Leaders archive identifies Hibatullah Akhundzada as the overall Taliban leader and Mohammad Hasan Akhund as acting prime minister; the portrait deliberately matches the latter, who is the head of government.
+- Guinea-Bissau: United Nations Protocol list dated 20 October 2026 identifies Horta Inta-a as transitional president, appointed 27 November 2025.
+- Paraguay: Paraguayan Senate and Chamber of Deputies report that Pedro Alliana assumed office on 6 November 2026. Since the game's start date is 5 November 2026, Santiago Peña remains the correct initial leader.
+- Haiti: Congressional Research Service notes that the Transitional Presidential Council's mandate expired on 7 February 2026 and executive power passed to Prime Minister Alix Didier Fils-Aimé.
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the portraits at dashboard size, especially Afghanistan's lower-resolution crop and Guinea-Bissau's older photograph. The Afghanistan entry intentionally displays the prime minister, not the supreme leader, because a reusable portrait of the latter was not located.
