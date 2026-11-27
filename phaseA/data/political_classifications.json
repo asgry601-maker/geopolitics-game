@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 124,
-    "pending_countries": 50,
+    "classified_countries": 129,
+    "pending_countries": 45,
     "last_batch": [
-      "BFA",
-      "GIN",
-      "SLE",
-      "LBR",
-      "TGO"
+      "BEN",
+      "GAB",
+      "COG",
+      "COD",
+      "CAF"
     ]
   },
   "countries": {
@@ -9078,6 +9078,387 @@
             "regime_character"
           ],
           "note": "انتخابات نخستین سنا، اکثریت UNIR و تکمیل ساختار دو مجلسی جمهوری پنجم."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "BEN": {
+      "country_name_fa": "بنین",
+      "country_name_en": "Benin",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۱۲ آوریل ۲۰۲۶ روموالد وادانی، نامزد ائتلاف حاکم UPR و BR، با ۹۴٫۳٪ آرا پیروز شد. این ائتلاف در انتخابات مجلس ژانویه ۲۰۲۶ تمام ۱۰۹ کرسی را به دست آورد و حزب اصلی مخالف، دموکرات‌ها، به‌دلیل نرسیدن به آستانه‌های قانونی از پارلمان بیرون ماند. وادانی به‌عنوان نامزد ائتلاف معرفی شد اما وابستگی حزبی شخصی او مستقل گزارش شده است؛ بنابراین ایدئولوژی حزب حاکم جداگانه ثبت نشده و گرایش ائتلاف به‌صورت عمل‌گرایانه/ترکیبی درج شده است. تغییرات قانون اساسی ۲۰۲۵ نیز دوره‌های ریاست‌جمهوری و مجلس را به هفت سال افزایش داد.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Benin: The Global State of Democracy Tracker",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/benin",
+          "date": "2026-04",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتیجه انتخابات ریاست‌جمهوری آوریل ۲۰۲۶، پیروزی وادانی و وضعیت ائتلاف حاکم."
+        },
+        {
+          "name": "Présentation du Bénin",
+          "publisher": "France Diplomatie",
+          "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/benin/presentation-du-benin",
+          "date": "2026-10-22",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "اطلاعات رسمی کشور، ساختار جمهوری و انتخابات آوریل ۲۰۲۶ و اصلاحات قانون اساسی."
+        },
+        {
+          "name": "Benin National Assembly January 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/BJ/BJ-LC01/election/BJ-LC01-E20260111/",
+          "date": "2026-01-11",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ائتلاف UPR و BR تمام ۱۰۹ کرسی مجلس را برد و احزاب مخالف از آستانه انتخاباتی عبور نکردند."
+        },
+        {
+          "name": "Benin: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/benin/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت‌های سیاسی، تمرکز قدرت و وضعیت حقوق سیاسی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "GAB": {
+      "country_name_fa": "گابن",
+      "country_name_en": "Gabon",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "پس از کودتای اوت ۲۰۲۳، بریس اولیگی نگوما در آوریل ۲۰۲۵ در انتخابات ریاست‌جمهوری پیروز شد و دوره انتقالی در دسامبر ۲۰۲۵ با تشکیل نهادهای منتخب پایان یافت. قانون اساسی جدید نظام ریاستی را تثبیت و سمت نخست‌وزیری را حذف کرد. اتحادیه دموکراتیک سازندگان (UDB) به رهبری رئیس‌جمهور بیش از ۱۰۰ کرسی از ۱۴۵ کرسی مجلس ملی را در انتخابات ۲۰۲۵ کسب کرد. انتخابات بازگشت به سیاست انتخاباتی بود، اما تمرکز قدرت و برتری گسترده جریان رئیس‌جمهور، رقابت را محدود می‌کند؛ ایدئولوژی رسمی اعلام نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Gabon Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/GAB",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کودتای ۲۰۲۳، انتقال به نظم انتخاباتی، تمرکز قدرت و نهادهای جدید."
+        },
+        {
+          "name": "Gabon National Assembly September 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/GA/GA-LC02/election/GA-LC01-E20250927/",
+          "date": "2025-09-27",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات مجلس ۲۰۲۵، اکثریت UDB و پایان دوره انتقالی با تشکیل سنا در دسامبر ۲۰۲۵."
+        },
+        {
+          "name": "IFES Election Guide: Gabonese National Assembly 2025 General",
+          "publisher": "International Foundation for Electoral Systems",
+          "url": "https://www.electionguide.org/elections/id/4590/",
+          "date": "2025-09-27",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نظام ریاستی، حذف سمت نخست‌وزیر در قانون اساسی جدید و ساختار دو مجلسی."
+        },
+        {
+          "name": "Gabon: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/gabon/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی بازگشت انتخابات پس از کودتا و تداوم مشکلات رقابت آزاد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "COG": {
+      "country_name_fa": "کنگو",
+      "country_name_en": "Republic of the Congo",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "دنی ساسو-نگسو در انتخابات مارس ۲۰۲۶ با ۹۴٫۹٪ آرا برای دوره پنجم انتخاب شد. حزب کارگر کنگو (PCT) و متحدانش بر هر دو مجلس و نهادهای حکومتی تسلط دارند؛ گزارش‌های مستقل رقابت انتخاباتی را به‌شدت نابرابر و حکومت را شخصی‌گرا و اقتدارگرا توصیف می‌کنند. ریشه تاریخی سوسیالیستی PCT در کنار عمل‌گرایی سیاسی معاصر ثبت شده است؛ ایدئولوژی رسمی واحدی برای کشور اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Congo, Rep. Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/COG",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تسلط PCT و ساسو-نگسو، تمرکز قدرت، محدودیت اپوزیسیون و ماهیت اقتدارگرای حکومت."
+        },
+        {
+          "name": "Republic of the Congo: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/republic-congo/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی سرکوب مخالفان و نبود رقابت انتخاباتی معنادار."
+        },
+        {
+          "name": "Résultats définitifs de l’élection du Président de la République, scrutin des 12 et 15 mars 2026",
+          "publisher": "Journal officiel de la République du Congo",
+          "url": "https://www.sgg.cg/JO/2026/congo-jo-2026-5-3.pdf",
+          "date": "2026-03-28",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "نتایج رسمی نهایی انتخابات مارس ۲۰۲۶ و اعلام پیروزی ساسو-نگسو با ۹۴٫۹۰٪ آرا."
+        },
+        {
+          "name": "Republic of Congo constitutional court confirms leader Sassou-N'Guesso's election win and fifth term",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/c432bcb46fab80bdc8852f29f6b8bc6e",
+          "date": "2026-03",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گزارش مستقل از تأیید پیروزی، تحریم انتخابات توسط دو حزب مهم مخالف و تداوم دوره طولانی ریاست‌جمهوری."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "COD": {
+      "country_name_fa": "کنگو دموکراتیک",
+      "country_name_en": "Democratic Republic of the Congo",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "social_democracy"
+      ],
+      "ideology_notes": "جمهوری دموکراتیک کنگو از نظر قانون اساسی جمهوری واحدِ غیرمتمرکز با رئیس‌جمهور و نخست‌وزیر است؛ رئیس‌جمهور نخست‌وزیر را از اکثریت پارلمانی منصوب می‌کند و دولت در برابر مجلس پاسخگوست، ازاین‌رو مدل اجرایی در این طبقه‌بندی نیمه‌ریاستی ثبت شده است. فلیکس تشیسکدی در انتخابات مورد مناقشه دسامبر ۲۰۲۳ دوباره انتخاب شد و ائتلاف Union Sacrée اکثریت بسیار بزرگی در مجلس دارد. درگیری شرق کشور، ضعف کنترل سرزمینی، دستکاری انتخاباتی و محدودیت رقابت، نظام را اقتدارگرای انتخاباتی می‌سازد. UDPS ریشه سوسیال‌دموکراتیک دارد، اما ائتلاف حاکم از شبکه‌ای ناهمگون از احزاب و متحدان تشکیل شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Congo, DR Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/COD",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تمرکز قدرت ریاست‌جمهوری، ائتلاف Union Sacrée، ضعف نهادها و اثر درگیری شرق کشور."
+        },
+        {
+          "name": "Democratic Republic of the Congo: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/democratic-republic-congo/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure"
+          ],
+          "note": "ارزیابی دستکاری انتخاباتی، انسداد سیاسی و اثر درگیری طولانی در شرق."
+        },
+        {
+          "name": "Democratic Republic of the Congo National Assembly December 2023 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/CD/CD-LC01/election/CD-LC01-E20231220/",
+          "date": "2023-12-20",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "پیروزی مجدد تشیسکدی و کسب ۴۵۰ کرسی از ۴۷۷ کرسی تأییدشده توسط ائتلاف Union Sacrée و متحدان."
+        },
+        {
+          "name": "Congo, DR: Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-dashboard/COD",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ارزیابی اقتدارگرایی سخت‌گیرانه، ائتلاف حاکم و محدودیت‌های رقابت سیاسی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "CAF": {
+      "country_name_fa": "آفریقای مرکزی",
+      "country_name_en": "Central African Republic",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "جمهوری آفریقای مرکزی نظام ریاستی دارد. اصلاح قانون اساسی ۲۰۲۳ دوره ریاست‌جمهوری را به هفت سال افزایش داد و محدودیت دوره‌ها را حذف کرد. فوستین-آرشانژ توآدره در انتخابات دسامبر ۲۰۲۵ برای سومین دوره پیروز شد و حزب جنبش قلب‌های متحد (MCU) بیش از ۸۰ کرسی از ۱۴۴ کرسی مجلس را به دست آورد؛ ائتلاف اصلی مخالف انتخابات را تحریم کرد. با وجود گسترش کنترل دولت در سال‌های اخیر، اقتدار و خدمات دولتی در بخش‌هایی از مناطق روستایی و پیرامونی همچنان محدود است و گروه‌های مسلح در برخی مناطق حضور دارند؛ ازاین‌رو ساختار سرزمینی به‌صورت چندپاره/مورد مناقشه ثبت می‌شود. BTI گرایش MCU را مرکز-چپ توصیف می‌کند؛ ایدئولوژی رسمی اعلام نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Central African Republic Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/CAF",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نظام ریاستی، تقویت قدرت رئیس‌جمهور، ضعف کنترل دولت بر پیرامون و گرایش مرکز-چپ MCU."
+        },
+        {
+          "name": "Central African Republic National Assembly December 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/CF/CF-LC01/election/CF-LC01-E20251228/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی توآدره و MCU، ترکیب مجلس جدید و تحریم انتخابات توسط ائتلاف اصلی مخالف."
+        },
+        {
+          "name": "Central African Republic: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/central-african-republic/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "territorial_structure",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت‌های اپوزیسیون، ناامنی و ضعف اقتدار دولتی در مناطق گسترده."
+        },
+        {
+          "name": "Central African Republic - December 2025: Incumbent Touadéra wins presidential election",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/report/central-african-republic/december-2025",
+          "date": "2026-01-19",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نتایج انتخابات عمومی دسامبر ۲۰۲۵ و پیروزی توآدره؛ نتایج نهایی و چالش‌های انتخاباتی."
         }
       ],
       "data_quality": {
