@@ -1486,6 +1486,83 @@ function bindAllianceActions() {
   };
 }
 
+
+/* ---------- پنل اقدامات دیپلماتیک بازیکن ---------- */
+function diplomacyPanelHtml(country, isPlayer) {
+  var h = '<h3>🕊 وضعیت و مدیریت دیپلماسی</h3>';
+  var wars = country.war_with || [];
+  h += '<div class="dashCard"><b>وضعیت جنگ کشور انتخاب‌شده</b><div>' +
+    (wars.length ? 'در جنگ با: ' + wars.map(dashEsc).join('، ') : 'در حال حاضر جنگ فعالی با کشور دیگری ثبت نشده است.') +
+    '</div></div>';
+  if (!isPlayer) {
+    h += '<div class="dashNote">این کشور در حالت مشاهده است. اقدامات دیپلماتیک فقط از پنل کشور تحت کنترل بازیکن انجام می‌شوند.</div>';
+    return h;
+  }
+  var names = ST && ST.countries ? Object.keys(ST.countries) : [];
+  names.sort();
+  h += '<div class="dashCard"><b>اقدام دیپلماتیک مستقیم</b>';
+  h += '<label>کشورها <select id="diplomacyTargets" multiple size="9" style="width:100%;min-height:160px">';
+  for (var i=0;i<names.length;i++) {
+    if (names[i] !== ST.player && (!ST.eliminated || ST.eliminated.indexOf(names[i]) < 0)) {
+      h += '<option value="'+dashEsc(names[i])+'">'+dashEsc(names[i])+'</option>';
+    }
+  }
+  h += '</select></label><div class="muted small">برای انتخاب چند کشور، کلید Ctrl را نگه دار. نتیجه هر کشور جداگانه اعتبارسنجی می‌شود.</div>';
+  h += '<div class="row" style="flex-wrap:wrap;gap:6px;margin-top:10px">';
+  h += '<button type="button" data-diplomacy-action="improve_relations">بهبود روابط</button>';
+  h += '<button type="button" data-diplomacy-action="reduce_relations">کاهش روابط</button>';
+  h += '<button type="button" data-diplomacy-action="declare_war" class="warn">اعلام جنگ</button>';
+  h += '<button type="button" data-diplomacy-action="unilateral_ceasefire">اعلام آتش‌بس یک‌جانبه</button>';
+  h += '</div><div id="diplomacyActionStatus" class="dashNote">ابتدا یک یا چند کشور را انتخاب کن.</div></div>';
+  h += '<h4>تاریخچه اقدامات دیپلماتیک</h4>';
+  var history = ST && ST.diplomatic_history ? ST.diplomatic_history : [];
+  if (!history.length) h += '<div class="dashCard">هنوز اقدام دیپلماتیکی ثبت نشده است.</div>';
+  for (i=history.length-1;i>=0 && i>=history.length-20;i--) {
+    var item = history[i] || {};
+    var labels = {improve_relations:'بهبود روابط',reduce_relations:'کاهش روابط',declare_war:'اعلام جنگ',unilateral_ceasefire:'آتش‌بس یک‌جانبه'};
+    h += '<div class="dashCard"><div class="row"><b>'+dashEsc(labels[item.action] || item.action || 'اقدام دیپلماتیک')+'</b><span class="muted small">'+dashEsc(item.date || '—')+'</span></div>';
+    h += '<div>کشور: '+dashEsc(item.country || '—')+'</div><div>'+dashEsc(item.detail || '—')+'</div>';
+    h += '<div class="muted small">روابط: '+dashEsc(item.relation_before)+' ← '+dashEsc(item.relation_after)+'</div></div>';
+  }
+  h += '<div class="dashNote">گفت‌وگوی زنده، پیشنهاد شروط و تصمیم‌گیری مستقل کشورهای هوش مصنوعی در فاز F فعال می‌شود؛ این پنل فعلاً فقط اقدامات مستقیم و قطعی بازیکن را ثبت می‌کند.</div>';
+  return h;
+}
+function bindDiplomacyActions() {
+  var box = el('dashSection');
+  if (!box || !ST || !ST.player || ST.player !== (LAST_COUNTRY_R && LAST_COUNTRY_R.name)) return;
+  var buttons = box.querySelectorAll('[data-diplomacy-action]');
+  for (var i=0;i<buttons.length;i++) buttons[i].onclick = function() {
+    var action = this.getAttribute('data-diplomacy-action');
+    var select = el('diplomacyTargets'), targets = [], j;
+    if (select) for (j=0;j<select.options.length;j++) if (select.options[j].selected) targets.push(select.options[j].value);
+    var status = el('diplomacyActionStatus');
+    if (!targets.length) { if(status) status.textContent='حداقل یک کشور را انتخاب کن.'; return; }
+    var labels = {improve_relations:'بهبود روابط',reduce_relations:'کاهش روابط',declare_war:'اعلام جنگ',unilateral_ceasefire:'آتش‌بس یک‌جانبه'};
+    if (action === 'declare_war' && window.confirm && !window.confirm('اعلام وضعیت جنگ با '+targets.join('، ')+' ثبت شود؟')) return;
+    if (action === 'unilateral_ceasefire' && window.confirm && !window.confirm('وضعیت جنگ با کشورهای انتخاب‌شده پایان یابد؟')) return;
+    var btn = this;
+    btn.disabled = true;
+    if(status) status.textContent='در حال ثبت اقدام دیپلماتیک...';
+    postJSON('api/diplomacy/action',{action:action,targets:targets},function(res) {
+      btn.disabled = false;
+      if (!res || !res.ok) { if(status) status.textContent=(res&&res.error)||'اقدام انجام نشد.'; return; }
+      var lines = [];
+      for (var k=0;k<(res.results||[]).length;k++) {
+        var result=res.results[k]||{};
+        lines.push((result.ok?'✓ ':'✗ ')+result.country+': '+(result.detail||result.reason||'ثبت شد.'));
+      }
+      loadState(function() {
+        if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        flash(labels[action]+'؛ موفق: '+res.success_count+'، ناموفق: '+res.failed_count);
+      });
+      if(status) status.textContent=lines.join(' | ') || 'نتیجه‌ای دریافت نشد.';
+    },function(code,response) {
+      btn.disabled = false;
+      if(status) status.textContent=netErrMsg(code,response)+' — اقدام ثبت نشد.';
+    });
+  };
+}
+
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
   if (tab === 'general') {
@@ -1699,9 +1776,7 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += dashMissing('وضعیت تحریم‌ها','کشورهای تحریم‌کننده، نوع و محدودیت تحریم، اثر اقتصادی و روند مذاکره برای رفع تحریم هنوز به شکل پنل تفصیلی پیاده‌سازی نشده‌اند.');
     if (ST && r.name === ST.player) h += '<div class="dashCard small">شاخص فعلی تحریم شورای امنیت در وضعیت جهان: '+dashEsc(ST.un_censures)+'</div>';
   } else if (tab === 'diplomacy') {
-    h += '<h3>🕊 وضعیت دیپلماتیک</h3>';
-    if (r.war_with && r.war_with.length) { h += '<div class="dashCard">در جنگ با: '+r.war_with.map(dashEsc).join('، ')+'</div>'; }
-    h += dashMissing('مذاکرات و توافق‌ها','مذاکرات فعال، توافق‌های درحال بررسی، پیشنهادهای ارسالی/دریافتی، بحران‌ها و نشست‌های بین‌المللی نیازمند پنل مستقل هستند.');
+    h += diplomacyPanelHtml(r, isPlayer);
   } else if (tab === 'news') {
     h += '<h3>📰 اخبار و رویدادها</h3>';
     if (r.press && r.press.length) for(i=0;i<r.press.length;i++) h += '<div class="press">'+dashEsc(r.press[i])+'</div>';
@@ -1765,6 +1840,7 @@ function renderCountryPanel(r) {
   bindPoliticalChangeForm(r);
   if (DASH_TAB === 'pacts') bindPactActions();
   if (DASH_TAB === 'pacts') bindAllianceActions();
+  if (DASH_TAB === 'diplomacy' && isPlayer) bindDiplomacyActions();
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
