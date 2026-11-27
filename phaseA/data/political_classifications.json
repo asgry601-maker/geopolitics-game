@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 71,
-    "pending_countries": 103,
+    "classified_countries": 76,
+    "pending_countries": 98,
     "last_batch": [
-      "IRQ",
-      "SYR",
-      "LBN",
-      "JOR",
-      "PSE"
+      "ARE",
+      "QAT",
+      "KWT",
+      "BHR",
+      "OMN"
     ]
   },
   "countries": {
@@ -5135,6 +5135,349 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "به‌علت اشغال، شکاف کرانه باختری و غزه و نهادهای انتقالی، داده‌ها فقط توصیف وضعیت حکمرانی چندپاره در تاریخ مبنا هستند. منابع ۲۴ نوامبر برای تفسیر/تأیید بعدی‌اند و هیچ رویداد پس از ۵ نوامبر در baseline اعمال نشده است."
+      }
+    },
+    "ARE": {
+      "country_name_fa": "امارات متحده عربی",
+      "country_name_en": "United Arab Emirates",
+      "government_form": "emirate",
+      "government_subform": "hereditary_emirate",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "federal",
+      "regime_character": "closed_authoritarian",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، امارات فدراسیونی متشکل از هفت امارت با حاکمان موروثی بود. شورای عالی فدرال از حکام هفت امارت تشکیل می‌شود و رئیس‌جمهور را از میان خود انتخاب می‌کند؛ محمد بن زاید آل نهیان رئیس‌جمهور و حاکم ابوظبی و محمد بن راشد آل مکتوم نخست‌وزیر و حاکم دبی بود. مجلس ملی فدرال نهادی مشورتی با ترکیب انتخابی محدود و انتصابی است و احزاب سیاسی مجاز نیستند. اسلام دین رسمی کشور است، اما در منابع مبنا ایدئولوژی سیاسی رسمی مستقلی برای حکومت یا حزب حاکم تصریح نشده؛ بنابراین فیلدهای ایدئولوژی خالی مانده‌اند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The political system",
+          "publisher": "UAE Government",
+          "url": "https://u.ae/en/about-the-uae/the-uae-government/political-system-and-government",
+          "date": "2026-11-27",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "پلتفرم رسمی دولت: فدراسیون قانون اساسی متشکل از هفت امارت و ساختار نهادی فدرال."
+        },
+        {
+          "name": "The Constitution of the United Arab Emirates",
+          "publisher": "UAE Legislation",
+          "url": "https://www.uaelegislation.gov.ae/en/constitution",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد قانون اساسی درباره شورای عالی فدرال، انتخاب رئیس‌جمهور و اختیارات نهادهای فدرال."
+        },
+        {
+          "name": "United Arab Emirates: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/united-arab-emirates/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "امتیاز ۱۸ از ۱۰۰؛ احزاب سیاسی ممنوع و قدرت نهایی در دست حکام موروثی هفت امارت."
+        },
+        {
+          "name": "UAE: Introductory profile and UK relations",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9586/",
+          "date": "2026-11-06",
+          "supports": [
+            "government_subform",
+            "territorial_structure",
+            "party_system"
+          ],
+          "note": "شرح سازوکار انتخاب رئیس‌جمهور توسط هفت امارت، مجلس مشورتی ۴۰ نفره و نبود احزاب؛ صفحه پس از تاریخ مبنا منتشر شده و صرفاً برای تأیید ساختار پایدار استفاده شده است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "اطلاعات نهادی از قانون اساسی و منابع رسمی استخراج شده است؛ منبع پارلمانی بریتانیا پس از snapshot منتشر شده و فقط برای تأیید ساختار پایدار به‌کار رفته، نه برای وارد کردن تغییرات پس از ۵ نوامبر."
+      }
+    },
+    "QAT": {
+      "country_name_fa": "قطر",
+      "country_name_en": "Qatar",
+      "government_form": "emirate",
+      "government_subform": "hereditary_emirate",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، قطر امارتی موروثی به ریاست امیر تمیم بن حمد آل ثانی بود و محمد بن عبدالرحمن آل ثانی نخست‌وزیر و وزیر امور خارجه بود. اصلاحات قانون اساسی مصوب ۶ نوامبر ۲۰۲۴ انتخابات شورای شورا را لغو و انتصاب همه اعضای آن را به فرمان امیر واگذار کرد؛ شورای شورا همچنان مرجع قانون‌گذاری رسمی است، اما اعضای آن انتصابی‌اند. احزاب سیاسی مجاز نیستند. اسلام دین رسمی و شریعت منبع اصلی قانون‌گذاری است، اما ایدئولوژی حزبی یا ایدئولوژی سیاسی رسمی مستقل برای دولت در منابع بررسی‌شده به‌صراحت تعریف نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Constitutional Amendments",
+          "publisher": "Council of Ministers, State of Qatar",
+          "url": "https://www.cm.gov.qa/en/Pages/Constitutional-Amendments.aspx",
+          "date": "2024-11-06",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "متن اصلاحات نافذ قانون اساسی: حداقل ۴۵ عضو شورای شورا با انتصاب امیری؛ حذف مواد انتخابات مستقیم."
+        },
+        {
+          "name": "Qatar: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/qatar/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "قطر غیرآزاد؛ قدرت اجرایی و تقنینی عمدتاً در اختیار امیر و احزاب سیاسی ممنوع‌اند."
+        },
+        {
+          "name": "Government of the State of Qatar",
+          "publisher": "Qatar International Media Office",
+          "url": "https://imo.gov.qa/state-of-qatar/government-of-qatar",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار رسمی امارت، تفکیک قوا در متن قانون اساسی و نقش امیر و هیئت وزیران."
+        },
+        {
+          "name": "Qatar | Shura Council | IPU Parline",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/QA/QA-LC01/",
+          "date": "2025-10-21",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ترکیب شورای شورا پس از انتصاب اعضای جدید در اکتبر ۲۰۲۵؛ ۴۹ عضو انتصابی بر اساس اصلاحات ۲۰۲۴."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "تغییر تعیین‌کننده ساختار شورای شورا در اصلاحات نافذ ۶ نوامبر ۲۰۲۴ رخ داده و پیش از تاریخ مبنای بازی است؛ از نسخه پیش از اصلاحات برای طبقه‌بندی استفاده نشده است."
+      }
+    },
+    "KWT": {
+      "country_name_fa": "کویت",
+      "country_name_en": "Kuwait",
+      "government_form": "emirate",
+      "government_subform": "hereditary_emirate",
+      "executive_legislative_system": "no_functioning_national_legislature",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، کویت امارتی موروثی تحت حاکمیت امیر مشعل الاحمد الجابر الصباح بود و احمد عبدالله الاحمد الصباح نخست‌وزیر بود. امیر در ۱۰ مه ۲۰۲۴ مجلس ملی منتخب را منحل و برخی مواد قانون اساسی را برای دوره‌ای تا چهار سال تعلیق کرد؛ در نتیجه در تاریخ مبنا مجلس ملی منتخب فعالیت نداشت و قوه مجریه عملاً از طریق فرمان حکومت می‌کرد. احزاب رسمی به رسمیت شناخته نشده‌اند، اما پیش از تعلیق مجلس، بلوک‌ها و جریان‌های سیاسی و انتخاباتی فعال بودند؛ ازاین‌رو نظام حزبی به‌صورت محدود ثبت شده است. اسلام دین رسمی است، ولی ایدئولوژی رسمی مستقل یا ایدئولوژی حزبی دولت در منابع مبنا تصریح نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Our Constitution",
+          "publisher": "Ministry of State for National Assembly Affairs, Kuwait",
+          "url": "https://www.mona.gov.kw/En/ourconstitution.aspx",
+          "date": "2026-11-27",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "مواد ۴، ۵۰ تا ۵۶ قانون اساسی درباره امارت موروثی و اختیارات امیر و دولت؛ با توجه به تعلیق بعدی مواد قانون اساسی تفسیر شده است."
+        },
+        {
+          "name": "Kuwait: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/kuwait/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "وضعیت غیرآزاد و اثر انحلال پارلمان در ۲۰۲۴ بر توقف رقابت انتخاباتی ملی."
+        },
+        {
+          "name": "Kuwait: Issues for the 119th Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R47390.html",
+          "date": "2026-01-14",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انحلال مجلس و تعلیق مواد قانون اساسی در مه ۲۰۲۴ برای حداکثر چهار سال؛ امکان قانون‌گذاری اجرایی بدون بازبینی پارلمان."
+        },
+        {
+          "name": "Prime Minister – State of Kuwait",
+          "publisher": "Prime Minister's Administration, Kuwait",
+          "url": "https://pm.gov.kw/en/administration/prime-minister/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform"
+          ],
+          "note": "معرفی احمد عبدالله الاحمد الصباح و تاریخ انتصاب او به نخست‌وزیری در ۱۵ آوریل ۲۰۲۴."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت تعلیق مجلس و دوره حداکثر چهار ساله آن تا تاریخ مبنا برقرار بوده است؛ طبقه‌بندی «بدون قوه مقننه ملی فعال» وضعیت جاری را منعکس می‌کند، نه ساختار عادی قانون اساسی پیش از مه ۲۰۲۴."
+      }
+    },
+    "BHR": {
+      "country_name_fa": "بحرین",
+      "country_name_en": "Bahrain",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، بحرین پادشاهی موروثی مشروطه تحت حاکمیت حمد بن عیسی آل خلیفه بود و سلمان بن حمد آل خلیفه ولیعهد و نخست‌وزیر بود. قوه مقننه از مجلس نمایندگان منتخب و مجلس شورای منصوب پادشاه تشکیل می‌شود؛ پادشاه در انتصاب نخست‌وزیر و اعضای مجلس شورا و فرایند قانون‌گذاری اختیارات تعیین‌کننده دارد. فعالیت احزاب سیاسی به شکل متعارف مجاز نیست و انجمن‌های سیاسی با محدودیت‌های گسترده روبه‌رو هستند؛ بنابراین نظام حزبی محدود ثبت شده است. با وجود تصریح قانون اساسی به سلطنت مشروطه و نظام دموکراتیک، ارزیابی‌های مستقل از سلطه نهاد سلطنت و محدودیت رقابت سیاسی حکایت دارند. ایدئولوژی رسمی حزبی برای دولت تصریح نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Constitution of the Kingdom of Bahrain",
+          "publisher": "Legislation and Legal Opinion Commission, Bahrain",
+          "url": "https://www.legalaffairs.gov.bh/en/page/The%20Constitution%20of%20the%20Kingdom%20of%20Bahrain",
+          "date": "2026-11-27",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "مواد قانون اساسی درباره سلطنت موروثی مشروطه، انتصاب نخست‌وزیر و ساختار دو مجلسی."
+        },
+        {
+          "name": "Bahrain: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/bahrain/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سلطه نهاد سلطنت، غیررقابتی بودن انتخابات مجلس نمایندگان و محدودیت/انحلال مخالفان سیاسی."
+        },
+        {
+          "name": "Cabinet",
+          "publisher": "Bahrain National Portal",
+          "url": "https://www.bahrain.bh/wps/portal/en/BNP/HomeNationalPortal/ContentDetailsPage/%21ut/p/z1/lVTBdpswEPwVesiRhxCygKMdx3bcpk5sk8a65AkhbLUgCMg4_vuKvJc2NbFwdUPMamd2dtchzpNDJG3ElipRSJrp7w3Bz-7tAMyCawDuxwiCh8dwiUd3Lribes6PfwGz7_djgBezwIf-yEOe5xDD7znsidcAcj4_AOg0PlyHGGAIhwiuph5YAFP8J_y7gDYenDlD0MkfRROAg-kEIRws_YF_ov8hCjS9b_MFhiNvceOexrvrCOj8t8PlYjJ2wdcT_l15Rv5tgchZev4Q-0b-bwBilmfmj9zL6m8ocE_8o0McUjKROJs4DhN3wKjNMaY2CnFoh0nAbAgQZWEYIwBhi2ZSlWqn8bJ85vIK0LjYK0vtuPVLyG1S5O9XMd1VVGhExTOqeGKpohSsvgKMxkJy1T5Wq04LdzwmZofnphkBHmiHUPx8eSFDzb2Qir8q5-md_LHYV1YmUm4J-Zfwtmh4JXMulUVlYtUFEzSz6n1ZFpXq6vkAr_dxLRLBaystKv1mIhqR7GlWWzRNOWuj4qPFCn1ru6FV6ud5LpguAjHqbDuhb5ZIX6WIcZu0y6avXTfaK__8utH92Ah-cCJZVLlef6sP3eViL4AQ234KkY1clNoUutimHgr8OA4SBpgz63GzXWgmNz9pRVXRhmdvNirttajzrn-NqGl9qu1kVm5N2i6ZnHnfKP6nsAtnbMWlU-bRn5MHnjzaJMbLm2VwWKe7rMmv4-DoHYZffgMi2tho/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "صفحه رسمی دولت، کابینه و نخست‌وزیر سلمان بن حمد آل خلیفه را معرفی می‌کند."
+        },
+        {
+          "name": "Bahrain: Domestic Politics and Governance",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-09-23_95-1013_704eff395362b7a437fe02fede5ad9cb9a707e86.html",
+          "date": "2026-09-23",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "ساختار دو مجلسی، انتصابی بودن مجلس شورا و نقش تعیین‌کننده پادشاه در تأیید قوانین."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "متن قانون اساسی به‌عنوان ساختار حقوقی و Freedom House/CRS برای ارزیابی عملکرد و رقابت سیاسی استفاده شده‌اند؛ تفاوت میان عنوان مشروطه و تمرکز واقعی قدرت عمداً حفظ شده است."
+      }
+    },
+    "OMN": {
+      "country_name_fa": "عمان",
+      "country_name_en": "Oman",
+      "government_form": "sultanate",
+      "government_subform": "absolute_monarchy",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، عمان سلطنت موروثی مطلقه به ریاست سلطان هیثم بن طارق بود که هم‌زمان رئیس کشور و رئیس دولت و نخست‌وزیر است. شورای عمان از مجلس شورا با اعضای منتخب و مجلس دولت با اعضای منصوب تشکیل می‌شود و در بررسی و تصویب/اصلاح قوانین نقش دارد، اما دولت و اختیارات اجرایی در دست سلطان متمرکز است. احزاب سیاسی اجازه فعالیت ندارند. اسلام دین رسمی و شریعت مبنای قانون‌گذاری است، اما ایدئولوژی حزبی یا ایدئولوژی رسمی سیاسی مستقلی برای حکومت در منابع بررسی‌شده اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Basic Statute of the State",
+          "publisher": "Oman Ministry of Foreign Affairs",
+          "url": "https://www.fm.gov.om/en/about-oman/government/constitution/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "قانون پایه، سلطان را رئیس کشور و فرمانده کل معرفی می‌کند و شورای وزیران را زیر نظر او قرار می‌دهد."
+        },
+        {
+          "name": "Introduction to legislature",
+          "publisher": "Oman Ministry of Foreign Affairs",
+          "url": "https://www.fm.gov.om/en/about-oman/legislature/introduction-to-legislature/",
+          "date": "2026-11-27",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "ساختار دو بخشی شورای عمان و صلاحیت آن در بررسی و اصلاح پیش‌نویس قوانین و بودجه."
+        },
+        {
+          "name": "Oman: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/oman/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "قدرت متمرکز در دست سلطان و محدودیت گسترده حقوق سیاسی و آزادی‌های مدنی."
+        },
+        {
+          "name": "Oman country brief",
+          "publisher": "Australian Government, Department of Foreign Affairs and Trade",
+          "url": "https://www.dfat.gov.au/geo/oman/oman-country-brief",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "عمان را سلطنت مطلقه معرفی می‌کند و نقش سلطان به‌عنوان رئیس کشور و دولت و ساختار شورای عمان را شرح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "منابع رسمی و ارزیابی‌های ۲۰۲۶ با ساختار پایدار پیش از تاریخ مبنا تطبیق داده شده‌اند؛ هیچ تغییر پس از ۵ نوامبر در baseline وارد نشده است."
       }
     }
   }
