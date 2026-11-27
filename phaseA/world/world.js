@@ -1017,18 +1017,7 @@ function politicalClassificationHtml(pc) {
   return out;
 }
 
-function dashSectionHtml(r, isPlayer, tab) {
-  var h = '', ks, i;
-  if (tab === 'general') {
-    h += '<h3>🌐 مشخصات کشور</h3><div class="dashGrid">';
-    h += dashMetric('نام کشور',r.name) + dashMetric('نام انگلیسی',r.en || 'ثبت نشده');
-    h += dashMetric('قاره / منطقه',r.region) + dashMetric('کد کشور',r.iso3 || 'ثبت نشده');
-    h += dashMetric('رئیس کشور / دولت',r.leader) + dashMetric('رتبه جهانی',r.rank ? '#'+r.rank : '—');
-    h += '</div>';
-    var cp = r.country_profile || null;
-    if (cp) {
-      /* پرتره‌های تأییدشده از Wikimedia Commons؛ برای بقیه کشورها فایل محلی در صورت وجود استفاده می‌شود. */
-      var leaderCommonsFiles = {
+var LEADER_COMMONS_FILES = {
         IRN: 'Portrait of Mojtaba Khamenei.jpg',
         USA: 'January 2025 Official Presidential Portrait of Donald J. Trump.jpg',
         RUS: 'Vladimir Putin (2026 02 23).jpg',
@@ -1204,11 +1193,24 @@ function dashSectionHtml(r, isPlayer, tab) {
         BHS: 'Philip "Brave" Davis (profile).jpg',
         BRB: 'Foreign Secretary Yvette Cooper meets with Barbados Prime Minister - 5535661749 (cropped).jpg'
       };
-      var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
-        ? (leaderCommonsFiles[r.iso3].indexOf('https://') === 0
-          ? leaderCommonsFiles[r.iso3]
-          : 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3]))
-        : (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
+function leaderPortraitUrlForCountry(r) {
+  var iso = r && r.iso3, file = iso && LEADER_COMMONS_FILES[iso];
+  if (file) return file.indexOf('https://') === 0 ? file : 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file);
+  return iso ? 'assets/leaders/' + dashEsc(iso) + '.jpg' : '';
+}
+function dashSectionHtml(r, isPlayer, tab) {
+  var h = '', ks, i;
+  if (tab === 'general') {
+    h += '<h3>🌐 مشخصات کشور</h3><div class="dashGrid">';
+    h += dashMetric('نام کشور',r.name) + dashMetric('نام انگلیسی',r.en || 'ثبت نشده');
+    h += dashMetric('قاره / منطقه',r.region) + dashMetric('کد کشور',r.iso3 || 'ثبت نشده');
+    h += dashMetric('رئیس کشور / دولت',r.leader) + dashMetric('رتبه جهانی',r.rank ? '#'+r.rank : '—');
+    h += '</div>';
+    var cp = r.country_profile || null;
+    if (cp) {
+      /* پرتره‌های تأییدشده از Wikimedia Commons؛ برای بقیه کشورها فایل محلی در صورت وجود استفاده می‌شود. */
+
+      var leaderPortrait = leaderPortraitUrlForCountry(r);
       h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
       h += dashMetric('پایتخت',cp.capital || 'ثبت نشده');
@@ -1439,7 +1441,8 @@ function renderCountryPanel(r) {
   var isPlayer = !!(ST && ST.player === r.name), h = '';
   h += '<div class="countryHeader"><div class="countryHeaderText"><h2>' + dashEsc(r.name) + '</h2>' +
     '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div></div>' +
-    countryMiniBadgeHtml(r.iso3, r.name) + '</div>';
+    '<div class="countryHeaderRight">' + countryMiniBadgeHtml(r.iso3, r.name) +
+    '<div class="countryHeaderLeader"><img src="'+leaderPortraitUrlForCountry(r)+'" alt="" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><span style="display:none">👤</span><small>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</small></div></div></div>';
   h += '<div style="margin:4px 0">' + (isPlayer
       ? '<span class="badge" style="color:#ffd166">🏰 کشور شما — کنترل کامل</span>'
       : '<span class="badge">👥 حالت مشاهده — کشور شما: '+dashEsc(ST ? ST.player : '—')+'</span>') + '</div>';
