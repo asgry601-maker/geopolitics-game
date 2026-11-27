@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 105,
-    "pending_countries": 69,
+    "classified_countries": 110,
+    "pending_countries": 64,
     "last_batch": [
-      "KEN",
-      "GHA",
-      "SEN",
-      "CIV",
-      "CMR"
+      "UGA",
+      "TZA",
+      "RWA",
+      "ZWE",
+      "ZMB"
     ]
   },
   "countries": {
@@ -7603,6 +7603,368 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "نتیجه انتخابات ریاست‌جمهوری ۲۰۲۵ و ساختار نهادی پیش از تاریخ مبنای ۵ نوامبر ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "UGA": {
+      "country_name_fa": "اوگاندا",
+      "country_name_en": "Uganda",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "devolved_unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "اوگاندا جمهوری ریاستی با پارلمان تک‌مجلسی و دولت واحدِ دارای سطوح محلی واگذارشده است. یووری موسونی در انتخابات ژانویه ۲۰۲۶ برای هفتمین دوره متوالی انتخاب شد و در ۱۲ مه ۲۰۲۶ سوگند خورد. جنبش مقاومت ملی (NRM) در انتخابات پارلمانی ۲۰۲۶، ۳۷۱ کرسی از ۵۲۹ کرسی پارلمان را به دست آورد و اکثریت دوسوم خود را حفظ کرد؛ پلتفرم وحدت ملی (NUP) با ۵۰ کرسی در جایگاه دوم قرار گرفت. ناظران و ارزیابی‌های مستقل از محدودیت رقابت، فشار بر مخالفان و برتری ساختاری حزب حاکم سخن می‌گویند؛ بنابراین وجود انتخابات و احزاب قانونی به‌معنای رقابت آزاد و برابر نیست. NRM یک جنبش سیاسی گسترده با گرایش‌های متنوع و عمل‌گرایانه است و در taxonomy موجود، نسبت دادن ایدئولوژی رسمی مشخص به دولت مستند نیست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Uganda Parliament January 2026 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/UG/UG-LC01/election/UG-LC01-E20250115/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات ۲۰۲۶، کسب ۳۷۱ کرسی توسط NRM و ۵۰ کرسی توسط NUP را ثبت می‌کند."
+        },
+        {
+          "name": "Uganda Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/de/reports/country-report/UGA",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "کاهش فضای مدنی، فشار بر مخالفان، نفوذ ریاست‌جمهوری و غیررقابتی بودن عملی انتخابات را بررسی می‌کند."
+        },
+        {
+          "name": "Uganda Begins a New Chapter as President Museveni Takes Oath for 2026–2031 Term",
+          "publisher": "Ministry of ICT and National Guidance, Uganda",
+          "url": "https://ict.go.ug/media/news/uganda-begins-a-new-chapter-as-president-museveni-takes-oath-for-20262031-term",
+          "date": "2026-05-12",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "سوگند موسونی برای دوره ۲۰۲۶ تا ۲۰۳۱ و اعلام رسمی نتیجه انتخابات را ثبت می‌کند."
+        },
+        {
+          "name": "Political Leadership",
+          "publisher": "Embassy of the Republic of Uganda",
+          "url": "https://doha.mofa.go.ug/service/political-leadership",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نقش رئیس‌جمهور به‌عنوان رئیس قوه مجریه، نخست‌وزیر منصوب و ساختار پارلمان و قوه قضائیه را توضیح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات و تحلیف ۲۰۲۶ پیش از تاریخ مبنای سناریو هستند؛ ارقام پارلمانی از IPU گرفته شده‌اند."
+      }
+    },
+    "TZA": {
+      "country_name_fa": "تانزانیا",
+      "country_name_en": "United Republic of Tanzania",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "جمهوری متحد تانزانیا نظام ریاستی دارد و ساختار سرزمینی آن در سطح ملی واحد است؛ زنگبار از خودمختاری و نهادهای داخلی ویژه برخوردار است، اما کشور فدرال نیست. سامیا سولوهو حسن در انتخابات ۲۹ اکتبر ۲۰۲۵ با ۹۷٫۷ درصد آرا اعلام پیروزی شد و در ۳ نوامبر سوگند خورد. حزب انقلاب (CCM) در همان انتخابات ۲۷۰ کرسی از ۲۷۲ کرسی مستقیم مجلس ملی را به دست آورد. نامزدهای اصلی مخالف از رقابت ریاست‌جمهوری کنار گذاشته شدند و انتخابات با محدودیت رسانه، قطع اینترنت و نگرانی ناظران منطقه‌ای درباره خشونت و آزادی رقابت همراه بود. CCM ریشه تاریخی سوسیالیستی و سوسیال‌دموکراتیک دارد؛ این گرایش حزبی است و به‌عنوان ایدئولوژی رسمی کشور ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "United Republic of Tanzania National Assembly October 2025 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/tz/TZ-LC01/election/TZ-LC01-E20251029/",
+          "date": "2025-10-29",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات و کسب ۲۷۰ کرسی از ۲۷۲ کرسی مستقیم توسط CCM و سوگند سامیا حسن را ثبت می‌کند."
+        },
+        {
+          "name": "Tanzania — The Global State of Democracy Tracker",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/tanzania",
+          "date": "2025-10",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "حذف احزاب مخالف اصلی، محدودیت رقابت انتخاباتی، قطع اینترنت و نگرانی‌های ناظران را شرح می‌دهد."
+        },
+        {
+          "name": "Tanzania: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/tanzania/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "محدودیت حقوق سیاسی، آزادی‌های مدنی و سلطه حزب حاکم را ارزیابی می‌کند."
+        },
+        {
+          "name": "The Constitution of the United Republic of Tanzania",
+          "publisher": "Constitute Project",
+          "url": "https://www.constituteproject.org/constitution/Tanzania_2005",
+          "date": "2005",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "جمهوری ریاستی، اختیارات رئیس‌جمهور و جایگاه ویژه زنگبار را در چارچوب جمهوری متحد توضیح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "انتخابات اکتبر ۲۰۲۵ و تحولات سیاسی تا ۵ نوامبر ۲۰۲۶ مبنای طبقه‌بندی است؛ زنگبار به‌عنوان خودمختاری درون کشور واحد ثبت شده است."
+      }
+    },
+    "RWA": {
+      "country_name_fa": "رواندا",
+      "country_name_en": "Rwanda",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "رواندا جمهوری واحد با ریاست‌جمهوری قدرتمند است. پل کاگامه از جبهه میهنی رواندا (RPF) در انتخابات ۱۵ ژوئیه ۲۰۲۴ با ۹۹٫۱۸ درصد آرا برای دوره جدید انتخاب شد. RPF در انتخابات مجلس نمایندگان همان روز ۳۷ کرسی از ۵۳ کرسی انتخابی را کسب کرد و همراه با احزاب متحد، بر نهادهای سیاسی مسلط ماند. قانون اساسی به رئیس‌جمهور اختیارات گسترده‌ای از جمله تعیین نخست‌وزیر و اعضای کابینه می‌دهد. با وجود حضور چند حزب در انتخابات، احزاب منتقد با موانع جدی روبه‌رو هستند و آزادی فعالیت سیاسی و رسانه‌ای محدود است؛ بنابراین نظام حزبی رقابتی واقعی ندارد. RPF ائتلافی ملی‌گرا و توسعه‌گرا با ترکیب متنوع است که به‌جای نسبت دادن یک ایدئولوژی دقیق، عمل‌گرایانه طبقه‌بندی شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Rwanda: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/rwanda/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سلطه RPF و محدودیت شدید مخالفت سیاسی و آزادی‌های مدنی را مستند می‌کند."
+        },
+        {
+          "name": "Rwanda Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/RWA",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی کاگامه در ۲۰۲۴، ۳۷ کرسی RPF از ۵۳ کرسی انتخابی و تمرکز قدرت در ریاست‌جمهوری را توضیح می‌دهد."
+        },
+        {
+          "name": "Rwanda Chamber of Deputies July 2024 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/RW/RW-LC01/election/RW-LC01-E20240715/",
+          "date": "2024-07-15",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات مجلس و توزیع کرسی‌های انتخابی میان RPF و احزاب دیگر را ثبت می‌کند."
+        },
+        {
+          "name": "Constitution of the Republic of Rwanda",
+          "publisher": "Constitute Project",
+          "url": "https://www.constituteproject.org/constitution/Rwanda_2015",
+          "date": "2015",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "ساختار جمهوری، اختیارات رئیس‌جمهور در انتصاب نخست‌وزیر و کابینه و سازمان دولت را مستند می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "انتخابات ۲۰۲۴ و قانون اساسی اصلاح‌شده مبنای طبقه‌بندی است؛ کرسی‌های انتخابی از کرسی‌های ویژه و انتصابی تفکیک شده‌اند."
+      }
+    },
+    "ZWE": {
+      "country_name_fa": "زیمبابوه",
+      "country_name_en": "Zimbabwe",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "devolved_unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "socialism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "زیمبابوه جمهوری ریاستی با ساختار واحد و واگذاری محدود اختیارات به شوراهای محلی است. امرسون منانگاگوا از حزب اتحادیه ملی آفریقایی زیمبابوه–جبهه میهنی (ZANU-PF) در انتخابات مورد مناقشه اوت ۲۰۲۳ دوباره رئیس‌جمهور شد. این حزب از زمان استقلال در ۱۹۸۰ بر سیاست کشور مسلط بوده است. انتخابات ۲۰۲۳ با گزارش‌های ناظران درباره نابرابری میدان رقابت، ارعاب و ضعف استقلال کمیسیون انتخابات همراه بود؛ سرکوب مخالفان و تمرکز قدرت اجرایی ادامه یافته است. بنابراین وجود احزاب متعدد قانونی به معنای رقابت مؤثر نیست و نظام در گروه اقتدارگرایی انتخاباتی با حزب مسلط غیررقابتی قرار می‌گیرد. ZANU-PF ریشه‌های ملی‌گرایانه و سوسیالیستی در جنبش آزادی‌بخش دارد؛ این گرایش تاریخی حزب است و نه ایدئولوژی رسمی دولت.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Zimbabwe: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/zimbabwe/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سلطه ZANU-PF از ۱۹۸۰، سرکوب مخالفان و تمرکز قدرت در ریاست‌جمهوری را بررسی می‌کند."
+        },
+        {
+          "name": "Zimbabwe Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/ZWE",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "انتخابات ۲۰۲۳، ضعف رقابت، سلطه ZANU-PF و پیوند حزب، ارتش و دولت را مستند می‌کند."
+        },
+        {
+          "name": "Zimbabwe National Assembly August 2023 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/ZW/ZW-LC01/election/ZW-LC01-E20230823/",
+          "date": "2023-08-23",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات پارلمانی ۲۰۲۳ و کسب ۱۷۵ کرسی از ۲۸۰ کرسی توسط ZANU-PF را ثبت می‌کند."
+        },
+        {
+          "name": "Constitution of Zimbabwe Amendment (No. 20) Act, 2013",
+          "publisher": "Veritas Zimbabwe",
+          "url": "https://www.veritaszim.net/node/288",
+          "date": "2013",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "قانون اساسی جمهوری ریاستی، قوه مجریه و ساختار دولت و شوراهای استانی و محلی را مشخص می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت سیاسی تا ۵ نوامبر ۲۰۲۶ با تکیه بر انتخابات ۲۰۲۳ و گزارش‌های ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "ZMB": {
+      "country_name_fa": "زامبیا",
+      "country_name_en": "Zambia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "mixed",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "زامبیا جمهوری با رئیس‌جمهور منتخب مستقیم و مجلس ملی تک‌مجلسی است. در انتخابات ۱۳ اوت ۲۰۲۶، هاکاینده هیچیلما از حزب توسعه ملی متحد (UPND) برای دوره دوم انتخاب شد و در ۱ سپتامبر سوگند خورد. طبق IPU، UPND در انتخابات مجلس ۱۶۰ کرسی از ۲۶۶ کرسی مورد رقابت را به دست آورد و حزب مخالف NRPUP با ۷۶ کرسی دوم شد. قانون اساسی اصلاح‌شده ۲۰۲۵ نظام انتخاباتی مختلطی برای مجلس ایجاد کرد؛ به همین دلیل رابطه اجرایی-تقنینی در این پرونده به‌صورت mixed ثبت شده، در حالی که ریاست‌جمهوری همچنان محور قوه مجریه است. انتخابات ۲۰۲۶ با اختلاف بر سر شمارش آرا، بازداشت رهبر مخالف و نگرانی ناظران همراه شد؛ با این حال رقابت چندحزبی و تغییر قدرت در انتخابات‌های پیشین ادامه داشته است. گرایش حزب حاکم به‌صورت عمل‌گرایانه ثبت شده و ایدئولوژی رسمی اعلام نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Zambia National Assembly August 2026 Election",
+          "publisher": "Inter-Parliamentary Union — Parline",
+          "url": "https://data.ipu.org/parliament/ZM/ZM-LC01/election/ZM-LC01-E20260813/",
+          "date": "2026-08-13",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "نتایج انتخابات ۲۰۲۶، ساختار انتخاباتی جدید، ۱۶۰ کرسی UPND و ۷۶ کرسی NRPUP را ثبت می‌کند."
+        },
+        {
+          "name": "President Hichilema Secures Second Term in Decisive Election Victory",
+          "publisher": "State House, Republic of Zambia",
+          "url": "https://www.sh.gov.zm/president-hakainde-hichilema-secures-second-term-in-decisive-election-victory/",
+          "date": "2026-08-18",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "اعلام رسمی انتخاب مجدد هاکاینده هیچیلما با بیش از ۵۰ درصد آرا را گزارش می‌کند."
+        },
+        {
+          "name": "Constitution of Zambia (Amendment) Act No. 13 of 2025",
+          "publisher": "Government of the Republic of Zambia",
+          "url": "https://www.constitution.gov.zm/files/Acts_No_13_of_2025_Constitution_of_Zambia.pdf",
+          "date": "2025",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "اصلاحات قانون اساسی و نظام مختلط جدید انتخاب اعضای مجلس ملی را تعریف می‌کند."
+        },
+        {
+          "name": "Zambia president inaugurated for second term after disputed vote and opposition arrests",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/46980a97a67477f92f15a0c48ff3547b",
+          "date": "2026-09",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "پیروزی هیچیلما، اعتراض رقیب به نتیجه، بازداشت‌های مرتبط با مخالفان و سابقه انتخابات چندحزبی زامبیا را گزارش می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات اوت ۲۰۲۶ و تحلیف سپتامبر ۲۰۲۶ پیش از تاریخ مبنا هستند؛ به علت اختلافات پس از انتخابات، اطمینان طبقه‌بندی رژیم متوسط تعیین شده است."
       }
     }
   }
