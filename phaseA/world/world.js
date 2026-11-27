@@ -617,11 +617,12 @@ function renderStartSelectionProfile(r) {
   var ideologyLabels = {islamism:'اسلام‌گرایی',islamic_democracy:'دموکراسی اسلامی',political_islam_conservatism:'محافظه‌کاری اسلام‌گرا',nationalism:'ملی‌گرایی',liberalism:'لیبرالیسم',conservatism:'محافظه‌کاری',socialism:'سوسیالیسم',communism:'کمونیسم',marxism_leninism:'مارکسیسم–لنینیسم',social_democracy:'سوسیال‌دموکراسی',democratic_socialism:'سوسیالیسم دموکراتیک',secularism:'سکولاریسم',monarchism:'سلطنت‌طلبی',mixed_pragmatic:'ترکیبی / عمل‌گرایانه',not_officially_declared:'اعلام‌نشده',unknown:'نامشخص'};
   var ideolParts = pc.official_ideology || [], ideolText = [], i;
   for (i=0;i<ideolParts.length;i++) ideolText.push(ideologyLabels[ideolParts[i]] || String(ideolParts[i]).replace(/_/g,' '));
-  box.innerHTML = '<div class="startProfileFlag"><img src="assets/flags/'+dashEsc(r.iso3 || '')+'.svg" alt="پرچم '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="startFlagFallback" style="display:none">🏳</div></div>'+
-    '<div class="startLeaderBlock"><img class="startLeaderPortrait" src="'+leaderPortraitUrlForCountry(r)+'" alt="" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';">'+
+  box.innerHTML = '<div class="startProfileTop">'+countryMiniBadgeHtml(r.iso3,r.name)+'</div>'+
+    '<img class="startLeaderPortrait" src="'+leaderPortraitUrlForCountry(r)+'" alt="" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';">'+
     '<div class="startLeaderFallback" style="display:none">👤</div>'+
+    '<b class="startProfileCountryName">'+dashEsc(r.name)+'</b>'+
     '<div class="startProfileLeaderName">'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</div>'+
-    '<div class="startProfileFacts"><div><span>ساختار حکومت</span><b>'+dashEsc(gov)+'</b></div><div><span>ایدئولوژی رسمی</span><b>'+dashEsc(ideolText.join('، ') || 'ثبت نشده')+'</b></div></div></div>';
+    '<div class="startProfileFacts"><div><span>ساختار حکومت</span><b>'+dashEsc(gov)+'</b></div><div><span>ایدئولوژی رسمی</span><b>'+dashEsc(ideolText.join('، ') || 'ثبت نشده')+'</b></div></div>';
 }
 
 function renderStartWidget() {
