@@ -6,8 +6,8 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 145,
-    "pending_countries": 29,
+    "classified_countries": 144,
+    "pending_countries": 30,
     "last_batch": [
       "CPV",
       "CHL",
@@ -10366,16 +10366,17 @@
           "note": "نتایج انتخابات ۲۰۲۵، ائتلاف‌های پارلمانی و ترکیب مجلس و سنا را ارائه می‌کند."
         },
         {
-          "name": "Chile country profile: parliamentary system and institutions",
+          "name": "Chile | Senate | IPU Parline",
           "publisher": "Inter-Parliamentary Union",
-          "url": "https://data.ipu.org/parliament/CL/CL-LC01/",
+          "url": "https://data.ipu.org/parliament/CL/CL-UC01/",
           "date": "2026",
           "supports": [
             "government_form",
             "government_subform",
-            "executive_legislative_system"
+            "executive_legislative_system",
+            "territorial_structure"
           ],
-          "note": "مرجع تطبیقی ساختار دو مجلسی و نظام ریاستی شیلی؛ برای تفکیک ساختار اجرایی و قانون‌گذاری."
+          "note": "داده IPU نظام ریاستی و پارلمان دو مجلسی شیلی را ثبت می‌کند؛ قانون اساسی و ترکیب دو مجلس را نیز معرفی می‌کند."
         }
       ],
       "data_quality": {
