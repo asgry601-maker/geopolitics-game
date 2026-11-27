@@ -807,7 +807,7 @@ function politicalChangeFormHtml(pc, isPlayer) {
   }
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">تغییرات ابتدا به‌صورت طرح ثبت و ارزیابی می‌شوند. پس از تصویب، اجرای مرحله‌ای از روز بعد آغاز می‌شود؛ هزینه در اقساط روزانه پرداخت خواهد شد و تغییر نهایی فقط پس از تکمیل موفق طرح اعمال می‌شود. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
-  if (!activeProposal && terminalProposal) {
+  if (terminalProposal) {
     var terminalOk = terminalProposal.status === 'completed';
     h += '<div class="reformOutcome '+(terminalOk ? 'success' : 'failure')+'"><b>'+(terminalOk ? '✅ طرح اصلاحات پذیرفته و اجرا شد' : '⚠️ طرح اصلاحات پذیرفته نشد')+'</b>';
     h += '<div>طرح شماره '+dashEsc(terminalProposal.id)+' · '+dashEsc(terminalProposal.completed_date || terminalProposal.last_update_date || '')+'</div>';
