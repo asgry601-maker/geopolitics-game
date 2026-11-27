@@ -1,0 +1,5972 @@
+{
+  "schema_version": "1.0.0",
+  "data_snapshot": "2024",
+  "country_count": 174,
+  "notes": "Null means unavailable in source. GDP per capita and population density are derived from source values.",
+  "countries": {
+    "USA": {
+      "country_fa": "آمریکا",
+      "country_en": "United States of America",
+      "iso3": "USA",
+      "iso2": "US",
+      "capital": "Washington D.C.",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        },
+        {
+          "code": "USN",
+          "name": "US Dollar (Next day)",
+          "symbol": "USN"
+        }
+      ],
+      "area_km2": 9833517,
+      "land_area_km2": 9147593,
+      "water_area_km2": 685924,
+      "population": 340110988,
+      "population_year": 2024,
+      "population_density": 34.59,
+      "gdp_usd": 28750956130731,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 84534.04,
+      "flag_path": "assets/flags/USA.svg"
+    },
+    "CAN": {
+      "country_fa": "کانادا",
+      "country_en": "Canada",
+      "iso3": "CAN",
+      "iso2": "CA",
+      "capital": "Ottawa",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CAD",
+          "name": "Canadian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 9984670,
+      "land_area_km2": 9093507,
+      "water_area_km2": 891163,
+      "population": 41288599,
+      "population_year": 2024,
+      "population_density": 4.14,
+      "gdp_usd": 2243636826633,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 54340.35,
+      "flag_path": "assets/flags/CAN.svg"
+    },
+    "MEX": {
+      "country_fa": "مکزیک",
+      "country_en": "Mexico",
+      "iso3": "MEX",
+      "iso2": "MX",
+      "capital": "Mexico City",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MXN",
+          "name": "Mexican Peso",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 1964375,
+      "land_area_km2": 1943945,
+      "water_area_km2": 20430,
+      "population": 130861007,
+      "population_year": 2024,
+      "population_density": 66.62,
+      "gdp_usd": 1856365616165,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 14185.78,
+      "flag_path": "assets/flags/MEX.svg"
+    },
+    "IRN": {
+      "country_fa": "ایران",
+      "country_en": "Iran",
+      "iso3": "IRN",
+      "iso2": "IR",
+      "capital": "Tehran",
+      "languages": [
+        {
+          "code": "fa",
+          "name": "Persian",
+          "native": "فارسی"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "IRR",
+          "name": "Iranian Rial",
+          "symbol": "IRR"
+        }
+      ],
+      "area_km2": 1648195,
+      "land_area_km2": 1531595,
+      "water_area_km2": 116600,
+      "population": 91567738,
+      "population_year": 2024,
+      "population_density": 55.56,
+      "gdp_usd": 475252089215,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5190.17,
+      "flag_path": "assets/flags/IRN.svg"
+    },
+    "IRQ": {
+      "country_fa": "عراق",
+      "country_en": "Iraq",
+      "iso3": "IRQ",
+      "iso2": "IQ",
+      "capital": "Baghdad",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        },
+        {
+          "code": "ku",
+          "name": "Kurdish",
+          "native": "Kurdî / كوردی"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "IQD",
+          "name": "Iraqi Dinar",
+          "symbol": "IQD"
+        }
+      ],
+      "area_km2": 438317,
+      "land_area_km2": 437367,
+      "water_area_km2": 950,
+      "population": 46042015,
+      "population_year": 2024,
+      "population_density": 105.04,
+      "gdp_usd": 279641257615,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6073.61,
+      "flag_path": "assets/flags/IRQ.svg"
+    },
+    "SYR": {
+      "country_fa": "سوریه",
+      "country_en": "Syria",
+      "iso3": "SYR",
+      "iso2": "SY",
+      "capital": "Damascus",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SYP",
+          "name": "Syrian Pound",
+          "symbol": "£"
+        }
+      ],
+      "area_km2": 185180,
+      "land_area_km2": 183630,
+      "water_area_km2": 1550,
+      "population": 24672760,
+      "population_year": 2024,
+      "population_density": 133.24,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/SYR.svg"
+    },
+    "LBN": {
+      "country_fa": "لبنان",
+      "country_en": "Lebanon",
+      "iso3": "LBN",
+      "iso2": "LB",
+      "capital": "Beirut",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LBP",
+          "name": "Lebanese Pound",
+          "symbol": "L£"
+        }
+      ],
+      "area_km2": 10450,
+      "land_area_km2": 10230,
+      "water_area_km2": 220,
+      "population": 5805962,
+      "population_year": 2024,
+      "population_density": 555.59,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/LBN.svg"
+    },
+    "JOR": {
+      "country_fa": "اردن",
+      "country_en": "Jordan",
+      "iso3": "JOR",
+      "iso2": "JO",
+      "capital": "Amman",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "JOD",
+          "name": "Jordanian Dinar",
+          "symbol": "JOD"
+        }
+      ],
+      "area_km2": 89318,
+      "land_area_km2": 88794,
+      "water_area_km2": 524,
+      "population": 11552876,
+      "population_year": 2024,
+      "population_density": 129.35,
+      "gdp_usd": 53352289577,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4618.1,
+      "flag_path": "assets/flags/JOR.svg"
+    },
+    "ISR": {
+      "country_fa": "اسرائیل",
+      "country_en": "Israel",
+      "iso3": "ISR",
+      "iso2": "IL",
+      "capital": "Jerusalem",
+      "languages": [
+        {
+          "code": "he",
+          "name": "Hebrew",
+          "native": "עברית"
+        },
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ILS",
+          "name": "Israeli New Shekel",
+          "symbol": "₪"
+        }
+      ],
+      "area_km2": 21937,
+      "land_area_km2": 21497,
+      "water_area_km2": 440,
+      "population": 9974400,
+      "population_year": 2024,
+      "population_density": 454.68,
+      "gdp_usd": 540379921261,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 54176.68,
+      "flag_path": "assets/flags/ISR.svg"
+    },
+    "PSE": {
+      "country_fa": "فلسطین",
+      "country_en": "Palestine",
+      "iso3": "PSE",
+      "iso2": "PS",
+      "capital": "Ramallah",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ILS",
+          "name": "Israeli New Shekel",
+          "symbol": "₪"
+        }
+      ],
+      "area_km2": 6220,
+      "land_area_km2": 6000,
+      "water_area_km2": 220,
+      "population": 5289152,
+      "population_year": 2024,
+      "population_density": 850.35,
+      "gdp_usd": 13711100000,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2592.31,
+      "flag_path": "assets/flags/PSE.svg"
+    },
+    "SAU": {
+      "country_fa": "عربستان",
+      "country_en": "Saudi Arabia",
+      "iso3": "SAU",
+      "iso2": "SA",
+      "capital": "Riyadh",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SAR",
+          "name": "Saudi Riyal",
+          "symbol": "SAR"
+        }
+      ],
+      "area_km2": 2149690,
+      "land_area_km2": 2149690,
+      "water_area_km2": 0,
+      "population": 35300280,
+      "population_year": 2024,
+      "population_density": 16.42,
+      "gdp_usd": 1239804533333,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 35121.66,
+      "flag_path": "assets/flags/SAU.svg"
+    },
+    "ARE": {
+      "country_fa": "امارات",
+      "country_en": "United Arab Emirates",
+      "iso3": "ARE",
+      "iso2": "AE",
+      "capital": "Abu Dhabi",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AED",
+          "name": "United Arab Emirates Dirham",
+          "symbol": "AED"
+        }
+      ],
+      "area_km2": 83600,
+      "land_area_km2": 83600,
+      "water_area_km2": 0,
+      "population": 10986400,
+      "population_year": 2024,
+      "population_density": 131.42,
+      "gdp_usd": 552324846834,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 50273.51,
+      "flag_path": "assets/flags/ARE.svg"
+    },
+    "QAT": {
+      "country_fa": "قطر",
+      "country_en": "Qatar",
+      "iso3": "QAT",
+      "iso2": "QA",
+      "capital": "Doha",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "QAR",
+          "name": "Qatari Riyal",
+          "symbol": "QAR"
+        }
+      ],
+      "area_km2": 11586,
+      "land_area_km2": 11586,
+      "water_area_km2": 0,
+      "population": 2857822,
+      "population_year": 2024,
+      "population_density": 246.66,
+      "gdp_usd": 219162637362,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 76688.69,
+      "flag_path": "assets/flags/QAT.svg"
+    },
+    "KWT": {
+      "country_fa": "کویت",
+      "country_en": "Kuwait",
+      "iso3": "KWT",
+      "iso2": "KW",
+      "capital": "Kuwait City",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KWD",
+          "name": "Kuwaiti Dinar",
+          "symbol": "KWD"
+        }
+      ],
+      "area_km2": 17820,
+      "land_area_km2": 17820,
+      "water_area_km2": 0,
+      "population": 4897263,
+      "population_year": 2024,
+      "population_density": 274.82,
+      "gdp_usd": 160227273053,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 32717.72,
+      "flag_path": "assets/flags/KWT.svg"
+    },
+    "BHR": {
+      "country_fa": "بحرین",
+      "country_en": "Bahrain",
+      "iso3": "BHR",
+      "iso2": "BH",
+      "capital": "Manama",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BHD",
+          "name": "Bahraini Dinar",
+          "symbol": "BHD"
+        }
+      ],
+      "area_km2": 778,
+      "land_area_km2": 778,
+      "water_area_km2": 0,
+      "population": 1588670,
+      "population_year": 2024,
+      "population_density": 2041.99,
+      "gdp_usd": 47109734308,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 29653.57,
+      "flag_path": "assets/flags/BHR.svg"
+    },
+    "OMN": {
+      "country_fa": "عمان",
+      "country_en": "Oman",
+      "iso3": "OMN",
+      "iso2": "OM",
+      "capital": "Muscat",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "OMR",
+          "name": "Omani Rial",
+          "symbol": "OMR"
+        }
+      ],
+      "area_km2": 309500,
+      "land_area_km2": 309500,
+      "water_area_km2": 0,
+      "population": 5281538,
+      "population_year": 2024,
+      "population_density": 17.06,
+      "gdp_usd": 107137198769,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 20285.23,
+      "flag_path": "assets/flags/OMN.svg"
+    },
+    "YEM": {
+      "country_fa": "یمن",
+      "country_en": "Yemen",
+      "iso3": "YEM",
+      "iso2": "YE",
+      "capital": "Sana'a",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "YER",
+          "name": "Yemeni Rial",
+          "symbol": "YER"
+        }
+      ],
+      "area_km2": 527968,
+      "land_area_km2": 527968,
+      "water_area_km2": 0,
+      "population": 40583164,
+      "population_year": 2024,
+      "population_density": 76.87,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/YEM.svg"
+    },
+    "TUR": {
+      "country_fa": "ترکیه",
+      "country_en": "Turkey",
+      "iso3": "TUR",
+      "iso2": "TR",
+      "capital": "Ankara",
+      "languages": [
+        {
+          "code": "tr",
+          "name": "Turkish",
+          "native": "Türkçe"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TRY",
+          "name": "Turkish Lira",
+          "symbol": "₺"
+        }
+      ],
+      "area_km2": 783562,
+      "land_area_km2": 769632,
+      "water_area_km2": 13930,
+      "population": 85518661,
+      "population_year": 2024,
+      "population_density": 109.14,
+      "gdp_usd": 1359123768774,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 15892.72,
+      "flag_path": "assets/flags/TUR.svg"
+    },
+    "EGY": {
+      "country_fa": "مصر",
+      "country_en": "Egypt",
+      "iso3": "EGY",
+      "iso2": "EG",
+      "capital": "Cairo",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EGP",
+          "name": "Egyptian Pound",
+          "symbol": "E£"
+        }
+      ],
+      "area_km2": 1001450,
+      "land_area_km2": 995450,
+      "water_area_km2": 6000,
+      "population": 116538258,
+      "population_year": 2024,
+      "population_density": 116.37,
+      "gdp_usd": 389059911003,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3338.47,
+      "flag_path": "assets/flags/EGY.svg"
+    },
+    "LBY": {
+      "country_fa": "لیبی",
+      "country_en": "Libya",
+      "iso3": "LBY",
+      "iso2": "LY",
+      "capital": "Tripoli",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LYD",
+          "name": "Libyan Dinar",
+          "symbol": "LYD"
+        }
+      ],
+      "area_km2": 1759540,
+      "land_area_km2": 1759540,
+      "water_area_km2": 0,
+      "population": 7381023,
+      "population_year": 2024,
+      "population_density": 4.19,
+      "gdp_usd": 48487151215,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6569.16,
+      "flag_path": "assets/flags/LBY.svg"
+    },
+    "TUN": {
+      "country_fa": "تونس",
+      "country_en": "Tunisia",
+      "iso3": "TUN",
+      "iso2": "TN",
+      "capital": "Tunis",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TND",
+          "name": "Tunisian Dinar",
+          "symbol": "TND"
+        }
+      ],
+      "area_km2": 163610,
+      "land_area_km2": 155360,
+      "water_area_km2": 8250,
+      "population": 12277109,
+      "population_year": 2024,
+      "population_density": 75.04,
+      "gdp_usd": 51332285656,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4181.14,
+      "flag_path": "assets/flags/TUN.svg"
+    },
+    "DZA": {
+      "country_fa": "الجزایر",
+      "country_en": "Algeria",
+      "iso3": "DZA",
+      "iso2": "DZ",
+      "capital": "Algiers",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "DZD",
+          "name": "Algerian Dinar",
+          "symbol": "DZD"
+        }
+      ],
+      "area_km2": 2381741,
+      "land_area_km2": 2381741,
+      "water_area_km2": 0,
+      "population": 46814308,
+      "population_year": 2024,
+      "population_density": 19.66,
+      "gdp_usd": 269322281664,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5752.99,
+      "flag_path": "assets/flags/DZA.svg"
+    },
+    "MAR": {
+      "country_fa": "مراکش",
+      "country_en": "Morocco",
+      "iso3": "MAR",
+      "iso2": "MA",
+      "capital": "Rabat",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MAD",
+          "name": "Moroccan Dirham",
+          "symbol": "MAD"
+        }
+      ],
+      "area_km2": 446550,
+      "land_area_km2": 446300,
+      "water_area_km2": 250,
+      "population": 38081173,
+      "population_year": 2024,
+      "population_density": 85.28,
+      "gdp_usd": 160610994054,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4217.6,
+      "flag_path": "assets/flags/MAR.svg"
+    },
+    "RUS": {
+      "country_fa": "روسیه",
+      "country_en": "Russia",
+      "iso3": "RUS",
+      "iso2": "RU",
+      "capital": "Moscow",
+      "languages": [
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "RUB",
+          "name": "Russian Ruble",
+          "symbol": "₽"
+        }
+      ],
+      "area_km2": 17098246,
+      "land_area_km2": 16378410,
+      "water_area_km2": 719836,
+      "population": 143533851,
+      "population_year": 2024,
+      "population_density": 8.39,
+      "gdp_usd": 2173835806671,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 15145.11,
+      "flag_path": "assets/flags/RUS.svg"
+    },
+    "DEU": {
+      "country_fa": "آلمان",
+      "country_en": "Germany",
+      "iso3": "DEU",
+      "iso2": "DE",
+      "capital": "Berlin",
+      "languages": [
+        {
+          "code": "de",
+          "name": "German",
+          "native": "Deutsch"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 357250,
+      "land_area_km2": 349390,
+      "water_area_km2": 7860,
+      "population": 83516593,
+      "population_year": 2024,
+      "population_density": 233.78,
+      "gdp_usd": 4685592577804,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 56103.73,
+      "flag_path": "assets/flags/DEU.svg"
+    },
+    "FRA": {
+      "country_fa": "فرانسه",
+      "country_en": "France",
+      "iso3": "FRA",
+      "iso2": "FR",
+      "capital": "Paris",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 643801,
+      "land_area_km2": 640427,
+      "water_area_km2": 3374,
+      "population": 68551653,
+      "population_year": 2024,
+      "population_density": 106.48,
+      "gdp_usd": 3160442622465,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 46103.08,
+      "flag_path": "assets/flags/FRA.svg"
+    },
+    "GBR": {
+      "country_fa": "بریتانیا",
+      "country_en": "United Kingdom",
+      "iso3": "GBR",
+      "iso2": "GB",
+      "capital": "London",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GBP",
+          "name": "British Pound",
+          "symbol": "£"
+        }
+      ],
+      "area_km2": 243610,
+      "land_area_km2": 241930,
+      "water_area_km2": 1680,
+      "population": 69226000,
+      "population_year": 2024,
+      "population_density": 284.17,
+      "gdp_usd": 3686033044482,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 53246.37,
+      "flag_path": "assets/flags/GBR.svg"
+    },
+    "ITA": {
+      "country_fa": "ایتالیا",
+      "country_en": "Italy",
+      "iso3": "ITA",
+      "iso2": "IT",
+      "capital": "Rome",
+      "languages": [
+        {
+          "code": "it",
+          "name": "Italian",
+          "native": "Italiano"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 302067,
+      "land_area_km2": 295717,
+      "water_area_km2": 6350,
+      "population": 58952704,
+      "population_year": 2024,
+      "population_density": 195.16,
+      "gdp_usd": 2380825077243,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 40385.34,
+      "flag_path": "assets/flags/ITA.svg"
+    },
+    "ESP": {
+      "country_fa": "اسپانیا",
+      "country_en": "Spain",
+      "iso3": "ESP",
+      "iso2": "ES",
+      "capital": "Madrid",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        },
+        {
+          "code": "eu",
+          "name": "Basque",
+          "native": "Euskara"
+        },
+        {
+          "code": "ca",
+          "name": "Catalan",
+          "native": "Català"
+        },
+        {
+          "code": "gl",
+          "name": "Galician",
+          "native": "Galego"
+        },
+        {
+          "code": "oc",
+          "name": "Occitan",
+          "native": "Occitan"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 505370,
+      "land_area_km2": 498980,
+      "water_area_km2": 6390,
+      "population": 48848840,
+      "population_year": 2024,
+      "population_density": 96.66,
+      "gdp_usd": 1725671652742,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 35326.77,
+      "flag_path": "assets/flags/ESP.svg"
+    },
+    "PRT": {
+      "country_fa": "پرتغال",
+      "country_en": "Portugal",
+      "iso3": "PRT",
+      "iso2": "PT",
+      "capital": "Lisbon",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 92226,
+      "land_area_km2": 91119,
+      "water_area_km2": 1107,
+      "population": 10694681,
+      "population_year": 2024,
+      "population_density": 115.96,
+      "gdp_usd": 313271185085,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 29292.24,
+      "flag_path": "assets/flags/PRT.svg"
+    },
+    "NLD": {
+      "country_fa": "هلند",
+      "country_en": "Netherlands",
+      "iso3": "NLD",
+      "iso2": "NL",
+      "capital": "Amsterdam",
+      "languages": [
+        {
+          "code": "nl",
+          "name": "Dutch",
+          "native": "Nederlands"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 41850,
+      "land_area_km2": 33893,
+      "water_area_km2": 7957,
+      "population": 17993485,
+      "population_year": 2024,
+      "population_density": 429.95,
+      "gdp_usd": 1214927698572,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 67520.42,
+      "flag_path": "assets/flags/NLD.svg"
+    },
+    "BEL": {
+      "country_fa": "بلژیک",
+      "country_en": "Belgium",
+      "iso3": "BEL",
+      "iso2": "BE",
+      "capital": "Brussels",
+      "languages": [
+        {
+          "code": "nl",
+          "name": "Dutch",
+          "native": "Nederlands"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "de",
+          "name": "German",
+          "native": "Deutsch"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 30530,
+      "land_area_km2": 30280,
+      "water_area_km2": 250,
+      "population": 11858610,
+      "population_year": 2024,
+      "population_density": 388.42,
+      "gdp_usd": 671370081636,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 56614.57,
+      "flag_path": "assets/flags/BEL.svg"
+    },
+    "CHE": {
+      "country_fa": "سوئیس",
+      "country_en": "Switzerland",
+      "iso3": "CHE",
+      "iso2": "CH",
+      "capital": "Bern",
+      "languages": [
+        {
+          "code": "de",
+          "name": "German",
+          "native": "Deutsch"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "it",
+          "name": "Italian",
+          "native": "Italiano"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CHF",
+          "name": "Swiss Franc",
+          "symbol": "CHF"
+        },
+        {
+          "code": "CHE",
+          "name": "WIR Euro",
+          "symbol": "CHE"
+        },
+        {
+          "code": "CHW",
+          "name": "WIR Franc",
+          "symbol": "CHW"
+        }
+      ],
+      "area_km2": 41277,
+      "land_area_km2": 39997,
+      "water_area_km2": 1280,
+      "population": 9005582,
+      "population_year": 2024,
+      "population_density": 218.17,
+      "gdp_usd": 936564198048,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 103998.19,
+      "flag_path": "assets/flags/CHE.svg"
+    },
+    "AUT": {
+      "country_fa": "اتریش",
+      "country_en": "Austria",
+      "iso3": "AUT",
+      "iso2": "AT",
+      "capital": "Vienna",
+      "languages": [
+        {
+          "code": "de",
+          "name": "German",
+          "native": "Deutsch"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 83879,
+      "land_area_km2": 82520,
+      "water_area_km2": 1359,
+      "population": 9177982,
+      "population_year": 2024,
+      "population_density": 109.42,
+      "gdp_usd": 534790720466,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 58268.88,
+      "flag_path": "assets/flags/AUT.svg"
+    },
+    "SWE": {
+      "country_fa": "سوئد",
+      "country_en": "Sweden",
+      "iso3": "SWE",
+      "iso2": "SE",
+      "capital": "Stockholm",
+      "languages": [
+        {
+          "code": "sv",
+          "name": "Swedish",
+          "native": "Svenska"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SEK",
+          "name": "Swedish Krona",
+          "symbol": "kr"
+        }
+      ],
+      "area_km2": 447426,
+      "land_area_km2": 407284,
+      "water_area_km2": 40142,
+      "population": 10569709,
+      "population_year": 2024,
+      "population_density": 23.62,
+      "gdp_usd": 603715224265,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 57117.49,
+      "flag_path": "assets/flags/SWE.svg"
+    },
+    "NOR": {
+      "country_fa": "نروژ",
+      "country_en": "Norway",
+      "iso3": "NOR",
+      "iso2": "NO",
+      "capital": "Oslo",
+      "languages": [
+        {
+          "code": "no",
+          "name": "Norwegian",
+          "native": "Norsk"
+        },
+        {
+          "code": "nb",
+          "name": "Norwegian Bokmål",
+          "native": "Norsk bokmål"
+        },
+        {
+          "code": "nn",
+          "name": "Norwegian Nynorsk",
+          "native": "Norsk nynorsk"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NOK",
+          "name": "Norwegian Krone",
+          "symbol": "kr"
+        }
+      ],
+      "area_km2": 385477,
+      "land_area_km2": 365957,
+      "water_area_km2": 19520,
+      "population": 5572279,
+      "population_year": 2024,
+      "population_density": 14.46,
+      "gdp_usd": 483592648313,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 86785.43,
+      "flag_path": "assets/flags/NOR.svg"
+    },
+    "DNK": {
+      "country_fa": "دانمارک",
+      "country_en": "Denmark",
+      "iso3": "DNK",
+      "iso2": "DK",
+      "capital": "Copenhagen",
+      "languages": [
+        {
+          "code": "da",
+          "name": "Danish",
+          "native": "Dansk"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "DKK",
+          "name": "Danish Krone",
+          "symbol": "kr"
+        }
+      ],
+      "area_km2": 43094,
+      "land_area_km2": 42434,
+      "water_area_km2": 660,
+      "population": 5976992,
+      "population_year": 2024,
+      "population_density": 138.7,
+      "gdp_usd": 424524722037,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 71026.48,
+      "flag_path": "assets/flags/DNK.svg"
+    },
+    "FIN": {
+      "country_fa": "فنلاند",
+      "country_en": "Finland",
+      "iso3": "FIN",
+      "iso2": "FI",
+      "capital": "Helsinki",
+      "languages": [
+        {
+          "code": "fi",
+          "name": "Finnish",
+          "native": "Suomi"
+        },
+        {
+          "code": "sv",
+          "name": "Swedish",
+          "native": "Svenska"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 338145,
+      "land_area_km2": 303815,
+      "water_area_km2": 34330,
+      "population": 5619911,
+      "population_year": 2024,
+      "population_density": 16.62,
+      "gdp_usd": 298696961297,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 53149.77,
+      "flag_path": "assets/flags/FIN.svg"
+    },
+    "ISL": {
+      "country_fa": "ایسلند",
+      "country_en": "Iceland",
+      "iso3": "ISL",
+      "iso2": "IS",
+      "capital": "Reykjavik",
+      "languages": [
+        {
+          "code": "is",
+          "name": "Icelandic",
+          "native": "Íslenska"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ISK",
+          "name": "Icelandic Króna",
+          "symbol": "kr"
+        }
+      ],
+      "area_km2": 103000,
+      "land_area_km2": 100830,
+      "water_area_km2": 2170,
+      "population": 386506,
+      "population_year": 2024,
+      "population_density": 3.75,
+      "gdp_usd": 33255181468,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 86040.53,
+      "flag_path": "assets/flags/ISL.svg"
+    },
+    "IRL": {
+      "country_fa": "ایرلند",
+      "country_en": "Ireland",
+      "iso3": "IRL",
+      "iso2": "IE",
+      "capital": "Dublin",
+      "languages": [
+        {
+          "code": "ga",
+          "name": "Irish",
+          "native": "Gaeilge"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 70273,
+      "land_area_km2": 68883,
+      "water_area_km2": 1390,
+      "population": 5395790,
+      "population_year": 2024,
+      "population_density": 76.78,
+      "gdp_usd": 609157459747,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 112894.95,
+      "flag_path": "assets/flags/IRL.svg"
+    },
+    "POL": {
+      "country_fa": "لهستان",
+      "country_en": "Poland",
+      "iso3": "POL",
+      "iso2": "PL",
+      "capital": "Warsaw",
+      "languages": [
+        {
+          "code": "pl",
+          "name": "Polish",
+          "native": "Polski"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PLN",
+          "name": "Polish Zloty",
+          "symbol": "zł"
+        }
+      ],
+      "area_km2": 312679,
+      "land_area_km2": 311888,
+      "water_area_km2": 791,
+      "population": 36559233,
+      "population_year": 2024,
+      "population_density": 116.92,
+      "gdp_usd": 917767106146,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 25103.57,
+      "flag_path": "assets/flags/POL.svg"
+    },
+    "CZE": {
+      "country_fa": "چک",
+      "country_en": "Czechia",
+      "iso3": "CZE",
+      "iso2": "CZ",
+      "capital": "Prague",
+      "languages": [
+        {
+          "code": "cs",
+          "name": "Czech",
+          "native": "Čeština"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CZK",
+          "name": "Czech Koruna",
+          "symbol": "Kč"
+        }
+      ],
+      "area_km2": 78871,
+      "land_area_km2": 77187,
+      "water_area_km2": 1684,
+      "population": 10905028,
+      "population_year": 2024,
+      "population_density": 138.26,
+      "gdp_usd": 347034062928,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 31823.31,
+      "flag_path": "assets/flags/CZE.svg"
+    },
+    "SVK": {
+      "country_fa": "اسلواکی",
+      "country_en": "Slovakia",
+      "iso3": "SVK",
+      "iso2": "SK",
+      "capital": "Bratislava",
+      "languages": [
+        {
+          "code": "sk",
+          "name": "Slovak",
+          "native": "Slovenčina"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 49035,
+      "land_area_km2": 48105,
+      "water_area_km2": 930,
+      "population": 5422069,
+      "population_year": 2024,
+      "population_density": 110.58,
+      "gdp_usd": 140934076532,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 25992.67,
+      "flag_path": "assets/flags/SVK.svg"
+    },
+    "HUN": {
+      "country_fa": "مجارستان",
+      "country_en": "Hungary",
+      "iso3": "HUN",
+      "iso2": "HU",
+      "capital": "Budapest",
+      "languages": [
+        {
+          "code": "hu",
+          "name": "Hungarian",
+          "native": "Magyar"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "HUF",
+          "name": "Hungarian Forint",
+          "symbol": "Ft"
+        }
+      ],
+      "area_km2": 93030,
+      "land_area_km2": 91260,
+      "water_area_km2": 1770,
+      "population": 9562065,
+      "population_year": 2024,
+      "population_density": 102.78,
+      "gdp_usd": 222722738925,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 23292.33,
+      "flag_path": "assets/flags/HUN.svg"
+    },
+    "ROU": {
+      "country_fa": "رومانی",
+      "country_en": "Romania",
+      "iso3": "ROU",
+      "iso2": "RO",
+      "capital": "Bucharest",
+      "languages": [
+        {
+          "code": "ro",
+          "name": "Romanian",
+          "native": "Română"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "RON",
+          "name": "Romanian Leu",
+          "symbol": "lei"
+        }
+      ],
+      "area_km2": 238391,
+      "land_area_km2": 231291,
+      "water_area_km2": 7100,
+      "population": 19051804,
+      "population_year": 2024,
+      "population_density": 79.92,
+      "gdp_usd": 382564217988,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 20080.21,
+      "flag_path": "assets/flags/ROU.svg"
+    },
+    "BGR": {
+      "country_fa": "بلغارستان",
+      "country_en": "Bulgaria",
+      "iso3": "BGR",
+      "iso2": "BG",
+      "capital": "Sofia",
+      "languages": [
+        {
+          "code": "bg",
+          "name": "Bulgarian",
+          "native": "Български"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 110879,
+      "land_area_km2": 108489,
+      "water_area_km2": 2390,
+      "population": 6441421,
+      "population_year": 2024,
+      "population_density": 58.09,
+      "gdp_usd": 113343355779,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 17596.02,
+      "flag_path": "assets/flags/BGR.svg"
+    },
+    "GRC": {
+      "country_fa": "یونان",
+      "country_en": "Greece",
+      "iso3": "GRC",
+      "iso2": "GR",
+      "capital": "Athens",
+      "languages": [
+        {
+          "code": "el",
+          "name": "Greek",
+          "native": "Ελληνικά"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 130210,
+      "land_area_km2": 128900,
+      "water_area_km2": 1310,
+      "population": 10405134,
+      "population_year": 2024,
+      "population_density": 79.91,
+      "gdp_usd": 256238371778,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 24626.15,
+      "flag_path": "assets/flags/GRC.svg"
+    },
+    "SRB": {
+      "country_fa": "صربستان",
+      "country_en": "Republic of Serbia",
+      "iso3": "SRB",
+      "iso2": "RS",
+      "capital": "Belgrade",
+      "languages": [
+        {
+          "code": "sr",
+          "name": "Serbian",
+          "native": "Српски"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "RSD",
+          "name": "Serbian Dinar",
+          "symbol": "RSD"
+        }
+      ],
+      "area_km2": 88499,
+      "land_area_km2": 88384,
+      "water_area_km2": 115,
+      "population": 6586476,
+      "population_year": 2024,
+      "population_density": 74.42,
+      "gdp_usd": 90097765959,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 13679.21,
+      "flag_path": "assets/flags/SRB.svg"
+    },
+    "HRV": {
+      "country_fa": "کرواسی",
+      "country_en": "Croatia",
+      "iso3": "HRV",
+      "iso2": "HR",
+      "capital": "Zagreb",
+      "languages": [
+        {
+          "code": "hr",
+          "name": "Croatian",
+          "native": "Hrvatski"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 56594,
+      "land_area_km2": 55974,
+      "water_area_km2": 620,
+      "population": 3866200,
+      "population_year": 2024,
+      "population_density": 68.31,
+      "gdp_usd": 92983810328,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 24050.44,
+      "flag_path": "assets/flags/HRV.svg"
+    },
+    "BIH": {
+      "country_fa": "بوسنی",
+      "country_en": "Bosnia and Herz.",
+      "iso3": "BIH",
+      "iso2": "BA",
+      "capital": "Sarajevo",
+      "languages": [
+        {
+          "code": "bs",
+          "name": "Bosnian",
+          "native": "Bosanski"
+        },
+        {
+          "code": "hr",
+          "name": "Croatian",
+          "native": "Hrvatski"
+        },
+        {
+          "code": "sr",
+          "name": "Serbian",
+          "native": "Српски"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BAM",
+          "name": "Bosnia-Herzegovina Convertible Mark",
+          "symbol": "KM"
+        }
+      ],
+      "area_km2": 51210,
+      "land_area_km2": 51200,
+      "water_area_km2": 10,
+      "population": 3164253,
+      "population_year": 2024,
+      "population_density": 61.79,
+      "gdp_usd": 29613572022,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 9358.79,
+      "flag_path": "assets/flags/BIH.svg"
+    },
+    "ALB": {
+      "country_fa": "آلبانی",
+      "country_en": "Albania",
+      "iso3": "ALB",
+      "iso2": "AL",
+      "capital": "Tirana",
+      "languages": [
+        {
+          "code": "sq",
+          "name": "Albanian",
+          "native": "Shqip"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ALL",
+          "name": "Albanian Lek",
+          "symbol": "ALL"
+        }
+      ],
+      "area_km2": 27730,
+      "land_area_km2": 27400,
+      "water_area_km2": 330,
+      "population": 2377128,
+      "population_year": 2024,
+      "population_density": 85.72,
+      "gdp_usd": 27046429296,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 11377.78,
+      "flag_path": "assets/flags/ALB.svg"
+    },
+    "MKD": {
+      "country_fa": "مقدونیه شمالی",
+      "country_en": "North Macedonia",
+      "iso3": "MKD",
+      "iso2": "MK",
+      "capital": "Skopje",
+      "languages": [
+        {
+          "code": "mk",
+          "name": "Macedonian",
+          "native": "Македонски"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MKD",
+          "name": "Macedonian Denar",
+          "symbol": "MKD"
+        }
+      ],
+      "area_km2": 25713,
+      "land_area_km2": 25433,
+      "water_area_km2": 280,
+      "population": 1824359,
+      "population_year": 2024,
+      "population_density": 70.95,
+      "gdp_usd": 16951682245,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 9291.86,
+      "flag_path": "assets/flags/MKD.svg"
+    },
+    "SVN": {
+      "country_fa": "اسلوونی",
+      "country_en": "Slovenia",
+      "iso3": "SVN",
+      "iso2": "SI",
+      "capital": "Ljubljana",
+      "languages": [
+        {
+          "code": "sl",
+          "name": "Slovenian",
+          "native": "Slovenščina"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 20271,
+      "land_area_km2": 20151,
+      "water_area_km2": 120,
+      "population": 2127400,
+      "population_year": 2024,
+      "population_density": 104.95,
+      "gdp_usd": 72972015197,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 34301.03,
+      "flag_path": "assets/flags/SVN.svg"
+    },
+    "MNE": {
+      "country_fa": "مونته‌نگرو",
+      "country_en": "Montenegro",
+      "iso3": "MNE",
+      "iso2": "ME",
+      "capital": "Podgorica",
+      "languages": [
+        {
+          "code": "sr",
+          "name": "Serbian",
+          "native": "Српски"
+        },
+        {
+          "code": "bs",
+          "name": "Bosnian",
+          "native": "Bosanski"
+        },
+        {
+          "code": "sq",
+          "name": "Albanian",
+          "native": "Shqip"
+        },
+        {
+          "code": "hr",
+          "name": "Croatian",
+          "native": "Hrvatski"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 13812,
+      "land_area_km2": 13452,
+      "water_area_km2": 360,
+      "population": 623525,
+      "population_year": 2024,
+      "population_density": 45.14,
+      "gdp_usd": 8270016670,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 13263.33,
+      "flag_path": "assets/flags/MNE.svg"
+    },
+    "UKR": {
+      "country_fa": "اوکراین",
+      "country_en": "Ukraine",
+      "iso3": "UKR",
+      "iso2": "UA",
+      "capital": "Kyiv",
+      "languages": [
+        {
+          "code": "uk",
+          "name": "Ukrainian",
+          "native": "Українська"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "UAH",
+          "name": "Ukrainian Hryvnia",
+          "symbol": "₴"
+        }
+      ],
+      "area_km2": 603550,
+      "land_area_km2": 579300,
+      "water_area_km2": 24250,
+      "population": 37860221,
+      "population_year": 2024,
+      "population_density": 62.73,
+      "gdp_usd": 190741262414,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5038.04,
+      "flag_path": "assets/flags/UKR.svg"
+    },
+    "BLR": {
+      "country_fa": "بلاروس",
+      "country_en": "Belarus",
+      "iso3": "BLR",
+      "iso2": "BY",
+      "capital": "Minsk",
+      "languages": [
+        {
+          "code": "be",
+          "name": "Belarusian",
+          "native": "Беларуская"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BYN",
+          "name": "Belarusian Ruble",
+          "symbol": "BYN"
+        }
+      ],
+      "area_km2": 207600,
+      "land_area_km2": 202900,
+      "water_area_km2": 4700,
+      "population": 9132629,
+      "population_year": 2024,
+      "population_density": 43.99,
+      "gdp_usd": 75961865471,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 8317.63,
+      "flag_path": "assets/flags/BLR.svg"
+    },
+    "MDA": {
+      "country_fa": "مولداوی",
+      "country_en": "Moldova",
+      "iso3": "MDA",
+      "iso2": "MD",
+      "capital": "Chișinău",
+      "languages": [
+        {
+          "code": "ro",
+          "name": "Romanian",
+          "native": "Română"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MDL",
+          "name": "Moldovan Leu",
+          "symbol": "MDL"
+        }
+      ],
+      "area_km2": 33851,
+      "land_area_km2": 32891,
+      "water_area_km2": 960,
+      "population": 2402306,
+      "population_year": 2024,
+      "population_density": 70.97,
+      "gdp_usd": 18200340853,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7576.2,
+      "flag_path": "assets/flags/MDA.svg"
+    },
+    "LVA": {
+      "country_fa": "لتونی",
+      "country_en": "Latvia",
+      "iso3": "LVA",
+      "iso2": "LV",
+      "capital": "Riga",
+      "languages": [
+        {
+          "code": "lv",
+          "name": "Latvian",
+          "native": "Latviešu"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 64600,
+      "land_area_km2": 62230,
+      "water_area_km2": 2370,
+      "population": 1866124,
+      "population_year": 2024,
+      "population_density": 28.89,
+      "gdp_usd": 43684254432,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 23409.08,
+      "flag_path": "assets/flags/LVA.svg"
+    },
+    "LTU": {
+      "country_fa": "لیتوانی",
+      "country_en": "Lithuania",
+      "iso3": "LTU",
+      "iso2": "LT",
+      "capital": "Vilnius",
+      "languages": [
+        {
+          "code": "lt",
+          "name": "Lithuanian",
+          "native": "Lietuvių"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 65290,
+      "land_area_km2": 62610,
+      "water_area_km2": 2680,
+      "population": 2888278,
+      "population_year": 2024,
+      "population_density": 44.24,
+      "gdp_usd": 84869215513,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 29384.02,
+      "flag_path": "assets/flags/LTU.svg"
+    },
+    "EST": {
+      "country_fa": "استونی",
+      "country_en": "Estonia",
+      "iso3": "EST",
+      "iso2": "EE",
+      "capital": "Tallinn",
+      "languages": [
+        {
+          "code": "et",
+          "name": "Estonian",
+          "native": "Eesti"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 45228,
+      "land_area_km2": 42388,
+      "water_area_km2": 2840,
+      "population": 1372341,
+      "population_year": 2024,
+      "population_density": 30.34,
+      "gdp_usd": 43130419829,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 31428.35,
+      "flag_path": "assets/flags/EST.svg"
+    },
+    "LUX": {
+      "country_fa": "لوکزامبورگ",
+      "country_en": "Luxembourg",
+      "iso3": "LUX",
+      "iso2": "LU",
+      "capital": "Luxembourg",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "de",
+          "name": "German",
+          "native": "Deutsch"
+        },
+        {
+          "code": "lb",
+          "name": "Luxembourgish",
+          "native": "Lëtzebuergesch"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 2590,
+      "land_area_km2": 2574,
+      "water_area_km2": 16,
+      "population": 677012,
+      "population_year": 2024,
+      "population_density": 261.39,
+      "gdp_usd": 93279851863,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 137781.68,
+      "flag_path": "assets/flags/LUX.svg"
+    },
+    "CYP": {
+      "country_fa": "قبرس",
+      "country_en": "Cyprus",
+      "iso3": "CYP",
+      "iso2": "CY",
+      "capital": "Nicosia",
+      "languages": [
+        {
+          "code": "el",
+          "name": "Greek",
+          "native": "Ελληνικά"
+        },
+        {
+          "code": "tr",
+          "name": "Turkish",
+          "native": "Türkçe"
+        },
+        {
+          "code": "hy",
+          "name": "Armenian",
+          "native": "Հայերեն"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 9251,
+      "land_area_km2": 9241,
+      "water_area_km2": 10,
+      "population": 1358282,
+      "population_year": 2024,
+      "population_density": 146.83,
+      "gdp_usd": 37634533331,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 27707.45,
+      "flag_path": "assets/flags/CYP.svg"
+    },
+    "MLT": {
+      "country_fa": "مالت",
+      "country_en": "Malta",
+      "iso3": "MLT",
+      "iso2": "MT",
+      "capital": "Valletta",
+      "languages": [
+        {
+          "code": "mt",
+          "name": "Maltese",
+          "native": "bil-Malti"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "EUR",
+          "name": "Euro",
+          "symbol": "€"
+        }
+      ],
+      "area_km2": 316,
+      "land_area_km2": 316,
+      "water_area_km2": 0,
+      "population": 568847,
+      "population_year": 2024,
+      "population_density": 1800.15,
+      "gdp_usd": 24971574502,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 43898.58,
+      "flag_path": "assets/flags/MLT.svg"
+    },
+    "CHN": {
+      "country_fa": "چین",
+      "country_en": "China",
+      "iso3": "CHN",
+      "iso2": "CN",
+      "capital": "Beijing",
+      "languages": [
+        {
+          "code": "zh",
+          "name": "Chinese",
+          "native": "中文"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CNY",
+          "name": "Chinese Yuan",
+          "symbol": "¥"
+        }
+      ],
+      "area_km2": 9596960,
+      "land_area_km2": 9326410,
+      "water_area_km2": 270550,
+      "population": 1408975000,
+      "population_year": 2024,
+      "population_density": 146.81,
+      "gdp_usd": 18743803170827,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 13303.15,
+      "flag_path": "assets/flags/CHN.svg"
+    },
+    "JPN": {
+      "country_fa": "ژاپن",
+      "country_en": "Japan",
+      "iso3": "JPN",
+      "iso2": "JP",
+      "capital": "Tokyo",
+      "languages": [
+        {
+          "code": "ja",
+          "name": "Japanese",
+          "native": "日本語"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "JPY",
+          "name": "Japanese Yen",
+          "symbol": "¥"
+        }
+      ],
+      "area_km2": 377915,
+      "land_area_km2": 364485,
+      "water_area_km2": 13430,
+      "population": 123975371,
+      "population_year": 2024,
+      "population_density": 328.05,
+      "gdp_usd": 4027597523550,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 32487.08,
+      "flag_path": "assets/flags/JPN.svg"
+    },
+    "KOR": {
+      "country_fa": "کره جنوبی",
+      "country_en": "South Korea",
+      "iso3": "KOR",
+      "iso2": "KR",
+      "capital": "Seoul",
+      "languages": [
+        {
+          "code": "ko",
+          "name": "Korean",
+          "native": "한국어"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KRW",
+          "name": "South Korean Won",
+          "symbol": "₩"
+        }
+      ],
+      "area_km2": 100210,
+      "land_area_km2": 99909,
+      "water_area_km2": 301,
+      "population": 51751065,
+      "population_year": 2024,
+      "population_density": 516.43,
+      "gdp_usd": 1875388209406,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 36238.64,
+      "flag_path": "assets/flags/KOR.svg"
+    },
+    "PRK": {
+      "country_fa": "کره شمالی",
+      "country_en": "North Korea",
+      "iso3": "PRK",
+      "iso2": "KP",
+      "capital": "Pyongyang",
+      "languages": [
+        {
+          "code": "ko",
+          "name": "Korean",
+          "native": "한국어"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KPW",
+          "name": "North Korean Won",
+          "symbol": "₩"
+        }
+      ],
+      "area_km2": 120540,
+      "land_area_km2": 120538,
+      "water_area_km2": 2,
+      "population": 26498823,
+      "population_year": 2024,
+      "population_density": 219.83,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/PRK.svg"
+    },
+    "TWN": {
+      "country_fa": "تایوان",
+      "country_en": "Taiwan",
+      "iso3": "TWN",
+      "iso2": "TW",
+      "capital": "Taipei",
+      "languages": [
+        {
+          "code": "zh",
+          "name": "Chinese",
+          "native": "中文"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TWD",
+          "name": "New Taiwan Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": null,
+      "land_area_km2": null,
+      "water_area_km2": null,
+      "population": null,
+      "population_year": null,
+      "population_density": null,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/TWN.svg"
+    },
+    "MNG": {
+      "country_fa": "مغولستان",
+      "country_en": "Mongolia",
+      "iso3": "MNG",
+      "iso2": "MN",
+      "capital": "Ulan Bator",
+      "languages": [
+        {
+          "code": "mn",
+          "name": "Mongolian",
+          "native": "Монгол"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MNT",
+          "name": "Mongolian Tugrik",
+          "symbol": "₮"
+        }
+      ],
+      "area_km2": 1564116,
+      "land_area_km2": 1553556,
+      "water_area_km2": 10560,
+      "population": 3524788,
+      "population_year": 2024,
+      "population_density": 2.25,
+      "gdp_usd": 23794540024,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6750.63,
+      "flag_path": "assets/flags/MNG.svg"
+    },
+    "IND": {
+      "country_fa": "هند",
+      "country_en": "India",
+      "iso3": "IND",
+      "iso2": "IN",
+      "capital": "New Delhi",
+      "languages": [
+        {
+          "code": "hi",
+          "name": "Hindi",
+          "native": "हिन्दी"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "INR",
+          "name": "Indian Rupee",
+          "symbol": "₹"
+        }
+      ],
+      "area_km2": 3287260,
+      "land_area_km2": 2973190,
+      "water_area_km2": 314070,
+      "population": 1450935791,
+      "population_year": 2024,
+      "population_density": 441.38,
+      "gdp_usd": 3909891533858,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2694.74,
+      "flag_path": "assets/flags/IND.svg"
+    },
+    "PAK": {
+      "country_fa": "پاکستان",
+      "country_en": "Pakistan",
+      "iso3": "PAK",
+      "iso2": "PK",
+      "capital": "Islamabad",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "ur",
+          "name": "Urdu",
+          "native": "اردو"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PKR",
+          "name": "Pakistani Rupee",
+          "symbol": "Rs"
+        }
+      ],
+      "area_km2": 881913,
+      "land_area_km2": 856690,
+      "water_area_km2": 25223,
+      "population": 251269164,
+      "population_year": 2024,
+      "population_density": 284.91,
+      "gdp_usd": 371570000121,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1478.77,
+      "flag_path": "assets/flags/PAK.svg"
+    },
+    "BGD": {
+      "country_fa": "بنگلادش",
+      "country_en": "Bangladesh",
+      "iso3": "BGD",
+      "iso2": "BD",
+      "capital": "Dhaka",
+      "languages": [
+        {
+          "code": "bn",
+          "name": "Bengali",
+          "native": "বাংলা"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BDT",
+          "name": "Bangladeshi Taka",
+          "symbol": "৳"
+        }
+      ],
+      "area_km2": 148460,
+      "land_area_km2": 130170,
+      "water_area_km2": 18290,
+      "population": 173562364,
+      "population_year": 2024,
+      "population_density": 1169.09,
+      "gdp_usd": 450119432068,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2593.42,
+      "flag_path": "assets/flags/BGD.svg"
+    },
+    "LKA": {
+      "country_fa": "سری‌لانکا",
+      "country_en": "Sri Lanka",
+      "iso3": "LKA",
+      "iso2": "LK",
+      "capital": "Colombo",
+      "languages": [
+        {
+          "code": "si",
+          "name": "Sinhalese",
+          "native": "සිංහල"
+        },
+        {
+          "code": "ta",
+          "name": "Tamil",
+          "native": "தமிழ்"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LKR",
+          "name": "Sri Lankan Rupee",
+          "symbol": "Rs"
+        }
+      ],
+      "area_km2": 65610,
+      "land_area_km2": 62732,
+      "water_area_km2": 2878,
+      "population": 21916000,
+      "population_year": 2024,
+      "population_density": 334.03,
+      "gdp_usd": 98963185509,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4515.57,
+      "flag_path": "assets/flags/LKA.svg"
+    },
+    "NPL": {
+      "country_fa": "نپال",
+      "country_en": "Nepal",
+      "iso3": "NPL",
+      "iso2": "NP",
+      "capital": "Kathmandu",
+      "languages": [
+        {
+          "code": "ne",
+          "name": "Nepali",
+          "native": "नेपाली"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NPR",
+          "name": "Nepalese Rupee",
+          "symbol": "Rs"
+        }
+      ],
+      "area_km2": 147516,
+      "land_area_km2": 143686,
+      "water_area_km2": 3830,
+      "population": 29651054,
+      "population_year": 2024,
+      "population_density": 201,
+      "gdp_usd": 42914268286,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1447.31,
+      "flag_path": "assets/flags/NPL.svg"
+    },
+    "BTN": {
+      "country_fa": "بوتان",
+      "country_en": "Bhutan",
+      "iso3": "BTN",
+      "iso2": "BT",
+      "capital": "Thimphu",
+      "languages": [
+        {
+          "code": "dz",
+          "name": "Dzongkha",
+          "native": "ཇོང་ཁ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BTN",
+          "name": "Bhutanese Ngultrum",
+          "symbol": "BTN"
+        },
+        {
+          "code": "INR",
+          "name": "Indian Rupee",
+          "symbol": "₹"
+        }
+      ],
+      "area_km2": 38390,
+      "land_area_km2": 38140,
+      "water_area_km2": 250,
+      "population": 791524,
+      "population_year": 2024,
+      "population_density": 20.62,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/BTN.svg"
+    },
+    "MDV": {
+      "country_fa": "مالدیو",
+      "country_en": "Maldives",
+      "iso3": "MDV",
+      "iso2": "MV",
+      "capital": "Malé",
+      "languages": [
+        {
+          "code": "dv",
+          "name": "Divehi",
+          "native": "ދިވެހިބަސް"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MVR",
+          "name": "Maldivian Rufiyaa",
+          "symbol": "MVR"
+        }
+      ],
+      "area_km2": 298,
+      "land_area_km2": 298,
+      "water_area_km2": 0,
+      "population": 527799,
+      "population_year": 2024,
+      "population_density": 1771.14,
+      "gdp_usd": 7061608267,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 13379.35,
+      "flag_path": "assets/flags/MDV.svg"
+    },
+    "AFG": {
+      "country_fa": "افغانستان",
+      "country_en": "Afghanistan",
+      "iso3": "AFG",
+      "iso2": "AF",
+      "capital": "Kabul",
+      "languages": [
+        {
+          "code": "ps",
+          "name": "Pashto",
+          "native": "پښتو"
+        },
+        {
+          "code": "fa",
+          "name": "Persian",
+          "native": "فارسی"
+        },
+        {
+          "code": "uz",
+          "name": "Uzbek",
+          "native": "O'zbekcha"
+        },
+        {
+          "code": "tk",
+          "name": "Turkmen",
+          "native": "Туркмен / تركمن"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AFN",
+          "name": "Afghan Afghani",
+          "symbol": "؋"
+        }
+      ],
+      "area_km2": 652860,
+      "land_area_km2": 652230,
+      "water_area_km2": 630,
+      "population": 42647492,
+      "population_year": 2024,
+      "population_density": 65.32,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/AFG.svg"
+    },
+    "IDN": {
+      "country_fa": "اندونزی",
+      "country_en": "Indonesia",
+      "iso3": "IDN",
+      "iso2": "ID",
+      "capital": "Jakarta",
+      "languages": [
+        {
+          "code": "id",
+          "name": "Indonesian",
+          "native": "Bahasa Indonesia"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "IDR",
+          "name": "Indonesian Rupiah",
+          "symbol": "Rp"
+        }
+      ],
+      "area_km2": 1904569,
+      "land_area_km2": 1811569,
+      "water_area_km2": 93000,
+      "population": 283487931,
+      "population_year": 2024,
+      "population_density": 148.85,
+      "gdp_usd": 1396300098190,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4925.43,
+      "flag_path": "assets/flags/IDN.svg"
+    },
+    "MYS": {
+      "country_fa": "مالزی",
+      "country_en": "Malaysia",
+      "iso3": "MYS",
+      "iso2": "MY",
+      "capital": "Kuala Lumpur",
+      "languages": [
+        {
+          "code": "ms",
+          "name": "Malay",
+          "native": "Bahasa Melayu"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MYR",
+          "name": "Malaysian Ringgit",
+          "symbol": "RM"
+        }
+      ],
+      "area_km2": 330803,
+      "land_area_km2": 329613,
+      "water_area_km2": 1190,
+      "population": 35557673,
+      "population_year": 2024,
+      "population_density": 107.49,
+      "gdp_usd": 422227005428,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 11874.43,
+      "flag_path": "assets/flags/MYS.svg"
+    },
+    "SGP": {
+      "country_fa": "سنگاپور",
+      "country_en": "Singapore",
+      "iso3": "SGP",
+      "iso2": "SG",
+      "capital": "Singapore",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "ms",
+          "name": "Malay",
+          "native": "Bahasa Melayu"
+        },
+        {
+          "code": "ta",
+          "name": "Tamil",
+          "native": "தமிழ்"
+        },
+        {
+          "code": "zh",
+          "name": "Chinese",
+          "native": "中文"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SGD",
+          "name": "Singapore Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 726,
+      "land_area_km2": 716,
+      "water_area_km2": 10,
+      "population": 6036860,
+      "population_year": 2024,
+      "population_density": 8315.23,
+      "gdp_usd": 547386645891,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 90674.07,
+      "flag_path": "assets/flags/SGP.svg"
+    },
+    "THA": {
+      "country_fa": "تایلند",
+      "country_en": "Thailand",
+      "iso3": "THA",
+      "iso2": "TH",
+      "capital": "Bangkok",
+      "languages": [
+        {
+          "code": "th",
+          "name": "Thai",
+          "native": "ไทย / Phasa Thai"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "THB",
+          "name": "Thai Baht",
+          "symbol": "฿"
+        }
+      ],
+      "area_km2": 513120,
+      "land_area_km2": 510890,
+      "water_area_km2": 2230,
+      "population": 71668011,
+      "population_year": 2024,
+      "population_density": 139.67,
+      "gdp_usd": 526517658841,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7346.62,
+      "flag_path": "assets/flags/THA.svg"
+    },
+    "VNM": {
+      "country_fa": "ویتنام",
+      "country_en": "Vietnam",
+      "iso3": "VNM",
+      "iso2": "VN",
+      "capital": "Hanoi",
+      "languages": [
+        {
+          "code": "vi",
+          "name": "Vietnamese",
+          "native": "Tiếng Việt"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "VND",
+          "name": "Vietnamese Dong",
+          "symbol": "₫"
+        }
+      ],
+      "area_km2": 331210,
+      "land_area_km2": 310070,
+      "water_area_km2": 21140,
+      "population": 100987686,
+      "population_year": 2024,
+      "population_density": 304.91,
+      "gdp_usd": 476388230307,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4717.29,
+      "flag_path": "assets/flags/VNM.svg"
+    },
+    "PHL": {
+      "country_fa": "فیلیپین",
+      "country_en": "Philippines",
+      "iso3": "PHL",
+      "iso2": "PH",
+      "capital": "Manila",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "tl",
+          "name": "Tagalog / Filipino",
+          "native": "Tagalog"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PHP",
+          "name": "Philippine Peso",
+          "symbol": "₱"
+        }
+      ],
+      "area_km2": 300000,
+      "land_area_km2": 298170,
+      "water_area_km2": 1830,
+      "population": 115843670,
+      "population_year": 2024,
+      "population_density": 386.15,
+      "gdp_usd": 461617509782,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3984.83,
+      "flag_path": "assets/flags/PHL.svg"
+    },
+    "MMR": {
+      "country_fa": "میانمار",
+      "country_en": "Myanmar",
+      "iso3": "MMR",
+      "iso2": "MM",
+      "capital": "Naypyidaw",
+      "languages": [
+        {
+          "code": "my",
+          "name": "Burmese",
+          "native": "မြန်မာစာ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MMK",
+          "name": "Myanmar Kyat",
+          "symbol": "K"
+        }
+      ],
+      "area_km2": 676578,
+      "land_area_km2": 653508,
+      "water_area_km2": 23070,
+      "population": 54500091,
+      "population_year": 2024,
+      "population_density": 80.55,
+      "gdp_usd": 74068349523,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1359.05,
+      "flag_path": "assets/flags/MMR.svg"
+    },
+    "KHM": {
+      "country_fa": "کامبوج",
+      "country_en": "Cambodia",
+      "iso3": "KHM",
+      "iso2": "KH",
+      "capital": "Phnom Penh",
+      "languages": [
+        {
+          "code": "km",
+          "name": "Cambodian",
+          "native": "ភាសាខ្មែរ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KHR",
+          "name": "Cambodian Riel",
+          "symbol": "៛"
+        }
+      ],
+      "area_km2": 181040,
+      "land_area_km2": 176520,
+      "water_area_km2": 4520,
+      "population": 17638801,
+      "population_year": 2024,
+      "population_density": 97.43,
+      "gdp_usd": 46352647037,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2627.88,
+      "flag_path": "assets/flags/KHM.svg"
+    },
+    "LAO": {
+      "country_fa": "لائوس",
+      "country_en": "Laos",
+      "iso3": "LAO",
+      "iso2": "LA",
+      "capital": "Vientiane",
+      "languages": [
+        {
+          "code": "lo",
+          "name": "Laotian",
+          "native": "ລາວ / Pha xa lao"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LAK",
+          "name": "Laotian Kip",
+          "symbol": "₭"
+        }
+      ],
+      "area_km2": 236800,
+      "land_area_km2": 230800,
+      "water_area_km2": 6000,
+      "population": 7769819,
+      "population_year": 2024,
+      "population_density": 32.81,
+      "gdp_usd": 16502933121,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2123.98,
+      "flag_path": "assets/flags/LAO.svg"
+    },
+    "BRN": {
+      "country_fa": "برونئی",
+      "country_en": "Brunei",
+      "iso3": "BRN",
+      "iso2": "BN",
+      "capital": "Bandar Seri Begawan",
+      "languages": [
+        {
+          "code": "ms",
+          "name": "Malay",
+          "native": "Bahasa Melayu"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BND",
+          "name": "Brunei Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 5770,
+      "land_area_km2": 5270,
+      "water_area_km2": 500,
+      "population": 462721,
+      "population_year": 2024,
+      "population_density": 80.19,
+      "gdp_usd": 15340808592,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 33153.47,
+      "flag_path": "assets/flags/BRN.svg"
+    },
+    "TLS": {
+      "country_fa": "تیمور شرقی",
+      "country_en": "Timor-Leste",
+      "iso3": "TLS",
+      "iso2": "TL",
+      "capital": "Dili",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 14874,
+      "land_area_km2": 14874,
+      "water_area_km2": 0,
+      "population": 1400638,
+      "population_year": 2024,
+      "population_density": 94.17,
+      "gdp_usd": 1865608515,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1331.97,
+      "flag_path": "assets/flags/TLS.svg"
+    },
+    "NGA": {
+      "country_fa": "نیجریه",
+      "country_en": "Nigeria",
+      "iso3": "NGA",
+      "iso2": "NG",
+      "capital": "Abuja",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NGN",
+          "name": "Nigerian Naira",
+          "symbol": "₦"
+        }
+      ],
+      "area_km2": 923768,
+      "land_area_km2": 910768,
+      "water_area_km2": 13000,
+      "population": 232679478,
+      "population_year": 2024,
+      "population_density": 251.88,
+      "gdp_usd": 252261880141,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1084.16,
+      "flag_path": "assets/flags/NGA.svg"
+    },
+    "ZAF": {
+      "country_fa": "آفریقای جنوبی",
+      "country_en": "South Africa",
+      "iso3": "ZAF",
+      "iso2": "ZA",
+      "capital": "Pretoria",
+      "languages": [
+        {
+          "code": "af",
+          "name": "Afrikaans",
+          "native": "Afrikaans"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "nr",
+          "name": "South Ndebele",
+          "native": "isiNdebele"
+        },
+        {
+          "code": "st",
+          "name": "Southern Sotho",
+          "native": "Sesotho"
+        },
+        {
+          "code": "ss",
+          "name": "Swati",
+          "native": "SiSwati"
+        },
+        {
+          "code": "tn",
+          "name": "Tswana",
+          "native": "Setswana"
+        },
+        {
+          "code": "ts",
+          "name": "Tsonga",
+          "native": "Xitsonga"
+        },
+        {
+          "code": "ve",
+          "name": "Venda",
+          "native": "Tshivenḓa"
+        },
+        {
+          "code": "xh",
+          "name": "Xhosa",
+          "native": "isiXhosa"
+        },
+        {
+          "code": "zu",
+          "name": "Zulu",
+          "native": "isiZulu"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ZAR",
+          "name": "South African Rand",
+          "symbol": "R"
+        }
+      ],
+      "area_km2": 1219090,
+      "land_area_km2": 1214470,
+      "water_area_km2": 4620,
+      "population": 64007187,
+      "population_year": 2024,
+      "population_density": 52.5,
+      "gdp_usd": 401144998373,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6267.19,
+      "flag_path": "assets/flags/ZAF.svg"
+    },
+    "ETH": {
+      "country_fa": "اتیوپی",
+      "country_en": "Ethiopia",
+      "iso3": "ETH",
+      "iso2": "ET",
+      "capital": "Addis Ababa",
+      "languages": [
+        {
+          "code": "am",
+          "name": "Amharic",
+          "native": "አማርኛ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ETB",
+          "name": "Ethiopian Birr",
+          "symbol": "ETB"
+        }
+      ],
+      "area_km2": 1104300,
+      "land_area_km2": 1096570,
+      "water_area_km2": 7730,
+      "population": 132059767,
+      "population_year": 2024,
+      "population_density": 119.59,
+      "gdp_usd": 149740297952,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1133.88,
+      "flag_path": "assets/flags/ETH.svg"
+    },
+    "KEN": {
+      "country_fa": "کنیا",
+      "country_en": "Kenya",
+      "iso3": "KEN",
+      "iso2": "KE",
+      "capital": "Nairobi",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "sw",
+          "name": "Swahili",
+          "native": "Kiswahili"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KES",
+          "name": "Kenyan Shilling",
+          "symbol": "KES"
+        }
+      ],
+      "area_km2": 580367,
+      "land_area_km2": 569140,
+      "water_area_km2": 11227,
+      "population": 56432944,
+      "population_year": 2024,
+      "population_density": 97.24,
+      "gdp_usd": 120339557905,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2132.43,
+      "flag_path": "assets/flags/KEN.svg"
+    },
+    "GHA": {
+      "country_fa": "غنا",
+      "country_en": "Ghana",
+      "iso3": "GHA",
+      "iso2": "GH",
+      "capital": "Accra",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GHS",
+          "name": "Ghanaian Cedi",
+          "symbol": "GH₵"
+        }
+      ],
+      "area_km2": 238533,
+      "land_area_km2": 227533,
+      "water_area_km2": 11000,
+      "population": 34427414,
+      "population_year": 2024,
+      "population_density": 144.33,
+      "gdp_usd": 82308110386,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2390.77,
+      "flag_path": "assets/flags/GHA.svg"
+    },
+    "SEN": {
+      "country_fa": "سنگال",
+      "country_en": "Senegal",
+      "iso3": "SEN",
+      "iso2": "SN",
+      "capital": "Dakar",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 196722,
+      "land_area_km2": 192530,
+      "water_area_km2": 4192,
+      "population": 18501984,
+      "population_year": 2024,
+      "population_density": 94.05,
+      "gdp_usd": 32808056600,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1773.22,
+      "flag_path": "assets/flags/SEN.svg"
+    },
+    "CIV": {
+      "country_fa": "ساحل عاج",
+      "country_en": "Ivory Coast",
+      "iso3": "CIV",
+      "iso2": "CI",
+      "capital": "Yamoussoukro",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 322460,
+      "land_area_km2": 318000,
+      "water_area_km2": 4460,
+      "population": 31934230,
+      "population_year": 2024,
+      "population_density": 99.03,
+      "gdp_usd": 87113179149,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2727.89,
+      "flag_path": "assets/flags/CIV.svg"
+    },
+    "CMR": {
+      "country_fa": "کامرون",
+      "country_en": "Cameroon",
+      "iso3": "CMR",
+      "iso2": "CM",
+      "capital": "Yaoundé",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 475440,
+      "land_area_km2": 472710,
+      "water_area_km2": 2730,
+      "population": 29123744,
+      "population_year": 2024,
+      "population_density": 61.26,
+      "gdp_usd": 53296694320,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1830.01,
+      "flag_path": "assets/flags/CMR.svg"
+    },
+    "UGA": {
+      "country_fa": "اوگاندا",
+      "country_en": "Uganda",
+      "iso3": "UGA",
+      "iso2": "UG",
+      "capital": "Kampala",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "sw",
+          "name": "Swahili",
+          "native": "Kiswahili"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "UGX",
+          "name": "Ugandan Shilling",
+          "symbol": "UGX"
+        }
+      ],
+      "area_km2": 241038,
+      "land_area_km2": 197100,
+      "water_area_km2": 43938,
+      "population": 50015092,
+      "population_year": 2024,
+      "population_density": 207.5,
+      "gdp_usd": 53911907086,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1077.91,
+      "flag_path": "assets/flags/UGA.svg"
+    },
+    "TZA": {
+      "country_fa": "تانزانیا",
+      "country_en": "United Republic of Tanzania",
+      "iso3": "TZA",
+      "iso2": "TZ",
+      "capital": "Dodoma",
+      "languages": [
+        {
+          "code": "sw",
+          "name": "Swahili",
+          "native": "Kiswahili"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TZS",
+          "name": "Tanzanian Shilling",
+          "symbol": "TZS"
+        }
+      ],
+      "area_km2": 947300,
+      "land_area_km2": 885800,
+      "water_area_km2": 61500,
+      "population": 68560157,
+      "population_year": 2024,
+      "population_density": 72.37,
+      "gdp_usd": 78844405385,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1150,
+      "flag_path": "assets/flags/TZA.svg"
+    },
+    "RWA": {
+      "country_fa": "رواندا",
+      "country_en": "Rwanda",
+      "iso3": "RWA",
+      "iso2": "RW",
+      "capital": "Kigali",
+      "languages": [
+        {
+          "code": "rw",
+          "name": "Rwandi",
+          "native": "Kinyarwandi"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "RWF",
+          "name": "Rwandan Franc",
+          "symbol": "RF"
+        }
+      ],
+      "area_km2": 26338,
+      "land_area_km2": 24668,
+      "water_area_km2": 1670,
+      "population": 14256567,
+      "population_year": 2024,
+      "population_density": 541.29,
+      "gdp_usd": 14251642235,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 999.65,
+      "flag_path": "assets/flags/RWA.svg"
+    },
+    "ZWE": {
+      "country_fa": "زیمبابوه",
+      "country_en": "Zimbabwe",
+      "iso3": "ZWE",
+      "iso2": "ZW",
+      "capital": "Harare",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "sn",
+          "name": "Shona",
+          "native": "chiShona"
+        },
+        {
+          "code": "nd",
+          "name": "North Ndebele",
+          "native": "Sindebele"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ZWG",
+          "name": "Zimbabwean Gold",
+          "symbol": "ZWG"
+        },
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        },
+        {
+          "code": "ZAR",
+          "name": "South African Rand",
+          "symbol": "R"
+        },
+        {
+          "code": "BWP",
+          "name": "Botswanan Pula",
+          "symbol": "P"
+        },
+        {
+          "code": "GBP",
+          "name": "British Pound",
+          "symbol": "£"
+        },
+        {
+          "code": "AUD",
+          "name": "Australian Dollar",
+          "symbol": "$"
+        },
+        {
+          "code": "CNY",
+          "name": "Chinese Yuan",
+          "symbol": "¥"
+        },
+        {
+          "code": "INR",
+          "name": "Indian Rupee",
+          "symbol": "₹"
+        },
+        {
+          "code": "JPY",
+          "name": "Japanese Yen",
+          "symbol": "¥"
+        }
+      ],
+      "area_km2": 390757,
+      "land_area_km2": 386847,
+      "water_area_km2": 3910,
+      "population": 16634373,
+      "population_year": 2024,
+      "population_density": 42.57,
+      "gdp_usd": 41539411516,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2497.2,
+      "flag_path": "assets/flags/ZWE.svg"
+    },
+    "ZMB": {
+      "country_fa": "زامبیا",
+      "country_en": "Zambia",
+      "iso3": "ZMB",
+      "iso2": "ZM",
+      "capital": "Lusaka",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ZMW",
+          "name": "Zambian Kwacha",
+          "symbol": "ZK"
+        }
+      ],
+      "area_km2": 752618,
+      "land_area_km2": 743398,
+      "water_area_km2": 9220,
+      "population": 21314956,
+      "population_year": 2024,
+      "population_density": 28.32,
+      "gdp_usd": 25303185342,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1187.11,
+      "flag_path": "assets/flags/ZMB.svg"
+    },
+    "MOZ": {
+      "country_fa": "موزامبیک",
+      "country_en": "Mozambique",
+      "iso3": "MOZ",
+      "iso2": "MZ",
+      "capital": "Maputo",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MZN",
+          "name": "Mozambican Metical",
+          "symbol": "MZN"
+        }
+      ],
+      "area_km2": 799380,
+      "land_area_km2": 786380,
+      "water_area_km2": 13000,
+      "population": 34631766,
+      "population_year": 2024,
+      "population_density": 43.32,
+      "gdp_usd": 22745341305,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 656.78,
+      "flag_path": "assets/flags/MOZ.svg"
+    },
+    "AGO": {
+      "country_fa": "آنگولا",
+      "country_en": "Angola",
+      "iso3": "AGO",
+      "iso2": "AO",
+      "capital": "Luanda",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AOA",
+          "name": "Angolan Kwanza",
+          "symbol": "Kz"
+        }
+      ],
+      "area_km2": 1246700,
+      "land_area_km2": 1246700,
+      "water_area_km2": 0,
+      "population": 37885849,
+      "population_year": 2024,
+      "population_density": 30.39,
+      "gdp_usd": 100998916781,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2665.87,
+      "flag_path": "assets/flags/AGO.svg"
+    },
+    "NAM": {
+      "country_fa": "نامیبیا",
+      "country_en": "Namibia",
+      "iso3": "NAM",
+      "iso2": "NA",
+      "capital": "Windhoek",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "af",
+          "name": "Afrikaans",
+          "native": "Afrikaans"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NAD",
+          "name": "Namibian Dollar",
+          "symbol": "$"
+        },
+        {
+          "code": "ZAR",
+          "name": "South African Rand",
+          "symbol": "R"
+        }
+      ],
+      "area_km2": 825715,
+      "land_area_km2": 823290,
+      "water_area_km2": 2425,
+      "population": 3030131,
+      "population_year": 2024,
+      "population_density": 3.67,
+      "gdp_usd": 13372354511,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4413.13,
+      "flag_path": "assets/flags/NAM.svg"
+    },
+    "BWA": {
+      "country_fa": "بوتسوانا",
+      "country_en": "Botswana",
+      "iso3": "BWA",
+      "iso2": "BW",
+      "capital": "Gaborone",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "tn",
+          "name": "Tswana",
+          "native": "Setswana"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BWP",
+          "name": "Botswanan Pula",
+          "symbol": "P"
+        }
+      ],
+      "area_km2": 581730,
+      "land_area_km2": 566730,
+      "water_area_km2": 15000,
+      "population": 2521139,
+      "population_year": 2024,
+      "population_density": 4.33,
+      "gdp_usd": 19402063512,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7695.75,
+      "flag_path": "assets/flags/BWA.svg"
+    },
+    "SDN": {
+      "country_fa": "سودان",
+      "country_en": "Sudan",
+      "iso3": "SDN",
+      "iso2": "SD",
+      "capital": "Khartoum",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SDG",
+          "name": "Sudanese Pound",
+          "symbol": "SDG"
+        }
+      ],
+      "area_km2": 1861484,
+      "land_area_km2": 1731671,
+      "water_area_km2": 129813,
+      "population": 50448963,
+      "population_year": 2024,
+      "population_density": 27.1,
+      "gdp_usd": 49672435513,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 984.61,
+      "flag_path": "assets/flags/SDN.svg"
+    },
+    "SSD": {
+      "country_fa": "سودان جنوبی",
+      "country_en": "South Sudan",
+      "iso3": "SSD",
+      "iso2": "SS",
+      "capital": "Juba",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SSP",
+          "name": "South Sudanese Pound",
+          "symbol": "£"
+        }
+      ],
+      "area_km2": 644329,
+      "land_area_km2": 644329,
+      "water_area_km2": 0,
+      "population": 11943408,
+      "population_year": 2024,
+      "population_density": 18.54,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/SSD.svg"
+    },
+    "TCD": {
+      "country_fa": "چاد",
+      "country_en": "Chad",
+      "iso3": "TCD",
+      "iso2": "TD",
+      "capital": "N'Djamena",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 1284000,
+      "land_area_km2": 1259200,
+      "water_area_km2": 24800,
+      "population": 20299123,
+      "population_year": 2024,
+      "population_density": 15.81,
+      "gdp_usd": 19518819751,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 961.56,
+      "flag_path": "assets/flags/TCD.svg"
+    },
+    "NER": {
+      "country_fa": "نیجر",
+      "country_en": "Niger",
+      "iso3": "NER",
+      "iso2": "NE",
+      "capital": "Niamey",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 1267000,
+      "land_area_km2": 1266700,
+      "water_area_km2": 300,
+      "population": 27032412,
+      "population_year": 2024,
+      "population_density": 21.34,
+      "gdp_usd": 19876128485,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 735.27,
+      "flag_path": "assets/flags/NER.svg"
+    },
+    "MLI": {
+      "country_fa": "مالی",
+      "country_en": "Mali",
+      "iso3": "MLI",
+      "iso2": "ML",
+      "capital": "Bamako",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 1240192,
+      "land_area_km2": 1220190,
+      "water_area_km2": 20002,
+      "population": 24478595,
+      "population_year": 2024,
+      "population_density": 19.74,
+      "gdp_usd": 26794747239,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1094.62,
+      "flag_path": "assets/flags/MLI.svg"
+    },
+    "MRT": {
+      "country_fa": "موریتانی",
+      "country_en": "Mauritania",
+      "iso3": "MRT",
+      "iso2": "MR",
+      "capital": "Nouakchott",
+      "languages": [
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MRU",
+          "name": "Mauritanian Ouguiya",
+          "symbol": "MRU"
+        }
+      ],
+      "area_km2": 1030000,
+      "land_area_km2": 1025520,
+      "water_area_km2": 4480,
+      "population": 5169395,
+      "population_year": 2024,
+      "population_density": 5.02,
+      "gdp_usd": 10908045686,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2110.12,
+      "flag_path": "assets/flags/MRT.svg"
+    },
+    "BFA": {
+      "country_fa": "بورکینافاسو",
+      "country_en": "Burkina Faso",
+      "iso3": "BFA",
+      "iso2": "BF",
+      "capital": "Ouagadougou",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ff",
+          "name": "Peul",
+          "native": "Fulfulde"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 274200,
+      "land_area_km2": 273800,
+      "water_area_km2": 400,
+      "population": 23548781,
+      "population_year": 2024,
+      "population_density": 85.88,
+      "gdp_usd": 23124729853,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 981.99,
+      "flag_path": "assets/flags/BFA.svg"
+    },
+    "GIN": {
+      "country_fa": "گینه",
+      "country_en": "Guinea",
+      "iso3": "GIN",
+      "iso2": "GN",
+      "capital": "Conakry",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ff",
+          "name": "Peul",
+          "native": "Fulfulde"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GNF",
+          "name": "Guinean Franc",
+          "symbol": "FG"
+        }
+      ],
+      "area_km2": 245857,
+      "land_area_km2": 245717,
+      "water_area_km2": 140,
+      "population": 14754785,
+      "population_year": 2024,
+      "population_density": 60.01,
+      "gdp_usd": 25008678293,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1694.95,
+      "flag_path": "assets/flags/GIN.svg"
+    },
+    "SLE": {
+      "country_fa": "سیرالئون",
+      "country_en": "Sierra Leone",
+      "iso3": "SLE",
+      "iso2": "SL",
+      "capital": "Freetown",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SLE",
+          "name": "Sierra Leonean Leone",
+          "symbol": "SLE"
+        }
+      ],
+      "area_km2": 71740,
+      "land_area_km2": 71620,
+      "water_area_km2": 120,
+      "population": 8642022,
+      "population_year": 2024,
+      "population_density": 120.46,
+      "gdp_usd": 6971127235,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 806.65,
+      "flag_path": "assets/flags/SLE.svg"
+    },
+    "LBR": {
+      "country_fa": "لیبریا",
+      "country_en": "Liberia",
+      "iso3": "LBR",
+      "iso2": "LR",
+      "capital": "Monrovia",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LRD",
+          "name": "Liberian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 111369,
+      "land_area_km2": 96320,
+      "water_area_km2": 15049,
+      "population": 5612817,
+      "population_year": 2024,
+      "population_density": 50.4,
+      "gdp_usd": 4779300900,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 851.5,
+      "flag_path": "assets/flags/LBR.svg"
+    },
+    "TGO": {
+      "country_fa": "توگو",
+      "country_en": "Togo",
+      "iso3": "TGO",
+      "iso2": "TG",
+      "capital": "Lomé",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 56785,
+      "land_area_km2": 54385,
+      "water_area_km2": 2400,
+      "population": 9515236,
+      "population_year": 2024,
+      "population_density": 167.57,
+      "gdp_usd": 10651180146,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1119.38,
+      "flag_path": "assets/flags/TGO.svg"
+    },
+    "BEN": {
+      "country_fa": "بنین",
+      "country_en": "Benin",
+      "iso3": "BEN",
+      "iso2": "BJ",
+      "capital": "Porto-Novo",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 114760,
+      "land_area_km2": 112760,
+      "water_area_km2": 2000,
+      "population": 14462724,
+      "population_year": 2024,
+      "population_density": 126.03,
+      "gdp_usd": 21482643706,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1485.38,
+      "flag_path": "assets/flags/BEN.svg"
+    },
+    "GAB": {
+      "country_fa": "گابن",
+      "country_en": "Gabon",
+      "iso3": "GAB",
+      "iso2": "GA",
+      "capital": "Libreville",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 267670,
+      "land_area_km2": 257670,
+      "water_area_km2": 10000,
+      "population": 2538952,
+      "population_year": 2024,
+      "population_density": 9.49,
+      "gdp_usd": 20895684425,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 8230.04,
+      "flag_path": "assets/flags/GAB.svg"
+    },
+    "COG": {
+      "country_fa": "کنگو",
+      "country_en": "Republic of the Congo",
+      "iso3": "COG",
+      "iso2": "CG",
+      "capital": "Brazzaville",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ln",
+          "name": "Lingala",
+          "native": "Lingála"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 342000,
+      "land_area_km2": 341500,
+      "water_area_km2": 500,
+      "population": 6332961,
+      "population_year": 2024,
+      "population_density": 18.52,
+      "gdp_usd": 15719986076,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2482.25,
+      "flag_path": "assets/flags/COG.svg"
+    },
+    "COD": {
+      "country_fa": "کنگو دموکراتیک",
+      "country_en": "Dem. Rep. Congo",
+      "iso3": "COD",
+      "iso2": "CD",
+      "capital": "Kinshasa",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ln",
+          "name": "Lingala",
+          "native": "Lingála"
+        },
+        {
+          "code": "kg",
+          "name": "Kongo",
+          "native": "KiKongo"
+        },
+        {
+          "code": "sw",
+          "name": "Swahili",
+          "native": "Kiswahili"
+        },
+        {
+          "code": "lu",
+          "name": "Luba-Katanga",
+          "native": "Tshiluba"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CDF",
+          "name": "Congolese Franc",
+          "symbol": "CDF"
+        }
+      ],
+      "area_km2": 2344858,
+      "land_area_km2": 2267048,
+      "water_area_km2": 77810,
+      "population": 109276265,
+      "population_year": 2024,
+      "population_density": 46.6,
+      "gdp_usd": 70962185790,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 649.38,
+      "flag_path": "assets/flags/COD.svg"
+    },
+    "CAF": {
+      "country_fa": "آفریقای مرکزی",
+      "country_en": "Central African Republic",
+      "iso3": "CAF",
+      "iso2": "CF",
+      "capital": "Bangui",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "sg",
+          "name": "Sango",
+          "native": "Sängö"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 622984,
+      "land_area_km2": 622984,
+      "water_area_km2": 0,
+      "population": 5330690,
+      "population_year": 2024,
+      "population_density": 8.56,
+      "gdp_usd": 2751494281,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 516.16,
+      "flag_path": "assets/flags/CAF.svg"
+    },
+    "ERI": {
+      "country_fa": "اریتره",
+      "country_en": "Eritrea",
+      "iso3": "ERI",
+      "iso2": "ER",
+      "capital": "Asmara",
+      "languages": [
+        {
+          "code": "ti",
+          "name": "Tigrinya",
+          "native": "ትግርኛ"
+        },
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ERN",
+          "name": "Eritrean Nakfa",
+          "symbol": "ERN"
+        }
+      ],
+      "area_km2": 117600,
+      "land_area_km2": 101000,
+      "water_area_km2": 16600,
+      "population": 3535603,
+      "population_year": 2024,
+      "population_density": 30.06,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/ERI.svg"
+    },
+    "DJI": {
+      "country_fa": "جیبوتی",
+      "country_en": "Djibouti",
+      "iso3": "DJI",
+      "iso2": "DJ",
+      "capital": "Djibouti",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "DJF",
+          "name": "Djiboutian Franc",
+          "symbol": "DJF"
+        }
+      ],
+      "area_km2": 23200,
+      "land_area_km2": 23180,
+      "water_area_km2": 20,
+      "population": 1168722,
+      "population_year": 2024,
+      "population_density": 50.38,
+      "gdp_usd": 4152145939,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3552.72,
+      "flag_path": "assets/flags/DJI.svg"
+    },
+    "SOM": {
+      "country_fa": "سومالی",
+      "country_en": "Somalia",
+      "iso3": "SOM",
+      "iso2": "SO",
+      "capital": "Mogadishu",
+      "languages": [
+        {
+          "code": "so",
+          "name": "Somalia",
+          "native": "Soomaaliga"
+        },
+        {
+          "code": "ar",
+          "name": "Arabic",
+          "native": "العربية"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SOS",
+          "name": "Somali Shilling",
+          "symbol": "SOS"
+        }
+      ],
+      "area_km2": 637657,
+      "land_area_km2": 627337,
+      "water_area_km2": 10320,
+      "population": 19009151,
+      "population_year": 2024,
+      "population_density": 29.81,
+      "gdp_usd": 11967000000,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 629.54,
+      "flag_path": "assets/flags/SOM.svg"
+    },
+    "MDG": {
+      "country_fa": "ماداگاسکار",
+      "country_en": "Madagascar",
+      "iso3": "MDG",
+      "iso2": "MG",
+      "capital": "Antananarivo",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "mg",
+          "name": "Malagasy",
+          "native": "Malagasy"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MGA",
+          "name": "Malagasy Ariary",
+          "symbol": "Ar"
+        }
+      ],
+      "area_km2": 587041,
+      "land_area_km2": 581540,
+      "water_area_km2": 5501,
+      "population": 31964956,
+      "population_year": 2024,
+      "population_density": 54.45,
+      "gdp_usd": 17420501490,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 544.99,
+      "flag_path": "assets/flags/MDG.svg"
+    },
+    "MUS": {
+      "country_fa": "موریس",
+      "country_en": "Mauritius",
+      "iso3": "MUS",
+      "iso2": "MU",
+      "capital": "Port Louis",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "MUR",
+          "name": "Mauritian Rupee",
+          "symbol": "Rs"
+        }
+      ],
+      "area_km2": 2040,
+      "land_area_km2": 2030,
+      "water_area_km2": 10,
+      "population": 1245779,
+      "population_year": 2024,
+      "population_density": 610.68,
+      "gdp_usd": 14937861786,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 11990.78,
+      "flag_path": "assets/flags/MUS.svg"
+    },
+    "LSO": {
+      "country_fa": "لسوتو",
+      "country_en": "Lesotho",
+      "iso3": "LSO",
+      "iso2": "LS",
+      "capital": "Maseru",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "st",
+          "name": "Southern Sotho",
+          "native": "Sesotho"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "LSL",
+          "name": "Lesotho Loti",
+          "symbol": "LSL"
+        },
+        {
+          "code": "ZAR",
+          "name": "South African Rand",
+          "symbol": "R"
+        }
+      ],
+      "area_km2": 30360,
+      "land_area_km2": 30360,
+      "water_area_km2": 0,
+      "population": 2337423,
+      "population_year": 2024,
+      "population_density": 76.99,
+      "gdp_usd": 2271759454,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 971.91,
+      "flag_path": "assets/flags/LSO.svg"
+    },
+    "SWZ": {
+      "country_fa": "اسواتینی",
+      "country_en": "eSwatini",
+      "iso3": "SWZ",
+      "iso2": "SZ",
+      "capital": "Lobamba",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "ss",
+          "name": "Swati",
+          "native": "SiSwati"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SZL",
+          "name": "Swazi Lilangeni",
+          "symbol": "SZL"
+        }
+      ],
+      "area_km2": 17360,
+      "land_area_km2": 17200,
+      "water_area_km2": 160,
+      "population": 1242822,
+      "population_year": 2024,
+      "population_density": 71.59,
+      "gdp_usd": 4858885840,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3909.56,
+      "flag_path": "assets/flags/SWZ.svg"
+    },
+    "GMB": {
+      "country_fa": "گامبیا",
+      "country_en": "Gambia",
+      "iso3": "GMB",
+      "iso2": "GM",
+      "capital": "Banjul",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GMD",
+          "name": "Gambian Dalasi",
+          "symbol": "GMD"
+        }
+      ],
+      "area_km2": 11300,
+      "land_area_km2": 10120,
+      "water_area_km2": 1180,
+      "population": 2759988,
+      "population_year": 2024,
+      "population_density": 244.25,
+      "gdp_usd": 2404888749,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 871.34,
+      "flag_path": "assets/flags/GMB.svg"
+    },
+    "GNB": {
+      "country_fa": "گینه بیسائو",
+      "country_en": "Guinea-Bissau",
+      "iso3": "GNB",
+      "iso2": "GW",
+      "capital": "Bissau",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XOF",
+          "name": "West African CFA Franc",
+          "symbol": "F CFA"
+        }
+      ],
+      "area_km2": 36130,
+      "land_area_km2": 28120,
+      "water_area_km2": 8010,
+      "population": 2201352,
+      "population_year": 2024,
+      "population_density": 60.93,
+      "gdp_usd": 2218393804,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1007.74,
+      "flag_path": "assets/flags/GNB.svg"
+    },
+    "GNQ": {
+      "country_fa": "گینه استوایی",
+      "country_en": "Equatorial Guinea",
+      "iso3": "GNQ",
+      "iso2": "GQ",
+      "capital": "Malabo",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "XAF",
+          "name": "Central African CFA Franc",
+          "symbol": "FCFA"
+        }
+      ],
+      "area_km2": 28051,
+      "land_area_km2": 28051,
+      "water_area_km2": 0,
+      "population": 1892516,
+      "population_year": 2024,
+      "population_density": 67.47,
+      "gdp_usd": 12765777677,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6745.4,
+      "flag_path": "assets/flags/GNQ.svg"
+    },
+    "CPV": {
+      "country_fa": "کیپ‌ورد",
+      "country_en": "Cape Verde",
+      "iso3": "CPV",
+      "iso2": "CV",
+      "capital": "Praia",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CVE",
+          "name": "Cape Verdean Escudo",
+          "symbol": "CVE"
+        }
+      ],
+      "area_km2": 4033,
+      "land_area_km2": 4033,
+      "water_area_km2": 0,
+      "population": 524877,
+      "population_year": 2024,
+      "population_density": 130.15,
+      "gdp_usd": 2725414150,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5192.48,
+      "flag_path": "assets/flags/CPV.svg"
+    },
+    "BRA": {
+      "country_fa": "برزیل",
+      "country_en": "Brazil",
+      "iso3": "BRA",
+      "iso2": "BR",
+      "capital": "Brasília",
+      "languages": [
+        {
+          "code": "pt",
+          "name": "Portuguese",
+          "native": "Português"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BRL",
+          "name": "Brazilian Real",
+          "symbol": "R$"
+        }
+      ],
+      "area_km2": 8515767,
+      "land_area_km2": 8460415,
+      "water_area_km2": 55352,
+      "population": 211998573,
+      "population_year": 2024,
+      "population_density": 24.89,
+      "gdp_usd": 2185821648943,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 10310.55,
+      "flag_path": "assets/flags/BRA.svg"
+    },
+    "ARG": {
+      "country_fa": "آرژانتین",
+      "country_en": "Argentina",
+      "iso3": "ARG",
+      "iso2": "AR",
+      "capital": "Buenos Aires",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        },
+        {
+          "code": "gn",
+          "name": "Guarani",
+          "native": "Avañe'ẽ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "ARS",
+          "name": "Argentine Peso",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 2780400,
+      "land_area_km2": 2736690,
+      "water_area_km2": 43710,
+      "population": 45696159,
+      "population_year": 2024,
+      "population_density": 16.44,
+      "gdp_usd": 638365455340,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 13969.78,
+      "flag_path": "assets/flags/ARG.svg"
+    },
+    "CHL": {
+      "country_fa": "شیلی",
+      "country_en": "Chile",
+      "iso3": "CHL",
+      "iso2": "CL",
+      "capital": "Santiago",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CLP",
+          "name": "Chilean Peso",
+          "symbol": "$"
+        },
+        {
+          "code": "CLF",
+          "name": "Chilean Unit of Account (UF)",
+          "symbol": "CLF"
+        }
+      ],
+      "area_km2": 756102,
+      "land_area_km2": 743812,
+      "water_area_km2": 12290,
+      "population": 19764771,
+      "population_year": 2024,
+      "population_density": 26.14,
+      "gdp_usd": 330267137371,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 16709.89,
+      "flag_path": "assets/flags/CHL.svg"
+    },
+    "COL": {
+      "country_fa": "کلمبیا",
+      "country_en": "Colombia",
+      "iso3": "COL",
+      "iso2": "CO",
+      "capital": "Bogotá",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "COP",
+          "name": "Colombian Peso",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 1138910,
+      "land_area_km2": 1038700,
+      "water_area_km2": 100210,
+      "population": 52886363,
+      "population_year": 2024,
+      "population_density": 46.44,
+      "gdp_usd": 418818154879,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7919.21,
+      "flag_path": "assets/flags/COL.svg"
+    },
+    "PER": {
+      "country_fa": "پرو",
+      "country_en": "Peru",
+      "iso3": "PER",
+      "iso2": "PE",
+      "capital": "Lima",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PEN",
+          "name": "Peruvian Sol",
+          "symbol": "PEN"
+        }
+      ],
+      "area_km2": 1285216,
+      "land_area_km2": 1279996,
+      "water_area_km2": 5220,
+      "population": 34217848,
+      "population_year": 2024,
+      "population_density": 26.62,
+      "gdp_usd": 289221969062,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 8452.37,
+      "flag_path": "assets/flags/PER.svg"
+    },
+    "VEN": {
+      "country_fa": "ونزوئلا",
+      "country_en": "Venezuela",
+      "iso3": "VEN",
+      "iso2": "VE",
+      "capital": "Caracas",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "VES",
+          "name": "Venezuelan Bolívar",
+          "symbol": "VES"
+        }
+      ],
+      "area_km2": 912050,
+      "land_area_km2": 882050,
+      "water_area_km2": 30000,
+      "population": 28405543,
+      "population_year": 2024,
+      "population_density": 31.14,
+      "gdp_usd": 119802963257,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4217.59,
+      "flag_path": "assets/flags/VEN.svg"
+    },
+    "ECU": {
+      "country_fa": "اکوادور",
+      "country_en": "Ecuador",
+      "iso3": "ECU",
+      "iso2": "EC",
+      "capital": "Quito",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 283561,
+      "land_area_km2": 276841,
+      "water_area_km2": 6720,
+      "population": 18135478,
+      "population_year": 2024,
+      "population_density": 63.96,
+      "gdp_usd": 124676074700,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6874.71,
+      "flag_path": "assets/flags/ECU.svg"
+    },
+    "BOL": {
+      "country_fa": "بولیوی",
+      "country_en": "Bolivia",
+      "iso3": "BOL",
+      "iso2": "BO",
+      "capital": "Sucre",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        },
+        {
+          "code": "ay",
+          "name": "Aymara",
+          "native": "Aymar"
+        },
+        {
+          "code": "qu",
+          "name": "Quechua",
+          "native": "Runa Simi"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BOB",
+          "name": "Bolivian Boliviano",
+          "symbol": "Bs"
+        },
+        {
+          "code": "BOV",
+          "name": "Bolivian Mvdol",
+          "symbol": "BOV"
+        }
+      ],
+      "area_km2": 1098580,
+      "land_area_km2": 1083300,
+      "water_area_km2": 15280,
+      "population": 12413315,
+      "population_year": 2024,
+      "population_density": 11.3,
+      "gdp_usd": 54881327452,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 4421.17,
+      "flag_path": "assets/flags/BOL.svg"
+    },
+    "PRY": {
+      "country_fa": "پاراگوئه",
+      "country_en": "Paraguay",
+      "iso3": "PRY",
+      "iso2": "PY",
+      "capital": "Asunción",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        },
+        {
+          "code": "gn",
+          "name": "Guarani",
+          "native": "Avañe'ẽ"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PYG",
+          "name": "Paraguayan Guarani",
+          "symbol": "₲"
+        }
+      ],
+      "area_km2": 406752,
+      "land_area_km2": 397302,
+      "water_area_km2": 9450,
+      "population": 6929153,
+      "population_year": 2024,
+      "population_density": 17.04,
+      "gdp_usd": 44458118397,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6416.1,
+      "flag_path": "assets/flags/PRY.svg"
+    },
+    "URY": {
+      "country_fa": "اوروگوئه",
+      "country_en": "Uruguay",
+      "iso3": "URY",
+      "iso2": "UY",
+      "capital": "Montevideo",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "UYU",
+          "name": "Uruguayan Peso",
+          "symbol": "$"
+        },
+        {
+          "code": "UYI",
+          "name": "Uruguayan Peso (Indexed Units)",
+          "symbol": "UYI"
+        }
+      ],
+      "area_km2": 176215,
+      "land_area_km2": 175015,
+      "water_area_km2": 1200,
+      "population": 3386588,
+      "population_year": 2024,
+      "population_density": 19.22,
+      "gdp_usd": 80961511073,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 23906.51,
+      "flag_path": "assets/flags/URY.svg"
+    },
+    "GUY": {
+      "country_fa": "گویان",
+      "country_en": "Guyana",
+      "iso3": "GUY",
+      "iso2": "GY",
+      "capital": "Georgetown",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GYD",
+          "name": "Guyanese Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 214970,
+      "land_area_km2": 196850,
+      "water_area_km2": 18120,
+      "population": 831087,
+      "population_year": 2024,
+      "population_density": 3.87,
+      "gdp_usd": 24662709832,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 29675.24,
+      "flag_path": "assets/flags/GUY.svg"
+    },
+    "SUR": {
+      "country_fa": "سورینام",
+      "country_en": "Suriname",
+      "iso3": "SUR",
+      "iso2": "SR",
+      "capital": "Paramaribo",
+      "languages": [
+        {
+          "code": "nl",
+          "name": "Dutch",
+          "native": "Nederlands"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SRD",
+          "name": "Surinamese Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 163820,
+      "land_area_km2": 156000,
+      "water_area_km2": 7820,
+      "population": 634431,
+      "population_year": 2024,
+      "population_density": 3.87,
+      "gdp_usd": 4416775112,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6961.79,
+      "flag_path": "assets/flags/SUR.svg"
+    },
+    "CUB": {
+      "country_fa": "کوبا",
+      "country_en": "Cuba",
+      "iso3": "CUB",
+      "iso2": "CU",
+      "capital": "Havana",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CUP",
+          "name": "Cuban Peso",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 109880,
+      "land_area_km2": 103800,
+      "water_area_km2": 6080,
+      "population": 10979783,
+      "population_year": 2024,
+      "population_density": 99.93,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/CUB.svg"
+    },
+    "HTI": {
+      "country_fa": "هائیتی",
+      "country_en": "Haiti",
+      "iso3": "HTI",
+      "iso2": "HT",
+      "capital": "Port-au-Prince",
+      "languages": [
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        },
+        {
+          "code": "ht",
+          "name": "Haitian",
+          "native": "Krèyol ayisyen"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "HTG",
+          "name": "Haitian Gourde",
+          "symbol": "HTG"
+        },
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 27750,
+      "land_area_km2": 27560,
+      "water_area_km2": 190,
+      "population": 11772557,
+      "population_year": 2024,
+      "population_density": 424.24,
+      "gdp_usd": 25224154990,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2142.62,
+      "flag_path": "assets/flags/HTI.svg"
+    },
+    "DOM": {
+      "country_fa": "دومینیکان",
+      "country_en": "Dominican Republic",
+      "iso3": "DOM",
+      "iso2": "DO",
+      "capital": "Santo Domingo",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "DOP",
+          "name": "Dominican Peso",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 48670,
+      "land_area_km2": 48320,
+      "water_area_km2": 350,
+      "population": 11427557,
+      "population_year": 2024,
+      "population_density": 234.8,
+      "gdp_usd": 124282245638,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 10875.66,
+      "flag_path": "assets/flags/DOM.svg"
+    },
+    "JAM": {
+      "country_fa": "جامائیکا",
+      "country_en": "Jamaica",
+      "iso3": "JAM",
+      "iso2": "JM",
+      "capital": "Kingston",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "JMD",
+          "name": "Jamaican Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 10990,
+      "land_area_km2": 10830,
+      "water_area_km2": 160,
+      "population": 2839175,
+      "population_year": 2024,
+      "population_density": 258.34,
+      "gdp_usd": 22014397089,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7753.8,
+      "flag_path": "assets/flags/JAM.svg"
+    },
+    "TTO": {
+      "country_fa": "ترینیداد و توباگو",
+      "country_en": "Trinidad and Tobago",
+      "iso3": "TTO",
+      "iso2": "TT",
+      "capital": "Port of Spain",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TTD",
+          "name": "Trinidad & Tobago Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 5128,
+      "land_area_km2": 5128,
+      "water_area_km2": 0,
+      "population": 1368333,
+      "population_year": 2024,
+      "population_density": 266.84,
+      "gdp_usd": 25633544529,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 18733.41,
+      "flag_path": "assets/flags/TTO.svg"
+    },
+    "CRI": {
+      "country_fa": "کاستاریکا",
+      "country_en": "Costa Rica",
+      "iso3": "CRI",
+      "iso2": "CR",
+      "capital": "San José",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "CRC",
+          "name": "Costa Rican Colón",
+          "symbol": "₡"
+        }
+      ],
+      "area_km2": 51100,
+      "land_area_km2": 51060,
+      "water_area_km2": 40,
+      "population": 5129910,
+      "population_year": 2024,
+      "population_density": 100.39,
+      "gdp_usd": 95350423176,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 18587.15,
+      "flag_path": "assets/flags/CRI.svg"
+    },
+    "PAN": {
+      "country_fa": "پاناما",
+      "country_en": "Panama",
+      "iso3": "PAN",
+      "iso2": "PA",
+      "capital": "Panama City",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PAB",
+          "name": "Panamanian Balboa",
+          "symbol": "PAB"
+        },
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 75420,
+      "land_area_km2": 74340,
+      "water_area_km2": 1080,
+      "population": 4515577,
+      "population_year": 2024,
+      "population_density": 59.87,
+      "gdp_usd": 86523959131,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 19161.22,
+      "flag_path": "assets/flags/PAN.svg"
+    },
+    "GTM": {
+      "country_fa": "گواتمالا",
+      "country_en": "Guatemala",
+      "iso3": "GTM",
+      "iso2": "GT",
+      "capital": "Guatemala City",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GTQ",
+          "name": "Guatemalan Quetzal",
+          "symbol": "Q"
+        }
+      ],
+      "area_km2": 108890,
+      "land_area_km2": 107160,
+      "water_area_km2": 1730,
+      "population": 18406359,
+      "population_year": 2024,
+      "population_density": 169.04,
+      "gdp_usd": 113199581158,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6150.03,
+      "flag_path": "assets/flags/GTM.svg"
+    },
+    "HND": {
+      "country_fa": "هندوراس",
+      "country_en": "Honduras",
+      "iso3": "HND",
+      "iso2": "HN",
+      "capital": "Tegucigalpa",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "HNL",
+          "name": "Honduran Lempira",
+          "symbol": "L"
+        }
+      ],
+      "area_km2": 112490,
+      "land_area_km2": 111890,
+      "water_area_km2": 600,
+      "population": 10825703,
+      "population_year": 2024,
+      "population_density": 96.24,
+      "gdp_usd": 37093565854,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3426.43,
+      "flag_path": "assets/flags/HND.svg"
+    },
+    "SLV": {
+      "country_fa": "السالوادور",
+      "country_en": "El Salvador",
+      "iso3": "SLV",
+      "iso2": "SV",
+      "capital": "San Salvador",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "USD",
+          "name": "US Dollar",
+          "symbol": "$"
+        },
+        {
+          "code": "SVC",
+          "name": "Salvadoran Colón",
+          "symbol": "SVC"
+        }
+      ],
+      "area_km2": 21040,
+      "land_area_km2": 20720,
+      "water_area_km2": 320,
+      "population": 6338193,
+      "population_year": 2024,
+      "population_density": 301.24,
+      "gdp_usd": 35364960000,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5579.66,
+      "flag_path": "assets/flags/SLV.svg"
+    },
+    "NIC": {
+      "country_fa": "نیکاراگوئه",
+      "country_en": "Nicaragua",
+      "iso3": "NIC",
+      "iso2": "NI",
+      "capital": "Managua",
+      "languages": [
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NIO",
+          "name": "Nicaraguan Córdoba",
+          "symbol": "C$"
+        }
+      ],
+      "area_km2": 130370,
+      "land_area_km2": 119990,
+      "water_area_km2": 10380,
+      "population": 6916140,
+      "population_year": 2024,
+      "population_density": 53.05,
+      "gdp_usd": 19693982967,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2847.54,
+      "flag_path": "assets/flags/NIC.svg"
+    },
+    "BLZ": {
+      "country_fa": "بلیز",
+      "country_en": "Belize",
+      "iso3": "BLZ",
+      "iso2": "BZ",
+      "capital": "Belmopan",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "es",
+          "name": "Spanish",
+          "native": "Español"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BZD",
+          "name": "Belize Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 22970,
+      "land_area_km2": 22810,
+      "water_area_km2": 160,
+      "population": 417072,
+      "population_year": 2024,
+      "population_density": 18.16,
+      "gdp_usd": 3203631800,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7681.24,
+      "flag_path": "assets/flags/BLZ.svg"
+    },
+    "BHS": {
+      "country_fa": "باهاماس",
+      "country_en": "Bahamas",
+      "iso3": "BHS",
+      "iso2": "BS",
+      "capital": "Nassau",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BSD",
+          "name": "Bahamian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 13880,
+      "land_area_km2": 10010,
+      "water_area_km2": 3870,
+      "population": 401283,
+      "population_year": 2024,
+      "population_density": 28.91,
+      "gdp_usd": 15832800000,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 39455.45,
+      "flag_path": "assets/flags/BHS.svg"
+    },
+    "BRB": {
+      "country_fa": "باربادوس",
+      "country_en": "Barbados",
+      "iso3": "BRB",
+      "iso2": "BB",
+      "capital": "Bridgetown",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "BBD",
+          "name": "Barbadian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 431,
+      "land_area_km2": 431,
+      "water_area_km2": 0,
+      "population": 282467,
+      "population_year": 2024,
+      "population_density": 655.38,
+      "gdp_usd": 7498050000,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 26544.87,
+      "flag_path": "assets/flags/BRB.svg"
+    },
+    "AUS": {
+      "country_fa": "استرالیا",
+      "country_en": "Australia",
+      "iso3": "AUS",
+      "iso2": "AU",
+      "capital": "Canberra",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AUD",
+          "name": "Australian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 7741220,
+      "land_area_km2": 7682300,
+      "water_area_km2": 58920,
+      "population": 27196812,
+      "population_year": 2024,
+      "population_density": 3.51,
+      "gdp_usd": 1757022451652,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 64603.99,
+      "flag_path": "assets/flags/AUS.svg"
+    },
+    "NZL": {
+      "country_fa": "نیوزیلند",
+      "country_en": "New Zealand",
+      "iso3": "NZL",
+      "iso2": "NZ",
+      "capital": "Wellington",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "mi",
+          "name": "Maori",
+          "native": "Māori"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "NZD",
+          "name": "New Zealand Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 266838,
+      "land_area_km2": 262443,
+      "water_area_km2": 4395,
+      "population": 5287500,
+      "population_year": 2024,
+      "population_density": 19.82,
+      "gdp_usd": 260172385097,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 49205.18,
+      "flag_path": "assets/flags/NZL.svg"
+    },
+    "PNG": {
+      "country_fa": "پاپوآ گینه نو",
+      "country_en": "Papua New Guinea",
+      "iso3": "PNG",
+      "iso2": "PG",
+      "capital": "Port Moresby",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "PGK",
+          "name": "Papua New Guinean Kina",
+          "symbol": "PGK"
+        }
+      ],
+      "area_km2": 462840,
+      "land_area_km2": 452860,
+      "water_area_km2": 9980,
+      "population": 10576502,
+      "population_year": 2024,
+      "population_density": 22.85,
+      "gdp_usd": 31800428265,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3006.71,
+      "flag_path": "assets/flags/PNG.svg"
+    },
+    "FJI": {
+      "country_fa": "فیجی",
+      "country_en": "Fiji",
+      "iso3": "FJI",
+      "iso2": "FJ",
+      "capital": "Suva",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "fj",
+          "name": "Fijian",
+          "native": "Na Vosa Vakaviti"
+        },
+        {
+          "code": "hi",
+          "name": "Hindi",
+          "native": "हिन्दी"
+        },
+        {
+          "code": "ur",
+          "name": "Urdu",
+          "native": "اردو"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "FJD",
+          "name": "Fijian Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 18272,
+      "land_area_km2": 18272,
+      "water_area_km2": 0,
+      "population": 928784,
+      "population_year": 2024,
+      "population_density": 50.83,
+      "gdp_usd": 5968125909,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6425.74,
+      "flag_path": "assets/flags/FJI.svg"
+    },
+    "WSM": {
+      "country_fa": "ساموآ",
+      "country_en": "Samoa",
+      "iso3": "WSM",
+      "iso2": "WS",
+      "capital": "Apia",
+      "languages": [
+        {
+          "code": "sm",
+          "name": "Samoan",
+          "native": "Gagana Samoa"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "WST",
+          "name": "Samoan Tala",
+          "symbol": "WST"
+        }
+      ],
+      "area_km2": 2831,
+      "land_area_km2": 2821,
+      "water_area_km2": 10,
+      "population": 218019,
+      "population_year": 2024,
+      "population_density": 77.01,
+      "gdp_usd": 1175749785,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 5392.88,
+      "flag_path": "assets/flags/WSM.svg"
+    },
+    "TON": {
+      "country_fa": "تونگا",
+      "country_en": "Tonga",
+      "iso3": "TON",
+      "iso2": "TO",
+      "capital": "Nuku'alofa",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "to",
+          "name": "Tonga",
+          "native": "Lea Faka-Tonga"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TOP",
+          "name": "Tongan Paʻanga",
+          "symbol": "T$"
+        }
+      ],
+      "area_km2": 747,
+      "land_area_km2": 717,
+      "water_area_km2": 30,
+      "population": 104175,
+      "population_year": 2024,
+      "population_density": 139.46,
+      "gdp_usd": null,
+      "gdp_year": null,
+      "gdp_per_capita_usd": null,
+      "flag_path": "assets/flags/TON.svg"
+    },
+    "VUT": {
+      "country_fa": "وانواتو",
+      "country_en": "Vanuatu",
+      "iso3": "VUT",
+      "iso2": "VU",
+      "capital": "Port Vila",
+      "languages": [
+        {
+          "code": "bi",
+          "name": "Bislama",
+          "native": "Bislama"
+        },
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        },
+        {
+          "code": "fr",
+          "name": "French",
+          "native": "Français"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "VUV",
+          "name": "Vanuatu Vatu",
+          "symbol": "VUV"
+        }
+      ],
+      "area_km2": 12189,
+      "land_area_km2": 12189,
+      "water_area_km2": 0,
+      "population": 327777,
+      "population_year": 2024,
+      "population_density": 26.89,
+      "gdp_usd": 1117972034,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3410.77,
+      "flag_path": "assets/flags/VUT.svg"
+    },
+    "SLB": {
+      "country_fa": "جزایر سلیمان",
+      "country_en": "Solomon Islands",
+      "iso3": "SLB",
+      "iso2": "SB",
+      "capital": "Honiara",
+      "languages": [
+        {
+          "code": "en",
+          "name": "English",
+          "native": "English"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "SBD",
+          "name": "Solomon Islands Dollar",
+          "symbol": "$"
+        }
+      ],
+      "area_km2": 28896,
+      "land_area_km2": 27986,
+      "water_area_km2": 910,
+      "population": 819198,
+      "population_year": 2024,
+      "population_density": 28.35,
+      "gdp_usd": 1583964703,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1933.56,
+      "flag_path": "assets/flags/SLB.svg"
+    },
+    "KAZ": {
+      "country_fa": "قزاقستان",
+      "country_en": "Kazakhstan",
+      "iso3": "KAZ",
+      "iso2": "KZ",
+      "capital": "Astana",
+      "languages": [
+        {
+          "code": "kk",
+          "name": "Kazakh",
+          "native": "Қазақша"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KZT",
+          "name": "Kazakhstani Tenge",
+          "symbol": "₸"
+        }
+      ],
+      "area_km2": 2724902,
+      "land_area_km2": 2699700,
+      "water_area_km2": 25202,
+      "population": 20592571,
+      "population_year": 2024,
+      "population_density": 7.56,
+      "gdp_usd": 291480274648,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 14154.63,
+      "flag_path": "assets/flags/KAZ.svg"
+    },
+    "UZB": {
+      "country_fa": "ازبکستان",
+      "country_en": "Uzbekistan",
+      "iso3": "UZB",
+      "iso2": "UZ",
+      "capital": "Tashkent",
+      "languages": [
+        {
+          "code": "uz",
+          "name": "Uzbek",
+          "native": "O'zbekcha"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "UZS",
+          "name": "Uzbekistani Som",
+          "symbol": "UZS"
+        }
+      ],
+      "area_km2": 447400,
+      "land_area_km2": 425400,
+      "water_area_km2": 22000,
+      "population": 36361859,
+      "population_year": 2024,
+      "population_density": 81.27,
+      "gdp_usd": 114965293466,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 3161.7,
+      "flag_path": "assets/flags/UZB.svg"
+    },
+    "TKM": {
+      "country_fa": "ترکمنستان",
+      "country_en": "Turkmenistan",
+      "iso3": "TKM",
+      "iso2": "TM",
+      "capital": "Ashgabat",
+      "languages": [
+        {
+          "code": "tk",
+          "name": "Turkmen",
+          "native": "Туркмен / تركمن"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TMT",
+          "name": "Turkmenistani Manat",
+          "symbol": "TMT"
+        }
+      ],
+      "area_km2": 488100,
+      "land_area_km2": 469930,
+      "water_area_km2": 18170,
+      "population": 7494498,
+      "population_year": 2024,
+      "population_density": 15.35,
+      "gdp_usd": 51387209872,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 6856.66,
+      "flag_path": "assets/flags/TKM.svg"
+    },
+    "TJK": {
+      "country_fa": "تاجیکستان",
+      "country_en": "Tajikistan",
+      "iso3": "TJK",
+      "iso2": "TJ",
+      "capital": "Dushanbe",
+      "languages": [
+        {
+          "code": "tg",
+          "name": "Tajik",
+          "native": "Тоҷикӣ"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "TJS",
+          "name": "Tajikistani Somoni",
+          "symbol": "TJS"
+        }
+      ],
+      "area_km2": 144100,
+      "land_area_km2": 141510,
+      "water_area_km2": 2590,
+      "population": 10590927,
+      "population_year": 2024,
+      "population_density": 73.5,
+      "gdp_usd": 14204575548,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 1341.2,
+      "flag_path": "assets/flags/TJK.svg"
+    },
+    "KGZ": {
+      "country_fa": "قرقیزستان",
+      "country_en": "Kyrgyzstan",
+      "iso3": "KGZ",
+      "iso2": "KG",
+      "capital": "Bishkek",
+      "languages": [
+        {
+          "code": "ky",
+          "name": "Kyrgyz",
+          "native": "Кыргызча"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "KGS",
+          "name": "Kyrgyz Som",
+          "symbol": "⃀"
+        }
+      ],
+      "area_km2": 199950,
+      "land_area_km2": 191800,
+      "water_area_km2": 8150,
+      "population": 7221868,
+      "population_year": 2024,
+      "population_density": 36.12,
+      "gdp_usd": 17478259659,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 2420.19,
+      "flag_path": "assets/flags/KGZ.svg"
+    },
+    "AZE": {
+      "country_fa": "آذربایجان",
+      "country_en": "Azerbaijan",
+      "iso3": "AZE",
+      "iso2": "AZ",
+      "capital": "Baku",
+      "languages": [
+        {
+          "code": "az",
+          "name": "Azerbaijani",
+          "native": "Azərbaycanca / آذربايجان"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AZN",
+          "name": "Azerbaijani Manat",
+          "symbol": "₼"
+        }
+      ],
+      "area_km2": 86600,
+      "land_area_km2": 82650,
+      "water_area_km2": 3950,
+      "population": 10202830,
+      "population_year": 2024,
+      "population_density": 117.82,
+      "gdp_usd": 74315882352,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 7283.85,
+      "flag_path": "assets/flags/AZE.svg"
+    },
+    "ARM": {
+      "country_fa": "ارمنستان",
+      "country_en": "Armenia",
+      "iso3": "ARM",
+      "iso2": "AM",
+      "capital": "Yerevan",
+      "languages": [
+        {
+          "code": "hy",
+          "name": "Armenian",
+          "native": "Հայերեն"
+        },
+        {
+          "code": "ru",
+          "name": "Russian",
+          "native": "Русский"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "AMD",
+          "name": "Armenian Dram",
+          "symbol": "֏"
+        }
+      ],
+      "area_km2": 29740,
+      "land_area_km2": 28470,
+      "water_area_km2": 1270,
+      "population": 3033500,
+      "population_year": 2024,
+      "population_density": 102,
+      "gdp_usd": 25955275380,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 8556.21,
+      "flag_path": "assets/flags/ARM.svg"
+    },
+    "GEO": {
+      "country_fa": "گرجستان",
+      "country_en": "Georgia",
+      "iso3": "GEO",
+      "iso2": "GE",
+      "capital": "Tbilisi",
+      "languages": [
+        {
+          "code": "ka",
+          "name": "Georgian",
+          "native": "ქართული"
+        }
+      ],
+      "currencies": [
+        {
+          "code": "GEL",
+          "name": "Georgian Lari",
+          "symbol": "₾"
+        }
+      ],
+      "area_km2": 69700,
+      "land_area_km2": 69490,
+      "water_area_km2": 210,
+      "population": 3699557,
+      "population_year": 2024,
+      "population_density": 53.08,
+      "gdp_usd": 34189423544,
+      "gdp_year": 2024,
+      "gdp_per_capita_usd": 9241.49,
+      "flag_path": "assets/flags/GEO.svg"
+    }
+  }
+}
