@@ -850,6 +850,29 @@ function bindPoliticalChangeForm(r) {
   };
 }
 
+
+function politicalCurrentStatusHtml(pc, baseline) {
+  if (!pc) return dashMissing('وضعیت سیاسی فعلی','اطلاعات جاری سیاسی کشور در ذخیره بازی موجود نیست.');
+  var fields = [
+    ['government_form','نوع حکومت'],['government_subform','زیرنوع حکومت'],
+    ['executive_legislative_system','مدل اجرایی و تقنینی'],
+    ['territorial_structure','ساختار سرزمینی'],['regime_character','ویژگی نظام سیاسی'],
+    ['party_system','نظام حزبی']
+  ];
+  var h = '<h3>📍 وضعیت سیاسی فعلی در بازی</h3><div class="dashCard">';
+  var changed = false;
+  for (var i=0;i<fields.length;i++) {
+    var key=fields[i][0], value=pc[key];
+    var isChanged = baseline && JSON.stringify(value) !== JSON.stringify(baseline[key]);
+    if (isChanged) changed = true;
+    h += '<div class="row"><span class="muted">'+dashEsc(fields[i][1])+'</span><b>'+dashEsc(classificationValueLabel(key,value))+'</b></div>';
+  }
+  h += '</div>';
+  if (changed) h += '<div class="dashNote">برخی محورهای ساختار سیاسی نسبت به baseline آغاز سناریو تغییر کرده‌اند؛ مرجع اولیه در بخش بعدی محفوظ است.</div>';
+  else h += '<div class="dashNote">ساختار فعلی هنوز با طبقه‌بندی پایه آغاز سناریو یکسان است.</div>';
+  return h;
+}
+
 function politicalClassificationHtml(pc) {
   if (!pc) return dashMissing('طبقه‌بندی سیاسی پایه','اطلاعات طبقه‌بندی ساختاریافته برای این کشور در ذخیره بازی موجود نیست.');
   var names = {"communism":"کمونیسم","marxism_leninism":"مارکسیسم–لنینیسم","socialism":"سوسیالیسم","democratic_socialism":"سوسیالیسم دموکراتیک","social_democracy":"سوسیال‌دموکراسی","liberalism":"لیبرالیسم","classical_liberalism":"لیبرالیسم کلاسیک","conservatism":"محافظه‌کاری","liberal_conservatism":"محافظه‌کاری لیبرال","national_conservatism":"محافظه‌کاری ملی","christian_democracy":"دموکراسی مسیحی","nationalism":"ملی‌گرایی","civic_nationalism":"ملی‌گرایی مدنی","ethnic_nationalism":"ملی‌گرایی قومی","islamism":"اسلام‌گرایی","islamic_democracy":"دموکراسی اسلامی","political_islam_conservatism":"محافظه‌کاری اسلام‌گرا","secularism":"سکولاریسم","green_politics":"سیاست سبز / محیط‌زیست‌گرایی","libertarianism":"لیبرتارینیسم","populism":"پوپولیسم","progressivism":"ترقی‌خواهی","fascism":"فاشیسم","far_right":"راست افراطی","anarchism":"آنارشیسم","monarchism":"سلطنت‌طلبی","baathism":"بعث‌گرایی","juche":"جوچه","military_nationalism":"ملی‌گرایی نظامی","mixed_pragmatic":"ترکیبی / عمل‌گرایانه","other":"سایر","not_officially_declared":"ایدئولوژی رسمی اعلام‌نشده","unknown":"نامشخص","social_liberalism":"لیبرالیسم اجتماعی"}, fields = [
@@ -1077,9 +1100,11 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += '</div><div class="dashNote">زبان‌ها و واحدهای پول از داده مرجع کشورها خوانده می‌شوند؛ در کشورهایی با چند زبان، همه موارد ثبت‌شده نمایش داده می‌شوند.</div>';
     } else h += dashMissing('اطلاعات پایه کشور','پرونده اطلاعات مرجع برای این کشور در دسترس نیست.');
   } else if (tab === 'politics') {
-    var pp = r.political_profile || null, pc = r.political_classification || null, cur, keys2, item, fields, j, k, val;
+    var pp = r.political_profile || null, pc = r.political_classification || null;
+    var baselinePc = r.political_baseline || null, cur, keys2, item, fields, j, k, val;
     h += '<h3>🏛 ساختار سیاسی</h3>';
-    h += politicalClassificationHtml(pc);
+    h += politicalCurrentStatusHtml(pc, baselinePc);
+    h += politicalClassificationHtml(baselinePc);
     h += politicalChangeFormHtml(pc, isPlayer);
     h += '<div class="dashCard"><div class="row"><span class="muted">رئیس کشور / دولت در موتور بازی</span><b>'+dashEsc(r.leader)+'</b></div>';
     h += '<div class="row"><span class="muted">ثبات سیاسی شبیه‌سازی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
