@@ -209,6 +209,16 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
       <div id="eventStatementView" class="eventPanelView">
       <section class="eventStatementsArea">
         <div class="eventSectionLabel" id="eventStatementTitle">پنجره بیانیه‌ها · حالت عمومی</div>
+        <div id="confidentialTargetBox" class="eventTargetBox" hidden>
+          <strong style="color:#ffd479;font-size:12px">انتخاب کشورهای مذاکره محرمانه</strong>
+          <div id="confidentialTargetSummary" class="eventSelectionSummary">هنوز کشوری انتخاب و تأیید نشده است.</div>
+          <button type="button" id="confidentialChooseCountries">＋ انتخاب کشورها</button>
+          <div id="confidentialCountryList" class="eventTargetList"></div>
+          <div class="eventActionRow">
+            <button type="button" class="eventBtnConfirm" id="confidentialConfirmCountries">تأیید</button>
+            <button type="button" class="eventBtnCancel" id="confidentialCancelCountries">لغو و پاک‌کردن انتخاب‌ها</button>
+          </div>
+        </div>
         <div class="eventStatementFeed" id="eventStatementFeed" aria-live="polite">
           <div class="eventStatementEmpty">بیانیه‌ای برای نمایش وجود ندارد.<br>پس از اتصال هوش مصنوعی زنده، بیانیه‌های کشورها در این قسمت نمایش داده می‌شوند.</div>
         </div>
