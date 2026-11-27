@@ -367,7 +367,7 @@ function renderEventTalkState() {
   var feedBox = el('eventStatementFeed');
   var composerBox = el('eventStatementInput');
   var sendBox = el('eventStatementSend');
-  if (feedBox && feedBox.parentNode) feedBox.parentNode.style.display = confidentialOnly ? 'none' : '';
+  if (feedBox) feedBox.style.display = confidentialOnly ? 'none' : '';
   if (composerBox && composerBox.parentNode) composerBox.parentNode.style.display = (confidential || alliance) ? 'none' : ''; 
   if (sendBox) sendBox.style.display = (confidential || alliance) ? 'none' : '';
   if (cb) { cb.className = 'eventNegotiationToggle' + (confidential ? ' active' : ''); cb.setAttribute('aria-pressed', confidential ? 'true' : 'false'); }
