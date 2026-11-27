@@ -567,10 +567,45 @@ def review_player_political_reform(s, proposal_id):
         total = sum(max(0.0, float(v.get("current", 0))) for v in reactions.values())
         if total > 0:
             party_score = sum(v["projected"] * v["current"] for v in reactions.values()) / total
+
+    social_groups = s.setdefault("social_groups", {}).setdefault(player, dict(SOCIAL_GROUP_BASE))
+    social_reactions = {}
+    for group_name, support in social_groups.items():
+        delta = 0
+        if group_name == "کارگران و مزدبگیران":
+            delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system"])) else 0
+            delta -= 1 if "official_ideology" in fields else 0
+        elif group_name == "کسب‌وکار و بازرگانان":
+            delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system"])) else 0
+            delta -= 2 if "official_ideology" in fields else 0
+        elif group_name == "کارمندان و خدمات عمومی":
+            delta += 2 if fields.intersection(set(["government_form", "government_subform", "executive_legislative_system"])) else 0
+            delta -= 1 if "regime_character" in fields else 0
+        elif group_name == "دانشجویان و جوانان":
+            delta += 2 if fields.intersection(set(["party_system", "executive_legislative_system"])) else 0
+            delta -= 1 if "official_ideology" in fields else 0
+        elif group_name == "کشاورزان و مناطق روستایی":
+            territory_change = changes.get("territorial_structure")
+            territory_value = territory_change.get("new") if isinstance(territory_change, dict) else territory_change
+            delta += 3 if territory_value in ("federal", "federal_state", "confederation") else 0
+            delta -= 2 if territory_value in ("unitary", "centralized") else 0
+        elif group_name == "متخصصان و طبقه متوسط":
+            delta += 2 if fields.intersection(set(["executive_legislative_system", "party_system"])) else 0
+            delta -= 1 if "government_form" in fields else 0
+        social_reactions[group_name] = dict(
+            current=round(float(support), 1), projected_change=delta,
+            projected=round(max(0.0, min(100.0, float(support) + delta)), 1))
+    social_score = 50.0
+    if social_reactions:
+        social_total = sum(max(0.0, float(v.get("current", 0))) for v in social_reactions.values())
+        if social_total > 0:
+            social_score = sum(v["projected"] * v["current"] for v in social_reactions.values()) / social_total
+
     scope = sum(1 for _ in changes)
     complexity_penalty = min(20.0, scope * 2.5)
     feasibility = max(0.0, min(100.0,
-        stability * 0.35 + affordability * 0.25 + party_score * 0.40 - complexity_penalty))
+        stability * 0.35 + affordability * 0.25 +
+        party_score * 0.20 + social_score * 0.20 - complexity_penalty))
     if stability < 20:
         outlook = "پرریسک؛ ثبات داخلی پایین است"
     elif affordability < 25:
@@ -584,8 +619,10 @@ def review_player_political_reform(s, proposal_id):
     proposal["review"] = dict(
         reviewed_date=s.get("game_date", ""), stability=round(stability, 1),
         affordability=round(affordability, 1), party_score=round(party_score, 1),
+        social_score=round(social_score, 1),
         complexity_penalty=round(complexity_penalty, 1),
-        feasibility=round(feasibility, 1), outlook=outlook, party_reactions=reactions,
+        feasibility=round(feasibility, 1), outlook=outlook,
+        party_reactions=reactions, social_reactions=social_reactions,
         note="ارزیابی تقریبیِ مدل بازی؛ نتیجه قطعی نیست و هیچ هزینه یا تغییری اعمال نشده است."
     )
     proposal["status"] = "reviewed"
@@ -668,6 +705,23 @@ def load():
             else:
                 pol[n] = dict(parties=dict(AI_PARTY_BASE), press=[])
         s["politics"] = pol
+    if not isinstance(s.get("social_groups"), dict):
+        s["social_groups"] = {}
+    player_name = s.get("player")
+    if player_name:
+        groups = s["social_groups"].get(player_name)
+        if not isinstance(groups, dict) or not groups:
+            s["social_groups"][player_name] = dict(SOCIAL_GROUP_BASE)
+        else:
+            for group_name, default_value in SOCIAL_GROUP_BASE.items():
+                groups.setdefault(group_name, default_value)
+            total_groups = sum(max(0.0, float(v)) for v in groups.values())
+            if total_groups > 0:
+                s["social_groups"][player_name] = dict(
+                    (k, round(max(0.0, float(v)) * 100.0 / total_groups, 1))
+                    for k, v in groups.items())
+    if not isinstance(s.get("political_history"), list):
+        s["political_history"] = []
     if not isinstance(s.get("turn_events"), dict):
         s["turn_events"] = {}
     s.setdefault("proxies", [])
@@ -1379,6 +1433,7 @@ def init_game(player):
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
+        social_groups={player: dict(SOCIAL_GROUP_BASE)},
         turn_events={},
         log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
@@ -1398,6 +1453,16 @@ WEST = {"آمریکا", "بریتانیا", "فرانسه", "آلمان", "ژا�
 EAST = {"روسیه", "چین"}
 
 AI_PARTY_BASE = {"حاکمیت": 38, "اپوزیسیون": 24, "ارتش‌گرایان": 20, "تجار": 18}
+
+# شاخص اجتماعی پایه؛ درصدها صرفاً مدل شبیه‌سازی‌اند و جمع آن‌ها ۱۰۰ است.
+SOCIAL_GROUP_BASE = {
+    "کارگران و مزدبگیران": 22.0,
+    "کسب‌وکار و بازرگانان": 18.0,
+    "کارمندان و خدمات عمومی": 16.0,
+    "دانشجویان و جوانان": 15.0,
+    "کشاورزان و مناطق روستایی": 14.0,
+    "متخصصان و طبقه متوسط": 15.0,
+}
 
 AI_OUTLETS = [
     dict(name_fmt="روزنامه رسمی {who}", copy={
@@ -2193,6 +2258,24 @@ def _reform_party_impact(s, proposal, fraction, reverse=False):
             parties[party] = round(max(0.0, float(parties[party])) * 100.0 / total, 1)
 
 
+def _reform_social_impact(s, proposal, fraction, reverse=False):
+    """اعمال تدریجی تغییر حمایت گروه‌های اجتماعی؛ مقادیر نمایشی و شبیه‌سازی‌شده‌اند."""
+    player = s.get("player")
+    all_groups = s.setdefault("social_groups", {})
+    groups = all_groups.setdefault(player, dict(SOCIAL_GROUP_BASE))
+    reactions = ((proposal.get("review") or {}).get("social_reactions") or {})
+    direction = -1.0 if reverse else 1.0
+    for group_name, reaction in reactions.items():
+        if group_name not in groups:
+            continue
+        delta = float(reaction.get("projected_change", 0)) * float(fraction) * direction
+        groups[group_name] = max(0.0, min(100.0, float(groups.get(group_name, 0)) + delta))
+    total = sum(max(0.0, float(v)) for v in groups.values())
+    if total > 0:
+        for group_name in list(groups):
+            groups[group_name] = round(max(0.0, float(groups[group_name])) * 100.0 / total, 1)
+
+
 def _reform_press_line(s, proposal, stage, detail):
     """ثبت تیتر اصلاحات در همان آرشیو مطبوعات داخلی بازی."""
     player = s.get("player", "کشور بازیکن")
@@ -2233,9 +2316,12 @@ def _reform_impact_profile(proposal):
     if "party_system" in fields:
         themes.append("حزبی")
         responses.append("بازآرایی رقابت و ائتلاف میان احزاب")
+    if "گروه‌های اجتماعی" not in themes:
+        themes.append("گروه‌های اجتماعی")
     if not themes:
         themes.append("سیاسی")
         responses.append("واکنش عمومی محدود به دامنه تغییرات")
+    responses.append("تغییر حمایت گروه‌های اجتماعی به‌صورت عددی و مرحله‌ای شبیه‌سازی می‌شود")
     return {"themes": themes, "public_response": responses,
             "risk_note": "این پیامدها برآورد شبیه‌سازی بازی هستند، نه پیش‌بینی قطعی رویدادهای واقعی."}
 
@@ -2295,6 +2381,7 @@ def advance_player_political_reforms(s, daily_log):
 
         if "start" not in stages:
             _reform_party_impact(s, proposal, 0.25)
+            _reform_social_impact(s, proposal, 0.25)
             stages.append("start")
             line = _reform_press_line(
                 s, proposal, "start",
@@ -2304,6 +2391,7 @@ def advance_player_political_reforms(s, daily_log):
         midpoint = max(2, int((total_days + 1) / 2))
         if proposal["elapsed_days"] >= midpoint and "midpoint" not in stages:
             _reform_party_impact(s, proposal, 0.50)
+            _reform_social_impact(s, proposal, 0.50)
             stages.append("midpoint")
             line = _reform_press_line(
                 s, proposal, "midpoint",
@@ -2324,6 +2412,7 @@ def advance_player_political_reforms(s, daily_log):
             country["stab"] = max(0.0, float(country.get("stab", 0)) - 4.0)
             proposal["completed_date"] = s.get("game_date", "")
             _reform_party_impact(s, proposal, 0.75, reverse=True)
+            _reform_social_impact(s, proposal, 0.75, reverse=True)
             line = _reform_press_line(
                 s, proposal, "failed",
                 "طرح پس از طی مراحل اجرایی به نتیجه نرسید و تغییرات نهایی اعمال نشد.")
@@ -2336,6 +2425,7 @@ def advance_player_political_reforms(s, daily_log):
             current[field] = value.get("new") if isinstance(value, dict) and "new" in value else value
 
         _reform_party_impact(s, proposal, 0.25)
+        _reform_social_impact(s, proposal, 0.25)
         if "completed" not in stages:
             stages.append("completed")
         scope = len(proposal.get("changes") or {})
@@ -2345,10 +2435,14 @@ def advance_player_political_reforms(s, daily_log):
         proposal["progress"] = 100
         proposal["completed_date"] = s.get("game_date", "")
         proposal["spent_cost"] = round(total_cost, 2)
+        final_groups = dict(s.get("social_groups", {}).get(player, {}))
+        impact["social_groups_final"] = final_groups
         history_item = {
             "date": s.get("game_date", ""), "country": player,
             "proposal_id": proposal.get("id"), "changes": proposal.get("changes", {}),
-            "status": "completed", "impact": impact
+            "status": "completed", "impact": impact,
+            "social_groups_final": final_groups,
+            "social_score_at_review": (review.get("social_score") if review else None)
         }
         s.setdefault("political_history", []).append(history_item)
         line = _reform_press_line(
