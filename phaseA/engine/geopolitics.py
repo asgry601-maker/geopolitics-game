@@ -458,6 +458,26 @@ def apply_player_political_change(s, changes):
     if not updated:
         return dict(ok=False, error="هیچ تغییری نسبت به ساختار فعلی انتخاب نشده است.")
 
+    # جلوگیری از ترکیب‌های نامعتبر میان نوع حکومت و زیرنوع آن.
+    candidate_form = updated.get("government_form", {}).get("new", current.get("government_form"))
+    candidate_subform = updated.get("government_subform", {}).get("new", current.get("government_subform"))
+    compatible_subforms = {
+        "republic": set(["democratic_socialist_republic", "federal_directorial_republic",
+            "federal_parliamentary_republic", "federal_republic", "federal_semi_presidential_republic",
+            "fragmented_transitional_republic", "islamic_republic", "parliamentary_republic",
+            "presidential_republic", "semi_presidential_republic", "socialist_republic", "transitional_authority"]),
+        "monarchy": set(["absolute_monarchy", "constitutional_monarchy", "federal_constitutional_monarchy"]),
+        "emirate": set(["hereditary_emirate", "islamic_emirate"]),
+        "military_government": set(["military_junta"]),
+        "sultanate": set(["absolute_monarchy"]),
+        "transitional_government": set(["interim_self_governing_authority", "military_junta",
+            "military_led_transitional_authority", "transitional_authority", "transitional_presidential_authority"]),
+    }
+    if ("government_form" in updated or "government_subform" in updated):
+        valid_subforms = compatible_subforms.get(candidate_form)
+        if valid_subforms and candidate_subform not in valid_subforms:
+            return dict(ok=False, error="نوع حکومت و زیرنوع انتخاب‌شده با هم سازگار نیستند؛ هر دو را به شکل هماهنگ انتخاب کن.")
+
     for field, item in updated.items():
         current[field] = item["new"]
     history = s.setdefault("political_history", [])
