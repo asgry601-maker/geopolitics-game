@@ -1529,7 +1529,9 @@ function bindToolbar() {
   bindEventTalkControls();
   bindEventPanelTabs();
   bindSanctionsUI();
-  el('btnStart').onclick = function () { startGame(false); };
+  /* دکمه شروع مستقل از خطاهای احتمالی اتصال سایر کنترل‌ها */
+  var startBtn = el('btnStart');
+  if (startBtn) startBtn.onclick = function () { startGame(false); };
 }
 
 /* ---------- شمارنده FPS ---------- */
