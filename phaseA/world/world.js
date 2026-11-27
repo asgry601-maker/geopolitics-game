@@ -578,7 +578,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         LAO: 'Portrait of Thongloun Sisoulith.jpg',
         BRN: 'Sultan Hassanal Bolkiah - 53857993945(cropped).jpg',
         TLS: 'Portrait of Jose Ramos-Horta.jpg',
-        NER: 'Tiani (cropped).jpg'
+        NER: 'Tiani (cropped).jpg',
+        BFA: 'Ibrahim Traoré portrait.jpg',
+        GIN: 'Mamady Doumbouya.png',
+        SLE: 'Julius Maada Bio - 2020 (cropped).jpg',
+        LBR: 'Joseph Boakai in Yokohama (cropped).jpg',
+        TGO: 'President of Togo Faure Gnassingbé on November 13, 2024 (cropped).jpg',
+        BEN: 'Romuald Wadagni in June 2026.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
