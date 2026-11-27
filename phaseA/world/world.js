@@ -361,6 +361,15 @@ function renderEventTalkState() {
   var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
   var cs = el('confidentialTalkState'), as = el('allianceTalkState');
   var title = el('eventStatementTitle'), note = el('eventContextNote');
+  var targetBox = el('confidentialTargetBox');
+  var confidentialOnly = confidential && !alliance;
+  if (targetBox) targetBox.hidden = !confidentialOnly;
+  var feedBox = el('eventStatementFeed');
+  var composerBox = el('eventStatementInput');
+  var sendBox = el('eventStatementSend');
+  if (feedBox && feedBox.parentNode) feedBox.parentNode.style.display = confidentialOnly ? 'none' : '';
+  if (composerBox && composerBox.parentNode) composerBox.parentNode.style.display = (confidential || alliance) ? 'none' : ''; 
+  if (sendBox) sendBox.style.display = (confidential || alliance) ? 'none' : '';
   if (cb) { cb.className = 'eventNegotiationToggle' + (confidential ? ' active' : ''); cb.setAttribute('aria-pressed', confidential ? 'true' : 'false'); }
   if (ab) { ab.className = 'eventNegotiationToggle' + (alliance ? ' active' : ''); ab.setAttribute('aria-pressed', alliance ? 'true' : 'false'); }
   if (cs) cs.textContent = confidential ? 'روشن' : 'خاموش';
@@ -371,35 +380,165 @@ function renderEventTalkState() {
   var feed = el('eventStatementFeed');
   if (!context.length) {
     if (title) title.textContent = 'پنجره بیانیه‌ها · حالت عمومی';
-    if (note) note.textContent = 'حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.';
+    if (note) note.textContent = 'حالت عمومی فعال است؛ مذاکره محرمانه در رسانه‌ها یا بیانیه عمومی نمایش داده نمی‌شود.';
     if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'بیانیه‌ای برای نمایش وجود ندارد. پس از اتصال هوش مصنوعی زنده، بیانیه‌های عمومی کشورها در این قسمت نمایش داده می‌شوند.';
+  } else if (confidential && alliance) {
+    if (title) title.textContent = 'مذاکره محرمانه با اتحاد';
+    if (note) note.textContent = 'این گفت‌وگو فقط میان بازیکن و هم‌پیمانان انجام می‌شود و کاملاً محرمانه است؛ هیچ محتوایی به مطبوعات یا بیانیه عمومی راه پیدا نمی‌کند، مگر اینکه بازیکن خودش آن را منتشر کند.';
+  } else if (confidential) {
+    if (title) title.textContent = 'مذاکره محرمانه · انتخاب کشورها';
+    if (note) note.textContent = 'کشورهای موردنظر را انتخاب و تأیید کن. این مذاکره خصوصی می‌ماند و به رسانه‌ها یا بیانیه عمومی منتقل نمی‌شود.';
   } else {
-    if (title) title.textContent = 'پنجره بیانیه‌ها · ' + context.join(' + ');
-    if (note) note.textContent = 'زمینه فعلی پنجره بیانیه: ' + context.join(' و ') + '. با خاموش‌کردن گزینه‌ها، پنجره به حالت عمومی برمی‌گردد.';
-    if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'هنوز بیانیه‌ای در زمینه ' + context.join(' و ') + ' وجود ندارد. پس از اتصال هوش مصنوعی زنده، محتوای مرتبط در این قسمت نمایش داده می‌شود.';
+    if (title) title.textContent = 'پنجره مذاکرات با اتحاد';
+    if (note) note.textContent = 'این بخش برای گفت‌وگو با اتحاد و هم‌پیمانان است. برای حالت محرمانه، گزینه مذاکره محرمانه را نیز روشن کن.';
   }
 }
 var EVENT_PANEL_VIEW = 'statements';
 function setEventPanelView(view) {
-  EVENT_PANEL_VIEW = view === 'military' ? 'military' : 'statements';
-  var sv = el('eventStatementView'), mv = el('eventMilitaryView');
-  var sb = el('eventTabStatements'), mb = el('eventTabMilitary');
-  var isMilitary = EVENT_PANEL_VIEW === 'military';
-  if (sv) sv.hidden = isMilitary;
+  EVENT_PANEL_VIEW = (view === 'military' || view === 'sanctions') ? view : 'statements';
+  var sv = el('eventStatementView'), mv = el('eventMilitaryView'), xv = el('eventSanctionsView');
+  var sb = el('eventTabStatements'), mb = el('eventTabMilitary'), xb = el('eventTabSanctions');
+  var isMilitary = EVENT_PANEL_VIEW === 'military', isSanctions = EVENT_PANEL_VIEW === 'sanctions';
+  if (sv) sv.hidden = isMilitary || isSanctions;
   if (mv) mv.hidden = !isMilitary;
-  if (sb) { sb.className = 'eventPanelTab' + (isMilitary ? '' : ' active'); sb.setAttribute('aria-selected', isMilitary ? 'false' : 'true'); }
+  if (xv) xv.hidden = !isSanctions;
+  if (sb) { sb.className = 'eventPanelTab' + (!isMilitary && !isSanctions ? ' active' : ''); sb.setAttribute('aria-selected', (!isMilitary && !isSanctions) ? 'true' : 'false'); }
   if (mb) { mb.className = 'eventPanelTab' + (isMilitary ? ' active' : ''); mb.setAttribute('aria-selected', isMilitary ? 'true' : 'false'); }
+  if (xb) { xb.className = 'eventPanelTab' + (isSanctions ? ' active' : ''); xb.setAttribute('aria-selected', isSanctions ? 'true' : 'false'); }
+}
+var CONFIDENTIAL_DRAFT = [];
+var CONFIDENTIAL_TARGETS = [];
+var SANCTION_DRAFT_COUNTRIES = [];
+var SANCTION_TARGET_COUNTRIES = [];
+var SANCTION_APPLIED = {};
+var SANCTION_CATEGORIES = [
+  ['goods','کالا'], ['air','مرز هوایی و فرودگاه'], ['transit','ترانزیت'],
+  ['land','بستن مرز زمینی'], ['bank','ارز و بانک'], ['energy','انرژی'],
+  ['technology','فناوری'], ['sea','تجارت دریایی']
+];
+var SANCTION_CATEGORY_STATE = {};
+function eventCountryNames() {
+  var names = [];
+  if (MAP) for (var fa in MAP) if (Object.prototype.hasOwnProperty.call(MAP, fa)) {
+    if (!ST || fa !== ST.player) names.push(fa);
+  }
+  names.sort(function(a,b){ return a.localeCompare(b,'fa'); });
+  return names;
+}
+function renderCountryPicker(containerId, selected, prefix) {
+  var box = el(containerId);
+  if (!box) return;
+  var names = eventCountryNames(), out = '';
+  for (var i=0;i<names.length;i++) {
+    var safe = prefix + i;
+    out += '<label class="eventCountryChoice"><input type="checkbox" data-country="' +
+      names[i].replace(/&/g,'&amp;').replace(/"/g,'&quot;') + '"' +
+      (selected.indexOf(names[i])>=0 ? ' checked' : '') + '> <span>' +
+      names[i].replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</span></label>';
+  }
+  box.innerHTML = out || '<div class="sanctionInfo">فهرست کشورها بارگذاری نشده است.</div>';
+}
+function readCountryPicker(containerId) {
+  var box=el(containerId), out=[];
+  if (!box) return out;
+  var inputs=box.getElementsByTagName('input');
+  for(var i=0;i<inputs.length;i++) if(inputs[i].checked && inputs[i].getAttribute('data-country')) out.push(inputs[i].getAttribute('data-country'));
+  return out;
+}
+function renderConfidentialTargets() {
+  var box=el('confidentialTargetBox'), list=el('confidentialCountryList'), summary=el('confidentialTargetSummary');
+  if(!box || !list) return;
+  if(CONFIDENTIAL_TARGETS.length) {
+    list.hidden=true;
+    if(summary) summary.textContent='مذاکره محرمانه با '+CONFIDENTIAL_TARGETS.join('، ');
+  } else {
+    list.hidden=false;
+    if(summary) summary.textContent='هنوز کشوری انتخاب و تأیید نشده است.';
+  }
+}
+function bindConfidentialTargetPicker() {
+  var choose=el('confidentialChooseCountries'), confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries');
+  if(choose) choose.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; };
+  if(confirm) confirm.onclick=function(){ CONFIDENTIAL_DRAFT=readCountryPicker('confidentialCountryList'); CONFIDENTIAL_TARGETS=CONFIDENTIAL_DRAFT.slice(0); renderConfidentialTargets(); };
+  if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderCountryPicker('confidentialCountryList',[],'conf'); renderConfidentialTargets(); };
+}
+function renderSanctionTargets() {
+  var summary=el('sanctionTargetSummary'), card=el('sanctionCategoryCard');
+  if(summary) summary.textContent=SANCTION_TARGET_COUNTRIES.length ? 'کشورهای انتخاب‌شده: '+SANCTION_TARGET_COUNTRIES.join('، ') : 'هنوز کشوری انتخاب نشده است.';
+  if(card) card.hidden=!SANCTION_TARGET_COUNTRIES.length;
+}
+function renderSanctionCategories() {
+  var box=el('sanctionCategoryList');
+  if(!box) return;
+  var out='';
+  for(var i=0;i<SANCTION_CATEGORIES.length;i++) {
+    var key=SANCTION_CATEGORIES[i][0], label=SANCTION_CATEGORIES[i][1], on=!!SANCTION_CATEGORY_STATE[key];
+    out+='<button type="button" class="sanctionCategoryToggle'+(on?' active':'')+'" data-sanction-category="'+key+'" aria-pressed="'+(on?'true':'false')+'"><span>'+label+'</span><span class="eventToggleState">'+(on?'روشن':'خاموش')+'</span></button>';
+  }
+  box.innerHTML=out;
+  var buttons=box.getElementsByTagName('button');
+  for(var b=0;b<buttons.length;b++) buttons[b].onclick=function(){
+    var key=this.getAttribute('data-sanction-category');
+    SANCTION_CATEGORY_STATE[key]=!SANCTION_CATEGORY_STATE[key];
+    renderSanctionCategories();
+  };
+}
+function renderAppliedSanctions() {
+  var box=el('sanctionImposedList');
+  if(!box) return;
+  var names=Object.keys(SANCTION_APPLIED);
+  if(!names.length) { box.textContent='هنوز تحریمی از سوی بازیکن اعمال نشده است. تحریم‌های اعمال‌شده توسط کشورهای تحت کنترل هوش مصنوعی پس از اتصال سامانه دیپلماسی نمایش داده می‌شوند.'; return; }
+  var out='';
+  for(var i=0;i<names.length;i++) {
+    var cats=SANCTION_APPLIED[names[i]], labels=[];
+    for(var k=0;k<SANCTION_CATEGORIES.length;k++) if(cats[SANCTION_CATEGORIES[k][0]]) labels.push(SANCTION_CATEGORIES[k][1]);
+    out+='<div class="sanctionCard"><strong>'+names[i]+'</strong><div class="sanctionInfo">زمینه‌ها: '+(labels.join('، ')||'بدون تحریم فعال')+'</div></div>';
+  }
+  box.innerHTML=out;
+}
+function bindSanctionsUI() {
+  var choose=el('sanctionChooseCountries'), confirm=el('sanctionConfirmCountries'), cancel=el('sanctionCancelCountries');
+  if(choose) choose.onclick=function(){ SANCTION_DRAFT_COUNTRIES=SANCTION_TARGET_COUNTRIES.slice(0); renderCountryPicker('sanctionCountryList',SANCTION_DRAFT_COUNTRIES,'san'); el('sanctionCountryPicker').hidden=false; };
+  if(confirm) confirm.onclick=function(){ SANCTION_DRAFT_COUNTRIES=readCountryPicker('sanctionCountryList'); SANCTION_TARGET_COUNTRIES=SANCTION_DRAFT_COUNTRIES.slice(0); el('sanctionCountryPicker').hidden=true; renderSanctionTargets(); };
+  if(cancel) cancel.onclick=function(){ SANCTION_DRAFT_COUNTRIES=[]; SANCTION_TARGET_COUNTRIES=[]; el('sanctionCountryPicker').hidden=true; renderSanctionTargets(); };
+  var apply=el('sanctionApply'), cancelAll=el('sanctionCancelAll');
+  if(apply) apply.onclick=function(){
+    var active={};
+    for(var i=0;i<SANCTION_CATEGORIES.length;i++){ var key=SANCTION_CATEGORIES[i][0]; if(SANCTION_CATEGORY_STATE[key]) active[key]=true; }
+    if(!Object.keys(active).length){ var st=el('sanctionActionStatus'); if(st) st.textContent='حداقل یک زمینه تحریم را روشن کن.'; return; }
+    if(!SANCTION_TARGET_COUNTRIES.length){ var st2=el('sanctionActionStatus'); if(st2) st2.textContent='ابتدا کشورهای هدف را انتخاب کن.'; return; }
+    for(var n=0;n<SANCTION_TARGET_COUNTRIES.length;n++) SANCTION_APPLIED[SANCTION_TARGET_COUNTRIES[n]]=JSON.parse(JSON.stringify(active));
+    var status=el('sanctionActionStatus'); if(status) status.textContent='تنظیمات تحریم در نمونه رابط کاربری ثبت شد؛ اثر اقتصادی هنوز به موتور اقتصاد متصل نیست.';
+    renderAppliedSanctions();
+  };
+  if(cancelAll) cancelAll.onclick=function(){
+    SANCTION_APPLIED={}; SANCTION_CATEGORY_STATE={}; renderSanctionCategories(); renderAppliedSanctions();
+    var status=el('sanctionActionStatus'); if(status) status.textContent='تمام تحریم‌های ثبت‌شده در نمونه رابط کاربری لغو شدند.';
+  };
+  var imposed=el('sanctionTabImposed'), target=el('sanctionTabTarget');
+  if(imposed) imposed.onclick=function(){ setSanctionInnerView('imposed'); };
+  if(target) target.onclick=function(){ setSanctionInnerView('target'); };
+  renderSanctionCategories(); renderAppliedSanctions(); renderSanctionTargets();
+}
+function setSanctionInnerView(view) {
+  var imp=view!=='target', iv=el('sanctionImposedView'), tv=el('sanctionTargetView');
+  var ib=el('sanctionTabImposed'), tb=el('sanctionTabTarget');
+  if(iv) iv.hidden=!imp; if(tv) tv.hidden=imp;
+  if(ib){ib.className='eventPanelTab'+(imp?' active':'');ib.setAttribute('aria-selected',imp?'true':'false');}
+  if(tb){tb.className='eventPanelTab'+(!imp?' active':'');tb.setAttribute('aria-selected',!imp?'true':'false');}
 }
 function bindEventPanelTabs() {
   var sb = el('eventTabStatements'), mb = el('eventTabMilitary');
   if (sb) sb.onclick = function () { setEventPanelView('statements'); };
   if (mb) mb.onclick = function () { setEventPanelView('military'); };
+  if (xb) xb.onclick = function () { setEventPanelView('sanctions'); };
   setEventPanelView('statements');
 }
 function bindEventTalkControls() {
   var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
   if (cb) cb.onclick = function () { EVENT_TALK_STATE.confidential = !EVENT_TALK_STATE.confidential; renderEventTalkState(); };
   if (ab) ab.onclick = function () { EVENT_TALK_STATE.alliance = !EVENT_TALK_STATE.alliance; renderEventTalkState(); };
+  bindConfidentialTargetPicker();
   renderEventTalkState();
 }
 
@@ -1380,6 +1519,7 @@ function bindToolbar() {
   if (eb) eb.onclick = toggleEventPanel;
   bindEventTalkControls();
   bindEventPanelTabs();
+  bindSanctionsUI();
   el('btnStart').onclick = function () { startGame(false); };
 }
 
