@@ -481,7 +481,14 @@ function dashSectionHtml(r, isPlayer, tab) {
         IDN: 'Prabowo Subianto 2024 official portrait.jpg',
         BRA: '09.07.2026 - Presidente Lula.jpg',
         AUS: 'Anthony Albanese Official Portrait.jpg',
-        UKR: 'Volodymyr Zelensky Official portrait.jpg'
+        UKR: 'Volodymyr Zelensky Official portrait.jpg',
+        CAN: 'Mark Carney portrait May 2025.jpg',
+        ITA: 'Giorgia Meloni Official 2024 (cropped).jpg',
+        POL: 'Donald Tusk 2025.jpg',
+        ARG: 'Retrato oficial del Presidente Javier Milei.png',
+        ZAF: 'Cyril Ramaphosa in 2026.jpg',
+        MYS: 'Anwar Ibrahim June 2025.jpg',
+        PAK: 'Shehbaz Sharif - 2025 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
