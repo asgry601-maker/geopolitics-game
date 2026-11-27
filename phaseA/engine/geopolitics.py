@@ -2133,8 +2133,13 @@ def submit_agreement_proposal(s, kind, parties, pact_type="non_aggression",
         raise ValueError("شرایط توافق قابل ذخیره نیست.")
     if len(json.dumps(safe_terms, ensure_ascii=False)) > 8000:
         raise ValueError("متن شرایط توافق بیش از حد مجاز است.")
-    if conversation_id and not get_conversation_session(s, conversation_id):
-        raise ValueError("نشست گفت‌وگوی مرتبط پیدا نشد.")
+    linked_session = None
+    if conversation_id:
+        linked_session = get_conversation_session(s, conversation_id)
+        if not linked_session:
+            raise ValueError("نشست گفت‌وگوی مرتبط پیدا نشد.")
+        if set(linked_session.get("participants") or []) != set(clean):
+            raise ValueError("اعضای نشست گفت‌وگو باید دقیقاً با طرف‌های توافق یکسان باشند.")
     for old in s.get("agreement_proposals") or []:
         if old.get("status") == "pending" and old.get("kind") == kind and set(old.get("parties") or []) == set(clean):
             if kind != "pact" or old.get("pact_type") == pact_type:
@@ -2154,7 +2159,8 @@ def submit_agreement_proposal(s, kind, parties, pact_type="non_aggression",
     s.setdefault("agreement_proposals", []).append(proposal)
     s.setdefault("agreement_history", []).append({
         "date": today, "action": "proposal_created", "proposal_id": proposal["id"],
-        "kind": kind, "parties": list(clean), "actor": s.get("player")
+        "kind": kind, "parties": list(clean), "actor": s.get("player"),
+        "conversation_id": conversation_id
     })
     s["agreement_proposals"] = s["agreement_proposals"][-300:]
     s["agreement_history"] = s["agreement_history"][-500:]
@@ -2197,7 +2203,8 @@ def decide_agreement_proposal(s, proposal_id, decision):
                     "name": proposal.get("name") or AGREEMENT_PACT_TYPES.get(proposal.get("pact_type"), ""),
                     "members": list(proposal.get("parties") or []), "status": "active",
                     "created_date": today, "updated_date": today, "terms": proposal.get("terms") or {},
-                    "legacy": False, "proposal_id": proposal_id
+                    "legacy": False, "proposal_id": proposal_id,
+                    "conversation_id": proposal.get("conversation_id")
                 }
                 s.setdefault("pact_records", []).append(record)
                 if player == s.get("player"):
@@ -2212,7 +2219,8 @@ def decide_agreement_proposal(s, proposal_id, decision):
                     "type": "military", "members": list(proposal.get("parties") or []),
                     "status": "active", "created_date": today, "updated_date": today,
                     "terms": proposal.get("terms") or {}, "legacy": False,
-                    "proposal_id": proposal_id
+                    "proposal_id": proposal_id,
+                    "conversation_id": proposal.get("conversation_id")
                 }
                 s.setdefault("alliance_records", []).append(record)
                 if player == s.get("player"):
@@ -2223,7 +2231,7 @@ def decide_agreement_proposal(s, proposal_id, decision):
     proposal["updated_date"] = today
     s.setdefault("agreement_history", []).append({
         "date": today, "action": action, "proposal_id": proposal_id, "actor": player,
-        "status": proposal.get("status")
+        "status": proposal.get("status"), "conversation_id": proposal.get("conversation_id")
     })
     s["agreement_history"] = s["agreement_history"][-500:]
     return {"ok": True, "proposal": proposal,
