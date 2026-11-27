@@ -354,3 +354,23 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - PNG: https://commons.wikimedia.org/wiki/File:Papua_New_Guinea_Prime_Minister_James_Marape_in_Port_Moresby,_Papua_New_Guinea_on_July_27,_2023_-_230727-D-TT977-0140_(cropped).jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The existing engine leader-name entries for these six countries were retained. Fiji's portrait intentionally matches Prime Minister Sitiveni Rabuka, the existing in-game leader entry, rather than President Ratu Naiqama Lalabalavu.
+
+
+## Package 23 — Central Asia and northern South America (6 countries)
+
+- **KGZ — Kyrgyzstan:** Sadyr Japarov — `Official Photo of the President of the Kyrgyz Republic H.E. Mr. Sadyr Zhaparov.jpg`. Official presidential portrait dated 31 March 2021, photographer Ermek Sydykov; publication permission confirmed through Wikimedia Commons VRT ticket #2023112810010481. Licensed CC BY-SA 4.0; attribution: Press Service of the President of Kyrgyzstan. Original: 7,087 × 9,449 pixels.
+- **TJK — Tajikistan:** Emomali Rahmon — `Emomali Rahmon in 2026.jpg`. Photograph dated 4 March 2026 by Masato Kanda, cropped to show Rahmon; CC BY 4.0. Image: 616 × 822 pixels.
+- **AZE — Azerbaijan:** Ilham Aliyev — `President of Azerbaijan Ilham Aliyev in 2025.jpg`. Photograph dated 16 April 2025, Press Service of the President of the Republic of Azerbaijan; CC BY 4.0, attribution President.az. Crop: 1,161 × 1,186 pixels.
+- **GUY — Guyana:** Mohamed Irfaan Ali — `2025 Irfaan Ali (cropped).jpg`. Photograph dated 24 September 2025, U.S. Department of State; public domain U.S. federal government work. Crop: 407 × 540 pixels.
+- **SUR — Suriname:** Jennifer Geerlings-Simons — `Jennifer Geerlings-Simons, November 2025.jpg`. Photograph dated 6 November 2025 by Ricardo Stuckert / Lula Oficial, cropped from the COP30 delegation reception image; CC BY-SA 4.0. Crop: 892 × 1,260 pixels.
+- **URY — Uruguay:** Yamandú Orsi — `Yamandú Orsi en agosto de 2026 (cropped).jpg`. Official presidential photograph dated 11 August 2026, Camilo dos Santos Ayala / Presidency of Uruguay; CC BY 2.0. Crop: 1,305 × 1,742 pixels.
+
+### File pages
+- KGZ: https://commons.wikimedia.org/wiki/File:Official_Photo_of_the_President_of_the_Kyrgyz_Republic_H.E._Mr._Sadyr_Zhaparov.jpg
+- TJK: https://commons.wikimedia.org/wiki/File:Emomali_Rahmon_in_2026.jpg
+- AZE: https://commons.wikimedia.org/wiki/File:President_of_Azerbaijan_Ilham_Aliyev_in_2025.jpg
+- GUY: https://commons.wikimedia.org/wiki/File:2025_Irfaan_Ali_(cropped).jpg
+- SUR: https://commons.wikimedia.org/wiki/File:Jennifer_Geerlings-Simons,_November_2025.jpg
+- URY: https://commons.wikimedia.org/wiki/File:Yamandú_Orsi_en_agosto_de_2026_(cropped).jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The engine's existing leader display-name entries were retained. The Guyana image is a dashboard-friendly portrait crop, while the Uruguay image is a newer, higher-resolution replacement for the small earlier portrait.
