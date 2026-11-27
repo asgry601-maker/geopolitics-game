@@ -548,7 +548,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         MNG: 'Sandagiin Byambatsogt, official portrait as Chairman of the State Great Khural.jpg',
         BGD: 'Prime minister Tarique Rahman1.jpg',
         LKA: 'Anura Kumara Dissanayake in 2025.jpg',
-        NPL: 'Prime Minister of Nepal Balen Shah.jpg'
+        NPL: 'Prime Minister of Nepal Balen Shah.jpg',
+        KHM: 'Hun Manet on May 30, 2025 (cropped 2).jpg',
+        BTN: 'Dasho Tshering Tobgay.jpg',
+        MDV: 'Dr Mohamed Muizzu portrait.jpg',
+        MMR: 'Min Aung Hlaing at the Kremlin on March 4, 2025 (cropped).jpg',
+        THA: 'Anutin Charnvirakul September 2026 (cropped).jpg',
+        VNM: 'President of Vietnam, Mr. Tô Lâm (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
