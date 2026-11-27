@@ -590,7 +590,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         CAF: 'Faustin Archange Touadera.jpg',
         ERI: 'Isaias Afewerki (2026-10-30).jpg',
         DJI: 'Ismail Omar Guelleh, the President of Djibouti meets with Shinzō Abe, the Prime Minister of Japan.jpg',
-        SOM: 'His Excellency President Hassan Sheikh Mohamud (cropped).jpg'
+        SOM: 'His Excellency President Hassan Sheikh Mohamud (cropped).jpg',
+        MDG: 'Michael Randrianirina in February 2026.jpg',
+        MUS: 'Navin Ramgoolam, 2025.jpg',
+        CPV: 'José Maria Neves, 2023.jpg',
+        LSO: 'Sam Matekane candidate (cropped).jpg',
+        SWZ: 'Mswati III 20261010.jpg',
+        GMB: 'President Adama Barrow Republic of The Gambia.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
