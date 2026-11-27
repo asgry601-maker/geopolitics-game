@@ -344,7 +344,7 @@ function setEventPanel(open) {
   if (!pnl || !btn) return;
   pnl.className = open ? 'open' : '';
   btn.className = open ? 'open' : '';
-  btn.textContent = open ? '\\u276e' : '\\u276f';
+  btn.textContent = open ? '❮' : '❯';
   btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   pnl.setAttribute('aria-hidden', open ? 'false' : 'true');
 }
