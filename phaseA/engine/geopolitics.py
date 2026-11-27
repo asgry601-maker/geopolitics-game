@@ -1670,13 +1670,69 @@ def register_game_event(s, category, country=None, title="", description="",
         "impact_plan": [],
         "impact_status": "pending_design",
         "effects_applied": False,
-        "metadata": dict(metadata or {})
+        "metadata": dict(metadata or {}),
+        "chain_id": event_id,
+        "parent_event_id": None,
+        "child_event_ids": [],
+        "chain_depth": 0
     }
     events = s.setdefault("game_events", [])
     events.append(event)
     if len(events) > 500:
         del events[:-500]
     return event
+
+
+def link_game_events(s, parent_event_id, child_event_id):
+    """پیوند دو رویداد در زنجیره؛ بدون ساخت رویداد یا اعمال پیامد بازی."""
+    events = s.setdefault("game_events", [])
+    by_id = dict((item.get("id"), item) for item in events if isinstance(item, dict))
+    parent = by_id.get(parent_event_id)
+    child = by_id.get(child_event_id)
+    if parent is None or child is None:
+        raise ValueError("رویداد والد یا فرزند در فهرست رویدادهای موجود نیست.")
+    if parent_event_id == child_event_id:
+        raise ValueError("یک رویداد نمی‌تواند والد خودش باشد.")
+
+    # اگر والد در زیرشاخه فرزند باشد، پیوند چرخه ایجاد می‌کند.
+    stack = [child_event_id]
+    visited = set()
+    while stack:
+        current_id = stack.pop()
+        if current_id in visited:
+            continue
+        visited.add(current_id)
+        if current_id == parent_event_id:
+            raise ValueError("این پیوند باعث ایجاد چرخه در زنجیره رویدادها می‌شود.")
+        current = by_id.get(current_id)
+        if current is not None:
+            stack.extend(current.get("child_event_ids") or [])
+
+    existing_parent = child.get("parent_event_id")
+    if existing_parent and existing_parent != parent_event_id:
+        raise ValueError("رویداد فرزند از قبل والد دیگری دارد.")
+    if child_event_id not in (parent.get("child_event_ids") or []):
+        parent.setdefault("child_event_ids", []).append(child_event_id)
+    child["parent_event_id"] = parent_event_id
+
+    root_id = parent.get("chain_id") or parent_event_id
+    base_depth = int(parent.get("chain_depth", 0)) + 1
+    pending = [(child, base_depth)]
+    updated = set()
+    while pending:
+        item, depth = pending.pop()
+        item_id = item.get("id")
+        if item_id in updated:
+            continue
+        updated.add(item_id)
+        item["chain_id"] = root_id
+        item["chain_depth"] = depth
+        for descendant_id in (item.get("child_event_ids") or []):
+            descendant = by_id.get(descendant_id)
+            if descendant is not None:
+                pending.append((descendant, depth + 1))
+    return {"parent_event_id": parent_event_id, "child_event_id": child_event_id,
+            "chain_id": root_id, "chain_depth": base_depth}
 
 
 def ev(s, who, *args):
