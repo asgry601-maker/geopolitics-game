@@ -363,14 +363,23 @@ function renderEventTalkState() {
   var title = el('eventStatementTitle'), note = el('eventContextNote');
   var targetBox = el('confidentialTargetBox');
   var confidentialOnly = confidential && !alliance;
+  var confidentialReady = confidentialOnly && CONFIDENTIAL_TARGETS.length > 0;
   if (targetBox) targetBox.hidden = !confidentialOnly;
   if (confidentialOnly) renderConfidentialTargets();
   var feedBox = el('eventStatementFeed');
   var composerBox = el('eventStatementInput');
   var sendBox = el('eventStatementSend');
-  if (feedBox) feedBox.style.display = confidentialOnly ? 'none' : '';
-  if (composerBox && composerBox.parentNode) composerBox.parentNode.style.display = (confidential || alliance) ? 'none' : ''; 
-  if (sendBox) sendBox.style.display = (confidential || alliance) ? 'none' : '';
+  if (feedBox) feedBox.style.display = (confidentialReady || (!confidential && !alliance)) ? '' : 'none';
+  if (composerBox && composerBox.parentNode) composerBox.parentNode.style.display = (confidentialReady || (!confidential && !alliance)) ? '' : 'none';
+  if (composerBox) {
+    composerBox.disabled = !confidentialReady;
+    composerBox.placeholder = confidentialReady ? 'متن مذاکره محرمانه با کشورهای انتخاب‌شده را بنویس...' : 'بخش نگارش بیانیه پس از فعال‌سازی هوش مصنوعی زنده در دسترس قرار می‌گیرد.';
+  }
+  if (sendBox) {
+    sendBox.style.display = (confidentialReady || (!confidential && !alliance)) ? '' : 'none';
+    sendBox.disabled = !confidentialReady;
+    if (confidentialReady) sendBox.textContent = 'ثبت پیام محرمانه';
+  }
   if (cb) { cb.className = 'eventNegotiationToggle' + (confidential ? ' active' : ''); cb.setAttribute('aria-pressed', confidential ? 'true' : 'false'); }
   if (ab) { ab.className = 'eventNegotiationToggle' + (alliance ? ' active' : ''); ab.setAttribute('aria-pressed', alliance ? 'true' : 'false'); }
   if (cs) cs.textContent = confidential ? 'روشن' : 'خاموش';
@@ -388,8 +397,9 @@ function renderEventTalkState() {
     if (note) note.textContent = 'این گفت‌وگو فقط میان بازیکن و هم‌پیمانان انجام می‌شود و کاملاً محرمانه است؛ هیچ محتوایی به مطبوعات یا بیانیه عمومی راه پیدا نمی‌کند، مگر اینکه بازیکن خودش آن را منتشر کند.';
     if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'فضای گفت‌وگوی محرمانه با اتحاد آماده است. محتوای این مذاکره خصوصی باقی می‌ماند و به رسانه‌ها منتقل نمی‌شود.';
   } else if (confidential) {
-    if (title) title.textContent = 'مذاکره محرمانه · انتخاب کشورها';
-    if (note) note.textContent = 'کشورهای موردنظر را انتخاب و تأیید کن. این مذاکره خصوصی می‌ماند و به رسانه‌ها یا بیانیه عمومی منتقل نمی‌شود.';
+    if (title) title.textContent = CONFIDENTIAL_TARGETS.length ? 'مذاکره محرمانه · با '+CONFIDENTIAL_TARGETS.join('، ') : 'مذاکره محرمانه · انتخاب کشورها';
+    if (note) note.textContent = CONFIDENTIAL_TARGETS.length ? 'فهرست کشورها تأیید و بسته شد. اکنون می‌توانی متن مذاکره را در کادر پایین بنویسی؛ این متن عمومی یا رسانه‌ای نمی‌شود.' : 'کشورهای موردنظر را انتخاب و تأیید کن. این مذاکره خصوصی می‌ماند و به رسانه‌ها یا بیانیه عمومی منتقل نمی‌شود.';
+    if (feed && feed.querySelector('.eventStatementEmpty') && CONFIDENTIAL_TARGETS.length) feed.querySelector('.eventStatementEmpty').textContent = 'هنوز پیامی در این مذاکره محرمانه ثبت نشده است.';
   } else {
     if (title) title.textContent = 'پنجره مذاکرات با اتحاد';
     if (note) note.textContent = 'این بخش برای گفت‌وگو با اتحاد و هم‌پیمانان است. برای حالت محرمانه، گزینه مذاکره محرمانه را نیز روشن کن.';
@@ -449,14 +459,16 @@ function readCountryPicker(containerId) {
 }
 function renderConfidentialTargets() {
   var box=el('confidentialTargetBox'), list=el('confidentialCountryList'), summary=el('confidentialTargetSummary');
-  var edit=el('confidentialEditCountries');
+  var edit=el('confidentialEditCountries'), actions=box ? box.querySelector('.eventActionRow') : null;
   if(!box || !list) return;
   if(CONFIDENTIAL_TARGETS.length) {
     list.hidden=true;
+    if(actions) actions.hidden=true;
     if(edit) edit.hidden=false;
-    if(summary) summary.textContent='مذاکره محرمانه با '+CONFIDENTIAL_TARGETS.join('، ');
+    if(summary) summary.textContent='مذاکره محرمانه با '+CONFIDENTIAL_TARGETS.join('، ')+' · فهرست کشورها بسته شد.';
   } else {
     list.hidden=false;
+    if(actions) actions.hidden=false;
     if(edit) edit.hidden=true;
     renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf');
     if(summary) summary.textContent='کشورهای موردنظر را انتخاب کن و تأیید را بزن. انتخاب چند کشور هم‌زمان امکان‌پذیر است.';
@@ -464,9 +476,15 @@ function renderConfidentialTargets() {
 }
 function bindConfidentialTargetPicker() {
   var confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries'), edit=el('confidentialEditCountries');
-  if(confirm) confirm.onclick=function(){ CONFIDENTIAL_DRAFT=readCountryPicker('confidentialCountryList'); CONFIDENTIAL_TARGETS=CONFIDENTIAL_DRAFT.slice(0); renderConfidentialTargets(); };
-  if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderConfidentialTargets(); };
-  if(edit) edit.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; edit.hidden=true; };
+  if(confirm) confirm.onclick=function(){
+    CONFIDENTIAL_DRAFT=readCountryPicker('confidentialCountryList');
+    if(!CONFIDENTIAL_DRAFT.length) { flash('حداقل یک کشور را انتخاب کن.'); return; }
+    CONFIDENTIAL_TARGETS=CONFIDENTIAL_DRAFT.slice(0);
+    renderConfidentialTargets();
+    renderEventTalkState();
+  };
+  if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderConfidentialTargets(); renderEventTalkState(); };
+  if(edit) edit.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; var box=el('confidentialTargetBox'); var actions=box ? box.querySelector('.eventActionRow') : null; if(actions) actions.hidden=false; edit.hidden=true; };
 }
 function renderSanctionTargets() {
   var summary=el('sanctionTargetSummary'), card=el('sanctionCategoryCard');
@@ -545,8 +563,23 @@ function bindEventPanelTabs() {
 }
 function bindEventTalkControls() {
   var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
+  var input = el('eventStatementInput'), send = el('eventStatementSend'), feed = el('eventStatementFeed');
   if (cb) cb.onclick = function () { EVENT_TALK_STATE.confidential = !EVENT_TALK_STATE.confidential; renderEventTalkState(); };
   if (ab) ab.onclick = function () { EVENT_TALK_STATE.alliance = !EVENT_TALK_STATE.alliance; renderEventTalkState(); };
+  if (send) send.onclick = function () {
+    if (!EVENT_TALK_STATE.confidential || !CONFIDENTIAL_TARGETS.length || !input) return;
+    var message = (input.value || '').replace(/^\s+|\s+$/g, '');
+    if (!message) { flash('ابتدا متن مذاکره را بنویس.'); return; }
+    var empty = feed ? feed.querySelector('.eventStatementEmpty') : null;
+    if (empty) empty.parentNode.removeChild(empty);
+    var item = document.createElement('div');
+    item.className = 'eventStatementEmpty';
+    item.style.cssText = 'margin:7px 0;padding:9px;border:1px solid #31516e;border-radius:8px;background:#101a2e;white-space:pre-wrap;';
+    item.textContent = 'بازیکن · پیام محرمانه\n' + message;
+    if (feed) feed.appendChild(item);
+    input.value = '';
+    flash('پیام در پنجره مذاکره محرمانه ثبت شد. این ثبت فعلاً محلی است و هنوز به هوش مصنوعی یا کشور مقابل ارسال نمی‌شود.');
+  };
   bindConfidentialTargetPicker();
   renderEventTalkState();
 }
