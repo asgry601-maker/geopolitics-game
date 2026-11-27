@@ -807,6 +807,19 @@ function politicalChangeFormHtml(pc, isPlayer) {
     h += '<div class="row"><span>هزینه برآوردی</span><b>'+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
     h += '<div class="row"><span>زمان برآوردی</span><b>'+dashEsc(activeProposal.estimated_days)+' روز</b></div>';
     h += '<div class="dashNote">هنوز هیچ‌یک از تغییرات پیشنهادی اعمال نشده است.</div>';
+    if (activeProposal.status === 'pending') {
+      h += '<button type="button" id="btnReviewPoliticalProposal" class="primary" data-proposal-id="'+dashEsc(activeProposal.id)+'">ارزیابی پیامدها</button> ';
+    } else if (activeProposal.status === 'reviewed') {
+      var rv=activeProposal.review || {};
+      h += '<div class="dashCard"><b>نتیجه ارزیابی</b><div class="row"><span>امکان‌پذیری تقریبی</span><b>'+dashEsc(rv.feasibility)+' از ۱۰۰</b></div>';
+      h += '<div class="row"><span>ثبات سیاسی</span><b>'+dashEsc(rv.stability)+'</b></div><div class="row"><span>توان مالی</span><b>'+dashEsc(rv.affordability)+'</b></div>';
+      h += '<div class="row"><span>شاخص واکنش احزاب</span><b>'+dashEsc(rv.party_score)+'</b></div><div class="dashNote">'+dashEsc(rv.outlook || '')+'</div>';
+      var rr=rv.party_reactions || {};
+      for (var pn in rr) if (rr.hasOwnProperty(pn)) h += '<div class="row"><span>'+dashEsc(pn)+'</span><b>'+dashEsc(rr[pn].current)+'٪ ← '+dashEsc(rr[pn].projected)+'٪</b></div>';
+      h += '<div class="dashNote">'+dashEsc(rv.note || '')+'</div></div>';
+      h += '<button type="button" id="btnApprovePoliticalProposal" class="primary" data-proposal-id="'+dashEsc(activeProposal.id)+'">تصویب و آماده‌سازی اجرا</button> ';
+      h += '<button type="button" id="btnRejectPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">رد طرح</button> ';
+    }
     h += '<button type="button" id="btnCancelPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">لغو طرح</button></div>';
   }
   h += '<div class="dashGrid">';
@@ -826,6 +839,30 @@ function politicalChangeFormHtml(pc, isPlayer) {
 }
 
 function bindPoliticalChangeForm(r) {
+  var reviewBtn = el('btnReviewPoliticalProposal');
+  if (reviewBtn) reviewBtn.onclick = function () {
+    reviewBtn.disabled = true;
+    postJSON('api/political/review', {proposal_id:reviewBtn.getAttribute('data-proposal-id')}, function(res) {
+      if (!res.ok) { reviewBtn.disabled=false; flash(res.error || 'ارزیابی طرح ناموفق بود.'); return; }
+      flash(res.out || 'ارزیابی انجام شد.');
+      loadState(function () { if (SELECTED) selectCountry(SELECTED, true); });
+    }, function(st,tx) { reviewBtn.disabled=false; flash(netErrMsg(st,tx)); });
+  };
+  function decidePoliticalProposal(button, decision) {
+    if (!button) return;
+    button.onclick = function () {
+      var question = decision === 'approve' ? 'این طرح تصویب شود؟ اجرای آن در بسته بعدی انجام می‌شود.' : 'این طرح رد شود؟';
+      if (!window.confirm(question)) return;
+      button.disabled = true;
+      postJSON('api/political/decision', {proposal_id:button.getAttribute('data-proposal-id'), decision:decision}, function(res) {
+        if (!res.ok) { button.disabled=false; flash(res.error || 'ثبت تصمیم ناموفق بود.'); return; }
+        flash(res.out || 'تصمیم ثبت شد.');
+        loadState(function () { if (SELECTED) selectCountry(SELECTED, true); });
+      }, function(st,tx) { button.disabled=false; flash(netErrMsg(st,tx)); });
+    };
+  }
+  decidePoliticalProposal(el('btnApprovePoliticalProposal'), 'approve');
+  decidePoliticalProposal(el('btnRejectPoliticalProposal'), 'reject');
   var cancelBtn = el('btnCancelPoliticalProposal');
   if (cancelBtn) cancelBtn.onclick = function () {
     if (!window.confirm('طرح اصلاحات لغو شود؟')) return;
