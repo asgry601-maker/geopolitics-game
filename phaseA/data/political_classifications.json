@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 95,
-    "pending_countries": 79,
+    "classified_countries": 100,
+    "pending_countries": 74,
     "last_batch": [
-      "PRK",
-      "TWN",
-      "BTN",
-      "MDV",
-      "YEM"
+      "LBY",
+      "TUN",
+      "DZA",
+      "MAR",
+      "ETH"
     ]
   },
   "countries": {
@@ -6874,6 +6874,380 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "به‌دلیل اقتدار چندپاره، این طبقه‌بندی نماینده وضعیت حقوقی و نهادهای بین‌المللی به‌رسمیت‌شناخته‌شده به‌تنهایی نیست؛ وضعیت واقعی چندمرکزی در فیلدهای territorial_structure و regime_character منعکس شده است."
+      }
+    },
+    "LBY": {
+      "country_name_fa": "لیبی",
+      "country_name_en": "Libya",
+      "government_form": "republic",
+      "government_subform": "transitional_authority",
+      "executive_legislative_system": "transitional",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "fragmented_authority",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در تاریخ مبنای سناریو، لیبی دارای یک دولت ملی یکپارچه و مورد توافق همه بازیگران نیست. دولت وحدت ملی به ریاست عبدالحمید دبیبه در طرابلس و دولت ثبات ملی به ریاست اسامه حماد در شرق، با پشتیبانی مجلس نمایندگان و نیروهای خلیفه حفتر، ساختارهای موازی دارند. بنابراین هیچ حزب یا ائتلاف واحدی را نمی‌توان به‌عنوان حاکم کل کشور معرفی کرد و برای ایدئولوژی رسمی یا ائتلاف حاکم مقدارگذاری نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Libya: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/libya/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure"
+          ],
+          "note": "گزارش تقسیم کشور میان دولت‌ها، نهادها و گروه‌های مسلح رقیب و تعویق انتخابات ملی."
+        },
+        {
+          "name": "BTI 2026 Libya Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/LBY",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "شرح دولت‌های موازی در شرق و غرب، پراکندگی اقتدار و نبود ساختار اجرایی یکپارچه."
+        },
+        {
+          "name": "Libya and U.S. Policy",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-07-21_IF11556_cb4ba56a5a90c4c5e1434717872a201ad6958c9c.pdf",
+          "date": "2026-07-21",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تحلیل تداوم دولت‌های موقت، رقابت شبکه‌های شرق و غرب و نفوذ بازیگران محلی."
+        },
+        {
+          "name": "Libya, October 2026 Monthly Forecast",
+          "publisher": "Security Council Report",
+          "url": "https://www.securitycouncilreport.org/monthly-forecast/2026-10/libya-70.php",
+          "date": "2026-10-01",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "شرح بن‌بست سیاسی و روند تلاش برای ایجاد چارچوب انتخاباتی و دولت یکپارچه."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی عمداً چندپاره است؛ عنوان دولت به‌رسمیت‌شناخته‌شده بین‌المللی به‌تنهایی به معنای کنترل مؤثر سراسر کشور نیست."
+      }
+    },
+    "TUN": {
+      "country_name_fa": "تونس",
+      "country_name_en": "Tunisia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی ۲۰۲۲ قدرت اجرایی را به‌شدت در ریاست‌جمهوری متمرکز کرده و نخست‌وزیر و اعضای دولت را رئیس‌جمهور منصوب می‌کند. جریان سیاسی ۲۵ ژوئیه حامی دستورکار رئیس‌جمهور است، اما به‌جای نسبت‌دادن یک ایدئولوژی حزبی قطعی، گرایش حزب حاکم و ائتلاف حاکم خالی گذاشته شده است؛ محدودیت رقابت و تضعیف احزاب مخالف در محورهای رژیم و نظام حزبی ثبت شده‌اند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Tunisia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/tunisia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت رقابت انتخاباتی، افزایش اختیارات ریاست‌جمهوری و وضعیت حقوق سیاسی."
+        },
+        {
+          "name": "BTI 2026 Tunisia Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/TUN",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "شرح تمرکز قدرت در ریاست‌جمهوری پس از قانون اساسی ۲۰۲۲ و محدودشدن احزاب و مخالفان."
+        },
+        {
+          "name": "Constitution of the Republic of Tunisia of 25 July 2022",
+          "publisher": "Tunisian Presidency / Legal Databases",
+          "url": "https://legislation-securite.tn/latest-laws/decret-presidentiel-n-2022-691-du-17-aout-2022-portant-promulgation-de-la-constitution-de-la-republique-tunisienne/",
+          "date": "2022-08-17",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "متن قانون اساسی جاری و مبنای اختیارات رئیس‌جمهور و ساختار نهادهای اجرایی."
+        },
+        {
+          "name": "COI Factsheet — Tunisia",
+          "publisher": "Austrian Centre for Country of Origin and Asylum Research and Documentation",
+          "url": "https://www.ecoi.net/en/file/local/2146452/2026_10_COI_Factsheet_Tunisia.pdf",
+          "date": "2026-10",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "خلاصه ساختار ریاستی قانون اساسی ۲۰۲۲، انتصاب نخست‌وزیر و تمرکز اختیارات."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "جمهوری ریاستی بر اساس قانون اساسی ۲۰۲۲؛ ایدئولوژی رسمی یا حزبی بدون سند روشن به کشور نسبت داده نشده است."
+      }
+    },
+    "DZA": {
+      "country_name_fa": "الجزایر",
+      "country_name_en": "Algeria",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "الجزایر جمهوری ریاستی با پارلمان دومجلسی است. در انتخابات مجلس ملی ژوئیه ۲۰۲۶، سه حزب نزدیک به دولت یعنی جبهه آزادی‌بخش ملی (FLN)، تجمع ملی دموکراتیک (RND) و جبهه المستقبل در مجموع ۲۲۱ کرسی از ۴۰۷ کرسی را به دست آوردند. رئیس‌جمهور مستقل معرفی می‌شود و ازاین‌رو گرایش یک حزب حاکم واحد ثبت نشده؛ گرایش ائتلاف حامی دولت با احتیاط ملی‌گرا و عمل‌گرایانه درج شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Algeria: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/algeria/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تسلط نخبگان نظامی و حزب حاکم تاریخی، محدودیت رقابت و کاستی‌های شفافیت انتخاباتی."
+        },
+        {
+          "name": "BTI 2026 Algeria Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/DZA",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نفوذ ساختاری قوه مجریه و ارتش بر نهادهای رسمی و محدودیت نظارت پارلمانی."
+        },
+        {
+          "name": "Algeria National People's Assembly July 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/DZ/DZ-LC01/election/DZ-LC01-E20260702/",
+          "date": "2026-07-02",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج مجلس ۲۰۲۶ و کسب اکثریت ۲۲۱ کرسی توسط سه حزب حامی دولت."
+        },
+        {
+          "name": "Présentation de l'Algérie",
+          "publisher": "France Diplomatie",
+          "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/algerie/presentation-de-l-algerie",
+          "date": "2026-10-21",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "معرفی رسمی ساختار ریاستی و مناصب رئیس‌جمهور و نخست‌وزیر در اکتبر ۲۰۲۶."
+        },
+        {
+          "name": "Loi n° 26-04 portant révision constitutionnelle",
+          "publisher": "Journal officiel de la République algérienne / Cour constitutionnelle",
+          "url": "https://cour-constitutionnelle.dz/wp-content/uploads/2026/04/loi-04_26.pdf",
+          "date": "2026-03-26",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "اصلاحیه قانون اساسی ۲۰۲۶ و تصریح اختیارات رئیس‌جمهور در انتصاب نخست‌وزیر و هدایت سیاست خارجی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی نظام ریاستی با اصلاحیه قانون اساسی ۲۰۲۶ تطبیق داده شده؛ ایدئولوژی رسمی کشور اعلام‌شده و واحد فرض نشده است."
+      }
+    },
+    "MAR": {
+      "country_name_fa": "مراکش",
+      "country_name_en": "Morocco",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "monarchical_executive",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "social_democracy",
+        "socialism",
+        "nationalism"
+      ],
+      "ideology_notes": "مراکش پادشاهی مشروطه است، اما پادشاه محمد ششم همچنان اختیارات رسمی و غیررسمی گسترده‌ای دارد؛ دولت و پارلمان منتخب در کنار نقش محوری سلطنت فعالیت می‌کنند. انتخابات ۲۳ سپتامبر ۲۰۲۶ حزب اصالت و مدرنیته (PAM) را با ۹۷ کرسی در جایگاه نخست قرار داد. در ۱۲ اکتبر، ائتلاف تازه‌ای از PAM، حزب استقلال (PI)، اتحادیه سوسیالیست نیروهای مردمی (USFP) و حزب پیشرفت و سوسیالیسم (PPS) تشکیل شد. به دلیل ناهمگونی ائتلاف و دشواری نسبت‌دادن یک خط ایدئولوژیک واحد به PAM، از برچسب عمل‌گرایانه استفاده شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Morocco: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/morocco/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "government_subform",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات چندحزبی و در عین حال برتری ساختاری پادشاه و دربار بر تصمیم‌گیری سیاسی."
+        },
+        {
+          "name": "Morocco House of Representatives September 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/MA/MA-LC01/election/MA-LC01-E20260923/",
+          "date": "2026-09-23",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج رسمی انتخابات، انتصاب نخست‌وزیر فاطمه الزهراء المنصوری و تشکیل ائتلاف چهارجانبه در اکتبر ۲۰۲۶."
+        },
+        {
+          "name": "Powers of the Head of Government",
+          "publisher": "Head of Government — Kingdom of Morocco",
+          "url": "https://www.cg.gov.ma/en/node/6769",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "شرح مواد قانون اساسی درباره انتصاب رئیس دولت از حزب اول انتخابات و رأی اعتماد مجلس."
+        },
+        {
+          "name": "Morocco — September 2026",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/report/morocco/september-2026",
+          "date": "2026-09",
+          "supports": [
+            "party_system",
+            "regime_character"
+          ],
+          "note": "نتایج انتخابات سپتامبر و تغییر ترکیب ائتلاف پس از آن."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "snapshot پس از انتخابات ۲۳ سپتامبر و تشکیل دولت ۱۶ اکتبر ۲۰۲۶ است؛ قدرت سلطنت و دولت منتخب به‌صورت دو محور جدا ثبت شده‌اند."
+      }
+    },
+    "ETH": {
+      "country_name_fa": "اتیوپی",
+      "country_name_en": "Ethiopia",
+      "government_form": "republic",
+      "government_subform": "federal_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "federal",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "civic_nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "اتیوپی جمهوری فدرال با نظام پارلمانی و ساختار فدرالی مبتنی بر ایالت‌ها و ملیت‌هاست. حزب رفاه به رهبری آبی احمد در انتخابات ۱ ژوئن ۲۰۲۶ اکثریت قاطع مجلس نمایندگان خلق را به دست آورد؛ نخست‌وزیر در ۵ اکتبر ۲۰۲۶ برای دوره جدید سوگند یاد کرد. برنامه حزب رفاه بر وحدت ملی فراگیر و مفهوم «مدمر» تأکید دارد؛ چون این چارچوب در طبقه‌بندی موجود معادل دقیق یک ایدئولوژی واحد نیست، گرایش آن با احتیاط عمل‌گرایانه و ملی‌گرایی مدنی توصیف شده است. درگیری‌های منطقه‌ای و محدودیت رقابت، کیفیت رژیم را پایین می‌آورد.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "BTI 2026 Ethiopia Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/ETH",
+          "date": "2026",
+          "supports": [
+            "territorial_structure",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "شرح فدرالیسم قومی، سلطه حزب رفاه، رقابت نابرابر و محدودیت‌های دموکراتیک."
+        },
+        {
+          "name": "Constitution of the Federal Democratic Republic of Ethiopia",
+          "publisher": "FAOLEX — Food and Agriculture Organization",
+          "url": "https://www.fao.org/faolex/en/documents/LEX-FAOC129684/constitution-of-ethiopia-eth-1994",
+          "date": "1994-12-08",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "متن قانون اساسی: ساختار فدرال، دو مجلس، نخست‌وزیر به‌عنوان رئیس قوه مجریه و پاسخگویی دولت به مجلس."
+        },
+        {
+          "name": "Prosperity Party Wins 438 Seats in Ethiopia’s 7th General Election",
+          "publisher": "Ethiopian Broadcasting Corporation",
+          "url": "https://www.ebc.et/english/Home/NewsDetails?NewsId=5745",
+          "date": "2026-06-21",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "اعلام نتایج نهایی و کسب ۴۳۸ کرسی توسط حزب رفاه در مجلس نمایندگان خلق."
+        },
+        {
+          "name": "Ethiopia Opens a New Five-Year Chapter of National Renewal",
+          "publisher": "Ethiopian News Agency",
+          "url": "https://www.ena.et/web/eng/w/eng_9684810",
+          "date": "2026-10-05",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "افتتاح دوره جدید پارلمان و ادای سوگند مجدد آبی احمد به‌عنوان نخست‌وزیر."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی نهادی بر پایه قانون اساسی و وضعیت سیاسی تا ۵ نوامبر ۲۰۲۶ است؛ فدرالیسم قومی و رقابت محدود به‌طور مستقل از مدل پارلمانی ثبت شده‌اند."
       }
     }
   }
