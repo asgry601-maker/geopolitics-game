@@ -246,6 +246,7 @@ def api_state(s):
         agreement_proposals=(s.get("agreement_proposals") or [])[-150:],
         agreement_history=(s.get("agreement_history") or [])[-100:],
         agreement_sequence=s.get("agreement_sequence", 0),
+        diplomatic_history=(s.get("diplomatic_history") or [])[-100:],
         player_sanctions=s.get("player_sanctions", {}),
         player_sanction_history=(s.get("player_sanction_history") or [])[-50:],
         inbox_messages=(s.get("inbox_messages") or [])[-100:],
@@ -775,6 +776,22 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(dict(ok=False, error=str(exc)), 400)
             except Exception as exc:
                 self._json(dict(ok=False, error="خطا در خروج از اتحاد: %s" % exc), 500)
+        elif path == "api/diplomacy/action":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                action = body.get("action")
+                targets = body.get("targets")
+                with _lock:
+                    current = G.load()
+                    result = G.apply_diplomacy_action(current, action, targets)
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در اجرای اقدام دیپلماتیک: %s" % exc), 500)
         elif path == "api/act":
             if s is None:
                 self._json(dict(ok=False, error="بازی\u200cای ساخته نشده."))
