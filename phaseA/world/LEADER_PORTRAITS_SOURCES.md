@@ -474,3 +474,25 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - Barbados: Mia Amor Mottley is prime minister.
 
 All six entries use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the crops at dashboard size, especially the older Nicaragua, Belize, and Bahamas portraits.
+
+
+## Package 28 — Pacific Islands (final 4 countries)
+
+- **WSM — Samoa:** Laʻaulialemalietoa Leuatea Polataivao Fosi Schmidt (Laʻauli Leuatea Schmidt) — `Laʻauli Leuatea Schmidt in 2023.jpg`. Photograph dated 5 July 2023, by the U.S. Embassy in New Zealand; a work of a U.S. Department of State employee and public domain in the United States. Commons crop: 1,552 × 2,009 pixels. The country’s head of state is Tuimalealiʻifano Vaʻaletoʻa Sualauvi II; the dashboard entry uses the prime minister/head of government.
+- **TON — Tonga:** Lord Fatafehi Fakafānua — `Fatafehi Fakafānua January 2026.jpg`. Photograph dated 27 January 2026 by Daniel Walding / Australian Department of Foreign Affairs and Trade; CC BY 4.0, attribution to the Australian Department of Foreign Affairs and Trade. Crop: 1,560 × 2,047 pixels.
+- **VUT — Vanuatu:** Jotham Napat — official portrait hosted by the Prime Minister’s Office of Vanuatu at `https://pmo.gov.vu/images/Hon.%20Jotham%20Napat.png`. The official PMO page identifies the depicted person as the newly elected prime minister. The image is served directly from the government website rather than through Commons because a suitably clear Commons portrait was not located. The page does not state a reuse license; copyright/reuse status is therefore unverified and should be reviewed before public redistribution.
+- **SLB — Solomon Islands:** Matthew Cooper Wale — `Matthew Wale in 2026 (cropped).jpg`. Photograph dated 23 July 2026 by the Cabinet Public Relations Office of Japan / Prime Minister’s Office of Japan; Public Data License (Ver. 1.0). Crop: 503 × 650 pixels.
+
+### File pages and official reference
+- WSM: https://commons.wikimedia.org/wiki/File:Laʻauli_Leuatea_Schmidt_in_2023.jpg
+- TON: https://commons.wikimedia.org/wiki/File:Fatafehi_Fakafānua_January_2026.jpg
+- VUT: https://pmo.gov.vu/en/public-information/press-release/1079-hon-jotham-napat-elected-new-prime-minister-of-the-14th-legislature.html
+- SLB: https://commons.wikimedia.org/wiki/File:Matthew_Wale_in_2026_(cropped).jpg
+
+### Current-leader reference
+- Samoa: Laʻaulialemalietoa Leuatea Polataivao Fosi Schmidt became prime minister on 16 September 2025; Head of State remains Tuimalealiʻifano Vaʻaletoʻa Sualauvi II.
+- Tonga: Lord Fatafehi Fakafānua was appointed prime minister on 18 December 2025; King Tupou VI remains head of state.
+- Vanuatu: Jotham Napat is prime minister, elected on 11 February 2025.
+- Solomon Islands: Matthew Wale became prime minister on 15 May 2026.
+
+The portrait loader now accepts either a Commons filename or a direct HTTPS image URL. Three entries continue using Commons; Vanuatu uses the official PMO-hosted portrait URL. This completes portrait mappings for all 174 countries.
