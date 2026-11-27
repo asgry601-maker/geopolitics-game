@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 31,
-    "pending_countries": 143,
+    "classified_countries": 36,
+    "pending_countries": 138,
     "last_batch": [
-      "SWE",
-      "NOR",
-      "DNK",
-      "FIN",
-      "NLD"
+      "POL",
+      "BEL",
+      "CHE",
+      "AUT",
+      "GRC"
     ]
   },
   "countries": {
@@ -2081,6 +2081,388 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "POL": {
+      "country_name_fa": "لهستان",
+      "country_name_en": "Poland",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberalism",
+        "liberal_conservatism",
+        "progressivism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberalism",
+        "liberal_conservatism",
+        "social_democracy",
+        "christian_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "لهستان جمهوری پارلمانی و دولت واحد است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، دولت دونالد توسک متکی بر ائتلاف گسترده نیروهای میانه‌رو و pro-European بود: ائتلاف مدنی (KO)، لهستان ۲۰۵۰، حزب مردم لهستان (PSL) و چپ (Lewica). حزب محوری ائتلاف مدنی، پلتفرم مدنی، گرایش لیبرال و میانه‌رو دارد؛ گرایش کل ائتلاف متنوع است و از لیبرالیسم و ترقی‌خواهی تا سوسیال‌دموکراسی و دموکراسی مسیحی/محافظه‌کاری میانه را در بر می‌گیرد. ایدئولوژی رسمی واحدی برای دولت در قانون اساسی تعیین نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Prime Minister and Council of Ministers",
+          "publisher": "Chancellery of the Prime Minister of Poland (Gov.pl)",
+          "url": "https://www.gov.pl/web/primeminister",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فهرست رسمی نخست‌وزیر و اعضای دولت در تاریخ مبنا؛ برای ترکیب دولت و ائتلاف حاکم."
+        },
+        {
+          "name": "Constitution of the Republic of Poland — Chapter VI: The Council of Ministers",
+          "publisher": "Senate of the Republic of Poland",
+          "url": "https://www.senat.gov.pl/en/about-the-senate/konstytucja/chapter-vi/",
+          "date": "current constitutional text",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "نقش نخست‌وزیر و شورای وزیران و رابطه دولت با مجلس."
+        },
+        {
+          "name": "Poland — EU country profile",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/poland_en",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "لهستان به‌عنوان جمهوری پارلمانی و ساختار اداری منطقه‌ای معرفی شده است."
+        },
+        {
+          "name": "Poland: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/poland/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت سیاسی و آزادی‌های مدنی؛ گزارش، رقابت حزبی را متکثر و رقابتی توصیف می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر اساس وضعیت دولت در ۵ نوامبر ۲۰۲۶؛ تغییرات بعد از تاریخ مبنا وارد baseline نشده‌اند."
+      }
+    },
+    "BEL": {
+      "country_name_fa": "بلژیک",
+      "country_name_en": "Belgium",
+      "government_form": "monarchy",
+      "government_subform": "federal_constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "federal",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "national_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "national_conservatism",
+        "liberalism",
+        "social_democracy",
+        "christian_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "بلژیک پادشاهی مشروطه فدرال و نظامی پارلمانی با تقسیم اختیارات میان دولت فدرال، سه منطقه و سه جامعه زبانی است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، بارت دِ وِوِر (N-VA) نخست‌وزیر دولت ائتلافی موسوم به آریزونا بود که از N-VA، MR، Les Engagés، Vooruit و CD&V تشکیل می‌شد. نکته مهم برای snapshot: دِ وِوِر در ۲ نوامبر استعفای دولت را به پادشاه ارائه کرده بود، اما تا تاریخ مبنا تصمیم پادشاه درباره پذیرش آن نهایی نشده بود؛ بنابراین دولت در وضعیت استعفای ارائه‌شده/ادامه امور تا تعیین تکلیف قرار داشت. ایدئولوژی حزب نخست‌وزیر ملی‌گرایانه و محافظه‌کارانه است، اما ائتلاف پنج‌حزبی از ملی‌گرایی فلاندری، لیبرالیسم، سوسیال‌دموکراسی و دموکراسی مسیحی تشکیل شده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Belgian Federal Government",
+          "publisher": "Belgian Federal Government",
+          "url": "https://federal-government.be/en/",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فهرست رسمی دولت فدرال و نخست‌وزیر بارت دِ وِوِر؛ ترکیب دولت در کنار وضعیت استعفای ارائه‌شده باید با خبرهای تاریخ‌دار خوانده شود."
+        },
+        {
+          "name": "The Federal Authorities",
+          "publisher": "Belgium.be — Belgian Federal Public Information Service",
+          "url": "https://www.belgium.be/en/about_belgium/government/federal_authorities",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نقش پادشاه، مسئولیت وزیران و ساختار دولت فدرال بلژیک."
+        },
+        {
+          "name": "Belgium — EU country profile",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/belgium_en",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "territorial_structure"
+          ],
+          "note": "بلژیک به‌عنوان پادشاهی مشروطه فدرال با سه منطقه و سه جامعه زبانی."
+        },
+        {
+          "name": "Belgium: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/belgium/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی بلژیک به‌عنوان دموکراسی انتخاباتی آزاد؛ همراه با اشاره به دشواری تشکیل دولت در منطقه بروکسل."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت سیاسی در تاریخ ۵ نوامبر حساس و در حال تحول بود: استعفای دولت ارائه شده بود، اما تصمیم نهایی پادشاه هنوز قطعی نشده بود. به همین دلیل confidence متوسط ثبت شد."
+      }
+    },
+    "CHE": {
+      "country_name_fa": "سوئیس",
+      "country_name_en": "Switzerland",
+      "government_form": "republic",
+      "government_subform": "federal_directorial_republic",
+      "executive_legislative_system": "directorial",
+      "territorial_structure": "federal",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "national_conservatism",
+        "liberalism",
+        "social_democracy",
+        "christian_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "سوئیس جمهوری فدرال با نظام اجرایی شورایی/مدیریتی است، نه نظام پارلمانی متعارف با یک نخست‌وزیر. شورای فدرال هفت عضو هم‌رتبه دارد که توسط مجلس فدرال انتخاب می‌شوند؛ ریاست کنفدراسیون هر سال میان اعضا می‌چرخد و رئیس‌جمهور از نظر حقوقی «نخستین در میان برابرها» است. در سال ۲۰۲۶ گای پارملن رئیس کنفدراسیون است. دولت بر پایه سازوکار توافقی و نمایندگی چند حزب بزرگ شکل می‌گیرد؛ بنابراین «حزب حاکم واحد» وجود ندارد و گرایش‌های ائتلافی/شورایی ترکیبی از SVP، FDP، SP و The Centre است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The seven members of the Federal Council",
+          "publisher": "Swiss Federal Council / Federal Administration",
+          "url": "https://www.admin.ch/en/members-federal-council",
+          "date": "2026-11-05",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "اعضای هفت‌نفره شورای فدرال و احزاب وابسته؛ گای پارملن رئیس کنفدراسیون در سال ۲۰۲۶."
+        },
+        {
+          "name": "The Federal Council",
+          "publisher": "Swiss Federal Administration",
+          "url": "https://www.admin.ch/en/the-federal-council",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "شورای فدرال بالاترین مرجع اجرایی و انتخاب اعضا توسط مجلس فدرال."
+        },
+        {
+          "name": "A collegiate group since 1848",
+          "publisher": "Swiss Federal Administration",
+          "url": "https://www.admin.ch/en/composition-of-the-swiss-government",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ماهیت شورایی، اصل collegiality و ترکیب چندحزبی دولت سوئیس."
+        },
+        {
+          "name": "Switzerland: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/switzerland/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "territorial_structure"
+          ],
+          "note": "ارزیابی دموکراسی، تمرکززدایی و دموکراسی مستقیم."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "به‌دلیل ساختار شورایی، فیلد ruling_party_ideology عمداً null است؛ گرایش‌های احزاب حاضر در شورای فدرال در ruling_coalition_ideology ثبت شده‌اند."
+      }
+    },
+    "AUT": {
+      "country_name_fa": "اتریش",
+      "country_name_en": "Austria",
+      "government_form": "republic",
+      "government_subform": "federal_parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "federal",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "christian_democracy",
+        "liberal_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "christian_democracy",
+        "liberal_conservatism",
+        "social_democracy",
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "اتریش جمهوری فدرال پارلمانی است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، دولت کریستیان اشتوکر از ائتلاف سه‌حزبی حزب مردم اتریش (ÖVP)، حزب سوسیال‌دموکرات اتریش (SPÖ) و NEOS تشکیل می‌شد. ÖVP حزب صدراعظم و نیروی اصلی محافظه‌کار/دموکرات‌مسیحی دولت است؛ SPÖ سوسیال‌دموکرات و NEOS لیبرال است. ایدئولوژی رسمی واحدی برای جمهوری در قانون اساسی تعیین نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government Stocker — Governments since 1945",
+          "publisher": "Federal Chancellery of Austria",
+          "url": "https://www.bundeskanzleramt.gv.at/bundeskanzleramt/geschichte/regierungen-seit-1945.html?lang=en",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید دولت اشتوکر از ۳ مارس ۲۰۲۵ و ترکیب حزبی ÖVP، SPÖ و NEOS."
+        },
+        {
+          "name": "Members of the Federal Government",
+          "publisher": "Federal Chancellery of Austria",
+          "url": "https://www.bundeskanzleramt.gv.at/en/federal-chancellery/the-austrian-federal-government/ministers.html",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فهرست اعضای کابینه و سمت صدراعظم کریستیان اشتوکر."
+        },
+        {
+          "name": "The Government",
+          "publisher": "Austrian Parliament",
+          "url": "https://www.parlament.gv.at/en/explore/political-system/the-government",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ترکیب دولت فدرال و نقش صدراعظم، معاون صدراعظم و وزیران."
+        },
+        {
+          "name": "Austria: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/austria/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی، آزادی‌های مدنی و رقابت حزبی در اتریش."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب دولت و گرایش احزاب بر مبنای دولت اشتوکر در تاریخ آغاز سناریو ثبت شده است."
+      }
+    },
+    "GRC": {
+      "country_name_fa": "یونان",
+      "country_name_en": "Greece",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "liberal_conservatism",
+        "christian_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "یونان جمهوری پارلمانی و دولت واحد است. رئیس‌جمهور رئیس کشور با اختیارات سیاسی محدودتر و نخست‌وزیر رئیس دولت است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، کیریاکوس میتسوتاکیس نخست‌وزیر و حزب دموکراسی نوین (New Democracy) حزب حاکم بود. دولت از یک حزب تشکیل شده و ائتلاف چندحزبی حاکم ثبت نمی‌شود. گرایش حزب حاکم در طیف محافظه‌کاری میانه‌رو و لیبرال‌محافظه‌کاری قرار می‌گیرد؛ ایدئولوژی رسمی واحدی برای جمهوری در قانون اساسی تعیین نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government and Politics",
+          "publisher": "Hellenic Ministry of Foreign Affairs",
+          "url": "https://www.mfa.gr/missionsabroad/en/about-greece/government-and-politics/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "یونان به‌عنوان جمهوری پارلمانی؛ نقش رئیس‌جمهور، نخست‌وزیر و شورای وزیران."
+        },
+        {
+          "name": "Members of the Government",
+          "publisher": "Secretariat General for Legal and Parliamentary Affairs, Hellenic Republic",
+          "url": "https://gslegal.gov.gr/en/list-of-members-of-the-government-deputy-ministers-secretaries-contact-information/",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "فهرست رسمی اعضای دولت و کیریاکوس میتسوتاکیس به‌عنوان نخست‌وزیر."
+        },
+        {
+          "name": "Council of Ministers",
+          "publisher": "Secretariat General for Legal and Parliamentary Affairs, Hellenic Republic",
+          "url": "https://gslegal.gov.gr/en/council-of-ministers/",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system"
+          ],
+          "note": "اختیارات و ترکیب شورای وزیران."
+        },
+        {
+          "name": "Greece: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/greece/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی یونان به‌عنوان دموکراسی پارلمانی با رقابت حزبی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت تک‌حزبی دموکراسی نوین در baseline ثبت شده؛ انتخابات بعدی که برای ۲۰۲۷ پیش‌بینی می‌شود وارد snapshot نشده است."
       }
     }
   }
