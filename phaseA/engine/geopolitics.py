@@ -1312,6 +1312,23 @@ def prepare_conversation_session(s, participants, topic="گفت‌وگوی دی�
         raise ValueError("اطلاعات زمینه نشست بیش از حد مجاز است.")
 
     sessions = s.setdefault("conversation_sessions", [])
+    existing = None
+    if conversation_id:
+        for item in sessions:
+            if isinstance(item, dict) and item.get("id") == conversation_id:
+                existing = item
+                break
+        if existing is None:
+            raise ValueError("نشست گفت‌وگوی درخواستی پیدا نشد.")
+        if set(existing.get("participants") or []) != set(selected):
+            raise ValueError("اعضای نشست موجود با کشورهای انتخاب‌شده مطابقت ندارند.")
+        old_date = existing.get("meeting_date")
+        if old_date:
+            if meeting_date and str(meeting_date) != old_date:
+                raise ValueError("این نشست از قبل تاریخ مشخصی دارد؛ برای تغییر تاریخ باید درخواست جداگانه ثبت شود.")
+            existing["updated_date"] = s.get("game_date", "")
+            return dict(ok=True, created=False, session=existing,
+                        note="نشست قبلی بازیابی شد؛ تاریخ و وضعیت فعلی آن حفظ شده است.")
     if not meeting_date:
         raise ValueError("برای نشست باید تاریخ پیشنهادی مشخص شود.")
     try:
@@ -1321,26 +1338,16 @@ def prepare_conversation_session(s, participants, topic="گفت‌وگوی دی�
         raise ValueError("تاریخ نشست معتبر نیست.")
     if requested_date <= current_date:
         raise ValueError("تاریخ نشست باید بعد از تاریخ فعلی بازی باشد.")
-
-    if conversation_id:
-        for existing in sessions:
-            if isinstance(existing, dict) and existing.get("id") == conversation_id:
-                if set(existing.get("participants") or []) != set(selected):
-                    raise ValueError("اعضای نشست موجود با کشورهای انتخاب‌شده مطابقت ندارند.")
-                old_date = existing.get("meeting_date")
-                if old_date and old_date != requested_date.isoformat():
-                    raise ValueError("این نشست از قبل تاریخ مشخصی دارد؛ برای تغییر تاریخ باید درخواست جداگانه ثبت شود.")
-                if not old_date:
-                    existing["meeting_date"] = requested_date.isoformat()
-                    existing["meeting_status"] = "pending_ai_acceptance"
-                    existing["meeting_initiator"] = player
-                    existing["meeting_proposed_by"] = player
-                    existing["meeting_accepted_by"] = [player]
-                    existing["meeting_request_id"] = "MR-" + existing["id"]
-                existing["updated_date"] = s.get("game_date", "")
-                return dict(ok=True, created=False, session=existing,
-                            note="نشست قبلی بازیابی شد؛ تاریخ پیشنهادی ثبت شد و تا پذیرش طرف مقابل قفل می‌ماند.")
-        raise ValueError("نشست گفت‌وگوی درخواستی پیدا نشد.")
+    if existing:
+        existing["meeting_date"] = requested_date.isoformat()
+        existing["meeting_status"] = "pending_ai_acceptance"
+        existing["meeting_initiator"] = player
+        existing["meeting_proposed_by"] = player
+        existing["meeting_accepted_by"] = [player]
+        existing["meeting_request_id"] = "MR-" + existing["id"]
+        existing["updated_date"] = s.get("game_date", "")
+        return dict(ok=True, created=False, session=existing,
+                    note="تاریخ پیشنهادی به نشست قبلی افزوده شد؛ تا پذیرش طرف مقابل قفل می‌ماند.")
 
     sequence = int(s.get("conversation_sequence", 0)) + 1
     s["conversation_sequence"] = sequence
