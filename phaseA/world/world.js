@@ -799,16 +799,29 @@ function politicalChangeFormHtml(pc, isPlayer) {
   pc = pc || {};
   var proposalList = (ST && ST.political_reform_proposals) || [];
   var activeProposal = null, pi;
-  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && ['pending','reviewed','approved','executing','paused_funds'].indexOf(proposalList[pi].status) >= 0) { activeProposal=proposalList[pi]; break; }
+  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && ['pending','reviewed','approved','executing','paused_funds','paused_crisis'].indexOf(proposalList[pi].status) >= 0) { activeProposal=proposalList[pi]; break; }
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">تغییرات ابتدا به‌صورت طرح ثبت و ارزیابی می‌شوند. پس از تصویب، اجرای مرحله‌ای از روز بعد آغاز می‌شود؛ هزینه در اقساط روزانه پرداخت خواهد شد و تغییر نهایی فقط پس از تکمیل موفق طرح اعمال می‌شود. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
   if (activeProposal) {
-    var statusLabel = {pending:'در انتظار بررسی',reviewed:'ارزیابی شده؛ منتظر تصمیم بازیکن',approved:'تصویب شده؛ آماده آغاز اجرا',executing:'در حال اجرا',paused_funds:'توقف موقت؛ بودجه کافی نیست'};
+    var statusLabel = {pending:'در انتظار بررسی',reviewed:'ارزیابی شده؛ منتظر تصمیم بازیکن',approved:'تصویب شده؛ آماده آغاز اجرا',executing:'در حال اجرا',paused_funds:'توقف موقت؛ بودجه کافی نیست',paused_crisis:'توقف موقت؛ بحران سیاسی'};
     h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>'+dashEsc(statusLabel[activeProposal.status] || activeProposal.status)+'</b></div>';
     h += '<div class="row"><span>هزینه برآوردی</span><b>'+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
     h += '<div class="row"><span>زمان برآوردی</span><b>'+dashEsc(activeProposal.estimated_days)+' روز</b></div>';
     h += '<div class="dashNote">'+(activeProposal.status === 'completed' ? 'اصلاحات با موفقیت اعمال شده‌اند.' : (activeProposal.status === 'failed' ? 'اجرای طرح ناموفق بود؛ تغییرات اعمال نشدند.' : 'تا پایان موفق اجرای طرح، ساختار فعلی کشور بدون تغییر می‌ماند.'))+'</div>';
-    if (activeProposal.status === 'approved' || activeProposal.status === 'executing' || activeProposal.status === 'paused_funds') {
+    if (activeProposal.impact) {
+      var impact = activeProposal.impact;
+      h += '<div class="dashCard"><b>پیامدهای داخلی طرح</b>';
+      if (impact.themes && impact.themes.length) h += '<div class="row"><span>محورهای اصلاحات</span><b>'+dashEsc(impact.themes.join('، '))+'</b></div>';
+      if (impact.public_response && impact.public_response.length) {
+        for (var ir=0;ir<impact.public_response.length;ir++) h += '<div class="dashNote">'+dashEsc(impact.public_response[ir])+'</div>';
+      }
+      if (impact.headlines && impact.headlines.length) {
+        h += '<div class="muted small">آخرین واکنش رسانه‌ای</div>';
+        h += '<div class="dashNote">'+dashEsc(impact.headlines[impact.headlines.length-1])+'</div>';
+      }
+      h += '<div class="dashNote">'+dashEsc(impact.risk_note || 'واکنش‌ها برآورد شبیه‌سازی بازی هستند.')+'</div></div>';
+    }
+    if (activeProposal.status === 'approved' || activeProposal.status === 'executing' || activeProposal.status === 'paused_funds' || activeProposal.status === 'paused_crisis') {
       h += '<div class="row"><span>پیشرفت اجرا</span><b>'+dashEsc(activeProposal.progress || 0)+'٪</b></div>';
       h += '<div class="row"><span>هزینه پرداخت‌شده</span><b>'+dashEsc(activeProposal.spent_cost || 0)+' از '+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
       h += '<div class="dashNote">با گذشت هر روز بازی، یک مرحله از هزینه پرداخت و پیشرفت طرح ثبت می‌شود. در صورت کمبود بودجه، اجرا تا تأمین اعتبار متوقف می‌ماند.</div>';
