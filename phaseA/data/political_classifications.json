@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 81,
-    "pending_countries": 93,
+    "classified_countries": 86,
+    "pending_countries": 88,
     "last_batch": [
-      "AFG",
-      "BGD",
-      "NPL",
-      "LKA",
-      "MMR"
+      "VNM",
+      "THA",
+      "MYS",
+      "SGP",
+      "PHL"
     ]
   },
   "countries": {
@@ -5860,6 +5860,380 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "snapshot بازی پس از انتخابات ژانویه و انتقال رسمی ریاست‌جمهوری در آوریل ۲۰۲۶ است؛ وضعیت چندپارگی سرزمینی و تداوم سلطه ارتش در baseline لحاظ شده است."
+      }
+    },
+    "VNM": {
+      "country_name_fa": "ویتنام",
+      "country_name_en": "Vietnam",
+      "government_form": "republic",
+      "government_subform": "socialist_republic",
+      "executive_legislative_system": "one_party",
+      "territorial_structure": "unitary",
+      "regime_character": "one_party_authoritarian",
+      "party_system": "one_party_legal",
+      "official_ideology": [
+        "marxism_leninism",
+        "socialism"
+      ],
+      "ruling_party_ideology": [
+        "marxism_leninism",
+        "communism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، ویتنام جمهوری سوسیالیستی تک‌حزبی تحت رهبری حزب کمونیست ویتنام بود. ماده ۴ قانون اساسی حزب کمونیست را نیروی رهبری‌کننده دولت و جامعه معرفی می‌کند و بر آموزه مارکسیسم–لنینیسم و اندیشه هوشی‌مین تکیه دارد. تو لام در ژانویه ۲۰۲۶ دوباره دبیرکل حزب شد و در ۷ آوریل ۲۰۲۶ به ریاست‌جمهوری نیز انتخاب شد؛ بنابراین در تاریخ مبنا هر دو مقام عالی را در اختیار داشت. لو مین هونگ در همان روز نخست‌وزیر شد. مجلس ملی و انتخابات وجود دارند، اما رقابت حزبی قانونی و امکان انتقال قدرت از طریق اپوزیسیون مستقل وجود ندارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Vietnam: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/vietnam/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ویتنام را دولت تک‌حزبی تحت سلطه حزب کمونیست و مخالفان را عملاً ممنوع توصیف می‌کند."
+        },
+        {
+          "name": "Consolidated Constitution of the Socialist Republic of Vietnam",
+          "publisher": "Office of the National Assembly of Vietnam",
+          "url": "https://english.luatvietnam.vn/consolidated-text-no-52-vbhn-vpqh-dated-july-21-2025-of-the-office-of-the-national-assembly-of-the-constitution-of-the-socialist-republic-of-vietnam-406174-doc5.html",
+          "date": "2025-07-21",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ماده ۴ حزب کمونیست را نیروی رهبری‌کننده دولت و جامعه و مبنای فکری آن را مارکسیسم–لنینیسم و اندیشه هوشی‌مین اعلام می‌کند."
+        },
+        {
+          "name": "Vietnam's top leader To Lam expands power, new PM elected",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/asia-pacific/vietnam-parliament-elects-party-leader-lam-new-state-president-2026-04-07/",
+          "date": "2026-04-07",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "انتخاب تو لام به ریاست‌جمهوری و لو مین هونگ به نخست‌وزیری در ۷ آوریل ۲۰۲۶."
+        },
+        {
+          "name": "U.S.-Vietnam Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/IF10209.html",
+          "date": "2026-11-23",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "تداوم ساختار تک‌حزبی، جایگاه دبیرکل و تغییر تمرکز رهبری در کنگره چهاردهم حزب در ژانویه ۲۰۲۶."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "قانون اساسی تلفیقی ۲۰۲۵ و تغییرات رهبری ژانویه و آوریل ۲۰۲۶ پیش از تاریخ مبنای سناریو هستند؛ ایدئولوژی رسمی فقط بر پایه تصریح قانون اساسی ثبت شده است."
+      }
+    },
+    "THA": {
+      "country_name_fa": "تایلند",
+      "country_name_en": "Thailand",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "populism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، تایلند پادشاهی مشروطه با نظام پارلمانی بود. پس از انتخابات زودهنگام ۸ فوریه ۲۰۲۶، حزب بومجای‌تای به رهبری آنوتین چارن‌ویراکول با بیش از ۱۹۰ کرسی بزرگ‌ترین حزب مجلس ۵۰۰ نفره شد؛ حزب مردم با ۱۲۰ کرسی اپوزیسیون اصلی بود. بومجای‌تای در ۱۳ فوریه با حزب فو تای و احزاب کوچک‌تر توافق ائتلافی کرد و مجلس در ۱۹ مارس آنوتین را دوباره به نخست‌وزیری برگزید. همه‌پرسی هم‌زمان با انتخابات از آغاز فرایند تدوین قانون اساسی جدید حمایت کرد، اما در تاریخ مبنا ساختار سلطنت مشروطه برقرار بود. رقابت حزبی واقعی است، ولی نقش نهادهای انتصابی، دادگاه‌ها و محدودیت‌های مربوط به سلطنت باعث شده وضعیت رژیم در دسته ترکیبی قرار گیرد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Thailand: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/thailand/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "executive_legislative_system"
+          ],
+          "note": "نقش نهادهای غیرانتخابی و سلطنت در محدود کردن رقابت سیاسی و وضعیت دولت پیش از انتخابات زودهنگام ۲۰۲۶."
+        },
+        {
+          "name": "Thailand House of Representatives February 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TH/TH-LC01/election/TH-LC01-E20260208/",
+          "date": "2026-02-08",
+          "supports": [
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "نتایج انتخابات، بومجای‌تای به‌عنوان بزرگ‌ترین حزب، توافق ائتلافی با فو تای و انتخاب مجدد آنوتین در ۱۹ مارس ۲۰۲۶."
+        },
+        {
+          "name": "Thailand's Parliament votes to keep Anutin Charnvirakul as prime minister",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/4a10a749341a90eaa19d9868797c3a1a",
+          "date": "2026-03-19",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "رأی مجلس به ادامه نخست‌وزیری آنوتین و تشکیل ائتلاف بومجای‌تای و فو تای پس از انتخابات فوریه."
+        },
+        {
+          "name": "Thailand: Background and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-01-28_IF10253_8761afebac61269af38a46dc0011bc18491803ea.pdf",
+          "date": "2026-01-28",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "پادشاهی مشروطه، نظام پارلمانی و سابقه نفوذ ارتش و نهادهای غیرانتخابی؛ منبع پیش از انتخابات فوریه برای ساختار پایدار استفاده شده است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات فوریه و تشکیل دولت ائتلافی در مارس ۲۰۲۶ پیش از تاریخ مبنا هستند؛ گزارش Freedom House مربوط به دوره پیش از انتخابات است و فقط برای ارزیابی محدودیت‌های نهادی استفاده شده است."
+      }
+    },
+    "MYS": {
+      "country_name_fa": "مالزی",
+      "country_name_en": "Malaysia",
+      "government_form": "monarchy",
+      "government_subform": "federal_constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "federal",
+      "regime_character": "hybrid_regime",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "conservatism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، مالزی فدراسیونی با پادشاهی مشروطه انتخابی و نظام پارلمانی وست‌مینستر بود. سلطان ابراهیم از ژانویه ۲۰۲۴ پادشاه و انور ابراهیم از نوامبر ۲۰۲۲ نخست‌وزیر بود. دولت ائتلافی وحدت ملی تحت رهبری پاکاتان هاراپان با مشارکت ائتلاف‌هایی چون باریسان ناسیونال و احزاب منطقه‌ای صباح و ساراواک اداره می‌شد. نظام چندحزبی رقابتی است، اما ائتلاف‌های متغیر، سیاست هویتی و محدودیت‌های حقوق مدنی کیفیت رقابت را تحت تأثیر قرار می‌دهند. ایدئولوژی رسمی دولت جداگانه اعلام نشده؛ گرایش‌های ائتلاف حاکم متنوع و عمل‌گرایانه‌اند و شامل سوسیال‌دموکراسی و محافظه‌کاری می‌شوند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Malaysia Ruling System",
+          "publisher": "Government of Malaysia, MyGovernment Portal",
+          "url": "https://www.malaysia.gov.my/en/government/malaysiarulingsystem",
+          "date": "2026-08-19",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نظام دموکراسی پارلمانی، پادشاهی مشروطه و تقسیم اختیارات میان دولت فدرال و ایالت‌ها."
+        },
+        {
+          "name": "Malaysia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/malaysia/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "رقابت و همکاری ائتلاف‌های متعدد از ۲۰۱۸ و فرصت‌های رقابت سیاسی همراه با محدودیت‌های مدنی."
+        },
+        {
+          "name": "Overseas business risk: Malaysia",
+          "publisher": "UK Department for Business and Trade",
+          "url": "https://www.gov.uk/government/publications/overseas-business-risk-malaysia/overseas-business-risk-malaysia",
+          "date": "2026-06-25",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "فدراسیون، پارلمان دو مجلسی، نخست‌وزیر، پادشاه مشروطه و تقسیم اختیارات فدرال و ایالتی."
+        },
+        {
+          "name": "Malaysia: Background and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-03-05_IF10316_41c8bc5fd1b8301a2f741056a7bf0eacb88b7535.pdf",
+          "date": "2026-03-05",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "دولت ائتلافی پاکاتان هاراپان و UMNO، نخست‌وزیری انور ابراهیم و ماهیت ائتلافی سیاست مالزی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار فدرال و پادشاهی مشروطه از منابع رسمی و ترکیب ائتلاف از منابع ۲۰۲۶ پیش از تاریخ مبنا ثبت شده است؛ گرایش ایدئولوژیک ائتلاف به‌صورت چندگانه و محتاطانه طبقه‌بندی شده است."
+      }
+    },
+    "SGP": {
+      "country_name_fa": "سنگاپور",
+      "country_name_en": "Singapore",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، سنگاپور جمهوری پارلمانی بود؛ تان کنگ یام رئیس‌جمهور و لارنس وونگ نخست‌وزیر بود. حزب اقدام مردم (PAP) در انتخابات زودهنگام ۳ مه ۲۰۲۵، ۸۷ کرسی از ۹۷ کرسی انتخابی را به دست آورد و حزب کارگران ۱۰ کرسی انتخابی و دو کرسی غیرحوزه‌ای داشت. PAP از زمان استقلال در ۱۹۶۵ پیوسته دولت را در اختیار داشته است. احزاب مخالف قانونی و انتخابات رقابتی‌اند، اما چارچوب انتخاباتی و حقوقی و محدودیت‌های آزادی بیان و تجمع، رشد اپوزیسیون را دشوار می‌کنند. ایدئولوژی رسمی دولتی اعلام نشده و گرایش حزب حاکم بیشتر عمل‌گرایانه و محافظه‌کارانه توصیف می‌شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Government",
+          "publisher": "Prime Minister's Office, Singapore",
+          "url": "https://www.pmo.gov.sg/about-us/the-government/",
+          "date": "2026-11-27",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "سنگاپور را جمهوری معرفی می‌کند؛ رئیس‌جمهور رئیس کشور و نخست‌وزیر رئیس مؤثر قوه مجریه است."
+        },
+        {
+          "name": "Singapore: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/singapore/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "سلطه PAP از ۱۹۵۹، وجود مقداری کثرت‌گرایی و محدودیت رشد احزاب مخالف و آزادی‌های مدنی."
+        },
+        {
+          "name": "Singapore Parliament May 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/SG/SG-LC01/election/SG-LC01-E20250503/",
+          "date": "2025-05-03",
+          "supports": [
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "نتایج انتخابات: ۸۷ کرسی انتخابی PAP و ۱۰ کرسی انتخابی حزب کارگران؛ نخستین انتخابات تحت نخست‌وزیری لارنس وونگ."
+        },
+        {
+          "name": "BTI 2026 Country Report: Singapore",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://www.ecoi.net/en/file/local/2138476/country_report_2026_SGP.pdf",
+          "date": "2026-03-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "برتری نهادی PAP، ضعف نظارت مستقل پارلمان و محدودیت رقابت اپوزیسیون."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "نتایج انتخابات ۲۰۲۵ و دولت لارنس وونگ در تاریخ مبنا برقرار بوده‌اند؛ رئیس‌جمهور تان کنگ یام در snapshot سال ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "PHL": {
+      "country_name_fa": "فیلیپین",
+      "country_name_en": "Philippines",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "devolved_unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، فیلیپین جمهوری ریاستی بود؛ فردیناند مارکوس جونیور رئیس‌جمهور و رئیس دولت و سارا دوترته معاون رئیس‌جمهور بود. انتخابات میان‌دوره‌ای ۱۲ مه ۲۰۲۵ نیمی از کرسی‌های سنا و کل مجلس نمایندگان را تجدید کرد. نظام حزبی چندحزبی و ائتلاف‌ها سیال و عمدتاً مبتنی بر شخصیت‌ها و شبکه‌های سیاسی‌اند، نه برنامه‌های ایدئولوژیک منسجم. ساختار کشور واحد با خودمختاری منطقه‌ای، به‌ویژه در بانگسامورو، است. رقابت انتخاباتی فعال است، اما خاندان‌های سیاسی، خرید رأی، اطلاعات نادرست و فساد، کیفیت دموکراسی را محدود می‌کنند. ایدئولوژی رسمی دولتی یا حزب حاکم مشخصی ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Philippines: Background and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R47055.html",
+          "date": "2026-03-26",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "party_system",
+            "regime_character"
+          ],
+          "note": "مارکوس جونیور رئیس‌جمهور از ۲۰۲۲؛ نظام ریاستی، محدودیت یک دوره شش‌ساله و سیال بودن ائتلاف‌های حزبی."
+        },
+        {
+          "name": "Philippines: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/philippines/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "فضای سیاسی چندحزبی و انتخابات رقابتی همراه با مزیت خاندان‌های سیاسی، خرید رأی و فساد."
+        },
+        {
+          "name": "Philippine Senate 2025 General Election",
+          "publisher": "IFES Election Guide",
+          "url": "https://www.electionguide.org/elections/id/4565/",
+          "date": "2025-05-12",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "انتخابات میان‌دوره‌ای ۲۰۲۵، ریاست‌جمهوری فردیناند مارکوس جونیور و ساختار دو مجلسی کنگره."
+        },
+        {
+          "name": "The 1987 Constitution of the Republic of the Philippines",
+          "publisher": "Official Gazette of the Republic of the Philippines",
+          "url": "https://www.officialgazette.gov.ph/constitutions/1987-constitution/",
+          "date": "1987-02-11",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "قانون اساسی، رئیس‌جمهور به‌عنوان رئیس کشور و دولت، کنگره دو مجلسی و نظام دولت محلی و خودمختاری منطقه‌ای."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "مبنای سیاسی snapshot پس از انتخابات میان‌دوره‌ای مه ۲۰۲۵ است؛ ائتلاف‌ها به‌دلیل سیال بودن به‌صورت کلی و بدون انتساب ایدئولوژی قطعی به یک حزب ثبت شده‌اند."
       }
     }
   }
