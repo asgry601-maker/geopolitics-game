@@ -6,13 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 90,
-    "pending_countries": 84,
+    "classified_countries": 95,
+    "pending_countries": 79,
     "last_batch": [
-      "KHM",
-      "LAO",
-      "BRN",
-      "TLS"
+      "PRK",
+      "TWN",
+      "BTN",
+      "MDV",
+      "YEM"
     ]
   },
   "countries": {
@@ -6522,6 +6523,357 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "ترکیب دولت و رهبران بر پایه وضعیت پس از انتخابات پارلمانی ۲۰۲۳ و پیش از تاریخ مبنای ۵ نوامبر ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "PRK": {
+      "country_name_fa": "کره شمالی",
+      "country_name_en": "North Korea",
+      "government_form": "republic",
+      "government_subform": "socialist_republic",
+      "executive_legislative_system": "one_party",
+      "territorial_structure": "unitary",
+      "regime_character": "one_party_authoritarian",
+      "party_system": "one_party_legal",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "juche",
+        "socialism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، جمهوری دموکراتیک خلق کره یک دولت سوسیالیستی واحد با انحصار سیاسی حزب کارگران کره بود. کیم جونگ اون رهبر عالی و دبیرکل حزب کارگران کره بود؛ کنگره نهم حزب در فوریه ۲۰۲۶ اقتدار شخصی او و کنترل حزب بر دولت و ارتش را تقویت کرد. مجلس عالی خلق و انتخابات آن رقابت سیاسی مستقل ایجاد نمی‌کنند. Freedom House کشور را دیکتاتوری تمامیت‌خواه دودمانی و تک‌حزبی ارزیابی می‌کند. ایدئولوژی رسمی دقیق در قانون اساسی با عنوان کیم ایل‌سونگ‌گرایی–کیم جونگ ایل‌گرایی بیان می‌شود که در taxonomy فعلی شناسه مستقلی ندارد؛ بنابراین فیلد ایدئولوژی رسمی null است و جوچه/سوسیالیسم صرفاً برای توصیف ریشه‌های فکری حزب با احتیاط ثبت شده‌اند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "North Korea: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/north-korea/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "کره شمالی را دولت تک‌حزبی با دیکتاتوری دودمانی تمامیت‌خواه معرفی می‌کند."
+        },
+        {
+          "name": "North Korea in 2026: Frequently asked questions",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12204/",
+          "date": "2026-09-18",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "تداوم رهبری کیم جونگ اون و جایگاه حزب کارگران کره در ساختار سیاسی را بررسی می‌کند."
+        },
+        {
+          "name": "BTI 2026 Country Report: North Korea",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/PRK",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تمرکز قدرت در رهبر، نقش حزب در کنترل نهادهای دولتی و تحول گفتمان ایدئولوژیک را توضیح می‌دهد."
+        },
+        {
+          "name": "White Paper on Human Rights in North Korea 2024",
+          "publisher": "Korea Institute for National Unification",
+          "url": "https://www.kinu.or.kr/nkhr/board/boardFileCustom/download/nJf8yNwJYtK7/29/0/1030.do",
+          "date": "2024",
+          "supports": [
+            "official_ideology",
+            "party_system"
+          ],
+          "note": "تغییر متن قانون اساسی در ۲۰۱۹ و جایگزینی جوچه با کیم ایل‌سونگ‌گرایی–کیم جونگ ایل‌گرایی در ماده ۳ را توضیح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "به‌دلیل نبود شناسه مستقل برای Kimilsungism–Kimjongilism در taxonomy، ایدئولوژی رسمی به‌صورت null نگه داشته شده و این محدودیت صریحاً در یادداشت آمده است."
+      }
+    },
+    "TWN": {
+      "country_name_fa": "تایوان",
+      "country_name_en": "Taiwan",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "progressivism",
+        "social_liberalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در تاریخ مبنای بازی، تایوان با ساختار جمهوری و نظام نیمه‌ریاستی اداره می‌شد: رئیس‌جمهور با رأی مستقیم انتخاب می‌شود و رئیس قوه مجریه (Executive Yuan) را منصوب می‌کند، درحالی‌که نخست‌وزیر و کابینه در برابر مجلس قانون‌گذاری پاسخگو هستند. لای چینگ‌ده از حزب دموکراتیک پیشرو رئیس‌جمهور بود. در مجلس ۱۱۳ کرسی، کومینتانگ ۵۲، حزب دموکراتیک پیشرو ۵۱، حزب مردم تایوان ۸ و مستقل‌ها ۲ کرسی داشتند؛ بنابراین دولت رئیس‌جمهور با مجلس بدون اکثریت همسو روبه‌رو بود. نظام رقابتی چندحزبی و دموکراسی لیبرال است. ایدئولوژی رسمی واحدی برای دولت ثبت نشده؛ گرایش حزب رئیس‌جمهور به‌صورت ترقی‌خواهی و لیبرالیسم اجتماعی طبقه‌بندی شده، نه ایدئولوژی کل جامعه.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Taiwan: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/taiwan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تایوان را دموکراسی رقابتی با انتقال مسالمت‌آمیز قدرت و حمایت قوی از آزادی‌های مدنی ارزیابی می‌کند."
+        },
+        {
+          "name": "Taiwan: Issues for Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-08-05_IF10275_469b2607e4989d96ca1385a69285c8a522dd45dc.html",
+          "date": "2026-08-05",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ریاست‌جمهوری لای چینگ‌ده و ترکیب مجلس قانون‌گذاری با اکثریت مجموع KMT و TPP را ثبت می‌کند."
+        },
+        {
+          "name": "Central government — Government organizations",
+          "publisher": "Office of the President, Republic of China (Taiwan)",
+          "url": "https://english.president.gov.tw/Page/52",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار پنج‌یوآن، انتخاب مستقیم رئیس‌جمهور و نقش نهادهای اجرایی و تقنینی را توضیح می‌دهد."
+        },
+        {
+          "name": "Election Results — Legislative Elections",
+          "publisher": "Central Election Commission, Taiwan",
+          "url": "https://web.cec.gov.tw/api/file/12b15a68-a2a6-4e3f-b84f-4277f617e847.pdf",
+          "date": "2024-01",
+          "supports": [
+            "party_system"
+          ],
+          "note": "نتایج رسمی انتخابات مجلس ۲۰۲۴ و توزیع ۱۱۳ کرسی میان KMT، DPP، TPP و مستقل‌ها را ثبت می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی ساختار اجرایی بر اساس قانون اساسی و اختیارات رئیس‌جمهور و Executive Yuan انجام شده؛ ایدئولوژی حزب حاکم به دولت و جامعه تعمیم داده نشده است."
+      }
+    },
+    "BTN": {
+      "country_name_fa": "بوتان",
+      "country_name_en": "Bhutan",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "بوتان از سال ۲۰۰۸ پادشاهی مشروطه دموکراتیک با نظام پارلمانی و دولت واحد است. پادشاه جیگمه خسار نامگیال وانگچوک رئیس کشور و نخست‌وزیر شرینگ توبگای رهبر دولت بود. پس از انتخابات پارلمانی ژانویه ۲۰۲۴، حزب مردم دموکراتیک (PDP) با ۳۱ کرسی از ۴۷ کرسی مجلس ملی دولت را تشکیل داد و حزب بوتان تندرل (BTP) با ۱۶ کرسی در اپوزیسیون قرار گرفت. نظام رقابتی و امکان انتقال قدرت میان احزاب وجود دارد؛ با این حال، محدودیت‌های حقوق اقلیت‌ها و برخی آزادی‌های مدنی در ارزیابی کیفیت دموکراسی لحاظ می‌شود. ایدئولوژی رسمی واحد و ایدئولوژی حزبی قابل اتکایی برای انتساب ساختاری ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "System of Government",
+          "publisher": "Parliament of Bhutan",
+          "url": "https://parliament.gov.bt/system-of-government",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "بوتان را پادشاهی مشروطه دموکراتیک با دولت پارلمانی و مجلس دوگانه معرفی می‌کند."
+        },
+        {
+          "name": "Bhutan: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/bhutan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات معتبر، امکان انتقال قدرت به اپوزیسیون و چالش‌های حقوقی و مدنی را ارزیابی می‌کند."
+        },
+        {
+          "name": "Member Overview — National Assembly",
+          "publisher": "National Assembly of Bhutan",
+          "url": "https://nab.parliament.gov.bt/members",
+          "date": "2026",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ترکیب مجلس ملی، ۳۱ کرسی PDP و ۱۶ کرسی BTP و قاعده تشکیل دولت توسط حزب اکثریت را اعلام می‌کند."
+        },
+        {
+          "name": "The Kingdom of Bhutan",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/IF10660.html",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "قانون اساسی ۲۰۰۸، نقش پادشاه، نخست‌وزیر و مجلس دوگانه و تداوم انتخابات رقابتی را شرح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب دولت بر اساس انتخابات ۲۰۲۴ و دوره ۲۰۲۴ تا ۲۰۲۸ ثبت شده است؛ از نسبت دادن ایدئولوژی حزبی بدون تعریف رسمی روشن خودداری شده است."
+      }
+    },
+    "MDV": {
+      "country_name_fa": "مالدیو",
+      "country_name_en": "Maldives",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "مالدیو جمهوری ریاستی و دولت واحد است؛ رئیس‌جمهور هم رئیس کشور و هم رئیس دولت است. محمد معیزو در تاریخ مبنای سناریو رئیس‌جمهور بود. حزب کنگره ملی مردم (PNC) پس از انتخابات پارلمانی آوریل ۲۰۲۴ با پیوستن شماری از مستقل‌ها اکثریت بسیار بزرگی در مجلس خلق به دست آورد (۷۲ کرسی از ۹۳ کرسی). احزاب رقیب همچنان حضور قانونی دارند، اما تمرکز قدرت، محدودیت‌های رسانه‌ای و مدنی، اتهامات تخلف انتخاباتی و تضعیف نهادهای نظارتی باعث می‌شود نظام در گروه هیبریدی و حزب مسلطِ رقابتی طبقه‌بندی شود، نه دموکراسی لیبرال. قانون اساسی ایدئولوژی رسمی واحدی تعیین نمی‌کند و گرایش ایدئولوژیک حزب حاکم بدون منبع کافی null باقی مانده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Maldives: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/maldives/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کاهش امتیاز آزادی سیاسی، محدودیت رسانه‌ها و آزادی‌های مدنی و نگرانی‌های مربوط به سلامت رقابت انتخاباتی را شرح می‌دهد."
+        },
+        {
+          "name": "The Global State of Democracy — Maldives",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/maldives",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "نظام ریاستی و ریاست‌جمهوری محمد معیزو را ثبت می‌کند و رویدادهای سیاسی و همه‌پرسی آوریل ۲۰۲۶ را پوشش می‌دهد."
+        },
+        {
+          "name": "Dr Mohamed Muizzu — The President's Office",
+          "publisher": "President's Office, Republic of Maldives",
+          "url": "https://presidency.gov.mv/PO/President/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "تأیید رسمی ریاست‌جمهوری محمد معیزو از ۱۷ نوامبر ۲۰۲۳."
+        },
+        {
+          "name": "Maldives People's Majlis April 2024 Election",
+          "publisher": "Inter-Parliamentary Union — PARLINE",
+          "url": "https://data.ipu.org/parliament/MV/MV-LC01/election/MV-LC01-E20240421/",
+          "date": "2024-04-21",
+          "supports": [
+            "party_system"
+          ],
+          "note": "نتایج انتخابات و پیروزی ۶۶ کرسی PNC و افزایش مجموع کرسی‌های آن به ۷۲ پس از پیوستن مستقل‌ها را ثبت می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "رویداد همه‌پرسی قانون اساسی آوریل ۲۰۲۶ پیش از snapshot است؛ وضعیت نظام ریاستی تغییر نکرد و داده بر پایه ساختار موجود ثبت شده است."
+      }
+    },
+    "YEM": {
+      "country_name_fa": "یمن",
+      "country_name_en": "Yemen",
+      "government_form": "republic",
+      "government_subform": "fragmented_transitional_republic",
+      "executive_legislative_system": "transitional",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "fragmented_authority",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "یمن در ۵ نوامبر ۲۰۲۶ از نظر حقوقی جمهوری بود، اما اقتدار ملی و نهادهای آن چندپاره و انتقالی باقی مانده بود. شورای رهبری ریاست‌جمهوری (PLC) به ریاست رشاد العلیمی دولت به‌رسمیت‌شناخته‌شده بین‌المللی را هدایت می‌کرد و شایع الزندانی از فوریه ۲۰۲۶ نخست‌وزیر دولت تشکیل‌شده بود. انصارالله/حوثی‌ها صنعا و بخش بزرگی از جمعیت شمال و غرب را اداره می‌کردند و نهادهای موازی داشتند؛ در جنوب نیز بازیگران محلی و شبکه‌های سیاسی و امنیتی متعدد نفوذ داشتند. شورای انتقالی جنوب در تحولات ژانویه ۲۰۲۶ تضعیف و عملاً منحل اعلام شد، اما اختلاف درباره سرنوشت و سازماندهی مجدد آن باقی ماند. بنابراین این کشور را نمی‌توان با یک دولت واحدِ مؤثر یا نظام حزبی عادی توصیف کرد؛ ساختار به‌صورت اقتدار چندپاره و گذار سیاسی ثبت شده است. گرایش ائتلاف PLC ناهمگون و عمل‌گرایانه است؛ ایدئولوژی رسمی یا حزب حاکم واحد قابل انتساب نیست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Yemen 2026: Southern Transitional Council’s fall and renewed Houthi-Saudi conflict",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10427/",
+          "date": "2026-10-05",
+          "supports": [
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تحولات ۲۰۲۶، چندپارگی کنترل سرزمینی، وضعیت PLC و فروپاشی/تغییر شکل شورای انتقالی جنوب را تا پیش از تاریخ مبنا شرح می‌دهد."
+        },
+        {
+          "name": "BTI 2026 Country Report: Yemen",
+          "publisher": "Bertelsmann Stiftung — BTI Project",
+          "url": "https://bti-project.org/en/reports/country-report/YEM",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تقسیم نهادهای دولتی و کنترل سرزمینی میان انصارالله، دولت به‌رسمیت‌شناخته‌شده و بازیگران جنوب را مستند می‌کند."
+        },
+        {
+          "name": "Yemen: Unresolved Conflict, Regional Tensions, and Global Risks",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R48942.html",
+          "date": "2026-05-12",
+          "supports": [
+            "territorial_structure",
+            "regime_character",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار PLC، دولت به‌رسمیت‌شناخته‌شده و اداره صنعا و غرب کشور توسط انصارالله را توضیح می‌دهد."
+        },
+        {
+          "name": "Republican Decree on Formation of Government and Appointment of Cabinet Members",
+          "publisher": "Office of the President, Presidential Leadership Council",
+          "url": "https://presidentalalimi.net/en/news1582.html",
+          "date": "2026-02-06",
+          "supports": [
+            "executive_legislative_system"
+          ],
+          "note": "فرمان رسمی تشکیل کابینه در فوریه ۲۰۲۶ و نقش نخست‌وزیر شایع الزندانی را ثبت می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "به‌دلیل اقتدار چندپاره، این طبقه‌بندی نماینده وضعیت حقوقی و نهادهای بین‌المللی به‌رسمیت‌شناخته‌شده به‌تنهایی نیست؛ وضعیت واقعی چندمرکزی در فیلدهای territorial_structure و regime_character منعکس شده است."
       }
     }
   }
