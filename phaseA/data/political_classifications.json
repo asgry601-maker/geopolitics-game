@@ -9,11 +9,11 @@
     "classified_countries": 144,
     "pending_countries": 30,
     "last_batch": [
-      "CPV",
-      "CHL",
-      "COL",
-      "PER",
-      "VEN"
+      "ECU",
+      "BOL",
+      "PRY",
+      "URY",
+      "GUY"
     ]
   },
   "countries": {
@@ -10622,6 +10622,403 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "وضعیت پس از ژانویه ۲۰۲۶ انتقالی و سیال است. گزارش Freedom House 2026 عمدتاً وضعیت پیش از برکناری مادورو را می‌سنجد و در کنار منابع پس از ژانویه استفاده شده است. رویدادهای پس از ۵ نوامبر ۲۰۲۶ در baseline لحاظ نشده‌اند."
+      }
+    },
+    "ECU": {
+      "country_name_fa": "اکوادور",
+      "country_name_en": "Ecuador",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "liberal_conservatism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "liberal_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "قانون اساسی ایدئولوژی رسمی واحدی برای دولت تعیین نمی‌کند. دانیل نوبوا در انتخابات آوریل ۲۰۲۵ برای یک دوره کامل انتخاب شد و در تاریخ مبنای سناریو رئیس‌جمهور بود. جنبش اقدام دموکراتیک ملی (ADN) جریان راست‌میانه و حامی نوبواست. در انتخابات مجلس ۲۰۲۵، ADN با ۶۶ کرسی اندکی پایین‌تر از ائتلاف انقلاب شهروندی با ۶۷ کرسی قرار گرفت؛ دولت با حمایت چند حزب کوچک یک اکثریت غیررسمی و شکننده ایجاد کرد. رقابت چندحزبی واقعی است، اما خشونت سازمان‌یافته و نفوذ گروه‌های تبهکار، حاکمیت قانون و عملکرد نهادها را تضعیف می‌کند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Ecuador in Brief: Overview and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-10-29_R49188_60ccc8d23073a7b6820baf3c24fae39fc56a8eac.html",
+          "date": "2026-10-29",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نوبوا و جنبش راست‌گرای ADN، اکثریت غیررسمی پارلمانی با حمایت احزاب کوچک و اولویت‌های دولت را تشریح می‌کند."
+        },
+        {
+          "name": "Ecuador: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/ecuador/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات رقابتی، ضعف‌های نهادی، خشونت سازمان‌یافته و نگرانی‌های مربوط به آزادی‌های مدنی را ارزیابی می‌کند."
+        },
+        {
+          "name": "Ecuador National Assembly February 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/EC/EC-LC01/election/EC-LC01-E20250209/",
+          "date": "2025-02-09",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ترکیب ۱۵۱ کرسی مجلس؛ ۶۷ کرسی RC-RETO و ۶۶ کرسی ADN و آغاز دوره کامل ریاست‌جمهوری نوبوا در مه ۲۰۲۵."
+        },
+        {
+          "name": "Constitution of the Republic of Ecuador (consolidated)",
+          "publisher": "Presidency of the Republic of Ecuador",
+          "url": "https://www.presidencia.gob.ec/wp-content/uploads/2024/07/CONSTITUCION_DE_LA_REPUBLICA_DEL_ECUADOR-2024-05-30.pdf",
+          "date": "2024-05-30",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "قانون اساسی، ساختار جمهوری و ریاستی و مجلس ملی تک‌مجلسی را تعریف می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت دولت نوبوا و ترکیب مجلس تا ۵ نوامبر ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "BOL": {
+      "country_name_fa": "بولیوی",
+      "country_name_en": "Bolivia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "christian_democracy",
+        "liberal_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "christian_democracy",
+        "conservatism",
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "بولیوی جمهوری چندملیتی با نظام ریاستی و خودمختاری‌های منطقه‌ای در چارچوب دولت واحد است. رودریگو پاز از حزب دموکرات مسیحی (PDC) در دور دوم انتخابات اکتبر ۲۰۲۵ پیروز شد و در ۸ نوامبر ۲۰۲۵ قدرت را در دست گرفت؛ بدین ترتیب دو دهه حاکمیت جنبش سوسیالیسم پایان یافت. دولت جدید از نظر اقتصادی عمل‌گرا و متمایل به بازار و از نظر حزبی مرکزگرا تا میانه‌راست است. احزاب راست‌میانه و میانه در مجلس دست بالا را دارند، اما ائتلاف پارلمانی یکپارچه و منضبطی وجود ندارد. انتخابات ۲۰۲۵ رقابتی و انتقال قدرت مسالمت‌آمیز بود؛ با این حال ضعف دستگاه قضایی و قطبی‌شدن سیاسی همچنان چالش مهم‌اند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Bolivia: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/bolivia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارتقای وضعیت کشور به Free پس از انتخابات رقابتی ۲۰۲۵ و انتقال مسالمت‌آمیز قدرت؛ در عین حال ضعف قضایی و فساد را ثبت می‌کند."
+        },
+        {
+          "name": "Bolivia (Plurinational State of) Chamber of Deputies August 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/BO/BO-LC01/election/BO-LC01-E20250817/",
+          "date": "2025-08-17",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "پیروزی رودریگو پاز از PDC در دور دوم و پایان سلطه MAS؛ نتایج مجلس و پراکندگی احزاب را ارائه می‌کند."
+        },
+        {
+          "name": "Bolivia: Current Issues, U.S. Relations, and Options for the 119th Congress",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R48767.html",
+          "date": "2025-11",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "ruling_party_ideology"
+          ],
+          "note": "آغاز ریاست‌جمهوری پاز در ۸ نوامبر ۲۰۲۵، برنامه اقتصادی مرکزگرا و ترکیب سیاسی دولت و مجلس را توضیح می‌دهد."
+        },
+        {
+          "name": "Presidente de Bolivia: Rodrigo Paz Pereira",
+          "publisher": "Ministerio de la Presidencia de Bolivia",
+          "url": "https://presidencia.gob.bo/index.php/presidente-de-bolivia/",
+          "date": "2025-11-08",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "ruling_party_ideology"
+          ],
+          "note": "منبع رسمی ریاست‌جمهوری، هویت رئیس‌جمهور و تاریخ آغاز دوره او را تأیید می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی baseline بر مبنای دولت رودریگو پاز پس از تحلیف ۸ نوامبر ۲۰۲۵ و وضعیت تا ۵ نوامبر ۲۰۲۶ است."
+      }
+    },
+    "PRY": {
+      "country_name_fa": "پاراگوئه",
+      "country_name_en": "Paraguay",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "پاراگوئه جمهوری ریاستی و دولت واحد است. تا تاریخ مبنای سناریو، ۵ نوامبر ۲۰۲۶، سانتیاگو پنیا از حزب انجمن ملی جمهوری‌خواه (حزب کلرادو) رئیس‌جمهور بود؛ حزب کلرادو در انتخابات ۲۰۲۳ اکثریت هر دو مجلس را به دست آورده بود و از نظر تاریخی نیروی مسلط سیاست کشور است. حزب حاکم محافظه‌کار و ملی‌محافظه‌کار است. با وجود انتخابات رقابتی و امکان پیروزی مخالفان، تمرکز طولانی‌مدت قدرت حزبی، فساد و ضعف تضمین‌های دادرسی مانع از طبقه‌بندی آن به‌عنوان دموکراسی لیبرال می‌شود. توجه: برکناری پنیا و جانشینی پدرو آلیانا در ۶ نوامبر ۲۰۲۶، یک روز پس از تاریخ snapshot رخ داد و عمداً در baseline بازی وارد نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Paraguay: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/paraguay/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "سلطه تاریخی حزب محافظه‌کار کلرادو، انتخابات عموماً معتبر و چالش‌های فساد و حاکمیت قانون را ارزیابی می‌کند."
+        },
+        {
+          "name": "Paraguay Chamber of Deputies April 2023 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/PY/PY-LC01/election/PY-LC01-E20230430/",
+          "date": "2023-04-30",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "پیروزی حزب کلرادو و کسب اکثریت در مجلس نمایندگان و سنا را ثبت می‌کند."
+        },
+        {
+          "name": "Santiago Peña sworn in as President of Paraguay for 2023–2028",
+          "publisher": "Agencia de Información Paraguaya",
+          "url": "https://www.ip.gov.py/ip/2023/08/15/santiago-pena-jura-como-nuevo-presidente-del-paraguay/",
+          "date": "2023-08-15",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "آغاز دوره ریاست‌جمهوری پنیا در ۱۵ اوت ۲۰۲۳ و پیروزی او به‌عنوان نامزد حزب کلرادو را تأیید می‌کند."
+        },
+        {
+          "name": "Political and Administrative System of the Republic of Paraguay",
+          "publisher": "Tribunal Superior de Justicia Electoral",
+          "url": "https://www.tsje.gov.py/pdf/resena-informativa-elecciones-municipales-2026.pdf",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "ساختار جمهوری، نظام ریاستی، دولت واحد و نهادهای سه‌گانه را بر اساس قانون اساسی شرح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "رکورد عمداً وضعیت سانتیاگو پنیا را در پایان ۵ نوامبر ۲۰۲۶ نگه می‌دارد. برکناری او و تحلیف پدرو آلیانا در ۶ نوامبر، پس از تاریخ مبنای بازی رخ داده و باید فقط به‌عنوان رویداد پس از snapshot در صورت نیاز ثبت شود."
+      }
+    },
+    "URY": {
+      "country_name_fa": "اروگوئه",
+      "country_name_en": "Uruguay",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "democratic_socialism",
+        "socialism"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "democratic_socialism",
+        "socialism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "اروگوئه جمهوری ریاستی با نظام انتخاباتی رقابتی و نهادهای دموکراتیک باثبات است. یاماندو اورسی از ائتلاف جبهه گسترده (Frente Amplio) در ۱ مارس ۲۰۲۵ رئیس‌جمهور شد. جبهه گسترده ائتلافی از جریان‌های چپ و میانه‌چپ، از جمله سوسیال‌دموکرات‌ها، سوسیالیست‌ها و سوسیالیست‌های دموکراتیک است. این ائتلاف در سنا ۱۶ کرسی از ۳۰ کرسی و در مجلس نمایندگان ۴۸ کرسی از ۹۹ کرسی را دارد؛ بنابراین در مجلس سفلی برای تصویب قوانین به مذاکره با احزاب دیگر نیاز دارد. ایدئولوژی رسمی واحدی برای دولت ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Uruguay: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/uruguay/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "امتیاز بالای آزادی سیاسی و مدنی، انتخابات رقابتی و نهادهای دموکراتیک پایدار را تأیید می‌کند."
+        },
+        {
+          "name": "Uruguay Senate October 2024 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/UY/UY-UC01/election/UY-UC01-E20241027/",
+          "date": "2024-10-27",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "پیروزی اورسی، اکثریت جبهه گسترده در سنا و ترکیب ۱۶ کرسی سنا و ۴۸ کرسی مجلس نمایندگان را ثبت می‌کند."
+        },
+        {
+          "name": "Yamandú Orsi — President of the Republic",
+          "publisher": "Presidencia de la República Oriental del Uruguay",
+          "url": "https://www.gub.uy/presidencia/institucional/estructura-del-organismo/yamandu-orsi",
+          "date": "2025-03-01",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "منبع رسمی ریاست‌جمهوری، آغاز دوره اورسی و پیوند سیاسی او با جبهه گسترده را شرح می‌دهد."
+        },
+        {
+          "name": "Uruguay Country Report 2026",
+          "publisher": "Bertelsmann Stiftung, BTI",
+          "url": "https://bti-project.org/en/reports/country-report/URY",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "گذار دولت در چارچوب قانون اساسی، توازن پارلمانی جبهه گسترده و نیاز دولت به مذاکره در مجلس نمایندگان را بررسی می‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب دولت و مجلس بر مبنای وضعیت تا ۵ نوامبر ۲۰۲۶ ثبت شده است."
+      }
+    },
+    "GUY": {
+      "country_name_fa": "گویان",
+      "country_name_en": "Guyana",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "democratic_socialism",
+        "socialism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "گویان جمهوری با ساختار اجرایی ریاستی و پارلمان تک‌مجلسی است؛ رئیس‌جمهور نامزد فهرست حزبی است که بیشترین کرسی‌های مجلس ملی را به دست می‌آورد و رئیس دولت و کشور محسوب می‌شود. محمد عرفان علی از حزب ترقی‌خواه مردم/مدنی (PPP/C) در انتخابات سپتامبر ۲۰۲۵ برای دومین دوره انتخاب شد. PPP/C با ۳۶ کرسی از ۶۵ کرسی منتخب مجلس ملی اکثریت دارد؛ حزب تازه‌تأسیس WIN با ۱۶ کرسی به دومین نیروی پارلمانی تبدیل شد. حزب حاکم ریشه تاریخی سوسیالیستی دارد، اما در سیاست معاصر ترکیبی از سوسیال‌دموکراسی و عمل‌گرایی توسعه‌گرا را دنبال می‌کند. انتخابات رقابتی است، هرچند تنش‌های قومی و موانع اداری برای رقابت مخالفان از نگرانی‌های گزارش‌شده‌اند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Guyana: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/guyana/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گویان را دموکراسی انتخاباتی آزاد توصیف می‌کند و در کنار جامعه مدنی فعال، تنش‌های قومی و موانع رقابت مخالفان را ثبت می‌کند."
+        },
+        {
+          "name": "Guyana National Assembly September 2025 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/GY/GY-LC01/election/GY-LC01-E20250901/",
+          "date": "2025-09-01",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی PPP/C، انتخاب مجدد عرفان علی و توزیع ۳۶، ۱۶، ۱۲ و ۱ کرسی میان احزاب را ثبت می‌کند."
+        },
+        {
+          "name": "Branches of Government and Parliament",
+          "publisher": "Parliament of Guyana",
+          "url": "https://www.parliament.gov.gy/parliamentcorner/detail",
+          "date": "2018",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "جایگاه رئیس‌جمهور به‌عنوان رئیس کشور و عالی‌ترین مقام اجرایی، کابینه و ساختار پارلمان را توضیح می‌دهد."
+        },
+        {
+          "name": "GECOM declares Dr Mohamed Irfaan Ali President",
+          "publisher": "Guyana Elections Commission / Department of Public Information",
+          "url": "https://dpi.gov.gy/gecom-declares-dr-mohamed-irfaan-ali-president/",
+          "date": "2025-09-07",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "اعلام رسمی انتخاب مجدد عرفان علی و کسب اکثریت ۳۶ کرسی مجلس ملی توسط PPP/C."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "در ساختار قانون اساسی، رئیس‌جمهور عالی‌ترین مقام اجرایی است؛ شیوه پیوند انتخاب رئیس‌جمهور با فهرست حزبی برنده در یادداشت ثبت شده است."
       }
     }
   }
