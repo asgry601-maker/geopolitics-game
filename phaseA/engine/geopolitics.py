@@ -1430,6 +1430,7 @@ def init_game(player):
         political_state=political_state, political_baseline=political_baseline,
         political_baseline_state=political_baseline_state,
         social_groups={player: dict(SOCIAL_GROUP_BASE)},
+        legitimacy=50.0, regime_crisis=None,
         turn_events={},
         log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
@@ -2447,6 +2448,41 @@ def advance_player_political_reforms(s, daily_log):
         break
 
 
+def check_player_regime_crisis(s, daily_log):
+    """ثبت نخستین بحران تغییر حکومت بازیکن؛ تریبون زنده در فاز AI فعال می‌شود."""
+    if s.get("over") or s.get("regime_crisis"):
+        return
+    player = s.get("player")
+    country = (s.get("world") or {}).get(player)
+    if not isinstance(country, dict):
+        return
+    stability = max(0.0, min(100.0, float(country.get("stab", 0))))
+    if stability >= 10.0:
+        return
+    groups = (s.get("social_groups") or {}).get(player) or {}
+    values = [max(0.0, min(100.0, float(v))) for v in groups.values()]
+    social_average = sum(values) / float(len(values)) if values else 50.0
+    military = max(0.0, min(100.0, float(country.get("mil", 0))))
+    crisis_kind = "revolution" if social_average < 35.0 or military < 70.0 else "coup"
+    legitimacy = 5.0 if crisis_kind == "revolution" else 8.0
+    political = (s.get("political_state") or {}).get(player) or {}
+    s["regime_crisis"] = {
+        "kind": crisis_kind, "date": s.get("game_date", ""),
+        "stability_at_event": round(stability, 1),
+        "social_support_average": round(social_average, 1),
+        "military_strength_at_event": round(military, 1),
+        "legitimacy": legitimacy, "status": "awaiting_live_tribune",
+        "government_form": political.get("government_form"),
+        "executive_legislative_system": political.get("executive_legislative_system")
+    }
+    s["legitimacy"] = legitimacy
+    label = "انقلاب" if crisis_kind == "revolution" else "کودتا"
+    line = "⚠️ %s سیاسی در %s رخ داد؛ مشروعیت حکومت کاهش یافت." % (label, player)
+    daily_log.append(line)
+    press = s.setdefault("politics", {}).setdefault(player, {}).setdefault("press", [])
+    press.append(line)
+    del press[:-12]
+
 def end_turn(s):
     if s["over"]:
         print("بازی تمام شده. با `reset` بازی جدید بساز.")
@@ -2710,6 +2746,7 @@ def end_turn(s):
     s["day"] = next_date.day
     s["elapsed_days"] = day
     advance_player_political_reforms(s, log)
+    check_player_regime_crisis(s, log)
     year_report = next_date.year != previous_year
     if year_report:
         s["turn"] += 1
