@@ -608,6 +608,23 @@ function renderWorldChips() {
     (ST.over ? '<span class="badge" style="color:#ffd166">🏁 بازی تمام شد</span>' : '');
 }
 
+function renderStartSelectionProfile(r) {
+  var box = el('startCountryProfile');
+  if (!box) return;
+  if (!r) { box.innerHTML = '<div class="startProfileEmpty">برای مشاهده مشخصات، یک کشور را انتخاب کن.</div>'; return; }
+  var pc = r.political_classification || r.political_baseline || {};
+  var gov = classificationValueLabel('government_form',pc.government_form) + ' · ' + classificationValueLabel('government_subform',pc.government_subform);
+  var ideologyLabels = {islamism:'اسلام‌گرایی',islamic_democracy:'دموکراسی اسلامی',political_islam_conservatism:'محافظه‌کاری اسلام‌گرا',nationalism:'ملی‌گرایی',liberalism:'لیبرالیسم',conservatism:'محافظه‌کاری',socialism:'سوسیالیسم',communism:'کمونیسم',marxism_leninism:'مارکسیسم–لنینیسم',social_democracy:'سوسیال‌دموکراسی',democratic_socialism:'سوسیالیسم دموکراتیک',secularism:'سکولاریسم',monarchism:'سلطنت‌طلبی',mixed_pragmatic:'ترکیبی / عمل‌گرایانه',not_officially_declared:'اعلام‌نشده',unknown:'نامشخص'};
+  var ideolParts = pc.official_ideology || [], ideolText = [], i;
+  for (i=0;i<ideolParts.length;i++) ideolText.push(ideologyLabels[ideolParts[i]] || String(ideolParts[i]).replace(/_/g,' '));
+  box.innerHTML = '<div class="startProfileTop">'+countryMiniBadgeHtml(r.iso3,r.name)+'</div>'+
+    '<img class="startLeaderPortrait" src="'+leaderPortraitUrlForCountry(r)+'" alt="" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';">'+
+    '<div class="startLeaderFallback" style="display:none">👤</div>'+
+    '<b class="startProfileCountryName">'+dashEsc(r.name)+'</b>'+
+    '<div class="startProfileLeaderName">'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</div>'+
+    '<div class="startProfileFacts"><div><span>ساختار حکومت</span><b>'+dashEsc(gov)+'</b></div><div><span>ایدئولوژی رسمی</span><b>'+dashEsc(ideolText.join('، ') || 'ثبت نشده')+'</b></div></div>';
+}
+
 function renderStartWidget() {
   var banner = el('banner');
   banner.style.display = 'block';   /* همیشه نمایان: هم شروع اول، هم شروع بازی جدید */
@@ -650,6 +667,7 @@ function selectCountry(fa, silent) {
   getJSON('api/country?name=' + encodeURIComponent(fa), function (r) {
     if (!r.ok) { flash(r.error || 'خطا'); return; }
     renderCountryPanel(r);
+    renderStartSelectionProfile(r);
   }, function () { flash('خطا در دریافت اطلاعات کشور.'); });
   if (!silent) { /* آماده برای افکت‌های آینده */ }
 }
@@ -670,6 +688,13 @@ function dashMissing(title, detail) {
   return '<div class="dashNote"><b>⏳ ' + dashEsc(title) + '</b><br>' +
     dashEsc(detail || 'ساختار داده و منطق این قابلیت در ادامه فاز B طراحی و پیاده‌سازی می‌شود.') +
     '</div>';
+}
+function dashPercentBar(label, value) {
+  var n = Number(value);
+  if (!isFinite(n)) n = 0;
+  n = Math.max(0,Math.min(100,n));
+  var tone = n < 30 ? 'bad' : (n <= 50 ? 'warn' : 'good');
+  return '<div class="dashPercentRow"><div class="dashPercentLabel"><span>'+dashEsc(label)+'</span><b>'+dashEsc(value)+'٪</b></div><div class="dashPercentTrack '+tone+'"><div style="width:'+n+'%"></div></div></div>';
 }
 function dashMetric(label, value) {
   return '<div class="dashMetric"><span class="muted small">' + dashEsc(label) +
@@ -861,7 +886,7 @@ function politicalChangeFormHtml(pc, isPlayer) {
   var socialGroups = (ST && ST.social_groups) || {};
   h += '<div class="dashCard"><b>📊 مقبولیت گروه‌های اجتماعی</b><div class="dashNote">درصدها شاخص‌های شبیه‌سازی بازی هستند و داده واقعی نظرسنجی محسوب نمی‌شوند.</div>';
   for (var sg in socialGroups) if (socialGroups.hasOwnProperty(sg)) {
-    h += '<div class="row"><span>'+dashEsc(sg)+'</span><b>'+dashEsc(socialGroups[sg])+'٪</b></div>';
+    h += dashPercentBar(sg,socialGroups[sg]);
   }
   h += '</div>';
 
@@ -1208,10 +1233,6 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '</div>';
     var cp = r.country_profile || null;
     if (cp) {
-      /* پرتره‌های تأییدشده از Wikimedia Commons؛ برای بقیه کشورها فایل محلی در صورت وجود استفاده می‌شود. */
-
-      var leaderPortrait = leaderPortraitUrlForCountry(r);
-      h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
       h += dashMetric('پایتخت',cp.capital || 'ثبت نشده');
       h += dashMetric('مساحت کل',cp.area_km2 == null ? 'ثبت نشده' : Number(cp.area_km2).toLocaleString('en-US')+' کیلومتر مربع');
@@ -1440,9 +1461,7 @@ function renderCountryPanel(r) {
   box.style.display = 'block';
   var isPlayer = !!(ST && ST.player === r.name), h = '';
   h += '<div class="countryHeader"><div class="countryHeaderText"><h2>' + dashEsc(r.name) + '</h2>' +
-    '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div></div>' +
-    '<div class="countryHeaderRight">' + countryMiniBadgeHtml(r.iso3, r.name) +
-    '<div class="countryHeaderLeader"><img src="'+leaderPortraitUrlForCountry(r)+'" alt="" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><span style="display:none">👤</span><small>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</small></div></div></div>';
+    '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div></div></div>';
   h += '<div style="margin:4px 0">' + (isPlayer
       ? '<span class="badge" style="color:#ffd166">🏰 کشور شما — کنترل کامل</span>'
       : '<span class="badge">👥 حالت مشاهده — کشور شما: '+dashEsc(ST ? ST.player : '—')+'</span>') + '</div>';
