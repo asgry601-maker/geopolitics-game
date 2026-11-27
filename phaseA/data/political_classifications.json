@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 36,
-    "pending_countries": 138,
+    "classified_countries": 41,
+    "pending_countries": 133,
     "last_batch": [
-      "POL",
-      "BEL",
-      "CHE",
-      "AUT",
-      "GRC"
+      "PRT",
+      "IRL",
+      "CZE",
+      "SVK",
+      "HUN"
     ]
   },
   "countries": {
@@ -2463,6 +2463,393 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "دولت تک‌حزبی دموکراسی نوین در baseline ثبت شده؛ انتخابات بعدی که برای ۲۰۲۷ پیش‌بینی می‌شود وارد snapshot نشده است."
+      }
+    },
+    "PRT": {
+      "country_name_fa": "پرتغال",
+      "country_name_en": "Portugal",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberal_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberal_conservatism",
+        "christian_democracy",
+        "conservatism"
+      ],
+      "ideology_notes": "پرتغال جمهوری نیمه‌ریاستی با پارلمان تک‌مجلسی است؛ رئیس‌جمهور مستقیماً انتخاب می‌شود و دولت در برابر مجلس پاسخگوست. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، لوئیس مونته‌نگرو نخست‌وزیر دولت اقلیت ائتلاف دموکراتیک (AD) متشکل از PSD و CDS-PP بود. ائتلاف ۹۱ کرسی از ۲۳۰ کرسی داشت و برای تصویب بودجه و قوانین به حمایت یا همراهی نیروهای خارج از ائتلاف نیازمند بود. گرایش اصلی PSD میانه‌راست و محافظه‌کاری لیبرال است و CDS-PP به دموکراسی مسیحی و محافظه‌کاری تعلق دارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "XXV Constitutional Government — Composition",
+          "publisher": "Government of Portugal",
+          "url": "https://www.portugal.gov.pt/en/gc25/government/composition",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید نخست‌وزیری لوئیس مونته‌نگرو و ترکیب دولت در تاریخ مبنا."
+        },
+        {
+          "name": "Portugal — Early Parliamentary Elections, 18 May 2025: Final Report",
+          "publisher": "OSCE/ODIHR",
+          "url": "https://odihr.osce.org/sites/default/files/documents/official_documents/2025/12/PRT_early%20parliamentary_2025_EET%20Final%20report_12.11.2025.pdf",
+          "date": "2025-12",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "توصیف پرتغال به‌عنوان جمهوری نیمه‌ریاستی و تشکیل دولت اقلیت AD پس از انتخابات."
+        },
+        {
+          "name": "Election results — 17th Legislature",
+          "publisher": "Assembly of the Republic of Portugal",
+          "url": "https://www.parlamento.pt/sites/EN/Parliament/Paginas/Election-results.aspx",
+          "date": "2025-05-18",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج رسمی انتخابات و توزیع کرسی‌های احزاب و ائتلاف AD."
+        },
+        {
+          "name": "Portugal: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/portugal/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی، آزادی‌های مدنی و رقابت انتخاباتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت اقلیت AD در baseline ثبت شده؛ نتیجه رأی‌گیری‌های بودجه‌ای پس از تاریخ مبنا وارد داده پایه نشده است."
+      }
+    },
+    "IRL": {
+      "country_name_fa": "ایرلند",
+      "country_name_en": "Ireland",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberal_conservatism",
+        "conservatism",
+        "christian_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "ایرلند جمهوری پارلمانی است و دولت در برابر دایل (مجلس نمایندگان) مسئولیت جمعی دارد. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، میهال مارتین از حزب فیانا فیل نخست‌وزیر (Taoiseach) دولت سی‌وپنجم بود. دولت با توافق فیانا فیل، فاین گائل و گروهی از نمایندگان مستقل منطقه‌ای تشکیل شده بود؛ حزب فاین گائل در نقش شریک ائتلافی و سایمون هریس معاون نخست‌وزیر (Tánaiste) بود. گرایش دو حزب اصلی ائتلاف عمدتاً میانه‌رو و میانه‌راست است، اما به دلیل حضور مستقل‌ها و تفاوت‌های درون‌حزبی، گرایش ائتلاف به‌صورت ترکیبی ثبت شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Government Ministers — 35th Government",
+          "publisher": "Department of the Taoiseach, Government of Ireland",
+          "url": "https://www.gov.ie/en/department-of-the-taoiseach/organisation-information/government-ministers/",
+          "date": "2026-06-02",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فهرست رسمی دولت سی‌وپنجم و میهال مارتین به‌عنوان Taoiseach و سایمون هریس به‌عنوان Tánaiste."
+        },
+        {
+          "name": "Agreement on Programme for Government",
+          "publisher": "Fianna Fáil",
+          "url": "https://www.fiannafail.ie/news/agreement-on-programme-for-government",
+          "date": "2025-01-15",
+          "supports": [
+            "ruling_coalition_ideology"
+          ],
+          "note": "توافق تشکیل دولت میان فیانا فیل، فاین گائل و گروه مستقل‌های منطقه‌ای."
+        },
+        {
+          "name": "A Brief Guide to How Your Parliament Works",
+          "publisher": "Houses of the Oireachtas",
+          "url": "https://data.oireachtas.ie/ie/oireachtas/communications/other/2025/2025-07-23_a-brief-guide-to-how-your-parliament-works_en.pdf",
+          "date": "2025-07-23",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "نقش دایل در تشکیل دولت و مسئولیت جمعی دولت در برابر پارلمان."
+        },
+        {
+          "name": "Ireland: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/ireland/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت حزبی، حقوق سیاسی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبق توافق ائتلاف، میهال مارتین در تاریخ مبنا همچنان Taoiseach بود؛ چرخش دوره‌ای سمت در آینده بازی به‌عنوان رویداد runtime لحاظ می‌شود."
+      }
+    },
+    "CZE": {
+      "country_name_fa": "جمهوری چک",
+      "country_name_en": "Czechia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "populism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "populism",
+        "national_conservatism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "جمهوری چک جمهوری پارلمانی و دولت واحد با پارلمان دومجلسی است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، آندری بابیش نخست‌وزیر دولت ائتلافی ANO، آزادی و دموکراسی مستقیم (SPD) و موتور‌سواران برای خود (Motoristé sobě) بود. ANO نیروی محوری و فراگیر/پوپولیستی ائتلاف است؛ SPD گرایش ملی‌محافظه‌کارانه و پوپولیستی دارد و Motoristé در طیف راست و محافظه‌کار قرار می‌گیرد. ایدئولوژی رسمی واحدی برای جمهوری ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Prime Minister Andrej Babiš — Government of the Czech Republic",
+          "publisher": "Government of the Czech Republic",
+          "url": "https://vlada.gov.cz/en/vlada/clenove-vlady/premier/zivotopis/andrej-babis-224120/",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "تأیید جایگاه آندری بابیش به‌عنوان نخست‌وزیر و رهبر ANO."
+        },
+        {
+          "name": "Andrej Babiš's government appoints its First Deputy Prime Minister...",
+          "publisher": "Government of the Czech Republic",
+          "url": "https://vlada.gov.cz/en/media-centrum/aktualne/andrej-babiss-government-appoints-its-first-deputy-prime-minister--head-of-the-government-office-and-a-new-spokesperson-at-its-constituent-meeting-224771/",
+          "date": "2025-12-15",
+          "supports": [
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید تشکیل دولت ائتلافی بابیش و حضور نمایندگان شرکای ائتلاف."
+        },
+        {
+          "name": "Czechia Chamber of Deputies October 2025 Election",
+          "publisher": "Inter-Parliamentary Union — IPU Parline",
+          "url": "https://data.ipu.org/parliament/CZ/CZ-LC01/election/CZ-LC01-E20251003/",
+          "date": "2026-01-15",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات، توافق ائتلاف ANO-SPD-Motoristé و رأی اعتماد دولت در ژانویه ۲۰۲۶."
+        },
+        {
+          "name": "Political System",
+          "publisher": "Embassy of the Czech Republic in Copenhagen",
+          "url": "https://mzv.gov.cz/copenhagen/en/briefly_about_the_czech_republic/political_system/index.html?force_format=mobile",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "توصیف رسمی جمهوری چک به‌عنوان دموکراسی پارلمانی با پارلمان دو مجلسی و دولت واحد."
+        },
+        {
+          "name": "Czechia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/czechia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی، آزادی‌های مدنی و رقابت انتخاباتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ائتلاف و نخست‌وزیر بر اساس وضعیت پس از انتخابات ۲۰۲۵ و تشکیل دولت در ژانویه ۲۰۲۶ ثبت شده‌اند."
+      }
+    },
+    "SVK": {
+      "country_name_fa": "اسلواکی",
+      "country_name_en": "Slovakia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "populism",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "populism",
+        "nationalism",
+        "national_conservatism"
+      ],
+      "ideology_notes": "اسلواکی جمهوری پارلمانی و دولت واحد با شورای ملی تک‌مجلسی است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، رابرت فیتسو نخست‌وزیر ائتلاف متشکل از Smer-SD، Hlas-SD و حزب ملی اسلواکی (SNS) بود. Smer-SD گرایش سوسیال‌دموکراتیک همراه با پوپولیسم و ملی‌گرایی دارد؛ Hlas-SD از سنت سوسیال‌دموکراتیک منشعب شده و SNS ملی‌گرا و محافظه‌کار ملی است. نظام انتخاباتی چندحزبی و رقابت انتخاباتی برقرار است، هرچند فشارهای سیاسی بر رسانه‌ها و نهادهای مدنی در ارزیابی کیفیت دموکراسی باید جداگانه دنبال شود.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Members of the Government of the Slovak Republic",
+          "publisher": "Government Office of the Slovak Republic",
+          "url": "https://www.vlada.gov.sk/vlada-sr/clenovia-vlady/",
+          "date": "2026-01-27",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فهرست رسمی اعضای دولت و رابرت فیتسو به‌عنوان نخست‌وزیر."
+        },
+        {
+          "name": "Robert Fico: Three highest constitutional officials...",
+          "publisher": "Government Office of the Slovak Republic",
+          "url": "https://www.vlada.gov.sk/tlacove-spravy/r-fico-traja-slovenski-najvyssi-ustavni-cinitelia-su-spolu/",
+          "date": "2026-05-25",
+          "supports": [
+            "ruling_coalition_ideology"
+          ],
+          "note": "اظهارات نخست‌وزیر درباره ادامه همکاری ائتلاف حاکم تا انتخابات عادی."
+        },
+        {
+          "name": "Slovakia — Political system and political representation",
+          "publisher": "Robert Schuman Foundation",
+          "url": "https://www.robert-schuman.eu/en/our-information-files/slovakia",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ساختار جمهوری پارلمانی و ترکیب دولت ائتلافی Smer-SD، Hlas و SNS."
+        },
+        {
+          "name": "Slovakia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/slovakia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی وضعیت آزادی‌ها، رقابت چندحزبی و چالش‌های نهادی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ساختار نهادی و ترکیب دولت روشن است؛ برای ویژگی رژیم، ارزیابی متوسط انتخاب شده تا تنش‌های نهادی و فشار بر رسانه‌ها در کنار رقابت انتخاباتی منعکس شود."
+      }
+    },
+    "HUN": {
+      "country_name_fa": "مجارستان",
+      "country_name_en": "Hungary",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "مجارستان جمهوری پارلمانی و دولت واحد است. در انتخابات ۱۲ آوریل ۲۰۲۶، حزب TISZA به رهبری پیتر ماگیار ۱۴۱ کرسی از ۱۹۹ کرسی را به دست آورد و اکثریت دوسوم پارلمان را کسب کرد؛ پیتر ماگیار در ۹ مه ۲۰۲۶ نخست‌وزیر شد و به دوره ۱۶ساله دولت فیدس-کِی‌دی‌اِن‌پی پایان داد. دولت در تاریخ مبنا تک‌حزبی و مبتنی بر TISZA بود. این حزب ائتلاف رسمی چندحزبی ندارد و گرایش آن را با احتیاط، ترکیبی از میانه‌راست محافظه‌کار، گرایش‌های لیبرال و عمل‌گرایی ضدفساد/طرفدار اروپا توصیف می‌کنیم؛ این طبقه‌بندی به‌معنای تثبیت یک ایدئولوژی رسمی واحد نیست. با وجود جابه‌جایی قدرت از طریق انتخابات، ارزیابی ویژگی رژیم در نوامبر ۲۰۲۶ باید محتاطانه باشد، زیرا نهادهای مستقل و رسانه‌ای از دوره پیشین به ارث رسیده‌اند و اصلاحات دولت جدید هنوز در حال اجرا بوده‌اند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Hungary National Assembly April 2026 Election",
+          "publisher": "Inter-Parliamentary Union — IPU Parline",
+          "url": "https://data.ipu.org/parliament/HU/HU-LC01/election/HU-LC01-E20260412/",
+          "date": "2026-05-09",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج رسمی انتخابات: ۱۴۱ کرسی برای TISZA، پایان دولت Fidesz-KDNP و نخست‌وزیری پیتر ماگیار."
+        },
+        {
+          "name": "Hungary: Developments under Viktor Orbán and the 2026 parliamentary election",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/CBP-10612/",
+          "date": "2026-04-29",
+          "supports": [
+            "party_system",
+            "regime_character"
+          ],
+          "note": "تحلیل شکست اوربان، اکثریت دوسوم TISZA و میراث اقتدارگرایانه دولت پیشین."
+        },
+        {
+          "name": "Hungary: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/hungary/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی محدودیت‌های نهادی و رسانه‌ای تا پیش از انتخابات ۲۰۲۶؛ در طبقه‌بندی پس از انتخابات صرفاً به‌عنوان خط مبنای میراث نهادی استفاده شده است."
+        },
+        {
+          "name": "Hungary — Parliamentary elections, 12 April 2026",
+          "publisher": "OSCE/ODIHR",
+          "url": "https://odihr.osce.org/odihr/elections/hungary/2026",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "صفحه مأموریت و اسناد انتخابات ۲۰۲۶؛ ساختار جمهوری پارلمانی و زمینه رقابت انتخاباتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد عمداً وضعیت پس از انتخابات آوریل/مه ۲۰۲۶ را ثبت می‌کند، نه دولت اوربان. ارزیابی regime_character موقت و متوسط است؛ گزارش Freedom House 2026 عمدتاً پیش از انتقال قدرت را پوشش می‌دهد."
       }
     }
   }
