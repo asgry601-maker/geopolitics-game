@@ -393,7 +393,9 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
           <span>📰 مذاکره عادی</span><span class="eventToggleState" id="normalTalkState">خاموش</span>
         </button>
         <div class="eventContextNote" id="eventContextNote">حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.</div>
-        <button type="button" class="primary" id="statementPrepareConversation">آماده‌سازی نشست و رفتن به تریبون</button>
+        <label class="muted small" for="statementMeetingDate">تاریخ پیشنهادی نشست</label>
+        <input type="date" id="statementMeetingDate" style="width:100%;margin:5px 0 9px">
+        <button type="button" class="primary" id="statementPrepareConversation">پیشنهاد تاریخ نشست و رفتن به تریبون</button>
         <div class="muted small" id="statementPrepareStatus">ثبت نشست هیچ پیامی ارسال نمی‌کند؛ گفت‌وگوی زنده در فاز F فعال می‌شود.</div>
       </section>
       </div>
