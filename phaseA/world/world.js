@@ -428,6 +428,29 @@ function dashMetric(label, value) {
   return '<div class="dashMetric"><span class="muted small">' + dashEsc(label) +
     '</span><b>' + dashEsc(value) + '</b></div>';
 }
+/* نشان پرچم مشترک: در آینده همین تابع در برچسب شناور کشتی‌های تجاری استفاده می‌شود. */
+function countryMiniBadgeHtml(iso3, name) {
+  if (!iso3 || !/^[A-Z]{3}$/.test(iso3)) return '';
+  return '<span class="countryMiniBadge" title="'+dashEsc(name || iso3)+'"><img src="assets/flags/'+iso3+'.svg" alt=""><span>'+dashEsc(name || iso3)+'</span></span>';
+}
+function politicalFieldLabel(key) {
+  var labels = {head_of_state:'رئیس کشور',supreme_leader:'رهبر عالی',head_of_government:'رئیس دولت',
+    president:'رئیس‌جمهور',prime_minister:'نخست‌وزیر',parliament_speaker:'رئیس مجلس',
+    monarch:'پادشاه / فرمانروا',foreign_minister:'وزیر امور خارجه',defense_minister:'وزیر دفاع',
+    scenario_note:'توضیحات سناریو',note:'یادداشت'};
+  return labels[key] || key.replace(/_/g,' ');
+}
+function politicalValueLabel(value) {
+  var values = {PLAYER_CONTROLLED:'تحت کنترل بازیکن در سناریو',
+    limited_managed_electoral_competition:'رقابت انتخاباتی محدود و مدیریت‌شده',
+    competitive_electoral_democracy:'دموکراسی انتخاباتی رقابتی',
+    electoral_authoritarianism:'اقتدارگرایی انتخاباتی',one_party_state:'حکومت تک‌حزبی',
+    absolute_monarchy:'پادشاهی مطلقه',constitutional_monarchy:'پادشاهی مشروطه',
+    presidential_republic:'جمهوری ریاستی',parliamentary_republic:'جمهوری پارلمانی',
+    semi_presidential_republic:'جمهوری نیمه‌ریاستی'};
+  return Object.prototype.hasOwnProperty.call(values,value) ? values[value] : value;
+}
+
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
   if (tab === 'general') {
@@ -438,7 +461,8 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '</div>';
     var cp = r.country_profile || null;
     if (cp) {
-      h += '<div class="dashCard countryIdentity"><img class="countryFlag" src="'+dashEsc(r.flag_path || cp.flag_path || '')+'" alt="پرچم '+dashEsc(r.name)+'"><div><b>'+dashEsc(r.name)+'</b><div class="muted small">'+dashEsc(r.en || '')+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
+      var leaderPortrait = (r.iso3 ? 'assets/leaders/' + dashEsc(r.iso3) + '.jpg' : '');
+      h += '<div class="dashCard countryIdentity"><div class="leaderPortraitWrap"><img class="leaderPortrait" src="'+leaderPortrait+'" alt="تصویر رهبر '+dashEsc(r.name)+'" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'flex\';"><div class="leaderPortraitFallback" style="display:none">👤<small>تصویر ثبت نشده</small></div></div><div><b>'+dashEsc(r.leader || 'رهبر ثبت نشده')+'</b><div class="muted small">رهبر کشور / دولت</div><div class="muted small">'+dashEsc(r.name)+' · '+dashEsc(r.iso3 || '')+'</div></div></div>';
       h += '<h3>اطلاعات پایه کشور</h3><div class="dashGrid">';
       h += dashMetric('پایتخت',cp.capital || 'ثبت نشده');
       h += dashMetric('مساحت کل',cp.area_km2 == null ? 'ثبت نشده' : Number(cp.area_km2).toLocaleString('en-US')+' کیلومتر مربع');
@@ -453,8 +477,8 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '<div class="row"><span class="muted">ثبات سیاسی شبیه‌سازی</span><b>'+dashEsc(r.stab)+'/100</b></div></div>';
     if (pp) {
       h += '<h3>نوع نظام و مدل حکومت</h3><div class="dashCard">';
-      h += '<div class="row"><span class="muted">شناسه نوع نظام</span><b>'+dashEsc(pp.system_type || 'ثبت نشده')+'</b></div>';
-      h += '<div class="muted">'+dashEsc(pp.government_model || 'توضیح مدل حکومت ثبت نشده')+'</div></div>';
+      h += '<div class="row"><span class="muted">نوع نظام سیاسی</span><b>'+dashEsc(politicalValueLabel(pp.system_type || 'ثبت نشده'))+'</b></div>';
+      h += '<div class="muted">'+dashEsc(politicalValueLabel(pp.government_model || 'توضیح مدل حکومت ثبت نشده'))+'</div></div>';
       if (pp.current_government) {
         h += '<h3>ساختار دولت در تاریخ شروع سناریو</h3><div class="dashCard">';
         cur = pp.current_government;
@@ -464,8 +488,13 @@ function dashSectionHtml(r, isPlayer, tab) {
           if (val == null || typeof val === 'object') continue;
           if (k === 'scenario_note' || k === 'note') {
             h += '<div class="muted">'+dashEsc(val)+'</div>';
+          } else if (val === 'PLAYER_CONTROLLED') {
+            if (!cur._playerControlShown) {
+              h += '<div class="row"><span class="muted">کنترل سناریو</span><b>بازیکن</b></div>';
+              cur._playerControlShown = true;
+            }
           } else {
-            h += '<div class="row"><span class="muted">'+dashEsc(k)+'</span><b>'+dashEsc(val === 'PLAYER_CONTROLLED' ? 'کنترل بازیکن در سناریو' : val)+'</b></div>';
+            h += '<div class="row"><span class="muted">'+dashEsc(politicalFieldLabel(k))+'</span><b>'+dashEsc(politicalValueLabel(val))+'</b></div>';
           }
         }
         h += '</div>';
@@ -653,8 +682,9 @@ function renderCountryPanel(r) {
   el('idleInfo').style.display = 'none';
   box.style.display = 'block';
   var isPlayer = !!(ST && ST.player === r.name), h = '';
-  h += '<h2>' + dashEsc(r.name) + '</h2>';
-  h += '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div>';
+  h += '<div class="countryHeader"><div class="countryHeaderText"><h2>' + dashEsc(r.name) + '</h2>' +
+    '<div class="muted small">' + dashEsc(r.en || '') + ' · ' + dashEsc(r.iso3 || '') + '</div></div>' +
+    countryMiniBadgeHtml(r.iso3, r.name) + '</div>';
   h += '<div style="margin:4px 0">' + (isPlayer
       ? '<span class="badge" style="color:#ffd166">🏰 کشور شما — کنترل کامل</span>'
       : '<span class="badge">👥 حالت مشاهده — کشور شما: '+dashEsc(ST ? ST.player : '—')+'</span>') + '</div>';
