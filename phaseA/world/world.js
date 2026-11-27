@@ -567,6 +567,12 @@ function dashSectionHtml(r, isPlayer, tab) {
         MOZ: 'Daniel Chapo, November 2025.jpg',
         AGO: 'President of Angola João Lourenço during a bilateral exchange at the Angola presidential palace in Luanda, Angola, September 27, 2023 - 230927-D-PM193-1914 (cropped).jpg',
         NAM: 'Netumbo Nandi-Ndaitwah 2025.jpg'
+        SDN: 'Abdel Fattah al-Burhan in April 2025 (cropped).jpg',
+        SSD: 'Salva Kiir at the Kremlin (2026-10-30) (cropped).jpg',
+        TCD: 'Mahamat Idriss Déby in 2022.jpg',
+        MLI: 'Assimi Goita at the Kremlin (2026-10-30) (cropped).jpg',
+        MRT: 'Mohamed Ould Ghazouani 2025.png',
+        GAB: 'Brice Oligui Nguema on November 26, 2024 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
