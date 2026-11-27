@@ -524,7 +524,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         IRL: 'Taoiseach Micheál Martin.jpg',
         CZE: 'Czechia PM Petr Fiala 2025 portrait.jpg',
         SVK: 'Robert Fico portrait, 2025.jpg',
-        ROU: 'Nicusor Dan in 2026.jpg'
+        ROU: 'Nicusor Dan in 2026.jpg',
+        NZL: 'Christopher Luxon 2025 (mid cropped).jpg',
+        HUN: 'Viktor Orbán, 2025.06.26 (04).jpg',
+        BGR: 'Rosen Zhelyazkov 2025 (cropped).jpg',
+        CYP: 'Nikos Christodoulides in 26 June 2025 (Cropped).png',
+        SRB: 'Aleksandar Vučić 2025 (cropped).jpg',
+        ALB: 'Albaania peaminister Edi Rama, 15.05.2026 (55271492269)(cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
