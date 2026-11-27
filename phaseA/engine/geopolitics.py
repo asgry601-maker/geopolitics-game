@@ -478,37 +478,52 @@ def apply_player_political_change(s, changes):
         if valid_subforms and candidate_subform not in valid_subforms:
             return dict(ok=False, error="نوع حکومت و زیرنوع انتخاب‌شده با هم سازگار نیستند؛ هر دو را به شکل هماهنگ انتخاب کن.")
 
-    for field, item in updated.items():
-        current[field] = item["new"]
-    history = s.setdefault("political_history", [])
-    history.append(dict(
-        game_date=s.get("game_date", ""),
-        actor="player",
-        country=player,
-        changes=updated,
-        event_type="player_political_reform",
-    ))
-    if len(history) > 200:
-        del history[:-200]
-    log = s.setdefault("log", [])
-    changed_labels = {
-        "government_form": "نوع حکومت",
-        "government_subform": "زیرنوع حکومت",
-        "executive_legislative_system": "مدل اجرایی-تقنینی",
-        "territorial_structure": "ساختار سرزمینی",
-        "regime_character": "ویژگی نظام سیاسی",
-        "party_system": "نظام حزبی",
-        "official_ideology": "ایدئولوژی رسمی",
-        "ruling_party_ideology": "ایدئولوژی حزب حاکم",
-        "ruling_coalition_ideology": "ایدئولوژی ائتلاف حاکم",
+    proposals = s.setdefault("political_reform_proposals", [])
+    if any(p.get("status") == "pending" for p in proposals):
+        return dict(ok=False, error="یک طرح اصلاحات در حال بررسی داری؛ ابتدا آن را لغو کن یا منتظر پایانش بمان.")
+    # برآورد اولیه؛ در این بسته فقط طرح ثبت می‌شود و هنوز پولی کسر یا تغییری اعمال نمی‌شود.
+    weights = {
+        "government_form": 12, "government_subform": 8,
+        "executive_legislative_system": 7, "territorial_structure": 15,
+        "regime_character": 10, "party_system": 7,
+        "official_ideology": 6, "ruling_party_ideology": 4,
+        "ruling_coalition_ideology": 4
     }
-    log.append("🏛 بازیکن ساختار سیاسی %s را تغییر داد: %s." %
-               (player, "، ".join(changed_labels.get(k, k) for k in updated)))
-    if len(log) > 500:
-        del log[:-500]
+    complexity = sum(weights.get(k, 5) for k in updated)
+    estimated_cost = round(2.0 + complexity * 0.65, 1)
+    estimated_days = 7 + complexity * 2
+    proposal_id = 1 + max([int(p.get("id", 0)) for p in proposals] or [0])
+    proposal = dict(
+        id=proposal_id, country=player, actor="player",
+        submitted_date=s.get("game_date", ""), changes=updated,
+        estimated_cost=estimated_cost, estimated_days=estimated_days,
+        elapsed_days=0, progress=0, status="pending",
+        note="برآورد اولیه؛ هزینه و زمان‌بندی اجرایی در بسته بعدی فعال می‌شود."
+    )
+    proposals.append(proposal)
+    if len(proposals) > 100:
+        del proposals[:-100]
+    s.setdefault("log", []).append("📜 طرح اصلاحات سیاسی شماره %s برای %s ثبت شد؛ هنوز تغییری در ساختار اعمال نشده است." % (proposal_id, player))
     save(s)
-    return dict(ok=True, out="تغییرات سیاسی کشور شما ثبت شد.", changed=list(updated.keys()),
-                history_count=len(history))
+    return dict(ok=True, out="طرح اصلاحات ثبت شد؛ وضعیت فعلی کشور تا تصویب و اجرای نهایی بدون تغییر می‌ماند.",
+                proposal=proposal, current_unchanged=True)
+
+
+
+def cancel_player_political_reform(s, proposal_id):
+    """لغو طرح در انتظار؛ این مسیر فقط برای کشور بازیکن است."""
+    player = s.get("player")
+    proposals = s.setdefault("political_reform_proposals", [])
+    for proposal in reversed(proposals):
+        if int(proposal.get("id", -1)) == int(proposal_id) and proposal.get("country") == player:
+            if proposal.get("status") != "pending":
+                return dict(ok=False, error="فقط طرحی که هنوز در انتظار است قابل لغو است.")
+            proposal["status"] = "cancelled"
+            proposal["cancelled_date"] = s.get("game_date", "")
+            s.setdefault("log", []).append("🗑 طرح اصلاحات سیاسی شماره %s لغو شد." % proposal.get("id"))
+            save(s)
+            return dict(ok=True, out="طرح اصلاحات لغو شد؛ ساختار فعلی کشور تغییری نکرد.")
+    return dict(ok=False, error="طرح در انتظار معتبری با این شناسه پیدا نشد.")
 
 
 def load():
