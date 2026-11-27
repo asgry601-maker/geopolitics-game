@@ -154,3 +154,22 @@ All six images are referenced by their exact Wikimedia Commons filenames through
 
 All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The names in the engine leader dictionary were aligned with the scenario's heads of government for this package. Review the portraits in the game at dashboard size; request a replacement if any face is not clear enough.
 
+## Package 13 — East and South Asia (6 countries)
+
+- **PRK — North Korea:** Kim Jong-un — `Kim Jong-un (2025) (cropped).jpg`. Photograph dated 3 September 2025, President of Russia / Kremlin.ru; CC BY 4.0. Credit: Kremlin.ru.
+- **TWN — Taiwan:** Lai Ching-te — `President Lai Ching-te 2024-10-01.jpg`. Photograph dated 1 October 2024 by the Taiwan Presidential Office; CC BY 2.0.
+- **MNG — Mongolia:** Sandagiin Byambatsogt — `Sandagiin Byambatsogt, official portrait as Chairman of the State Great Khural.jpg`. Official 2026 portrait from parliament.mn; CC BY 4.0. The file is 300 × 400 pixels, so the user should specifically check face clarity at dashboard size. **Political context:** President Ukhnaagiin Khürelsükh resigned on 20 November 2026; parliament approved the resignation and the Speaker, Sandagiin Byambatsogt, exercises presidential powers pending an early election.
+- **BGD — Bangladesh:** Tarique Rahman — `Prime minister Tarique Rahman1.jpg`. Photograph dated 21 March 2026, own work by SAKIB HOWLADER; CC BY-SA 4.0.
+- **LKA — Sri Lanka:** Anura Kumara Dissanayake — `Anura Kumara Dissanayake in 2025.jpg`. Photograph dated 29 September 2025 by the Cabinet Public Affairs Office, Cabinet Secretariat of Japan; CC BY 4.0; attribution to 首相官邸 (Prime Minister's Office, Japan).
+- **NPL — Nepal:** Balendra Shah — `Prime Minister of Nepal Balen Shah.jpg`. Photograph dated 23 November 2026, Press Information Bureau / Prime Minister's Office of India; Government Open Data License – India (GODL-India). **License caveat:** the Commons file page currently marks this image as not yet reviewed by a Commons administrator; verify the license record before redistribution.
+
+### File pages
+- PRK: https://commons.wikimedia.org/wiki/File:Kim_Jong-un_(2025)_(cropped).jpg
+- TWN: https://commons.wikimedia.org/wiki/File:President_Lai_Ching-te_2024-10-01.jpg
+- MNG: https://commons.wikimedia.org/wiki/File:Sandagiin_Byambatsogt,_official_portrait_as_Chairman_of_the_State_Great_Khural.jpg
+- BGD: https://commons.wikimedia.org/wiki/File:Prime_minister_Tarique_Rahman1.jpg
+- LKA: https://commons.wikimedia.org/wiki/File:Anura_Kumara_Dissanayake_in_2025.jpg
+- NPL: https://commons.wikimedia.org/wiki/File:Prime_Minister_of_Nepal_Balen_Shah.jpg
+
+All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Leader names in the engine dictionary were checked against the scenario's 5 November 2026 context and updated where the prior data was outdated. Mongolia's acting head-of-state status and the Bangladesh/Nepal government transitions are time-sensitive and should be revisited when the scenario's date changes.
+
