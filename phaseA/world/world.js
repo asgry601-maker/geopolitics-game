@@ -474,7 +474,14 @@ function dashSectionHtml(r, isPlayer, tab) {
         SAU: 'الصورة الرسمية لخادم الحرمين الشريفين الملك سلمان بن عبدالعزيز آل سعود.jpg',
         ARE: 'Mohammed bin Zayed portrait.jpg',
         IRQ: "Mohammed Shia' Al Sudani in 2025 (cropped).jpg",
-        SYR: 'Ahmed al-Sharaa in March 2026.jpg'
+        SYR: 'Ahmed al-Sharaa in March 2026.jpg',
+        JPN: 'Official portrait of Sanae Takaichi, Prime Minister of Japan (HD).jpg',
+        IND: 'Official Photograph of Prime Minister Narendra Modi Portrait.png',
+        KOR: 'President Lee Jae Myung.jpg',
+        IDN: 'Prabowo Subianto 2024 official portrait.jpg',
+        BRA: 'Foto oficial de Luiz Inácio Lula da Silva (faixa presidencial).jpg',
+        AUS: 'Anthony Albanese Official Portrait.jpg',
+        UKR: 'Volodymyr Zelensky Official portrait.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
