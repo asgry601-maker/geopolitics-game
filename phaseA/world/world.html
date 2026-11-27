@@ -246,12 +246,43 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .dashPercentTrack.warn > div { background:linear-gradient(90deg,#a66b12,#f0c343); }
 .dashPercentTrack.good > div { background:linear-gradient(90deg,#16794b,#46d18b); }
 @media (max-width:520px) { .startSelectionLayout { grid-template-columns:1fr 1fr; gap:6px; } .startControls,.startCountryProfile { padding:7px; } .startLeaderPortrait,.startLeaderFallback { width:64px; height:76px; } .startProfileFacts b { font-size:10px; } }
+
+/* چیدمان نهایی انتخاب کشور: انتخاب در چپ، پروفایل بزرگ در راست */
+#banner { background:#263747 !important; border:1px solid #536b7d !important; border-radius:14px !important; padding:12px !important; }
+#banner .startSelectionLayout { display:flex !important; flex-direction:row !important; direction:ltr !important; align-items:stretch !important; gap:12px !important; width:100% !important; min-height:340px !important; }
+#banner .startControls { order:1 !important; direction:rtl !important; flex:0 0 30% !important; width:30% !important; max-width:30% !important; min-width:0 !important; align-self:center !important; padding:10px !important; gap:12px !important; background:#49315e !important; border:1px solid #956bb8 !important; border-radius:10px !important; }
+#banner .startControlsTitle { color:#fff; font-weight:bold; font-size:13px; margin-bottom:2px; }
+#banner #startCountry { width:100% !important; box-sizing:border-box !important; padding:10px 7px !important; }
+#banner #btnStart { width:100% !important; box-sizing:border-box !important; white-space:normal !important; padding:10px 5px !important; font-size:12px !important; }
+#banner .startCountryProfile { order:2 !important; direction:rtl !important; flex:1 1 70% !important; width:70% !important; min-width:0 !important; min-height:320px !important; box-sizing:border-box !important; background:transparent !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; padding:8px 12px !important; display:flex !important; flex-direction:column !important; align-items:center !important; justify-content:center !important; gap:8px !important; }
+#banner .startProfileTop { justify-content:center !important; margin-bottom:2px !important; }
+#banner .startProfileTop .countryMiniBadge { transform:scale(1.12); }
+#banner .startLeaderPortrait, #banner .startLeaderFallback { width:150px !important; height:178px !important; max-width:80% !important; object-fit:cover !important; border-radius:13px !important; border:3px solid #c4a36a !important; box-shadow:0 5px 16px rgba(0,0,0,.45) !important; }
+#banner .startProfileCountryName { font-size:21px !important; margin-top:3px !important; }
+#banner .startProfileLeaderName { font-size:14px !important; }
+#banner .startProfileFacts { max-width:95% !important; flex-direction:row !important; justify-content:center !important; gap:8px !important; margin-top:6px !important; }
+#banner .startProfileFacts div { flex:1 1 50% !important; background:#35495b !important; border:1px solid #687f91 !important; border-radius:8px !important; padding:8px !important; text-align:center !important; }
+#banner .startProfileFacts span { font-size:11px !important; color:#d6e1e8 !important; }
+#banner .startProfileFacts b { font-size:12px !important; }
+#banner .startProfileEmpty { font-size:14px !important; }
+@media (max-width:520px) { #banner .startSelectionLayout { min-height:290px !important; gap:6px !important; } #banner .startControls { flex-basis:34% !important; width:34% !important; max-width:34% !important; padding:6px !important; } #banner .startCountryProfile { flex-basis:66% !important; width:66% !important; min-height:280px !important; padding:5px !important; } #banner .startLeaderPortrait,#banner .startLeaderFallback { width:112px !important; height:138px !important; } #banner .startProfileCountryName { font-size:17px !important; } #banner .startProfileFacts { flex-direction:column !important; gap:4px !important; } }
 </style>
 </head>
 <body>
 <div id="main">
   <div id="panel">
-    <div id="banner" style="display:none">\n      <div class="startSelectionLayout">\n        <div class="startControls">\n          <div id="startIntro"><b>شروع بازی</b><p class="small muted">کشور موردنظرت را انتخاب کن.</p></div>\n          <label class="startSelectLabel" for="startCountry">انتخاب کشور</label>\n          <select id="startCountry"></select>\n          <button id="btnStart" class="primary">🎬 شروع بازی جدید</button>\n          <div id="startErr" class="small" style="color:#ff9d9d; margin-top:6px"></div>\n        </div>\n        <div id="startCountryProfile" class="startCountryProfile"><div class="startProfileEmpty">برای مشاهده مشخصات، یک کشور را انتخاب کن.</div></div>\n      </div>\n    </div>\n    <div id="countryInfo" style="display:none"></div>
+    <div id="banner" style="display:none">
+      <div class="startSelectionLayout">
+        <div class="startControls">
+          <div class="startControlsTitle">انتخاب کشور</div>
+          <select id="startCountry"></select>
+          <button id="btnStart" class="primary">🎬 شروع بازی جدید</button>
+          <div id="startErr" class="small" style="color:#ff9d9d; margin-top:6px"></div>
+        </div>
+        <div id="startCountryProfile" class="startCountryProfile"><div class="startProfileEmpty">برای مشاهده مشخصات، یک کشور را انتخاب کن.</div></div>
+      </div>
+    </div>
+    <div id="countryInfo" style="display:none"></div>
     <div id="idleInfo">
       <h2>🌍 کره سه‌بعدی ژئوپولیتیک</h2>
       <p class="small">توضیح: با ماوس کره را بچرخان (کشیدن)، با چرخ ماوس بزرگ‌نمایی کن و روی هر کشور یا نام آن کلیک کن.</p>
