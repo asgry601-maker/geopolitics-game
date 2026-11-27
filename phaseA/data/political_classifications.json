@@ -6,8 +6,8 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 125,
-    "pending_countries": 49,
+    "classified_countries": 124,
+    "pending_countries": 50,
     "last_batch": [
       "BFA",
       "GIN",
