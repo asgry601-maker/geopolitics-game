@@ -561,6 +561,12 @@ function dashSectionHtml(r, isPlayer, tab) {
         TZA: 'Samia Suluhu at the XXIX St Petersburg International Economic Forum - 2026 (cropped).jpg',
         RWA: 'Kagame Paul.jpg',
         CIV: 'Alassane Ouattara - 2024 (cropped).jpg'
+        CMR: 'Paul Biya in December 14th, 2022.jpg',
+        ZWE: 'Emmerson Mnangagwa Official Portrait.jpg',
+        ZMB: 'Inauguration of Hakainde Hichilema 2026 9.jpg',
+        MOZ: 'Daniel Chapo, November 2025.jpg',
+        AGO: 'President of Angola João Lourenço during a bilateral exchange at the Angola presidential palace in Luanda, Angola, September 27, 2023 - 230927-D-PM193-1914 (cropped).jpg',
+        NAM: 'Netumbo Nandi-Ndaitwah 2025.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
