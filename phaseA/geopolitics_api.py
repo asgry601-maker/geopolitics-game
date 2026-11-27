@@ -240,6 +240,11 @@ def api_state(s):
         ap=s.get("ap"), over=s.get("over", False),
         countries=countries, regions=regions,
         wars=wars, allies=list(s.get("allies", [])), pacts=list(s.get("pacts", [])),
+        pact_records=(s.get("pact_records") or [])[-200:],
+        alliance_records=(s.get("alliance_records") or [])[-150:],
+        agreement_proposals=(s.get("agreement_proposals") or [])[-150:],
+        agreement_history=(s.get("agreement_history") or [])[-100:],
+        agreement_sequence=s.get("agreement_sequence", 0),
         player_sanctions=s.get("player_sanctions", {}),
         player_sanction_history=(s.get("player_sanction_history") or [])[-50:],
         inbox_messages=(s.get("inbox_messages") or [])[-100:],
@@ -694,6 +699,67 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(dict(ok=False, error=str(exc)), 400)
             except Exception as exc:
                 self._json(dict(ok=False, error="خطا در لغو تحریم‌ها: %s" % exc), 500)
+        elif path == "api/agreements/propose":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.submit_agreement_proposal(
+                        current, body.get("kind"), body.get("parties"),
+                        body.get("pact_type", "non_aggression"),
+                        body.get("alliance_name", ""), body.get("terms"),
+                        body.get("conversation_id"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در ثبت پیشنهاد توافق: %s" % exc), 500)
+        elif path == "api/agreements/decision":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.decide_agreement_proposal(
+                        current, body.get("proposal_id"), body.get("decision"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در ثبت تصمیم توافق: %s" % exc), 500)
+        elif path == "api/agreements/pact/cancel":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.cancel_pact_record(current, body.get("agreement_id"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در لغو پیمان: %s" % exc), 500)
+        elif path == "api/agreements/alliance/leave":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.leave_alliance(current, body.get("agreement_id"))
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در خروج از اتحاد: %s" % exc), 500)
         elif path == "api/act":
             if s is None:
                 self._json(dict(ok=False, error="بازی\u200cای ساخته نشده."))
