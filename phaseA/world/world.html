@@ -352,6 +352,16 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
             <button type="button" class="eventBtnCancel" id="confidentialCancelCountries">لغو و پاک‌کردن انتخاب‌ها</button>
           </div>
         </div>
+        <div id="normalTargetBox" class="eventTargetBox" hidden>
+          <strong style="color:#ffd479;font-size:12px">انتخاب کشورهای مذاکره عادی</strong>
+          <div id="normalTargetSummary" class="eventSelectionSummary">هنوز کشوری انتخاب و تأیید نشده است.</div>
+          <button type="button" id="normalEditCountries" hidden>تغییر فهرست کشورها</button>
+          <div id="normalCountryList" class="eventTargetList"></div>
+          <div class="eventActionRow">
+            <button type="button" class="eventBtnConfirm" id="normalConfirmCountries">تأیید</button>
+            <button type="button" class="eventBtnCancel" id="normalCancelCountries">لغو و پاک‌کردن انتخاب‌ها</button>
+          </div>
+        </div>
         <div class="eventStatementFeed" id="eventStatementFeed" aria-live="polite">
           <div class="eventStatementEmpty">بیانیه‌ای برای نمایش وجود ندارد.<br>پس از اتصال هوش مصنوعی زنده، بیانیه‌های کشورها در این قسمت نمایش داده می‌شوند.</div>
         </div>
@@ -368,6 +378,9 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         </button>
         <button type="button" class="eventNegotiationToggle" id="btnAllianceTalk" aria-pressed="false">
           <span>🤝 مذاکره با اتحاد</span><span class="eventToggleState" id="allianceTalkState">خاموش</span>
+        </button>
+        <button type="button" class="eventNegotiationToggle" id="btnNormalTalk" aria-pressed="false">
+          <span>📰 مذاکره عادی</span><span class="eventToggleState" id="normalTalkState">خاموش</span>
         </button>
         <div class="eventContextNote" id="eventContextNote">حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.</div>
       </section>
