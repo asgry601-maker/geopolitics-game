@@ -560,19 +560,25 @@ function dashSectionHtml(r, isPlayer, tab) {
         SEN: 'Président Diomaye Faye.jpg',
         TZA: 'Samia Suluhu at the XXIX St Petersburg International Economic Forum - 2026 (cropped).jpg',
         RWA: 'Kagame Paul.jpg',
-        CIV: 'Alassane Ouattara - 2024 (cropped).jpg'
+        CIV: 'Alassane Ouattara - 2024 (cropped).jpg',
         CMR: 'Paul Biya in December 14th, 2022.jpg',
         ZWE: 'Emmerson Mnangagwa Official Portrait.jpg',
         ZMB: 'Inauguration of Hakainde Hichilema 2026 9.jpg',
         MOZ: 'Daniel Chapo, November 2025.jpg',
         AGO: 'President of Angola João Lourenço during a bilateral exchange at the Angola presidential palace in Luanda, Angola, September 27, 2023 - 230927-D-PM193-1914 (cropped).jpg',
-        NAM: 'Netumbo Nandi-Ndaitwah 2025.jpg'
+        NAM: 'Netumbo Nandi-Ndaitwah 2025.jpg',
         SDN: 'Abdel Fattah al-Burhan in April 2025 (cropped).jpg',
         SSD: 'Salva Kiir at the Kremlin (2026-10-30) (cropped).jpg',
         TCD: 'Mahamat Idriss Déby in 2022.jpg',
         MLI: 'Assimi Goita at the Kremlin (2026-10-30) (cropped).jpg',
         MRT: 'Mohamed Ould Ghazouani 2025.png',
-        GAB: 'Brice Oligui Nguema on November 26, 2024 (cropped).jpg'
+        GAB: 'Brice Oligui Nguema on November 26, 2024 (cropped).jpg',
+        SGP: 'Lawrence Wong, August 2026 (cropped).jpg',
+        PHL: 'Ferdinand "Bongbong" Marcos Jr. 2025 SONA Portrait (cropped).jpg',
+        LAO: 'Portrait of Thongloun Sisoulith.jpg',
+        BRN: 'Sultan Hassanal Bolkiah - 53857993945(cropped).jpg',
+        TLS: 'Portrait of Jose Ramos-Horta.jpg',
+        NER: 'Tiani (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
