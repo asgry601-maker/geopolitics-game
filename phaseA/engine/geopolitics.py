@@ -1462,6 +1462,12 @@ def decide_conversation_meeting(s, conversation_id, decision, actor_country=None
     accepted = session.setdefault("meeting_accepted_by", [])
     if actor not in accepted:
         accepted.append(actor)
+    required_parties = set(session.get("participants") or [])
+    if set(accepted) != required_parties:
+        session["meeting_status"] = "pending_ai_acceptance" if player not in accepted else "pending_player_acceptance"
+        session["updated_date"] = s.get("game_date", "")
+        return dict(ok=True, confirmed=False, session=session, calendar_event=None,
+                    note="پاسخ ثبت شد؛ تا تأیید همه کشورهای شرکت‌کننده، موعد به تقویم قطعی اضافه نمی‌شود.")
     session["meeting_status"] = "confirmed"
     event = register_calendar_item(
         s, "نشست: " + str(session.get("topic") or "گفت‌وگوی دیپلماتیک"),
@@ -1473,7 +1479,7 @@ def decide_conversation_meeting(s, conversation_id, decision, actor_country=None
     session["chat_enabled"] = False
     session["live_ai_status"] = "locked_until_phase_f"
     msg(s, "نشست %s برای تاریخ %s در تقویم قطعی شد." % (session.get("id"), session.get("meeting_date")))
-    return dict(ok=True, session=session, calendar_event=event)
+    return dict(ok=True, confirmed=True, session=session, calendar_event=event)
 
 
 def register_ai_meeting_proposal(s, initiator_country, participants, meeting_date,
