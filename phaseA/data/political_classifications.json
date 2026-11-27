@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 120,
-    "pending_countries": 54,
+    "classified_countries": 125,
+    "pending_countries": 49,
     "last_batch": [
-      "SSD",
-      "TCD",
-      "NER",
-      "MLI",
-      "MRT"
+      "BFA",
+      "GIN",
+      "SLE",
+      "LBR",
+      "TGO"
     ]
   },
   "countries": {
@@ -8717,6 +8717,374 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "موریتانی در قانون اساسی جمهوری اسلامی نامیده می‌شود، اما در این taxonomy به‌عنوان republic ثبت شده؛ اسلام به‌عنوان دین/اصل رسمی در official_ideology آمده و به معنای تئوکراسی نیست."
+      }
+    },
+    "BFA": {
+      "country_name_fa": "بورکینافاسو",
+      "country_name_en": "Burkina Faso",
+      "government_form": "military_government",
+      "government_subform": "military_junta",
+      "executive_legislative_system": "military_council",
+      "territorial_structure": "unitary",
+      "regime_character": "military_rule",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در تاریخ مبنای سناریو، ابراهیم ترائوره در رأس حکومت نظامی قرار دارد. منشور انقلاب مارس ۲۰۲۶ مجلس قانون‌گذاری انتصابی را جایگزین ساختار انتقالی پیشین کرده و احزاب سیاسی منحل شده‌اند؛ بنابراین نه حزب حاکم قانونی و نه ائتلاف حزبی قابل انتساب وجود دارد. شعارهای حاکمیتی و میهن‌پرستانه به‌تنهایی برای ثبت ایدئولوژی رسمی کافی نیستند.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Burkina Faso: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/burkina-faso/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی نبود انتخابات آزاد، تثبیت حکومت نظامی و محدودیت شدید رقابت سیاسی."
+        },
+        {
+          "name": "Burkina Faso People's Legislative Assembly March 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/BF/BF-LC04/election/BF-LC01-E20260327/",
+          "date": "2026-03-27",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "منشور انقلاب، مجلس قانون‌گذاری انتصابی ۷۱ نفره و حذف نمایندگی احزاب از ترکیب مجلس."
+        },
+        {
+          "name": "Burkina Faso’s Junta Pulls the Plug on Political Life",
+          "publisher": "Human Rights Watch",
+          "url": "https://www.hrw.org/news/2026/02/05/burkina-fasos-junta-pulls-plug-political-life",
+          "date": "2026-02-04",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انحلال احزاب در ژانویه ۲۰۲۶ و محدودیت فعالیت سیاسی و مدنی."
+        },
+        {
+          "name": "Burkina Faso military government dissolves political parties",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/africa/burkina-faso-military-government-dissolves-political-parties-2026-01-29/",
+          "date": "2026-01-29",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تأیید مستقل انحلال همه احزاب سیاسی و تمرکز بیشتر قدرت در دولت نظامی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "GIN": {
+      "country_name_fa": "گینه",
+      "country_name_en": "Guinea",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "restricted_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی ۲۰۲۵ برقرارکننده جمهوری پنجم با رئیس‌جمهور منتخب برای دوره هفت‌ساله و پارلمان دو مجلسی است. مامادی دومبویا پس از انتخابات ریاست‌جمهوری دسامبر ۲۰۲۵ و پایان رسمی دوره انتقالی در ژوئیه ۲۰۲۶ رئیس‌جمهور شد. انحلال ۴۰ حزب در مارس ۲۰۲۶ و برتری ائتلاف/جریان حامی رئیس‌جمهور در انتخابات مجلس، رقابت را به‌شدت محدود کرده است. ایدئولوژی رسمی یا حزبی روشن و مستند برای جریان حاکم احراز نشده و عمداً null است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Guinea: The Global State of Democracy Tracker",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/guinea",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات ریاست‌جمهوری دسامبر ۲۰۲۵، پیروزی دوئومبویا و زمینه محدودیت رقابت سیاسی."
+        },
+        {
+          "name": "Guinea National Assembly May 2026 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/GN/GN-LC01/election/GN-LC01-E20260531/",
+          "date": "2026-07-22",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "قانون اساسی ۲۰۲۵، مجلس دو مجلسی، انتخابات مه ۲۰۲۶، انحلال ۴۰ حزب و پایان دوره انتقالی در ژوئیه."
+        },
+        {
+          "name": "Guinea country overview",
+          "publisher": "World Bank",
+          "url": "https://www.worldbank.org/ext/en/country/guinea",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "تأیید سوگند ریاست‌جمهوری دوئومبویا و ساختار هفت‌ساله ریاست‌جمهوری و پارلمان دو مجلسی."
+        },
+        {
+          "name": "Guinea dissolves 40 political parties, opposition leader cries foul",
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/world/africa/guinea-dissolves-40-political-parties-opposition-leader-cries-foul-2026-03-09/",
+          "date": "2026-03-09",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گزارش انحلال ۴۰ حزب و اعتراض مخالفان نسبت به محدودشدن تکثر سیاسی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "SLE": {
+      "country_name_fa": "سیرالئون",
+      "country_name_en": "Sierra Leone",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "two_party_dominant",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "جمهوری ریاستی با رقابت چندحزبی، اما در عمل دو حزب SLPP و APC بازیگران مسلط‌اند. جولیس مادا بیو و SLPP پس از انتخابات ۲۰۲۳ در قدرت ماندند؛ مناقشه بر سر شفافیت نتایج و تحریم پارلمان از سوی APC تا توافق آوریل ۲۰۲۶، کیفیت رقابت و اعتماد نهادی را تضعیف کرد. گرایش سوسیال‌دموکراتیک به‌عنوان ریشه تاریخی SLPP ثبت شده، نه ایدئولوژی رسمی کشور.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Sierra Leone: The Global State of Democracy Tracker",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/sierra-leone",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نظام ریاستی، رئیس‌جمهور و حزب حاکم و توافق آوریل ۲۰۲۶ برای بازگشت اپوزیسیون به پارلمان."
+        },
+        {
+          "name": "Sierra Leone Parliament June 2023 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/SL/SL-LC01/election/SL-LC01-E20230624/",
+          "date": "2023-06-24",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج انتخابات ۲۰۲۳، اکثریت SLPP و ترکیب دوحزبی پارلمان."
+        },
+        {
+          "name": "Sierra Leone Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/SLE",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی کیفیت انتخابات، مناقشه نتایج ۲۰۲۳ و توافق سیاسی برای مشارکت مجدد APC."
+        },
+        {
+          "name": "State of Democracy in Sierra Leone Assessment 2025 Report",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/publications/catalogue/html/state-democracy-sierra-leone-assessment-2025-report",
+          "date": "2025",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "توصیف نظام ریاستی و غلبه عملی دو حزب APC و SLPP در رقابت چندحزبی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "LBR": {
+      "country_name_fa": "لیبریا",
+      "country_name_en": "Liberia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "لیبریا جمهوری ریاستی با انتخابات مستقیم رئیس‌جمهور و قوه مقننه دو مجلسی است. جوزف بوآکای از حزب وحدت در دور دوم انتخابات نوامبر ۲۰۲۳ پیروز شد و در ژانویه ۲۰۲۴ قدرت را تحویل گرفت. با وجود رقابت انتخاباتی واقعی و انتقال مسالمت‌آمیز قدرت، نظام حزبی شخص‌محور و چندپاره است و ائتلاف‌های پارلمانی سیال‌اند؛ ازاین‌رو ایدئولوژی حزب یا ائتلاف حاکم بدون شواهد روشن به‌صورت قطعی ثبت نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Liberia Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/LBR",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ساختار سیاسی، انتخابات ۲۰۲۳، انتقال قدرت به جوزف بوآکای و چندپارگی نظام حزبی."
+        },
+        {
+          "name": "Election Results",
+          "publisher": "National Elections Commission of Liberia",
+          "url": "https://www.nec.gov.lr/election-results/",
+          "date": "2026",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتایج رسمی انتخابات ۲۰۲۳ و تعداد کرسی‌های حزب وحدت، CDC و احزاب کوچک و مستقل."
+        },
+        {
+          "name": "Liberia",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://www.ipu.org/parlement/LR",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تأیید مجلس دو مجلسی و آخرین انتخابات پارلمانی اکتبر ۲۰۲۳."
+        },
+        {
+          "name": "Liberia 2024 Investment Climate Statement — Political and Security Environment",
+          "publisher": "U.S. Department of State",
+          "url": "https://2021-2025.state.gov/reports/2024-investment-climate-statements/liberia/",
+          "date": "2024",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "انتخابات ریاست‌جمهوری مستقیم، محدودیت دو دوره‌ای و ساختار دو مجلسی قانون‌گذاری."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
+      }
+    },
+    "TGO": {
+      "country_name_fa": "توگو",
+      "country_name_en": "Togo",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی ۲۰۲۴ جمهوری پنجم را با نظام پارلمانی و ریاست تشریفاتی جمهوری ایجاد کرد؛ قدرت اجرایی در اختیار رئیس شورای وزیران است. فائوره گناسینگبه در مه ۲۰۲۵ به این سمت منصوب شد و UNIR با ۱۰۸ کرسی از ۱۱۳ کرسی مجلس و اکثریت سنا، حزب مسلط است. انتخابات و احزاب دیگر وجود دارند، اما محدودیت‌های رقابت و تمرکز طولانی‌مدت قدرت، نظام را اقتدارگرای انتخاباتی و حزب‌سیستم را غیررقابتیِ حزب مسلط می‌سازد. برچسب‌های ایدئولوژیک حزب حاکم تقریبی‌اند و ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Togo Country Report 2026",
+          "publisher": "Bertelsmann Stiftung Transformation Index",
+          "url": "https://bti-project.org/en/reports/country-report/TGO",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گذار به جمهوری پنجم پارلمانی و تمرکز واقعی قدرت در ریاست شورای وزیران."
+        },
+        {
+          "name": "Togo: New Constitution Promulgated",
+          "publisher": "Library of Congress",
+          "url": "https://www.loc.gov/item/global-legal-monitor/2024-05-16/togo-new-constitution-promulgated/",
+          "date": "2024-05-17",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "شرح قانون اساسی ۲۰۲۴، ریاست تشریفاتی جمهوری و اختیارات اجرایی رئیس شورای وزیران."
+        },
+        {
+          "name": "Togo National Assembly April 2024 Election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TG/TG-LC01/election/TG-LC01-E20240429/",
+          "date": "2024-04-29",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "پیروزی UNIR با ۱۰۸ کرسی از ۱۱۳ کرسی و چارچوب پارلمانی قانون اساسی جدید."
+        },
+        {
+          "name": "Togo holds first Senate election as part of constitutional transition",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/togo",
+          "date": "2025-02",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "regime_character"
+          ],
+          "note": "انتخابات نخستین سنا، اکثریت UNIR و تکمیل ساختار دو مجلسی جمهوری پنجم."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مستند کشور در تاریخ مبنای سناریو را ثبت می‌کند؛ تحولات پس از ۵ نوامبر ۲۰۲۶ وارد baseline نشده‌اند. اشخاص و مناصب از پرونده سیاسی کشور خوانده می‌شوند."
       }
     }
   }
