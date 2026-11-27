@@ -1030,12 +1030,29 @@ def load():
         for key, value in (("meeting_status", "unscheduled"),
                            ("meeting_date", None),
                            ("meeting_request_id", None),
-                           ("live_ai_required", True),
-                           ("live_ai_status", "locked_until_phase_f"),
-                           ("chat_enabled", False)):
-            if session.get(key) != value:
+                           ("live_ai_required", True)):
+            if key not in session:
                 session[key] = value
                 conversation_save_needed = True
+        try:
+            meeting_due = bool(session.get("meeting_date") and
+                               datetime.date.fromisoformat(str(session.get("meeting_date"))) <=
+                               datetime.date.fromisoformat(str(s.get("game_date", ""))))
+        except (TypeError, ValueError):
+            meeting_due = False
+        chat_enabled = bool(s.get("live_ai_active") and meeting_due and
+                            session.get("meeting_status") in ("confirmed", "due"))
+        live_status = "ready" if chat_enabled else (
+            "locked_until_phase_f" if not s.get("live_ai_active") else "locked_until_meeting_date")
+        if session.get("live_ai_required") is not True:
+            session["live_ai_required"] = True
+            conversation_save_needed = True
+        if session.get("chat_enabled") != chat_enabled:
+            session["chat_enabled"] = chat_enabled
+            conversation_save_needed = True
+        if session.get("live_ai_status") != live_status:
+            session["live_ai_status"] = live_status
+            conversation_save_needed = True
         try:
             number = int(str(session.get("id", "")).split("-")[-1])
             max_conversation_number = max(max_conversation_number, number)
