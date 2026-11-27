@@ -554,7 +554,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         MDV: 'Dr Mohamed Muizzu portrait.jpg',
         MMR: 'Min Aung Hlaing at the Kremlin on March 4, 2025 (cropped).jpg',
         THA: 'Anutin Charnvirakul September 2026 (cropped).jpg',
-        VNM: 'President of Vietnam, Mr. Tô Lâm (cropped).jpg'
+        VNM: 'President of Vietnam, Mr. Tô Lâm (cropped).jpg',
+        UGA: 'Yoweri K. Museveni (portrait, 2018).jpg',
+        GHA: 'John Mahama.png',
+        SEN: 'Président Diomaye Faye.jpg',
+        TZA: 'Samia Suluhu at the XXIX St Petersburg International Economic Forum - 2026 (cropped).jpg',
+        RWA: 'Kagame Paul.jpg',
+        CIV: 'Alassane Ouattara - 2024 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
