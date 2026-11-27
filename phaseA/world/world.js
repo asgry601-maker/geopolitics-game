@@ -353,6 +353,36 @@ function toggleEventPanel() {
   setEventPanel(!pnl || pnl.className.indexOf('open') < 0);
 }
 
+/* کلیدهای حالت مذاکرات؛ مستقل از هم و فعلاً فقط در رابط کاربری */
+var EVENT_TALK_STATE = { confidential: false, alliance: false };
+function renderEventTalkState() {
+  var confidential = EVENT_TALK_STATE.confidential;
+  var alliance = EVENT_TALK_STATE.alliance;
+  var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
+  var cs = el('confidentialTalkState'), as = el('allianceTalkState');
+  var title = el('eventStatementTitle'), note = el('eventContextNote');
+  if (cb) { cb.className = 'eventNegotiationToggle' + (confidential ? ' active' : ''); cb.setAttribute('aria-pressed', confidential ? 'true' : 'false'); }
+  if (ab) { ab.className = 'eventNegotiationToggle' + (alliance ? ' active' : ''); ab.setAttribute('aria-pressed', alliance ? 'true' : 'false'); }
+  if (cs) cs.textContent = confidential ? 'روشن' : 'خاموش';
+  if (as) as.textContent = alliance ? 'روشن' : 'خاموش';
+  var context = [];
+  if (confidential) context.push('مذاکره محرمانه');
+  if (alliance) context.push('مذاکره با اتحاد');
+  if (!context.length) {
+    if (title) title.textContent = 'پنجره بیانیه‌ها · حالت عمومی';
+    if (note) note.textContent = 'حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.';
+  } else {
+    if (title) title.textContent = 'پنجره بیانیه‌ها · ' + context.join(' + ');
+    if (note) note.textContent = 'زمینه فعلی پنجره بیانیه: ' + context.join(' و ') + '. با خاموش‌کردن گزینه‌ها، پنجره به حالت عمومی برمی‌گردد.';
+  }
+}
+function bindEventTalkControls() {
+  var cb = el('btnConfidentialTalk'), ab = el('btnAllianceTalk');
+  if (cb) cb.onclick = function () { EVENT_TALK_STATE.confidential = !EVENT_TALK_STATE.confidential; renderEventTalkState(); };
+  if (ab) ab.onclick = function () { EVENT_TALK_STATE.alliance = !EVENT_TALK_STATE.alliance; renderEventTalkState(); };
+  renderEventTalkState();
+}
+
 
 function barHtml(label, v, cls) {
   var w = Math.max(0, Math.min(100, v));
@@ -1328,6 +1358,7 @@ function bindToolbar() {
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
   var eb = el('eventPanelToggle');
   if (eb) eb.onclick = toggleEventPanel;
+  bindEventTalkControls();
   el('btnStart').onclick = function () { startGame(false); };
 }
 
