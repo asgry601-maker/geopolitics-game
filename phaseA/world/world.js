@@ -512,7 +512,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         NLD: 'Dick Schoof in 2025.jpg',
         SWE: 'Ulf Kristersson (cropped).jpg',
         DNK: 'Mette Frederiksen, 2025.06.26 (04) (cropped1).jpg',
-        BEL: 'BartDeWever.jpg'
+        BEL: 'BartDeWever.jpg',
+        NOR: 'Jonas Gahr Støre under åpningen av det nye regjeringskvartalet 130426 (cropped).jpg',
+        FIN: 'Petteri Orpo 5.jpg',
+        ISL: 'NYCW 2026 - Kristrún Frostadóttir 01.jpg',
+        GRC: 'Kyriakos Mitsotakis 2026.jpg',
+        HRV: 'Andrej Plenković (cropped).jpg',
+        LUX: 'Luc Frieden 2025 (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
