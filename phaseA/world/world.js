@@ -338,6 +338,22 @@ function setPanel(open) {
 function openPanel() { setPanel(true); }
 function togglePanel() { setPanel(panelIsClosed()); }
 
+/* پنل رویدادها: پوسته بیانیه‌ها اکنون غیرفعال است؛ AI زنده در فاز F آن را فعال می‌کند. */
+function setEventPanel(open) {
+  var pnl = el('eventPanel'), btn = el('eventPanelToggle');
+  if (!pnl || !btn) return;
+  pnl.className = open ? 'open' : '';
+  btn.className = open ? 'open' : '';
+  btn.textContent = open ? '\\u276e' : '\\u276f';
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  pnl.setAttribute('aria-hidden', open ? 'false' : 'true');
+}
+function toggleEventPanel() {
+  var pnl = el('eventPanel');
+  setEventPanel(!pnl || pnl.className.indexOf('open') < 0);
+}
+
+
 function barHtml(label, v, cls) {
   var w = Math.max(0, Math.min(100, v));
   return '<div class="row"><span class="muted">' + label + '</span><span>' + v.toFixed(1) + '</span></div>' +
@@ -1310,6 +1326,8 @@ function bindToolbar() {
   provToggleBtn();   /* B2: دکمه مرز استان‌ها (اگر در HTML باشد) */
   var tb = el('panelToggle');
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
+  var eb = el('eventPanelToggle');
+  if (eb) eb.onclick = toggleEventPanel;
   el('btnStart').onclick = function () { startGame(false); };
 }
 
