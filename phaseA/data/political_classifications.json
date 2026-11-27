@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 56,
-    "pending_countries": 118,
+    "classified_countries": 61,
+    "pending_countries": 113,
     "last_batch": [
-      "ISL",
-      "LUX",
-      "ALB",
-      "MNE",
-      "BIH"
+      "MKD",
+      "XKX",
+      "MDA",
+      "BLR",
+      "GEO"
     ]
   },
   "countries": {
@@ -3985,6 +3985,378 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "به‌دلیل انتخابات ۴ اکتبر، snapshot عمداً وضعیت گذار را ثبت می‌کند. اطلاعاتی مانند سوگند ریاست‌جمهوری در ۱۶ نوامبر خارج از تاریخ مبناست و در وضعیت آغاز بازی اعمال نشده است."
+      }
+    },
+    "MKD": {
+      "country_name_fa": "مقدونیه شمالی",
+      "country_name_en": "North Macedonia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "national_conservatism",
+        "conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "دولت Hristijan Mickoski از ژوئن ۲۰۲۴ با ائتلاف VMRO-DPMNE، ائتلاف آلبانیایی VLEN و ZNAM تشکیل شده است. VMRO-DPMNE گرایش محافظه‌کار ملی دارد؛ VLEN نماینده چند حزب و جریان آلبانیایی است و ZNAM ترکیبی از ملی‌گرایی و عمل‌گرایی دارد. ائتلاف ۷۷ تا ۷۸ کرسی از ۱۲۰ کرسی مجلس را در اختیار داشته و پس از جابه‌جایی‌های محدود وزارتی در ۲۰۲۵ و ۲۰۲۶ پایدار مانده است. کشور جمهوری پارلمانی است؛ رئیس‌جمهور مستقیماً انتخاب می‌شود اما نقش اجرایی غالب با دولت و نخست‌وزیر است. نهادهای دموکراتیک فعال‌اند، ولی نگرانی‌ها درباره استقلال قوه قضاییه، فساد و قطبی‌شدن سیاسی در ارزیابی‌ها باقی است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "North Macedonia Assembly May 2024 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/MK/MK-LC01/election/MK-LC01-E20240508/",
+          "date": "2024-05-08",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات و ائتلاف Your Macedonia/VLEN/ZNAM و توزیع کرسی‌ها."
+        },
+        {
+          "name": "Resolution 2645 – North Macedonia",
+          "publisher": "Parliamentary Assembly of the Council of Europe",
+          "url": "https://pace.coe.int/en/files/35887/html",
+          "date": "2025-01-29",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید دولت ائتلافی Mickoski و ساختار سیاسی و ارزیابی انتخابات."
+        },
+        {
+          "name": "North Macedonia – BTI 2026",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/MKD",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ارزیابی رقابت حزبی، اکثریت ۷۸ کرسی ائتلاف و چالش‌های نهادی."
+        },
+        {
+          "name": "North Macedonia 2026 Report",
+          "publisher": "European Commission",
+          "url": "https://data.consilium.europa.eu/doc/document/ST-15404-2026-ADD-8/en/pdf",
+          "date": "2026-11-01",
+          "supports": [
+            "ruling_coalition_ideology",
+            "executive_legislative_system"
+          ],
+          "note": "گزارش پیشرفت ۲۰۲۶؛ ائتلاف تا پاییز ۲۰۲۶ پایدار و تغییرات وزارتی محدود."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "دولت و ائتلاف در ۵ نوامبر ۲۰۲۶ همان دولت Mickoski بود؛ گزارش‌های پس از تاریخ مبنا صرفاً برای تأیید تداوم وضعیت به‌کار رفته‌اند."
+      }
+    },
+    "XKX": {
+      "country_name_fa": "کوزوو",
+      "country_name_en": "Kosovo",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "progressivism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "progressivism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "پس از انتخابات زودهنگام ۷ ژوئن ۲۰۲۶، Vetëvendosje به رهبری Albin Kurti بزرگ‌ترین نیروی مجلس شد و در ۱۳ سپتامبر دولت جدید با ۶۲ رأی اعتماد تشکیل داد. حزب دارای گرایش چپ‌گرا، سوسیال‌دموکراتیک و پوپولیسم ضدنخبگانی است؛ با این حال دولت به حمایت نمایندگان اقلیت‌ها و همکاری موردی نیاز دارد. در تاریخ مبنا مسئله انتخاب رئیس‌جمهور و اختلاف حقوقی بر سر روند تشکیل نهادها همچنان منبع تنش بود. کوزوو جمهوری پارلمانی با رئیس‌جمهور عمدتاً تشریفاتی و نخست‌وزیر رئیس دولت است. طبقه‌بندی آن به‌عنوان جمهوری، مستقل از وضعیت شناسایی بین‌المللی آن است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Speech by Prime Minister Kurti at the First Meeting of the New Government",
+          "publisher": "Office of the Prime Minister of Kosovo",
+          "url": "https://kryeministri.rks-gov.net/en/news/obracanje-premijera-kurtija-na-prvom-sastanku-nove-vlade/",
+          "date": "2026-09-14",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "تأیید رأی اعتماد ۱۳ سپتامبر و آغاز کار دولت جدید Kurti 4."
+        },
+        {
+          "name": "Kosovo – June 2026",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/report/kosovo/june-2026",
+          "date": "2026-06-30",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "regime_character"
+          ],
+          "note": "نتایج انتخابات ۷ ژوئن، ۵۳ کرسی Vetëvendosje و ترکیب مجلس."
+        },
+        {
+          "name": "Report of the Secretary-General on UNMIK, S/2026/779",
+          "publisher": "United Nations",
+          "url": "https://unsco.unmissions.org/sites/default/files/2026-11/S_2026_779-EN_1.pdf",
+          "date": "2026-11-01",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "regime_character"
+          ],
+          "note": "تأیید رأی اعتماد دولت Kurti با ۶۲ رأی و مناقشه رویه تشکیل مجلس."
+        },
+        {
+          "name": "Constitution of the Republic of Kosovo",
+          "publisher": "Constitutional Court of Kosovo",
+          "url": "https://ksk.rks-gov.net/assets/cms/uploads/files/Legjislacioni/Kushtetuta%20e%20Republik%C3%ABs%20s%C3%AB%20Kosoves/CONSTITUTION_OF_THE_REPUBLIC_OF_KOSOVO.pdf",
+          "date": "2008-06-15",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد قانون اساسی درباره نخست‌وزیر، دولت و انتخاب دولت توسط مجلس."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "snapshot در ۵ نوامبر پس از رأی اعتماد دولت در ۱۳ سپتامبر است؛ گزارش سازمان ملل وضعیت سیاسی و چالش حقوقی موجود در همان مقطع را تأیید می‌کند."
+      }
+    },
+    "MDA": {
+      "country_name_fa": "مولداوی",
+      "country_name_en": "Moldova",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberalism",
+        "social_liberalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در انتخابات پارلمانی ۲۸ سپتامبر ۲۰۲۵، حزب اقدام و همبستگی (PAS) با ۵۵ کرسی از ۱۰۱ کرسی اکثریت را حفظ کرد. پارلمان در ۳۱ اکتبر ۲۰۲۵ Alexandru Munteanu را به نخست‌وزیری منصوب کرد و دولت تک‌حزبی PAS در تاریخ مبنا مستقر بود. PAS حزبی لیبرال و pro-European با گرایش‌های اصلاح‌طلبانه و اجتماعی-لیبرال است؛ چون دولت تک‌حزبی است، فیلد ائتلاف حاکم null باقی می‌ماند. انتخابات رقابتی بود و انتخاب میان بدیل‌های سیاسی وجود داشت، اما گزارش ناظران از مداخله خارجی، تأمین مالی غیرقانونی و اطلاعات نادرست در فضای انتخاباتی خبر داد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Republic of Moldova Parliament September 2025 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/MD/MD-LC01/election/MD-LC01-E20250928/",
+          "date": "2025-09-28",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتیجه انتخابات، ۵۵ کرسی PAS و انتصاب Alexandru Munteanu به نخست‌وزیری."
+        },
+        {
+          "name": "Moldova parliamentary elections 2025: ODIHR final report",
+          "publisher": "OSCE/ODIHR",
+          "url": "https://odihr.osce.org/news/odihr/662254",
+          "date": "2026-02-18",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت انتخاباتی، مداخله خارجی، تأمین مالی غیرقانونی و disinformation."
+        },
+        {
+          "name": "Constitution of the Republic of Moldova",
+          "publisher": "Constitutional Court of Moldova",
+          "url": "https://www.constcourt.md/public/files/file/Baza%20legala/Constitution_of_RM.pdf",
+          "date": "1994-07-29",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "تعریف جمهوری و نظام پارلمانی در قانون اساسی."
+        },
+        {
+          "name": "Government of the Republic of Moldova",
+          "publisher": "Government of Moldova",
+          "url": "https://gov.md/en",
+          "date": "2026-11-27",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_party_ideology"
+          ],
+          "note": "مرجع رسمی دولت و ترکیب اجرایی؛ برای تأیید وضعیت دولت و نه تغییرات بعد از snapshot."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "انتخابات ۲۰۲۵ و دولت منصوب‌شده در ۳۱ اکتبر ۲۰۲۵ مبنای وضعیت ۵ نوامبر ۲۰۲۶ هستند؛ تغییرات بعدی در baseline وارد نشده‌اند."
+      }
+    },
+    "BLR": {
+      "country_name_fa": "بلاروس",
+      "country_name_en": "Belarus",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "closed_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "authoritarian_nationalism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "بلاروس از نظر قانون اساسی جمهوری ریاستی است: رئیس‌جمهور رئیس کشور و دارای اختیارات بسیار گسترده است و نخست‌وزیر دولت را اداره می‌کند، اما قدرت واقعی در ریاست‌جمهوری متمرکز است. Alyaksandr Lukashenka در انتخابات ژانویه ۲۰۲۵ برای دوره هفتم اعلام پیروزی کرد؛ انتخابات در شرایط سرکوب مخالفان و نبود رقابت آزاد برگزار شد. احزاب رسمی و پارلمان وجود دارند، اما نظام حزبی عملاً غیررقابتی و تحت سلطه نیروهای وفادار به رئیس‌جمهور است؛ احزاب مخالف مستقل امکان فعالیت مؤثر ندارند. ایدئولوژی رسمی واحد و شفاف برای دولت اعلام نشده و گرایش حکومت ترکیبی از اقتدارگرایی شخص‌محور، ملی‌گرایی دولتی و عمل‌گرایی اقتدارگراست؛ از نسبت‌دادن برچسب کمونیسم صرفاً به‌دلیل تاریخ شوروی پرهیز شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Belarus: Human Rights Report",
+          "publisher": "United Nations Human Rights Council",
+          "url": "https://digitallibrary.un.org/record/4083463/files/A_HRC_59_59-EN.pdf",
+          "date": "2025-06-01",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "گزارش کارشناسان مستقل سازمان ملل درباره انتخابات ۲۰۲۴ و ۲۰۲۵، حذف احزاب مخالف و تمرکز قدرت."
+        },
+        {
+          "name": "Belarus: Freedom in the World 2024",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/belarus/freedom-world/2024",
+          "date": "2024-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "توصیف حکومت اقتدارگرا، فقدان انتخابات آزاد و محدودیت شدید رقابت حزبی."
+        },
+        {
+          "name": "Belarus – Nations in Transit 2024",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/belarus/nations-transit/2024",
+          "date": "2024-01-01",
+          "supports": [
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در ریاست‌جمهوری، حذف احزاب مخالف و فقدان موازنه قوا."
+        },
+        {
+          "name": "Belarus presidential election January 2025",
+          "publisher": "OSCE Parliamentary Assembly",
+          "url": "https://www.oscepa.org/en/news-a-media/press-releases/press-2025/belarus-presidential-election-2025",
+          "date": "2025-01-26",
+          "supports": [
+            "government_subform",
+            "regime_character"
+          ],
+          "note": "اطلاعیه و ارزیابی انتخاباتی؛ محدودیت‌های نظارت و رقابت سیاسی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت اقتدارگرا و ساختار ریاستی با منابع پیش از تاریخ مبنا مستند شده است؛ انتخابات ژانویه ۲۰۲۵ در baseline لحاظ شده و ادعای رسمی پیروزی معادل رقابت آزاد تلقی نشده است."
+      }
+    },
+    "GEO": {
+      "country_name_fa": "گرجستان",
+      "country_name_en": "Georgia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، حزب Georgian Dream همچنان نیروی مسلط دولت و پارلمان بود و دولت به نخست‌وزیری Irakli Kobakhidze اداره می‌شد. در انتخابات اکتبر ۲۰۲۴ این حزب ۸۹ کرسی از ۱۵۰ کرسی را به دست آورد؛ احزاب مخالف نتایج را رد کردند و اعتراضات و بحران مشروعیت پس از انتخابات ادامه یافت. دولت گرایش محافظه‌کار ملی و پوپولیستی دارد، اما ایدئولوژی رسمی کشور با گرایش حزب حاکم یکی نیست. قانون اساسی ساختار پارلمانی را برقرار می‌کند؛ رئیس‌جمهور در نظام اصلاح‌شده عمدتاً اختیارات محدودتری دارد. به‌دلیل محدودیت‌های فزاینده بر رسانه‌ها و جامعه مدنی و مناقشه انتخاباتی، وضعیت رژیم hybrid ثبت شده است، نه دموکراسی لیبرال.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Georgia Parliament October 2024 Election",
+          "publisher": "IPU Parline",
+          "url": "https://data.ipu.org/parliament/GE/GE-LC01/election/GE-LC01-E20241026/",
+          "date": "2024-10-26",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "regime_character"
+          ],
+          "note": "نتایج رسمی اعلام‌شده، ۸۹ کرسی Georgian Dream و اعتراض مخالفان."
+        },
+        {
+          "name": "Constitution of Georgia",
+          "publisher": "Constitutional Court of Georgia",
+          "url": "https://www.constcourt.ge/en/court/legislation/constitution-text",
+          "date": "2017-10-13",
+          "supports": [
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد قانون اساسی درباره پارلمان و ساختار جمهوری پارلمانی."
+        },
+        {
+          "name": "Georgia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/georgia/freedom-world/2026",
+          "date": "2026-01-01",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی آزادی‌های سیاسی، محدودیت‌های جامعه مدنی و رقابت انتخاباتی."
+        },
+        {
+          "name": "Georgia 2025 Report",
+          "publisher": "European Commission",
+          "url": "https://enlargement.ec.europa.eu/georgia-report-2025_en",
+          "date": "2025-11-04",
+          "supports": [
+            "regime_character",
+            "ruling_party_ideology"
+          ],
+          "note": "ارزیابی عقب‌گرد دموکراتیک، قطبی‌شدن سیاسی و جهت‌گیری دولت."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی مبتنی بر وضعیت پس از انتخابات ۲۰۲۴ و ارزیابی‌های نهادی پیش از ۵ نوامبر ۲۰۲۶ است؛ تغییرات احتمالی پس از تاریخ مبنا اعمال نشده‌اند."
       }
     }
   }
