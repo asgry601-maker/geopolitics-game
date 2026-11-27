@@ -520,11 +520,17 @@ def load():
         political_state = {}
         s["political_state"] = political_state
     missing_political = [n for n in s.get("world", {}) if n not in political_state]
-    if missing_political or not isinstance(s.get("political_baseline"), dict):
+    needs_political_save = False
+    if missing_political or not isinstance(s.get("political_baseline"), dict) or not isinstance(s.get("political_baseline_state"), dict):
         baseline, baseline_meta = load_political_baseline()
         for n in missing_political:
-            political_state[n] = baseline[n]
+            political_state[n] = json.loads(json.dumps(baseline[n]))
+        if not isinstance(s.get("political_baseline_state"), dict):
+            # baseline جداگانه و مستقل نگهداری می‌شود تا تغییر runtime هرگز آن را تغییر ندهد.
+            s["political_baseline_state"] = json.loads(json.dumps(baseline))
         s["political_baseline"] = baseline_meta
+        needs_political_save = True
+    if needs_political_save:
         save(s)
     # مهاجرت ذخیره‌های قدیمی به ساختار politics سراسری
     if "politics" not in s:
@@ -1238,12 +1244,14 @@ def init_game(player):
     elif player in US_PACT:
         allies0 = ["آمریکا"]
     political_state, political_baseline = load_political_baseline()
+    political_baseline_state = json.loads(json.dumps(political_state))
+    political_state = json.loads(json.dumps(political_state))
     state = dict(
         player=player, year=START_YEAR, turn=1, ap="\u221e", over=False,
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
-        political_state=political_state, political_baseline=political_baseline,
+        political_state=political_state, political_baseline=political_baseline,\n        political_baseline_state=political_baseline_state,
         turn_events={},
         log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
