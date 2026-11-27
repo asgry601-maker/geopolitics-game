@@ -797,8 +797,18 @@ function politicalEditSelect(field, label, current) {
 function politicalChangeFormHtml(pc, isPlayer) {
   if (!isPlayer) return '<div class="dashNote">تغییر ساختار سایر کشورها از این پنل ممکن نیست. تصمیم‌گیری خودکار کشورها فقط پس از فعال‌شدن هوش مصنوعی زنده در آینده اضافه خواهد شد.</div>';
   pc = pc || {};
-  var h = '<div class="dashCard" id="politicalChangeCard"><h3>🛠 تغییر ساختار سیاسی کشور شما</h3>';
-  h += '<div class="dashNote">این ابزار فعلاً فقط برای کشور تحت کنترل بازیکن فعال است. این بسته ثبت فنی تغییرات را فراهم می‌کند؛ هزینه، زمان اصلاحات و پیامدهای سیاسی در بسته بعدی اضافه می‌شوند. اطلاعات baseline آغاز سناریو محفوظ می‌ماند و هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده تصمیم‌گیری نمی‌کند.</div>';
+  var proposalList = (window.GAME_STATE && window.GAME_STATE.political_reform_proposals) || [];
+  var activeProposal = null, pi;
+  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (window.GAME_STATE && window.GAME_STATE.player) && proposalList[pi].status === 'pending') { activeProposal=proposalList[pi]; break; }
+  var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
+  h += '<div class="dashNote">در این مرحله تغییرات ابتدا به‌صورت طرح ثبت می‌شوند و وضعیت فعلی کشور دست‌نخورده می‌ماند. برآورد هزینه و زمان نمایش داده می‌شود؛ کسر خزانه و اجرای مرحله‌ای در بسته‌های بعدی فعال خواهد شد. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
+  if (activeProposal) {
+    h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>در انتظار بررسی</b></div>';
+    h += '<div class="row"><span>هزینه برآوردی</span><b>'+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
+    h += '<div class="row"><span>زمان برآوردی</span><b>'+dashEsc(activeProposal.estimated_days)+' روز</b></div>';
+    h += '<div class="dashNote">هنوز هیچ‌یک از تغییرات پیشنهادی اعمال نشده است.</div>';
+    h += '<button type="button" id="btnCancelPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">لغو طرح</button></div>';
+  }
   h += '<div class="dashGrid">';
   h += politicalEditSelect('government_form','نوع حکومت',pc.government_form);
   h += politicalEditSelect('government_subform','زیرنوع حکومت',pc.government_subform);
@@ -810,12 +820,22 @@ function politicalChangeFormHtml(pc, isPlayer) {
   h += politicalEditSelect('official_ideology','ایدئولوژی رسمی',pc.official_ideology);
   h += politicalEditSelect('ruling_party_ideology','گرایش حزب حاکم',pc.ruling_party_ideology);
   h += politicalEditSelect('ruling_coalition_ideology','گرایش ائتلاف حاکم',pc.ruling_coalition_ideology);
-  h += '<button type="button" id="btnApplyPoliticalChange" class="primary" style="width:100%;margin-top:8px">ثبت تغییرات سیاسی</button>';
+  if (!activeProposal) h += '<button type="button" id="btnApplyPoliticalChange" class="primary" style="width:100%;margin-top:8px">ارسال طرح اصلاحات</button>';
   h += '<div id="politicalChangeStatus" class="small muted" style="margin-top:7px" aria-live="polite"></div></div>';
   return h;
 }
 
 function bindPoliticalChangeForm(r) {
+  var cancelBtn = el('btnCancelPoliticalProposal');
+  if (cancelBtn) cancelBtn.onclick = function () {
+    if (!window.confirm('طرح اصلاحات لغو شود؟')) return;
+    cancelBtn.disabled = true;
+    postJSON('api/political/cancel', {proposal_id:cancelBtn.getAttribute('data-proposal-id')}, function(res) {
+      if (!res.ok) { cancelBtn.disabled=false; flash(res.error || 'لغو طرح ناموفق بود.'); return; }
+      flash(res.out || 'طرح لغو شد.');
+      loadState(function () { if (SELECTED) selectCountry(SELECTED, true); });
+    }, function(st,tx) { cancelBtn.disabled=false; flash(netErrMsg(st,tx)); });
+  };
   var btn = el('btnApplyPoliticalChange');
   if (!btn) return;
   btn.onclick = function () {
@@ -841,7 +861,7 @@ function bindPoliticalChangeForm(r) {
       var status = el('politicalChangeStatus');
       if (status) status.textContent = res.out || res.error || (res.ok ? 'ثبت شد.' : 'خطا');
       if (!res.ok) { flash(res.error || 'تغییر سیاسی ثبت نشد.'); return; }
-      flash(res.out || 'تغییرات سیاسی ثبت شد.');
+      flash(res.out || 'طرح اصلاحات ثبت شد.');
       loadState(function () { if (SELECTED) selectCountry(SELECTED, true); });
     }, function (st, tx) {
       btn.disabled = false;
