@@ -1621,7 +1621,9 @@ function alliancePanelHtml(countryName, canManage) {
       rec=proposals[i] || {};
       if (rec.kind === 'alliance' && rec.status === 'pending' && (rec.initiator === ST.player || (rec.parties || []).indexOf(ST.player)>=0)) {
         pending++;
-        h += '<div class="dashCard"><b>پیشنهاد تشکیل اتحاد</b><div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div><div>وضعیت: در انتظار پاسخ اعضا</div><div class="muted small">پاسخ هوش مصنوعی تا فعال‌سازی فاز F دریافت نمی‌شود.</div></div>';
+        h += '<div class="dashCard"><b>پیشنهاد تشکیل اتحاد</b><div>طرف‌ها: '+dashEsc((rec.parties || []).join('، '))+'</div><div>وضعیت: در انتظار پاسخ اعضا</div>';
+        if(rec.conversation_id) h += '<div class="muted small">نشست مذاکره مرتبط: '+dashEsc(rec.conversation_id)+'</div>';
+        h += '<div class="muted small">پاسخ هوش مصنوعی تا فعال‌سازی فاز F دریافت نمی‌شود.</div></div>';
       }
     }
     for (i=0;i<joinRequests.length;i++) {
