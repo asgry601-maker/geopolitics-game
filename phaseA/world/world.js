@@ -488,7 +488,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         ARG: 'Retrato oficial del Presidente Javier Milei.png',
         ZAF: 'Cyril Ramaphosa in 2026.jpg',
         MYS: 'Anwar Ibrahim June 2025.jpg',
-        PAK: 'Shehbaz Sharif - 2025 (cropped).jpg'
+        PAK: 'Shehbaz Sharif - 2025 (cropped).jpg',
+        MEX: 'Claudia Sheinbaum en Noviembre 2025.jpg',
+        LBN: 'Official Portrait of the President of the Republic of Lebanon.jpg',
+        JOR: 'Abdullah II portrait at 10 Downing Street February 2026 (cropped).jpg',
+        ISR: 'Israeli Prime Minister Benjamin Netanyahu 20260225.jpg',
+        PSE: 'Mahmoud Abbas 2025-05-10 (cropped).jpg',
+        QAT: 'Tamim bin Hamad Al Thani in October 2026.jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
