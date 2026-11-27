@@ -65,6 +65,30 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
   display: none; }
 @media (max-width: 900px) { :root { --panelw: 46vw; } }
 
+/* پنل مستقل رویدادها در لبه چپ نقشه؛ جایگاه دوم برای فرماندهی نظامی محفوظ است */
+:root { --eventw: 340px; }
+#eventPanel { position:absolute; z-index:12; top:0; bottom:0; left:0; width:var(--eventw);
+  background:rgba(9,17,31,.97); border-right:2px solid #294263; box-shadow:8px 0 24px rgba(0,0,0,.32);
+  padding:12px; overflow-y:auto; direction:rtl; transform:translateX(-100%); transition:transform .3s ease; }
+#eventPanel.open { transform:translateX(0); }
+#eventPanelToggle { position:absolute; z-index:13; left:0; top:50%; width:32px; height:54px; padding:0;
+  border-radius:0 10px 10px 0; border-left:0; font-size:16px; transform:translateY(-50%);
+  transition:left .3s ease; }
+#eventPanelToggle.open { left:var(--eventw); }
+.eventPanelHead { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:2px 0 10px; }
+.eventPanelHead h2 { margin:0; color:#ffd479; font-size:16px; }
+.eventPanelTabs { display:flex; gap:5px; margin:8px 0 12px; }
+.eventPanelTab { flex:1; padding:8px 4px; font-size:11px; }
+.eventPanelTab.active { background:#2456a8; border-color:#5a91e8; }
+.eventPanelTab:disabled { opacity:.48; cursor:not-allowed; }
+.eventPanelStatus { border:1px solid #385779; background:#101d32; border-radius:9px; padding:12px;
+  line-height:1.9; font-size:12px; color:#c4d2e6; }
+.eventPanelStatus strong { color:#ffd479; }
+.eventPanelFuture { margin-top:10px; border:1px dashed #52617a; border-radius:8px; padding:9px;
+  color:#8fa2bd; font-size:11px; line-height:1.8; }
+@media (max-width:900px) { :root { --eventw: min(340px, 78vw); } }
+
+
 /* داشبورد کشور — تب‌های سبک و سازگار با صفحه‌نمایش کوچک */
 .dashTabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; margin:10px 0; }
 .dashTab { padding:7px 3px; font-size:11px; min-width:0; white-space:normal; }
@@ -128,6 +152,22 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         <button id="btnEnd" class="warn" title="جلو رفتن دقیقاً ۲۴ ساعت">☀️ یک روز کامل</button>
       </div>
     </div>
+    <div id="eventPanel" aria-hidden="true">
+      <div class="eventPanelHead"><h2>📢 مرکز بیانیه‌ها</h2><span class="badge">فاز B</span></div>
+      <div class="eventPanelTabs">
+        <button type="button" class="eventPanelTab active" id="eventTabStatements">📢 بیانیه‌ها</button>
+        <button type="button" class="eventPanelTab" id="eventTabMilitary" disabled title="در مرحله نظامی فعال می‌شود">🛡 نظامی · آینده</button>
+      </div>
+      <div id="eventPanelContent">
+        <div class="eventPanelStatus">
+          <strong>پنل بیانیه‌ها طراحی شده است.</strong><br>
+          این بخش در حال حاضر غیرفعال است و پس از اضافه‌شدن هوش مصنوعی زنده در فاز F فعال خواهد شد.
+          <div class="eventPanelFuture">در زمان فعال‌سازی، بیانیه‌ها با نام رهبر، کد سه‌حرفی کشور، پرچم استاندارد و متن بیانیه نمایش داده می‌شوند.</div>
+        </div>
+      </div>
+      <div class="eventPanelFuture">جایگاه پنل برای بخش فرماندهی نظامی نیز از همین ساختار مشترک رزرو شده است؛ تب نظامی در مرحله مربوطه فعال می‌شود.</div>
+    </div>
+    <button id="eventPanelToggle" type="button" title="باز و بسته کردن پنل بیانیه‌ها" aria-expanded="false">❯</button>
     <div id="globe"></div>
     <div id="fps">FPS: —</div>
     <div id="engineMsg" style="display:none"></div>
