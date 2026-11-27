@@ -173,3 +173,23 @@ All six image references use the existing Wikimedia Commons Special:FilePath loa
 
 All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Leader names in the engine dictionary were checked against the scenario's 5 November 2026 context and updated where the prior data was outdated. Mongolia's acting head-of-state status and the Bangladesh/Nepal government transitions are time-sensitive and should be revisited when the scenario's date changes.
 
+
+
+## Package 14 — Southeast Asia and the Himalayan region (6 countries)
+
+- **KHM — Cambodia:** Hun Manet — `Hun Manet on May 30, 2025 (cropped 2).jpg`. Photograph dated 30 May 2025, from the Cabinet Public Relations Office of Japan / Prime Minister's Office of Japan; Government of Japan Standard Terms of Use v2.0, compatible with CC BY 4.0. Attribution to the Cabinet Public Relations Office of the Cabinet Secretariat; preserve the source and license notice.
+- **BTN — Bhutan:** Tshering Tobgay — `Dasho Tshering Tobgay.jpg`. Photograph dated 14 March 2024, published by the Press Information Bureau on behalf of the Prime Minister's Office of India; Government Open Data License – India (GODL-India). Attribution: Prime Minister's Office / Press Information Bureau, Government of India. Original file 698 × 934 pixels.
+- **MDV — Maldives:** Mohamed Muizzu — `Dr Mohamed Muizzu portrait.jpg`. Official portrait dated 17 November 2023, source: President's Office of the Maldives; CC BY 4.0. Attribution: The President's Office of the Republic of Maldives. Original file 4,101 × 6,144 pixels.
+- **MMR — Myanmar:** Min Aung Hlaing — `Min Aung Hlaing at the Kremlin on March 4, 2025 (cropped).jpg`. Photograph dated 4 March 2025, source: Council of the Federation of the Federal Assembly of the Russian Federation; author: Council Press Service; CC BY 4.0. Attribution: Council.gov.ru. Original crop 1,301 × 1,668 pixels.
+- **THA — Thailand:** Anutin Charnvirakul — `Anutin Charnvirakul September 2026 (cropped).jpg`. Photograph dated 9 September 2026; own work by Jonathan Mazin; CC BY-SA 4.0. Original crop 1,112 × 1,664 pixels.
+- **VNM — Vietnam:** Tô Lâm — `President of Vietnam, Mr. Tô Lâm (cropped).jpg`. Photograph dated 6 May 2026, published by the Press Information Bureau on behalf of the Prime Minister's Office of India; GODL-India. Attribution: Prime Minister's Office / Press Information Bureau, Government of India. Original crop 562 × 699 pixels; check face clarity in the game.
+
+### File pages
+- KHM: https://commons.wikimedia.org/wiki/File:Hun_Manet_on_May_30,_2025_(cropped_2).jpg
+- BTN: https://commons.wikimedia.org/wiki/File:Dasho_Tshering_Tobgay.jpg
+- MDV: https://commons.wikimedia.org/wiki/File:Dr_Mohamed_Muizzu_portrait.jpg
+- MMR: https://commons.wikimedia.org/wiki/File:Min_Aung_Hlaing_at_the_Kremlin_on_March_4,_2025_(cropped).jpg
+- THA: https://commons.wikimedia.org/wiki/File:Anutin_Charnvirakul_September_2026_(cropped).jpg
+- VNM: https://commons.wikimedia.org/wiki/File:President_of_Vietnam,_Mr._T%C3%B4_L%C3%A2m_(cropped).jpg
+
+All six images use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The leader names were already present in the engine dictionary and were not changed in this package. Review each portrait at the dashboard's actual size; request a replacement if a face is unclear or the crop is not suitable.
