@@ -1241,7 +1241,7 @@ def register_inbox_message(s, sender_country, message_type="message", title="", 
     """ثبت پیام ورودی؛ تولیدکننده AI زنده در فاز F به این قرارداد متصل می‌شود."""
     if sender_country not in (s.get("world") or {}) or sender_country == s.get("player"):
         raise ValueError("فرستنده پیام باید یک کشور دیگر در جهان بازی باشد.")
-    allowed_types = ("request", "treaty_offer", "alliance_invite", "conversation", "message")
+    allowed_types = ("request", "treaty_offer", "alliance_invite", "meeting_request", "conversation", "message")
     if message_type not in allowed_types:
         raise ValueError("نوع پیام ورودی نامعتبر است.")
     sequence = int(s.get("inbox_sequence", 0)) + 1
@@ -1489,6 +1489,7 @@ def register_ai_meeting_proposal(s, initiator_country, participants, meeting_dat
     prepared = prepare_conversation_session(s, participants, topic=topic, visibility_mode=visibility_mode,
         negotiation_type=negotiation_type, source=source, context=context, meeting_date=meeting_date)
     session = prepared["session"]
+    session["initiator"] = initiator_country
     session["meeting_status"] = "pending_player_acceptance"
     session["meeting_initiator"] = initiator_country
     session["meeting_proposed_by"] = initiator_country
