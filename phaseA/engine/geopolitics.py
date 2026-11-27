@@ -982,11 +982,14 @@ def load():
         if not isinstance(participants, list):
             participants = []
             conversation_save_needed = True
+        original_participants = list(participants)
         participants = [n for n in participants if isinstance(n, str) and n in s.get("world", {})]
         if s.get("player") in s.get("world", {}) and s.get("player") not in participants:
             participants.insert(0, s.get("player"))
+        normalized_participants = list(dict.fromkeys(participants))
+        if normalized_participants != original_participants:
             conversation_save_needed = True
-        session["participants"] = list(dict.fromkeys(participants))
+        session["participants"] = normalized_participants
         if session.get("visibility_mode") not in valid_modes:
             session["visibility_mode"] = "public"
             conversation_save_needed = True
@@ -1005,13 +1008,25 @@ def load():
         if not isinstance(session.get("messages"), list):
             session["messages"] = []
             conversation_save_needed = True
-        session.setdefault("topic", "گفت‌وگوی دیپلماتیک")
-        session.setdefault("initiator", s.get("player", ""))
-        session.setdefault("created_date", s.get("game_date", ""))
-        session.setdefault("updated_date", session.get("created_date", ""))
-        session["live_ai_required"] = True
-        session["live_ai_status"] = "locked_until_phase_f"
-        session["chat_enabled"] = False
+        if not isinstance(session.get("linked_records"), list):
+            session["linked_records"] = []
+            conversation_save_needed = True
+        defaults = {
+            "topic": "گفت‌وگوی دیپلماتیک",
+            "initiator": s.get("player", ""),
+            "created_date": s.get("game_date", ""),
+            "updated_date": session.get("created_date", s.get("game_date", ""))
+        }
+        for key, value in defaults.items():
+            if key not in session:
+                session[key] = value
+                conversation_save_needed = True
+        for key, value in (("live_ai_required", True),
+                           ("live_ai_status", "locked_until_phase_f"),
+                           ("chat_enabled", False)):
+            if session.get(key) != value:
+                session[key] = value
+                conversation_save_needed = True
         try:
             number = int(str(session.get("id", "")).split("-")[-1])
             max_conversation_number = max(max_conversation_number, number)
