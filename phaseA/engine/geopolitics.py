@@ -2323,7 +2323,7 @@ def advance_player_political_reforms(s, daily_log):
             proposal["progress"] = 100
             country["stab"] = max(0.0, float(country.get("stab", 0)) - 4.0)
             proposal["completed_date"] = s.get("game_date", "")
-            _reform_party_impact(s, proposal, 0.25, reverse=True)
+            _reform_party_impact(s, proposal, 0.75, reverse=True)
             line = _reform_press_line(
                 s, proposal, "failed",
                 "طرح پس از طی مراحل اجرایی به نتیجه نرسید و تغییرات نهایی اعمال نشد.")
