@@ -151,6 +151,32 @@ def country_profile(iso3):
     except (OSError, ValueError, TypeError):
         return None
 
+
+# پرچم‌های SVG در بسته‌های JSON محلی؛ بدون نیاز به اینترنت در زمان اجرای بازی.
+_FLAG_PARTS = ["flag_svgs_part_%d.json" % i for i in range(1, 13)]
+_FLAG_CACHE = {"mtimes": None, "flags": {}}
+
+
+def get_flag_svg(iso3):
+    if not iso3 or not re.match(r"^[A-Z]{3}$", iso3):
+        return None
+    try:
+        paths = [os.path.join(HERE, "data", name) for name in _FLAG_PARTS]
+        mtimes = tuple(os.path.getmtime(path) if os.path.isfile(path) else None
+                       for path in paths)
+        if mtimes != _FLAG_CACHE["mtimes"]:
+            flags = {}
+            for path in paths:
+                if os.path.isfile(path):
+                    with open(path, encoding="utf-8") as f:
+                        flags.update(json.load(f))
+            _FLAG_CACHE["flags"] = flags
+            _FLAG_CACHE["mtimes"] = mtimes
+        return _FLAG_CACHE["flags"].get(iso3)
+    except (OSError, ValueError, TypeError):
+        return None
+
+
 def fa_meta(fa_name):
     m = CMAP.get(fa_name) or {}
     return dict(
@@ -278,6 +304,7 @@ def api_country(s, name):
         arsenal=[("%s× %d" % (k, v)) for k, v in sorted(ars.items(), key=lambda x: -x[1])][:4],
         parties=dict((p, round(v, 1)) for p, v in (pol.get("parties") or {}).items()),
         political_profile=political_profile(meta.get("iso3")),
+        country_profile=country_profile(meta.get("iso3")),
         press=(pol.get("press") or [])[-4:],
         proxies=prx_mine,
         friends=friends, enemies=enemies,
@@ -396,6 +423,13 @@ class Handler(BaseHTTPRequestHandler):
             self._json(dict(ok=True, phase="A", engine=ENGINE_DIR, state=STATE))
         elif _PROV_RE.match(path):
             self._serve_province(_PROV_RE.match(path).group(1))
+        elif re.match(r"^assets/flags/[A-Z]{3}\\.svg$", path):
+            iso3 = path.rsplit("/", 1)[-1][:3]
+            svg = get_flag_svg(iso3)
+            if svg:
+                self._send(200, svg.encode("utf-8"), "image/svg+xml; charset=utf-8")
+            else:
+                self._json(dict(error="پرچم این کشور در بسته محلی یافت نشد."), 404)
         elif path in STATIC:
             self._serve_static(path)
         else:
