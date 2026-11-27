@@ -1307,6 +1307,77 @@ function leaderPortraitUrlForCountry(r) {
   if (file) return file.indexOf('https://') === 0 ? file : 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(file);
   return iso ? 'assets/leaders/' + dashEsc(iso) + '.jpg' : '';
 }
+
+/* ---------- پیمان‌های فعال: نمایش از داده پایدار موتور ---------- */
+function pactTypeLabel(type) {
+  var labels = {
+    non_aggression: 'عدم تجاوز',
+    trade: 'تجاری',
+    defense: 'دفاعی',
+    cooperation: 'همکاری',
+    transit: 'ترانزیت',
+    economic: 'اقتصادی',
+    other: 'سایر'
+  };
+  return labels[type] || 'نوع ثبت‌نشده (' + String(type || '—') + ')';
+}
+function pactPanelHtml(countryName, canManage) {
+  var records = ST && ST.pact_records ? ST.pact_records : [];
+  var active = [], i, rec, members, partners;
+  for (i=0;i<records.length;i++) {
+    rec = records[i] || {};
+    members = rec.members || [];
+    if (rec.status === 'active' && members.indexOf(countryName) >= 0) active.push(rec);
+  }
+  var h = '<h3>📜 پیمان‌های در جریان</h3>';
+  h += '<div class="dashNote">فقط پیمان‌هایی نمایش داده می‌شوند که در وضعیت فعال و در میان اعضای آن‌ها کشور انتخاب‌شده حضور دارد. لغو پیمان از طرف بازیکن یک‌جانبه است و در تاریخچه بازی ثبت می‌شود.</div>';
+  if (!active.length) return h + '<div class="dashCard">در حال حاضر پیمان فعال ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
+  for (i=0;i<active.length;i++) {
+    rec = active[i];
+    members = rec.members || [];
+    partners = [];
+    for (var j=0;j<members.length;j++) if (members[j] !== countryName) partners.push(members[j]);
+    h += '<div class="dashCard">';
+    h += '<div class="row"><b>' + dashEsc(rec.name || pactTypeLabel(rec.type)) + '</b><span class="badge">فعال</span></div>';
+    h += '<div class="row"><span class="muted">نوع پیمان</span><b>' + dashEsc(pactTypeLabel(rec.type)) + '</b></div>';
+    h += '<div class="row"><span class="muted">طرف‌های دیگر</span><span>' + dashEsc(partners.join('، ') || '—') + '</span></div>';
+    h += '<div class="row"><span class="muted">تاریخ ثبت</span><span>' + dashEsc(rec.created_date || '—') + '</span></div>';
+    if (rec.legacy) h += '<div class="muted small">این پیمان از داده‌های نسخه قدیمی بازی مهاجرت داده شده است.</div>';
+    if (rec.terms && Object.keys(rec.terms).length) h += '<div class="muted small">شرایط ثبت‌شده: ' + dashEsc(JSON.stringify(rec.terms)) + '</div>';
+    if (canManage) h += '<button type="button" class="warn" data-pact-cancel="' + dashEsc(rec.id) + '">لغو یک‌جانبه پیمان</button>';
+    h += '</div>';
+  }
+  if (!canManage) h += '<div class="dashNote">این کشور در حالت مشاهده است؛ مدیریت پیمان‌ها فقط از کشور تحت کنترل بازیکن انجام می‌شود.</div>';
+  return h;
+}
+function bindPactActions() {
+  var box = el('dashSection');
+  if (!box) return;
+  var buttons = box.querySelectorAll('[data-pact-cancel]');
+  for (var i=0;i<buttons.length;i++) {
+    buttons[i].onclick = function() {
+      var id = this.getAttribute('data-pact-cancel');
+      if (!id) return;
+      if (window.confirm && !window.confirm('آیا از لغو یک‌جانبه این پیمان مطمئن هستی؟')) return;
+      this.disabled = true;
+      postJSON('api/agreements/pact/cancel', {agreement_id:id}, function(result) {
+        if (!result || !result.ok) {
+          flash((result && result.error) || 'لغو پیمان انجام نشد.');
+          if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+          return;
+        }
+        loadState(function() {
+          if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+          flash('پیمان لغو شد و تغییر آن در ذخیره و تاریخچه بازی ثبت شد.');
+        });
+      }, function(status, response) {
+        flash(netErrMsg(status, response) + ' — پیمان لغو نشد.');
+        if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+      });
+    };
+  }
+}
+
 function dashSectionHtml(r, isPlayer, tab) {
   var h = '', ks, i;
   if (tab === 'general') {
@@ -1513,9 +1584,7 @@ function dashSectionHtml(r, isPlayer, tab) {
     }
     h += dashMissing('روابط تجاری و نفوذ بین‌المللی','آمار تجارت، روابط دیپلماتیک تفصیلی و نفوذ بین‌المللی هنوز طراحی نشده‌اند.');
   } else if (tab === 'pacts') {
-    h += '<h3>📜 پیمان‌ها و اتحادها</h3>';
-    h += '<div class="dashCard">'+(r.tags && r.tags.length ? r.tags.map(dashEsc).join(' · ') : 'پیمان اختصاصی ثبت‌شده‌ای در داده فعلی این پنل نیست.')+'</div>';
-    h += dashMissing('فهرست کامل توافق‌ها','پیمان‌های نظامی و اقتصادی، توافق‌های تجاری، عدم تجاوز و عضویت سازمانی باید به ساختار مستقل و قابل مدیریت تبدیل شوند.');
+    h += pactPanelHtml(r.name, isPlayer);
   } else if (tab === 'sanctions') {
     h += '<h3>⛔ تحریم‌ها</h3>';
     h += dashMissing('وضعیت تحریم‌ها','کشورهای تحریم‌کننده، نوع و محدودیت تحریم، اثر اقتصادی و روند مذاکره برای رفع تحریم هنوز به شکل پنل تفصیلی پیاده‌سازی نشده‌اند.');
@@ -1585,6 +1654,7 @@ function renderCountryPanel(r) {
   for (var b=0;b<btns.length;b++) btns[b].onclick = (function(id){return function(){dashSelectTab(id);};})(btns[b].getAttribute('data-dash-tab'));
   provAfterPanel();
   bindPoliticalChangeForm(r);
+  if (DASH_TAB === 'pacts') bindPactActions();
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
