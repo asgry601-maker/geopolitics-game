@@ -2358,6 +2358,7 @@ function renderInbox() {
     html += '<div class="inboxCardTitle">'+dashEsc(m.title || "پیام جدید")+'</div><button type="button" class="inboxShowBtn" data-message-id="'+safeId+'">نمایش</button>';
     html += '<div class="inboxMessageBody" id="inboxBody_'+dashEsc(id)+'" hidden><div>'+dashEsc(m.body || "جزئیات پیام ثبت نشده است.")+'</div><small>'+dashEsc(m.date || "")+' · نوع: '+dashEsc(m.message_type || "message")+'</small>';
     if (m.conversation_id) html += '<div class="inboxFutureNote">این پیام به یک زمینه گفت‌وگو متصل است؛ پاسخ زنده پس از فعال‌شدن فاز F در دسترس قرار می‌گیرد.</div>';
+    if (m.response_allowed || m.conversation_id) html += '<button type="button" class="inboxReplyBtn" data-message-id="' + safeId + '">آماده‌سازی پاسخ در تریبون</button><div class="inboxFutureNote">این گزینه فقط نشست و زمینه پاسخ را آماده می‌کند؛ ارسال پیام و پاسخ هوش مصنوعی تا فاز F غیرفعال است.</div>';
     html += '</div></div>';
   }
   list.innerHTML = html;
@@ -2367,6 +2368,30 @@ function renderInbox() {
     if (body) body.hidden=!body.hidden;
     this.textContent=(body && !body.hidden)?"بستن":"نمایش";
     if (ST) postJSON("api/inbox/read",{message_id:mid},function(r){if(r.ok){loadState();}},function(){});
+  };
+  var replyButtons=list.querySelectorAll(".inboxReplyBtn");
+  for (var q=0;q<replyButtons.length;q++) replyButtons[q].onclick=function(){
+    var mid=this.getAttribute("data-message-id"), message=null, i, sessions=(ST && ST.conversation_sessions)||[], linked=null;
+    var messages=(ST && ST.inbox_messages)||[];
+    for(i=0;i<messages.length;i++) if(String(messages[i].id||"")===mid) { message=messages[i]; break; }
+    if(!message || (!message.response_allowed && !message.conversation_id)) { flash("برای این پیام امکان آماده‌سازی پاسخ ثبت نشده است."); return; }
+    if(message.conversation_id) for(i=0;i<sessions.length;i++) if(sessions[i].id===message.conversation_id) { linked=sessions[i]; break; }
+    if(message.conversation_id && !linked) { flash("نشست مرتبط با این پیام پیدا نشد؛ تاریخچه حفظ نشده و نشست تازه‌ای ساخته نمی‌شود."); return; }
+    var payload={
+      participants: linked ? (linked.participants||[]) : [message.sender_country],
+      topic: linked ? (linked.topic||message.title||"پاسخ به پیام ورودی") : (message.title||"پاسخ به پیام ورودی"),
+      visibility_mode: linked ? (linked.visibility_mode||"public") : "public",
+      negotiation_type: linked ? (linked.negotiation_type||"standard") : (message.message_type==="treaty_offer"?"pact":(message.message_type==="alliance_invite"?"alliance":"standard")),
+      source:"inbox",
+      context:{inbox_message_id:mid,sender_country:message.sender_country,message_type:message.message_type||"message",response_to_incoming:true},
+      conversation_id:message.conversation_id||null
+    };
+    var btn=this; btn.disabled=true;
+    postJSON("api/conversations/prepare",payload,function(res){
+      btn.disabled=false;
+      if(!res || !res.ok || !res.session) { flash((res&&res.error)||"نشست پاسخ آماده نشد."); return; }
+      loadState(function(){ DASH_TAB="tribune"; if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R); flash("زمینه پاسخ در تریبون آماده شد؛ گفت‌وگوی زنده تا فاز F قفل است."); });
+    },function(code,response){ btn.disabled=false; flash(netErrMsg(code,response)+" — نشست پاسخ ذخیره نشد."); });
   };
 }
 function setInboxOpen(open) {
