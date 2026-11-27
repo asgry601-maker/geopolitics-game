@@ -423,3 +423,26 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - Haiti: Congressional Research Service notes that the Transitional Presidential Council's mandate expired on 7 February 2026 and executive power passed to Prime Minister Alix Didier Fils-Aimé.
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the portraits at dashboard size, especially Afghanistan's lower-resolution crop and Guinea-Bissau's older photograph. The Afghanistan entry intentionally displays the prime minister, not the supreme leader, because a reusable portrait of the latter was not located.
+
+
+## Package 26 — Caribbean and Central America (6 countries)
+
+- **DOM — Dominican Republic:** Luis Abinader — `Luis Abinader en 2025.jpg`. Official U.S. Department of State photograph by Freddie Everett, taken 24 September 2025; U.S. federal government work, public domain. Crop: 633 × 746 pixels. Commons' extracted crop page has incomplete author/source fields, but links to the original State Department photograph and its metadata.
+- **JAM — Jamaica:** Andrew Holness — `Holness March 2025 (cropped).jpg`. Official U.S. Department of State photograph by Freddie Everett, dated 26 March 2025; U.S. federal government work, public domain. Crop: 423 × 564 pixels.
+- **TTO — Trinidad and Tobago:** Kamla Persad-Bissessar — `2025 Kamla Persad-Bissessar (cropped).jpg`. Official U.S. Department of State photograph by Freddie Everett, dated 30 September 2025; U.S. federal government work, public domain. Crop: 458 × 608 pixels.
+- **CRI — Costa Rica:** Laura Fernández Delgado — `Laura Fernandez Delgado presidential inauguration 20260508 0515 (cropped).jpg`. Photograph dated 8 May 2026, Esteban Rojas Saurez / Legislative Assembly of Costa Rica; public domain under Costa Rica's Law No. 10,554 for public-official works published after 1 November 2024. Crop: 1,788 × 2,398 pixels.
+- **PAN — Panama:** José Raúl Mulino — `José Raúl Mulino 2025.jpg`. Photograph dated 28 March 2025, author credit REPÚBLICA DE COLOMBIA / Joel González; author-declared Public Domain Mark on Flickr. Image: 1,615 × 2,052 pixels. The Commons page explains the territorial caveat of Public Domain Mark where local law does not permit dedication to the public domain.
+- **GTM — Guatemala:** Bernardo Arévalo — `Retrato oficial de Presidente Bernardo Arévalo (cropped).jpg`. Official portrait dated 15 March 2024, photographer Daniel Hernández-Salazar / Government of Guatemala; public domain under Guatemala's Law 33-98 and related provisions. Crop: 3,125 × 4,166 pixels.
+
+### File pages
+- DOM: https://commons.wikimedia.org/wiki/File:Luis_Abinader_en_2025.jpg
+- JAM: https://commons.wikimedia.org/wiki/File:Holness_March_2025_(cropped).jpg
+- TTO: https://commons.wikimedia.org/wiki/File:2025_Kamla_Persad-Bissessar_(cropped).jpg
+- CRI: https://commons.wikimedia.org/wiki/File:Laura_Fernandez_Delgado_presidential_inauguration_20260508_0515_(cropped).jpg
+- PAN: https://commons.wikimedia.org/wiki/File:José_Raúl_Mulino_2025.jpg
+- GTM: https://commons.wikimedia.org/wiki/File:Retrato_oficial_de_Presidente_Bernardo_Arévalo_(cropped).jpg
+
+### Current-leader reference
+- U.S. Congressional Research Service, *Latin America and the Caribbean: Fact Sheet on Leaders and Elections*, updated 9 September 2026, lists Laura Fernández Delgado as Costa Rica's head of government, Bernardo Arévalo as Guatemala's, and José Raúl Mulino as Panama's. Trinidad and Tobago's Ministry of Foreign and CARICOM Affairs lists Kamla Persad-Bissessar as prime minister; CARICOM lists Andrew Holness as Jamaica's prime minister. Luis Abinader remains president of the Dominican Republic.
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the portrait crops at dashboard size, particularly the relatively small Jamaica and Trinidad and Tobago files.
