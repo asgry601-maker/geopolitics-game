@@ -1052,7 +1052,7 @@ def load():
 
     # قرارداد پایدار پیمان‌ها و اتحادها؛ مهاجرت داده‌های قدیمی بدون پذیرش ساختگی
     agreement_save_needed = False
-    for key in ("pact_records", "alliance_records", "agreement_proposals", "agreement_history"):
+    for key in ("pact_records", "alliance_records", "agreement_proposals", "agreement_history", "alliance_join_requests"):
         if not isinstance(s.get(key), list):
             s[key] = []
             agreement_save_needed = True
@@ -2142,6 +2142,43 @@ def cancel_pact_record(s, pact_id):
     raise ValueError("پیمان فعال موردنظر پیدا نشد.")
 
 
+def submit_alliance_join_request(s, alliance_id):
+    """ثبت درخواست عضویت بازیکن در اتحاد موجود؛ عضویت تا پذیرش همه اعضای دیگر فعال نمی‌شود."""
+    player = s.get("player")
+    alliance = None
+    for record in s.get("alliance_records") or []:
+        if isinstance(record, dict) and record.get("id") == alliance_id and record.get("status") == "active":
+            alliance = record
+            break
+    if alliance is None:
+        raise ValueError("اتحاد فعال موردنظر پیدا نشد.")
+    members = alliance.get("members") or []
+    if player in members:
+        raise ValueError("کشور شما هم‌اکنون عضو این اتحاد است.")
+    if any(x.get("alliance_id") == alliance_id and x.get("status") == "pending"
+           for x in (s.get("alliance_join_requests") or []) if isinstance(x, dict)):
+        raise ValueError("برای این اتحاد قبلاً درخواست عضویت در انتظار ثبت شده است.")
+    seq = int(s.get("agreement_sequence", 0)) + 1
+    s["agreement_sequence"] = seq
+    request = {
+        "id": "AJR-%06d" % seq, "alliance_id": alliance_id,
+        "alliance_name": alliance.get("name") or "اتحاد ثبت‌شده",
+        "requester": player, "current_members": list(members),
+        "status": "pending", "created_date": s.get("game_date", ""),
+        "updated_date": s.get("game_date", ""),
+        "live_ai_required": True, "live_ai_status": "locked_until_phase_f"
+    }
+    s.setdefault("alliance_join_requests", []).append(request)
+    s["alliance_join_requests"] = s["alliance_join_requests"][-200:]
+    s.setdefault("agreement_history", []).append({
+        "date": s.get("game_date", ""), "action": "alliance_join_requested",
+        "request_id": request["id"], "agreement_id": alliance_id, "actor": player
+    })
+    s["agreement_history"] = s["agreement_history"][-500:]
+    return {"ok": True, "request": request,
+            "note": "درخواست ثبت شد؛ عضویت تا بررسی و پذیرش اعضای اتحاد فعال نمی‌شود."}
+
+
 def leave_alliance(s, alliance_id):
     for record in s.get("alliance_records") or []:
         if isinstance(record, dict) and record.get("id") == alliance_id and record.get("status") == "active":
@@ -2304,6 +2341,8 @@ def init_game(player):
         player=player, year=START_YEAR, turn=1, ap="\u221e", over=False,
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
+        pact_records=[], alliance_records=[], agreement_proposals=[], agreement_history=[], agreement_sequence=0,
+        alliance_join_requests=[],
         player_sanctions={}, player_sanction_history=[],
         inbox_messages=[], inbox_sequence=0,
         conversation_sessions=[], conversation_sequence=0,
