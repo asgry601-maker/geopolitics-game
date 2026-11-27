@@ -1446,6 +1446,26 @@ function bindConversationShortcuts() {
   };
 }
 
+function agreementSessionOptionsHtml(selectId) {
+  var sessions = ST && ST.conversation_sessions ? ST.conversation_sessions : [];
+  var h = '<label>نشست مرتبط (اختیاری) <select id="' + selectId + '" style="width:100%"><option value="">بدون اتصال به نشست</option>';
+  for (var i=sessions.length-1;i>=0;i--) {
+    var item=sessions[i] || {};
+    h += '<option value="' + dashEsc(item.id || '') + '">' + dashEsc((item.id || '') + ' · ' + (item.topic || 'گفت‌وگوی دیپلماتیک') + ' · ' + (item.participants || []).join('، ')) + '</option>';
+  }
+  return h + '</select></label>';
+}
+function agreementSessionMatches(conversationId, parties) {
+  if (!conversationId) return true;
+  var sessions = ST && ST.conversation_sessions ? ST.conversation_sessions : [], session=null;
+  for (var i=0;i<sessions.length;i++) if (sessions[i] && sessions[i].id === conversationId) { session=sessions[i]; break; }
+  if (!session) return false;
+  var a=(session.participants || []).slice(0).sort(), b=parties.slice(0).sort();
+  if (a.length !== b.length) return false;
+  for (var j=0;j<a.length;j++) if (a[j] !== b[j]) return false;
+  return true;
+}
+
 /* ---------- پیمان‌های فعال: نمایش از داده پایدار موتور ---------- */
 function pactTypeLabel(type) {
   var labels = {
@@ -1470,7 +1490,18 @@ function pactPanelHtml(countryName, canManage) {
   var h = '<h3>📜 پیمان‌های در جریان</h3>';
   h += '<div class="dashNote">فقط پیمان‌هایی نمایش داده می‌شوند که در وضعیت فعال و در میان اعضای آن‌ها کشور انتخاب‌شده حضور دارد. لغو پیمان از طرف بازیکن یک‌جانبه است و در تاریخچه بازی ثبت می‌شود.</div>';
   h += conversationShortcutHtml('pacts', canManage);
-  if (!active.length) return h + '<div class="dashCard">در حال حاضر پیمان فعال ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
+  if (canManage) {
+    h += '<h4>ثبت پیشنهاد پیمان</h4><div class="dashCard">';
+    h += '<label>کشورهای طرف پیمان <select id="pactProposalCountries" multiple size="6" style="width:100%;min-height:110px">';
+    var pactNames=ST && ST.countries ? Object.keys(ST.countries) : []; pactNames.sort();
+    for (i=0;i<pactNames.length;i++) if (pactNames[i] !== ST.player && (!ST.eliminated || ST.eliminated.indexOf(pactNames[i]) < 0)) h += '<option value="' + dashEsc(pactNames[i]) + '">' + dashEsc(pactNames[i]) + '</option>';
+    h += '</select></label><label>نوع پیمان <select id="pactProposalType" style="width:100%"><option value="non_aggression">عدم تجاوز</option><option value="trade">تجاری</option><option value="defense">دفاعی</option><option value="cooperation">همکاری</option><option value="transit">ترانزیت</option><option value="economic">اقتصادی</option><option value="other">سایر</option></select></label>';
+    h += agreementSessionOptionsHtml('pactProposalSession');
+    h += '<button type="button" id="pactProposalSubmit">ثبت پیشنهاد پیمان</button><div id="pactProposalStatus" class="dashNote">پیمان تا پذیرش همه طرف‌ها فعال نمی‌شود. نشست مرتبط باید دقیقاً همین اعضا را داشته باشد.</div></div>';
+  }
+  var pactProposals=ST && ST.agreement_proposals ? ST.agreement_proposals : [], pendingPacts=0;
+  for(i=0;i<pactProposals.length;i++) { rec=pactProposals[i] || {}; if(rec.kind==='pact' && rec.status==='pending' && (rec.parties || []).indexOf(ST ? ST.player : '')>=0) { pendingPacts++; h += '<div class="dashCard"><b>پیشنهاد پیمان در انتظار · ' + dashEsc(pactTypeLabel(rec.pact_type)) + '</b><div>طرف‌ها: ' + dashEsc((rec.parties || []).join('، ')) + '</div><div>وضعیت: در انتظار پذیرش همه طرف‌ها</div>'; if(rec.conversation_id) h += '<div class="muted small">نشست مرتبط: ' + dashEsc(rec.conversation_id) + '</div>'; h += '<div class="muted small">پاسخ کشورهای هوش مصنوعی تا فاز F دریافت نمی‌شود.</div></div>'; } }
+  if (!active.length && !pendingPacts) h += '<div class="dashCard">در حال حاضر پیمان فعال یا پیشنهاد در انتظار ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
   for (i=0;i<active.length;i++) {
     rec = active[i];
     members = rec.members || [];
@@ -1492,6 +1523,22 @@ function pactPanelHtml(countryName, canManage) {
 function bindPactActions() {
   var box = el('dashSection');
   if (!box) return;
+  var create=el('pactProposalSubmit');
+  if(create) create.onclick=function(){
+    var select=el('pactProposalCountries'), parties=[], j;
+    if(select) for(j=0;j<select.options.length;j++) if(select.options[j].selected) parties.push(select.options[j].value);
+    if(!parties.length){var st=el('pactProposalStatus');if(st)st.textContent='حداقل یک کشور را انتخاب کن.';return;}
+    parties.unshift(ST.player);
+    var session=el('pactProposalSession'), conversationId=session?session.value:'';
+    var status=el('pactProposalStatus');
+    if(conversationId && !agreementSessionMatches(conversationId,parties)){if(status)status.textContent='اعضای نشست انتخاب‌شده با طرف‌های پیمان یکسان نیستند.';return;}
+    var type=el('pactProposalType'); create.disabled=true;
+    postJSON('api/agreements/propose',{kind:'pact',parties:parties,pact_type:type?type.value:'non_aggression',conversation_id:conversationId||null},function(res){
+      create.disabled=false;
+      if(!res||!res.ok){if(status)status.textContent=(res&&res.error)||'پیشنهاد پیمان ثبت نشد.';return;}
+      loadState(function(){if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);flash('پیشنهاد پیمان ثبت شد؛ تا پذیرش همه طرف‌ها فعال نمی‌شود.');});
+    },function(code,response){create.disabled=false;if(status)status.textContent=netErrMsg(code,response)+' — پیشنهاد ثبت نشد.';});
+  };
   var buttons = box.querySelectorAll('[data-pact-cancel]');
   for (var i=0;i<buttons.length;i++) {
     buttons[i].onclick = function() {
@@ -1554,7 +1601,8 @@ function alliancePanelHtml(countryName, canManage) {
       h += '<option value="'+dashEsc(names[i])+'">'+dashEsc(names[i])+'</option>';
     }
     h += '</select></label><div class="muted small">برای انتخاب چند کشور، کلید Ctrl را نگه دار. اتحاد فقط پس از پذیرش همه اعضای دعوت‌شده تشکیل می‌شود.</div>';
-    h += '<button type="button" id="allianceCreateSubmit">ارسال پیشنهاد تشکیل اتحاد</button><div id="allianceActionStatus" class="dashNote">هیچ دعوتی بدون تأیید کشورهای دعوت‌شده به عضویت فعال تبدیل نمی‌شود.</div></div>';
+    h += agreementSessionOptionsHtml('allianceProposalSession');
+    h += '<button type="button" id="allianceCreateSubmit">ارسال پیشنهاد تشکیل اتحاد</button><div id="allianceActionStatus" class="dashNote">نشست مرتبط اختیاری است و باید دقیقاً شامل همین اعضا باشد. هیچ دعوتی بدون تأیید همه اعضا فعال نمی‌شود.</div></div>';
   }
   h += '<h4>اتحادهای دیگر کشورهای جهان</h4>';
   if (!world.length) h += '<div class="dashCard">در داده فعلی، اتحاد فعال مستقلی برای نمایش ثبت نشده است. اتحادهای فرضی یا تأییدنشده نمایش داده نمی‌شوند.</div>';
@@ -1616,8 +1664,11 @@ function bindAllianceActions() {
     if(select)for(j=0;j<select.options.length;j++)if(select.options[j].selected)parties.push(select.options[j].value);
     if(!parties.length){var status=el('allianceActionStatus');if(status)status.textContent='حداقل یک کشور برای دعوت انتخاب کن.';return;}
     parties.unshift(ST.player);
+    var linked=el('allianceProposalSession'), conversationId=linked?linked.value:'';
+    var statusBox=el('allianceActionStatus');
+    if(conversationId && !agreementSessionMatches(conversationId,parties)){if(statusBox)statusBox.textContent='اعضای نشست انتخاب‌شده با اعضای اتحاد یکسان نیستند.';return;}
     create.disabled=true;
-    postJSON('api/agreements/propose',{kind:'alliance',parties:parties,alliance_name:name?name.value:''},function(res){
+    postJSON('api/agreements/propose',{kind:'alliance',parties:parties,alliance_name:name?name.value:'',conversation_id:conversationId||null},function(res){
       create.disabled=false;
       if(!res||!res.ok){var status=el('allianceActionStatus');if(status)status.textContent=(res&&res.error)||'پیشنهاد ثبت نشد.';return;}
       loadState(function(){if(LAST_COUNTRY_R)renderCountryPanel(LAST_COUNTRY_R);flash('پیشنهاد تشکیل اتحاد ثبت شد؛ تا پذیرش همه کشورها اتحاد فعال نمی‌شود.');});
