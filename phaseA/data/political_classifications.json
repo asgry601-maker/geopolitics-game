@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 139,
-    "pending_countries": 35,
+    "classified_countries": 145,
+    "pending_countries": 29,
     "last_batch": [
-      "LSO",
-      "SWZ",
-      "GMB",
-      "GNB",
-      "GNQ"
+      "CPV",
+      "CHL",
+      "COL",
+      "PER",
+      "VEN"
     ]
   },
   "countries": {
@@ -10231,6 +10231,396 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "طبقه‌بندی بر اساس ساختار رسمی و واقعیت تمرکز قدرت تا تاریخ snapshot؛ نوع نظام اجرایی به دلیل ریاست‌جمهوری مسلط، ریاستی ثبت شده است."
+      }
+    },
+    "CPV": {
+      "country_name_fa": "کیپ‌ورد",
+      "country_name_en": "Cabo Verde",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "ایدئولوژی رسمی واحدی برای کشور اعلام نشده است. در انتخابات پارلمانی ۱۷ مه ۲۰۲۶، حزب PAICV با کسب ۳۷ کرسی از ۷۲ کرسی اکثریت مطلق را به دست آورد و فرانسیسکو کاروالیو در ۱۹ ژوئن نخست‌وزیر شد؛ این نتیجه به ده سال دولت حزب MPD پایان داد. PAICV در طبقه‌بندی حزبی معاصر عمدتاً سوسیال‌دموکراتیک و میانه‌چپ شناخته می‌شود. رئیس‌جمهور خوزه ماریا نِوِش از همان حزب است. انتخابات ریاست‌جمهوری ۱۵ نوامبر ۲۰۲۶ پس از تاریخ مبنای بازی برگزار شد و در این baseline لحاظ نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Cabo Verde: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/cabo-verde/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کیپ‌ورد را دموکراسی باثبات با انتخابات رقابتی و انتقال مسالمت‌آمیز قدرت میان احزاب توصیف می‌کند."
+        },
+        {
+          "name": "Cabo Verde May 2026 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/CV/CV-LC01/election/CV-LC01-E20260517/",
+          "date": "2026-05-17",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "اکثریت ۳۷ کرسی از ۷۲ کرسی PAICV و انتصاب فرانسیسکو کاروالیو به نخست‌وزیری در ژوئن ۲۰۲۶."
+        },
+        {
+          "name": "Cabo Verde: Opposition wins parliamentary elections, ending decade of MPD rule",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/cabo-verde",
+          "date": "2026-05",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نتیجه انتخابات، ساختار نیمه‌ریاستی، نخست‌وزیر و حزب حاکم PAICV را ثبت می‌کند."
+        },
+        {
+          "name": "Cabo Verde in Brief",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2024-07-15_R48128_a8f3eb3f789cab32361567d0b850f1dac8eb1663.pdf",
+          "date": "2024-07-15",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "تفکیک اختیارات رئیس‌جمهور منتخب مستقیم و نخست‌وزیر برخوردار از اختیارات اجرایی اصلی؛ نظام نیمه‌ریاستی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت سیاسی تا ۵ نوامبر ۲۰۲۶ ثبت شده است. انتخابات ریاست‌جمهوری ۱۵ نوامبر ۲۰۲۶ خارج از تاریخ مبنای baseline است."
+      }
+    },
+    "CHL": {
+      "country_name_fa": "شیلی",
+      "country_name_en": "Chile",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "liberal_conservatism",
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "قانون اساسی ایدئولوژی رسمی واحدی برای دولت تعیین نمی‌کند. خوزه آنتونیو کاست، رهبر حزب جمهوری‌خواه راست‌گرا، در ۱۱ مارس ۲۰۲۶ ریاست‌جمهوری را آغاز کرد. او در دور دوم انتخابات دسامبر ۲۰۲۵ با ۵۸ درصد آرا پیروز شد. ائتلاف‌های Change for Chile و Great and United Chile که از او حمایت کردند، در مجموع ۷۶ کرسی از ۱۵۵ کرسی مجلس نمایندگان و ۲۵ کرسی از ۵۰ کرسی سنا را در اختیار دارند؛ بنابراین دولت از حمایت پارلمانی مهمی برخوردار است اما اکثریت مطلق در هر دو مجلس ندارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Chile: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/chile/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "شیلی را دموکراسی باثبات با رقابت انتخاباتی آزاد و حقوق سیاسی و مدنی گسترده ارزیابی می‌کند."
+        },
+        {
+          "name": "Chile in Brief: Overview and U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/R49328.html",
+          "date": "2026-09-01",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "آغاز به کار کاست در مارس ۲۰۲۶، گرایش راست‌گرای حزب جمهوری‌خواه و کرسی‌های ائتلاف‌های پشتیبان او را شرح می‌دهد."
+        },
+        {
+          "name": "Chile: presidential election result and political transition",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-09-01_R49328_db7859ee776e70353d5be1060f7b50f84d363a0f.pdf",
+          "date": "2026-09-01",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology",
+            "party_system"
+          ],
+          "note": "نتایج انتخابات ۲۰۲۵، ائتلاف‌های پارلمانی و ترکیب مجلس و سنا را ارائه می‌کند."
+        },
+        {
+          "name": "Chile country profile: parliamentary system and institutions",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/CL/CL-LC01/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "مرجع تطبیقی ساختار دو مجلسی و نظام ریاستی شیلی؛ برای تفکیک ساختار اجرایی و قانون‌گذاری."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی بر اساس دولت کاست در تاریخ مبنای سناریو است؛ تغییرات بعدی در runtime ثبت می‌شود."
+      }
+    },
+    "COL": {
+      "country_name_fa": "کلمبیا",
+      "country_name_en": "Colombia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "populism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "کلمبیا جمهوری ریاستی با کنگره دو مجلسی و ساختار سرزمینی واحد است؛ قانون اساسی ایدئولوژی رسمی حزبی برای دولت تعیین نمی‌کند. آبلاردو دِ لا اِسپری‌یا در ۷ اوت ۲۰۲۶ پس از پیروزی در دور دوم انتخابات ژوئن به ریاست‌جمهوری رسید و جایگزین گوستاوو پترو شد. حزب او Defensores de la Patria و متحدانش ائتلافی راست‌گرا و محافظه‌کار تشکیل داده‌اند؛ با این حال گزارش CRS گرایش شخصی او را ترکیبی و عمل‌گرا توصیف می‌کند و درباره انسجام ائتلاف هشدار می‌دهد. احزاب رقیب همچنان حضور پرقدرت دارند و ائتلاف رئیس‌جمهور اکثریت کرسی‌ها را با پیوستن احزاب مختلف به دست آورده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Colombia’s 2026 Elections: Implications for U.S. Relations",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/reports/IN12689.html",
+          "date": "2026-09-24",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "پیروزی و آغاز به کار دِ لا اِسپری‌یا، ماهیت راست‌گرای کارزار، ائتلاف حامی دولت و پراکندگی کنگره را بررسی می‌کند."
+        },
+        {
+          "name": "Colombia: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/colombia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کلمبیا را کشور آزاد با نهادهای انتخابی و امکان رقابت توصیف می‌کند، اما خشونت سیاسی و ضعف تضمین حقوق در مناطق خارج از شهرهای بزرگ را برجسته می‌سازد."
+        },
+        {
+          "name": "Government of Colombia: constitutional structure and branches of government",
+          "publisher": "Constitute Project",
+          "url": "https://www.constituteproject.org/constitution/Colombia_2015?lang=en",
+          "date": "2015 (consolidated text)",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "متن قانون اساسی و تفکیک قوای ریاستی و ساختار جمهوری کلمبیا."
+        },
+        {
+          "name": "Colombia: 2026 election and government profile",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/917142/000119312526431145/d118166d424b3.htm",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system"
+          ],
+          "note": "ساختار جمهوری ریاستی، سه قوه و نتیجه انتخابات ریاست‌جمهوری ۲۰۲۶ را شرح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "به دلیل پراکندگی حزبی و ائتلاف متنوع حامی رئیس‌جمهور، ایدئولوژی دولت با احتیاط و با confidence متوسط ثبت شده است."
+      }
+    },
+    "PER": {
+      "country_name_fa": "پرو",
+      "country_name_en": "Peru",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "flawed_or_limited_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": [
+        "conservatism",
+        "national_conservatism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "پرو جمهوری ریاستی است و اصلاح قانون اساسی، کنگره را از ژوئیه ۲۰۲۶ به دو مجلس سنا و مجلس نمایندگان تبدیل کرد. کیکو فوجیموری در انتخابات ژوئن ۲۰۲۶ پیروز شد و در ۲۸ ژوئیه به ریاست‌جمهوری رسید. حزب نیروی مردمی (Fuerza Popular) بزرگ‌ترین حزب در هر دو مجلس شد، اما اکثریت مستقل ندارد؛ این حزب ۴۱ کرسی از ۱۳۰ کرسی مجلس نمایندگان و ۲۲ کرسی از ۶۰ کرسی سنا را کسب کرد. دولت بر حمایت متحدان پارلمانی تکیه دارد. گرایش حزب حاکم محافظه‌کار و ملی‌محافظه‌کار است و در گفتمان انتخاباتی آن پوپولیسم راست‌گرا و سیاست امنیتی سخت‌گیرانه برجسته است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Peru: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/peru/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نهادهای دموکراتیک و انتقال قدرت انتخاباتی را در کنار فساد، تضعیف استقلال قضایی و محدودیت‌های حکمرانی ارزیابی می‌کند."
+        },
+        {
+          "name": "JNE proclaims Keiko Fujimori as president-elect of the Republic",
+          "publisher": "Jurado Nacional de Elecciones, Government of Peru",
+          "url": "https://www.gob.pe/institucion/jne/noticias/1414770-jne-proclama-a-keiko-fujimori-higuchi-como-presidenta-electa-de-la-republica",
+          "date": "2026-07-03",
+          "supports": [
+            "ruling_party_ideology",
+            "party_system"
+          ],
+          "note": "مرجع رسمی انتخاباتی، پیروزی فوجیموری و حزب Fuerza Popular در دور دوم را اعلام می‌کند."
+        },
+        {
+          "name": "Peru Chamber of Deputies April 2026 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/PE/PE-LC01/election/PE-LC01-E20260412/",
+          "date": "2026-04-12",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب مجلس دو مجلسی جدید و نبود اکثریت برای هر حزب؛ Fuerza Popular بزرگ‌ترین فراکسیون هر دو مجلس است."
+        },
+        {
+          "name": "Trade Policy Review: Peru",
+          "publisher": "World Trade Organization",
+          "url": "https://www.wto.org/english/news_e/news_docs/S491.pdf",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "نظام ریاستی و اصلاح قانون اساسی برای بازگشت به کنگره دو مجلسی را توضیح می‌دهد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی نهادها و دولت فوجیموری بر اساس وضعیت تا ۵ نوامبر ۲۰۲۶؛ اکثریت پارلمانی مستقل برای حزب حاکم فرض نشده است."
+      }
+    },
+    "VEN": {
+      "country_name_fa": "ونزوئلا",
+      "country_name_en": "Venezuela",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "federal",
+      "regime_character": "transitional_or_uncertain",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "nationalism",
+        "marxism_leninism"
+      ],
+      "ruling_coalition_ideology": [
+        "socialism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "ساختار حقوقی کشور همچنان جمهوری فدرال ریاستی است، اما پس از بازداشت و برکناری نیکلاس مادورو در ۳ ژانویه ۲۰۲۶، دلسی رودریگز معاون پیشین رئیس‌جمهور به‌عنوان رئیس‌جمهور موقت قدرت را در دست گرفت. تا تاریخ مبنای ۵ نوامبر ۲۰۲۶، نقشه راه مورد توافق برای انتخابات آزاد و رقابتی و انتقال کامل قدرت تثبیت نشده بود؛ ازاین‌رو ماهیت رژیم به‌جای برچسب قطعی دموکراتیک یا اقتدارگرا، انتقالی/نامطمئن ثبت شده است. ساختارهای حزب سوسیالیست متحد ونزوئلا (PSUV) و ائتلاف قطب بزرگ میهنی همچنان در حکومت حضور مسلط داشتند، اما وضعیت رقابت حزبی و استقلال نهادها در دوره پسامادورو هنوز نامطمئن بود. ایدئولوژی رسمی واحد در این رکورد ثبت نشده؛ گرایش PSUV عمدتاً سوسیالیستی، بولیواری و ملی‌گراست.",
+      "classification_confidence": "low",
+      "classification_sources": [
+        {
+          "name": "Venezuela’s Post-Maduro Political Transition and U.S. Policy",
+          "publisher": "Congressional Research Service",
+          "url": "https://www.everycrsreport.com/files/2026-08-13_R49186_ea00ffd3c8b895af067dbff6339aeff2e659a1b9.html",
+          "date": "2026-08-13",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "ruling_party_ideology"
+          ],
+          "note": "برکناری مادورو در ژانویه ۲۰۲۶، به قدرت رسیدن دلسی رودریگز به‌عنوان رئیس‌جمهور موقت و مراحل نامشخص انتقال سیاسی را شرح می‌دهد."
+        },
+        {
+          "name": "Venezuela at a crossroads: Transition towards democracy or a new form of authoritarianism?",
+          "publisher": "European Parliamentary Research Service",
+          "url": "https://www.europarl.europa.eu/RegData/etudes/BRIE/2026/789305/EPRS_BRI%282026%29789305_EN.pdf",
+          "date": "2026-05",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ارزیابی دوره پس از مداخله ژانویه ۲۰۲۶ و نبود نقشه راه روشن برای انتخابات آزاد و بازسازی دموکراتیک."
+        },
+        {
+          "name": "Venezuela: Political landscape and political factions",
+          "publisher": "European Union Agency for Asylum",
+          "url": "https://www.euaa.europa.eu/venezuela-country-focus/13-political-landscape",
+          "date": "2026-07",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ساختار قوا، وضعیت سیاسی پس از ژانویه ۲۰۲۶ و نقش PSUV و ائتلاف قطب بزرگ میهنی را توصیف می‌کند."
+        },
+        {
+          "name": "Venezuela: Freedom in the World 2026 Country Report",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/venezuela/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی وضعیت اقتدارگرایانه و سلطه PSUV پیش از برکناری مادورو؛ این منبع مبنای دوره پیش از ژانویه است و به‌تنهایی وضعیت انتقالی پس از آن را تعیین نمی‌کند."
+        }
+      ],
+      "data_quality": {
+        "confidence": "low",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت پس از ژانویه ۲۰۲۶ انتقالی و سیال است. گزارش Freedom House 2026 عمدتاً وضعیت پیش از برکناری مادورو را می‌سنجد و در کنار منابع پس از ژانویه استفاده شده است. رویدادهای پس از ۵ نوامبر ۲۰۲۶ در baseline لحاظ نشده‌اند."
       }
     }
   }
