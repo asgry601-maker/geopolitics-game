@@ -338,6 +338,10 @@ def api_chat(s, body):
     return dict(ok=True, online=True, reply="(فاز F — اتصال هنوز پیاده\u200cسازی نشده)")
 
 
+# تصاویر رهبران کشورها؛ نام فایل بر اساس ISO3 و بدون مسیر دلخواه کاربر.
+LEADER_DIR = os.path.join(HERE, "assets", "leaders")
+_LEADER_RE = re.compile(r"^assets/leaders/([A-Z]{3})\\.(jpg|jpeg|png|webp)$")
+
 # ---------------------------------------------------------------- HTTP Handler
 STATIC = {}  # بسته آفلاین: مسیر نسبی -> فایل فیزیکی
 for rel_path, disk in [
@@ -430,6 +434,16 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(200, svg.encode("utf-8"), "image/svg+xml; charset=utf-8")
             else:
                 self._json(dict(error="پرچم این کشور در بسته محلی یافت نشد."), 404)
+        elif _LEADER_RE.match(path):
+            match = _LEADER_RE.match(path)
+            disk = os.path.join(LEADER_DIR, match.group(1) + "." + match.group(2))
+            if os.path.isfile(disk):
+                ext = os.path.splitext(disk)[1].lower()
+                ctype = {".jpg":"image/jpeg",".jpeg":"image/jpeg",".png":"image/png",".webp":"image/webp"}[ext]
+                with open(disk, "rb") as f:
+                    self._send(200, f.read(), ctype)
+            else:
+                self._json(dict(error="تصویر رهبر هنوز در بسته محلی ثبت نشده است."), 404)
         elif path in STATIC:
             self._serve_static(path)
         else:
