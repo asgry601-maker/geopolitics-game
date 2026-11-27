@@ -245,6 +245,8 @@ def api_state(s):
         iaea_out=bool(s.get("iaea_out", False)),
         log=(s.get("log") or [])[-6:],
         political_reform_proposals=(s.get("political_reform_proposals") or [])[-20:],
+        social_groups=(s.get("social_groups") or {}).get(P, {}),
+        political_history=(s.get("political_history") or [])[-10:],
         hidden=True,
     )
 
