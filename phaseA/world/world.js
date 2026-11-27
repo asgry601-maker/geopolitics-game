@@ -449,20 +449,24 @@ function readCountryPicker(containerId) {
 }
 function renderConfidentialTargets() {
   var box=el('confidentialTargetBox'), list=el('confidentialCountryList'), summary=el('confidentialTargetSummary');
+  var edit=el('confidentialEditCountries');
   if(!box || !list) return;
   if(CONFIDENTIAL_TARGETS.length) {
     list.hidden=true;
+    if(edit) edit.hidden=false;
     if(summary) summary.textContent='مذاکره محرمانه با '+CONFIDENTIAL_TARGETS.join('، ');
   } else {
     list.hidden=false;
-    if(!list.firstChild) renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf');
+    if(edit) edit.hidden=true;
+    renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf');
     if(summary) summary.textContent='کشورهای موردنظر را انتخاب کن و تأیید را بزن. انتخاب چند کشور هم‌زمان امکان‌پذیر است.';
   }
 }
 function bindConfidentialTargetPicker() {
-  var confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries');
+  var confirm=el('confidentialConfirmCountries'), cancel=el('confidentialCancelCountries'), edit=el('confidentialEditCountries');
   if(confirm) confirm.onclick=function(){ CONFIDENTIAL_DRAFT=readCountryPicker('confidentialCountryList'); CONFIDENTIAL_TARGETS=CONFIDENTIAL_DRAFT.slice(0); renderConfidentialTargets(); };
-  if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderCountryPicker('confidentialCountryList',[],'conf'); renderConfidentialTargets(); };
+  if(cancel) cancel.onclick=function(){ CONFIDENTIAL_DRAFT=[]; CONFIDENTIAL_TARGETS=[]; renderConfidentialTargets(); };
+  if(edit) edit.onclick=function(){ CONFIDENTIAL_DRAFT=CONFIDENTIAL_TARGETS.slice(0); renderCountryPicker('confidentialCountryList',CONFIDENTIAL_DRAFT,'conf'); el('confidentialCountryList').hidden=false; edit.hidden=true; };
 }
 function renderSanctionTargets() {
   var summary=el('sanctionTargetSummary'), card=el('sanctionCategoryCard');
