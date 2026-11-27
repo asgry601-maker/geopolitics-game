@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 26,
-    "pending_countries": 148,
+    "classified_countries": 31,
+    "pending_countries": 143,
     "last_batch": [
-      "ARG",
-      "EGY",
-      "ISR",
-      "UKR",
-      "NGA"
+      "SWE",
+      "NOR",
+      "DNK",
+      "FIN",
+      "NLD"
     ]
   },
   "countries": {
@@ -1700,6 +1700,384 @@
       ],
       "data_quality": {
         "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "SWE": {
+      "country_name_fa": "سوئد",
+      "country_name_en": "Sweden",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberal_conservatism",
+        "conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "liberal_conservatism",
+        "conservatism",
+        "liberalism"
+      ],
+      "ideology_notes": "سوئد پادشاهی مشروطه و دموکراسی پارلمانیِ واحد با نظام چندحزبی رقابتی است. انتخابات ۱۳ سپتامبر ۲۰۲۶ برگزار شد. در تاریخ مبنای ۵ نوامبر، دولت اولف کریسترسون پس از استعفای نخست‌وزیر و وزیران در ۱۷ سپتامبر همچنان به‌صورت سرپرست اداره کشور می‌کرد؛ دولت سرپرست متشکل از نمایندگان حزب میانه‌رو، دموکرات‌مسیحی و لیبرال بود. بنابراین گرایش‌های ثبت‌شده، ترکیب دولت سرپرست را توصیف می‌کنند، نه دولت آتی که هنوز تشکیل نشده بود. ایدئولوژی رسمی کشور اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Prime Minister to lead caretaker government",
+          "publisher": "Government Offices of Sweden",
+          "url": "https://www.government.se/articles/2026/09/prime-minister-to-lead-caretaker-government/",
+          "date": "2026-09-17",
+          "supports": [
+            "executive_legislative_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "استعفای دولت پس از انتخابات و ادامه کار دولت سرپرست تا تشکیل دولت جدید."
+        },
+        {
+          "name": "No to Magdalena Andersson as Prime Minister",
+          "publisher": "The Riksdag",
+          "url": "https://www.riksdagen.se/en/news/articles/2026/oct/15/no-to-magdalena-andersson-socdem-as-prime_cmsd2ab1134-a03c-4be2-b345-af0aacff33d3en/",
+          "date": "2026-10-15",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "فرایند تشکیل دولت پس از انتخابات و باقی‌ماندن دولت کریسترسون به‌عنوان دولت سرپرست."
+        },
+        {
+          "name": "Sweden: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/sweden/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "انتخابات آزاد، رقابت چندحزبی و وضعیت Free."
+        },
+        {
+          "name": "Sweden — EU country",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/sweden_en",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "پادشاهی مشروطه، پارلمانی و واحد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "NOR": {
+      "country_name_fa": "نروژ",
+      "country_name_en": "Norway",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "نروژ پادشاهی مشروطه و دموکراسی پارلمانی است. پس از انتخابات سپتامبر ۲۰۲۵، حزب کارگر به رهبری یوناس گار استوره بزرگ‌ترین حزب پارلمان باقی ماند و دولت تک‌حزبیِ اقلیت را ادامه داد؛ حزب مرکزی در فوریه ۲۰۲۵ از دولت ائتلافی خارج شده بود. بنابراین حزب حاکم و ائتلاف حاکم یکی فرض نشده‌اند و ایدئولوژی ائتلافی برای دولت تک‌حزبی ثبت نشده است. گرایش حزب کارگر در طیف سوسیال‌دموکراسی قرار دارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Constitution of the Kingdom of Norway — Article 1",
+          "publisher": "Lovdata / The Storting",
+          "url": "https://lovdata.no/dokument/NLE/lov/1814-05-17/ARTIKKEL_90",
+          "date": "2024-05-21",
+          "supports": [
+            "government_form",
+            "government_subform"
+          ],
+          "note": "قانون اساسی نروژ را پادشاهی موروثی محدود تعریف می‌کند."
+        },
+        {
+          "name": "Norway September 2025 parliamentary election — results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/NO/NO-LC01/election/NO-LC01-E20250908/",
+          "date": "2025-09-08",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "executive_legislative_system"
+          ],
+          "note": "نتایج انتخابات، ۵۳ کرسی حزب کارگر و تداوم دولت اقلیت تک‌حزبی."
+        },
+        {
+          "name": "Changes in the Government",
+          "publisher": "Office of the Prime Minister, Government of Norway",
+          "url": "https://www.regjeringen.no/en/whats-new/changes-in-the-government/id3172378/",
+          "date": "2026-09-11",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "فهرست رسمی دولت در تاریخ ۱۱ سپتامبر ۲۰۲۶؛ همه اعضا از حزب کارگر."
+        },
+        {
+          "name": "Norway: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/norway/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی نروژ به‌عنوان دموکراسی آزاد با انتخابات رقابتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "DNK": {
+      "country_name_fa": "دانمارک",
+      "country_name_en": "Denmark",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "asymmetric_devolution",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "democratic_socialism",
+        "green_politics",
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "دانمارک پادشاهی مشروطه پارلمانی و دارای نظام چندحزبی است. قلمرو پادشاهی شامل دانمارک، گرینلند و جزایر فارو است که از خودگردانی گسترده برخوردارند؛ ازاین‌رو ساختار سرزمینی به‌صورت واگذاری نامتقارن اختیارات ثبت شده است. پس از انتخابات ۲۴ مارس ۲۰۲۶، مته فردریکسن در ۳ ژوئن دولت ائتلافی اقلیت چهارحزبی متشکل از سوسیال‌دموکرات‌ها، حزب مردم سوسیالیست (SF)، حزب میانه‌روها و حزب سوسیال‌لیبرال تشکیل داد. گرایش ائتلاف به‌صورت چندگانه ثبت شده و به یک ایدئولوژی واحد فروکاسته نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Denmark: 2026 election and new coalition government",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10847/",
+          "date": "2026-06-12",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات و تشکیل دولت اقلیت چهارحزبی فردریکسن در ۳ ژوئن ۲۰۲۶."
+        },
+        {
+          "name": "Denmark — 2026 parliamentary election",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/DK/DK-LC01/election/DK-LC01-E20260324/",
+          "date": "2026-03-24",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب احزاب دولت ائتلافی و نتایج رسمی پارلمانی."
+        },
+        {
+          "name": "Politics and economy",
+          "publisher": "Ministry of Foreign Affairs of Denmark",
+          "url": "https://um.dk/ungarn/en/about_denmark/country-facts/politics_economy/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "پادشاهی مشروطه، ساختار چندحزبی و دولت اقلیت."
+        },
+        {
+          "name": "Denmark: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/denmark/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی دموکراسی و انتخابات آزاد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "FIN": {
+      "country_name_fa": "فنلاند",
+      "country_name_en": "Finland",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "liberal_conservatism",
+        "national_conservatism",
+        "christian_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "liberal_conservatism",
+        "national_conservatism",
+        "christian_democracy",
+        "liberalism"
+      ],
+      "ideology_notes": "فنلاند جمهوری پارلمانی و واحد است. دولت پتری اورپو در تاریخ مبنا از چهار حزب ائتلافی تشکیل می‌شد: حزب ائتلاف ملی، حزب فنلاندی‌ها، حزب مردم سوئدی فنلاند و دموکرات‌مسیحیان. ایدئولوژی حزب نخست‌وزیر و حزب اصلی دولت از گرایش‌های محافظه‌کاری لیبرال و میانه‌راست برخوردار است؛ حزب فنلاندی‌ها گرایش ملی‌محافظه‌کارانه و پوپولیستی دارد و دو حزب دیگر به‌ترتیب لیبرال و دموکرات‌مسیحی‌اند. این تنوع در فیلد ائتلاف حفظ شده است. ایدئولوژی رسمی واحدی برای کشور ثبت نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "The Constitution of Finland",
+          "publisher": "Ministry of Justice, Finland / Finlex",
+          "url": "https://www.finlex.fi/api/media/statute-foreign-language-translation/688686/mainPdf/main.pdf",
+          "date": "2018-06-12",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "قانون اساسی فنلاند را جمهوری مستقل معرفی می‌کند و حاکمیت را متعلق به مردم و نمایندگان پارلمان می‌داند."
+        },
+        {
+          "name": "Prime Minister Petteri Orpo's Government",
+          "publisher": "Finnish Government",
+          "url": "https://valtioneuvosto.fi/en/",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب رسمی دولت با چهار حزب ائتلافی."
+        },
+        {
+          "name": "Finland: Domestic politics and the Orpo Government since 2023",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/CBP-10498/",
+          "date": "2026-02-13",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تحلیل احزاب ائتلافی و طیف سیاسی آن‌ها."
+        },
+        {
+          "name": "Finland: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/finland/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی فنلاند به‌عنوان دموکراسی آزاد با رقابت چندحزبی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
+      }
+    },
+    "NLD": {
+      "country_name_fa": "هلند",
+      "country_name_en": "Netherlands",
+      "government_form": "monarchy",
+      "government_subform": "constitutional_monarchy",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_liberalism",
+        "progressivism"
+      ],
+      "ruling_coalition_ideology": [
+        "social_liberalism",
+        "liberalism",
+        "christian_democracy",
+        "conservatism"
+      ],
+      "ideology_notes": "هلند پادشاهی مشروطه پارلمانی و دولت واحدِ غیرمتمرکز با مجلس دو مجلسی است. پس از انتخابات ۲۹ اکتبر ۲۰۲۵، دولت راب یتن در ۲۳ فوریه ۲۰۲۶ با ائتلاف سه‌حزبی D66، حزب مردم برای آزادی و دموکراسی (VVD) و اتحادیه دموکرات‌مسیحی (CDA) آغاز به کار کرد. این دولت اقلیت است و احزاب ائتلافی در مجلس نمایندگان ۶۶ کرسی از ۱۵۰ کرسی را در اختیار دارند. گرایش حزب نخست‌وزیر D66 در طیف لیبرال اجتماعی و ترقی‌خواهی قرار دارد؛ گرایش ائتلاف شامل لیبرالیسم و دموکراسی مسیحی نیز هست.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Jetten government sworn in",
+          "publisher": "Government of the Netherlands",
+          "url": "https://www.government.nl/latest/news/2026/02/23/jetten-government-sworn-in",
+          "date": "2026-02-23",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تشکیل دولت سه‌حزبی D66، VVD و CDA و آغاز به کار راب یتن."
+        },
+        {
+          "name": "House and new cabinet debate government's statement of policy",
+          "publisher": "House of Representatives, Netherlands",
+          "url": "https://www.houseofrepresentatives.nl/news/house-and-new-cabinet-debate-governments-statement-policy",
+          "date": "2026-03-09",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید رسمی دولت اقلیت و تعداد کرسی‌های ائتلاف."
+        },
+        {
+          "name": "Constitution",
+          "publisher": "Government of the Netherlands",
+          "url": "https://www.government.nl/themes/government-and-democracy/constitution",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "پادشاهی مشروطه و دموکراسی پارلمانی با دو مجلس."
+        },
+        {
+          "name": "Netherlands: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/netherlands/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی حقوق سیاسی و آزادی‌های مدنی و رقابت انتخاباتی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "Baseline تاریخی سناریو در ۵ نوامبر ۲۰۲۶؛ تغییرات پس از شروع بازی فقط در runtime state اعمال می‌شوند."
