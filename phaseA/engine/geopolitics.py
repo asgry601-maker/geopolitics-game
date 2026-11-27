@@ -877,7 +877,7 @@ def load():
         if not isinstance(cats, list):
             cats = []
             sanction_save_needed = True
-        cats = [x for x in cats if x in PLAYER_SANCTION_CATEGORIES]
+        cats = [x for x in cats if isinstance(x, str) and x in PLAYER_SANCTION_CATEGORIES]
         if not cats:
             sanction_save_needed = True
             continue
