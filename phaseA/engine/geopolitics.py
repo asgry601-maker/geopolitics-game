@@ -1623,8 +1623,23 @@ PRESS_OUTLETS = [
 
 EVENT_CATEGORIES = (
     "political", "economic", "trade", "military",
-    "social", "diplomatic", "natural", "environmental"
+    "social", "diplomatic", "natural", "environmental", "nuclear"
 )
+
+# مسیرهای اثرگذاری فقط مقصدهای بالقوه را مشخص می‌کنند؛
+# تا زمان تکمیل سیستم پیامدها هیچ شاخصی از این طریق تغییر نمی‌کند.
+EVENT_IMPACT_ROUTES = {
+    "political": ["domestic_politics", "stability", "legitimacy", "press"],
+    "economic": ["economy", "budget", "employment", "press"],
+    "trade": ["trade", "economy", "diplomacy", "press"],
+    "military": ["military_status", "security", "budget", "diplomacy"],
+    "social": ["social_support", "stability", "domestic_politics", "press"],
+    "diplomatic": ["foreign_relations", "agreements", "press"],
+    "natural": ["population", "infrastructure", "economy", "environment"],
+    "environmental": ["environment", "population", "economy", "public_health"],
+    "nuclear": ["nuclear_policy", "international_security", "safeguards",
+                "diplomacy", "economy", "environment", "press"]
+}
 
 
 def register_game_event(s, category, country=None, title="", description="",
@@ -1651,6 +1666,9 @@ def register_game_event(s, category, country=None, title="", description="",
         "severity": severity,
         "status": "recorded",
         "source": str(source or "system"),
+        "impact_targets": list(EVENT_IMPACT_ROUTES.get(category, [])),
+        "impact_plan": [],
+        "impact_status": "pending_design",
         "effects_applied": False,
         "metadata": dict(metadata or {})
     }
