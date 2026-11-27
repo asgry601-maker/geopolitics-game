@@ -67,3 +67,25 @@ Note: Portraits are loaded through the Commons Special:FilePath resolver. The us
 - NGA: https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait_(cropped).jpg
 
 Note: The dashboard should display the same name as the selected portrait. Review all six images at the actual dashboard size before considering the package final.
+
+
+## Package 7
+
+| ISO3 | Person shown | Commons file | Author / source | License |
+|---|---|---|---|---|
+| ESP | Pedro Sánchez | `100226-sanchez-biografia4.jpg` | Pool Moncloa / Carlos Spottorno de las Morenas; Government of Spain | Government of Spain attribution/reuse notice |
+| PRT | Luís Montenegro | `Luís Montenegro, 2025.06.26 (04) (cropped).jpg` | European Union | European Commission reuse policy; attribution required |
+| NLD | Dick Schoof | `Dick Schoof in 2025.jpg` | Ministry of Foreign Affairs of the Netherlands | CC BY-SA 4.0 |
+| SWE | Ulf Kristersson | `Ulf Kristersson (cropped).jpg` | European Commission / Christophe Licoppe | CC BY 4.0 |
+| DNK | Mette Frederiksen | `Mette Frederiksen, 2025.06.26 (04) (cropped1).jpg` | European Union | European Commission reuse policy; attribution required |
+| BEL | Bart De Wever | `BartDeWever.jpg` | Miel Pieters | CC BY-SA 2.0; VRT permission confirmation |
+
+### File pages
+- ESP: https://commons.wikimedia.org/wiki/File:100226-sanchez-biografia4.jpg
+- PRT: https://commons.wikimedia.org/wiki/File:Lu%C3%ADs_Montenegro,_2025.06.26_(04)_(cropped).jpg
+- NLD: https://commons.wikimedia.org/wiki/File:Dick_Schoof_in_2025.jpg
+- SWE: https://commons.wikimedia.org/wiki/File:Ulf_Kristersson_(cropped).jpg
+- DNK: https://commons.wikimedia.org/wiki/File:Mette_Frederiksen,_2025.06.26_(04)_(cropped1).jpg
+- BEL: https://commons.wikimedia.org/wiki/File:BartDeWever.jpg
+
+Note: The Belgium portrait is older (2014/2015) than the other five portraits, but is a clear high-resolution head-and-shoulders image. The user should review it in the game. Attribution and share-alike conditions must be preserved for the relevant files.
