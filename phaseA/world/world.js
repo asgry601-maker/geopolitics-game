@@ -288,6 +288,7 @@ function loadState(after) {
   getJSON('api/state', function (s) {
     ST = (s && s.exists) ? s : null;
     syncSanctionState();
+    renderAppliedSanctions();
     renderGameClock();
     renderWorldChips();
     renderStartWidget();
