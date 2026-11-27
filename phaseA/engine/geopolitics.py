@@ -2173,6 +2173,73 @@ def end_of_action_checks(s):
 
 # ---------- turn resolution ----------
 
+def _reform_party_impact(s, proposal, fraction, reverse=False):
+    """اعمال تدریجی واکنش احزاب موجود؛ بدون ساخت احزاب یا کشور AI جدید."""
+    player = s.get("player")
+    politics = s.setdefault("politics", {})
+    base = PARTY_BASE
+    pol = politics.setdefault(player, {"parties": dict(base), "press": []})
+    parties = pol.setdefault("parties", dict(base))
+    reactions = ((proposal.get("review") or {}).get("party_reactions") or {})
+    direction = -1.0 if reverse else 1.0
+    for party, reaction in reactions.items():
+        if party not in parties:
+            continue
+        delta = float(reaction.get("projected_change", 0)) * float(fraction) * direction
+        parties[party] = max(0.0, min(100.0, float(parties.get(party, 0)) + delta))
+    total = sum(max(0.0, float(v)) for v in parties.values())
+    if total > 0:
+        for party in list(parties):
+            parties[party] = round(max(0.0, float(parties[party])) * 100.0 / total, 1)
+
+
+def _reform_press_line(s, proposal, stage, detail):
+    """ثبت تیتر اصلاحات در همان آرشیو مطبوعات داخلی بازی."""
+    player = s.get("player", "کشور بازیکن")
+    pol = s.setdefault("politics", {}).setdefault(
+        player, {"parties": dict(PARTY_BASE), "press": []})
+    press = pol.setdefault("press", [])
+    label = {
+        "start": "آغاز اجرای طرح",
+        "midpoint": "ادامه اجرای طرح",
+        "completed": "پایان اصلاحات",
+        "failed": "ناکامی اصلاحات",
+        "crisis": "توقف در بحران سیاسی",
+        "resumed": "ازسرگیری اجرای طرح"
+    }.get(stage, "تحولات اصلاحات")
+    line = "📰 «رسانه‌های داخلی»: %s شماره %s؛ %s" % (
+        label, proposal.get("id"), detail)
+    press.append(line)
+    del press[:-12]
+    proposal.setdefault("impact", {}).setdefault("headlines", []).append(line)
+    proposal["impact"]["headlines"] = proposal["impact"]["headlines"][-8:]
+    return line
+
+
+def _reform_impact_profile(proposal):
+    fields = set((proposal.get("changes") or {}).keys())
+    themes = []
+    responses = []
+    if fields.intersection(set(["official_ideology", "ruling_party_ideology", "ruling_coalition_ideology"])):
+        themes.append("ایدئولوژیک")
+        responses.append("احتمال قطبی‌شدن فضای سیاسی و فرهنگی")
+    if fields.intersection(set(["government_form", "government_subform",
+                                "executive_legislative_system", "regime_character"])):
+        themes.append("نهادی و حکومتی")
+        responses.append("بحث و چانه‌زنی درباره توزیع اختیارات نهادها")
+    if "territorial_structure" in fields:
+        themes.append("سرزمینی")
+        responses.append("واکنش متفاوت مناطق و نهادهای مرکزی به بازتوزیع اختیارات")
+    if "party_system" in fields:
+        themes.append("حزبی")
+        responses.append("بازآرایی رقابت و ائتلاف میان احزاب")
+    if not themes:
+        themes.append("سیاسی")
+        responses.append("واکنش عمومی محدود به دامنه تغییرات")
+    return {"themes": themes, "public_response": responses,
+            "risk_note": "این پیامدها برآورد شبیه‌سازی بازی هستند، نه پیش‌بینی قطعی رویدادهای واقعی."}
+
+
 def advance_player_political_reforms(s, daily_log):
     """اجرای روزانه طرح مصوب؛ فقط برای کشور بازیکن و بدون دخالت AI."""
     player = s.get("player")
@@ -2180,46 +2247,97 @@ def advance_player_political_reforms(s, daily_log):
     if not isinstance(country, dict):
         return
     for proposal in (s.get("political_reform_proposals") or []):
-        if proposal.get("country") != player or proposal.get("status") not in ("approved", "executing", "paused_funds"):
+        if proposal.get("country") != player or proposal.get("status") not in (
+                "approved", "executing", "paused_funds", "paused_crisis"):
             continue
+
+        stability = float(country.get("stab", 0))
+        if stability < 15:
+            if proposal.get("status") != "paused_crisis":
+                proposal["status"] = "paused_crisis"
+                proposal["last_update_date"] = s.get("game_date", "")
+                impact = proposal.setdefault("impact", _reform_impact_profile(proposal))
+                line = _reform_press_line(
+                    s, proposal, "crisis",
+                    "به‌دلیل افت ثبات داخلی، ادامه طرح موقتاً به تعویق افتاد.")
+                daily_log.append(line)
+            continue
+        if proposal.get("status") == "paused_crisis":
+            proposal["status"] = "executing"
+            line = _reform_press_line(
+                s, proposal, "resumed",
+                "با بهبود شرایط سیاسی، روند اجرای طرح از سر گرفته شد.")
+            daily_log.append(line)
+
         total_days = max(1, int(proposal.get("estimated_days", 1)))
         total_cost = max(0.0, float(proposal.get("estimated_cost", 0)))
         installment = total_cost / float(total_days)
         treasury = max(0.0, float(country.get("money", 0)))
         if treasury + 0.000001 < installment:
-            proposal["status"] = "paused_funds"
-            proposal["last_update_date"] = s.get("game_date", "")
-            daily_log.append("⏸ اجرای طرح اصلاحات سیاسی شماره %s به‌دلیل کمبود بودجه متوقف شد." % proposal.get("id"))
+            if proposal.get("status") != "paused_funds":
+                proposal["status"] = "paused_funds"
+                proposal["last_update_date"] = s.get("game_date", "")
+                daily_log.append("⏸ اجرای طرح اصلاحات سیاسی شماره %s به‌دلیل کمبود بودجه متوقف شد." % proposal.get("id"))
             continue
+
+        if proposal.get("status") == "paused_funds":
+            proposal["status"] = "executing"
+            daily_log.append("▶️ اعتبار طرح اصلاحات سیاسی شماره %s تأمین شد و اجرا ادامه یافت." % proposal.get("id"))
+
         country["money"] = max(0.0, treasury - installment)
         proposal["status"] = "executing"
         proposal["elapsed_days"] = min(total_days, int(proposal.get("elapsed_days", 0)) + 1)
         proposal["progress"] = round(100.0 * proposal["elapsed_days"] / total_days, 1)
         proposal["spent_cost"] = round(float(proposal.get("spent_cost", 0)) + installment, 2)
         proposal["last_update_date"] = s.get("game_date", "")
+        impact = proposal.setdefault("impact", _reform_impact_profile(proposal))
+        stages = proposal.setdefault("impact_stages_applied", [])
+
+        if "start" not in stages:
+            _reform_party_impact(s, proposal, 0.25)
+            stages.append("start")
+            line = _reform_press_line(
+                s, proposal, "start",
+                "اجرای مرحله‌ای آغاز شد؛ محورهای اصلی: %s." % "، ".join(impact.get("themes", [])))
+            daily_log.append(line)
+
+        midpoint = max(2, int((total_days + 1) / 2))
+        if proposal["elapsed_days"] >= midpoint and "midpoint" not in stages:
+            _reform_party_impact(s, proposal, 0.50)
+            stages.append("midpoint")
+            line = _reform_press_line(
+                s, proposal, "midpoint",
+                "با پیشرفت %s٪، واکنش احزاب و گروه‌های اجتماعی همچنان در حال شکل‌گیری است." %
+                proposal["progress"])
+            daily_log.append(line)
+
         if proposal["elapsed_days"] < total_days:
             if proposal["elapsed_days"] == 1 or proposal["elapsed_days"] % 5 == 0:
                 daily_log.append("🏛 اجرای طرح اصلاحات سیاسی شماره %s: پیشرفت %s٪." %
                                  (proposal.get("id"), proposal["progress"]))
             continue
+
         review = proposal.get("review") or {}
         if float(review.get("feasibility", 0)) < 25:
             proposal["status"] = "failed"
             proposal["progress"] = 100
             country["stab"] = max(0.0, float(country.get("stab", 0)) - 4.0)
             proposal["completed_date"] = s.get("game_date", "")
-            daily_log.append("⚠ طرح اصلاحات سیاسی شماره %s با شکست روبه‌رو شد؛ ثبات سیاسی ۴ واحد کاهش یافت." %
-                             proposal.get("id"))
+            _reform_party_impact(s, proposal, 0.25, reverse=True)
+            line = _reform_press_line(
+                s, proposal, "failed",
+                "طرح پس از طی مراحل اجرایی به نتیجه نرسید و تغییرات نهایی اعمال نشد.")
+            daily_log.append(line)
             continue
+
         state = s.setdefault("political_state", {})
         current = state.setdefault(player, {})
         for field, value in (proposal.get("changes") or {}).items():
             current[field] = value.get("new") if isinstance(value, dict) and "new" in value else value
-        reactions = review.get("party_reactions") or {}
-        parties = (s.get("politics") or {}).get(player, {}).get("parties") or {}
-        for party, reaction in reactions.items():
-            if party in parties:
-                parties[party] = max(0.0, min(100.0, float(reaction.get("projected", parties[party]))))
+
+        _reform_party_impact(s, proposal, 0.25)
+        if "completed" not in stages:
+            stages.append("completed")
         scope = len(proposal.get("changes") or {})
         stability_cost = min(8.0, 1.0 + scope * 1.2)
         country["stab"] = max(0.0, min(100.0, float(country.get("stab", 0)) - stability_cost))
@@ -2227,13 +2345,17 @@ def advance_player_political_reforms(s, daily_log):
         proposal["progress"] = 100
         proposal["completed_date"] = s.get("game_date", "")
         proposal["spent_cost"] = round(total_cost, 2)
-        s.setdefault("political_history", []).append({
+        history_item = {
             "date": s.get("game_date", ""), "country": player,
             "proposal_id": proposal.get("id"), "changes": proposal.get("changes", {}),
-            "status": "completed"
-        })
-        daily_log.append("✅ اصلاحات سیاسی طرح شماره %s با موفقیت اجرا شد؛ تغییرات در وضعیت سیاسی کشور اعمال شد." %
-                         proposal.get("id"))
+            "status": "completed", "impact": impact
+        }
+        s.setdefault("political_history", []).append(history_item)
+        line = _reform_press_line(
+            s, proposal, "completed",
+            "طرح با موفقیت به پایان رسید؛ تغییرات سیاسی در ساختار کشور ثبت شد.")
+        daily_log.append(line)
+        daily_log.append("✅ اصلاحات سیاسی طرح شماره %s با موفقیت اجرا شد." % proposal.get("id"))
         break
 
 
