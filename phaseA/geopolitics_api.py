@@ -631,7 +631,12 @@ class Handler(BaseHTTPRequestHandler):
             if not argv or not isinstance(argv, list) or argv[0] not in CMD_WHITELIST:
                 self._json(dict(ok=False, error="فرمان مجاز نیست."))
                 return
-            res = run_engine([str(a) for a in argv])
+            try:
+                with _lock:
+                    res = run_engine([str(a) for a in argv])
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در اجرای فرمان: %s" % exc), 500)
+                return
             self._json(dict(res, state=api_state(get_state(True))))
         elif path == "api/chat":
             self._json(api_chat(s, body))
