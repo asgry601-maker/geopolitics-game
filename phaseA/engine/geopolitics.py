@@ -1040,6 +1040,11 @@ def load():
                                datetime.date.fromisoformat(str(s.get("game_date", ""))))
         except (TypeError, ValueError):
             meeting_due = False
+        if session.get("meeting_status") in ("confirmed", "due") and session.get("meeting_date"):
+            expected_meeting_status = "due" if meeting_due else "confirmed"
+            if session.get("meeting_status") != expected_meeting_status:
+                session["meeting_status"] = expected_meeting_status
+                conversation_save_needed = True
         chat_enabled = bool(s.get("live_ai_active") and meeting_due and
                             session.get("meeting_status") in ("confirmed", "due"))
         live_status = "ready" if chat_enabled else (
