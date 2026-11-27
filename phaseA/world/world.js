@@ -358,7 +358,37 @@ function toggleEventPanel() {
 
 /* حالت‌های مذاکره؛ اتصال به AI زنده در فاز F فعال می‌شود. */
 var EVENT_TALK_STATE = { confidential: false, alliance: false, normal: false };
+var PUBLIC_TARGETS = [], PUBLIC_DRAFT = [];
 var NORMAL_TARGETS = [], NORMAL_DRAFT = [];
+function renderPublicTargets() {
+  var box=el('publicTargetBox'), list=el('publicCountryList'), summary=el('publicTargetSummary');
+  var edit=el('publicEditCountries'), actions=box ? box.querySelector('.eventActionRow') : null;
+  if(!box || !list) return;
+  if(PUBLIC_TARGETS.length) {
+    list.hidden=true; if(actions) actions.hidden=true; if(edit) edit.hidden=false;
+    if(summary) summary.textContent='مذاکره عمومی با '+PUBLIC_TARGETS.join('، ')+' · فهرست کشورها بسته شد.';
+  } else {
+    list.hidden=false; if(actions) actions.hidden=false; if(edit) edit.hidden=true;
+    renderCountryPicker('publicCountryList',PUBLIC_DRAFT,'pub');
+    if(summary) summary.textContent='کشورهای شرکت‌کننده در مذاکره عمومی را انتخاب کن.';
+  }
+}
+function bindPublicTargetPicker() {
+  var confirm=el('publicConfirmCountries'), cancel=el('publicCancelCountries'), edit=el('publicEditCountries');
+  if(confirm) confirm.onclick=function() {
+    PUBLIC_DRAFT=readCountryPicker('publicCountryList');
+    if(!PUBLIC_DRAFT.length) { flash('حداقل یک کشور را انتخاب کن.'); return; }
+    PUBLIC_TARGETS=PUBLIC_DRAFT.slice(0); renderPublicTargets(); renderEventTalkState();
+  };
+  if(cancel) cancel.onclick=function() { PUBLIC_DRAFT=[]; PUBLIC_TARGETS=[]; renderPublicTargets(); renderEventTalkState(); };
+  if(edit) edit.onclick=function() {
+    PUBLIC_DRAFT=PUBLIC_TARGETS.slice(0);
+    renderCountryPicker('publicCountryList',PUBLIC_DRAFT,'pub');
+    el('publicCountryList').hidden=false;
+    var box=el('publicTargetBox'), actions=box ? box.querySelector('.eventActionRow') : null;
+    if(actions) actions.hidden=false; edit.hidden=true;
+  };
+}
 function renderNormalTargets() {
   var box=el('normalTargetBox'), list=el('normalCountryList'), summary=el('normalTargetSummary');
   var edit=el('normalEditCountries'), actions=box ? box.querySelector('.eventActionRow') : null;
@@ -394,9 +424,12 @@ function renderEventTalkState() {
   var cs=el('confidentialTalkState'), as=el('allianceTalkState'), ns=el('normalTalkState');
   var title=el('eventStatementTitle'), note=el('eventContextNote');
   var cbox=el('confidentialTargetBox'), nbox=el('normalTargetBox');
+  var pbox=el('publicTargetBox');
   var cReady=confidential && CONFIDENTIAL_TARGETS.length>0, nReady=normal && NORMAL_TARGETS.length>0;
   if(cbox) cbox.hidden=!confidential; if(nbox) nbox.hidden=!normal;
+  if(pbox) pbox.hidden=!(!confidential && !normal);
   if(confidential) renderConfidentialTargets(); if(normal) renderNormalTargets();
+  if(!confidential && !normal) renderPublicTargets();
   var ready=cReady||nReady, publicMode=!confidential&&!normal;
   var feed=el('eventStatementFeed'), input=el('eventStatementInput'), send=el('eventStatementSend');
   if(feed) feed.style.display=(ready||publicMode)?'':'none';
@@ -647,6 +680,45 @@ function bindEventPanelTabs() {
   if (xb) xb.onclick = function () { setEventPanelView('sanctions'); };
   setEventPanelView('statements');
 }
+function bindStatementConversationPrepare() {
+  var button=el('statementPrepareConversation');
+  if(!button) return;
+  button.onclick=function() {
+    if(!ST || !ST.player) { flash('ابتدا یک بازی را آغاز کن.'); return; }
+    var confidential=EVENT_TALK_STATE.confidential, normal=EVENT_TALK_STATE.normal;
+    var participants=confidential ? CONFIDENTIAL_TARGETS.slice(0) : (normal ? NORMAL_TARGETS.slice(0) : PUBLIC_TARGETS.slice(0));
+    if(!participants.length) { flash('ابتدا کشورهای شرکت‌کننده را انتخاب و تأیید کن.'); return; }
+    if(participants.length>19) { flash('حداکثر ۱۹ کشور دیگر می‌توانند در نشست باشند.'); return; }
+    var visibility=confidential?'confidential':(normal?'normal':'public');
+    var payload={
+      participants:participants,
+      topic:EVENT_TALK_STATE.alliance?'مذاکره با اتحاد':(confidential?'مذاکره محرمانه':(normal?'مذاکره عادی':'گفت‌وگوی عمومی')),
+      visibility_mode:visibility,
+      negotiation_type:EVENT_TALK_STATE.alliance?'alliance':'standard',
+      source:'statement',
+      context:{alliance_modifier:!!EVENT_TALK_STATE.alliance,statement_mode:visibility,requested_by_player:true}
+    };
+    button.disabled=true;
+    var status=el('statementPrepareStatus');
+    if(status) status.textContent='در حال ذخیره نشست مشترک...';
+    postJSON('api/conversations/prepare',payload,function(res) {
+      button.disabled=false;
+      if(!res || !res.ok || !res.session) {
+        if(status) status.textContent=(res&&res.error)||'نشست ذخیره نشد.';
+        return;
+      }
+      if(status) status.textContent='نشست '+res.session.id+' ذخیره شد؛ پیام‌رسانی و پاسخ هوش مصنوعی تا فاز F غیرفعال است.';
+      loadState(function() {
+        DASH_TAB='tribune';
+        if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        flash('نشست بیانیه‌ها و مذاکرات ذخیره شد؛ تریبون باز شد و چت تا فاز F قفل است.');
+      });
+    },function(code,response) {
+      button.disabled=false;
+      if(status) status.textContent=netErrMsg(code,response)+' — نشست ذخیره نشد.';
+    });
+  };
+}
 function bindEventTalkControls() {
   var cb=el('btnConfidentialTalk'), ab=el('btnAllianceTalk'), nb=el('btnNormalTalk');
   var input=el('eventStatementInput'), send=el('eventStatementSend'), feed=el('eventStatementFeed');
@@ -665,7 +737,7 @@ function bindEventTalkControls() {
     if(feed) feed.appendChild(item); input.value='';
     flash('پیش‌نویس فقط در همین پنجره ثبت شد و برای کشور مقابل ارسال نشده است.');
   };
-  bindConfidentialTargetPicker(); bindNormalTargetPicker(); renderEventTalkState();
+  bindConfidentialTargetPicker(); bindNormalTargetPicker(); bindPublicTargetPicker(); bindStatementConversationPrepare(); renderEventTalkState();
 }
 
 
