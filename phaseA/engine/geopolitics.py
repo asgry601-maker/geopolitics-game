@@ -2448,6 +2448,53 @@ def advance_player_political_reforms(s, daily_log):
         break
 
 
+def _crisis_institution_profile(political, crisis_kind):
+    """انتخاب نهاد سیاسی متناظر با ساختار ثبت‌شده کشور؛ بدون فرض نهاد ناموجود."""
+    political = political if isinstance(political, dict) else {}
+    system = political.get("executive_legislative_system") or "unknown"
+    form = political.get("government_form") or "unknown"
+    subform = political.get("government_subform") or "unknown"
+
+    profiles = {
+        "parliamentary": ("پارلمان و ائتلاف‌های حزبی", "ساختار پارلمانی"),
+        "presidential": ("کنگره یا مجلس قانون‌گذاری و نهادهای نظارتی", "ساختار ریاستی"),
+        "semi_presidential": ("پارلمان و نهاد ریاست‌جمهوری", "ساختار نیمه‌ریاستی"),
+        "directorial": ("شورای اجرایی و مجلس قانون‌گذاری", "ساختار شورایی/دایرکتوری"),
+        "monarchical_executive": ("دربار یا شورای سلطنتی و نهاد مشورتی موجود", "ساختار اجرایی پادشاهی"),
+        "one_party": ("رهبری حزب حاکم و نهاد قانون‌گذاری موجود", "ساختار تک‌حزبی"),
+        "military_council": ("شورای عالی نظامی", "ساختار شورای نظامی"),
+        "transitional": ("شورای انتقالی و نهادهای نمایندگی موجود", "ساختار انتقالی"),
+        "no_functioning_national_legislature": ("نهادهای رسمیِ فعالِ ثبت‌شده؛ بدون فرض پارلمان فعال", "نبود قوه مقننه ملیِ فعال"),
+        "mixed": ("نهادهای اجرایی و قانون‌گذاری ثبت‌شده در ساختار مختلط", "ساختار مختلط"),
+        "unknown": ("نهاد سیاسی نیازمند تعیین بر اساس اطلاعات معتبر کشور", "اطلاعات ساختاری ناکافی")
+    }
+    name, basis = profiles.get(system, profiles["unknown"])
+
+    if form in ("monarchy", "emirate", "sultanate") and system == "unknown":
+        name = "دربار، شورای سلطنتی/امارتی و نهاد مشورتیِ موجود"
+        basis = "نوع حکومت سلطنتی؛ ساختار اجرایی دقیق نامشخص"
+    elif form == "military_government" and system == "unknown":
+        name = "شورای حاکم نظامی یا فرماندهی رسمی ثبت‌شده"
+        basis = "حکومت نظامی؛ ساختار نهادی دقیق نامشخص"
+    elif form == "transitional_government" and system == "unknown":
+        name = "نهاد انتقالی رسمی ثبت‌شده"
+        basis = "حکومت انتقالی؛ ساختار نهادی دقیق نامشخص"
+
+    if crisis_kind == "coup_crisis":
+        focus = "تمرکز بحران: فرماندهی نظامی و نهاد قانونیِ ناظر، متناسب با ساختار ثبت‌شده کشور."
+    else:
+        focus = "تمرکز بحران: نهادهای نمایندگی و گروه‌های اجتماعی، متناسب با ساختار ثبت‌شده کشور."
+
+    return {
+        "name": name,
+        "basis": basis,
+        "focus": focus,
+        "government_form": form,
+        "government_subform": subform,
+        "executive_legislative_system": system
+    }
+
+
 def check_player_regime_crisis(s, daily_log):
     """ثبت بحران داخلی؛ بحران کودتا با وقوع کودتا تفاوت دارد و تریبون زنده در فاز AI فعال می‌شود."""
     if s.get("over") or s.get("regime_crisis"):
@@ -2476,6 +2523,7 @@ def check_player_regime_crisis(s, daily_log):
         return
 
     political = (s.get("political_state") or {}).get(player) or {}
+    institution = _crisis_institution_profile(political, crisis_kind)
     s["regime_crisis"] = {
         "kind": crisis_kind, "date": s.get("game_date", ""),
         "stability_at_event": round(stability, 1),
@@ -2483,7 +2531,8 @@ def check_player_regime_crisis(s, daily_log):
         "military_strength_at_event": round(military, 1),
         "legitimacy": round(legitimacy, 1), "status": "awaiting_live_tribune",
         "government_form": political.get("government_form"),
-        "executive_legislative_system": political.get("executive_legislative_system")
+        "executive_legislative_system": political.get("executive_legislative_system"),
+        "institution": institution
     }
     s["legitimacy"] = legitimacy
     line = "⚠️ %s در %s شکل گرفت؛ این وضعیت به‌تنهایی به معنی وقوع کودتا یا سقوط حکومت نیست." % (label, player)
