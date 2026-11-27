@@ -536,7 +536,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         MNE: 'Milojko Spajić (2023-12-20).jpg',
         MDA: 'Maia Sandu, September 2025 (cropped).jpg',
         GEO: 'Georgian Prime Minister Irakli Kobakhidze in 2025.jpg',
-        ARM: 'Nikol Pashinyan 2026-04-01.png'
+        ARM: 'Nikol Pashinyan 2026-04-01.png',
+        MKD: 'Hristijan Mickoski official portrait 2024 (cropped).jpg',
+        BLR: 'Александр Лукашенко (29-04-2025) (cropped).jpg',
+        LVA: 'Andris Kulbergs 2026 (cropped).png',
+        LTU: 'Mindaugas Sinkevičius in August 2026.jpg',
+        EST: 'Euroopa päev Narvas 9. mai 2026. (12) Kristen Michal, Eesti poliitik.jpg',
+        MLT: 'Robert Abela, 2025.06.26 (03) (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
