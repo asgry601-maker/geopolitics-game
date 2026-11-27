@@ -134,3 +134,23 @@ All six images are referenced by their exact Wikimedia Commons filenames through
 - **ARM — Armenia:** Nikol Pashinyan — `Nikol Pashinyan 2026-04-01.png`. Photograph dated 1 April 2026; source and author: kremlin.ru; CC BY 4.0; attribution Kremlin.ru. Original file is 506 × 703 pixels, so verify face clarity in the game.
 
 All six images are referenced by their exact Wikimedia Commons filenames through the existing Commons URL loader; no binary image files were added to the repository. Required credits and license links should accompany any distribution of the game.
+
+## Package 12 — Northern and Baltic Europe (6 countries)
+
+- **MKD — North Macedonia:** Hristijan Mickoski — `Hristijan Mickoski official portrait 2024 (cropped).jpg`. Official Government of North Macedonia portrait dated 28 June 2024; CC BY-SA 4.0; attribution to Vlada.mk.
+- **BLR — Belarus:** Alexander Lukashenko — `Александр Лукашенко (29-04-2025) (cropped).jpg`. Photograph dated 29 April 2025, source: State Duma of the Russian Federation; CC BY 4.0; attribution to Duma.gov.ru.
+- **LVA — Latvia:** Andris Kulbergs — `Andris Kulbergs 2026 (cropped).png`. Photograph dated 28 May 2026 by Ieva Ābele / Saeima; CC BY-SA 4.0; attribution to Saeima.
+- **LTU — Lithuania:** Mindaugas Sinkevičius — `Mindaugas Sinkevičius in August 2026.jpg`. Photograph dated 20 August 2026 by Saeima; CC BY-SA 4.0; attribution to Saeima.
+- **EST — Estonia:** Kristen Michal — `Euroopa päev Narvas 9. mai 2026. (12) Kristen Michal, Eesti poliitik.jpg`. Photograph dated 9 May 2026; own work by Kynnap; CC BY-SA 4.0.
+- **MLT — Malta:** Robert Abela — `Robert Abela, 2025.06.26 (03) (cropped).jpg`. Photograph dated 26 June 2025; source/author: European Union / European Commission; reuse permitted with attribution, credit © European Union, 1998–2026.
+
+### File pages
+- MKD: https://commons.wikimedia.org/wiki/File:Hristijan_Mickoski_official_portrait_2024_(cropped).jpg
+- BLR: https://commons.wikimedia.org/wiki/File:Александр_Лукашенко_(29-04-2025)_(cropped).jpg
+- LVA: https://commons.wikimedia.org/wiki/File:Andris_Kulbergs_2026_(cropped).png
+- LTU: https://commons.wikimedia.org/wiki/File:Mindaugas_Sinkevičius_in_August_2026.jpg
+- EST: https://commons.wikimedia.org/wiki/File:Euroopa_päev_Narvas_9._mai_2026._(12)_Kristen_Michal,_Eesti_poliitik.jpg
+- MLT: https://commons.wikimedia.org/wiki/File:Robert_Abela,_2025.06.26_(03)_(cropped).jpg
+
+All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The names in the engine leader dictionary were aligned with the scenario's heads of government for this package. Review the portraits in the game at dashboard size; request a replacement if any face is not clear enough.
+
