@@ -490,15 +490,15 @@ function renderSanctionCategories() {
   };
 }
 function renderAppliedSanctions() {
-  var box=el('sanctionImposedList');
+  var box=el('sanctionPlayerAppliedList');
   if(!box) return;
   var names=Object.keys(SANCTION_APPLIED);
-  if(!names.length) { box.textContent='هنوز تحریمی از سوی بازیکن اعمال نشده است. تحریم‌های اعمال‌شده توسط کشورهای تحت کنترل هوش مصنوعی پس از اتصال سامانه دیپلماسی نمایش داده می‌شوند.'; return; }
+  if(!names.length) { box.textContent='هنوز تحریم یک‌جانبه‌ای از طرف بازیکن اعمال نشده است.'; return; }
   var out='';
   for(var i=0;i<names.length;i++) {
     var cats=SANCTION_APPLIED[names[i]], labels=[];
     for(var k=0;k<SANCTION_CATEGORIES.length;k++) if(cats[SANCTION_CATEGORIES[k][0]]) labels.push(SANCTION_CATEGORIES[k][1]);
-    out+='<div class="sanctionCard"><strong>'+names[i]+'</strong><div class="sanctionInfo">زمینه‌ها: '+(labels.join('، ')||'بدون تحریم فعال')+'</div></div>';
+    out+='<div class="sanctionCard"><strong>'+names[i]+'</strong><div class="sanctionInfo">محدودیت‌هایی که فقط از طرف کشور بازیکن اعمال شده: '+(labels.join('، ')||'بدون تحریم فعال')+'</div></div>';
   }
   box.innerHTML=out;
 }
