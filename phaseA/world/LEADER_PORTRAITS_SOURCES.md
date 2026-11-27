@@ -294,3 +294,23 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - BEN: https://commons.wikimedia.org/wiki/File:Romuald_Wadagni_in_June_2026.jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Benin's engine leader display name was updated from Patrice Talon to Romuald Wadagni. The Togo display remains Faure Gnassingbé as head of government, not head of state. Please visually inspect all six portraits in the game, especially Guinea's older, lower-resolution image.
+
+
+## Package 20 — Central and East Africa (6 countries)
+
+- **COG — Republic of the Congo:** Denis Sassou Nguesso — `Denis Sassou Nguesso on April 29, 2026 (cropped).jpg`. Photograph dated 29 April 2026, Presidential Press and Information Office of Russia / Kremlin.ru; CC BY 4.0. Crop: 910 × 1,176 pixels. Attribution: Kremlin.ru.
+- **COD — Democratic Republic of the Congo:** Félix-Antoine Tshisekedi Tshilombo — `Felix Tshisekedi, President of the Democratic Republic of the Congo (55078564106) (cropped).jpg`. Official U.S. Department of State photograph by Freddie Everett, 4 February 2025; marked Public Domain Mark 1.0. Crop: 560 × 724 pixels.
+- **CAF — Central African Republic:** Faustin-Archange Touadéra — `Faustin Archange Touadera.jpg`. Photograph dated 13 August 2026; own work by Daniel236; CC0 1.0. Original: 3,648 × 5,472 pixels.
+- **ERI — Eritrea:** Isaias Afwerki — `Isaias Afewerki (2026-10-30).jpg`. Photograph dated 30 October 2026, Kremlin.ru; CC BY 4.0. Image: 962 × 1,160 pixels. Attribution: Kremlin.ru.
+- **DJI — Djibouti:** Ismaïl Omar Guelleh — `Ismail Omar Guelleh, the President of Djibouti meets with Shinzō Abe, the Prime Minister of Japan.jpg`. Photograph dated 29 August 2019, Prime Minister's Office of Japan (首相官邸); Government of Japan Standard Terms of Use v2.0, compatible with CC BY 4.0. Image: 1,776 × 2,080 pixels. Attribution: 首相官邸ホームページ.
+- **SOM — Somalia:** Hassan Sheikh Mohamud — `His Excellency President Hassan Sheikh Mohamud (cropped).jpg`. Official portrait dated 23 May 2022, source: Villa Somalia; Commons marks it public domain under the applicable Somalia/U.S. copyright rationale. Original extracted portrait: 2,092 × 2,799 pixels.
+
+### File pages
+- COG: https://commons.wikimedia.org/wiki/File:Denis_Sassou_Nguesso_on_April_29,_2026_(cropped).jpg
+- COD: https://commons.wikimedia.org/wiki/File:Felix_Tshisekedi,_President_of_the_Democratic_Republic_of_the_Congo_(55078564106)_(cropped).jpg
+- CAF: https://commons.wikimedia.org/wiki/File:Faustin_Archange_Touadera.jpg
+- ERI: https://commons.wikimedia.org/wiki/File:Isaias_Afewerki_(2026-10-30).jpg
+- DJI: https://commons.wikimedia.org/wiki/File:Ismail_Omar_Guelleh,_the_President_of_Djibouti_meets_with_Shinz%C5%8D_Abe,_the_Prime_Minister_of_Japan.jpg
+- SOM: https://commons.wikimedia.org/wiki/File:His_Excellency_President_Hassan_Sheikh_Mohamud_(cropped).jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The existing engine leader-name entries for these six countries were retained. Please inspect the portraits at dashboard size, especially the smaller Democratic Republic of the Congo crop and the 2019 Djibouti photograph.
