@@ -213,3 +213,23 @@ All six images use the existing Wikimedia Commons Special:FilePath loader; no im
 - CIV: https://commons.wikimedia.org/wiki/File:Alassane_Ouattara_-_2024_(cropped).jpg
 
 The existing country-leader dictionary already contained the leaders for all six countries. Tanzania's previously incorrect display value was corrected to Samia Suluhu Hassan. All six images use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Review the portraits in the dashboard at their actual display size; the Uganda and Ghana images are older, and Tanzania's crop is relatively small.
+
+
+## Package 16 — Central and Southern Africa (6 countries)
+
+- **CMR — Cameroon:** Paul Biya — `Paul Biya in December 14th, 2022.jpg`. Photograph dated 14 December 2022 at the U.S.-Africa Leaders Summit; official White House photograph by Adam Schultz, published by the U.S. Department of State. Public domain in the United States as a U.S. federal-government work. Commons crop: 632 × 812 pixels.
+- **ZWE — Zimbabwe:** Emmerson Mnangagwa — `Emmerson Mnangagwa Official Portrait.jpg`. Official portrait issued by the Government of Zimbabwe for public buildings, dated 24 November 2017. Marked public domain in Zimbabwe under the country's Copyright and Neighbouring Rights Act. Original: 400 × 450 pixels; older and relatively small, so check face clarity in-game.
+- **ZMB — Zambia:** Hakainde Hichilema — `Inauguration of Hakainde Hichilema 2026 9.jpg`. Photograph dated 1 September 2026 at his second inauguration; author/source: TheZambianGov. CC BY-SA 4.0. Original: 1,365 × 2,048 pixels.
+- **MOZ — Mozambique:** Daniel Chapo — `Daniel Chapo, November 2025.jpg`. Photograph dated 24 November 2025; author/source: Lula Oficial / Ricardo Stuckert; CC BY-SA 4.0. Original crop: 750 × 1,005 pixels.
+- **AGO — Angola:** João Lourenço — `President of Angola João Lourenço during a bilateral exchange at the Angola presidential palace in Luanda, Angola, September 27, 2023 - 230927-D-PM193-1914 (cropped).jpg`. U.S. Department of Defense photograph dated 27 September 2023, by U.S. Navy Petty Officer 1st Class Alexander Kubitza. Public domain in the United States as a U.S. federal-government work. Crop: 1,065 × 1,421 pixels.
+- **NAM — Namibia:** Netumbo Nandi-Ndaitwah — `Netumbo Nandi-Ndaitwah 2025.jpg`. Photograph dated 9 July 2025; published by the Press Information Bureau on behalf of the Prime Minister's Office, Government of India. GODL-India; attribution: Prime Minister's Office (Government of India). Original crop: 742 × 921 pixels.
+
+### File pages
+- CMR: https://commons.wikimedia.org/wiki/File:Paul_Biya_in_December_14th,_2022.jpg
+- ZWE: https://commons.wikimedia.org/wiki/File:Emmerson_Mnangagwa_Official_Portrait.jpg
+- ZMB: https://commons.wikimedia.org/wiki/File:Inauguration_of_Hakainde_Hichilema_2026_9.jpg
+- MOZ: https://commons.wikimedia.org/wiki/File:Daniel_Chapo,_November_2025.jpg
+- AGO: https://commons.wikimedia.org/wiki/File:President_of_Angola_João_Lourenço_during_a_bilateral_exchange_at_the_Angola_presidential_palace_in_Luanda,_Angola,_September_27,_2023_-_230927-D-PM193-1914_(cropped).jpg
+- NAM: https://commons.wikimedia.org/wiki/File:Netumbo_Nandi-Ndaitwah_2025.jpg
+
+All six image references use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The engine already contained the six corresponding leader display names, so no engine change was required. Review the portraits at dashboard size; the Zimbabwe image is notably older and lower-resolution than the other five.
