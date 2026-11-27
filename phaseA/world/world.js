@@ -799,14 +799,20 @@ function politicalChangeFormHtml(pc, isPlayer) {
   pc = pc || {};
   var proposalList = (ST && ST.political_reform_proposals) || [];
   var activeProposal = null, pi;
-  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && (proposalList[pi].status === 'pending' || proposalList[pi].status === 'reviewed')) { activeProposal=proposalList[pi]; break; }
+  for (pi=proposalList.length-1;pi>=0;pi--) if (proposalList[pi].country === (ST && ST.player) && ['pending','reviewed','approved','executing','paused_funds'].indexOf(proposalList[pi].status) >= 0) { activeProposal=proposalList[pi]; break; }
   var h = '<div class="dashCard" id="politicalChangeCard"><h3>📜 پیشنهاد اصلاح ساختار سیاسی</h3>';
   h += '<div class="dashNote">در این مرحله تغییرات ابتدا به‌صورت طرح ثبت می‌شوند و وضعیت فعلی کشور دست‌نخورده می‌ماند. برآورد هزینه و زمان نمایش داده می‌شود؛ کسر خزانه و اجرای مرحله‌ای در بسته‌های بعدی فعال خواهد شد. هوش مصنوعی کشورها تا فعال‌شدن هوش مصنوعی زنده غیرفعال می‌ماند.</div>';
   if (activeProposal) {
-    h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>'+(activeProposal.status === 'reviewed' ? 'ارزیابی شده؛ منتظر تصمیم بازیکن' : 'در انتظار بررسی')+'</b></div>';
+    var statusLabel = {pending:'در انتظار بررسی',reviewed:'ارزیابی شده؛ منتظر تصمیم بازیکن',approved:'تصویب شده؛ آماده آغاز اجرا',executing:'در حال اجرا',paused_funds:'توقف موقت؛ بودجه کافی نیست'};
+    h += '<div class="dashCard"><b>طرح شماره '+dashEsc(activeProposal.id)+'</b><div class="row"><span>وضعیت</span><b>'+dashEsc(statusLabel[activeProposal.status] || activeProposal.status)+'</b></div>';
     h += '<div class="row"><span>هزینه برآوردی</span><b>'+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
     h += '<div class="row"><span>زمان برآوردی</span><b>'+dashEsc(activeProposal.estimated_days)+' روز</b></div>';
-    h += '<div class="dashNote">هنوز هیچ‌یک از تغییرات پیشنهادی اعمال نشده است.</div>';
+    h += '<div class="dashNote">'+(activeProposal.status === 'completed' ? 'اصلاحات با موفقیت اعمال شده‌اند.' : (activeProposal.status === 'failed' ? 'اجرای طرح ناموفق بود؛ تغییرات اعمال نشدند.' : 'تا پایان موفق اجرای طرح، ساختار فعلی کشور بدون تغییر می‌ماند.'))+'</div>';
+    if (activeProposal.status === 'approved' || activeProposal.status === 'executing' || activeProposal.status === 'paused_funds') {
+      h += '<div class="row"><span>پیشرفت اجرا</span><b>'+dashEsc(activeProposal.progress || 0)+'٪</b></div>';
+      h += '<div class="row"><span>هزینه پرداخت‌شده</span><b>'+dashEsc(activeProposal.spent_cost || 0)+' از '+dashEsc(activeProposal.estimated_cost)+' میلیارد</b></div>';
+      h += '<div class="dashNote">با گذشت هر روز بازی، یک مرحله از هزینه پرداخت و پیشرفت طرح ثبت می‌شود. در صورت کمبود بودجه، اجرا تا تأمین اعتبار متوقف می‌ماند.</div>';
+    }
     if (activeProposal.status === 'pending') {
       h += '<button type="button" id="btnReviewPoliticalProposal" class="primary" data-proposal-id="'+dashEsc(activeProposal.id)+'">ارزیابی پیامدها</button> ';
     } else if (activeProposal.status === 'reviewed') {
@@ -820,7 +826,8 @@ function politicalChangeFormHtml(pc, isPlayer) {
       h += '<button type="button" id="btnApprovePoliticalProposal" class="primary" data-proposal-id="'+dashEsc(activeProposal.id)+'">تصویب و آماده‌سازی اجرا</button> ';
       h += '<button type="button" id="btnRejectPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">رد طرح</button> ';
     }
-    h += '<button type="button" id="btnCancelPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">لغو طرح</button></div>';
+    if (activeProposal.status === 'pending' || activeProposal.status === 'reviewed') h += '<button type="button" id="btnCancelPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">لغو طرح</button>';
+    h += '</div>';
   }
   h += '<div class="dashGrid">';
   h += politicalEditSelect('government_form','نوع حکومت',pc.government_form);
@@ -851,7 +858,7 @@ function bindPoliticalChangeForm(r) {
   function decidePoliticalProposal(button, decision) {
     if (!button) return;
     button.onclick = function () {
-      var question = decision === 'approve' ? 'این طرح تصویب شود؟ اجرای آن در بسته بعدی انجام می‌شود.' : 'این طرح رد شود؟';
+      var question = decision === 'approve' ? 'این طرح تصویب شود؟ اجرای مرحله‌ای آن از روز بعد آغاز می‌شود.' : 'این طرح رد شود؟';
       if (!window.confirm(question)) return;
       button.disabled = true;
       postJSON('api/political/decision', {proposal_id:button.getAttribute('data-proposal-id'), decision:decision}, function(res) {
