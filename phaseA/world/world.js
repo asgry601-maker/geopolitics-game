@@ -1493,6 +1493,9 @@ function startGame(confirmed) {
 
 /* ---------- نوار بالا ---------- */
 function bindToolbar() {
+  /* دکمه شروع مستقل از خطاهای احتمالی اتصال سایر کنترل‌ها */
+  var startBtn = el('btnStart');
+  if (startBtn) startBtn.onclick = function () { startGame(false); };
   el('btnMode').onclick = function () {
     MODE = (MODE === 'geo') ? 'pol' : 'geo';
     this.textContent = (MODE === 'geo') ? '🎨 رنگ: جغرافیایی' : '🎨 رنگ: سیاسی';
@@ -1529,9 +1532,7 @@ function bindToolbar() {
   bindEventTalkControls();
   bindEventPanelTabs();
   bindSanctionsUI();
-  /* دکمه شروع مستقل از خطاهای احتمالی اتصال سایر کنترل‌ها */
-  var startBtn = el('btnStart');
-  if (startBtn) startBtn.onclick = function () { startGame(false); };
+
 }
 
 /* ---------- شمارنده FPS ---------- */
