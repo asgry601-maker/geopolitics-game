@@ -314,3 +314,23 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - SOM: https://commons.wikimedia.org/wiki/File:His_Excellency_President_Hassan_Sheikh_Mohamud_(cropped).jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The existing engine leader-name entries for these six countries were retained. Please inspect the portraits at dashboard size, especially the smaller Democratic Republic of the Congo crop and the 2019 Djibouti photograph.
+
+
+## Package 21 — Indian Ocean and Southern/West Africa (6 countries)
+
+- **MDG — Madagascar:** Michael Randrianirina — `Michael Randrianirina in February 2026.jpg`. Photograph dated 19 February 2026, Presidential Executive Office of Russia / Kremlin.ru; CC BY 4.0. Image: 662 × 872 pixels. Attribution: Kremlin.ru. The game leader display was updated from Andry Rajoelina to Michael Randrianirina to reflect the post-October 2025 transition.
+- **MUS — Mauritius:** Navin Ramgoolam — `Navin Ramgoolam, 2025.jpg`. Photograph dated 11 September 2025, Ministry of External Affairs, Government of India; Government Open Data License – India (GODL-India). Image: 1,218 × 1,523 pixels. Commons currently flags this file for license review; this caveat is recorded and should be revisited before redistribution outside the project.
+- **CPV — Cabo Verde:** José Maria Neves — `José Maria Neves, 2023.jpg`. Portrait dated 19 July 2023, Ricardo Stuckert / Palácio do Planalto; CC BY 2.0. Image: 750 × 1,000 pixels.
+- **LSO — Lesotho:** Sam Matekane — `Sam Matekane candidate (cropped).jpg`. Portrait dated 20 September 2022; cropped from an election-campaign photograph; CC BY 4.0 per the European Commission reuse terms listed on Commons. Image: 605 × 745 pixels.
+- **SWZ — Eswatini:** King Mswati III — `Mswati III 20261010.jpg`. Photograph dated 10 October 2026, Presidential Office of Taiwan; CC BY 4.0. Image: 1,021 × 1,250 pixels.
+- **GMB — The Gambia:** Adama Barrow — `President Adama Barrow Republic of The Gambia.jpg`. Photograph dated 20 September 2021; Commons file page identifies the portrait as a 723 × 1,024-pixel image. The file page's license/author details should be checked carefully before any redistribution; use is documented with this review caveat.
+
+### File pages
+- MDG: https://commons.wikimedia.org/wiki/File:Michael_Randrianirina_in_February_2026.jpg
+- MUS: https://commons.wikimedia.org/wiki/File:Navin_Ramgoolam,_2025.jpg
+- CPV: https://commons.wikimedia.org/wiki/File:José_Maria_Neves,_2023.jpg
+- LSO: https://commons.wikimedia.org/wiki/File:Sam_Matekane_candidate_(cropped).jpg
+- SWZ: https://commons.wikimedia.org/wiki/File:Mswati_III_20261010.jpg
+- GMB: https://commons.wikimedia.org/wiki/File:President_Adama_Barrow_Republic_of_The_Gambia.jpg
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Madagascar's leader display name was corrected to Michael Randrianirina. Please inspect the Gambia and Lesotho portraits at dashboard size; the Gambia file's license metadata should also be reviewed before any broader redistribution.
