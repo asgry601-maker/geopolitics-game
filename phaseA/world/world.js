@@ -1308,6 +1308,72 @@ function leaderPortraitUrlForCountry(r) {
   return iso ? 'assets/leaders/' + dashEsc(iso) + '.jpg' : '';
 }
 
+/* ---------- آماده‌سازی نشست مشترک دیپلماسی؛ چت واقعی فقط در فاز F ---------- */
+function conversationShortcutHtml(source, canManage) {
+  if (!canManage || !ST || !ST.player) return '';
+  var names = ST && ST.countries ? Object.keys(ST.countries) : [];
+  names.sort();
+  var suffix = source === 'pacts' ? 'pacts' : 'diplomacy';
+  var h = '<div class="dashCard" style="margin:10px 0"><b>💬 آماده‌سازی گفت‌وگو با کشورهای منتخب</b>';
+  h += '<div class="muted small">کشورها را انتخاب کن تا نشست مشترک در بازی ذخیره شود. این کار پیام ارسال نمی‌کند و پاسخ هوش مصنوعی نمی‌سازد؛ گفت‌وگوی زنده تا فاز F قفل است.</div>';
+  h += '<label>کشورها <select id="convTargets_'+suffix+'" multiple size="6" style="width:100%;min-height:120px">';
+  for (var i=0;i<names.length;i++) {
+    if (names[i] !== ST.player && (!ST.eliminated || ST.eliminated.indexOf(names[i]) < 0)) {
+      h += '<option value="'+dashEsc(names[i])+'">'+dashEsc(names[i])+'</option>';
+    }
+  }
+  h += '</select></label><div class="muted small">برای انتخاب چند کشور، کلید Ctrl را نگه دار؛ حداکثر ۱۹ کشور دیگر.</div>';
+  h += '<label>موضوع نشست <input id="convTopic_'+suffix+'" type="text" maxlength="120" value="'+(source === 'pacts' ? 'مذاکره درباره پیمان یا اتحاد' : 'گفت‌وگوی دیپلماتیک')+'" style="width:100%"></label>';
+  h += '<label>نوع مذاکره <select id="convType_'+suffix+'" style="width:100%">';
+  h += '<option value="'+(source === 'pacts' ? 'pact' : 'diplomacy')+'">'+(source === 'pacts' ? 'پیمان / اتحاد' : 'دیپلماسی عمومی')+'</option>';
+  h += '<option value="alliance">اتحاد</option><option value="pact">پیمان</option><option value="trade">تجارت</option><option value="ceasefire">آتش‌بس</option><option value="diplomacy">دیپلماسی</option><option value="standard">گفت‌وگوی عادی</option><option value="other">سایر</option></select></label>';
+  h += '<label>حالت انتشار <select id="convVisibility_'+suffix+'" style="width:100%"><option value="public">عمومی و قابل پوشش رسانه‌ای</option><option value="normal">غیرعمومی، اما قابل پوشش رسانه‌ای</option><option value="confidential">محرمانه و بدون پوشش رسانه‌ای</option></select></label>';
+  h += '<button type="button" data-conversation-prepare="'+suffix+'">آماده‌سازی نشست و رفتن به تریبون</button>';
+  h += '<div class="muted small" id="convStatus_'+suffix+'">نشست پس از ثبت، در تریبون نمایش داده می‌شود؛ چت همچنان قفل خواهد بود.</div></div>';
+  return h;
+}
+function bindConversationShortcuts() {
+  var box = el('dashSection');
+  if (!box) return;
+  var buttons = box.querySelectorAll('[data-conversation-prepare]');
+  for (var i=0;i<buttons.length;i++) buttons[i].onclick = function() {
+    var source = this.getAttribute('data-conversation-prepare');
+    var suffix = source === 'pacts' ? 'pacts' : 'diplomacy';
+    var select = el('convTargets_'+suffix), participants = [], j;
+    if (select) for (j=0;j<select.options.length;j++) if (select.options[j].selected) participants.push(select.options[j].value);
+    var status = el('convStatus_'+suffix);
+    if (!participants.length) { if(status) status.textContent='حداقل یک کشور را انتخاب کن.'; return; }
+    if (participants.length > 19) { if(status) status.textContent='حداکثر ۱۹ کشور دیگر را می‌توان انتخاب کرد.'; return; }
+    var topic = el('convTopic_'+suffix), type = el('convType_'+suffix), visibility = el('convVisibility_'+suffix);
+    var payload = {
+      participants: participants,
+      topic: topic ? topic.value : 'گفت‌وگوی دیپلماتیک',
+      negotiation_type: type ? type.value : (source === 'pacts' ? 'pact' : 'diplomacy'),
+      visibility_mode: visibility ? visibility.value : 'public',
+      source: source,
+      context: {origin_tab:source, selected_country:ST ? ST.player : null, requested_by_player:true}
+    };
+    var btn = this;
+    btn.disabled = true;
+    if(status) status.textContent='در حال ذخیره نشست...';
+    postJSON('api/conversations/prepare',payload,function(res) {
+      btn.disabled = false;
+      if (!res || !res.ok || !res.session) {
+        if(status) status.textContent=(res&&res.error)||'نشست ذخیره نشد.';
+        return;
+      }
+      loadState(function() {
+        DASH_TAB = 'tribune';
+        if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        flash('نشست '+res.session.id+' ذخیره شد؛ تریبون باز شد اما گفت‌وگوی زنده تا فاز F قفل است.');
+      });
+    },function(code,response) {
+      btn.disabled = false;
+      if(status) status.textContent=netErrMsg(code,response)+' — نشست ذخیره نشد.';
+    });
+  };
+}
+
 /* ---------- پیمان‌های فعال: نمایش از داده پایدار موتور ---------- */
 function pactTypeLabel(type) {
   var labels = {
@@ -1331,6 +1397,7 @@ function pactPanelHtml(countryName, canManage) {
   }
   var h = '<h3>📜 پیمان‌های در جریان</h3>';
   h += '<div class="dashNote">فقط پیمان‌هایی نمایش داده می‌شوند که در وضعیت فعال و در میان اعضای آن‌ها کشور انتخاب‌شده حضور دارد. لغو پیمان از طرف بازیکن یک‌جانبه است و در تاریخچه بازی ثبت می‌شود.</div>';
+  h += conversationShortcutHtml('pacts', canManage);
   if (!active.length) return h + '<div class="dashCard">در حال حاضر پیمان فعال ثبت‌شده‌ای برای این کشور وجود ندارد.</div>';
   for (i=0;i<active.length;i++) {
     rec = active[i];
@@ -1498,6 +1565,7 @@ function diplomacyPanelHtml(country, isPlayer) {
     h += '<div class="dashNote">این کشور در حالت مشاهده است. اقدامات دیپلماتیک فقط از پنل کشور تحت کنترل بازیکن انجام می‌شوند.</div>';
     return h;
   }
+  h += conversationShortcutHtml('diplomacy', true);
   var names = ST && ST.countries ? Object.keys(ST.countries) : [];
   names.sort();
   h += '<div class="dashCard"><b>اقدام دیپلماتیک مستقیم</b>';
@@ -1785,6 +1853,21 @@ function dashSectionHtml(r, isPlayer, tab) {
   }
   if (tab === 'tribune') {
     h += '<h3>🏛 تریبون ملی</h3>';
+    var preparedSessions = ST && ST.conversation_sessions ? ST.conversation_sessions : [];
+    if (isPlayer && preparedSessions.length) {
+      h += '<h4>نشست‌های آماده‌شده</h4>';
+      h += '<div class="dashNote">این نشست‌ها ذخیره شده‌اند و زمینه مشترک آن‌ها حفظ می‌شود؛ هیچ پیام یا پاسخ هوش مصنوعی تولید نشده و چت تا فاز F غیرفعال است.</div>';
+      for (var si=preparedSessions.length-1, shown=0;si>=0 && shown<10;si--,shown++) {
+        var session = preparedSessions[si] || {};
+        var visibilityLabels = {public:'عمومی',normal:'غیرعمومی با پوشش رسانه‌ای',confidential:'محرمانه'};
+        var typeLabels = {standard:'عادی',alliance:'اتحاد',pact:'پیمان',diplomacy:'دیپلماسی',ceasefire:'آتش‌بس',trade:'تجارت',other:'سایر'};
+        h += '<div class="dashCard"><div class="row"><b>'+dashEsc(session.id || 'نشست')+'</b><span class="badge">آماده · چت قفل</span></div>';
+        h += '<div>موضوع: '+dashEsc(session.topic || 'گفت‌وگوی دیپلماتیک')+'</div>';
+        h += '<div>کشورها: '+dashEsc((session.participants || []).join('، '))+'</div>';
+        h += '<div class="muted small">نوع: '+dashEsc(typeLabels[session.negotiation_type] || session.negotiation_type || '—')+' · انتشار: '+dashEsc(visibilityLabels[session.visibility_mode] || session.visibility_mode || '—')+' · تاریخ: '+dashEsc(session.created_date || '—')+'</div>';
+        h += '<div class="muted small">وضعیت هوش مصنوعی: فقط پس از فعال‌سازی فاز F</div></div>';
+      }
+    }
     if (isPlayer && ST && ST.regime_crisis) {
       var crisis = ST.regime_crisis;
       var crisisLabel = crisis.kind === 'coup_crisis' ? 'بحران کودتا' : (crisis.kind === 'revolution_crisis' ? 'بحران انقلاب' : (crisis.kind === 'revolution' ? 'انقلاب' : 'کودتا'));
@@ -1841,6 +1924,7 @@ function renderCountryPanel(r) {
   if (DASH_TAB === 'pacts') bindPactActions();
   if (DASH_TAB === 'pacts') bindAllianceActions();
   if (DASH_TAB === 'diplomacy' && isPlayer) bindDiplomacyActions();
+  if ((DASH_TAB === 'pacts' || DASH_TAB === 'diplomacy') && isPlayer) bindConversationShortcuts();
 }
 
 /* ---------- فاز B2 — سیستم استان‌ها (سبک؛ بدون پردازش پرفریم) ---------- */
