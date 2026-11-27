@@ -2484,7 +2484,7 @@ function renderInbox() {
     var btn=this;btn.disabled=true;
     postJSON('api/conversations/meeting/decision',{conversation_id:linkedId,decision:decision},function(res){
       if(!res||!res.ok){btn.disabled=false;flash((res&&res.error)||'تصمیم نشست ثبت نشد.');return;}
-      loadState(function(){setInboxOpen(true);flash(decision==='accept'?'تاریخ نشست پذیرفته و به تقویم اضافه شد.':'درخواست نشست رد شد.');});
+      loadState(function(){setInboxOpen(true);flash(decision==='accept'?(res.confirmed?'تاریخ نشست با پذیرش همه طرف‌ها به تقویم اضافه شد.':'پاسخ شما ثبت شد؛ پس از پذیرش همه کشورهای شرکت‌کننده، موعد وارد تقویم می‌شود.'):'درخواست نشست رد شد.');});
     },function(code,response){btn.disabled=false;flash(netErrMsg(code,response)+' — تصمیم نشست ثبت نشد.');});
   };
   var replyButtons=list.querySelectorAll(".inboxReplyBtn");
