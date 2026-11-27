@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 41,
-    "pending_countries": 133,
+    "classified_countries": 46,
+    "pending_countries": 128,
     "last_batch": [
-      "PRT",
-      "IRL",
-      "CZE",
-      "SVK",
-      "HUN"
+      "ROU",
+      "BGR",
+      "HRV",
+      "SVN",
+      "SRB"
     ]
   },
   "countries": {
@@ -2850,6 +2850,373 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "این رکورد عمداً وضعیت پس از انتخابات آوریل/مه ۲۰۲۶ را ثبت می‌کند، نه دولت اوربان. ارزیابی regime_character موقت و متوسط است؛ گزارش Freedom House 2026 عمدتاً پیش از انتقال قدرت را پوشش می‌دهد."
+      }
+    },
+    "ROU": {
+      "country_name_fa": "رومانی",
+      "country_name_en": "Romania",
+      "government_form": "republic",
+      "government_subform": "semi_presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "social_democracy",
+        "liberalism",
+        "christian_democracy",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "رومانی جمهوری نیمه‌ریاستی و دولت واحد با پارلمان دومجلسی است؛ رئیس‌جمهور مستقیماً انتخاب می‌شود و نخست‌وزیر ریاست دولت را بر عهده دارد. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، لوکا نیکولسکو، دیپلمات مستقل، نخست‌وزیر دولت جدیدی بود که پارلمان در ۲۰ اکتبر به آن رأی اعتماد داد. حمایت سیاسی دولت عمدتاً از PSD، PNL و UDMR و نمایندگان اقلیت‌ها تأمین می‌شد؛ کابینه ترکیبی از سیاستمداران PSD و تکنوکرات‌های مستقل بود. بنابراین حزب حاکم واحد ثبت نشده و گرایش ائتلاف از سوسیال‌دموکراسی تا لیبرالیسم و دموکراسی مسیحی/محافظه‌کاری میانه را در بر می‌گیرد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Romania’s new government: crisis over, uncertainty ahead",
+          "publisher": "OSW Centre for Eastern Studies",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-10-22/romanias-new-government-crisis-over-uncertainty-ahead",
+          "date": "2026-10-22",
+          "supports": [
+            "ruling_coalition_ideology",
+            "ruling_party_ideology"
+          ],
+          "note": "تشکیل دولت لوکا نیکولسکو، حمایت PSD، PNL، UDMR و ترکیب تکنوکراتی کابینه."
+        },
+        {
+          "name": "Decree appointing Niculescu government published in Romania's Official Gazette",
+          "publisher": "AGERPRES",
+          "url": "https://agerpres.ro/x/2026/10/20/x--1605099",
+          "date": "2026-10-20",
+          "supports": [
+            "ruling_coalition_ideology"
+          ],
+          "note": "انتشار حکم انتصاب دولت، رأی اعتماد ۲۸۰ به ۵۸ و ترکیب وزیران PSD و مستقل."
+        },
+        {
+          "name": "Romania: the 2025 Presidential election",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10355/",
+          "date": "2025-10-09",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "توصیف رومانی به‌عنوان جمهوری نیمه‌ریاستی و تقسیم اختیارات اجرایی میان رئیس‌جمهور و دولت."
+        },
+        {
+          "name": "Romania: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/romania/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت انتخاباتی، حقوق سیاسی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "وضعیت دولت جدید در ۲۰ اکتبر ۲۰۲۶ تثبیت شده بود؛ ترکیب حمایت پارلمانی از کابینه با عضویت رسمی در کابینه یکی تلقی نشده است."
+      }
+    },
+    "BGR": {
+      "country_name_fa": "بلغارستان",
+      "country_name_en": "Bulgaria",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "conservatism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "بلغارستان جمهوری پارلمانی و دولت واحد است. در انتخابات زودهنگام ۱۹ آوریل ۲۰۲۶، حزب تازه‌تأسیس «بلغارستان پیشرو» به رهبری رومِن رادف ۱۳۱ کرسی از ۲۴۰ کرسی را به دست آورد و در ۸ مه دولت تک‌حزبی تشکیل داد. رادف پس از کناره‌گیری از ریاست‌جمهوری، رهبری حزب را بر عهده گرفت و نخست‌وزیر شد؛ ایلیانا یوتووا، معاون رئیس‌جمهور پیشین، رئیس‌جمهور شد. گرایش حزب جدید را به‌صورت ترکیبی از محافظه‌کاری، ملی‌گرایی و عمل‌گرایی ثبت می‌کنیم؛ این برچسب توصیفی است و نباید با ایدئولوژی رسمی کشور اشتباه شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Bulgaria National Assembly April 2026 Election",
+          "publisher": "Inter-Parliamentary Union — IPU Parline",
+          "url": "https://data.ipu.org/parliament/BG/BG-LC01/election/BG-LC01-E20260419/",
+          "date": "2026-04-19",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "پیروزی بلغارستان پیشرو با ۱۳۱ کرسی و تشکیل دولت تک‌حزبی رادف در ۸ مه ۲۰۲۶."
+        },
+        {
+          "name": "The National Assembly elected Rumen Radev as Prime Minister",
+          "publisher": "National Assembly of the Republic of Bulgaria",
+          "url": "https://www.parliament.bg/en/news/ID/6527",
+          "date": "2026-05-08",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "انتخاب رسمی رومِن رادف به نخست‌وزیری و تصویب کابینه حزب بلغارستان پیشرو."
+        },
+        {
+          "name": "Radev’s government in Bulgaria: status quo despite hopes for change?",
+          "publisher": "OSW Centre for Eastern Studies",
+          "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-05-08/radevs-government-bulgaria-status-quo-despite-hopes-change",
+          "date": "2026-05-08",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "تحلیل جایگاه محافظه‌کارانه و اجتماعی-ملی حزب بلغارستان پیشرو و گرایش‌های دولت رادف."
+        },
+        {
+          "name": "Bulgaria: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/bulgaria/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت سیاسی، حقوق سیاسی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "اطلاعات بر اساس انتخابات آوریل و تشکیل دولت در مه ۲۰۲۶ است؛ حزب حاکم به‌صورت تک‌حزبی ثبت شده است."
+      }
+    },
+    "HRV": {
+      "country_name_fa": "کرواسی",
+      "country_name_en": "Croatia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "christian_democracy",
+        "conservatism",
+        "liberal_conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "christian_democracy",
+        "conservatism",
+        "national_conservatism",
+        "nationalism"
+      ],
+      "ideology_notes": "کرواسی جمهوری پارلمانی و دولت واحد است؛ رئیس‌جمهور رئیس کشور و نخست‌وزیر رئیس دولت است. در تاریخ مبنای ۵ نوامبر ۲۰۲۶، آندری پلنکوویچ نخست‌وزیر دولت ائتلافی تحت رهبری اتحادیه دموکراتیک کرواسی (HDZ) بود. دولت پس از انتخابات ۲۰۲۴ با مشارکت HDZ و جنبش میهن (DP) تشکیل شد؛ HDZ نیروی اصلی دموکرات‌مسیحی و محافظه‌کار میانه‌رو است و DP گرایش ملی‌محافظه‌کارانه و ملی‌گرایانه پررنگ‌تری دارد. تفاوت‌های این دو شریک در برچسب ائتلافی حفظ شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Croatian parliament votes confidence in new government",
+          "publisher": "Government of the Republic of Croatia",
+          "url": "https://vlada.gov.hr/croatian-parliament-votes-confidence-in-new-government/42434",
+          "date": "2024-05-17",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید دولت سوم پلنکوویچ و مشارکت HDZ و جنبش میهن در کابینه."
+        },
+        {
+          "name": "Andrej Plenković — Prime Minister",
+          "publisher": "Government of the Republic of Croatia",
+          "url": "https://vlada.gov.hr/the-prime-minister/14973",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology"
+          ],
+          "note": "تأیید سمت نخست‌وزیری پلنکوویچ و رهبری او در HDZ."
+        },
+        {
+          "name": "Croatia — EU country profile",
+          "publisher": "European Union",
+          "url": "https://european-union.europa.eu/principles-countries-history/eu-countries/croatia_en",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "کرواسی به‌عنوان جمهوری پارلمانی و ساختار قوای سه‌گانه."
+        },
+        {
+          "name": "Croatia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/croatia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت چندحزبی و حقوق سیاسی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ترکیب ائتلافی دولت بر اساس کابینه تشکیل‌شده در مه ۲۰۲۴ و استمرار دولت پلنکوویچ در تاریخ مبنا ثبت شده است."
+      }
+    },
+    "SVN": {
+      "country_name_fa": "اسلوونی",
+      "country_name_en": "Slovenia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "conservatism",
+        "christian_democracy"
+      ],
+      "ruling_coalition_ideology": [
+        "national_conservatism",
+        "conservatism",
+        "christian_democracy",
+        "liberalism",
+        "mixed_pragmatic"
+      ],
+      "ideology_notes": "اسلوونی جمهوری پارلمانی و دولت واحد است. در انتخابات مارس ۲۰۲۶، SDS و احزاب میانه‌راست به توافق تشکیل دولت رسیدند. یانز یانشا در ۲۲ مه به نخست‌وزیری انتخاب شد و دولت شانزدهم در ۴ ژوئن ۲۰۲۶ آغاز به کار کرد. ائتلاف رسمی شامل SDS، NSi، SLS، FOKUS و دموکرات‌ها به رهبری آنژه لوگار است و مجموعاً ۴۳ کرسی از ۹۰ کرسی مجلس را در اختیار دارد؛ بنابراین دولت برای رأی‌های مهم به حمایت بیرونی، از جمله Resni.ca، نیاز دارد. گرایش حزب نخست‌وزیر ملی‌محافظه‌کار و محافظه‌کار است و ائتلاف طیفی از دموکراسی مسیحی تا لیبرالیسم میانه‌رو را شامل می‌شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "About the Government",
+          "publisher": "Government of the Republic of Slovenia",
+          "url": "https://www.gov.si/en/state-authorities/government/about-the-government/",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "ترکیب دولت شانزدهم، نخست‌وزیری یانشا و فهرست پنج شریک ائتلافی."
+        },
+        {
+          "name": "Janez Janša — Prime Minister",
+          "publisher": "Government of the Republic of Slovenia",
+          "url": "https://www.gov.si/en/state-authorities/prime-minister/janez-jansa/",
+          "date": "2026",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "تأیید انتخاب یانشا در ۲۲ مه و آغاز دولت در ۴ ژوئن ۲۰۲۶."
+        },
+        {
+          "name": "Slovenia National Assembly March 2026 Election",
+          "publisher": "Inter-Parliamentary Union — IPU Parline",
+          "url": "https://data.ipu.org/parliament/SI/SI-LC01/election/SI-LC01-E20260322/",
+          "date": "2026-03-22",
+          "supports": [
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "نتایج انتخابات، توافق ائتلاف پنج‌حزبی و ۴۳ کرسی دولت."
+        },
+        {
+          "name": "Slovenia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/slovenia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "ارزیابی رقابت سیاسی و آزادی‌های مدنی."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "ائتلاف رسمی پنج‌حزبی با ۴۳ کرسی ثبت شده و حمایت بیرونی Resni.ca به‌عنوان عضویت در دولت محسوب نشده است."
+      }
+    },
+    "SRB": {
+      "country_name_fa": "صربستان",
+      "country_name_en": "Serbia",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "national_conservatism",
+        "nationalism",
+        "populism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "صربستان جمهوری پارلمانی و دولت واحد است. وضعیت ۵ نوامبر ۲۰۲۶ یک دوره انتقالی پس از انتخابات زودهنگام ۲۵ اکتبر بود: فهرست دانشجویان و جنبش مخالفان با نتیجه اولیه ۱۴۰ کرسی از ۲۵۰ کرسی پیروز شد و فهرست متحد صربستان به رهبری SNS، ۱۰۳ کرسی به دست آورد؛ اما در تاریخ مبنا تخصیص نهایی همه کرسی‌ها و تشکیل مجلس جدید هنوز تکمیل نشده بود و دولت مستقر به نخست‌وزیری Đuro Macut امور جاری را ادامه می‌داد. بنابراین حزب پیروز انتخابات را نباید به‌عنوان دولت مستقر ثبت کرد. ویژگی رژیم به‌صورت hybrid_regime و با اطمینان متوسط ثبت شده است: رقابت و مشارکت انتخاباتی واقعی بود، اما ناظران از نابرابری جدی شرایط رقابت، استفاده از منابع دولتی و سوگیری رسانه‌ای گزارش دادند. گرایش حزب مستقر SNS ملی‌محافظه‌کار، ملی‌گرا و پوپولیستی است؛ گرایش دولت جدید تا زمان تشکیل کابینه نامشخص باقی می‌ماند.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Serbia under Aleksandar Vučić and the 2026 parliamentary election",
+          "publisher": "UK House of Commons Library",
+          "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12267/",
+          "date": "2026-10-30",
+          "supports": [
+            "party_system",
+            "regime_character",
+            "ruling_party_ideology"
+          ],
+          "note": "نتیجه انتخابات ۲۵ اکتبر، پیروزی فهرست دانشجویان و گزارش شرایط نابرابر رقابت؛ در تاریخ مبنا دولت جدید هنوز تشکیل نشده بود."
+        },
+        {
+          "name": "President of Republic calls parliamentary elections for 25 October",
+          "publisher": "Government of the Republic of Serbia",
+          "url": "https://www.srbija.gov.rs/vest/en/287130/president-of-republic-calls-parliamentary-elections-for-25-october.php",
+          "date": "2026-09-09",
+          "supports": [
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "انحلال مجلس و اعلام رسمی انتخابات زودهنگام."
+        },
+        {
+          "name": "Serbia National Assembly October 2026 Election",
+          "publisher": "Inter-Parliamentary Union — IPU Parline",
+          "url": "https://data.ipu.org/parliament/RS/RS-LC01/election/RS-LC01-E20261025/",
+          "date": "2026",
+          "supports": [
+            "party_system",
+            "regime_character"
+          ],
+          "note": "نتایج انتخابات و گزارش ناظران درباره مشارکت بالا، رقابت شدید و نابرابری شرایط مبارزات انتخاباتی."
+        },
+        {
+          "name": "Members of government",
+          "publisher": "Government of the Republic of Serbia",
+          "url": "https://www.srbija.gov.rs/sastav/en/10/members-of-government....",
+          "date": "2026-11-05",
+          "supports": [
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "دولت مستقر به نخست‌وزیری Đuro Macut که پس از انتخابات تا تشکیل نهادهای جدید امور جاری را ادامه می‌داد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "برای جلوگیری از نشت اطلاعات آینده به snapshot، نتیجه نهایی تخصیص کرسی‌های ۶ نوامبر و تشکیل مجلس در ۱۷ نوامبر وارد baseline نشده است. دولت جدید در تاریخ مبنا هنوز تشکیل نشده بود؛ نتیجه انتخابات و دولت مستقر جداگانه ثبت شده‌اند."
       }
     }
   }
