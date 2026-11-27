@@ -693,7 +693,7 @@ function bindStatementConversationPrepare() {
     if(participants.length>19) { flash('حداکثر ۱۹ کشور دیگر می‌توانند در نشست باشند.'); return; }
     var visibility=confidential?'confidential':(normal?'normal':'public');
     var meetingDate=el('statementMeetingDate');
-    if(!meetingDate || !meetingDate.value) { flash('تاریخ پیشنهادی نشست را انتخاب کن.'); return; }
+    if(!meetingDate || !meetingDate.value || meetingDate.value < calendarNextDate()) { flash('تاریخ نشست باید از فردای روز فعلی بازی به بعد باشد.'); return; }
     var payload={
       participants:participants,
       meeting_date:meetingDate.value,
@@ -705,18 +705,18 @@ function bindStatementConversationPrepare() {
     };
     button.disabled=true;
     var status=el('statementPrepareStatus');
-    if(status) status.textContent='در حال ذخیره نشست مشترک...';
+    if(status) status.textContent='در حال ثبت پیشنهاد تاریخ نشست...';
     postJSON('api/conversations/prepare',payload,function(res) {
       button.disabled=false;
       if(!res || !res.ok || !res.session) {
         if(status) status.textContent=(res&&res.error)||'نشست ذخیره نشد.';
         return;
       }
-      if(status) status.textContent='نشست '+res.session.id+' ذخیره شد؛ پیام‌رسانی و پاسخ هوش مصنوعی تا فاز F غیرفعال است.';
+      if(status) status.textContent='تاریخ نشست '+res.session.meeting_date+' پیشنهاد شد؛ تا پذیرش کشور مقابل در تقویم قطعی نمی‌شود.';
       loadState(function() {
         DASH_TAB='tribune';
         if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
-        flash('نشست بیانیه‌ها و مذاکرات ذخیره شد؛ تریبون باز شد و چت تا فاز F قفل است.');
+        flash('تاریخ نشست پیشنهاد شد؛ تریبون باز شد اما تا پذیرش طرف مقابل و رسیدن موعد، گفت‌وگو قفل است.');
       });
     },function(code,response) {
       button.disabled=false;
@@ -1437,7 +1437,7 @@ function bindConversationShortcuts() {
     if (!participants.length) { if(status) status.textContent='حداقل یک کشور را انتخاب کن.'; return; }
     if (participants.length > 19) { if(status) status.textContent='حداکثر ۱۹ کشور دیگر را می‌توان انتخاب کرد.'; return; }
     var topic = el('convTopic_'+suffix), type = el('convType_'+suffix), visibility = el('convVisibility_'+suffix), meetingDate=el('convMeetingDate_'+suffix);
-    if (!meetingDate || !meetingDate.value) { if(status) status.textContent='تاریخ پیشنهادی نشست را انتخاب کن.'; return; }
+    if (!meetingDate || !meetingDate.value || meetingDate.value < calendarNextDate()) { if(status) status.textContent='تاریخ نشست باید از فردای روز فعلی بازی به بعد باشد.'; return; }
     var payload = {
       participants: participants,
       topic: topic ? topic.value : 'گفت‌وگوی دیپلماتیک',
@@ -1459,7 +1459,7 @@ function bindConversationShortcuts() {
       loadState(function() {
         DASH_TAB = 'tribune';
         if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
-        flash('نشست '+res.session.id+' ذخیره شد؛ تریبون باز شد اما گفت‌وگوی زنده تا فاز F قفل است.');
+        flash('تاریخ نشست '+res.session.meeting_date+' پیشنهاد شد؛ تا پذیرش کشور مقابل و رسیدن موعد، گفت‌وگو قفل می‌ماند.');
       });
     },function(code,response) {
       btn.disabled = false;
@@ -2509,7 +2509,7 @@ function renderInbox() {
     postJSON("api/conversations/prepare",payload,function(res){
       btn.disabled=false;
       if(!res || !res.ok || !res.session) { flash((res&&res.error)||"نشست پاسخ آماده نشد."); return; }
-      loadState(function(){ DASH_TAB="tribune"; if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R); flash("زمینه پاسخ در تریبون آماده شد؛ گفت‌وگوی زنده تا فاز F قفل است."); });
+      loadState(function(){ DASH_TAB="tribune"; if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R); flash("تاریخ نشست پاسخ پیشنهاد شد؛ تا پذیرش کشور مقابل و رسیدن موعد، گفت‌وگو قفل است."); });
     },function(code,response){ btn.disabled=false; flash(netErrMsg(code,response)+" — نشست پاسخ ذخیره نشد."); });
   };
 }
