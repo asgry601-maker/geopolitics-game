@@ -551,8 +551,23 @@ function dashSectionHtml(r, isPlayer, tab) {
     }
     var ep = r.country_profile || null;
     if (ep) {
+      function refMetric(value, suffix, decimals) {
+        if (value == null || !isFinite(Number(value))) return 'ثبت نشده';
+        return Number(value).toLocaleString('en-US', {maximumFractionDigits: decimals == null ? 2 : decimals}) + (suffix || '');
+      }
+      function refYear(key) { return ep[key] ? ' · ' + ep[key] : ''; }
       h += '<h3>اقتصاد واقعی — داده مرجع</h3><div class="dashGrid">';
-      h += dashMetric('تولید ناخالص داخلی اسمی (GDP)',ep.gdp_usd == null ? 'ثبت نشده' : '
+      h += dashMetric('تولید ناخالص داخلی اسمی (GDP)', refMetric(ep.gdp_usd, ' دلار') + refYear('gdp_year'));
+      h += dashMetric('GDP سرانه اسمی', refMetric(ep.gdp_per_capita_usd, ' دلار') + refYear('gdp_year'));
+      h += dashMetric('رشد اقتصادی سالانه', refMetric(ep.gdp_growth_percent, '٪') + refYear('gdp_growth_year'));
+      h += dashMetric('تورم سالانه مصرف‌کننده', refMetric(ep.inflation_percent, '٪') + refYear('inflation_year'));
+      h += dashMetric('بیکاری (برآورد ILO)', refMetric(ep.unemployment_percent, '٪') + refYear('unemployment_year'));
+      h += dashMetric('صادرات کالا و خدمات', refMetric(ep.exports_usd, ' دلار') + refYear('exports_year'));
+      h += dashMetric('واردات کالا و خدمات', refMetric(ep.imports_usd, ' دلار') + refYear('imports_year'));
+      h += dashMetric('تراز تجاری کالا و خدمات', refMetric(ep.trade_balance_usd, ' دلار') + refYear('trade_balance_year'));
+      h += '</div>';
+      h += '<div class="dashNote">شاخص‌های تکمیلی از World Bank، پایگاه World Development Indicators هستند. سال هر شاخص مستقل نمایش داده می‌شود؛ بنابراین سال داده‌ها ممکن است بین کشورها و حتی بین شاخص‌های یک کشور متفاوت باشد. مقادیر خالی به معنی نبود داده معتبر در بازه انتخاب‌شده است، نه صفر.</div>';
+    } else h += dashMissing('داده اقتصادی مرجع','پرونده اطلاعات پایه این کشور در دسترس نیست.');
   } else if (tab === 'resources') {
     h += '<h3>⛏ منابع طبیعی</h3>';
     h += dashMissing('منابع کشور و استان‌ها','ذخایر نفت، گاز، زغال‌سنگ، اورانیوم، آهن، طلا و سایر منابع هنوز داده‌گذاری نشده‌اند. در فاز C باید روی نقشه نیز به شکل مدل سه‌بعدی سبک دیده شوند.');
