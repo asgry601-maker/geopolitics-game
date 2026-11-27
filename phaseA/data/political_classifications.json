@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 115,
-    "pending_countries": 59,
+    "classified_countries": 120,
+    "pending_countries": 54,
     "last_batch": [
-      "MOZ",
-      "AGO",
-      "NAM",
-      "BWA",
-      "SDN"
+      "SSD",
+      "TCD",
+      "NER",
+      "MLI",
+      "MRT"
     ]
   },
   "countries": {
@@ -8334,6 +8334,389 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "طبقه‌بندی به‌عمد چندپارگی اقتدار را نشان می‌دهد. منابع اکتبر ۲۰۲۶ فقط برای راستی‌آزمایی پژوهش استفاده شده‌اند؛ baseline وضعیت موجود در ۵ نوامبر ۲۰۲۶ را منعکس می‌کند."
+      }
+    },
+    "SSD": {
+      "country_name_fa": "سودان جنوبی",
+      "country_name_en": "South Sudan",
+      "government_form": "transitional_government",
+      "government_subform": "transitional_authority",
+      "executive_legislative_system": "transitional",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "fragmented_authority",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "سودان جنوبی در ۵ نوامبر ۲۰۲۶ در آستانه انتخابات برنامه‌ریزی‌شده ۲۲ دسامبر قرار دارد، اما ساختار انتقالی پیشین در ۲۲ سپتامبر منحل و با دولت موقت/سرپرست جایگزین شده است. سالوا کییر ریاست کشور را حفظ کرده و معاونان رئیس‌جمهور و مجالس ملی و ایالتی برکنار/منحل شده‌اند. رقابت اصلی سیاسی حول SPLM حاکم و جناح‌های SPLM-IO و دیگر گروه‌های توافق صلح می‌چرخد؛ درگیری‌های محلی و کنترل نابرابر سرزمینی مانع از توصیف آن به‌عنوان یک نظام انتخاباتی عادی است. ایدئولوژی رسمی واحدی اعلام نشده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Report of the Secretary-General on South Sudan (S/2026/853)",
+          "publisher": "United Nations Security Council",
+          "url": "https://digitallibrary.un.org/record/4132164/files/S_2026_853-EN.pdf",
+          "date": "2026-10",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "گزارش سازمان ملل درباره اصلاحات سپتامبر ۲۰۲۶، انحلال دولت وحدت ملی و مجالس و تشکیل دولت سرپرست."
+        },
+        {
+          "name": "South Sudan president dissolves transitional government ahead of long-delayed elections",
+          "publisher": "Associated Press",
+          "url": "https://apnews.com/article/de4306bb7092c6142741e5a899051154",
+          "date": "2026-09-23",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "گزارش انحلال دولت و برکناری معاونان رئیس‌جمهور پیش از انتخابات برنامه‌ریزی‌شده ۲۲ دسامبر."
+        },
+        {
+          "name": "South Sudan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/south-sudan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نبود انتخابات ملی از استقلال، محدودیت رقابت و فشار بر رقیب اصلی؛ گزارش سالانه پیش از تحولات سپتامبر ۲۰۲۶."
+        },
+        {
+          "name": "South Sudan Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI",
+          "url": "https://bti-project.org/en/reports/country-report/SSD",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "ساختار ریاستی در قانون اساسی انتقالی، نفوذ گسترده رئیس‌جمهور، پیوند سیاست و نیروهای مسلح و رقابت جناح‌های SPLM."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "به‌دلیل انحلال نهادهای انتقالی در سپتامبر ۲۰۲۶، این رکورد دولت سرپرست و اقتدار چندپاره را منعکس می‌کند؛ انتخابات دسامبر ۲۰۲۶ در تاریخ snapshot هنوز برگزار نشده بود."
+      }
+    },
+    "TCD": {
+      "country_name_fa": "چاد",
+      "country_name_en": "Chad",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "nationalism"
+      ],
+      "ideology_notes": "قانون اساسی ۲۰۲۳ جمهوری پنجم را با رئیس‌جمهوری منتخب مستقیم و نخست‌وزیر منصوب رئیس‌جمهور تعریف کرد؛ بنابراین در این طبقه‌بندی رابطه اجرایی-تقنینی نیمه‌ریاستی ثبت شده، هرچند IPU آن را ریاستی دسته‌بندی می‌کند. محمد ادریس دبی در انتخابات ۲۰۲۴ پیروز اعلام شد و حزب MPS در انتخابات پارلمانی دسامبر همان سال ۱۲۴ کرسی از ۱۸۸ کرسی را به دست آورد؛ با احتساب متحدان، بلوک حاکم حدود ۱۷۶ کرسی داشت. انتخابات و آزادی فعالیت مخالفان با محدودیت‌های جدی روبه‌رو بوده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "An Introduction to the Legal System and Legal Research in Chad",
+          "publisher": "NYU Law — GlobaLex",
+          "url": "https://www.nyulawglobal.org/globalex/chad1.html",
+          "date": "2025",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "شرح قانون اساسی ۲۰۲۳، رئیس‌جمهور منتخب مستقیم، نخست‌وزیر منصوب و ساختار دو مجلسی؛ نویسنده نظام را نیمه‌ریاستی می‌خواند."
+        },
+        {
+          "name": "Chad: National Assembly December 2024 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TD/TD-LC01/election/TD-LC01-E20241229/",
+          "date": "2024-12-29",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "MPS با ۱۲۴ کرسی از ۱۸۸ کرسی پیروز شد؛ همراه متحدان حدود ۱۷۶ کرسی؛ احزاب مخالف متعددی انتخابات را تحریم کردند."
+        },
+        {
+          "name": "Chad: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/chad/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تمرکز قدرت در دست محمد ادریس دبی، انتخابات غیررقابتی و سرکوب مخالفان."
+        },
+        {
+          "name": "Chad: National Assembly — Parliament profile",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/TD/TD-LC01/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "پروفایل پارلمان، ثبت رسمی نظام ریاستی در داده IPU و ساختار دو مجلسی؛ اختلاف با تحلیل قانون اساسی در انتخاب برچسب توضیح داده شده است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "در مدل حقوقی قانون اساسی ۲۰۲۳، وجود نخست‌وزیر منصوب و رئیس‌جمهور منتخب مبنای semi_presidential است؛ IPU از برچسب presidential استفاده می‌کند، بنابراین confidence متوسط نگه داشته شده است."
+      }
+    },
+    "NER": {
+      "country_name_fa": "نیجر",
+      "country_name_en": "Niger",
+      "government_form": "transitional_government",
+      "government_subform": "military_junta",
+      "executive_legislative_system": "military_council",
+      "territorial_structure": "unitary",
+      "regime_character": "military_rule",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "military_nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "پس از کودتای ژوئیه ۲۰۲۳، قانون اساسی تعلیق شد و شورای ملی حفاظت از میهن (CNSP) قدرت را در دست گرفت. منشور بازتأسیس مصوب مارس ۲۰۲۵ ژنرال عبدالرحمانه تیانی را برای دوره انتقالی پنج‌ساله با امکان تمدید منصوب کرد و همه احزاب سیاسی منحل شدند. شورای مشورتی بازتأسیس نقش مشورتی/انتقالی دارد و جایگزین یک پارلمان انتخابی رقابتی نیست. ایدئولوژی رسمی مدون و حزبی وجود ندارد؛ گفتمان حاکم بر حاکمیت ملی و نقش محوری ارتش تأکید دارد.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Niger: Advisory Council for the Refoundation — May 2025",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/NE/NE-LC02/election/NE-LC01-E20250501/",
+          "date": "2025-05",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "party_system"
+          ],
+          "note": "منشور ۲۶ مارس ۲۰۲۵، سوگند تیانی به‌عنوان رئیس دوره انتقالی پنج‌ساله و تشکیل شورای مشورتی منصوب."
+        },
+        {
+          "name": "Niger — Junta adopts flexible transition plan, dissolves political parties",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/report/niger/march-2025?pid=7971",
+          "date": "2025-03",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "منشور انتقالی جایگزین قانون اساسی شد؛ دوره پنج‌ساله قابل تمدید و انحلال همه احزاب سیاسی."
+        },
+        {
+          "name": "Niger: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/niger/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "تثبیت قدرت نظامیان، انحلال نهادهای انتخابی و همه احزاب سیاسی."
+        },
+        {
+          "name": "Niger Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI",
+          "url": "https://bti-project.org/en/reports/country-report/NER",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "پس از کودتای ۲۰۲۳، CNSP کشور را با فرامین اداره می‌کند؛ نهادهای دموکراتیک تعلیق شده و زمان بازگشت به نظم انتخابی نامعلوم است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی baseline بر مبنای وضعیت مستند در ۵ نوامبر ۲۰۲۶؛ تحولات پس از این تاریخ در این رکورد اعمال نشده‌اند."
+      }
+    },
+    "MLI": {
+      "country_name_fa": "مالی",
+      "country_name_en": "Mali",
+      "government_form": "transitional_government",
+      "government_subform": "military_junta",
+      "executive_legislative_system": "military_council",
+      "territorial_structure": "transitional_or_disputed",
+      "regime_character": "military_rule",
+      "party_system": "no_legal_party_system",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "nationalism",
+        "military_nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "مالی در ۵ نوامبر ۲۰۲۶ همچنان زیر حاکمیت نظامی پس از کودتاهای ۲۰۲۰ و ۲۰۲۱ قرار داشت. منشور انتقالی اصلاح‌شده در ژوئیه ۲۰۲۵ به آسیمی گویتا دوره پنج‌ساله قابل تمدید تا زمان برقراری صلح اعطا کرد و فرمان مه ۲۰۲۵ همه احزاب و سازمان‌های سیاسی را منحل ساخت. شورای ملی انتقالی نهادی منصوب و تحت نفوذ قوه مجریه است، نه پارلمان منتخب مستقل. دولت کنترل کامل و بی‌چالش بر تمام قلمرو را ندارد و وضعیت مناطق شمالی و امنیتی محل مناقشه است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Journal Officiel: Law No. 2025-029 revising the Transition Charter",
+          "publisher": "Government of Mali — Secrétariat Général du Gouvernement",
+          "url": "https://sgg-mali.ml/JO/2025/mali-jo-2025-08-sp.pdf",
+          "date": "2025-07-08",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "regime_character"
+          ],
+          "note": "ماده ۴ اصلاحی به رئیس دوره انتقالی دوره پنج‌ساله قابل تمدید تا زمان pacification می‌دهد؛ ماده ۹ امکان نامزدی در انتخابات آتی را می‌دهد."
+        },
+        {
+          "name": "Decree No. 2025-0339 dissolving political parties",
+          "publisher": "Government of Mali — Journal Officiel",
+          "url": "https://sgg-mali.ml/JO/2025/mali-jo-2025-04-sp.pdf",
+          "date": "2025-05-13",
+          "supports": [
+            "party_system",
+            "regime_character"
+          ],
+          "note": "فرمان رسمی انحلال تمام احزاب و سازمان‌های دارای ماهیت سیاسی در سراسر کشور."
+        },
+        {
+          "name": "Mali: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/mali/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "government_form"
+          ],
+          "note": "تمدید دوره گویتا بدون انتخابات و انحلال احزاب سیاسی؛ نظامیان قدرت را حفظ کرده‌اند."
+        },
+        {
+          "name": "Mali Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI",
+          "url": "https://bti-project.org/en/reports/country-report/MLI",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "مقام‌های اصلی اجرایی و نهاد انتقالی در اختیار نظامیان؛ شورای انتقالی منصوب و فاقد استقلال مؤثر."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی baseline بر مبنای وضعیت مستند در ۵ نوامبر ۲۰۲۶؛ تحولات پس از این تاریخ در این رکورد اعمال نشده‌اند."
+      }
+    },
+    "MRT": {
+      "country_name_fa": "موریتانی",
+      "country_name_en": "Mauritania",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "semi_presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "hybrid_regime",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": [
+        "islamism"
+      ],
+      "ruling_party_ideology": [
+        "mixed_pragmatic",
+        "national_conservatism"
+      ],
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "national_conservatism"
+      ],
+      "ideology_notes": "موریتانی جمهوری اسلامی است و اسلام دین رسمی کشور و یکی از مبانی قانون اساسی است؛ این ثبت به معنای نظام تئوکراتیک نیست. قانون اساسی نظام نیمه‌ریاستی با رئیس‌جمهور قدرتمند، نخست‌وزیر منصوب رئیس‌جمهور و دولت پاسخگو به رئیس‌جمهور و مجلس را برقرار می‌کند. محمد ولد الغزوانی در انتخابات ۲۰۲۴ دوباره انتخاب شد. حزب انصاف (El Insaf) در انتخابات پارلمانی ۲۰۲۳ با ۱۰۷ کرسی از ۱۷۶ کرسی بزرگ‌ترین حزب شد؛ احزاب مخالف نیز حضور دارند، اما زمین رقابت نابرابر است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Election Snapshot: Mauritania Presidential Elections 2024",
+          "publisher": "International Foundation for Electoral Systems (IFES)",
+          "url": "https://www.ifes.org/sites/default/files/2024-06/Election%20Snapshot%20Mauritania%20Presidential%20Elections%202024.pdf",
+          "date": "2024-06",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "official_ideology"
+          ],
+          "note": "قانون اساسی نظام نیمه‌ریاستی با اختیارات برتر رئیس‌جمهور را برقرار می‌کند؛ رئیس‌جمهور نخست‌وزیر و وزیران را منصوب و عزل می‌کند."
+        },
+        {
+          "name": "Mauritania: National Assembly May 2023 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/MR/MR-LC01/election/MR-LC01-E20230513/",
+          "date": "2023-05-13",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology",
+            "ruling_coalition_ideology"
+          ],
+          "note": "حزب El Insaf با ۱۰۷ کرسی از ۱۷۶ کرسی اکثریت را به دست آورد؛ Tawassoul با ۱۱ کرسی بزرگ‌ترین حزب مخالف بود."
+        },
+        {
+          "name": "Mauritania: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/mauritania/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "وضعیت Partly Free؛ انتخابات نسبتاً معتبر در کنار محدودیت آزادی بیان، نابرابری سیاسی و خطر بازداشت روزنامه‌نگاران."
+        },
+        {
+          "name": "Mauritania Country Report 2026",
+          "publisher": "Bertelsmann Stiftung — BTI",
+          "url": "https://bti-project.org/en/reports/country-report/MRT",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "غلبه حزب El Insaf و رئیس‌جمهور غزوانی، همراه با زمین رقابت انتخاباتی نابرابر و ادعاهای جدی تخلف."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "موریتانی در قانون اساسی جمهوری اسلامی نامیده می‌شود، اما در این taxonomy به‌عنوان republic ثبت شده؛ اسلام به‌عنوان دین/اصل رسمی در official_ideology آمده و به معنای تئوکراسی نیست."
       }
     }
   }
