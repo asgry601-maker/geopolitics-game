@@ -374,3 +374,26 @@ All six mappings use the existing Wikimedia Commons Special:FilePath loader; no 
 - URY: https://commons.wikimedia.org/wiki/File:Yamandú_Orsi_en_agosto_de_2026_(cropped).jpg
 
 All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The engine's existing leader display-name entries were retained. The Guyana image is a dashboard-friendly portrait crop, while the Uruguay image is a newer, higher-resolution replacement for the small earlier portrait.
+
+
+## Package 24 — South America (6 countries)
+
+- **CHL — Chile:** José Antonio Kast — `Retrato presidencial de José Antonio Kast Rist (2026) (cropped).jpg`. Official presidential portrait, February 2026; source: Government of Chile / kitdigital.gob.cl; CC BY 3.0 Chile. Crop: 2,997 × 3,993 pixels. Attribution: Gobierno de Chile. The engine's former Gabriel Boric entry was updated to the president serving from 11 March 2026.
+- **COL — Colombia:** Abelardo de la Espriella — `Abelardo de la Espriella agosto de 2026.jpg`. Photograph dated 7 August 2026, source: Presidency of Ecuador Flickr stream, photograph credited to Isaac Castillo / Presidencia de la República del Ecuador; Commons currently records a U.S. public-domain rationale, with a territorial-rights caveat. Crop: 738 × 970 pixels. The engine's former Gustavo Petro entry was updated to the president inaugurated in August 2026.
+- **PER — Peru:** Keiko Fujimori — `Pdta. Keiko Fujimori.jpg`. Photograph dated 11 September 2026, Ministry of Production of Peru; released by the author on Flickr with Public Domain Mark. Crop: 1,206 × 1,523 pixels. The engine's former Dina Boluarte entry was updated to the president who took office on 28 July 2026.
+- **ECU — Ecuador:** Daniel Noboa — `Daniel Noboa.jpg`. Photograph dated 31 October 2025, Presidency of the Republic of Ecuador; the author marked the Flickr image as a Public Domain Work. Image: 1,429 × 1,497 pixels.
+- **BOL — Bolivia:** Rodrigo Paz — `President Rodrigo Paz Pereira 2025.jpg`. Photograph dated 8 November 2025, Directorate of Press, Presidency of Chile; CC BY 3.0 Chile. Crop: 646 × 823 pixels. Attribution: Estado de Chile.
+- **VEN — Venezuela:** Delcy Rodríguez — `Delcy Rodríguez portrait.jpg`. Photograph dated 26 September 2024, Government of the Russian Federation; CC BY-SA 4.0. Image: 550 × 713 pixels. The engine's former Nicolás Maduro entry was updated to Delcy Rodríguez, the acting president listed in the 30 October 2026 U.S. Congressional Research Service leaders fact sheet.
+
+### File pages
+- CHL: https://commons.wikimedia.org/wiki/File:Retrato_presidencial_de_José_Antonio_Kast_Rist_(2026)_(cropped).jpg
+- COL: https://commons.wikimedia.org/wiki/File:Abelardo_de_la_Espriella_agosto_de_2026.jpg
+- PER: https://commons.wikimedia.org/wiki/File:Pdta._Keiko_Fujimori.jpg
+- ECU: https://commons.wikimedia.org/wiki/File:Daniel_Noboa.jpg
+- BOL: https://commons.wikimedia.org/wiki/File:President_Rodrigo_Paz_Pereira_2025.jpg
+- VEN: https://commons.wikimedia.org/wiki/File:Delcy_Rodríguez_portrait.jpg
+
+### Current-leader reference
+- U.S. Congressional Research Service, *Latin America and the Caribbean: Fact Sheet on Leaders and Elections*, updated 30 October 2026. The report records the 2026 transitions in Chile, Colombia, Peru and Venezuela and the current leaders in Ecuador and Bolivia. The in-game leader-name fields were updated accordingly.
+
+All six mappings use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Please inspect the Colombia and Bolivia portraits at dashboard size. The Colombia file has a territorial copyright caveat recorded above; the Venezuela file is a 2024 portrait, but has a clearer face and a documented CC BY-SA 4.0 license.
