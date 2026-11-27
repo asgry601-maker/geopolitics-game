@@ -835,6 +835,10 @@ function politicalChangeFormHtml(pc, isPlayer) {
       h += '<div class="row"><span>شاخص واکنش احزاب</span><b>'+dashEsc(rv.party_score)+'</b></div><div class="dashNote">'+dashEsc(rv.outlook || '')+'</div>';
       var rr=rv.party_reactions || {};
       for (var pn in rr) if (rr.hasOwnProperty(pn)) h += '<div class="row"><span>'+dashEsc(pn)+'</span><b>'+dashEsc(rr[pn].current)+'٪ ← '+dashEsc(rr[pn].projected)+'٪</b></div>';
+      h += '<div class="row"><span>شاخص حمایت اجتماعی</span><b>'+dashEsc(rv.social_score)+' از ۱۰۰</b></div>';
+      var sr=rv.social_reactions || {};
+      h += '<div class="muted small">پیش‌بینی تغییر حمایت گروه‌های اجتماعی</div>';
+      for (var sn in sr) if (sr.hasOwnProperty(sn)) h += '<div class="row"><span>'+dashEsc(sn)+'</span><b>'+dashEsc(sr[sn].current)+'٪ ← '+dashEsc(sr[sn].projected)+'٪</b></div>';
       h += '<div class="dashNote">'+dashEsc(rv.note || '')+'</div></div>';
       h += '<button type="button" id="btnApprovePoliticalProposal" class="primary" data-proposal-id="'+dashEsc(activeProposal.id)+'">تصویب و آماده‌سازی اجرا</button> ';
       h += '<button type="button" id="btnRejectPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">رد طرح</button> ';
@@ -842,6 +846,30 @@ function politicalChangeFormHtml(pc, isPlayer) {
     if (activeProposal.status === 'pending' || activeProposal.status === 'reviewed') h += '<button type="button" id="btnCancelPoliticalProposal" class="secondary" data-proposal-id="'+dashEsc(activeProposal.id)+'">لغو طرح</button>';
     h += '</div>';
   }
+
+  var socialGroups = (ST && ST.social_groups) || {};
+  h += '<div class="dashCard"><b>📊 مقبولیت گروه‌های اجتماعی</b><div class="dashNote">درصدها شاخص‌های شبیه‌سازی بازی هستند و داده واقعی نظرسنجی محسوب نمی‌شوند.</div>';
+  for (var sg in socialGroups) if (socialGroups.hasOwnProperty(sg)) {
+    h += '<div class="row"><span>'+dashEsc(sg)+'</span><b>'+dashEsc(socialGroups[sg])+'٪</b></div>';
+  }
+  h += '</div>';
+
+  var politicalHistory = (ST && ST.political_history) || [];
+  if (politicalHistory.length) {
+    h += '<div class="dashCard"><b>📚 گزارش تاریخی اصلاحات سیاسی</b>';
+    var historyStart = Math.max(0, politicalHistory.length - 3);
+    for (var ph=historyStart;ph<politicalHistory.length;ph++) {
+      var historyItem = politicalHistory[ph] || {};
+      var historyImpact = historyItem.impact || {};
+      h += '<div class="dashNote"><b>طرح شماره '+dashEsc(historyItem.proposal_id)+'</b> · '+dashEsc(historyItem.date || '')+' · '+dashEsc((historyImpact.themes || []).join('، '))+'</div>';
+      var finalGroups = historyItem.social_groups_final || historyImpact.social_groups_final || {};
+      for (var fg in finalGroups) if (finalGroups.hasOwnProperty(fg)) {
+        h += '<div class="row"><span>'+dashEsc(fg)+'</span><b>'+dashEsc(finalGroups[fg])+'٪</b></div>';
+      }
+    }
+    h += '</div>';
+  }
+
   h += '<div class="dashGrid">';
   h += politicalEditSelect('government_form','نوع حکومت',pc.government_form);
   h += politicalEditSelect('government_subform','زیرنوع حکومت',pc.government_subform);
