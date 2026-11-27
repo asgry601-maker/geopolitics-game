@@ -376,8 +376,10 @@ def load_political_baseline():
     records = payload.get("countries") or {}
     runtime = {}
     missing = []
+    # نام داخلی موتور در این مورد با نام نقشه تفاوت املایی دارد.
+    name_aliases = {"دومینیکن": "دومینیکان"}
     for name in COUNTRIES:
-        meta = country_map.get(name) or {}
+        meta = country_map.get(name) or country_map.get(name_aliases.get(name, "")) or {}
         iso3 = meta.get("iso3")
         record = records.get(iso3) if iso3 else None
         if not isinstance(record, dict):
