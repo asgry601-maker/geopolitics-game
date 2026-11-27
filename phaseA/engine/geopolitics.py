@@ -479,8 +479,13 @@ def apply_player_political_change(s, changes):
             return dict(ok=False, error="نوع حکومت و زیرنوع انتخاب‌شده با هم سازگار نیستند؛ هر دو را به شکل هماهنگ انتخاب کن.")
 
     proposals = s.setdefault("political_reform_proposals", [])
-    if any(p.get("status") == "pending" for p in proposals):
-        return dict(ok=False, error="یک طرح اصلاحات در حال بررسی داری؛ ابتدا آن را لغو کن یا منتظر پایانش بمان.")
+    active_reform_statuses = set([
+        "pending", "reviewed", "approved", "executing",
+        "paused_funds", "paused_crisis"
+    ])
+    if any(isinstance(p, dict) and p.get("country") == player
+           and p.get("status") in active_reform_statuses for p in proposals):
+        return dict(ok=False, error="یک طرح اصلاحات فعال داری؛ ابتدا آن را لغو کن، رد کن یا منتظر پایان اجرای آن بمان.")
     # برآورد اولیه؛ در این بسته فقط طرح ثبت می‌شود و هنوز پولی کسر یا تغییری اعمال نمی‌شود.
     weights = {
         "government_form": 12, "government_subform": 8,
