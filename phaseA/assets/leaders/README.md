@@ -137,7 +137,7 @@
 | BRA | برزیل — لوئیز ایناسیو لولا دا سیلوا | 09.07.2026 - Presidente Lula.jpg | Lula Oficial؛ عکس Ricardo Stuckert، ۹ ژوئیهٔ ۲۰۲۶؛ CC BY-SA 4.0 |
 | AUS | استرالیا — آنتونی آلبانیزی | Anthony Albanese Official Portrait.jpg | David Foote (AUSPIC / Department of Parliamentary Service)؛ CC BY 4.0 طبق شرایط DFAT |
 | UKR | اوکراین — ولودیمیر زلنسکی | Volodymyr Zelensky Official portrait.jpg | President.gov.ua؛ CC BY 4.0 (طبق صفحهٔ فایل برای عکس‌های منتشرشده پیش از ۴ اکتبر ۲۰۲۲) |
-| CAN | کانادا — مارک کارنی | Mark Carney portrait May 2025.jpg | Daniel Torok / کاخ سفید؛ Public Domain (اثر کارمند دولت فدرال آمریکا) |
+| CAN | کانادا — مارک کارنی | Mark Carney im Bundeskanzleramt 2025 (cropped).jpg | Dr. Frank Gaeth؛ CC BY-SA 4.0 |
 | ITA | ایتالیا — جورجیا ملونی | Giorgia Meloni Official 2024 (cropped).jpg | Governo Italiano؛ CC BY 3.0 Italy |
 | POL | لهستان — دونالد توسک | Donald Tusk 2025.jpg | Gov.pl / دفتر نخست‌وزیر لهستان؛ CC BY 3.0 Poland |
 | ARG | آرژانتین — خاویر میلی | Retrato oficial del Presidente Javier Milei.png | Gobierno argentino؛ CC BY 4.0 |
@@ -145,7 +145,7 @@
 | MYS | مالزی — انور ابراهیم | Anwar Ibrahim June 2025.jpg | Laily Rachev / دولت اندونزی؛ Public Domain طبق قانون اندونزی |
 | PAK | پاکستان — شهباز شریف | Shehbaz Sharif - 2025 (cropped).jpg | Press Service of the President of Azerbaijan؛ CC BY 4.0 |
 
-### صفحات منبع بسته دوم
+### صفحات منبع بسته دوم و سوم
 - ژاپن: https://commons.wikimedia.org/wiki/File:Official_portrait_of_Sanae_Takaichi,_Prime_Minister_of_Japan_(HD).jpg
 - هند: https://commons.wikimedia.org/wiki/File:Official_Photograph_of_Prime_Minister_Narendra_Modi_Portrait.png
 - کره جنوبی: https://commons.wikimedia.org/wiki/File:President_Lee_Jae_Myung.jpg
@@ -153,7 +153,7 @@
 - برزیل: https://commons.wikimedia.org/wiki/File:09.07.2026_-_Presidente_Lula.jpg
 - استرالیا: https://commons.wikimedia.org/wiki/File:Anthony_Albanese_Official_Portrait.jpg
 - اوکراین: https://commons.wikimedia.org/wiki/File:Volodymyr_Zelensky_Official_portrait.jpg
-- کانادا: https://commons.wikimedia.org/wiki/File:Mark_Carney_portrait_May_2025.jpg
+- کانادا: https://commons.wikimedia.org/wiki/File:Mark_Carney_im_Bundeskanzleramt_2025_(cropped).jpg
 - ایتالیا: https://commons.wikimedia.org/wiki/File:Giorgia_Meloni_Official_2024_(cropped).jpg
 - لهستان: https://commons.wikimedia.org/wiki/File:Donald_Tusk_2025.jpg
 - آرژانتین: https://commons.wikimedia.org/wiki/File:Retrato_oficial_del_Presidente_Javier_Milei.png
