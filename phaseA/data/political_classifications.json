@@ -3308,13 +3308,8 @@
         "liberal_conservatism",
         "mixed_pragmatic"
       ],
-      "ruling_coalition_ideology": [
-        "liberalism",
-        "conservatism",
-        "green_politics",
-        "mixed_pragmatic"
-      ],
-      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، انتخابات ۳ اکتبر برگزار شده و پانزدهمین Saeima در ۳ نوامبر نخستین نشست خود را برگزار کرده بود. فهرست United List با ۴۱ کرسی بزرگ‌ترین نیروی پارلمان جدید بود و رئیس‌جمهور در ۴ نوامبر از نخست‌وزیر مستقر Andris Kulbergs، رهبر United List، دعوت کرده بود دولت جدید را تشکیل دهد؛ اما تا تاریخ مبنا کابینه جدید هنوز رأی اعتماد نگرفته و دولت قبلی در وضعیت اداره امور/سرپرستی قرار داشت. ازاین‌رو ائتلاف انتخاباتیِ پیروز را نباید به‌عنوان کابینه جدیدِ تشکیل‌شده ثبت کرد. گرایش United List به‌صورت محتاطانه میانه‌رو/میانه‌راست و عمل‌گرایانه ثبت شده؛ ایدئولوژی ائتلاف کابینه جدید هنوز قطعی نبود. داده ائتلاف دولت پیشین به‌عنوان ائتلاف جدید کپی نشده است.",
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در ۵ نوامبر ۲۰۲۶، انتخابات ۳ اکتبر برگزار شده و پانزدهمین Saeima در ۳ نوامبر نخستین نشست خود را برگزار کرده بود. فهرست United List با ۴۱ کرسی بزرگ‌ترین نیروی پارلمان جدید بود و رئیس‌جمهور در ۴ نوامبر از نخست‌وزیر مستقر Andris Kulbergs، رهبر United List، دعوت کرده بود دولت جدید را تشکیل دهد؛ اما تا تاریخ مبنا کابینه جدید هنوز رأی اعتماد نگرفته و دولت قبلی در وضعیت اداره امور/سرپرستی قرار داشت. ازاین‌رو ائتلاف انتخاباتیِ پیروز را نباید به‌عنوان کابینه جدیدِ تشکیل‌شده ثبت کرد. گرایش United List به‌صورت محتاطانه میانه‌رو/میانه‌راست و عمل‌گرایانه ثبت شده؛ ایدئولوژی ائتلاف کابینه جدید هنوز قطعی نبود و به همین دلیل فیلد ائتلاف حاکم null است. داده ائتلاف دولت پیشین به‌عنوان ائتلاف جدید کپی نشده است.",
       "classification_confidence": "medium",
       "classification_sources": [
         {
@@ -3345,7 +3340,7 @@
           "name": "Recent Political Developments – Investor Presentation Latvia November 2026",
           "publisher": "Latvian Investment and Development Agency / KASE",
           "url": "https://www.kase.gov.lv/sites/default/files/2026-11/Investor%20Presentation_Latvia_November.pdf",
-          "date": "2026-11-2026",
+          "date": "2026-11",
           "supports": [
             "ruling_party_ideology",
             "party_system",
@@ -3547,7 +3542,7 @@
       "executive_legislative_system": "parliamentary",
       "territorial_structure": "unitary",
       "regime_character": "liberal_democracy",
-      "party_system": "competitive_two_party_dominant",
+      "party_system": "two_party_dominant",
       "official_ideology": null,
       "ruling_party_ideology": [
         "social_democracy",
