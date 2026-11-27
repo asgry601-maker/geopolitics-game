@@ -193,3 +193,23 @@ All six image references use the existing Wikimedia Commons Special:FilePath loa
 - VNM: https://commons.wikimedia.org/wiki/File:President_of_Vietnam,_Mr._T%C3%B4_L%C3%A2m_(cropped).jpg
 
 All six images use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. The leader names were already present in the engine dictionary and were not changed in this package. Review each portrait at the dashboard's actual size; request a replacement if a face is unclear or the crop is not suitable.
+
+
+## Package 15 — Africa (6 countries)
+
+- **UGA — Uganda:** Yoweri Museveni — `Yoweri K. Museveni (portrait, 2018).jpg`. Photograph dated 24 July 2018; own work by Reda Raouchaia; CC BY-SA 4.0. Attribution: Reda Raouchaia. Original file 500 × 654 pixels. Older portrait; selected for a clear, portrait-format composition.
+- **GHA — Ghana:** John Dramani Mahama — `John Mahama.png`. Photograph dated 28 August 2014; source image `John Dramani Mahama and John Kerry 2014.jpg`; author: U.S. Department of State. Public domain in the United States as a U.S. federal-government work. Original file 1,304 × 1,312 pixels. Older image, chosen for its clear, centered face and usable square crop.
+- **SEN — Senegal:** Bassirou Diomaye Faye — `Président Diomaye Faye.jpg`. Photograph dated 8 November 2024; source: Akphoto Sn; author credited on Commons as Bassirou Diomaye Faye; CC BY 4.0. Original file 1,284 × 1,263 pixels.
+- **TZA — Tanzania:** Samia Suluhu Hassan — `Samia Suluhu at the XXIX St Petersburg International Economic Forum - 2026 (cropped).jpg`. Photograph dated 5 June 2026; source and author: Kremlin.ru; CC BY 4.0. Attribution: Kremlin.ru. Cropped file 479 × 707 pixels.
+- **RWA — Rwanda:** Paul Kagame — `Kagame Paul.jpg`. Photograph dated 12 November 2024; own work by Mut.Greg; CC0 1.0. Original file 1,024 × 820 pixels.
+- **CIV — Côte d'Ivoire:** Alassane Ouattara — `Alassane Ouattara - 2024 (cropped).jpg`. Photograph dated 25 April 2024; author: Dario Pignatelli / European Union; European Commission reuse policy allows reuse with attribution. Attribution: © European Union, 1998–2026. Cropped image is extracted from the original 3,190 × 4,785-pixel file.
+
+### File pages
+- UGA: https://commons.wikimedia.org/wiki/File:Yoweri_K._Museveni_(portrait,_2018).jpg
+- GHA: https://commons.wikimedia.org/wiki/File:John_Mahama.png
+- SEN: https://commons.wikimedia.org/wiki/File:Président_Diomaye_Faye.jpg
+- TZA: https://commons.wikimedia.org/wiki/File:Samia_Suluhu_at_the_XXIX_St_Petersburg_International_Economic_Forum_-_2026_(cropped).jpg
+- RWA: https://commons.wikimedia.org/wiki/File:Kagame_Paul.jpg
+- CIV: https://commons.wikimedia.org/wiki/File:Alassane_Ouattara_-_2024_(cropped).jpg
+
+The existing country-leader dictionary already contained the leaders for all six countries. Tanzania's previously incorrect display value was corrected to Samia Suluhu Hassan. All six images use the existing Wikimedia Commons Special:FilePath loader; no image binaries were added. Review the portraits in the dashboard at their actual display size; the Uganda and Ghana images are older, and Tanzania's crop is relatively small.
