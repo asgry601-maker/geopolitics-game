@@ -364,6 +364,41 @@ HELP = """
 پایان دور: end  → یک روز جلو می‌رود؛ ظاهر گزارش: احزاب، مطبوعات، جنگ‌ها، بازار سلاح.
 """
 
+def load_political_baseline():
+    """بارگذاری baseline سیاسی از داده‌های ثابت و ساخت نسخه مستقل برای هر ذخیره."""
+    data_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+    classifications_path = os.path.join(data_dir, "political_classifications.json")
+    country_map_path = os.path.join(data_dir, "country_map.json")
+    with open(classifications_path, encoding="utf-8") as f:
+        payload = json.load(f)
+    with open(country_map_path, encoding="utf-8") as f:
+        country_map = json.load(f)
+    records = payload.get("countries") or {}
+    runtime = {}
+    missing = []
+    for name in COUNTRIES:
+        meta = country_map.get(name) or {}
+        iso3 = meta.get("iso3")
+        record = records.get(iso3) if iso3 else None
+        if not isinstance(record, dict):
+            missing.append("%s (%s)" % (name, iso3 or "بدون ISO3"))
+        else:
+            runtime[name] = record
+    if missing:
+        raise ValueError("طبقه‌بندی سیاسی برای کشورها ناقص است: " + "، ".join(missing[:12]))
+    expected = int(payload.get("coverage", {}).get("expected_countries", len(runtime)))
+    if expected != len(runtime):
+        raise ValueError("تعداد کشورهای baseline با موتور یکسان نیست: %d در برابر %d" %
+                         (expected, len(runtime)))
+    meta = {
+        "schema_version": payload.get("schema_version", "unknown"),
+        "scenario_reference_date": payload.get("scenario_reference_date", ""),
+        "source_file": "data/political_classifications.json",
+        "country_count": len(runtime),
+    }
+    return runtime, meta
+
+
 def load():
     with open(STATE, encoding="utf-8") as f:
         s = json.load(f)
@@ -387,6 +422,18 @@ def load():
     s.setdefault("hour", 0)
     s.setdefault("minute", 0)
     s.setdefault("elapsed_days", 0)
+    # مهاجرت ذخیره‌های قدیمی: ساخت نسخه runtime مستقل از baseline ثابت سیاسی
+    political_state = s.get("political_state")
+    if not isinstance(political_state, dict):
+        political_state = {}
+        s["political_state"] = political_state
+    missing_political = [n for n in s.get("world", {}) if n not in political_state]
+    if missing_political or not isinstance(s.get("political_baseline"), dict):
+        baseline, baseline_meta = load_political_baseline()
+        for n in missing_political:
+            political_state[n] = baseline[n]
+        s["political_baseline"] = baseline_meta
+        save(s)
     # مهاجرت ذخیره‌های قدیمی به ساختار politics سراسری
     if "politics" not in s:
         p = s.get("player", "")
@@ -1098,11 +1145,13 @@ def init_game(player):
         allies0 = [n for n in NATO if n != player and n in COUNTRIES]
     elif player in US_PACT:
         allies0 = ["آمریکا"]
+    political_state, political_baseline = load_political_baseline()
     state = dict(
         player=player, year=START_YEAR, turn=1, ap="\u221e", over=False,
         world=world, relations=rel,
         allies=allies0, pacts=pacts0,
         politics={n: dict(parties=dict(PARTY_BASE if n == player else AI_PARTY_BASE), press=[]) for n in COUNTRIES},
+        political_state=political_state, political_baseline=political_baseline,
         turn_events={},
         log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
