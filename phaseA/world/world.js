@@ -614,7 +614,13 @@ function dashSectionHtml(r, isPlayer, tab) {
         CPV: 'José Maria Neves, 2023.jpg',
         LSO: 'Sam Matekane candidate (cropped).jpg',
         SWZ: 'Mswati III 20261010.jpg',
-        GMB: 'President Adama Barrow Republic of The Gambia.jpg'
+        GMB: 'President Adama Barrow Republic of The Gambia.jpg',
+        AFG: 'Hasan Akhund 2026.jpg',
+        BWA: 'Duma Boko 2025 (cropped).jpg',
+        GNB: 'Le Tchad célèbre ce mardi 11 août 2026 le 66ᵉ anniversaire 101 (cropped).jpg',
+        PRY: 'Santiago Peña mayo 2026 (cropped).jpg',
+        CUB: 'Miguel Díaz-Canel 2025.jpg',
+        HTI: '2026 Alix Didier Fils-Aimé (cropped).jpg'
       };
       var leaderPortrait = r.iso3 && leaderCommonsFiles[r.iso3]
         ? 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(leaderCommonsFiles[r.iso3])
