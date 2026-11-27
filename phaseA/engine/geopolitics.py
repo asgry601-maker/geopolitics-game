@@ -720,6 +720,9 @@ def load():
         s["political_history"] = []
     if not isinstance(s.get("turn_events"), dict):
         s["turn_events"] = {}
+    if not isinstance(s.get("game_events"), list):
+        s["game_events"] = []
+    s.setdefault("event_sequence", 0)
     s.setdefault("proxies", [])
     s.setdefault("day", 1)
     s.setdefault("iaea_heat", 0)
@@ -1432,6 +1435,7 @@ def init_game(player):
         social_groups={player: dict(SOCIAL_GROUP_BASE)},
         legitimacy=50.0, regime_crisis=None,
         turn_events={},
+        game_events=[], event_sequence=0,
         log=["۵ نوامبر ۲۰۲۶: تو رهبر %s شدی. جهان در آستانه یک دوران پرآشوب است." % player],
         at_war=[], eliminated=[], proxies=[],
         game_date=START_DATE.isoformat(), hour=0, minute=0, elapsed_days=0,
@@ -1616,6 +1620,46 @@ PRESS_OUTLETS = [
         "pact": "امنیت تجاری با {t}; نرخ ریسک افت کرد",
     }, idle=["بورس روزی آرام", "بانک مرکزی: تورم مهارشدنی است", "زیرساخت: رویداد اقتصادی هفته"]),
 ]
+
+EVENT_CATEGORIES = (
+    "political", "economic", "trade", "military",
+    "social", "diplomatic", "natural", "environmental"
+)
+
+
+def register_game_event(s, category, country=None, title="", description="",
+                        severity=1, source="system", metadata=None):
+    """ثبت یک رویداد ساختاریافته؛ این تابع به‌تنهایی هیچ پیامد بازی اعمال نمی‌کند."""
+    if category not in EVENT_CATEGORIES:
+        raise ValueError("دسته‌بندی رویداد نامعتبر است: %s" % category)
+    if country is not None and country not in (s.get("world") or {}):
+        raise ValueError("کشور رویداد در جهان بازی وجود ندارد: %s" % country)
+    try:
+        severity = int(severity)
+    except (TypeError, ValueError):
+        severity = 1
+    severity = max(1, min(5, severity))
+    s["event_sequence"] = int(s.get("event_sequence", 0)) + 1
+    event_id = "EV-%06d" % s["event_sequence"]
+    event = {
+        "id": event_id,
+        "category": category,
+        "country": country,
+        "date": s.get("game_date", ""),
+        "title": str(title or ""),
+        "description": str(description or ""),
+        "severity": severity,
+        "status": "recorded",
+        "source": str(source or "system"),
+        "effects_applied": False,
+        "metadata": dict(metadata or {})
+    }
+    events = s.setdefault("game_events", [])
+    events.append(event)
+    if len(events) > 500:
+        del events[:-500]
+    return event
+
 
 def ev(s, who, *args):
     s.setdefault("turn_events", {}).setdefault(who, []).append(list(args))
