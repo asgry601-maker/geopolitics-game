@@ -482,7 +482,7 @@ function dashSectionHtml(r, isPlayer, tab) {
         BRA: '09.07.2026 - Presidente Lula.jpg',
         AUS: 'Anthony Albanese Official Portrait.jpg',
         UKR: 'Volodymyr Zelensky Official portrait.jpg',
-        CAN: 'Mark Carney portrait May 2025.jpg',
+        CAN: 'Mark Carney im Bundeskanzleramt 2025 (cropped).jpg',
         ITA: 'Giorgia Meloni Official 2024 (cropped).jpg',
         POL: 'Donald Tusk 2025.jpg',
         ARG: 'Retrato oficial del Presidente Javier Milei.png',
