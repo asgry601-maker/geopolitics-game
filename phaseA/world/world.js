@@ -1381,8 +1381,10 @@ function dashSectionHtml(r, isPlayer, tab) {
     if (PROV.sel) h += provPanelHtml();
     else h += '<div class="dashNote">برای مشاهده اطلاعات جغرافیایی پایه، یک استان از روی کره انتخاب کن. داده زیرساختی استان در مرحله بعد اضافه می‌شود.</div>';
   } else if (tab === 'military') {
-    h += '<h3>🛡 وضعیت نظامی</h3><div class="dashGrid">';
-    h += dashMetric('قدرت نظامی',r.mil) + dashMetric('فناوری',r.tech);
+    h += '<h3>🛡 وضعیت نظامی</h3><div class="dashCard">';
+    h += dashPercentBar('قدرت نظامی',r.mil);
+    h += dashPercentBar('فناوری',r.tech);
+    h += '</div><div class="dashGrid">';
     h += dashMetric('کلاهک هسته‌ای (شاخص فعلی)',r.nukes) + dashMetric('تجهیزات ثبت‌شده',r.arsenal.length);
     h += '</div>';
     if (r.arsenal.length) { h += '<h3>تجهیزات ثبت‌شده فعلی</h3>'; for(i=0;i<r.arsenal.length;i++) h += '<div class="dashCard small">'+dashEsc(r.arsenal[i])+'</div>'; }
@@ -1448,7 +1450,7 @@ function dashSectionHtml(r, isPlayer, tab) {
     h += '<h3>🏛 تریبون ملی</h3>';
     if (isPlayer && ST && ST.regime_crisis) {
       var crisis = ST.regime_crisis;
-      var crisisLabel = crisis.kind === 'revolution' ? 'انقلاب' : 'کودتا';
+      var crisisLabel = crisis.kind === 'coup_crisis' ? 'بحران کودتا' : (crisis.kind === 'revolution_crisis' ? 'بحران انقلاب' : (crisis.kind === 'revolution' ? 'انقلاب' : 'کودتا'));
       h += '<div class="tribuneLocked"><b>⚠️ بحران تغییر حکومت: '+dashEsc(crisisLabel)+'</b><br>';
       h += 'تاریخ رخداد: '+dashEsc(crisis.date || '—')+'<br>';
       h += 'مشروعیت فعلی حکومت: <b>'+dashEsc(ST.legitimacy)+'٪</b><br>';
