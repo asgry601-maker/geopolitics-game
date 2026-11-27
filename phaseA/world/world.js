@@ -1455,7 +1455,17 @@ function dashSectionHtml(r, isPlayer, tab) {
       h += 'تاریخ رخداد: '+dashEsc(crisis.date || '—')+'<br>';
       h += 'مشروعیت فعلی حکومت: <b>'+dashEsc(ST.legitimacy)+'٪</b><br>';
       h += 'ثبات هنگام رخداد: '+dashEsc(crisis.stability_at_event)+'٪<br>';
-      h += 'وضعیت: در انتظار فعال‌سازی هوش مصنوعی زنده و آغاز گفت‌وگو با نهاد سیاسی متناسب با ساختار حکومت.</div>';
+      if (crisis.kind === 'coup_crisis' || crisis.kind === 'revolution_crisis') {
+        h += 'میانگین حمایت اجتماعی هنگام رخداد: '+dashEsc(crisis.social_support_average)+'٪<br>';
+        h += 'قدرت نظامی هنگام رخداد: '+dashEsc(crisis.military_strength_at_event)+'٪<br>';
+      }
+      if (crisis.institution) {
+        h += '<hr><b>نهاد سیاسی متناظر با ساختار کشور</b><br>';
+        h += dashEsc(crisis.institution.name || 'نامشخص')+'<br>';
+        h += '<span class="muted small">مبنای تشخیص: '+dashEsc(crisis.institution.basis || 'نامشخص')+'</span><br>';
+        h += dashEsc(crisis.institution.focus || '')+'<br>';
+      }
+      h += 'وضعیت: در انتظار فعال‌سازی هوش مصنوعی زنده؛ هیچ گفت‌وگوی ساختگی اجرا نمی‌شود.</div>';
     } else {
       h += '<div class="tribuneLocked"><b>این بخش هنوز فعال نشده است.</b><br>گفت‌وگوی زنده با شورای ملی / کنگره و مردم فقط پس از فعال‌سازی رسمی هوش مصنوعی زنده در بازی در دسترس قرار می‌گیرد. در حال حاضر هیچ گفت‌وگوی شبیه‌سازی‌شده یا پاسخ از پیش‌نوشته‌شده‌ای جایگزین هوش مصنوعی زنده نمی‌شود.</div>';
     }
