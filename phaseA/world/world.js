@@ -368,12 +368,15 @@ function renderEventTalkState() {
   var context = [];
   if (confidential) context.push('مذاکره محرمانه');
   if (alliance) context.push('مذاکره با اتحاد');
+  var feed = el('eventStatementFeed');
   if (!context.length) {
     if (title) title.textContent = 'پنجره بیانیه‌ها · حالت عمومی';
     if (note) note.textContent = 'حالت عمومی فعال است؛ با روشن‌کردن هر گزینه، پنجره بیانیه به موضوع همان مذاکره تغییر می‌کند.';
+    if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'بیانیه‌ای برای نمایش وجود ندارد. پس از اتصال هوش مصنوعی زنده، بیانیه‌های عمومی کشورها در این قسمت نمایش داده می‌شوند.';
   } else {
     if (title) title.textContent = 'پنجره بیانیه‌ها · ' + context.join(' + ');
     if (note) note.textContent = 'زمینه فعلی پنجره بیانیه: ' + context.join(' و ') + '. با خاموش‌کردن گزینه‌ها، پنجره به حالت عمومی برمی‌گردد.';
+    if (feed && feed.querySelector('.eventStatementEmpty')) feed.querySelector('.eventStatementEmpty').textContent = 'هنوز بیانیه‌ای در زمینه ' + context.join(' و ') + ' وجود ندارد. پس از اتصال هوش مصنوعی زنده، محتوای مرتبط در این قسمت نمایش داده می‌شود.';
   }
 }
 function bindEventTalkControls() {
