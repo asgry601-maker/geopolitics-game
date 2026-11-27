@@ -6,14 +6,14 @@
   "purpose": "طبقه‌بندی ساختاریافته و مستقل از پرونده‌های پژوهشی سیاسی؛ baseline تاریخی آغاز بازی است و نباید در اثر تغییرات runtime بازنویسی شود.",
   "coverage": {
     "expected_countries": 174,
-    "classified_countries": 110,
-    "pending_countries": 64,
+    "classified_countries": 115,
+    "pending_countries": 59,
     "last_batch": [
-      "UGA",
-      "TZA",
-      "RWA",
-      "ZWE",
-      "ZMB"
+      "MOZ",
+      "AGO",
+      "NAM",
+      "BWA",
+      "SDN"
     ]
   },
   "countries": {
@@ -7965,6 +7965,375 @@
         "last_verified": "2026-11-27",
         "scenario_snapshot_date": "2026-11-05",
         "notes": "نتایج انتخابات اوت ۲۰۲۶ و تحلیف سپتامبر ۲۰۲۶ پیش از تاریخ مبنا هستند؛ به علت اختلافات پس از انتخابات، اطمینان طبقه‌بندی رژیم متوسط تعیین شده است."
+      }
+    },
+    "MOZ": {
+      "country_name_fa": "موزامبیک",
+      "country_name_en": "Mozambique",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی کشور را به‌عنوان جمهوری تعریف می‌کند و رئیس‌جمهور هم رئیس کشور و هم رئیس دولت است. FRELIMO از جنبش آزادی‌بخش با ریشه‌های مارکسیستی/سوسیالیستی به حزب حاکم دیرپا تبدیل شده؛ در دوره معاصر، ملی‌گرایی و عمل‌گرایی حکومتی نیز در آن برجسته است. نظام چندحزبی رسمی است، اما تسلط مستمر FRELIMO و مناقشات جدی درباره سلامت انتخابات، رقابت را نابرابر کرده است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Constitution of the Republic of Mozambique",
+          "publisher": "Republic of Mozambique / Refworld",
+          "url": "https://www.refworld.org/sites/default/files/2025-07/constitution_mozambique_english_1.pdf",
+          "date": "2025",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "مواد مربوط به رئیس‌جمهور؛ رئیس‌جمهور رئیس دولت و رئیس قوه مجریه است."
+        },
+        {
+          "name": "Mozambique: October 2024 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/MZ/MZ-LC01/election/MZ-LC01-E20241009/",
+          "date": "2024-10-09",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "FRELIMO با ۱۷۱ کرسی از ۲۵۰ کرسی اکثریت دوسوم را حفظ کرد؛ PODEMOS، RENAMO و MDM نیز کرسی گرفتند."
+        },
+        {
+          "name": "Mozambique: Global State of Democracy country profile",
+          "publisher": "International IDEA",
+          "url": "https://www.idea.int/democracytracker/country/mozambique",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نظام ریاستی، ریاست‌جمهوری دانیل چاپو از ۲۰۲۵ و تسلط مستمر FRELIMO؛ ضعف کنترل مؤثر قوه مقننه بر ریاست‌جمهوری."
+        },
+        {
+          "name": "Mozambique: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/mozambique/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "وضعیت Partly Free، کنترل نهادی FRELIMO و مناقشات و خشونت‌های پس از انتخابات ۲۰۲۴."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مبنای آغاز سناریو در ۵ نوامبر ۲۰۲۶ را توصیف می‌کند؛ تحولات پس از این تاریخ در baseline اعمال نشده‌اند."
+      }
+    },
+    "AGO": {
+      "country_name_fa": "آنگولا",
+      "country_name_en": "Angola",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_authoritarian",
+      "party_system": "dominant_party_noncompetitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "socialism",
+        "nationalism",
+        "mixed_pragmatic"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "قانون اساسی ۲۰۱۰ رئیس‌جمهور را رئیس کشور و رئیس قوه مجریه می‌داند؛ فردی که فهرست حزبیِ پیروز انتخابات عمومی را رهبری می‌کند رئیس‌جمهور می‌شود. MPLA از جنبش آزادی‌بخش با گذشته سوسیالیستی و مارکسیستی به حزب حاکم عمل‌گرا و ملی‌گرا تبدیل شده است. UNITA رقیب اصلی و دارای حضور پارلمانی قابل توجه است، اما MPLA از استقلال ۱۹۷۵ تاکنون قدرت اجرایی را حفظ کرده و از مزیت ساختاری برخوردار است.",
+      "classification_confidence": "medium",
+      "classification_sources": [
+        {
+          "name": "Constitution of the Republic of Angola (2010)",
+          "publisher": "Constitute Project",
+          "url": "https://www.constituteproject.org/constitution/Angola_2010",
+          "date": "2010-02-05",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "قانون اساسی و ساختار ریاست‌جمهوری؛ رئیس‌جمهور رئیس کشور و رئیس قوه مجریه است."
+        },
+        {
+          "name": "Angola: National Assembly August 2022 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/AO/AO-LC01/election/AO-LC01-E20220824/",
+          "date": "2022-08-24",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "MPLA با ۱۲۴ کرسی اکثریت را حفظ کرد و UNITA با ۹۰ کرسی به اپوزیسیون اصلی تبدیل شد."
+        },
+        {
+          "name": "BTI 2026 Angola Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/AGO",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "نظام چندحزبی رسمی اما عملاً تحت سلطه MPLA؛ کنترل گسترده حزب بر نهادهای دولتی و ویژگی‌های اقتدارگرایانه."
+        },
+        {
+          "name": "Angola: Freedom in the World 2024",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/angola/freedom-world/2024",
+          "date": "2024",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "محدودیت رقابت درون‌حزبی و مزیت ساختاری MPLA؛ انتخابات ۲۰۲۲ و توزیع کرسی‌ها."
+        }
+      ],
+      "data_quality": {
+        "confidence": "medium",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مبنای آغاز سناریو در ۵ نوامبر ۲۰۲۶ را توصیف می‌کند؛ تحولات پس از این تاریخ در baseline اعمال نشده‌اند."
+      }
+    },
+    "NAM": {
+      "country_name_fa": "نامیبیا",
+      "country_name_en": "Namibia",
+      "government_form": "republic",
+      "government_subform": "presidential_republic",
+      "executive_legislative_system": "presidential",
+      "territorial_structure": "unitary",
+      "regime_character": "electoral_democracy",
+      "party_system": "dominant_party_competitive",
+      "official_ideology": null,
+      "ruling_party_ideology": [
+        "social_democracy",
+        "nationalism"
+      ],
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "نامیبیا جمهوری با رئیس‌جمهور منتخب مستقیم و اختیارات اجرایی گسترده است. SWAPO از زمان استقلال در ۱۹۹۰ حزب حاکم بوده، اما انتخابات رقابتی و احزاب مخالف دارای نمایندگی واقعی‌اند. ریشه‌های SWAPO در جنبش آزادی‌بخش و سنت سوسیالیستی/سوسیال‌دموکراتیک قرار دارد؛ این گرایش، ایدئولوژی رسمی کشور محسوب نمی‌شود.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Constitution of Namibia — English Annotated Edition",
+          "publisher": "Electoral Commission of Namibia",
+          "url": "https://www.ecn.na/wp-content/uploads/2024/11/Constitution-of-Namibia-English-2021.pdf",
+          "date": "2021",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure"
+          ],
+          "note": "رئیس‌جمهور با رأی مستقیم انتخاب می‌شود و ریاست قوه مجریه را بر عهده دارد؛ ساختار پارلمانی دو مجلسی."
+        },
+        {
+          "name": "Namibia: November 2024 National Assembly Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/NA/NA-LC01/election/NA-LC01-E20241127/",
+          "date": "2024-11-27",
+          "supports": [
+            "party_system",
+            "ruling_party_ideology"
+          ],
+          "note": "SWAPO با ۵۱ کرسی از ۹۶ کرسی انتخابی اکثریت را حفظ کرد؛ IPC با ۲۰ کرسی دوم شد و Netumbo Nandi-Ndaitwah رئیس‌جمهور شد."
+        },
+        {
+          "name": "Namibia: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/namibia/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "نامیبیا دموکراسی چندحزبی آزاد ارزیابی شده، هرچند SWAPO از استقلال تاکنون حاکم بوده است."
+        },
+        {
+          "name": "BTI 2026 Namibia Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://www.ecoi.net/en/file/local/2138448/country_report_2026_NAM.pdf",
+          "date": "2026",
+          "supports": [
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "جمهوری با پارلمان دو مجلسی و انتخابات رقابتی؛ اختیارات اجرایی گسترده رئیس‌جمهور و برتری تاریخی حزب حاکم."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مبنای آغاز سناریو در ۵ نوامبر ۲۰۲۶ را توصیف می‌کند؛ تحولات پس از این تاریخ در baseline اعمال نشده‌اند."
+      }
+    },
+    "BWA": {
+      "country_name_fa": "بوتسوانا",
+      "country_name_en": "Botswana",
+      "government_form": "republic",
+      "government_subform": "parliamentary_republic",
+      "executive_legislative_system": "parliamentary",
+      "territorial_structure": "unitary",
+      "regime_character": "liberal_democracy",
+      "party_system": "competitive_multi_party",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": [
+        "mixed_pragmatic",
+        "social_democracy"
+      ],
+      "ideology_notes": "بوتسوانا جمهوری پارلمانی با رئیس‌جمهوری است که از طریق سازوکار انتخابات پارلمانی به قدرت می‌رسد و ریاست قوه مجریه را بر عهده دارد. انتخابات اکتبر ۲۰۲۴ به نخستین انتقال قدرت میان احزاب از زمان استقلال انجامید؛ ائتلاف UDC با ۳۶ کرسی اکثریت را به دست آورد و دومـا بوکو رئیس‌جمهور شد. ایدئولوژی رسمی کشور وجود ندارد و چون UDC ائتلافی از احزاب با گرایش‌های متنوع است، گرایش ائتلاف به‌صورت ترکیبی/عمل‌گرا ثبت شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Constitution of Botswana",
+          "publisher": "Government of Botswana — Botswana Laws",
+          "url": "https://elaws.gov.bw/constitution-of-botswana/constitution-of-botswana/",
+          "date": "1966 (as amended)",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system"
+          ],
+          "note": "ترکیب پارلمان، انتخاب اعضای مجلس ملی و جایگاه رئیس‌جمهور در ساختار پارلمانی."
+        },
+        {
+          "name": "Botswana: National Assembly October 2024 Election Results",
+          "publisher": "Inter-Parliamentary Union",
+          "url": "https://data.ipu.org/parliament/BW/BW-LC01/election/BW-LC01-E20241030/",
+          "date": "2024-10-30",
+          "supports": [
+            "executive_legislative_system",
+            "party_system",
+            "ruling_coalition_ideology"
+          ],
+          "note": "UDC با ۳۶ کرسی پیروز شد؛ پیروزی ائتلاف باعث انتخاب رهبر آن، Duma Boko، به ریاست‌جمهوری شد."
+        },
+        {
+          "name": "Botswana: Freedom in the World 2025",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/botswana/freedom-world/2025",
+          "date": "2025",
+          "supports": [
+            "regime_character",
+            "party_system"
+          ],
+          "note": "رقابت انتخاباتی آزاد و انتقال مسالمت‌آمیز قدرت؛ پایان سلطه ۵۸ ساله BDP."
+        },
+        {
+          "name": "Constitution of Botswana — Parliament",
+          "publisher": "Government of Botswana — Botswana Laws",
+          "url": "https://elaws.gov.bw/constitution-of-botswana/constitution-of-botswana/",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "territorial_structure"
+          ],
+          "note": "متن رسمی قانون اساسی درباره مجلس ملی و نهادهای حکومتی؛ کشور ساختار واحد دارد."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "این رکورد فقط وضعیت مبنای آغاز سناریو در ۵ نوامبر ۲۰۲۶ را توصیف می‌کند؛ تحولات پس از این تاریخ در baseline اعمال نشده‌اند."
+      }
+    },
+    "SDN": {
+      "country_name_fa": "سودان",
+      "country_name_en": "Sudan",
+      "government_form": "transitional_government",
+      "government_subform": "military_led_transitional_authority",
+      "executive_legislative_system": "military_council",
+      "territorial_structure": "occupied_or_fragmented",
+      "regime_character": "fragmented_authority",
+      "party_system": "fragmented_or_uncertain",
+      "official_ideology": null,
+      "ruling_party_ideology": null,
+      "ruling_coalition_ideology": null,
+      "ideology_notes": "در تاریخ مبنای سناریو، سودان دولت ملی یکپارچه و نهادهای انتخابی فعال ندارد. شورای حاکمیت و دولت مستقر در قلمرو تحت کنترل نیروهای مسلح سودان (SAF) به رهبری عبدالفتاح البرهان اداره می‌شوند؛ نخست‌وزیر غیرنظامی، کامل ادریس، در مه ۲۰۲۵ منصوب شده است. نیروهای پشتیبانی سریع (RSF) نیز دولت موازی خودخوانده‌ای در مناطق تحت کنترلش تشکیل داده‌اند. بنابراین هیچ حزب یا ائتلافی را نمی‌توان به‌درستی نماینده کل حاکمیت کشور دانست و طبقه‌بندی چندپارگی اقتدار بر یک مدل حکومتی یکپارچه ترجیح داده شده است.",
+      "classification_confidence": "high",
+      "classification_sources": [
+        {
+          "name": "Sudan: Country Focus — Governance and Fragmented Authority",
+          "publisher": "European Union Agency for Asylum",
+          "url": "https://www.euaa.europa.eu/coi/sudan-country-focus/1-country-overview",
+          "date": "2026-10",
+          "supports": [
+            "government_form",
+            "government_subform",
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character"
+          ],
+          "note": "دو ساختار حکومتی بالفعل در قلمروهای تحت کنترل SAF و RSF؛ دولت مستقر در پورت‌سودان و دولت موازی در نیالا؛ انتصاب کامل ادریس در مه ۲۰۲۵."
+        },
+        {
+          "name": "Sudan: Security Situation — Political Developments",
+          "publisher": "European Union Agency for Asylum",
+          "url": "https://www.euaa.europa.eu/coi/sudan-security-situation/1-general-description-security-situation",
+          "date": "2026-10",
+          "supports": [
+            "executive_legislative_system",
+            "territorial_structure",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "البرهان رهبر بالفعل قلمرو تحت کنترل SAF؛ بلوک دموکراتیک همسو با SAF و ائتلاف Taasis همسو با RSF."
+        },
+        {
+          "name": "Sudan: Freedom in the World 2026",
+          "publisher": "Freedom House",
+          "url": "https://freedomhouse.org/country/sudan/freedom-world/2026",
+          "date": "2026",
+          "supports": [
+            "regime_character",
+            "party_system",
+            "executive_legislative_system"
+          ],
+          "note": "نبود نهادهای انتخابی، کودتای ۲۰۲۱ و جنگ از آوریل ۲۰۲۳؛ ساختار قدرت متکی بر مداخله نظامی."
+        },
+        {
+          "name": "BTI 2026 Sudan Country Report",
+          "publisher": "Bertelsmann Stiftung",
+          "url": "https://bti-project.org/en/reports/country-report/SDN",
+          "date": "2026",
+          "supports": [
+            "government_form",
+            "executive_legislative_system",
+            "regime_character",
+            "party_system"
+          ],
+          "note": "کودتای ۲۰۲۱ روند گذار را متوقف کرد و جنگ از ۲۰۲۳ مانع شکل‌گیری نهادهای دموکراتیک و انتخابات شده است."
+        }
+      ],
+      "data_quality": {
+        "confidence": "high",
+        "last_verified": "2026-11-27",
+        "scenario_snapshot_date": "2026-11-05",
+        "notes": "طبقه‌بندی به‌عمد چندپارگی اقتدار را نشان می‌دهد. منابع اکتبر ۲۰۲۶ فقط برای راستی‌آزمایی پژوهش استفاده شده‌اند؛ baseline وضعیت موجود در ۵ نوامبر ۲۰۲۶ را منعکس می‌کند."
       }
     }
   }
