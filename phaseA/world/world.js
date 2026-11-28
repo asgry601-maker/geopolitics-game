@@ -27,6 +27,8 @@ var TRADE_SHIPS_ENABLED = true;
 var TRADE_SHIP_DATA = [];
 var TRADE_SHIP_TIMER = null;
 var TRADE_SHIP_MAX = 12;
+/* حالت موقتِ آزمایش بصری؛ پس از تأیید خاموش می‌شود تا کشتی‌ها فقط از پیمان‌های واقعی ساخته شوند. */
+var TRADE_SHIPS_DEMO_MODE = true;
 
 function tradeShipModel() {
   var g = new THREE.Group();
@@ -178,7 +180,16 @@ function tradeShipPosition(a, b, t) {
 function refreshTradeShips() {
   if (!globe) return;
   var next = [], pacts = (ST && ST.pact_records) || [], i, j, members, a, b, pa, pb;
-  if (TRADE_SHIPS_ENABLED && MAP && FEATS) {
+  if (TRADE_SHIPS_ENABLED && TRADE_SHIPS_DEMO_MODE) {
+    /* مسیر نمونه در آب‌های آزاد دریای عرب؛ مستقل از پیمان و بدون اثر بر اقتصاد بازی. */
+    a = { lat: 19.5, lon: 59.0 };
+    b = { lat: 20.5, lon: 64.5 };
+    if (maritimeRouteIsClear(a, b)) {
+      next.push({ id: 'visual-demo-1', a: a, b: b, origin: 'بندر آزمایشی A', destination: 'بندر آزمایشی B', cargo: 'بار نمایشی', statusText: 'نمونه آزمایشی بصری', phase: 0.08, period: 105, demo: true });
+      next.push({ id: 'visual-demo-2', a: a, b: b, origin: 'بندر آزمایشی A', destination: 'بندر آزمایشی B', cargo: 'بار نمایشی', statusText: 'نمونه آزمایشی بصری', phase: 0.42, period: 105, demo: true });
+      next.push({ id: 'visual-demo-3', a: a, b: b, origin: 'بندر آزمایشی A', destination: 'بندر آزمایشی B', cargo: 'بار نمایشی', statusText: 'نمونه آزمایشی بصری', phase: 0.76, period: 105, demo: true });
+    }
+  } else if (TRADE_SHIPS_ENABLED && MAP && FEATS) {
     for (i = 0; i < pacts.length && next.length < TRADE_SHIP_MAX; i++) {
       if (!pacts[i] || pacts[i].status !== 'active' || pacts[i].type !== 'trade') continue;
       members = pacts[i].members || [];
@@ -258,7 +269,8 @@ function showTradeShipInfo(ship) {
   }
   var origin = ship.origin || ship.aName || 'مبدأ نامشخص';
   var destination = ship.destination || ship.bName || 'مقصد نامشخص';
-  box.textContent = '🚢 کشتی تجاری\nمبدأ: ' + origin + '\nمقصد: ' + destination +
+  box.textContent = '🚢 کشتی تجاری' + (ship.demo ? ' — نسخه آزمایشی بصری' : '') +
+    '\nمبدأ: ' + origin + '\nمقصد: ' + destination +
     '\nوضعیت: ' + (ship.statusText || 'در حال حرکت') +
     '\nبار: ' + (ship.cargo || 'کالای عمومی');
   box.style.display = 'block';
