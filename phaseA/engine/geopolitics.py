@@ -1255,6 +1255,11 @@ def load():
     s["agreement_history"] = [x for x in s.get("agreement_history", []) if isinstance(x, dict)][-500:]
     if agreement_save_needed:
         save(s)
+    if not isinstance(s.get("technology_history"), list):
+        s["technology_history"] = []
+        save(s)
+    else:
+        s["technology_history"] = [x for x in s["technology_history"] if isinstance(x, dict)][-300:]
     return s
 
 
@@ -1548,6 +1553,46 @@ def get_conversation_session(s, conversation_id):
         if isinstance(session, dict) and session.get("id") == conversation_id:
             return session
     return None
+
+
+def upgrade_player_technology(s):
+    """ارتقای عمومی شاخص فناوری کشور بازیکن؛ مستقل از پروژه‌های کارخانه."""
+    if s.get("over"):
+        raise ValueError("بازی پایان یافته است.")
+    player = s.get("player")
+    world = s.get("world") or {}
+    if player not in world:
+        raise ValueError("کشور بازیکن در وضعیت بازی پیدا نشد.")
+    country = world[player]
+    try:
+        current = float(country.get("tech", 0))
+        budget = float(country.get("money", 0))
+    except (TypeError, ValueError):
+        raise ValueError("اطلاعات فناوری یا بودجه معتبر نیست.")
+    if current > 98.0:
+        raise ValueError("سطح فناوری برای ارتقای دو واحدی کافی نیست؛ سقف فناوری ۱۰۰ است.")
+    new_level = round(current + 2.0, 1)
+    cost = round(1.0 + current * 0.05, 2)
+    if budget < cost:
+        raise ValueError("بودجه کافی نیست. هزینه این ارتقا %.2f میلیارد است." % cost)
+    country["money"] = round(budget - cost, 2)
+    country["tech"] = new_level
+    history = s.setdefault("technology_history", [])
+    record = {
+        "date": str(s.get("game_date") or ""),
+        "country": player,
+        "before": round(current, 1),
+        "after": new_level,
+        "increase": 2.0,
+        "cost": cost,
+        "budget_after": country["money"]
+    }
+    history.append(record)
+    s["technology_history"] = history[-300:]
+    msg(s, "%s: سطح فناوری از %.1f به %.1f افزایش یافت؛ هزینه %.2f میلیارد." %
+        (record["date"], current, new_level, cost))
+    return dict(ok=True, technology=new_level, increase=2.0, cost=cost,
+                budget=country["money"], record=record)
 
 
 def save(s):
@@ -2679,7 +2724,7 @@ def init_game(player):
         allies=allies0, pacts=pacts0,
         pact_records=[], alliance_records=[], agreement_proposals=[], agreement_history=[], agreement_sequence=0,
         alliance_join_requests=[],
-        diplomatic_history=[],
+        diplomatic_history=[], technology_history=[],
         player_sanctions={}, player_sanction_history=[],
         inbox_messages=[], inbox_sequence=0,
         conversation_sessions=[], conversation_sequence=0,
