@@ -267,6 +267,7 @@ def api_state(s):
         game_events=(s.get("game_events") or [])[-50:],
         event_sequence=s.get("event_sequence", 0),
         political_history=(s.get("political_history") or [])[-10:],
+        technology_history=(s.get("technology_history") or [])[-50:],
         hidden=True,
     )
 
@@ -692,6 +693,20 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(dict(ok=True, out="زمان بازی جلو رفت.", state=api_state(state_now)))
             except Exception as e:
                 self._json(dict(ok=False, error="خطا در جلو بردن زمان: %s" % e), 500)
+        elif path == "api/technology/upgrade":
+            if s is None:
+                self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
+                return
+            try:
+                with _lock:
+                    current = G.load()
+                    result = G.upgrade_player_technology(current)
+                    G.save(current)
+                self._json(dict(result, state=api_state(get_state(True))))
+            except ValueError as exc:
+                self._json(dict(ok=False, error=str(exc)), 400)
+            except Exception as exc:
+                self._json(dict(ok=False, error="خطا در ارتقای فناوری: %s" % exc), 500)
         elif path == "api/sanctions/apply":
             if s is None:
                 self._json(dict(ok=False, error="بازی‌ای ساخته نشده."), 404)
