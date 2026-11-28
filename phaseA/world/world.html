@@ -418,22 +418,32 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         </div>
       </div>
       <div id="eventTechnologyView" class="eventPanelView" hidden>
-        <div class="eventSectionLabel">فناوری کشور</div>
-        <div class="eventFeatureCard">
-          <div class="eventFeatureTitle">سطح فناوری فعلی</div>
-          <div id="technologyLevelValue" class="eventFeatureValue">— / ۱۰۰</div>
-          <div class="dashPercentTrack"><div id="technologyLevelBar" style="width:0%"></div></div>
-          <div id="technologyLevelNote" class="eventFeatureNote">سطح پایه از شاخص فناوری موجود کشور خوانده می‌شود.</div>
+        <div class="eventSectionLabel">مدیریت فناوری</div>
+        <div class="technologyInnerTabs" role="tablist" aria-label="بخش‌های فناوری">
+          <button type="button" class="eventPanelTab active" id="technologyTabLevel" role="tab" aria-selected="true">📊 سطح فناوری</button>
+          <button type="button" class="eventPanelTab" id="technologyTabExploitation" role="tab" aria-selected="false">🚀 بهره‌برداری</button>
         </div>
-        <div class="eventFeatureCard">
-          <h3>ارتقای فناوری</h3>
-          <div class="eventFeatureNote">ارتقای سطح فناوری و هزینه آن در بسته بعدی فعال می‌شود.</div>
-          <button type="button" id="technologyUpgradeButton" disabled>＋ ارتقای فناوری · در حال آماده‌سازی</button>
+        <div id="technologyLevelView" class="eventInnerView">
+          <div class="eventFeatureCard">
+            <div class="eventFeatureTitle">سطح فناوری فعلی</div>
+            <div id="technologyLevelValue" class="eventFeatureValue">— / ۱۰۰</div>
+            <div class="dashPercentTrack"><div id="technologyLevelBar" style="width:0%"></div></div>
+            <div id="technologyLevelNote" class="eventFeatureNote">سطح پایه از شاخص فناوری موجود کشور خوانده می‌شود.</div>
+          </div>
+          <div class="eventFeatureCard">
+            <h3>ارتقای فناوری</h3>
+            <div id="technologyBudgetValue" class="eventFeatureNote">بودجه کشور: —</div>
+            <div id="technologyUpgradeCost" class="eventFeatureNote">هزینه ارتقای بعدی: —</div>
+            <button type="button" id="technologyUpgradeButton" disabled>＋ ارتقای فناوری · در حال بارگذاری</button>
+            <div id="technologyUpgradeStatus" class="eventFeatureNote" aria-live="polite"></div>
+          </div>
         </div>
-        <div class="eventFeatureCard">
-          <h3>بهره‌برداری فناوری</h3>
-          <div class="eventFeatureNote">پروژه‌های تولیدیِ تکمیل‌شده پس از رسیدن سطح فناوری کشور به حداقل ۷۰، در این قسمت برای عملیاتی‌سازی نمایش داده می‌شوند.</div>
-          <div id="technologyExploitationList" class="eventFeatureEmpty">هنوز پروژه تکمیل‌شده‌ای ثبت نشده است.</div>
+        <div id="technologyExploitationView" class="eventInnerView" hidden>
+          <div class="eventFeatureCard">
+            <h3>بهره‌برداری فناوری</h3>
+            <div class="eventFeatureNote">پروژه‌های تکمیل‌شده در این تب نمایش داده می‌شوند. عملیاتی‌سازی هر پروژه پس از احراز شرایط فناوری و اتصال زیرسیستم تجهیزات فعال خواهد شد.</div>
+            <div id="technologyExploitationList" class="eventFeatureEmpty">هنوز پروژه تکمیل‌شده‌ای ثبت نشده است.</div>
+          </div>
         </div>
       </div>
       <div id="eventFactoryView" class="eventPanelView" hidden>
