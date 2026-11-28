@@ -107,7 +107,7 @@ function buildMaritimePorts() {
       rings = polys[p];
       if (!rings.length) continue;
       ring = rings[0];
-      step = Math.max(1, Math.floor(ring.length / 90));
+      step = Math.max(1, Math.ceil(ring.length / 24));
       for (k = 0; k < ring.length && !result[f._fa]; k += step) {
         v = ring[k];
         for (d = 0; d < dirs.length; d++) {
@@ -131,7 +131,7 @@ function maritimeRouteIsClear(a, b) {
   var ax = Math.cos(la) * Math.cos(loa), ay = Math.cos(la) * Math.sin(loa), az = Math.sin(la);
   var bx = Math.cos(lb) * Math.cos(lob), by = Math.cos(lb) * Math.sin(lob), bz = Math.sin(lb);
   var omega = Math.acos(Math.max(-1, Math.min(1, ax * bx + ay * by + az * bz)));
-  var steps = Math.max(2, Math.ceil(omega / (0.35 * r))), t, pos;
+  var steps = Math.max(2, Math.ceil(omega / (0.12 * r))), t, pos;
   for (t = 1; t < steps; t++) {
     pos = tradeShipPosition(a, b, t / steps);
     if (maritimeIsLand(pos.lon, pos.lat)) return false;
@@ -141,12 +141,15 @@ function maritimeRouteIsClear(a, b) {
 
 function maritimeTradeBlocked(origin, destination) {
   var sanctions = (ST && ST.player_sanctions) || {};
-  var a = sanctions[origin], b = sanctions[destination];
-  function blocks(record) {
-    var cats = record && record.status === 'active' ? (record.categories || []) : [];
-    return cats.indexOf('sea') >= 0 || cats.indexOf('energy') >= 0;
-  }
-  return blocks(a) || blocks(b);
+  var player = ST && ST.player;
+  var target = null, record, cats;
+  if (!player) return false;
+  if (origin === player) target = destination;
+  else if (destination === player) target = origin;
+  else return false;
+  record = sanctions[target];
+  cats = record && record.status === 'active' ? (record.categories || []) : [];
+  return cats.indexOf('sea') >= 0 || cats.indexOf('energy') >= 0;
 }
 
 function tradeShipPosition(a, b, t) {
