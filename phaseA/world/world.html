@@ -11,6 +11,7 @@ html, body { height: 100%; margin: 0; padding: 0; background: #070b14; color: #d
 #main { display: flex; height: 100%; }
 #mapArea { flex: 1 1 auto; position: relative; min-width: 0; }
 #globe { width: 100%; height: 100%; }
+#tradeShipInfo { display:none; position:absolute; right:10px; bottom:42px; z-index:8; min-width:190px; max-width:260px; white-space:pre-line; direction:rtl; background:rgba(10,20,36,.94); border:1px solid #b28a4c; border-radius:9px; padding:9px 11px; color:#f4ead8; font-size:12px; line-height:1.9; pointer-events:none; box-shadow:0 4px 14px rgba(0,0,0,.35); }
 #fps { position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,.55);
   padding: 2px 8px; border-radius: 6px; font-size: 11px; color: #9fd6a8; pointer-events: none; }
 #topbar { position: absolute; top: 8px; right: 8px; left: 8px; display: flex; gap: 6px;
@@ -515,6 +516,7 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
     </div>
     <button id="eventPanelToggle" type="button" title="باز و بسته کردن پنل بیانیه‌ها" aria-expanded="false">❯</button>
     <div id="globe"></div>
+    <div id="tradeShipInfo" aria-live="polite"></div>
     <div id="fps">FPS: —</div>
     <div id="engineMsg" style="display:none"></div>
   </div>
