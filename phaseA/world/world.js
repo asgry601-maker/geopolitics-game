@@ -53,8 +53,8 @@ function tradeShipModel() {
   var cabin = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.38, 0.42), deckMat);
   cabin.position.set(0.68, 0.34, 0);
   g.add(cabin);
-  /* اندازه پایه؛ در updateTradeShips با فاصله دوربین تطبیق داده می‌شود. */
-  g.scale.set(0.9, 0.9, 0.9);
+  /* مدل عمداً در مقیاس بزرگ‌تر ساخته شده تا روی کره کوچک هم دیده شود. */
+  g.scale.set(2.8, 2.8, 2.8);
   g.rotation.y = Math.PI / 2;
   return g;
 }
@@ -182,9 +182,9 @@ function refreshTradeShips() {
   if (!globe) return;
   var next = [], pacts = (ST && ST.pact_records) || [], i, j, members, a, b, pa, pb;
   if (TRADE_SHIPS_ENABLED && TRADE_SHIPS_DEMO_MODE) {
-    /* مسیر نمونه در آب‌های آزاد دریای عمان، نزدیک ساحل ایران؛ مستقل از پیمان و اقتصاد. */
-    a = { lat: 25.0, lon: 58.4 };
-    b = { lat: 25.8, lon: 61.0 };
+    /* هر دو نقطه با چندضلعی‌های خشکی کنترل شده‌اند؛ مسیر در آب‌های دریای عمان است. */
+    a = { lat: 25.3, lon: 56.5 };
+    b = { lat: 24.5, lon: 58.5 };
     if (maritimeRouteIsClear(a, b)) {
       next.push({ id: 'visual-demo-1', a: a, b: b, origin: 'بندر آزمایشی A', destination: 'بندر آزمایشی B', cargo: 'بار نمایشی', statusText: 'نمونه آزمایشی بصری', phase: 0.08, period: 105, demo: true });
       next.push({ id: 'visual-demo-2', a: a, b: b, origin: 'بندر آزمایشی A', destination: 'بندر آزمایشی B', cargo: 'بار نمایشی', statusText: 'نمونه آزمایشی بصری', phase: 0.42, period: 105, demo: true });
@@ -254,14 +254,15 @@ function updateTradeShips() {
      اندازه با فاصله دوربین تنظیم می‌شود تا در زوم‌های مختلف قابل‌دیدن بماند. */
   var camera = globe.camera ? globe.camera() : null;
   var cameraDistance = camera && camera.position ? camera.position.length() : 240;
-  var zoomScale = Math.max(0.85, Math.min(1.8, cameraDistance / 240));
+  /* دوربین نزدیک‌تر = کشتی کمی بزرگ‌تر؛ دوربین دورتر = کشتی کوچک‌تر. */
+  var zoomScale = Math.max(0.8, Math.min(1.8, 240 / Math.max(1, cameraDistance)));
   globe.objectsData(TRADE_SHIP_DATA)
     .objectLat(function (d) { return d.lat; })
     .objectLng(function (d) { return d.lon; })
-    .objectAltitude(0.025)
+    .objectAltitude(0.045)
     .objectThreeObject(function (d) {
       if (!d.object) d.object = tradeShipModel();
-      d.object.scale.set(0.9 * zoomScale, 0.9 * zoomScale, 0.9 * zoomScale);
+      d.object.scale.set(2.8 * zoomScale, 2.8 * zoomScale, 2.8 * zoomScale);
       return d.object;
     })
     .onObjectHover(function (d) { showTradeShipInfo(d || null); });
@@ -1149,6 +1150,8 @@ function renderWorldChips() {
 function renderStartSelectionProfile(r) {
   var box = el('startCountryProfile');
   if (!box) return;
+  box.style.display = 'flex';
+  box.style.visibility = 'visible';
   if (!r) { box.innerHTML = '<div class="startProfileEmpty">برای مشاهده مشخصات، یک کشور را انتخاب کن.</div>'; return; }
   var pc = r.political_classification || r.political_baseline || {};
   var gov = classificationValueLabel('government_form',pc.government_form) + ' · ' + classificationValueLabel('government_subform',pc.government_subform);
@@ -3009,7 +3012,14 @@ function startGame(confirmed) {
     }
     flash(r.out || 'بازی آغاز شد!');
     SELECTED = c;                      /* داشبورد کشور انتخاب‌شده پس از شروع */
-    loadState();                       /* loadState خودش SELECTED را به پنل می‌راند */
+    /* بعد از ثبت بازی، وضعیت را بارگذاری و پروفایل کشور آغازگر را صریحاً دوباره واکشی می‌کنیم.
+       این درخواست مستقل از رندر پنل است تا پروفایل آغاز بازی خالی نماند. */
+    loadState(function (ok) {
+      if (!ok) return;
+      setTimeout(function () {
+        if (SELECTED === c) selectCountry(c, true);
+      }, 180);
+    });
     if (MAP[c] && MAP[c].lat != null) {
       globe.pointOfView({ lat: MAP[c].lat, lng: MAP[c].lon, altitude: 1.9 }, 900);
     }
