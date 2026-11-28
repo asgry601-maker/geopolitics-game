@@ -126,7 +126,23 @@ function updateTradeShips() {
     .objectThreeObject(function (d) {
       if (!d.object) d.object = tradeShipModel();
       return d.object;
-    });
+    })
+    .onObjectHover(function (d) { showTradeShipInfo(d || null); });
+}
+
+function showTradeShipInfo(ship) {
+  var box = el('tradeShipInfo');
+  if (!box) return;
+  if (!ship) {
+    box.style.display = 'none';
+    return;
+  }
+  var origin = ship.origin || ship.aName || 'مبدأ نامشخص';
+  var destination = ship.destination || ship.bName || 'مقصد نامشخص';
+  box.textContent = '🚢 کشتی تجاری\nمبدأ: ' + origin + '\nمقصد: ' + destination +
+    '\nوضعیت: ' + (ship.statusText || 'در حال حرکت') +
+    '\nبار: ' + (ship.cargo || 'کالای عمومی');
+  box.style.display = 'block';
 }
 
 function bindTradeShipToggle() {
@@ -413,6 +429,7 @@ function loadState(after) {
     renderWorldChips();
     renderStartWidget();
     refreshPolygons();
+    refreshTradeShips();
     if (ST && SELECTED) selectCountry(SELECTED, true);
     if (after) after();
   }, function (st, tx) { flash(netErrMsg(st, tx) + ' — وضعیت بازی دریافت نشد.'); });
