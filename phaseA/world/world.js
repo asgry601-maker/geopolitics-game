@@ -201,19 +201,42 @@ function refreshTradeShips() {
   TRADE_SHIP_DATA = next;
   updateTradeShips();
 }
+function tradeShipDistanceKm(a, b) {
+  var r = Math.PI / 180, la1 = a.lat * r, la2 = b.lat * r;
+  var dlat = (b.lat - a.lat) * r, dlon = (b.lon - a.lon) * r;
+  var h = Math.sin(dlat / 2) * Math.sin(dlat / 2) +
+    Math.cos(la1) * Math.cos(la2) * Math.sin(dlon / 2) * Math.sin(dlon / 2);
+  return 6371 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+}
+
 function updateTradeShips() {
   if (!globe) return;
   if (!TRADE_SHIPS_ENABLED || !TRADE_SHIP_DATA.length) {
     globe.objectsData([]);
     return;
   }
-  var now = Date.now() / 1000;
-  for (var i = 0; i < TRADE_SHIP_DATA.length; i++) {
-    var d = TRADE_SHIP_DATA[i];
-    var t = ((now / d.period + d.phase) % 1 + 1) % 1;
-    var pos = tradeShipPosition(d.a, d.b, t);
-    d.lat = pos.lat;
-    d.lon = pos.lon;
+  var now = Date.now() / 1000, i, k, d, t, pos, blocked, other;
+  for (i = 0; i < TRADE_SHIP_DATA.length; i++) {
+    d = TRADE_SHIP_DATA[i];
+    t = ((now / d.period + d.phase) % 1 + 1) % 1;
+    pos = tradeShipPosition(d.a, d.b, t);
+    blocked = false;
+    for (k = 0; k < i; k++) {
+      other = TRADE_SHIP_DATA[k];
+      if (tradeShipDistanceKm(pos, other) < 45) { blocked = true; break; }
+    }
+    if (blocked) {
+      d.waiting = true;
+      if (d.lat == null || d.lon == null) {
+        d.lat = d.a.lat;
+        d.lon = d.a.lon;
+      }
+    } else {
+      d.waiting = false;
+      d.lat = pos.lat;
+      d.lon = pos.lon;
+    }
+    d.statusText = d.waiting ? 'توقف موقت؛ مسیر جلو اشغال است' : 'در حال حرکت';
   }
   globe.objectsData(TRADE_SHIP_DATA)
     .objectLat(function (d) { return d.lat; })
