@@ -23,6 +23,123 @@ var TEX = 'img/earth-dark.jpg';
 var ROT = true;
 var globe = null;
 
+var TRADE_SHIPS_ENABLED = true;
+var TRADE_SHIP_DATA = [];
+var TRADE_SHIP_TIMER = null;
+var TRADE_SHIP_MAX = 12;
+
+function tradeShipModel() {
+  var g = new THREE.Group();
+  var hullMat = new THREE.MeshPhongMaterial({ color: 0x263b52, shininess: 35 });
+  var deckMat = new THREE.MeshPhongMaterial({ color: 0x9aa8b5 });
+  var boxMats = [
+    new THREE.MeshPhongMaterial({ color: 0xd28b45 }),
+    new THREE.MeshPhongMaterial({ color: 0x4d8eaa }),
+    new THREE.MeshPhongMaterial({ color: 0x718b68 })
+  ];
+  var hull = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.32, 0.68), hullMat);
+  hull.position.y = 0;
+  g.add(hull);
+  var deck = new THREE.Mesh(new THREE.BoxGeometry(1.15, 0.12, 0.58), deckMat);
+  deck.position.set(-0.08, 0.2, 0);
+  g.add(deck);
+  for (var i = 0; i < 3; i++) {
+    var cargo = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.34, 0.48), boxMats[i]);
+    cargo.position.set(-0.42 + i * 0.43, 0.42, 0);
+    g.add(cargo);
+  }
+  var cabin = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.38, 0.42), deckMat);
+  cabin.position.set(0.68, 0.34, 0);
+  g.add(cabin);
+  g.scale.set(0.19, 0.19, 0.19);
+  g.rotation.y = Math.PI / 2;
+  return g;
+}
+
+function tradeShipPosition(a, b, t) {
+  var r = Math.PI / 180;
+  var la = a.lat * r, loa = a.lon * r, lb = b.lat * r, lob = b.lon * r;
+  var ax = Math.cos(la) * Math.cos(loa), ay = Math.cos(la) * Math.sin(loa), az = Math.sin(la);
+  var bx = Math.cos(lb) * Math.cos(lob), by = Math.cos(lb) * Math.sin(lob), bz = Math.sin(lb);
+  var dot = Math.max(-1, Math.min(1, ax * bx + ay * by + az * bz));
+  var omega = Math.acos(dot), x, y, z;
+  if (omega < 0.0001) {
+    x = ax; y = ay; z = az;
+  } else {
+    var den = Math.sin(omega);
+    var wa = Math.sin((1 - t) * omega) / den;
+    var wb = Math.sin(t * omega) / den;
+    x = wa * ax + wb * bx;
+    y = wa * ay + wb * by;
+    z = wa * az + wb * bz;
+  }
+  return {
+    lat: Math.atan2(z, Math.sqrt(x * x + y * y)) / r,
+    lon: Math.atan2(y, x) / r
+  };
+}
+
+function refreshTradeShips() {
+  if (!globe) return;
+  var next = [], pacts = (ST && ST.pact_records) || [], i, j, members, a, b, ma, mb;
+  if (TRADE_SHIPS_ENABLED && MAP) {
+    for (i = 0; i < pacts.length && next.length < TRADE_SHIP_MAX; i++) {
+      if (!pacts[i] || pacts[i].status !== 'active' || pacts[i].type !== 'trade') continue;
+      members = pacts[i].members || [];
+      if (members.length < 2) continue;
+      ma = MAP[members[0]];
+      if (!ma || ma.lat == null || ma.lon == null) continue;
+      for (j = 1; j < members.length && next.length < TRADE_SHIP_MAX; j++) {
+        mb = MAP[members[j]];
+        if (!mb || mb.lat == null || mb.lon == null) continue;
+        a = { lat: Number(ma.lat), lon: Number(ma.lon) };
+        b = { lat: Number(mb.lat), lon: Number(mb.lon) };
+        next.push({ id: String(pacts[i].id || i) + '-out-' + j, a: a, b: b, phase: (i * 0.17 + j * 0.11) % 1, period: 105 });
+        if (next.length < TRADE_SHIP_MAX) {
+          next.push({ id: String(pacts[i].id || i) + '-back-' + j, a: b, b: a, phase: (i * 0.23 + j * 0.19 + 0.5) % 1, period: 125 });
+        }
+      }
+    }
+  }
+  TRADE_SHIP_DATA = next;
+  updateTradeShips();
+}
+
+function updateTradeShips() {
+  if (!globe) return;
+  if (!TRADE_SHIPS_ENABLED || !TRADE_SHIP_DATA.length) {
+    globe.objectsData([]);
+    return;
+  }
+  var now = Date.now() / 1000;
+  for (var i = 0; i < TRADE_SHIP_DATA.length; i++) {
+    var d = TRADE_SHIP_DATA[i];
+    var t = ((now / d.period + d.phase) % 1 + 1) % 1;
+    var pos = tradeShipPosition(d.a, d.b, t);
+    d.lat = pos.lat;
+    d.lon = pos.lon;
+  }
+  globe.objectsData(TRADE_SHIP_DATA)
+    .objectLat(function (d) { return d.lat; })
+    .objectLng(function (d) { return d.lon; })
+    .objectAltitude(0.018)
+    .objectThreeObject(function (d) {
+      if (!d.object) d.object = tradeShipModel();
+      return d.object;
+    });
+}
+
+function bindTradeShipToggle() {
+  var b = el('btnTradeShips');
+  if (!b) return;
+  b.onclick = function () {
+    TRADE_SHIPS_ENABLED = !TRADE_SHIPS_ENABLED;
+    this.textContent = TRADE_SHIPS_ENABLED ? '🚢 کشتی تجاری: روشن' : '🚢 کشتی تجاری: خاموش';
+    if (TRADE_SHIPS_ENABLED) refreshTradeShips();
+    else updateTradeShips();
+  };
+}
+
 /* ---------- رنگ‌ها ---------- */
 var REGIONS = [
   'خاورمیانه و شمال آفریقا', 'اروپا', 'شرق آسیا', 'جنوب و جنوب\u200cشرق آسیا',
@@ -267,6 +384,8 @@ function netErrMsg(status, text) {
 function boot() {
   initGlobe();
   startFps();
+  if (TRADE_SHIP_TIMER) clearInterval(TRADE_SHIP_TIMER);
+  TRADE_SHIP_TIMER = setInterval(updateTradeShips, 700);
   getJSON('data/country_map.json', function (m) {
     MAP = m;
     getJSON('data/countries.geojson', function (gj) {
@@ -2754,6 +2873,7 @@ function bindToolbar() {
   el('btnEnd').onclick = endDay;
   el('btn5h').onclick = advanceFiveHours;
   provToggleBtn();   /* B2: دکمه مرز استان‌ها (اگر در HTML باشد) */
+  bindTradeShipToggle();
   var tb = el('panelToggle');
   if (tb) tb.onclick = togglePanel;   /* فلش باز/بسته پنل */
   var eb = el('eventPanelToggle');
