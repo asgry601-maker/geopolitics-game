@@ -81,6 +81,15 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
 .eventPanelTab { flex:1; padding:9px 5px; font-size:12px; }
 .eventPanelTab.active { background:#2456a8; border-color:#5a91e8; color:#fff; }
 .eventPanelView[hidden] { display:none !important; }
+  .eventFeatureCard { margin:9px 0; padding:11px; border:1px solid #385779; border-radius:9px; background:#101d32; color:#d5e2f3; font-size:12px; line-height:1.85; }
+  .eventFeatureCard h3 { margin:0 0 7px; color:#ffd479; font-size:13px; }
+  .eventFeatureTitle { color:#ffd479; font-weight:bold; }
+  .eventFeatureValue { font-size:22px; font-weight:bold; margin:3px 0 8px; }
+  .eventFeatureNote { color:#aebed3; font-size:11px; line-height:1.8; }
+  .eventFeatureEmpty { margin-top:8px; padding:9px; border:1px dashed #52617a; border-radius:7px; color:#aebed3; font-size:11px; }
+  .eventFeatureCard textarea { width:100%; box-sizing:border-box; margin:8px 0; resize:vertical; }
+  .factoryInnerTabs { display:flex; gap:6px; margin:8px 0 12px; padding:5px; background:#1d263e; border:1px solid #66518e; border-radius:9px; }
+  .factoryInnerTabs .eventPanelTab { flex:1; }
 .eventMilitaryPlaceholder { border:1px solid #385779; background:#101d32; border-radius:9px; padding:13px;
   color:#c4d2e6; font-size:12px; line-height:1.9; }
 .eventMilitaryPlaceholder strong { color:#ffd479; }
@@ -338,6 +347,8 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
         <button type="button" class="eventPanelTab active" id="eventTabStatements" role="tab" aria-selected="true">📢 بیانیه‌ها</button>
         <button type="button" class="eventPanelTab" id="eventTabMilitary" role="tab" aria-selected="false">🛡 نظامی</button>
         <button type="button" class="eventPanelTab" id="eventTabSanctions" role="tab" aria-selected="false">🚫 تحریم</button>
+        <button type="button" class="eventPanelTab" id="eventTabTechnology" role="tab" aria-selected="false">🔬 فناوری</button>
+        <button type="button" class="eventPanelTab" id="eventTabFactory" role="tab" aria-selected="false">🏭 کارخانه ساخت سلاح</button>
       </div>
       <div id="eventStatementView" class="eventPanelView">
       <section class="eventStatementsArea">
@@ -404,6 +415,47 @@ select, input[type=text] { background: #101a2e; color: #dce4f2; border: 1px soli
           <strong>🛡 بخش نظامی</strong><br>
           این بخش رابط کاربری مستقل خودش را خواهد داشت و برای صدور یا مشاهده بیانیه استفاده نمی‌شود.
           <div class="eventMilitaryFuture">ابزارها، گزینه‌ها و پنجره‌های اختصاصی فرماندهی نظامی در مرحله توسعه نظامی طراحی خواهند شد. این بخش از سیستم بیانیه‌ها و مذاکرات جداست.</div>
+        </div>
+      </div>
+      <div id="eventTechnologyView" class="eventPanelView" hidden>
+        <div class="eventSectionLabel">فناوری کشور</div>
+        <div class="eventFeatureCard">
+          <div class="eventFeatureTitle">سطح فناوری فعلی</div>
+          <div id="technologyLevelValue" class="eventFeatureValue">— / ۱۰۰</div>
+          <div class="dashPercentTrack"><div id="technologyLevelBar" style="width:0%"></div></div>
+          <div id="technologyLevelNote" class="eventFeatureNote">سطح پایه از شاخص فناوری موجود کشور خوانده می‌شود.</div>
+        </div>
+        <div class="eventFeatureCard">
+          <h3>ارتقای فناوری</h3>
+          <div class="eventFeatureNote">ارتقای سطح فناوری و هزینه آن در بسته بعدی فعال می‌شود.</div>
+          <button type="button" id="technologyUpgradeButton" disabled>＋ ارتقای فناوری · در حال آماده‌سازی</button>
+        </div>
+        <div class="eventFeatureCard">
+          <h3>بهره‌برداری فناوری</h3>
+          <div class="eventFeatureNote">پروژه‌های تولیدیِ تکمیل‌شده پس از رسیدن سطح فناوری کشور به حداقل ۷۰، در این قسمت برای عملیاتی‌سازی نمایش داده می‌شوند.</div>
+          <div id="technologyExploitationList" class="eventFeatureEmpty">هنوز پروژه تکمیل‌شده‌ای ثبت نشده است.</div>
+        </div>
+      </div>
+      <div id="eventFactoryView" class="eventPanelView" hidden>
+        <div class="eventSectionLabel">کارخانه ساخت سلاح</div>
+        <div class="factoryInnerTabs" role="tablist" aria-label="بخش‌های کارخانه ساخت سلاح">
+          <button type="button" class="eventPanelTab active" id="factoryTabProjects" role="tab" aria-selected="true">📋 پروژه‌ها</button>
+          <button type="button" class="eventPanelTab" id="factoryTabProduction" role="tab" aria-selected="false">⚙️ تولید</button>
+        </div>
+        <div id="factoryProjectsView" class="eventInnerView">
+          <div class="eventFeatureCard">
+            <h3>ثبت پروژه جدید</h3>
+            <div class="eventFeatureNote">ثبت و بررسی اعتبار پروژه پس از اتصال هوش مصنوعی زنده در فاز F فعال می‌شود. فقط تجهیزات واقعی و متناسب با فناوری زمان حاضر پذیرفته خواهند شد.</div>
+            <textarea id="factoryProjectDescription" rows="3" disabled placeholder="شرح کلی تجهیز موردنظر؛ ثبت پروژه در بسته‌های بعدی فعال می‌شود."></textarea>
+            <button type="button" id="factoryProjectSubmit" disabled>ارسال برای بررسی · در آینده</button>
+          </div>
+        </div>
+        <div id="factoryProductionView" class="eventInnerView" hidden>
+          <div class="eventFeatureCard">
+            <h3>تولید پروژه‌ها</h3>
+            <div class="eventFeatureNote">این بخش یک تب مستقل داخل کارخانه ساخت سلاح است. پروژه‌های تأییدشده، پیشرفت صفر تا ۱۰۰، زمان باقی‌مانده و گزینه تسریع در اینجا نمایش داده می‌شوند.</div>
+            <div id="factoryProductionList" class="eventFeatureEmpty">در حال حاضر پروژه‌ای در صف تولید وجود ندارد.</div>
+          </div>
         </div>
       </div>
       <div id="eventSanctionsView" class="eventPanelView" hidden>
