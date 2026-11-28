@@ -56,6 +56,99 @@ function tradeShipModel() {
   return g;
 }
 
+var MARITIME_PORTS = {};
+
+function maritimePointInRing(point, ring) {
+  var x = point[0], y = point[1], inside = false, i, j, xi, yi, xj, yj;
+  for (i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    xi = ring[i][0]; yi = ring[i][1]; xj = ring[j][0]; yj = ring[j][1];
+    if (((yi > y) !== (yj > y)) &&
+        (x < (xj - xi) * (y - yi) / ((yj - yi) || 0.0000001) + xi)) inside = !inside;
+  }
+  return inside;
+}
+
+function maritimePointInFeature(lon, lat, feature) {
+  var b = feature.bbox, g = feature.geometry, polys, p, rings, k;
+  if (!g) return false;
+  if (b && (lon < b[0] || lon > b[2] || lat < b[1] || lat > b[3])) return false;
+  polys = g.type === 'Polygon' ? [g.coordinates] : (g.type === 'MultiPolygon' ? g.coordinates : []);
+  for (p = 0; p < polys.length; p++) {
+    rings = polys[p];
+    if (!rings.length || !maritimePointInRing([lon, lat], rings[0])) continue;
+    for (k = 1; k < rings.length; k++) {
+      if (maritimePointInRing([lon, lat], rings[k])) break;
+    }
+    if (k === rings.length) return true;
+  }
+  return false;
+}
+
+function maritimeIsLand(lon, lat) {
+  var i;
+  if (!FEATS) return true;
+  for (i = 0; i < FEATS.length; i++) {
+    if (maritimePointInFeature(lon, lat, FEATS[i])) return true;
+  }
+  return false;
+}
+
+/* یافتن یک نقطه آبِ نزدیک ساحل؛ کشورهای محصور در خشکی پورت نمی‌گیرند. */
+function buildMaritimePorts() {
+  var result = {}, i, f, rings, polys, p, ring, k, step, v, dirs, d, lat, lon, testLon, testLat;
+  dirs = [[1,0],[-1,0],[0,1],[0,-1],[1,1],[1,-1],[-1,1],[-1,-1]];
+  if (!FEATS) { MARITIME_PORTS = result; return; }
+  for (i = 0; i < FEATS.length; i++) {
+    f = FEATS[i];
+    if (!f._fa || result[f._fa] || !f.geometry) continue;
+    polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] :
+      (f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates : []);
+    for (p = 0; p < polys.length && !result[f._fa]; p++) {
+      rings = polys[p];
+      if (!rings.length) continue;
+      ring = rings[0];
+      step = Math.max(1, Math.floor(ring.length / 90));
+      for (k = 0; k < ring.length && !result[f._fa]; k += step) {
+        v = ring[k];
+        for (d = 0; d < dirs.length; d++) {
+          lat = v[1] + dirs[d][1] * 0.65;
+          lon = v[0] + dirs[d][0] * 0.65 / Math.max(0.25, Math.cos(lat * Math.PI / 180));
+          if (lat < -85 || lat > 85 || lon < -180 || lon > 180) continue;
+          if (!maritimeIsLand(lon, lat)) {
+            result[f._fa] = { lat: lat, lon: lon, country: f._fa };
+            break;
+          }
+        }
+      }
+    }
+  }
+  MARITIME_PORTS = result;
+}
+
+function maritimeRouteIsClear(a, b) {
+  var r = Math.PI / 180, la = a.lat * r, lb = b.lat * r;
+  var loa = a.lon * r, lob = b.lon * r;
+  var ax = Math.cos(la) * Math.cos(loa), ay = Math.cos(la) * Math.sin(loa), az = Math.sin(la);
+  var bx = Math.cos(lb) * Math.cos(lob), by = Math.cos(lb) * Math.sin(lob), bz = Math.sin(lb);
+  var omega = Math.acos(Math.max(-1, Math.min(1, ax * bx + ay * by + az * bz)));
+  var steps = Math.max(2, Math.ceil(omega / (0.35 * r))), t, pos;
+  for (t = 1; t < steps; t++) {
+    pos = tradeShipPosition(a, b, t / steps);
+    if (maritimeIsLand(pos.lon, pos.lat)) return false;
+  }
+  return true;
+}
+
+function maritimeTradeBlocked(origin, destination) {
+  var sanctions = (ST && ST.player_sanctions) || {};
+  var a = sanctions[origin], b = sanctions[destination];
+  function blocks(record) {
+    var cats = record && record.status === 'active' ? (record.categories || []) : [];
+    return cats.indexOf('sea') >= 0 || cats.indexOf('energy') >= 0;
+  }
+  return blocks(a) || blocks(b);
+}
+
 function tradeShipPosition(a, b, t) {
   var r = Math.PI / 180;
   var la = a.lat * r, loa = a.lon * r, lb = b.lat * r, lob = b.lon * r;
@@ -81,19 +174,20 @@ function tradeShipPosition(a, b, t) {
 
 function refreshTradeShips() {
   if (!globe) return;
-  var next = [], pacts = (ST && ST.pact_records) || [], i, j, members, a, b, ma, mb;
-  if (TRADE_SHIPS_ENABLED && MAP) {
+  var next = [], pacts = (ST && ST.pact_records) || [], i, j, members, a, b, pa, pb;
+  if (TRADE_SHIPS_ENABLED && MAP && FEATS) {
     for (i = 0; i < pacts.length && next.length < TRADE_SHIP_MAX; i++) {
       if (!pacts[i] || pacts[i].status !== 'active' || pacts[i].type !== 'trade') continue;
       members = pacts[i].members || [];
       if (members.length < 2) continue;
-      ma = MAP[members[0]];
-      if (!ma || ma.lat == null || ma.lon == null) continue;
       for (j = 1; j < members.length && next.length < TRADE_SHIP_MAX; j++) {
-        mb = MAP[members[j]];
-        if (!mb || mb.lat == null || mb.lon == null) continue;
-        a = { lat: Number(ma.lat), lon: Number(ma.lon) };
-        b = { lat: Number(mb.lat), lon: Number(mb.lon) };
+        if (maritimeTradeBlocked(members[0], members[j])) continue;
+        pa = MARITIME_PORTS[members[0]];
+        pb = MARITIME_PORTS[members[j]];
+        if (!pa || !pb) continue; /* کشور محصور در خشکی یا فاقد ساحل شناسایی‌شده */
+        a = { lat: pa.lat, lon: pa.lon };
+        b = { lat: pb.lat, lon: pb.lon };
+        if (!maritimeRouteIsClear(a, b)) continue; /* فعلاً فقط مسیر مستقیمِ کاملاً آبی */
         next.push({ id: String(pacts[i].id || i) + '-out-' + j, a: a, b: b, origin: members[0], destination: members[j], cargo: 'کالای عمومی', statusText: 'در حال حرکت', phase: (i * 0.17 + j * 0.11) % 1, period: 105 });
         if (next.length < TRADE_SHIP_MAX) {
           next.push({ id: String(pacts[i].id || i) + '-back-' + j, a: b, b: a, origin: members[j], destination: members[0], cargo: 'کالای عمومی', statusText: 'در حال حرکت', phase: (i * 0.23 + j * 0.19 + 0.5) % 1, period: 125 });
@@ -104,7 +198,6 @@ function refreshTradeShips() {
   TRADE_SHIP_DATA = next;
   updateTradeShips();
 }
-
 function updateTradeShips() {
   if (!globe) return;
   if (!TRADE_SHIPS_ENABLED || !TRADE_SHIP_DATA.length) {
@@ -414,6 +507,7 @@ function boot() {
         FEATS[i]._fa = neToFa[FEATS[i].properties.ADMIN] || null;
       }
       refreshPolygons();
+      buildMaritimePorts();
       loadState();
     }, function () { flash('خطا: countries.geojson بارگذاری نشد.'); });
   }, function () { flash('خطا: country_map.json بارگذاری نشد.'); });
