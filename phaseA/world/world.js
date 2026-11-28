@@ -497,9 +497,10 @@ function setEventPanelView(view) {
   var valid = ['statements','military','sanctions','technology','factory'];
   EVENT_PANEL_VIEW = valid.indexOf(view) >= 0 ? view : 'statements';
   var ids = ['statements','military','sanctions','technology','factory'];
+  var panelIds = ['eventStatementView','eventMilitaryView','eventSanctionsView','eventTechnologyView','eventFactoryView'];
   var tabIds = ['eventTabStatements','eventTabMilitary','eventTabSanctions','eventTabTechnology','eventTabFactory'];
   for (var i=0;i<ids.length;i++) {
-    var panel = el('event' + ids[i].charAt(0).toUpperCase() + ids[i].slice(1) + 'View');
+    var panel = el(panelIds[i]);
     var tab = el(tabIds[i]);
     var active = EVENT_PANEL_VIEW === ids[i];
     if (panel) panel.hidden = !active;
