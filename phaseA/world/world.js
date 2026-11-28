@@ -461,22 +461,69 @@ function renderEventTalkState() {
 }
 var EVENT_PANEL_VIEW = 'statements';
 var FACTORY_SUBVIEW = 'projects';
+var TECHNOLOGY_SUBVIEW = 'level';
 function renderTechnologyPanel() {
-  var value = null;
-  if (ST && ST.player && ST.countries && ST.countries[ST.player]) value = Number(ST.countries[ST.player][2]);
+  var row = ST && ST.player && ST.countries ? ST.countries[ST.player] : null;
+  var value = row ? Number(row[2]) : 0;
+  var budget = row ? Number(row[4]) : 0;
   if (!isFinite(value)) value = 0;
+  if (!isFinite(budget)) budget = 0;
   value = Math.max(0, Math.min(100, value));
+  var cost = Math.round((1.0 + value * 0.05) * 100) / 100;
   var valueBox = el('technologyLevelValue'), bar = el('technologyLevelBar'), note = el('technologyLevelNote');
+  var budgetBox = el('technologyBudgetValue'), costBox = el('technologyUpgradeCost'), button = el('technologyUpgradeButton');
   if (valueBox) valueBox.textContent = value.toFixed(1) + ' / ۱۰۰';
   if (bar) {
     bar.style.width = value + '%';
     bar.style.background = value >= 70 ? 'linear-gradient(90deg,#16794b,#46d18b)' : 'linear-gradient(90deg,#a66b12,#f0c343)';
   }
-  if (note) {
-    note.textContent = ST && ST.player
-      ? 'برآورد پایه کشور از شاخص فناوری فعلی بازی خوانده می‌شود؛ آستانه بهره‌برداری پروژه‌ها ۷۰ است.'
-      : 'برای نمایش سطح فناوری، ابتدا بازی را آغاز کن.';
+  if (note) note.textContent = ST && ST.player
+    ? 'سطح فناوری فعلی کشور؛ برای ارتقا هر بار ۲ واحد افزایش اعمال می‌شود.'
+    : 'برای نمایش سطح فناوری، ابتدا بازی را آغاز کن.';
+  if (budgetBox) budgetBox.textContent = 'بودجه کشور: ' + budget.toFixed(2) + ' میلیارد';
+  if (costBox) costBox.textContent = 'هزینه ارتقای بعدی: ' + cost.toFixed(2) + ' میلیارد';
+  if (button) {
+    button.disabled = !ST || !ST.player || value > 98 || budget < cost;
+    button.textContent = value > 98 ? '✓ سقف فناوری تکمیل شده' : '＋ ارتقای فناوری · ۲ واحد';
   }
+}
+function setTechnologySubview(view) {
+  TECHNOLOGY_SUBVIEW = view === 'exploitation' ? 'exploitation' : 'level';
+  var lv = el('technologyLevelView'), ev = el('technologyExploitationView');
+  var lb = el('technologyTabLevel'), eb = el('technologyTabExploitation');
+  if (lv) lv.hidden = TECHNOLOGY_SUBVIEW !== 'level';
+  if (ev) ev.hidden = TECHNOLOGY_SUBVIEW !== 'exploitation';
+  if (lb) { lb.className = 'eventPanelTab' + (TECHNOLOGY_SUBVIEW === 'level' ? ' active' : ''); lb.setAttribute('aria-selected', TECHNOLOGY_SUBVIEW === 'level' ? 'true' : 'false'); }
+  if (eb) { eb.className = 'eventPanelTab' + (TECHNOLOGY_SUBVIEW === 'exploitation' ? ' active' : ''); eb.setAttribute('aria-selected', TECHNOLOGY_SUBVIEW === 'exploitation' ? 'true' : 'false'); }
+  if (TECHNOLOGY_SUBVIEW === 'level') renderTechnologyPanel();
+}
+function bindTechnologyActions() {
+  var lb = el('technologyTabLevel'), eb = el('technologyTabExploitation'), up = el('technologyUpgradeButton');
+  if (lb) lb.onclick = function () { setTechnologySubview('level'); };
+  if (eb) eb.onclick = function () { setTechnologySubview('exploitation'); };
+  if (up) up.onclick = function () {
+    if (!ST || !ST.player) { flash('ابتدا یک بازی را آغاز کن.'); return; }
+    if (!confirm('سطح فناوری ۲ واحد افزایش یابد و هزینه از بودجه کسر شود؟')) return;
+    up.disabled = true;
+    var status = el('technologyUpgradeStatus');
+    if (status) status.textContent = 'در حال ثبت ارتقای فناوری...';
+    postJSON('api/technology/upgrade', {}, function (res) {
+      if (!res || !res.ok) {
+        if (status) status.textContent = (res && res.error) || 'ارتقا انجام نشد.';
+        renderTechnologyPanel();
+        return;
+      }
+      loadState(function () {
+        renderTechnologyPanel();
+        if (status) status.textContent = 'فناوری ۲ واحد افزایش یافت؛ هزینه ' + Number(res.cost).toFixed(2) + ' میلیارد کسر شد.';
+        flash('سطح فناوری کشور به‌روزرسانی شد.');
+      });
+    }, function (code, response) {
+      renderTechnologyPanel();
+      if (status) status.textContent = netErrMsg(code, response);
+    });
+  };
+  setTechnologySubview(TECHNOLOGY_SUBVIEW);
 }
 function setFactorySubview(view) {
   FACTORY_SUBVIEW = view === 'production' ? 'production' : 'projects';
@@ -506,7 +553,7 @@ function setEventPanelView(view) {
     if (panel) panel.hidden = !active;
     if (tab) { tab.className = 'eventPanelTab' + (active ? ' active' : ''); tab.setAttribute('aria-selected', active ? 'true' : 'false'); }
   }
-  if (EVENT_PANEL_VIEW === 'technology') renderTechnologyPanel();
+  if (EVENT_PANEL_VIEW === 'technology') bindTechnologyActions();
   if (EVENT_PANEL_VIEW === 'factory') bindFactoryInnerTabs();
 }
 var CONFIDENTIAL_DRAFT = [];
