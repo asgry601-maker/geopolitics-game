@@ -28,7 +28,7 @@ var TRADE_SHIP_DATA = [];
 var TRADE_SHIP_TIMER = null;
 var TRADE_SHIP_MAX = 12;
 /* حالت موقتِ آزمایش بصری؛ پس از تأیید خاموش می‌شود تا کشتی‌ها فقط از پیمان‌های واقعی ساخته شوند. */
-var TRADE_SHIPS_DEMO_MODE = true;
+var TRADE_SHIPS_DEMO_MODE = false; /* نمایش آزمایشی تا تکمیل زیرساخت و مرحله نهایی کشتی‌ها غیرفعال است. */
 
 function tradeShipModel() {
   var g = new THREE.Group();
@@ -559,7 +559,7 @@ function boot() {
   }, function () { flash('خطا: country_map.json بارگذاری نشد.'); });
 }
 
-function applyLoadedState(s) {
+function applyLoadedState(s, suppressSelection) {
   ST = (s && s.exists) ? s : null;
   syncSanctionState();
   renderAppliedSanctions();
@@ -569,7 +569,7 @@ function applyLoadedState(s) {
   renderStartWidget();
   refreshPolygons();
   refreshTradeShips();
-  if (ST && SELECTED) selectCountry(SELECTED, true);
+  if (ST && SELECTED && !suppressSelection) selectCountry(SELECTED, true);
 }
 function loadState(after) {
   getJSON('api/state', function (s) {
@@ -1211,8 +1211,10 @@ function selectCountry(fa, silent) {
     /* پاسخ دیررس کشور قبلی نباید پنل/پروفایل انتخاب جدید را بازنویسی کند. */
     if (requestId !== COUNTRY_REQUEST_ID || SELECTED !== fa) return;
     if (!r || !r.ok) { flash((r && r.error) || 'خطا'); return; }
-    renderCountryPanel(r);
+    /* پروفایل انتخاب شروع اول رندر می‌شود تا خطای احتمالی پنل داشبورد
+       نتواند نمایش مشخصات کشور آغازگر را متوقف کند. */
     renderStartSelectionProfile(r);
+    renderCountryPanel(r);
   }, function () {
     if (requestId === COUNTRY_REQUEST_ID && SELECTED === fa) flash('خطا در دریافت اطلاعات کشور.');
   });
@@ -3012,14 +3014,16 @@ function startGame(confirmed) {
     }
     flash(r.out || 'بازی آغاز شد!');
     SELECTED = c;                      /* داشبورد کشور انتخاب‌شده پس از شروع */
-    /* بعد از ثبت بازی، وضعیت را بارگذاری و پروفایل کشور آغازگر را صریحاً دوباره واکشی می‌کنیم.
-       این درخواست مستقل از رندر پنل است تا پروفایل آغاز بازی خالی نماند. */
-    loadState(function (ok) {
-      if (!ok) return;
-      setTimeout(function () {
-        if (SELECTED === c) selectCountry(c, true);
-      }, 180);
-    });
+    /* از همان پاسخ api/init استفاده می‌کنیم تا درخواست موازیِ state باعث رقابت
+       چندبارهٔ انتخاب کشور و رندر ناقص پروفایل نشود. سپس فقط یک بار کشور را می‌خوانیم. */
+    if (r.state) {
+      applyLoadedState(r.state, true);
+      selectCountry(c, true);
+    } else {
+      loadState(function (ok) {
+        if (ok && SELECTED === c) selectCountry(c, true);
+      });
+    }
     if (MAP[c] && MAP[c].lat != null) {
       globe.pointOfView({ lat: MAP[c].lat, lng: MAP[c].lon, altitude: 1.9 }, 900);
     }
