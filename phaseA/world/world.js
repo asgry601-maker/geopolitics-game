@@ -460,17 +460,53 @@ function renderEventTalkState() {
   }
 }
 var EVENT_PANEL_VIEW = 'statements';
+var FACTORY_SUBVIEW = 'projects';
+function renderTechnologyPanel() {
+  var value = null;
+  if (ST && ST.player && ST.countries && ST.countries[ST.player]) value = Number(ST.countries[ST.player][2]);
+  if (!isFinite(value)) value = 0;
+  value = Math.max(0, Math.min(100, value));
+  var valueBox = el('technologyLevelValue'), bar = el('technologyLevelBar'), note = el('technologyLevelNote');
+  if (valueBox) valueBox.textContent = value.toFixed(1) + ' / ۱۰۰';
+  if (bar) {
+    bar.style.width = value + '%';
+    bar.style.background = value >= 70 ? 'linear-gradient(90deg,#16794b,#46d18b)' : 'linear-gradient(90deg,#a66b12,#f0c343)';
+  }
+  if (note) {
+    note.textContent = ST && ST.player
+      ? 'برآورد پایه کشور از شاخص فناوری فعلی بازی خوانده می‌شود؛ آستانه بهره‌برداری پروژه‌ها ۷۰ است.'
+      : 'برای نمایش سطح فناوری، ابتدا بازی را آغاز کن.';
+  }
+}
+function setFactorySubview(view) {
+  FACTORY_SUBVIEW = view === 'production' ? 'production' : 'projects';
+  var pv = el('factoryProjectsView'), rv = el('factoryProductionView');
+  var pb = el('factoryTabProjects'), rb = el('factoryTabProduction');
+  if (pv) pv.hidden = FACTORY_SUBVIEW !== 'projects';
+  if (rv) rv.hidden = FACTORY_SUBVIEW !== 'production';
+  if (pb) { pb.className = 'eventPanelTab' + (FACTORY_SUBVIEW === 'projects' ? ' active' : ''); pb.setAttribute('aria-selected', FACTORY_SUBVIEW === 'projects' ? 'true' : 'false'); }
+  if (rb) { rb.className = 'eventPanelTab' + (FACTORY_SUBVIEW === 'production' ? ' active' : ''); rb.setAttribute('aria-selected', FACTORY_SUBVIEW === 'production' ? 'true' : 'false'); }
+}
+function bindFactoryInnerTabs() {
+  var pb = el('factoryTabProjects'), rb = el('factoryTabProduction');
+  if (pb) pb.onclick = function () { setFactorySubview('projects'); };
+  if (rb) rb.onclick = function () { setFactorySubview('production'); };
+  setFactorySubview(FACTORY_SUBVIEW);
+}
 function setEventPanelView(view) {
-  EVENT_PANEL_VIEW = (view === 'military' || view === 'sanctions') ? view : 'statements';
-  var sv = el('eventStatementView'), mv = el('eventMilitaryView'), xv = el('eventSanctionsView');
-  var sb = el('eventTabStatements'), mb = el('eventTabMilitary'), xb = el('eventTabSanctions');
-  var isMilitary = EVENT_PANEL_VIEW === 'military', isSanctions = EVENT_PANEL_VIEW === 'sanctions';
-  if (sv) sv.hidden = isMilitary || isSanctions;
-  if (mv) mv.hidden = !isMilitary;
-  if (xv) xv.hidden = !isSanctions;
-  if (sb) { sb.className = 'eventPanelTab' + (!isMilitary && !isSanctions ? ' active' : ''); sb.setAttribute('aria-selected', (!isMilitary && !isSanctions) ? 'true' : 'false'); }
-  if (mb) { mb.className = 'eventPanelTab' + (isMilitary ? ' active' : ''); mb.setAttribute('aria-selected', isMilitary ? 'true' : 'false'); }
-  if (xb) { xb.className = 'eventPanelTab' + (isSanctions ? ' active' : ''); xb.setAttribute('aria-selected', isSanctions ? 'true' : 'false'); }
+  var valid = ['statements','military','sanctions','technology','factory'];
+  EVENT_PANEL_VIEW = valid.indexOf(view) >= 0 ? view : 'statements';
+  var ids = ['statements','military','sanctions','technology','factory'];
+  var tabIds = ['eventTabStatements','eventTabMilitary','eventTabSanctions','eventTabTechnology','eventTabFactory'];
+  for (var i=0;i<ids.length;i++) {
+    var panel = el('event' + ids[i].charAt(0).toUpperCase() + ids[i].slice(1) + 'View');
+    var tab = el(tabIds[i]);
+    var active = EVENT_PANEL_VIEW === ids[i];
+    if (panel) panel.hidden = !active;
+    if (tab) { tab.className = 'eventPanelTab' + (active ? ' active' : ''); tab.setAttribute('aria-selected', active ? 'true' : 'false'); }
+  }
+  if (EVENT_PANEL_VIEW === 'technology') renderTechnologyPanel();
+  if (EVENT_PANEL_VIEW === 'factory') bindFactoryInnerTabs();
 }
 var CONFIDENTIAL_DRAFT = [];
 var CONFIDENTIAL_TARGETS = [];
@@ -675,9 +711,12 @@ function setSanctionInnerView(view) {
 }
 function bindEventPanelTabs() {
   var sb = el('eventTabStatements'), mb = el('eventTabMilitary'), xb = el('eventTabSanctions');
+  var tb = el('eventTabTechnology'), fb = el('eventTabFactory');
   if (sb) sb.onclick = function () { setEventPanelView('statements'); };
   if (mb) mb.onclick = function () { setEventPanelView('military'); };
   if (xb) xb.onclick = function () { setEventPanelView('sanctions'); };
+  if (tb) tb.onclick = function () { setEventPanelView('technology'); };
+  if (fb) fb.onclick = function () { setEventPanelView('factory'); };
   setEventPanelView('statements');
 }
 function bindStatementConversationPrepare() {
