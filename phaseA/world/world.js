@@ -94,9 +94,9 @@ function refreshTradeShips() {
         if (!mb || mb.lat == null || mb.lon == null) continue;
         a = { lat: Number(ma.lat), lon: Number(ma.lon) };
         b = { lat: Number(mb.lat), lon: Number(mb.lon) };
-        next.push({ id: String(pacts[i].id || i) + '-out-' + j, a: a, b: b, phase: (i * 0.17 + j * 0.11) % 1, period: 105 });
+        next.push({ id: String(pacts[i].id || i) + '-out-' + j, a: a, b: b, origin: members[0], destination: members[j], cargo: 'کالای عمومی', statusText: 'در حال حرکت', phase: (i * 0.17 + j * 0.11) % 1, period: 105 });
         if (next.length < TRADE_SHIP_MAX) {
-          next.push({ id: String(pacts[i].id || i) + '-back-' + j, a: b, b: a, phase: (i * 0.23 + j * 0.19 + 0.5) % 1, period: 125 });
+          next.push({ id: String(pacts[i].id || i) + '-back-' + j, a: b, b: a, origin: members[j], destination: members[0], cargo: 'کالای عمومی', statusText: 'در حال حرکت', phase: (i * 0.23 + j * 0.19 + 0.5) % 1, period: 125 });
         }
       }
     }
