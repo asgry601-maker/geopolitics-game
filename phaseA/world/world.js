@@ -539,20 +539,26 @@ function boot() {
   }, function () { flash('خطا: country_map.json بارگذاری نشد.'); });
 }
 
+function applyLoadedState(s) {
+  ST = (s && s.exists) ? s : null;
+  syncSanctionState();
+  renderAppliedSanctions();
+  renderInbox();
+  renderGameClock();
+  renderWorldChips();
+  renderStartWidget();
+  refreshPolygons();
+  refreshTradeShips();
+  if (ST && SELECTED) selectCountry(SELECTED, true);
+}
 function loadState(after) {
   getJSON('api/state', function (s) {
-    ST = (s && s.exists) ? s : null;
-    syncSanctionState();
-    renderAppliedSanctions();
-    renderInbox();
-    renderGameClock();
-    renderWorldChips();
-    renderStartWidget();
-    refreshPolygons();
-    refreshTradeShips();
-    if (ST && SELECTED) selectCountry(SELECTED, true);
-    if (after) after();
-  }, function (st, tx) { flash(netErrMsg(st, tx) + ' — وضعیت بازی دریافت نشد.'); });
+    applyLoadedState(s);
+    if (after) after(true);
+  }, function (st, tx) {
+    flash(netErrMsg(st, tx) + ' — وضعیت بازی دریافت نشد.');
+    if (after) after(false);
+  });
 }
 
 /* ---------- پنل‌ها ---------- */
@@ -1023,6 +1029,16 @@ function bindEventPanelTabs() {
   if (fb) fb.onclick = function () { setEventPanelView('factory'); };
   setEventPanelView('statements');
 }
+function openTribuneTabAfterMeeting() {
+  DASH_TAB = 'tribune';
+  openPanel();
+  if (ST && LAST_COUNTRY_R && LAST_COUNTRY_R.name === ST.player) {
+    renderCountryPanel(LAST_COUNTRY_R);
+  } else if (ST && ST.player) {
+    selectCountry(ST.player);
+  }
+}
+
 function bindStatementConversationPrepare() {
   var button=el('statementPrepareConversation');
   var dateInput=el('statementMeetingDate');
@@ -1057,8 +1073,7 @@ function bindStatementConversationPrepare() {
       }
       if(status) status.textContent='تاریخ نشست '+res.session.meeting_date+' پیشنهاد شد؛ تا پذیرش کشور مقابل در تقویم قطعی نمی‌شود.';
       loadState(function() {
-        DASH_TAB='tribune';
-        if(LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        openTribuneTabAfterMeeting();
         flash('تاریخ نشست پیشنهاد شد؛ تریبون باز شد اما تا پذیرش طرف مقابل و رسیدن موعد، گفت‌وگو قفل است.');
       });
     },function(code,response) {
@@ -1800,8 +1815,7 @@ function bindConversationShortcuts() {
         return;
       }
       loadState(function() {
-        DASH_TAB = 'tribune';
-        if (LAST_COUNTRY_R) renderCountryPanel(LAST_COUNTRY_R);
+        openTribuneTabAfterMeeting();
         flash('تاریخ نشست '+res.session.meeting_date+' پیشنهاد شد؛ تا پذیرش کشور مقابل و رسیدن موعد، گفت‌وگو قفل می‌ماند.');
       });
     },function(code,response) {
@@ -2834,10 +2848,11 @@ function advanceGameTime(minutes) {
   postJSON('api/time', { minutes: minutes }, function (r) {
     if (r.out) flash(r.out);
     else if (!r.ok && r.error) flash(r.error);
-    loadState(function () {
-      if (five) five.disabled = false;
-      if (day) day.disabled = false;
-    });
+    /* پاسخ api/time خودش وضعیت تازه را دارد؛ GET دوم لازم نیست. */
+    if (r && r.ok && r.state) applyLoadedState(r.state);
+    else loadState();
+    if (five) five.disabled = false;
+    if (day) day.disabled = false;
   }, function (st, tx) {
     flash(netErrMsg(st, tx) + ' — زمان جلو نرفت.');
     if (five) five.disabled = false;
